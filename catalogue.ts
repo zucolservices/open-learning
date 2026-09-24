@@ -870,9 +870,9 @@ const lakehouse: Track = {
             "Storage: S3 and S3 Tables (managed Iceberg)",
             "Catalog and governance: Glue Data Catalog, Lake Formation",
             "Compute: EMR, Glue ETL, Athena, Redshift",
-            "Ingestion: DMS, Kinesis Data Firehose, MSK",
+            "Ingestion: DMS, Amazon Data Firehose, MSK",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           plain:
             "Amazon Web Services offers a service for every lakehouse layer: S3 for storage, Glue for the catalog, Athena, EMR and Redshift for compute, and more. You'll assemble them into one working design and see what each piece is for.",
