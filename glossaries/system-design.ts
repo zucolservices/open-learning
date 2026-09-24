@@ -138,4 +138,17 @@ export const systemDesign = {
       "Sending all of a user's requests to the same server, usually because that server holds their session state.",
     module: "load-balancing",
   },
+  stateless: {
+    term: "Stateless server",
+    definition:
+      "A server that keeps nothing a user needs between requests, so any server can handle any request. State lives in a shared store or with the client.",
+    analogy: "Any supermarket checkout can serve any shopper.",
+    module: "autoscaling",
+  },
+  autoscaling: {
+    term: "Autoscaling",
+    definition:
+      "Automatically adding servers when load rises and removing them when it falls, based on a metric such as CPU or queue length.",
+    module: "autoscaling",
+  },
 } satisfies Record<string, GlossaryEntry>;

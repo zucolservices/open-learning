@@ -40,4 +40,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "system-design/latency-throughput": () => import("./system-design/latency-throughput"),
   "system-design/estimation": () => import("./system-design/estimation"),
   "system-design/load-balancing": () => import("./system-design/load-balancing"),
+  "system-design/autoscaling": () => import("./system-design/autoscaling"),
 };

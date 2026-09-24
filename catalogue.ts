@@ -1134,11 +1134,12 @@ const systemDesign: Track = {
             "Warm-up time, cooldown and flapping",
             "Scaling limits elsewhere: the database becomes the bottleneck",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["load-balancing"],
           plain:
             "Adding more identical servers is the easiest way to handle more users, but only if any server can handle any request. Autoscaling adds and removes servers automatically. You'll tune it through a traffic spike.",
+          terms: ["stateless", "autoscaling", "horizontal-scaling", "load-balancer", "utilisation"],
         },
         {
           slug: "cdn-edge",
