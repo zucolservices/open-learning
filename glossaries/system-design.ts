@@ -537,4 +537,23 @@ export const systemDesign = {
       "Knowing which users are online right now, and which server each one is connected to, so messages and 'online' dots can reach them.",
     module: "realtime-chat",
   },
+  "inventory-hold": {
+    term: "Inventory hold",
+    definition:
+      "Reserving an item for one buyer while they finish checking out, released automatically if they don't pay within a time limit.",
+    module: "flash-sale",
+  },
+  "waiting-room": {
+    term: "Virtual waiting room",
+    definition:
+      "A lightweight holding page that queues visitors during a surge and lets them into the real site at a rate it can handle.",
+    analogy: "A queue outside a shop that lets people in as others leave.",
+    module: "flash-sale",
+  },
+  "lost-update": {
+    term: "Lost update",
+    definition:
+      "When two operations read the same value, both change it, and the second write silently overwrites the first.",
+    module: "flash-sale",
+  },
 } satisfies Record<string, GlossaryEntry>;

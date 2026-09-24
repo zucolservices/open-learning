@@ -1586,11 +1586,12 @@ const systemDesign: Track = {
             "Inventory holds and expiry",
             "Virtual waiting rooms and fairness",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["retries-idempotency", "consistency"],
           plain:
             "When far more people want something than there is, like concert tickets or train seats at opening time, the system must stay up, stay fair, and never sell the same item twice.",
+          terms: ["hot-key", "lost-update", "inventory-hold", "waiting-room", "idempotent"],
         },
       ],
     },
