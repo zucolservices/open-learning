@@ -376,6 +376,30 @@ export const dataLakehouse = {
       "Ways to handle attributes that change over time, like a customer's city: overwrite it (Type 1) or keep history rows (Type 2).",
     module: "cdc-and-merge",
   },
+  "row-filter": {
+    term: "Row filter",
+    definition:
+      "A rule attached to a table that limits which rows a user sees, applied automatically by the engine at query time (e.g. only their own region).",
+    module: "governance-security",
+  },
+  "column-mask": {
+    term: "Column mask",
+    definition:
+      "A rule attached to a column that hides or partly hides its values for some users (e.g. showing only the last four digits of a phone number).",
+    module: "governance-security",
+  },
+  "credential-vending": {
+    term: "Credential vending",
+    definition:
+      "A catalog handing an engine short-lived, narrowly scoped storage credentials for one request, so nobody needs permanent keys to the bucket.",
+    module: "governance-security",
+  },
+  dpdp: {
+    term: "DPDP Act",
+    definition:
+      "India's Digital Personal Data Protection Act, 2023, with the DPDP Rules, 2025. It gives people (Data Principals) rights such as correction and erasure; most duties apply from 13 May 2027.",
+    module: "governance-security",
+  },
   "iceberg-rest": {
     term: "Iceberg REST catalog API",
     definition:
