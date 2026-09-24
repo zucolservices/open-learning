@@ -376,6 +376,12 @@ export const dataLakehouse = {
       "Ways to handle attributes that change over time, like a customer's city: overwrite it (Type 1) or keep history rows (Type 2).",
     module: "cdc-and-merge",
   },
+  "orphan-files": {
+    term: "Orphan files",
+    definition:
+      "Files in a table's storage that no version of the table references, usually left by failed or aborted writes. Invisible to queries, but still stored and billed.",
+    module: "table-maintenance",
+  },
   "hilbert-curve": {
     term: "Hilbert curve",
     definition:

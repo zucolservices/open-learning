@@ -21,4 +21,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-lakehouse/schema-evolution": () => import("./data-lakehouse/schema-evolution"),
   "data-lakehouse/partitioning": () => import("./data-lakehouse/partitioning"),
   "data-lakehouse/data-skipping": () => import("./data-lakehouse/data-skipping"),
+  "data-lakehouse/table-maintenance": () => import("./data-lakehouse/table-maintenance"),
 };
