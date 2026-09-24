@@ -83,7 +83,7 @@ export interface Track {
   tagline: string;
   description: string;
   /** Key into the track accent palette in globals.css ([data-track]). */
-  accent: "lakehouse" | "neutral";
+  accent: "lakehouse" | "blueprint" | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
   hidden?: boolean;
@@ -989,6 +989,609 @@ const lakehouse: Track = {
   ],
 };
 
+const systemDesign: Track = {
+  slug: "system-design",
+  title: "System Design at Scale",
+  area: "Architecture",
+  tagline: "Build systems that bend, not break.",
+  description:
+    "How real systems handle millions of users: load balancers, caches, replication and sharding, queues, retries and failover, then classic designs from URL shorteners to flash sales. Vendor-neutral, with the building blocks mapped onto AWS, Google Cloud, Azure and open source. By the end you can sketch, size and defend a design.",
+  accent: "blueprint",
+  chapters: [
+    {
+      slug: "foundations",
+      title: "Foundations",
+      summary: "What changes as systems grow, and how to measure and estimate it.",
+      modules: [
+        {
+          slug: "what-scale-means",
+          title: 'What "at scale" means',
+          summary:
+            "Follow one app from 100 users to 100 million and watch each part break in turn.",
+          minutes: 25,
+          signature:
+            "Scroll through one app's growth: each order of magnitude breaks something, and the architecture grows to fix it",
+          formats: ["scroll-story", "animated-infographic", "checkpoint"],
+          concepts: [
+            "Vertical vs horizontal scaling",
+            "Separating the database, adding load balancers, caches and replicas",
+            "Sharding and multiple regions",
+            "Scale is about load, data and people, not just servers",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "A small app runs happily on one server. As users grow, different parts run out of room at different times. This module follows one app from a hundred users to a hundred million and shows what breaks and what engineers add at each stage.",
+        },
+        {
+          slug: "latency-throughput",
+          title: "Latency, throughput & percentiles",
+          summary: "Why averages lie, and why the slowest 1% of requests matters so much.",
+          minutes: 25,
+          signature:
+            "A coffee-counter queue simulation: raise arrivals toward capacity and watch p50, p99 and the queue explode; then fan one request out to many servers",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Latency vs throughput",
+            "Percentiles: p50, p95, p99",
+            "Utilisation and queueing: why waits explode near 100%",
+            "Tail latency amplification with fan-out",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["what-scale-means"],
+          plain:
+            "Latency is how long one request takes; throughput is how many you handle per second. Averages hide the unlucky users, so engineers look at percentiles. You'll see why a system at 90% busy feels far slower than one at 60%.",
+        },
+        {
+          slug: "estimation",
+          title: "Back-of-the-envelope estimation",
+          summary: "Turn a vague brief into requests per second, storage and bandwidth in minutes.",
+          minutes: 25,
+          signature:
+            "An estimator: daily users → requests per second → peak → storage over five years → bandwidth, beside a ladder of latency numbers scaled to human time",
+          formats: ["simulation", "animated-infographic", "checkpoint"],
+          concepts: [
+            "Daily active users to average and peak requests per second",
+            "Read/write ratios, storage growth and bandwidth",
+            "Latency numbers every engineer should know",
+            "Rounding and orders of magnitude",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["latency-throughput"],
+          plain:
+            "Before designing anything, engineers estimate: how many requests a second, how much data, how much bandwidth. Rough numbers are enough to rule designs in or out. You'll practise the arithmetic and learn which operations are fast and which are slow.",
+        },
+      ],
+    },
+    {
+      slug: "stateless-tier",
+      title: "Scaling the stateless tier",
+      summary:
+        "Spreading requests across many servers, adding and removing them, and serving from the edge.",
+      modules: [
+        {
+          slug: "load-balancing",
+          title: "Load balancing",
+          summary:
+            "How one address spreads traffic across many servers, and what happens when one is slow.",
+          minutes: 30,
+          signature:
+            "Simulation: round robin vs least connections vs power of two choices, with one slow server and one dead one; health checks pull it out",
+          formats: ["simulation", "step-through", "checkpoint"],
+          concepts: [
+            "Layer 4 vs layer 7 load balancing",
+            "Algorithms: round robin, least connections, power of two choices, hashing",
+            "Health checks and connection draining",
+            "Load balancers as a single point of failure",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["latency-throughput"],
+          plain:
+            "A load balancer sits in front of many servers and decides which one handles each request. How it decides matters most when one server is slow or broken. You'll run the main strategies side by side.",
+        },
+        {
+          slug: "autoscaling",
+          title: "Horizontal scaling & autoscaling",
+          summary: "Keeping servers interchangeable, and adding them before users notice.",
+          minutes: 30,
+          signature:
+            "A traffic-spike simulation: tune thresholds, warm-up and cooldown; see scaling too late, too eagerly, and just right",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Stateless servers and where session state goes",
+            "Autoscaling policies: target tracking, step, scheduled",
+            "Warm-up time, cooldown and flapping",
+            "Scaling limits elsewhere: the database becomes the bottleneck",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["load-balancing"],
+          plain:
+            "Adding more identical servers is the easiest way to handle more users, but only if any server can handle any request. Autoscaling adds and removes servers automatically. You'll tune it through a traffic spike.",
+        },
+        {
+          slug: "cdn-edge",
+          title: "CDNs & the edge",
+          summary: "Serving content from near the user, and the hard part: keeping it fresh.",
+          minutes: 25,
+          signature:
+            "A map of users and edge locations: watch requests hit or miss nearby caches, then publish a change and invalidate it",
+          formats: ["animated-infographic", "simulation", "checkpoint"],
+          concepts: [
+            "Edge locations and origin servers",
+            "Cache hit ratio, TTLs and cache keys",
+            "Invalidation and versioned URLs",
+            "Edge compute and what not to cache",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["latency-throughput"],
+          plain:
+            "A content delivery network keeps copies of files on servers around the world, so users download from somewhere close. The speed-up is huge; the challenge is updating those copies when things change.",
+        },
+      ],
+    },
+    {
+      slug: "caching",
+      title: "Caching",
+      summary: "Remembering answers so you don't recompute them, and the problems that brings.",
+      modules: [
+        {
+          slug: "caching-patterns",
+          title: "Caching patterns",
+          summary: "Cache-aside, read-through, write-through and write-back, step by step.",
+          minutes: 25,
+          signature:
+            "Step-through of reads and writes under each pattern, with a stale read waiting to happen",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Cache-aside, read-through, write-through, write-back",
+            "Where caches live: client, CDN, application, database",
+            "Staleness and consistency trade-offs",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["latency-throughput"],
+          plain:
+            "A cache is a fast copy of data that's slow to fetch. There are a few standard ways to fill it and keep it in step with the database, each with different risks of serving old data.",
+        },
+        {
+          slug: "cache-eviction",
+          title: "Eviction, invalidation & stampedes",
+          summary:
+            "What to throw out when the cache is full, and how a popular key expiring can take a site down.",
+          minutes: 30,
+          signature:
+            "Simulation: LRU vs LFU vs TTL on real-looking traffic, then a hot key expires and a thundering herd hits the database; tame it",
+          formats: ["simulation", "fix-the-problem", "checkpoint"],
+          concepts: [
+            "Eviction policies: LRU, LFU, TTL",
+            "Hit ratio and working set size",
+            "Cache stampedes: request coalescing, early refresh, jitter",
+            "Invalidation strategies",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["caching-patterns"],
+          plain:
+            "Caches are small, so something must be thrown out to make room. And when a popular item expires, thousands of requests can rush to the database at once. You'll watch that happen, then prevent it.",
+        },
+      ],
+    },
+    {
+      slug: "data-at-scale",
+      title: "Data at scale",
+      summary: "Copying, splitting and keeping data consistent across many machines.",
+      modules: [
+        {
+          slug: "replication",
+          title: "Replication",
+          summary: "Copies of the database on many machines, and the lag between them.",
+          minutes: 30,
+          signature:
+            "Replication-lag simulation: write to the leader, read from a follower, and miss your own update; fix it with read-your-writes",
+          formats: ["simulation", "step-through", "checkpoint"],
+          concepts: [
+            "Leader-follower, multi-leader and leaderless replication",
+            "Synchronous vs asynchronous replication",
+            "Replication lag and read-your-writes",
+            "Failover and split brain",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["what-scale-means"],
+          plain:
+            "Replication keeps copies of the same data on several machines, for speed and safety. Copies take time to catch up, so a user can briefly see old data, even their own old data. You'll see why and how systems handle it.",
+        },
+        {
+          slug: "sharding",
+          title: "Partitioning & sharding",
+          summary: "Splitting data across machines, and moving it when you add more.",
+          minutes: 35,
+          signature:
+            "A 3D hash ring: add a server and watch which keys move under naive hashing vs consistent hashing; then a hot key melts one shard",
+          formats: ["3d-model", "simulation", "checkpoint"],
+          concepts: [
+            "Range vs hash partitioning",
+            "Consistent hashing and virtual nodes",
+            "Hot keys and skew",
+            "Resharding and cross-shard queries",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["replication"],
+          plain:
+            "When data won't fit on one machine, it's split into pieces called shards. Choosing how to split decides whether load spreads evenly, and how painful it is to add machines later.",
+        },
+        {
+          slug: "consistency",
+          title: "Consistency, CAP & quorums",
+          summary:
+            "What happens when the network splits, and how quorums trade speed for correctness.",
+          minutes: 35,
+          signature:
+            "A network-partition scenario where you choose to refuse or accept writes, then an N/R/W quorum simulator with stale reads",
+          formats: ["branching-scenario", "simulation", "checkpoint"],
+          concepts: [
+            "Consistency models: strong, eventual, causal, read-your-writes",
+            "CAP and PACELC, stated precisely",
+            "Quorums: N, R, W",
+            "Conflict resolution: last-write-wins, vector clocks, CRDTs",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["replication"],
+          plain:
+            "When copies of data can't talk to each other, a system must choose: stay available and risk disagreement, or stop accepting changes until they reconnect. You'll make that choice yourself and see the consequences.",
+        },
+        {
+          slug: "choosing-a-database",
+          title: "Choosing a database",
+          summary:
+            "Relational, key-value, document, wide-column, graph, time-series and search, matched to real workloads.",
+          minutes: 30,
+          signature:
+            "Build & connect: route eight real workloads to the database family that fits, with explained mismatches",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Data models and access patterns",
+            "Relational vs NoSQL families and their trade-offs",
+            "Polyglot persistence",
+            "Managed options on each cloud",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["sharding"],
+          plain:
+            "There's no single best database. Each family is built for certain questions: joins, fast lookups by key, huge write volumes, relationships, time series or text search. You'll match workloads to the right kind.",
+        },
+        {
+          slug: "distributed-transactions",
+          title: "Transactions across services",
+          summary: "Keeping several databases in step without a single transaction.",
+          minutes: 35,
+          signature:
+            "Step-through of an order across payment, inventory and shipping: two-phase commit vs saga vs outbox, with failures injected at each step",
+          formats: ["step-through", "fix-the-problem", "checkpoint"],
+          concepts: [
+            "Why one transaction can't span services",
+            "Two-phase commit and its blocking problem",
+            "Sagas and compensating actions",
+            "The transactional outbox and dual writes",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["replication"],
+          plain:
+            "When one business action touches several services, each with its own database, there's no single transaction to keep them in step. You'll see what goes wrong when a step fails halfway, and the patterns that make it safe.",
+        },
+      ],
+    },
+    {
+      slug: "async",
+      title: "Asynchronous systems",
+      summary: "Queues, streams and events: decoupling work, and making retries safe.",
+      modules: [
+        {
+          slug: "queues-streams",
+          title: "Queues & streams",
+          summary: "Letting producers and consumers work at their own pace.",
+          minutes: 30,
+          signature:
+            "Simulation: producers outpace consumers; watch the backlog grow, add consumers, and see ordering break across partitions",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Message queues vs event logs",
+            "Consumer groups and partitions",
+            "Ordering guarantees",
+            "Backpressure and dead-letter queues",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["latency-throughput"],
+          plain:
+            "A queue lets one part of a system hand work to another without waiting. That smooths spikes and isolates failures, but brings new questions: what order do messages arrive in, and what if consumers fall behind?",
+        },
+        {
+          slug: "retries-idempotency",
+          title: "Retries, idempotency & delivery guarantees",
+          summary: "Why retries can take a system down, and how to make repeating an action safe.",
+          minutes: 30,
+          signature:
+            "A retry storm simulation with and without exponential backoff and jitter, then a double-charged payment fixed with an idempotency key",
+          formats: ["simulation", "fix-the-problem", "checkpoint"],
+          concepts: [
+            "At-most-once, at-least-once, effectively-once",
+            "Exponential backoff and jitter",
+            "Idempotency keys and deduplication",
+            "Retry budgets",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["queues-streams"],
+          plain:
+            "Networks fail, so clients retry. Retrying at the wrong moment can overwhelm a struggling service, and retrying the wrong action can charge a customer twice. You'll fix both.",
+        },
+        {
+          slug: "event-driven",
+          title: "Event-driven architecture",
+          summary: "Systems that react to events instead of calling each other directly.",
+          minutes: 30,
+          signature:
+            "Build & connect: rewire a tightly coupled checkout into events; add a new consumer without touching the others",
+          formats: ["build-connect", "step-through", "checkpoint"],
+          concepts: [
+            "Commands vs events",
+            "Publish/subscribe and choreography vs orchestration",
+            "Event sourcing and CQRS, briefly",
+            "Schemas and event evolution",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["queues-streams"],
+          plain:
+            "Instead of one service telling others what to do, it announces what happened, and interested services react. That makes systems easier to extend, and harder to follow. You'll see both sides.",
+        },
+      ],
+    },
+    {
+      slug: "reliability",
+      title: "Reliability",
+      summary: "Designing for failure, containing it, and knowing when it happens.",
+      modules: [
+        {
+          slug: "availability",
+          title: "Availability math",
+          summary: "What 99.9% really means, and how components add up.",
+          minutes: 25,
+          signature:
+            "An availability calculator: chain components in series, add redundancy in parallel, and watch the nines and the yearly downtime change",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Nines and downtime budgets",
+            "Series vs parallel availability",
+            "Single points of failure",
+            "Correlated failures",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["load-balancing"],
+          plain:
+            "Availability is the share of time a system works. Every component you depend on can fail, so chaining many lowers availability, and duplicating them raises it. You'll do the arithmetic and find the weak links.",
+        },
+        {
+          slug: "resilience-patterns",
+          title: "Timeouts, circuit breakers & rate limiting",
+          summary: "Stopping one slow service from taking everything down with it.",
+          minutes: 35,
+          signature:
+            "A cascading-failure simulation: one slow dependency exhausts threads upstream; add timeouts, a circuit breaker, bulkheads and a token-bucket rate limiter",
+          formats: ["simulation", "fix-the-problem", "checkpoint"],
+          concepts: [
+            "Timeouts and deadlines",
+            "Circuit breakers and bulkheads",
+            "Rate limiting: token bucket, leaky bucket, sliding window",
+            "Load shedding and graceful degradation",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["retries-idempotency", "availability"],
+          plain:
+            "When one service slows down, everything waiting on it can pile up until the whole system stalls. A few simple patterns contain the damage. You'll watch a cascade happen, then stop it.",
+        },
+        {
+          slug: "multi-region-dr",
+          title: "Multi-region & disaster recovery",
+          summary:
+            "Surviving the loss of a data centre, and deciding how much data you can afford to lose.",
+          minutes: 30,
+          signature:
+            "A failover drill as a branching scenario: a region goes dark; your earlier choices of backup, replication and DNS decide what users see",
+          formats: ["branching-scenario", "animated-infographic", "checkpoint"],
+          concepts: [
+            "RPO and RTO",
+            "Backup/restore, pilot light, warm standby, active-active",
+            "DNS and global load balancing",
+            "Data residency",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["replication", "availability"],
+          plain:
+            "Whole data centres and cloud regions do fail. Disaster recovery plans decide how quickly you recover and how much recent data you might lose. You'll run a failover drill.",
+        },
+        {
+          slug: "observability",
+          title: "Observability & SLOs",
+          summary: "Metrics, logs and traces, and deciding how reliable is reliable enough.",
+          minutes: 30,
+          signature:
+            "Step through a distributed trace to find the slow hop, then set an SLO and watch an error budget burn",
+          formats: ["step-through", "simulation", "checkpoint"],
+          concepts: [
+            "Metrics, logs and traces",
+            "SLIs, SLOs and SLAs",
+            "Error budgets and burn-rate alerts",
+            "OpenTelemetry",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["latency-throughput"],
+          plain:
+            "You can't fix what you can't see. Observability means collecting the signals that tell you what a system is doing. Service level objectives turn those signals into a clear target for reliability.",
+        },
+      ],
+    },
+    {
+      slug: "classic-designs",
+      title: "Classic designs",
+      summary: "Well-known systems designed end to end, one decision at a time.",
+      modules: [
+        {
+          slug: "url-shortener",
+          title: "Design a URL shortener",
+          summary: "The classic warm-up: estimate, generate keys, store, cache and redirect.",
+          minutes: 35,
+          signature:
+            "A guided design: estimate the load, pick a key scheme (and see collisions), choose storage and caching, then load-test the result",
+          formats: ["build-connect", "simulation", "checkpoint"],
+          concepts: [
+            "Requirements and estimation",
+            "Key generation: hashing, counters, random IDs",
+            "Read-heavy design and caching",
+            "Analytics without slowing redirects",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["estimation", "caching-patterns"],
+          plain:
+            "A URL shortener turns long links into short ones and redirects people who click them. It's simple enough to design fully, yet touches estimation, key generation, storage and caching.",
+        },
+        {
+          slug: "news-feed",
+          title: "Design a news feed",
+          summary: "Building everyone's timeline fast, including when a celebrity posts.",
+          minutes: 35,
+          signature:
+            "Simulation: fan-out on write vs fan-out on read; a celebrity with ten million followers posts, and you choose a hybrid",
+          formats: ["simulation", "build-connect", "checkpoint"],
+          concepts: [
+            "Fan-out on write vs on read",
+            "The celebrity problem and hybrids",
+            "Feed ranking and caching",
+            "Pagination",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["caching-patterns", "queues-streams"],
+          plain:
+            "A news feed shows each user recent posts from the people they follow. Doing that quickly for millions of users is a classic trade-off between work at posting time and work at reading time.",
+        },
+        {
+          slug: "realtime-chat",
+          title: "Design real-time chat",
+          summary: "Delivering messages instantly, in order, to people on flaky phones.",
+          minutes: 35,
+          signature:
+            "Step through a message from one phone to another: persistent connections, routing between servers, ordering, delivery receipts and an offline recipient",
+          formats: ["step-through", "build-connect", "checkpoint"],
+          concepts: [
+            "Polling, long polling, WebSockets and server-sent events",
+            "Routing messages between connection servers",
+            "Ordering and delivery receipts",
+            "Presence and offline delivery",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["queues-streams", "sharding"],
+          plain:
+            "Chat looks simple: send a message, the other person sees it. Doing it instantly for millions of people whose phones drop signal all the time takes persistent connections, careful routing and a clear idea of message order.",
+        },
+        {
+          slug: "flash-sale",
+          title: "Design a flash-sale booking system",
+          summary:
+            "A million people, a thousand tickets, one minute, and nobody sold the same seat twice.",
+          minutes: 35,
+          signature:
+            "Simulation: a million users hit ‘Book’ at 10:00; compare row locks, optimistic updates, a queue and a virtual waiting room",
+          formats: ["simulation", "fix-the-problem", "checkpoint"],
+          concepts: [
+            "Contention on a single hot resource",
+            "Pessimistic vs optimistic concurrency",
+            "Inventory holds and expiry",
+            "Virtual waiting rooms and fairness",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["retries-idempotency", "consistency"],
+          plain:
+            "When far more people want something than there is, like concert tickets or train seats at opening time, the system must stay up, stay fair, and never sell the same item twice.",
+        },
+      ],
+    },
+    {
+      slug: "platforms-capstone",
+      title: "Platforms & capstone",
+      summary: "The building blocks on real clouds, then two capstones.",
+      modules: [
+        {
+          slug: "building-blocks",
+          title: "Building blocks on AWS, Google Cloud, Azure & open source",
+          summary: "Load balancers, caches, queues and databases, translated across platforms.",
+          minutes: 30,
+          signature:
+            "A Rosetta stone: one reference architecture whose every block relabels across AWS, Google Cloud, Azure and open source",
+          formats: ["animated-infographic", "build-connect", "checkpoint"],
+          concepts: [
+            "Managed equivalents of each building block",
+            "Managed vs self-run trade-offs",
+            "Portability and lock-in",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["choosing-a-database", "queues-streams"],
+          plain:
+            "Every cloud offers the same building blocks under different names. Learning the mapping lets you read any architecture diagram and design on whichever platform a project uses.",
+        },
+        {
+          slug: "results-day",
+          title: "Capstone: the results-day portal",
+          summary: "Design a state board's exam-results site for the day millions check at once.",
+          minutes: 40,
+          signature:
+            "Design with branching decisions, then replay results day: traffic surges 100× at 10:00 and your design holds, bends or falls over",
+          formats: ["branching-scenario", "simulation", "checkpoint"],
+          concepts: ["Applying estimation, caching, CDNs, scaling and reliability to one design"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["cdn-edge", "autoscaling", "cache-eviction"],
+          plain:
+            "Once a year, millions of students check their exam results in the same few minutes. You'll design a site that survives that spike, then watch results day play out against your design.",
+        },
+        {
+          slug: "the-outage",
+          title: "Capstone: the outage",
+          summary: "A cascading failure is unfolding. Read the evidence, find the cause, stop it.",
+          minutes: 35,
+          signature:
+            "Investigate dashboards, traces and logs during an incident: a cache stampede and a retry storm feed each other; apply fixes and watch recovery",
+          formats: ["fix-the-problem", "simulation", "checkpoint"],
+          concepts: ["Diagnosing interacting failures from metrics, traces and logs"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["resilience-patterns", "cache-eviction", "observability"],
+          plain:
+            "It's 9 pm and the site is down. Several problems are feeding each other. Using dashboards, traces and logs, you'll work out what's happening and bring the system back.",
+        },
+      ],
+    },
+  ],
+};
+
 /** A small end-to-end module that exercises the toolkit and Module SDK. */
 const playground: Track = {
   slug: "playground",
@@ -1024,7 +1627,7 @@ const playground: Track = {
   ],
 };
 
-export const tracks: Track[] = [lakehouse, playground];
+export const tracks: Track[] = [lakehouse, systemDesign, playground];
 
 /** Planned areas from the solution document (§10). Tracks move into `tracks` as they are built. */
 export const roadmap: { area: string; tracks: string[] }[] = [

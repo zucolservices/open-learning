@@ -114,6 +114,48 @@ Libraries are added only when a module first needs them: React Three Fiber and d
 
 **Accuracy note:** cloud services and format features change quickly (S3 Tables, Iceberg v3, Unity Catalog OSS, Apache Polaris, BigLake Iceberg tables, Fabric). Check each product claim against current official docs when its module is built, and record the date checked in the module folder.
 
+## System Design at Scale: curriculum
+
+Architecture area, second track (approved 2026-09-24). 27 modules in 8 chapters, about 14 hours. Accent: blueprint indigo (`[data-track="blueprint"]`). Glossary: `glossaries/system-design.ts`. Vendor-neutral, with building blocks mapped onto AWS, Google Cloud, Azure and open source in module 25.
+
+| #     | Module                                     | Centrepiece                                                                     | Key formats             |
+| ----- | ------------------------------------------ | ------------------------------------------------------------------------------- | ----------------------- |
+| **1** | **Foundations**                            |                                                                                 |                         |
+| 1     | What "at scale" means                      | One app from 100 users to 100 million; each order of magnitude breaks something | Scroll story            |
+| 2     | Latency, throughput & percentiles          | Coffee-counter queue: p50/p99 explode near capacity; fan-out tail latency       | Simulation              |
+| 3     | Back-of-the-envelope estimation            | Users → QPS → storage → bandwidth; latency ladder in human time                 | Simulation              |
+| **2** | **Scaling the stateless tier**             |                                                                                 |                         |
+| 4     | Load balancing                             | Round robin vs least connections vs power of two, with slow and dead servers    | Simulation              |
+| 5     | Horizontal scaling & autoscaling           | Tune autoscaling through a traffic spike                                        | Simulation              |
+| 6     | CDNs & the edge                            | Edge hits and misses on a map; invalidation                                     | Infographic, simulation |
+| **3** | **Caching**                                |                                                                                 |                         |
+| 7     | Caching patterns                           | Cache-aside / read-through / write-through / write-back step-through            | Step-through            |
+| 8     | Eviction, invalidation & stampedes         | LRU vs LFU vs TTL; a hot key expires and the herd arrives                       | Simulation, fix         |
+| **4** | **Data at scale**                          |                                                                                 |                         |
+| 9     | Replication                                | Replication lag: miss your own write                                            | Simulation              |
+| 10    | Partitioning & sharding                    | 3D hash ring: naive vs consistent hashing; hot keys                             | **3D**, simulation      |
+| 11    | Consistency, CAP & quorums                 | Partition scenario; N/R/W quorum simulator                                      | Scenario, simulation    |
+| 12    | Choosing a database                        | Route eight workloads to database families                                      | Build & connect         |
+| 13    | Transactions across services               | 2PC vs saga vs outbox with failures injected                                    | Step-through, fix       |
+| **5** | **Asynchronous systems**                   |                                                                                 |                         |
+| 14    | Queues & streams                           | Producers outpace consumers; backlog, groups, ordering                          | Simulation              |
+| 15    | Retries, idempotency & delivery guarantees | Retry storm vs backoff + jitter; idempotency keys                               | Simulation, fix         |
+| 16    | Event-driven architecture                  | Rewire a coupled checkout into events                                           | Build & connect         |
+| **6** | **Reliability**                            |                                                                                 |                         |
+| 17    | Availability math                          | Series vs parallel availability calculator                                      | Simulation              |
+| 18    | Timeouts, circuit breakers & rate limiting | Cascading failure; breakers, bulkheads, token bucket                            | Simulation, fix         |
+| 19    | Multi-region & disaster recovery           | Failover drill                                                                  | Branching scenario      |
+| 20    | Observability & SLOs                       | Trace waterfall; error budget burn                                              | Step-through            |
+| **7** | **Classic designs**                        |                                                                                 |                         |
+| 21    | Design a URL shortener                     | Guided design, then a load test                                                 | Build & connect         |
+| 22    | Design a news feed                         | Fan-out on write vs read; the celebrity problem                                 | Simulation              |
+| 23    | Design real-time chat                      | One message's journey between phones                                            | Step-through            |
+| 24    | Design a flash-sale booking system         | A million users, a thousand seats                                               | Simulation, fix         |
+| **8** | **Platforms & capstone**                   |                                                                                 |                         |
+| 25    | Building blocks across platforms           | Rosetta stone across AWS, Google Cloud, Azure and open source                   | Infographic             |
+| 26    | Capstone: the results-day portal           | Design, then replay a 100× results-day surge                                    | Scenario, simulation    |
+| 27    | Capstone: the outage                       | Cascading failure from evidence                                                 | Fix the problem         |
+
 ## Roadmap
 
 | Step                 | Scope                                                                                   | Status                                                                  |
@@ -121,7 +163,8 @@ Libraries are added only when a module first needs them: React Three Fiber and d
 | 1. Foundation        | Shell, design language, routing, Module SDK, progress adapter, checkpoints, smoke tests | **Done.** A sample module lives at `/tracks/playground/rows-vs-columns` |
 | 2. Flagship          | Module 6, Delta Lake transaction log: storyboard, then build                            | **Done.** 14 steps, fact-checked (module `SOURCES.md`)                  |
 | 3. Parallel flagship | Module 7, Iceberg metadata tree. First 3D module; sets the R3F toolkit                  | Next                                                                    |
-| 4. Rest of track     | Chapters 1 → 9, growing the toolkit (charts, builder, sandbox) along the way            | Done: all 29 modules live (2026-09-24) |
+| 4. Rest of track     | Chapters 1 → 9, growing the toolkit (charts, builder, sandbox) along the way            | Done: all 29 modules live (2026-09-24)                                  |
+| 4b. System Design    | Second track (Architecture), 27 modules                                                 | In progress: curriculum approved, modules planned                       |
 | 5. Team feedback     | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy            | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

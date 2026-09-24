@@ -6,6 +6,7 @@
  * tracks (e.g. "checkpoint" in Delta Lake vs. in stream processing).
  */
 import { dataLakehouse } from "./data-lakehouse";
+import { systemDesign } from "./system-design";
 import { shared } from "./shared";
 import type { GlossaryEntry } from "./types";
 
@@ -14,9 +15,10 @@ export { shared };
 
 export const trackGlossaries: Record<string, Record<string, GlossaryEntry>> = {
   "data-lakehouse": dataLakehouse,
+  "system-design": systemDesign,
 };
 
-export type TermId = keyof typeof shared | keyof typeof dataLakehouse;
+export type TermId = keyof typeof shared | keyof typeof dataLakehouse | keyof typeof systemDesign;
 
 export interface ResolvedTerm {
   id: string;

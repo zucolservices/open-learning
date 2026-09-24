@@ -26,7 +26,8 @@ const trackVisuals: Record<string, { Visual: ComponentType; caption: string }> =
 
 export default function Home() {
   const plannedTracks = roadmap.reduce((n, a) => n + a.tracks.length, 0);
-  const liveTitles = new Set(visibleTracks.map((t) => t.title));
+  const liveTracks = visibleTracks.filter((t) => trackModules(t).some((m) => m.status === "live"));
+  const liveByTitle = new Map(liveTracks.map((t) => [t.title, t]));
   const moduleCount = visibleTracks.reduce((n, t) => n + trackModules(t).length, 0);
 
   return (
@@ -39,7 +40,7 @@ export default function Home() {
             <div>
               <p className="border-line bg-surface/70 text-muted inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs backdrop-blur">
                 <span className="bg-accent size-1.5 animate-pulse rounded-full" />
-                Zucol OpenLearning · now live: Modern Data Lakehouse
+                Zucol OpenLearning · now live: {liveTracks.map((t) => t.title).join(" · ")}
               </p>
               <h1 className="mt-5 text-5xl leading-[1.02] font-semibold tracking-tight text-balance sm:text-6xl">
                 See how technology{" "}
@@ -122,11 +123,11 @@ export default function Home() {
                 </p>
                 <ul className="mt-2 flex flex-wrap gap-1">
                   {tracks.map((t) => {
-                    const live = liveTitles.has(t);
+                    const live = liveByTitle.get(t);
                     return (
                       <li
                         key={t}
-                        data-track={live ? "lakehouse" : undefined}
+                        data-track={live?.accent}
                         className={
                           live
                             ? "bg-accent text-accent-fg rounded-full px-2 py-0.5 text-[11px] font-medium"

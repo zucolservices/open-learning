@@ -87,6 +87,18 @@
   --bg-glow: rgb(45 212 191 / 0.12);
 }
 
+[data-track="blueprint"] {
+  --accent: #4f46e5;
+  --accent-soft: rgb(79 70 229 / 0.1);
+  --bg-glow: rgb(99 102 241 / 0.12);
+}
+[data-theme="dark"] [data-track="blueprint"],
+[data-theme="dark"][data-track="blueprint"] {
+  --accent: #818cf8;
+  --accent-soft: rgb(129 140 248 / 0.14);
+  --bg-glow: rgb(129 140 248 / 0.12);
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);

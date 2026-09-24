@@ -195,8 +195,8 @@ function NewHere({ track }: { track: Track }) {
       <div>
         <p className="font-semibold tracking-tight">New to all this? Start here.</p>
         <p className="text-muted mt-1 text-sm text-pretty">
-          No background needed. Module 1 explains what a lakehouse is and how it came about, in
-          plain words. Every module lists its key terms, and suggests what to take first.
+          No background needed. Module 1, &ldquo;{first.title}&rdquo;, starts from zero, in plain
+          words. Every module lists its key terms, and suggests what to take first.
           Dotted-underlined words explain themselves when you hover or tap them.
         </p>
       </div>
