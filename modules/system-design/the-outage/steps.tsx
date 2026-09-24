@@ -109,7 +109,7 @@ export function Paged() {
         <div className="flex flex-1 flex-col gap-3">
           <div className="border-bad/40 bg-bad/10 rounded-xl border px-4 py-2 text-sm">
             <span className="font-semibold">PAGE · checkout-availability</span>: error budget
-            burning 740× faster than allowed.
+            burning about 780× faster than allowed.
           </div>
           <div className="grid gap-2 sm:grid-cols-2">
             {PANELS.map((p) => {
