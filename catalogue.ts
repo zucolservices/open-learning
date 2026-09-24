@@ -688,12 +688,20 @@ const lakehouse: Track = {
             "Exactly-once sinks and idempotent writes",
             "Managed ingestion: Auto Loader, Firehose, Datastream, Airbyte, Fivetran",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           plain:
             "Before data can be analysed it has to arrive: in nightly batches, or continuously as a stream. This module follows data from apps and databases into lakehouse tables, and shows the trade-off between freshness and file sizes.",
           prerequisites: ["what-makes-a-table"],
-          terms: ["batch", "streaming", "idempotent", "small-files"],
+          terms: [
+            "kafka",
+            "micro-batch",
+            "exactly-once",
+            "idempotent",
+            "streaming",
+            "batch",
+            "small-files",
+          ],
         },
         {
           slug: "cdc-and-merge",

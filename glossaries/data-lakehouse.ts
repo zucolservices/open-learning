@@ -376,6 +376,24 @@ export const dataLakehouse = {
       "Ways to handle attributes that change over time, like a customer's city: overwrite it (Type 1) or keep history rows (Type 2).",
     module: "cdc-and-merge",
   },
+  kafka: {
+    term: "Apache Kafka",
+    definition:
+      "A distributed, durable log for event streams. Events are appended to partitions, each with an offset, and kept for a retention period whether or not they've been read.",
+    module: "ingestion",
+  },
+  "micro-batch": {
+    term: "Micro-batch",
+    definition:
+      "Stream processing in small, frequent batches: every interval, the job processes everything that arrived since the last batch and commits it.",
+    module: "ingestion",
+  },
+  "exactly-once": {
+    term: "Exactly-once",
+    definition:
+      "Each event affects the result exactly one time, even after failures. In practice: at-least-once delivery plus de-duplication by an idempotent sink.",
+    module: "ingestion",
+  },
   "row-filter": {
     term: "Row filter",
     definition:
