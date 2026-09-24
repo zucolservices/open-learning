@@ -151,4 +151,21 @@ export const systemDesign = {
       "Automatically adding servers when load rises and removing them when it falls, based on a metric such as CPU or queue length.",
     module: "autoscaling",
   },
+  "edge-location": {
+    term: "Edge location (PoP)",
+    definition:
+      "A CDN's servers in a particular city (a point of presence) that serve cached content to nearby users.",
+    module: "cdn-edge",
+  },
+  "hit-ratio": {
+    term: "Hit ratio",
+    definition: "The share of requests a cache answers itself, without going back to the origin.",
+    module: "cdn-edge",
+  },
+  ttl: {
+    term: "TTL (time to live)",
+    definition:
+      "How long a cached copy may be used before it must be checked or fetched again, e.g. Cache-Control: max-age=3600.",
+    module: "cdn-edge",
+  },
 } satisfies Record<string, GlossaryEntry>;

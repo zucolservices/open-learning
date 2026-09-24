@@ -1155,11 +1155,12 @@ const systemDesign: Track = {
             "Invalidation and versioned URLs",
             "Edge compute and what not to cache",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["latency-throughput"],
           plain:
             "A content delivery network keeps copies of files on servers around the world, so users download from somewhere close. The speed-up is huge; the challenge is updating those copies when things change.",
+          terms: ["cdn", "edge-location", "hit-ratio", "ttl", "latency", "cache"],
         },
       ],
     },
