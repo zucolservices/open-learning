@@ -35,4 +35,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-lakehouse/on-azure": () => import("./data-lakehouse/on-azure"),
   "data-lakehouse/landscape": () => import("./data-lakehouse/landscape"),
   "data-lakehouse/design-a-lakehouse": () => import("./data-lakehouse/design-a-lakehouse"),
+  "data-lakehouse/fix-the-lakehouse": () => import("./data-lakehouse/fix-the-lakehouse"),
 };

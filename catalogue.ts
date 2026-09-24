@@ -977,7 +977,7 @@ const lakehouse: Track = {
             "Investigate metrics, table metadata and query plans to find and fix five compounding problems",
           formats: ["fix-the-problem", "simulation", "checkpoint"],
           concepts: ["Diagnosing layout, maintenance, partitioning and pipeline issues together"],
-          status: "planned",
+          status: "live",
           level: "applied",
           plain:
             "A production lakehouse is slow and expensive, and it's your job to find out why. Using metrics, table metadata and query plans, you'll diagnose several problems at once and fix them.",
