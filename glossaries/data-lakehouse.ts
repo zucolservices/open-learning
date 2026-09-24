@@ -376,6 +376,24 @@ export const dataLakehouse = {
       "Ways to handle attributes that change over time, like a customer's city: overwrite it (Type 1) or keep history rows (Type 2).",
     module: "cdc-and-merge",
   },
+  dag: {
+    term: "DAG",
+    definition:
+      "Directed acyclic graph: a map of which tasks or tables depend on which, with no loops. Tools read it to decide what runs first and what can run in parallel.",
+    module: "medallion",
+  },
+  expectation: {
+    term: "Expectation",
+    definition:
+      'A data quality rule attached to a table, such as "amount > 0", plus what to do with rows that break it: keep and count them, drop them, or stop the pipeline.',
+    module: "medallion",
+  },
+  backfill: {
+    term: "Backfill",
+    definition:
+      "Running a pipeline again for past periods, for example after fixing a bug or adding a new table.",
+    module: "medallion",
+  },
   debezium: {
     term: "Debezium",
     definition:

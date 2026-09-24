@@ -65,8 +65,8 @@ function Table({ title, rows, tone }: { title: string; rows: Stage["rows"]; tone
               <span>{n}</span>
               <motion.span
                 key={c}
-                initial={{ color: "var(--color-accent)" }}
-                animate={{ color: "var(--color-fg)" }}
+                initial={{ color: "var(--accent)" }}
+                animate={{ color: "var(--fg)" }}
                 transition={{ duration: 1.2 }}
               >
                 {c}

@@ -745,15 +745,15 @@ const lakehouse: Track = {
           concepts: [
             "Layer contracts and data quality expectations",
             "Idempotency, backfills and reprocessing",
-            "Transformation tools: dbt, Spark, Lakeflow/DLT",
+            "Transformation tools: dbt, Spark, Lakeflow pipelines",
             "Orchestration: Airflow, Dagster",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           plain:
             "Most pipelines move data through three layers: bronze keeps it raw, silver cleans and standardises it, gold shapes it for the business. This module follows one messy record through all three, and shows how to build pipelines you can safely rerun.",
           prerequisites: ["what-makes-a-table"],
-          terms: ["medallion", "etl", "idempotent", "schema"],
+          terms: ["medallion", "etl", "expectation", "dag", "backfill", "idempotent", "schema"],
         },
       ],
     },

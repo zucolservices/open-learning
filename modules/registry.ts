@@ -26,4 +26,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-lakehouse/governance-security": () => import("./data-lakehouse/governance-security"),
   "data-lakehouse/ingestion": () => import("./data-lakehouse/ingestion"),
   "data-lakehouse/cdc-and-merge": () => import("./data-lakehouse/cdc-and-merge"),
+  "data-lakehouse/medallion": () => import("./data-lakehouse/medallion"),
 };

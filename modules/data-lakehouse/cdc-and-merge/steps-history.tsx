@@ -85,8 +85,8 @@ export function ScdTypes() {
                       <td className="py-1 pr-3">
                         <motion.span
                           key={r.city}
-                          initial={{ color: "var(--color-accent)" }}
-                          animate={{ color: "var(--color-fg)" }}
+                          initial={{ color: "var(--accent)" }}
+                          animate={{ color: "var(--fg)" }}
                           transition={{ duration: 1.2 }}
                         >
                           {r.city}
