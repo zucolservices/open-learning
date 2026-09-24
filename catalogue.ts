@@ -1018,10 +1018,21 @@ const systemDesign: Track = {
             "Sharding and multiple regions",
             "Scale is about load, data and people, not just servers",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           plain:
             "A small app runs happily on one server. As users grow, different parts run out of room at different times. This module follows one app from a hundred users to a hundred million and shows what breaks and what engineers add at each stage.",
+          terms: [
+            "scalability",
+            "vertical-scaling",
+            "horizontal-scaling",
+            "load-balancer",
+            "cache",
+            "replica",
+            "cdn",
+            "queue",
+            "shard",
+          ],
         },
         {
           slug: "latency-throughput",
