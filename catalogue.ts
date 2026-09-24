@@ -1629,11 +1629,12 @@ const systemDesign: Track = {
             "Design with branching decisions, then replay results day: traffic surges 100× at 10:00 and your design holds, bends or falls over",
           formats: ["branching-scenario", "simulation", "checkpoint"],
           concepts: ["Applying estimation, caching, CDNs, scaling and reliability to one design"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["cdn-edge", "autoscaling", "cache-eviction"],
           plain:
             "Once a year, millions of students check their exam results in the same few minutes. You'll design a site that survives that spike, then watch results day play out against your design.",
+          terms: ["back-of-envelope", "cdn", "autoscaling", "cache", "single-point-of-failure"],
         },
         {
           slug: "the-outage",
