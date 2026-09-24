@@ -1318,11 +1318,12 @@ const systemDesign: Track = {
             "Sagas and compensating actions",
             "The transactional outbox and dual writes",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["replication"],
           plain:
             "When one business action touches several services, each with its own database, there's no single transaction to keep them in step. You'll see what goes wrong when a step fails halfway, and the patterns that make it safe.",
+          terms: ["two-phase-commit", "saga", "dual-write", "outbox", "idempotent"],
         },
       ],
     },

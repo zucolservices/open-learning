@@ -48,4 +48,6 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "system-design/sharding": () => import("./system-design/sharding"),
   "system-design/consistency": () => import("./system-design/consistency"),
   "system-design/choosing-a-database": () => import("./system-design/choosing-a-database"),
+  "system-design/distributed-transactions": () =>
+    import("./system-design/distributed-transactions"),
 };

@@ -265,4 +265,30 @@ export const systemDesign = {
       "The number of copies that must respond for a write (W) or read (R) to succeed. If R + W > N, reads overlap the latest successful write.",
     module: "consistency",
   },
+  "two-phase-commit": {
+    term: "Two-phase commit (2PC)",
+    definition:
+      "A protocol where a coordinator first asks every participant to prepare, then tells all of them to commit (or abort). If the coordinator fails after prepare, participants wait holding locks.",
+    module: "distributed-transactions",
+  },
+  saga: {
+    term: "Saga",
+    definition:
+      "A long business transaction split into local steps, each committed on its own, with a compensating action to undo each step's effect if a later step fails.",
+    analogy:
+      "Booking a flight, hotel and car separately, and cancelling the ones you booked if one falls through.",
+    module: "distributed-transactions",
+  },
+  "dual-write": {
+    term: "Dual write",
+    definition:
+      "Writing to two systems (such as a database and a message broker) without a shared transaction, so a crash in between leaves them inconsistent.",
+    module: "distributed-transactions",
+  },
+  outbox: {
+    term: "Transactional outbox",
+    definition:
+      "Saving an outgoing event in an 'outbox' table in the same database transaction as the business change; a separate relay publishes it afterwards.",
+    module: "distributed-transactions",
+  },
 } satisfies Record<string, GlossaryEntry>;
