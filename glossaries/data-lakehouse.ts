@@ -376,6 +376,18 @@ export const dataLakehouse = {
       "Ways to handle attributes that change over time, like a customer's city: overwrite it (Type 1) or keep history rows (Type 2).",
     module: "cdc-and-merge",
   },
+  "write-amplification": {
+    term: "Write amplification",
+    definition:
+      "Writing far more data than actually changed, e.g. rewriting a whole 128 MB file to change one row under Copy-on-Write.",
+    module: "updates-and-deletes",
+  },
+  "read-amplification": {
+    term: "Read amplification",
+    definition:
+      "Extra work every read must do beyond reading the data itself, e.g. applying pending delete files, deletion vectors or log files under Merge-on-Read.",
+    module: "updates-and-deletes",
+  },
   serializable: {
     term: "Serializable isolation",
     definition:

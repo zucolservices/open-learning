@@ -478,12 +478,20 @@ const lakehouse: Track = {
             "Read amplification vs write amplification",
             "When to compact",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           plain:
             "Data files in a lakehouse are never edited. So how do you change one row? Either rewrite the whole file (simple to read, expensive to write) or note the change separately and apply it when reading (cheap to write, more work to read). You'll see when each makes sense.",
           prerequisites: ["delta-lake"],
-          terms: ["copy-on-write", "merge-on-read", "deletion-vector", "compaction"],
+          terms: [
+            "copy-on-write",
+            "merge-on-read",
+            "deletion-vector",
+            "compaction",
+            "write-amplification",
+            "read-amplification",
+            "vacuum",
+          ],
         },
         {
           slug: "schema-evolution",

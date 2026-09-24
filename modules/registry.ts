@@ -17,4 +17,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-lakehouse/apache-hudi": () => import("./data-lakehouse/apache-hudi"),
   "data-lakehouse/format-showdown": () => import("./data-lakehouse/format-showdown"),
   "data-lakehouse/acid-and-concurrency": () => import("./data-lakehouse/acid-and-concurrency"),
+  "data-lakehouse/updates-and-deletes": () => import("./data-lakehouse/updates-and-deletes"),
 };
