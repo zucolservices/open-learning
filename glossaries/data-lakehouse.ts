@@ -376,6 +376,12 @@ export const dataLakehouse = {
       "Ways to handle attributes that change over time, like a customer's city: overwrite it (Type 1) or keep history rows (Type 2).",
     module: "cdc-and-merge",
   },
+  vectorised: {
+    term: "Vectorised execution",
+    definition:
+      "Processing a batch of values from one column at a time (often a few thousand) instead of one row at a time, so per-value overhead is paid once per batch and the CPU can work on several values per instruction.",
+    module: "query-engines",
+  },
   dag: {
     term: "DAG",
     definition:

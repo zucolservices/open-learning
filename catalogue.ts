@@ -777,12 +777,20 @@ const lakehouse: Track = {
             "Engines: Spark, Trino/Presto, Flink, DuckDB, StarRocks, Dremio",
             "Serverless engines: Athena, BigQuery, Snowflake, Databricks SQL",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           plain:
             "When you run SQL on a lakehouse, an engine looks up the table, reads its metadata, skips every file it can, and processes the rest column by column. Following one query end to end shows why the whole stack is designed the way it is.",
           prerequisites: ["inside-parquet", "what-makes-a-table"],
-          terms: ["engine", "query-plan", "predicate-pushdown", "data-skipping", "statistics"],
+          terms: [
+            "engine",
+            "catalog",
+            "query-plan",
+            "predicate-pushdown",
+            "statistics",
+            "data-skipping",
+            "vectorised",
+          ],
         },
         {
           slug: "hands-on-sql",
