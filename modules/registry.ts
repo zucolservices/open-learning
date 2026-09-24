@@ -45,4 +45,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "system-design/caching-patterns": () => import("./system-design/caching-patterns"),
   "system-design/cache-eviction": () => import("./system-design/cache-eviction"),
   "system-design/replication": () => import("./system-design/replication"),
+  "system-design/sharding": () => import("./system-design/sharding"),
 };

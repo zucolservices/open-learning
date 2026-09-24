@@ -229,4 +229,15 @@ export const systemDesign = {
       "When two nodes both believe they are the leader and accept conflicting writes, usually after a network split or a botched failover.",
     module: "replication",
   },
+  "consistent-hashing": {
+    term: "Consistent hashing",
+    definition:
+      "Placing servers and keys on a ring of hash values, with each key owned by the next server around the ring, so adding or removing a server moves only a small share of keys.",
+    module: "sharding",
+  },
+  "polyglot-persistence": {
+    term: "Polyglot persistence",
+    definition: "Using several kinds of database in one system, each for the data it suits best.",
+    module: "choosing-a-database",
+  },
 } satisfies Record<string, GlossaryEntry>;

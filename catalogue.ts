@@ -1253,11 +1253,12 @@ const systemDesign: Track = {
             "Hot keys and skew",
             "Resharding and cross-shard queries",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["replication"],
           plain:
             "When data won't fit on one machine, it's split into pieces called shards. Choosing how to split decides whether load spreads evenly, and how painful it is to add machines later.",
+          terms: ["shard", "consistent-hashing", "hot-key", "replica"],
         },
         {
           slug: "consistency",
