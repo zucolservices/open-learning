@@ -63,4 +63,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "system-design/flash-sale": () => import("./system-design/flash-sale"),
   "system-design/building-blocks": () => import("./system-design/building-blocks"),
   "system-design/results-day": () => import("./system-design/results-day"),
+  "system-design/the-outage": () => import("./system-design/the-outage"),
 };

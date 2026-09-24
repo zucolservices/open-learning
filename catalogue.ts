@@ -1645,11 +1645,12 @@ const systemDesign: Track = {
             "Investigate dashboards, traces and logs during an incident: a cache stampede and a retry storm feed each other; apply fixes and watch recovery",
           formats: ["fix-the-problem", "simulation", "checkpoint"],
           concepts: ["Diagnosing interacting failures from metrics, traces and logs"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["resilience-patterns", "cache-eviction", "observability"],
           plain:
             "It's 9 pm and the site is down. Several problems are feeding each other. Using dashboards, traces and logs, you'll work out what's happening and bring the system back.",
+          terms: ["stampede", "retry-storm", "metastable-failure", "trace", "postmortem"],
         },
       ],
     },

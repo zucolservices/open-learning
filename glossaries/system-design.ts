@@ -568,4 +568,16 @@ export const systemDesign = {
       "How hard and costly it would be to move from one provider's services to another's.",
     module: "building-blocks",
   },
+  "metastable-failure": {
+    term: "Metastable failure",
+    definition:
+      "An outage that keeps going after its trigger has passed, because the system's own reactions (such as retries or cold caches) sustain the overload.",
+    module: "the-outage",
+  },
+  postmortem: {
+    term: "Blameless postmortem",
+    definition:
+      "A written review after an incident describing what happened, why the system allowed it, and what will change, without blaming individuals.",
+    module: "the-outage",
+  },
 } satisfies Record<string, GlossaryEntry>;
