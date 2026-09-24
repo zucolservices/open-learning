@@ -291,4 +291,37 @@ export const systemDesign = {
       "Saving an outgoing event in an 'outbox' table in the same database transaction as the business change; a separate relay publishes it afterwards.",
     module: "distributed-transactions",
   },
+  "event-log": {
+    term: "Event log (stream)",
+    definition:
+      "An append-only sequence of messages kept for a set time. Readers track their own position, many readers can each read everything, and old messages can be replayed. Kafka, Kinesis and Event Hubs work this way.",
+    analogy:
+      "A till-receipt roll that the kitchen, bar and accounts desk each read at their own pace.",
+    module: "queues-streams",
+  },
+  offset: {
+    term: "Offset",
+    definition:
+      "A reader's position in a log partition: the number of the next message it will read. Moving it back replays messages.",
+    module: "queues-streams",
+  },
+  "consumer-group": {
+    term: "Consumer group",
+    definition:
+      "A set of consumers sharing the work of reading a log. Each partition is read by one member of the group; every group gets all the messages.",
+    module: "queues-streams",
+  },
+  "dead-letter-queue": {
+    term: "Dead-letter queue (DLQ)",
+    definition:
+      "A separate queue where messages that keep failing are moved, so they stop blocking or wasting consumers and can be inspected and replayed later.",
+    module: "queues-streams",
+  },
+  backpressure: {
+    term: "Backpressure",
+    definition:
+      "Signalling upstream to slow down when a component can't keep up, instead of letting work pile up without limit.",
+    analogy: "A kitchen telling the host to stop seating tables for a few minutes.",
+    module: "queues-streams",
+  },
 } satisfies Record<string, GlossaryEntry>;

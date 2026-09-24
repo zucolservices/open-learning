@@ -1346,11 +1346,19 @@ const systemDesign: Track = {
             "Ordering guarantees",
             "Backpressure and dead-letter queues",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["latency-throughput"],
           plain:
             "A queue lets one part of a system hand work to another without waiting. That smooths spikes and isolates failures, but brings new questions: what order do messages arrive in, and what if consumers fall behind?",
+          terms: [
+            "queue",
+            "event-log",
+            "offset",
+            "consumer-group",
+            "dead-letter-queue",
+            "backpressure",
+          ],
         },
         {
           slug: "retries-idempotency",
