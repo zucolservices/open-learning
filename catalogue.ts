@@ -1473,11 +1473,12 @@ const systemDesign: Track = {
             "DNS and global load balancing",
             "Data residency",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["replication", "availability"],
           plain:
             "Whole data centres and cloud regions do fail. Disaster recovery plans decide how quickly you recover and how much recent data you might lose. You'll run a failover drill.",
+          terms: ["disaster-recovery", "rpo", "rto", "failover", "replica", "data-residency"],
         },
         {
           slug: "observability",

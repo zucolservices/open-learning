@@ -431,4 +431,28 @@ export const systemDesign = {
       "The longest a caller will wait for a response before giving up and treating the call as failed. Without one, a hung dependency can hold the caller's resources indefinitely.",
     module: "resilience-patterns",
   },
+  "disaster-recovery": {
+    term: "Disaster recovery (DR)",
+    definition:
+      "Plans and systems for restoring service after a large failure, such as losing a whole data centre or cloud region, usually by recovering in another region.",
+    module: "multi-region-dr",
+  },
+  rpo: {
+    term: "RPO (recovery point objective)",
+    definition:
+      "The most data you can afford to lose in a disaster, measured as time: an RPO of 5 minutes means losing at most the last 5 minutes of changes.",
+    module: "multi-region-dr",
+  },
+  rto: {
+    term: "RTO (recovery time objective)",
+    definition:
+      "The longest you can afford to be down after a disaster before service is restored.",
+    module: "multi-region-dr",
+  },
+  "data-residency": {
+    term: "Data residency",
+    definition:
+      "Rules (legal or contractual) about which countries or regions data may be stored or processed in, including backups and replicas.",
+    module: "multi-region-dr",
+  },
 } satisfies Record<string, GlossaryEntry>;
