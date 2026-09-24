@@ -180,4 +180,29 @@ export const systemDesign = {
       "A token a cache hands to a client that missed, allowing it to fill that key. A delete cancels the token, so a slow client can't write back stale data; it also limits refills during a stampede.",
     module: "caching-patterns",
   },
+  eviction: {
+    term: "Eviction policy",
+    definition:
+      "The rule a full cache uses to decide what to remove, such as least recently used (LRU) or least frequently used (LFU).",
+    analogy: "Deciding what to throw out of a full fridge.",
+    module: "cache-eviction",
+  },
+  stampede: {
+    term: "Cache stampede (thundering herd)",
+    definition:
+      "When a popular cached item expires and many requests miss at once, all hitting the database for the same data.",
+    module: "cache-eviction",
+  },
+  jitter: {
+    term: "Jitter",
+    definition:
+      "A small random variation added to timers (TTLs, retry delays) so that many clients don't all act at the same moment.",
+    module: "cache-eviction",
+  },
+  "hot-key": {
+    term: "Hot key",
+    definition:
+      "A single key so popular that the one node storing it becomes overloaded while others sit idle.",
+    module: "cache-eviction",
+  },
 } satisfies Record<string, GlossaryEntry>;

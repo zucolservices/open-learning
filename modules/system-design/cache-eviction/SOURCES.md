@@ -1,0 +1,19 @@
+# Sources: Eviction, invalidation & stampedes
+
+Fact-checked 2026-09-24. Papers saved in the session scratchpad (`sd-caching/`).
+
+| Claim in the module                                                                                                                                                                          | Verdict                                | Source                                                                             |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------------- |
+| Redis/Valkey policies; noeviction default (self-run); volatile-* act like noeviction without TTLs; sampling (maxmemory-samples 5); LFU Morris counter; Redis 8.6 allkeys-lrm/volatile-lrm    | Verified                               | redis.io eviction docs; valkey.conf                                                |
+| AWS ElastiCache default volatile-lru; hot-key advice (replicate, spread, client-side caching, --hotkeys with LFU)                                                                            | Verified                               | ElastiCache Performance Efficiency pillar                                          |
+| Memcached segmented LRU (hot/warm/cold) default since 1.5.0                                                                                                                                  | Verified                               | memcached doc/new_lru.txt                                                          |
+| Caffeine W-TinyLFU (Einziger, Friedman & Manes, ACM TOS 2017); SIEVE (NSDI '24)                                                                                                              | Verified                               | Caffeine wiki; ACM DL; USENIX NSDI '24                                             |
+| XFetch: Time() − Δ·β·log(rand()) ≥ expiry (Vattani et al., PVLDB 8(8), 2015)                                                                                                                 | Verified                               | vldb.org/pvldb/vol8/p886-vattani.pdf                                               |
+| singleflight; NGINX proxy_cache_lock (off by default); stale-while-revalidate RFC 5861 (Informational)                                                                                       | Verified                               | pkg.go.dev singleflight; nginx.org proxy module; RFC 5861                          |
+| Facebook leases cut peak DB queries 17K/s → 1.3K/s                                                                                                                                           | Verified                               | NSDI 2013 memcache paper                                                           |
+| Redis licensing (RSAL/SSPL Mar 2024; AGPLv3 option May 2025); Valkey (LF, Mar 2024, BSD); ElastiCache & Memorystore Valkey; Azure Cache for Redis retirement 2027–2028 → Azure Managed Redis | Verified                               | redis.io blog; linuxfoundation.org; AWS/Google announcements; Azure retirement FAQ |
+| TTL jitter                                                                                                                                                                                   | General practice (no vendor doc found) | AWS Builders' Library (related guidance)                                           |
+
+## Decisions
+
+- Eviction, stampede and expiry models (sim.ts) are illustrative and seeded; checked with tsx: LRU drops 58% → 27% during the scan while LFU barely moves; LFU drops to 42% after the popularity shift and recovers slowly.

@@ -1204,11 +1204,12 @@ const systemDesign: Track = {
             "Cache stampedes: request coalescing, early refresh, jitter",
             "Invalidation strategies",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["caching-patterns"],
           plain:
             "Caches are small, so something must be thrown out to make room. And when a popular item expires, thousands of requests can rush to the database at once. You'll watch that happen, then prevent it.",
+          terms: ["eviction", "stampede", "jitter", "hot-key", "hit-ratio", "ttl", "lease"],
         },
       ],
     },
