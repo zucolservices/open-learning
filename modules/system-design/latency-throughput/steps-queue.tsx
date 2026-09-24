@@ -26,7 +26,7 @@ function Curve({ rho }: { rho: number }) {
   return (
     <svg
       viewBox={`0 0 ${W} ${H}`}
-      className="w-full"
+      className="mx-auto w-full max-w-md"
       role="img"
       aria-label="Waiting time against how busy the counter is"
     >

@@ -1077,11 +1077,12 @@ const systemDesign: Track = {
             "Latency numbers every engineer should know",
             "Rounding and orders of magnitude",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["latency-throughput"],
           plain:
             "Before designing anything, engineers estimate: how many requests a second, how much data, how much bandwidth. Rough numbers are enough to rule designs in or out. You'll practise the arithmetic and learn which operations are fast and which are slow.",
+          terms: ["back-of-envelope", "qps", "latency", "throughput", "utilisation"],
         },
       ],
     },

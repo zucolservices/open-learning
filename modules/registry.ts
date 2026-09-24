@@ -38,4 +38,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-lakehouse/fix-the-lakehouse": () => import("./data-lakehouse/fix-the-lakehouse"),
   "system-design/what-scale-means": () => import("./system-design/what-scale-means"),
   "system-design/latency-throughput": () => import("./system-design/latency-throughput"),
+  "system-design/estimation": () => import("./system-design/estimation"),
 };

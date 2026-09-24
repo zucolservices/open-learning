@@ -106,4 +106,18 @@ export const systemDesign = {
     analogy: "One customer a minute, each staying five minutes: five people in the café.",
     module: "latency-throughput",
   },
+  "back-of-envelope": {
+    term: "Back-of-the-envelope estimate",
+    definition:
+      "A quick, rough calculation (users, requests per second, storage, bandwidth) to find the right order of magnitude before designing.",
+    analogy:
+      "Estimating how many cups of tea your office drinks a year from how many people work there.",
+    module: "estimation",
+  },
+  qps: {
+    term: "QPS / requests per second",
+    definition:
+      "Queries (or requests) per second: the basic measure of how much load a system handles.",
+    module: "estimation",
+  },
 } satisfies Record<string, GlossaryEntry>;
