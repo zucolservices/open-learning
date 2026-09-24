@@ -376,6 +376,19 @@ export const dataLakehouse = {
       "Ways to handle attributes that change over time, like a customer's city: overwrite it (Type 1) or keep history rows (Type 2).",
     module: "cdc-and-merge",
   },
+  "partition-pruning": {
+    term: "Partition pruning",
+    definition:
+      "Skipping whole partitions (folders) whose values can't match a query's filter on the partition column.",
+    analogy: "Opening only the drawer labelled with the date you need.",
+    module: "partitioning",
+  },
+  "liquid-clustering": {
+    term: "Liquid clustering",
+    definition:
+      "A Delta Lake layout that groups rows into files by up to four clustering keys instead of partition folders. Keys can change without rewriting existing data.",
+    module: "partitioning",
+  },
   "schema-enforcement": {
     term: "Schema enforcement",
     definition:

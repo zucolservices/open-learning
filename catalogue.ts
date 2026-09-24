@@ -542,12 +542,19 @@ const lakehouse: Track = {
             "Iceberg hidden partitioning and partition evolution",
             "Liquid clustering as an alternative",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           plain:
             "Partitioning splits a table into groups, for example one per day, so a query for yesterday only reads yesterday. Done well, queries fly. Done badly, the table shatters into millions of tiny files. This module helps you find the balance.",
           prerequisites: ["what-makes-a-table"],
-          terms: ["partition", "small-files", "data-skipping", "predicate-pushdown"],
+          terms: [
+            "partition",
+            "partition-pruning",
+            "small-files",
+            "hidden-partitioning",
+            "liquid-clustering",
+            "data-skipping",
+          ],
         },
         {
           slug: "data-skipping",

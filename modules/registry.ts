@@ -19,4 +19,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-lakehouse/acid-and-concurrency": () => import("./data-lakehouse/acid-and-concurrency"),
   "data-lakehouse/updates-and-deletes": () => import("./data-lakehouse/updates-and-deletes"),
   "data-lakehouse/schema-evolution": () => import("./data-lakehouse/schema-evolution"),
+  "data-lakehouse/partitioning": () => import("./data-lakehouse/partitioning"),
 };
