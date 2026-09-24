@@ -376,6 +376,12 @@ export const dataLakehouse = {
       "Ways to handle attributes that change over time, like a customer's city: overwrite it (Type 1) or keep history rows (Type 2).",
     module: "cdc-and-merge",
   },
+  shortcut: {
+    term: "OneLake shortcut",
+    definition:
+      "A pointer in Microsoft Fabric's OneLake that makes data stored elsewhere (ADLS, Amazon S3, Google Cloud Storage, another OneLake location) appear as if it were local, without copying it.",
+    module: "on-azure",
+  },
   bi: {
     term: "BI",
     definition:

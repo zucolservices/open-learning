@@ -32,4 +32,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-lakehouse/bi-ml-ai": () => import("./data-lakehouse/bi-ml-ai"),
   "data-lakehouse/on-aws": () => import("./data-lakehouse/on-aws"),
   "data-lakehouse/on-gcp": () => import("./data-lakehouse/on-gcp"),
+  "data-lakehouse/on-azure": () => import("./data-lakehouse/on-azure"),
 };

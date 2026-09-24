@@ -914,12 +914,12 @@ const lakehouse: Track = {
             "Governance: Unity Catalog, Microsoft Purview",
             "Ingestion: Event Hubs, Data Factory",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           plain:
             "On Azure, the lakehouse is built from Azure Data Lake Storage, Azure Databricks and Microsoft Fabric's OneLake. You'll assemble a design and see how Fabric avoids copying data.",
           prerequisites: ["catalogs", "query-engines"],
-          terms: ["object-storage", "catalog", "engine"],
+          terms: ["object-storage", "catalog", "engine", "shortcut"],
         },
         {
           slug: "landscape",
