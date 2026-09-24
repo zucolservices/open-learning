@@ -376,6 +376,31 @@ export const dataLakehouse = {
       "Ways to handle attributes that change over time, like a customer's city: overwrite it (Type 1) or keep history rows (Type 2).",
     module: "cdc-and-merge",
   },
+  "schema-enforcement": {
+    term: "Schema enforcement",
+    definition:
+      "Rejecting writes that don't match the table's schema (wrong types, unknown columns, missing required values). The whole write fails; nothing is committed.",
+    analogy: "A receptionist who won't accept a form with letters in the phone-number box.",
+    module: "schema-evolution",
+  },
+  "schema-evolution": {
+    term: "Schema evolution",
+    definition:
+      "Changing a table's schema on purpose (adding, renaming, dropping or widening columns) without breaking old data or rewriting it.",
+    module: "schema-evolution",
+  },
+  "column-mapping": {
+    term: "Column mapping (Delta)",
+    definition:
+      "A Delta table feature that gives columns stable IDs/physical names, so renames and drops become metadata-only changes. Set with delta.columnMapping.mode = 'name'.",
+    module: "schema-evolution",
+  },
+  variant: {
+    term: "VARIANT type",
+    definition:
+      "A column type for semi-structured, JSON-like data stored in an efficient binary encoding, so fields can vary from row to row without schema changes.",
+    module: "schema-evolution",
+  },
   "write-amplification": {
     term: "Write amplification",
     definition:

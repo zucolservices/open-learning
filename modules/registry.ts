@@ -18,4 +18,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-lakehouse/format-showdown": () => import("./data-lakehouse/format-showdown"),
   "data-lakehouse/acid-and-concurrency": () => import("./data-lakehouse/acid-and-concurrency"),
   "data-lakehouse/updates-and-deletes": () => import("./data-lakehouse/updates-and-deletes"),
+  "data-lakehouse/schema-evolution": () => import("./data-lakehouse/schema-evolution"),
 };
