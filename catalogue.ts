@@ -1048,11 +1048,20 @@ const systemDesign: Track = {
             "Utilisation and queueing: why waits explode near 100%",
             "Tail latency amplification with fan-out",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["what-scale-means"],
           plain:
             "Latency is how long one request takes; throughput is how many you handle per second. Averages hide the unlucky users, so engineers look at percentiles. You'll see why a system at 90% busy feels far slower than one at 60%.",
+          terms: [
+            "latency",
+            "throughput",
+            "utilisation",
+            "percentile",
+            "tail-latency",
+            "fan-out",
+            "littles-law",
+          ],
         },
         {
           slug: "estimation",

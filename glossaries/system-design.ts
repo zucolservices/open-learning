@@ -74,4 +74,36 @@ export const systemDesign = {
     analogy: "Splitting a phone book into A–H, I–P and Q–Z volumes.",
     module: "sharding",
   },
+  utilisation: {
+    term: "Utilisation",
+    definition:
+      "The share of time a resource (a server, CPU, disk, barista) is busy. Waiting time rises steeply as it nears 100%.",
+    module: "latency-throughput",
+  },
+  percentile: {
+    term: "Percentile (p50, p99)",
+    definition:
+      "The value below which a given share of measurements fall. p99 latency = 99% of requests were faster than this.",
+    analogy: "If you're in the 90th percentile for height, 90% of people are shorter than you.",
+    module: "latency-throughput",
+  },
+  "tail-latency": {
+    term: "Tail latency",
+    definition:
+      "The latency of the slowest requests (p99, p99.9). Small in number, but they're what users notice.",
+    module: "latency-throughput",
+  },
+  "fan-out": {
+    term: "Fan-out",
+    definition:
+      "Handling one request by sending sub-requests to many servers and combining their answers. The whole request waits for the slowest.",
+    module: "latency-throughput",
+  },
+  "littles-law": {
+    term: "Little's Law",
+    definition:
+      "In any stable system, the average number of items inside equals the arrival rate times the average time each spends inside: L = λ × W.",
+    analogy: "One customer a minute, each staying five minutes: five people in the café.",
+    module: "latency-throughput",
+  },
 } satisfies Record<string, GlossaryEntry>;
