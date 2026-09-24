@@ -1374,11 +1374,19 @@ const systemDesign: Track = {
             "Idempotency keys and deduplication",
             "Retry budgets",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["queues-streams"],
           plain:
             "Networks fail, so clients retry. Retrying at the wrong moment can overwhelm a struggling service, and retrying the wrong action can charge a customer twice. You'll fix both.",
+          terms: [
+            "idempotent",
+            "retry-storm",
+            "exponential-backoff",
+            "jitter",
+            "retry-budget",
+            "idempotency-key",
+          ],
         },
         {
           slug: "event-driven",

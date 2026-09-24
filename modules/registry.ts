@@ -51,4 +51,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "system-design/distributed-transactions": () =>
     import("./system-design/distributed-transactions"),
   "system-design/queues-streams": () => import("./system-design/queues-streams"),
+  "system-design/retries-idempotency": () => import("./system-design/retries-idempotency"),
 };

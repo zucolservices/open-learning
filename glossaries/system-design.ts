@@ -324,4 +324,29 @@ export const systemDesign = {
     analogy: "A kitchen telling the host to stop seating tables for a few minutes.",
     module: "queues-streams",
   },
+  "retry-storm": {
+    term: "Retry storm",
+    definition:
+      "When many clients retry failed requests at once, multiplying the load on a service that is already struggling, which can keep it down after the original problem has passed.",
+    module: "retries-idempotency",
+  },
+  "exponential-backoff": {
+    term: "Exponential backoff",
+    definition:
+      "Waiting longer after each failed attempt, typically doubling the wait each time, up to a cap. Usually combined with jitter.",
+    module: "retries-idempotency",
+  },
+  "retry-budget": {
+    term: "Retry budget",
+    definition:
+      "A limit on retries as a share of normal requests (for example 10%), so that retries help with occasional errors but can't multiply load during an outage.",
+    module: "retries-idempotency",
+  },
+  "idempotency-key": {
+    term: "Idempotency key",
+    definition:
+      "A unique ID the client sends with a request and reuses on every retry. The server stores its answer per key and returns the same answer for repeats instead of doing the work again.",
+    analogy: "Writing the invoice number on a cheque, so the biller can spot a duplicate.",
+    module: "retries-idempotency",
+  },
 } satisfies Record<string, GlossaryEntry>;
