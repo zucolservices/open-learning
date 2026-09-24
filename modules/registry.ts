@@ -42,4 +42,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "system-design/load-balancing": () => import("./system-design/load-balancing"),
   "system-design/autoscaling": () => import("./system-design/autoscaling"),
   "system-design/cdn-edge": () => import("./system-design/cdn-edge"),
+  "system-design/caching-patterns": () => import("./system-design/caching-patterns"),
 };

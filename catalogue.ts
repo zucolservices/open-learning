@@ -1182,11 +1182,12 @@ const systemDesign: Track = {
             "Where caches live: client, CDN, application, database",
             "Staleness and consistency trade-offs",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["latency-throughput"],
           plain:
             "A cache is a fast copy of data that's slow to fetch. There are a few standard ways to fill it and keep it in step with the database, each with different risks of serving old data.",
+          terms: ["cache", "cache-aside", "lease", "ttl", "hit-ratio"],
         },
         {
           slug: "cache-eviction",

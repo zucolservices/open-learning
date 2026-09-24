@@ -88,9 +88,9 @@ export function FarAway() {
                       fill={active ? "var(--accent)" : "var(--viz-data)"}
                     />
                     <text
-                      x={p.x}
-                      y={p.y - 4}
-                      textAnchor="middle"
+                      x={c.id === "che" ? p.x + 4 : p.x}
+                      y={c.id === "che" ? p.y + 1.8 : p.y - 4}
+                      textAnchor={c.id === "che" ? "start" : "middle"}
                       className={cn("text-[5px]", active ? "fill-fg" : "fill-muted")}
                     >
                       {c.name}
@@ -100,9 +100,9 @@ export function FarAway() {
               })}
               <rect x={o.x - 3} y={o.y - 3} width={6} height={6} fill="var(--viz-compute)" />
               <text
-                x={o.x}
-                y={o.y + 9}
-                textAnchor="middle"
+                x={o.x - 5}
+                y={o.y + 1.8}
+                textAnchor="end"
                 className="fill-fg text-[5px] font-semibold"
               >
                 Origin · Mumbai
@@ -139,7 +139,9 @@ export function FarAway() {
               )}
             >
               <p className="text-muted text-[10px]">Requests reaching Mumbai</p>
-              <p className="font-mono text-lg">{s.cdn ? "only misses" : "all of them"}</p>
+              <p className="font-mono text-sm sm:text-lg">
+                {s.cdn ? "only misses" : "all of them"}
+              </p>
             </div>
           </div>
           <p className="text-subtle text-xs">

@@ -168,4 +168,16 @@ export const systemDesign = {
       "How long a cached copy may be used before it must be checked or fetched again, e.g. Cache-Control: max-age=3600.",
     module: "cdn-edge",
   },
+  "cache-aside": {
+    term: "Cache-aside (lazy loading)",
+    definition:
+      "The app checks the cache first; on a miss it reads the database and stores the result in the cache. On a write it updates the database and deletes the cached copy.",
+    module: "caching-patterns",
+  },
+  lease: {
+    term: "Lease (cache)",
+    definition:
+      "A token a cache hands to a client that missed, allowing it to fill that key. A delete cancels the token, so a slow client can't write back stale data; it also limits refills during a stampede.",
+    module: "caching-patterns",
+  },
 } satisfies Record<string, GlossaryEntry>;
