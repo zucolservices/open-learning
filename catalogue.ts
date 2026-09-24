@@ -932,11 +932,11 @@ const lakehouse: Track = {
           formats: ["build-connect", "animated-infographic", "checkpoint"],
           concepts: [
             "Vendor platforms and what they add",
-            "Open-source stack: MinIO, Iceberg, Polaris/Nessie, Spark, Trino, Airflow, Superset",
+            "Open-source stack: Ceph/SeaweedFS/Garage, Iceberg, Polaris/Lakekeeper, Spark, Trino, Airflow, Superset",
             "Lock-in, portability and cost considerations",
             "Mapping equivalent services across clouds",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           plain:
             "Beyond the three clouds are vendor platforms (Databricks, Snowflake, Dremio and more) and fully open-source stacks you run yourself. This module maps equivalent pieces across all of them, so you can read any architecture diagram.",
