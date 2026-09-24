@@ -1107,11 +1107,18 @@ const systemDesign: Track = {
             "Health checks and connection draining",
             "Load balancers as a single point of failure",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["latency-throughput"],
           plain:
             "A load balancer sits in front of many servers and decides which one handles each request. How it decides matters most when one server is slow or broken. You'll run the main strategies side by side.",
+          terms: [
+            "load-balancer",
+            "health-check",
+            "single-point-of-failure",
+            "sticky-session",
+            "tail-latency",
+          ],
         },
         {
           slug: "autoscaling",

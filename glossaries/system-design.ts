@@ -120,4 +120,22 @@ export const systemDesign = {
       "Queries (or requests) per second: the basic measure of how much load a system handles.",
     module: "estimation",
   },
+  "health-check": {
+    term: "Health check",
+    definition:
+      "A regular test a load balancer runs against each server (such as requesting /health) to decide whether to keep sending it traffic.",
+    module: "load-balancing",
+  },
+  "single-point-of-failure": {
+    term: "Single point of failure",
+    definition: "One component whose failure takes the whole system down.",
+    analogy: "The only bridge into town.",
+    module: "load-balancing",
+  },
+  "sticky-session": {
+    term: "Sticky session",
+    definition:
+      "Sending all of a user's requests to the same server, usually because that server holds their session state.",
+    module: "load-balancing",
+  },
 } satisfies Record<string, GlossaryEntry>;

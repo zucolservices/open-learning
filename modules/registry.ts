@@ -39,4 +39,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "system-design/what-scale-means": () => import("./system-design/what-scale-means"),
   "system-design/latency-throughput": () => import("./system-design/latency-throughput"),
   "system-design/estimation": () => import("./system-design/estimation"),
+  "system-design/load-balancing": () => import("./system-design/load-balancing"),
 };

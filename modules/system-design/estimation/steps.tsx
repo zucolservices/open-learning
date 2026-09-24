@@ -121,6 +121,13 @@ export function Fermi() {
   );
 }
 
+function fmtBandwidth(mbs: number) {
+  const gbps = mbs / 125;
+  if (gbps >= 1000) return `${(gbps / 1000).toFixed(1)} Tbps`;
+  if (gbps >= 1) return `${gbps.toFixed(1)} Gbps`;
+  return `${mbs.toFixed(1)} MB/s`;
+}
+
 /* 2 ─ The estimator ⭐ ---------------------------------------------------------------------------- */
 
 const ROWS: { k: Key; label: string; fmt(v: number): string }[] = [
@@ -155,13 +162,7 @@ export function Estimator() {
       fmtBytesGB(r.storageTotalTB * 1000),
       "before replication and backups",
     ],
-    [
-      "Peak bandwidth out",
-      r.peakBandwidthMBs >= 125
-        ? `${(r.peakBandwidthMBs / 125).toFixed(1)} Gbps`
-        : `${r.peakBandwidthMBs.toFixed(1)} MB/s`,
-      "1 Gbps = 125 MB/s",
-    ],
+    ["Peak bandwidth out", fmtBandwidth(r.peakBandwidthMBs), "1 Gbps = 125 MB/s"],
     ["App servers at peak", `≈ ${r.servers}`, "plus spares for failures"],
   ];
   return (
