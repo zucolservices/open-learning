@@ -381,4 +381,22 @@ export const systemDesign = {
       "A service that stores the versions of each message schema and rejects new versions that would break existing producers or consumers.",
     module: "event-driven",
   },
+  availability: {
+    term: "Availability",
+    definition:
+      "The share of time a system is working and usable, often written as a number of nines: 99.9% (three nines) allows about 44 minutes of downtime a month.",
+    module: "availability",
+  },
+  "availability-zone": {
+    term: "Availability zone",
+    definition:
+      "One or more data centres within a cloud region, with separate power, cooling and networking, close enough to others for fast links. Spreading copies across zones survives a building-level failure.",
+    module: "availability",
+  },
+  sla: {
+    term: "SLA (service level agreement)",
+    definition:
+      "A contract stating the availability a provider promises and what it pays back (usually service credits) if it misses. It is compensation, not a guarantee.",
+    module: "availability",
+  },
 } satisfies Record<string, GlossaryEntry>;

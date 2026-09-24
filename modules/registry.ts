@@ -53,4 +53,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "system-design/queues-streams": () => import("./system-design/queues-streams"),
   "system-design/retries-idempotency": () => import("./system-design/retries-idempotency"),
   "system-design/event-driven": () => import("./system-design/event-driven"),
+  "system-design/availability": () => import("./system-design/availability"),
 };

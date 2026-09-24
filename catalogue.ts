@@ -1430,11 +1430,12 @@ const systemDesign: Track = {
             "Single points of failure",
             "Correlated failures",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["load-balancing"],
           plain:
             "Availability is the share of time a system works. Every component you depend on can fail, so chaining many lowers availability, and duplicating them raises it. You'll do the arithmetic and find the weak links.",
+          terms: ["availability", "availability-zone", "single-point-of-failure", "replica", "sla"],
         },
         {
           slug: "resilience-patterns",
