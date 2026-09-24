@@ -46,4 +46,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "system-design/cache-eviction": () => import("./system-design/cache-eviction"),
   "system-design/replication": () => import("./system-design/replication"),
   "system-design/sharding": () => import("./system-design/sharding"),
+  "system-design/consistency": () => import("./system-design/consistency"),
 };

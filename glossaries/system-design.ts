@@ -240,4 +240,29 @@ export const systemDesign = {
     definition: "Using several kinds of database in one system, each for the data it suits best.",
     module: "choosing-a-database",
   },
+  cap: {
+    term: "CAP theorem",
+    definition:
+      "During a network partition, a distributed system can't be both perfectly consistent (linearizable) and available at every working node: it must choose.",
+    module: "consistency",
+  },
+  "partition-network": {
+    term: "Network partition",
+    definition:
+      "A failure where parts of a system are running but can't communicate with each other.",
+    analogy: "Two bank branches whose phone line has gone dead.",
+    module: "consistency",
+  },
+  "consistency-model": {
+    term: "Consistency model",
+    definition:
+      "The rules for what a read may return after writes, from linearizable (always the latest) to eventual (copies agree once writes stop).",
+    module: "consistency",
+  },
+  quorum: {
+    term: "Quorum",
+    definition:
+      "The number of copies that must respond for a write (W) or read (R) to succeed. If R + W > N, reads overlap the latest successful write.",
+    module: "consistency",
+  },
 } satisfies Record<string, GlossaryEntry>;

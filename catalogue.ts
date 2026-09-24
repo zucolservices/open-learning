@@ -1275,11 +1275,12 @@ const systemDesign: Track = {
             "Quorums: N, R, W",
             "Conflict resolution: last-write-wins, vector clocks, CRDTs",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["replication"],
           plain:
             "When copies of data can't talk to each other, a system must choose: stay available and risk disagreement, or stop accepting changes until they reconnect. You'll make that choice yourself and see the consequences.",
+          terms: ["cap", "partition-network", "consistency-model", "quorum", "replica"],
         },
         {
           slug: "choosing-a-database",
