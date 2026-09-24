@@ -398,7 +398,7 @@ const lakehouse: Track = {
           minutes: 30,
           signature:
             "Run one INSERT, UPDATE and schema change and watch what each format writes to storage, side by side",
-          formats: ["simulation", "animated-infographic", "branching-scenario", "checkpoint"],
+          formats: ["simulation", "scroll-story", "branching-scenario", "checkpoint"],
           concepts: [
             "Design philosophies and ecosystem support",
             "Feature comparison: evolution, deletes, concurrency, streaming",
@@ -406,12 +406,21 @@ const lakehouse: Track = {
             "Convergence (deletion vectors, variant type) and newer entrants",
             "Choosing a format for a given project",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           plain:
             "Delta Lake, Iceberg and Hudi all turn files into reliable tables, but they make different trade-offs and have different ecosystems. This module compares them side by side, shows how they're converging, and helps you choose one for a project.",
           prerequisites: ["delta-lake", "apache-iceberg", "apache-hudi"],
-          terms: ["delta-lake", "iceberg", "hudi", "table-format"],
+          terms: [
+            "delta-lake",
+            "iceberg",
+            "hudi",
+            "table-format",
+            "deletion-vector",
+            "uniform",
+            "xtable",
+            "catalog",
+          ],
         },
       ],
     },

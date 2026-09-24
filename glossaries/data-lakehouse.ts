@@ -376,6 +376,18 @@ export const dataLakehouse = {
       "Ways to handle attributes that change over time, like a customer's city: overwrite it (Type 1) or keep history rows (Type 2).",
     module: "cdc-and-merge",
   },
+  uniform: {
+    term: "UniForm (Delta)",
+    definition:
+      "A Delta Lake feature that also writes Iceberg (and, in preview, Hudi) metadata for the same Parquet files, so Iceberg readers can query a Delta table without copying it.",
+    module: "format-showdown",
+  },
+  xtable: {
+    term: "Apache XTable",
+    definition:
+      "An incubating Apache project (formerly OneTable) that translates table metadata between Delta, Iceberg and Hudi, without copying data files.",
+    module: "format-showdown",
+  },
   "hudi-timeline": {
     term: "Timeline (Hudi)",
     definition:

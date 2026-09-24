@@ -15,4 +15,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-lakehouse/delta-lake": () => import("./data-lakehouse/delta-lake"),
   "data-lakehouse/apache-iceberg": () => import("./data-lakehouse/apache-iceberg"),
   "data-lakehouse/apache-hudi": () => import("./data-lakehouse/apache-hudi"),
+  "data-lakehouse/format-showdown": () => import("./data-lakehouse/format-showdown"),
 };
