@@ -1297,11 +1297,12 @@ const systemDesign: Track = {
             "Polyglot persistence",
             "Managed options on each cloud",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["sharding"],
           plain:
             "There's no single best database. Each family is built for certain questions: joins, fast lookups by key, huge write volumes, relationships, time series or text search. You'll match workloads to the right kind.",
+          terms: ["polyglot-persistence", "shard", "replica", "cache"],
         },
         {
           slug: "distributed-transactions",
