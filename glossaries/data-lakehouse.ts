@@ -376,6 +376,54 @@ export const dataLakehouse = {
       "Ways to handle attributes that change over time, like a customer's city: overwrite it (Type 1) or keep history rows (Type 2).",
     module: "cdc-and-merge",
   },
+  bi: {
+    term: "BI",
+    definition:
+      "Business intelligence: dashboards and reports that help people track and understand the business, built with tools like Power BI, Tableau, Looker or Superset.",
+    module: "bi-ml-ai",
+  },
+  "semantic-layer": {
+    term: "Semantic layer",
+    definition:
+      "A shared set of business definitions (metrics like revenue, dimensions like city) that sits between tables and tools, so every dashboard and assistant computes them the same way.",
+    module: "bi-ml-ai",
+  },
+  "data-leakage": {
+    term: "Data leakage",
+    definition:
+      "When training data contains information the model couldn't have had at prediction time, such as values from the future. It makes a model look far better in training than in real use.",
+    module: "bi-ml-ai",
+  },
+  "point-in-time": {
+    term: "Point-in-time join",
+    definition:
+      "Joining each training example to feature values as they were at that example's timestamp, not as they are now. Also called an as-of join.",
+    module: "bi-ml-ai",
+  },
+  "feature-store": {
+    term: "Feature store",
+    definition:
+      "A system for managing model inputs (features): an offline store of history for training, often lakehouse tables, and an online store for millisecond lookups when serving.",
+    module: "bi-ml-ai",
+  },
+  rag: {
+    term: "RAG",
+    definition:
+      "Retrieval-augmented generation: finding relevant passages from your own documents and giving them to a language model, so its answer is based on them.",
+    module: "bi-ml-ai",
+  },
+  embedding: {
+    term: "Embedding",
+    definition:
+      "A list of numbers representing the meaning of a piece of text (or an image). Similar meanings get nearby embeddings, which is what makes similarity search possible.",
+    module: "bi-ml-ai",
+  },
+  "vector-index": {
+    term: "Vector index",
+    definition:
+      "A structure that quickly finds the stored embeddings most similar to a query embedding. The engine behind semantic search and RAG.",
+    module: "bi-ml-ai",
+  },
   duckdb: {
     term: "DuckDB",
     definition:

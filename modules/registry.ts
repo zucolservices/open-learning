@@ -29,4 +29,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-lakehouse/medallion": () => import("./data-lakehouse/medallion"),
   "data-lakehouse/query-engines": () => import("./data-lakehouse/query-engines"),
   "data-lakehouse/hands-on-sql": () => import("./data-lakehouse/hands-on-sql"),
+  "data-lakehouse/bi-ml-ai": () => import("./data-lakehouse/bi-ml-ai"),
 };
