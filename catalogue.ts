@@ -717,12 +717,21 @@ const lakehouse: Track = {
             "SCD Type 1 and Type 2",
             "Change feeds: Delta CDF, Iceberg changelog, Hudi incremental queries",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           plain:
             "When an app database changes, those changes can be streamed as events: insert this, update that, delete this. Applying them to a lakehouse table correctly, even when they arrive late or twice, is the job of MERGE. You'll also learn how to keep history of changes.",
           prerequisites: ["ingestion", "delta-lake"],
-          terms: ["cdc", "merge", "upsert", "scd", "streaming"],
+          terms: [
+            "cdc",
+            "debezium",
+            "merge",
+            "upsert",
+            "tombstone",
+            "soft-delete",
+            "scd",
+            "change-feed",
+          ],
         },
         {
           slug: "medallion",

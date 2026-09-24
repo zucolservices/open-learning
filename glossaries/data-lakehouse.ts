@@ -376,6 +376,30 @@ export const dataLakehouse = {
       "Ways to handle attributes that change over time, like a customer's city: overwrite it (Type 1) or keep history rows (Type 2).",
     module: "cdc-and-merge",
   },
+  debezium: {
+    term: "Debezium",
+    definition:
+      "An open-source CDC tool. It reads a database's own change log (e.g. the Postgres WAL or MySQL binlog) and publishes every insert, update and delete as an event, usually to Kafka.",
+    module: "cdc-and-merge",
+  },
+  tombstone: {
+    term: "Tombstone",
+    definition:
+      "A marker that says \"this key was deleted\". In Kafka it's a message with a key and no value; in a table it's a row kept with a deleted flag.",
+    module: "cdc-and-merge",
+  },
+  "soft-delete": {
+    term: "Soft delete",
+    definition:
+      "Marking a row as deleted (e.g. is_deleted = true) instead of removing it, so readers skip it but its history and position are kept.",
+    module: "cdc-and-merge",
+  },
+  "change-feed": {
+    term: "Change feed",
+    definition:
+      "A table's own list of the rows each commit inserted, updated and deleted, e.g. Delta Change Data Feed, Iceberg changelog views or Hudi CDC queries.",
+    module: "cdc-and-merge",
+  },
   kafka: {
     term: "Apache Kafka",
     definition:
