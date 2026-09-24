@@ -882,21 +882,22 @@ const lakehouse: Track = {
         {
           slug: "on-gcp",
           title: "Lakehouse on Google Cloud",
-          summary: "GCS, BigLake, BigQuery, Dataproc, Dataflow and Dataplex, assembled.",
+          summary:
+            "Cloud Storage, BigQuery, Iceberg tables, Managed Spark, Dataflow and Knowledge Catalog, assembled.",
           minutes: 30,
           signature:
             "Assemble a Google Cloud lakehouse and compare BigQuery-managed vs open Iceberg tables",
           formats: ["build-connect", "simulation", "checkpoint"],
           concepts: [
-            "Storage: GCS; BigLake and BigQuery tables for Apache Iceberg",
-            "Catalog and governance: BigLake metastore, Dataplex",
-            "Compute: BigQuery, Dataproc (Spark), Dataflow",
+            "Storage: Cloud Storage; Apache Iceberg managed tables vs open Iceberg tables",
+            "Catalog and governance: Lakehouse runtime catalog, Knowledge Catalog",
+            "Compute: BigQuery, Managed Service for Apache Spark, Dataflow",
             "Ingestion: Datastream, Pub/Sub",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           plain:
-            "Google Cloud's version of the lakehouse centres on Cloud Storage, BigLake and BigQuery. You'll assemble a design and compare tables that BigQuery manages with open Iceberg tables.",
+            "Google Cloud's version of the lakehouse centres on Cloud Storage, Iceberg tables and BigQuery. You'll assemble a design and compare tables that BigQuery manages with open Iceberg tables.",
           prerequisites: ["catalogs", "query-engines"],
           terms: ["object-storage", "catalog", "engine"],
         },

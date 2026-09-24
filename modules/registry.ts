@@ -31,4 +31,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-lakehouse/hands-on-sql": () => import("./data-lakehouse/hands-on-sql"),
   "data-lakehouse/bi-ml-ai": () => import("./data-lakehouse/bi-ml-ai"),
   "data-lakehouse/on-aws": () => import("./data-lakehouse/on-aws"),
+  "data-lakehouse/on-gcp": () => import("./data-lakehouse/on-gcp"),
 };

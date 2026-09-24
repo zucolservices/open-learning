@@ -67,7 +67,7 @@ export function PlatformBuilder({
               type="button"
               onClick={() => onSelectSlot(s.id)}
               className={cn(
-                "relative grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 overflow-hidden rounded-xl border px-3 py-2 text-left transition",
+                "relative grid gap-1 overflow-hidden rounded-xl border px-3 py-2 text-left transition sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center sm:gap-2",
                 s.id === activeSlot.id ? "border-accent ring-accent/30 ring-2" : "border-line",
                 o ? (good ? "bg-good/5" : "bg-bad/5") : "bg-surface",
               )}
