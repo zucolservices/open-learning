@@ -376,6 +376,12 @@ export const dataLakehouse = {
       "Ways to handle attributes that change over time, like a customer's city: overwrite it (Type 1) or keep history rows (Type 2).",
     module: "cdc-and-merge",
   },
+  "hilbert-curve": {
+    term: "Hilbert curve",
+    definition:
+      "A space-filling curve that visits every cell of a grid while only ever stepping to a neighbouring cell. Ordering rows along it keeps rows with similar values in several columns in the same files.",
+    module: "data-skipping",
+  },
   "partition-pruning": {
     term: "Partition pruning",
     definition:

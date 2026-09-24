@@ -571,12 +571,19 @@ const lakehouse: Track = {
             "File-level statistics and data skipping",
             "Bloom filters and secondary indexing",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           plain:
             "The fastest data to read is data you never read. By arranging rows cleverly and keeping small summaries of every file, engines can skip most of a table for a typical query. You'll see sorting, Z-order and clustering at work.",
           prerequisites: ["inside-parquet", "partitioning"],
-          terms: ["data-skipping", "statistics", "z-order", "small-files", "compaction"],
+          terms: [
+            "data-skipping",
+            "statistics",
+            "z-order",
+            "hilbert-curve",
+            "bloom-filter",
+            "liquid-clustering",
+          ],
         },
         {
           slug: "table-maintenance",
