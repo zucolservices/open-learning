@@ -1494,11 +1494,12 @@ const systemDesign: Track = {
             "Error budgets and burn-rate alerts",
             "OpenTelemetry",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["latency-throughput"],
           plain:
             "You can't fix what you can't see. Observability means collecting the signals that tell you what a system is doing. Service level objectives turn those signals into a clear target for reliability.",
+          terms: ["observability", "metric", "log", "trace", "sli", "slo", "error-budget"],
         },
       ],
     },

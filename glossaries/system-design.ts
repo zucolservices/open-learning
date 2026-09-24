@@ -455,4 +455,48 @@ export const systemDesign = {
       "Rules (legal or contractual) about which countries or regions data may be stored or processed in, including backups and replicas.",
     module: "multi-region-dr",
   },
+  observability: {
+    term: "Observability",
+    definition:
+      "How well you can understand what a running system is doing, and why, from the data it emits: mainly metrics, logs and traces.",
+    module: "observability",
+  },
+  metric: {
+    term: "Metric",
+    definition:
+      "A number measured over time, such as requests per second or 99th-percentile latency. Cheap to store and ideal for dashboards and alerts.",
+    analogy: "A car's speedometer and fuel gauge.",
+    module: "observability",
+  },
+  log: {
+    term: "Log",
+    definition:
+      "A timestamped record of an individual event, such as 'order 7731 failed: card declined'. Detailed, but costly to store and search at scale.",
+    module: "observability",
+  },
+  trace: {
+    term: "Trace",
+    definition:
+      "The record of one request's journey through a system, made of spans (timed pieces of work) linked by a shared trace ID.",
+    analogy: "A parcel's tracking history, with every stop and its time.",
+    module: "observability",
+  },
+  sli: {
+    term: "SLI (service level indicator)",
+    definition:
+      "A measurement of service quality as users experience it, such as the share of requests that succeed or finish within 300 ms.",
+    module: "observability",
+  },
+  slo: {
+    term: "SLO (service level objective)",
+    definition:
+      "A target for an SLI over a period, such as '99.9% of checkout requests succeed over 30 days'. Chosen by the team; stricter than any SLA.",
+    module: "observability",
+  },
+  "error-budget": {
+    term: "Error budget",
+    definition:
+      "The amount of unreliability an SLO allows (for 99.9%, 0.1% of requests). Teams spend it on releases and experiments, and slow down when it runs out.",
+    module: "observability",
+  },
 } satisfies Record<string, GlossaryEntry>;

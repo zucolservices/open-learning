@@ -56,4 +56,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "system-design/availability": () => import("./system-design/availability"),
   "system-design/resilience-patterns": () => import("./system-design/resilience-patterns"),
   "system-design/multi-region-dr": () => import("./system-design/multi-region-dr"),
+  "system-design/observability": () => import("./system-design/observability"),
 };
