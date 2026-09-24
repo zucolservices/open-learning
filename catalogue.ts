@@ -1613,11 +1613,12 @@ const systemDesign: Track = {
             "Managed vs self-run trade-offs",
             "Portability and lock-in",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["choosing-a-database", "queues-streams"],
           plain:
             "Every cloud offers the same building blocks under different names. Learning the mapping lets you read any architecture diagram and design on whichever platform a project uses.",
+          terms: ["managed-service", "vendor-lock-in", "load-balancer", "cdn", "queue", "cache"],
         },
         {
           slug: "results-day",

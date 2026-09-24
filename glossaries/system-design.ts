@@ -556,4 +556,16 @@ export const systemDesign = {
       "When two operations read the same value, both change it, and the second write silently overwrites the first.",
     module: "flash-sale",
   },
+  "managed-service": {
+    term: "Managed service",
+    definition:
+      "A cloud service where the provider runs the software for you (patching, backups, failover), while you configure and use it.",
+    module: "building-blocks",
+  },
+  "vendor-lock-in": {
+    term: "Vendor lock-in",
+    definition:
+      "How hard and costly it would be to move from one provider's services to another's.",
+    module: "building-blocks",
+  },
 } satisfies Record<string, GlossaryEntry>;

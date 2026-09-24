@@ -61,4 +61,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "system-design/news-feed": () => import("./system-design/news-feed"),
   "system-design/realtime-chat": () => import("./system-design/realtime-chat"),
   "system-design/flash-sale": () => import("./system-design/flash-sale"),
+  "system-design/building-blocks": () => import("./system-design/building-blocks"),
 };

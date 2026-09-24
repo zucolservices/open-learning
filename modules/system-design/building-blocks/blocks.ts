@@ -1,0 +1,201 @@
+/** The Rosetta stone: each building block and its names across platforms (checked Sept 2026). */
+
+export type Platform = "concept" | "aws" | "gcp" | "azure" | "oss";
+export type Group = "Edge" | "Compute" | "Data" | "Messaging" | "Operations";
+
+export interface Block {
+  id: string;
+  group: Group;
+  concept: string;
+  what: string;
+  aws: string;
+  gcp: string;
+  azure: string;
+  oss: string;
+  note?: string;
+}
+
+export const BLOCKS: Block[] = [
+  {
+    id: "dns",
+    group: "Edge",
+    concept: "DNS",
+    what: "Turns names into addresses; can steer users to healthy regions.",
+    aws: "Route 53",
+    gcp: "Cloud DNS",
+    azure: "Azure DNS",
+    oss: "CoreDNS, BIND, PowerDNS",
+  },
+  {
+    id: "cdn",
+    group: "Edge",
+    concept: "CDN",
+    what: "Caches content near users.",
+    aws: "CloudFront",
+    gcp: "Cloud CDN, Media CDN",
+    azure: "Azure Front Door",
+    oss: "Varnish, Apache Traffic Server",
+  },
+  {
+    id: "lb",
+    group: "Edge",
+    concept: "Load balancer",
+    what: "Spreads requests over healthy servers.",
+    aws: "Elastic Load Balancing (ALB, NLB)",
+    gcp: "Cloud Load Balancing",
+    azure: "Azure Load Balancer, Application Gateway",
+    oss: "NGINX, HAProxy, Envoy",
+  },
+  {
+    id: "containers",
+    group: "Compute",
+    concept: "Containers",
+    what: "Runs your app in containers, scaled and restarted for you.",
+    aws: "EKS, ECS",
+    gcp: "GKE, Cloud Run",
+    azure: "AKS, Azure Container Apps",
+    oss: "Kubernetes",
+  },
+  {
+    id: "functions",
+    group: "Compute",
+    concept: "Functions",
+    what: "Runs code per event, with no servers to manage.",
+    aws: "Lambda",
+    gcp: "Cloud Run functions",
+    azure: "Azure Functions",
+    oss: "Knative, OpenFaaS",
+  },
+  {
+    id: "workflow",
+    group: "Compute",
+    concept: "Workflows",
+    what: "Coordinates multi-step processes durably (sagas).",
+    aws: "Step Functions",
+    gcp: "Workflows",
+    azure: "Durable Functions, Logic Apps",
+    oss: "Temporal",
+  },
+  {
+    id: "sql",
+    group: "Data",
+    concept: "Relational database",
+    what: "Tables, SQL and transactions.",
+    aws: "RDS, Aurora",
+    gcp: "Cloud SQL, AlloyDB",
+    azure: "Azure Database for PostgreSQL / MySQL, Azure SQL Database",
+    oss: "PostgreSQL, MySQL",
+  },
+  {
+    id: "dsql",
+    group: "Data",
+    concept: "Distributed SQL",
+    what: "SQL spread over many machines and regions.",
+    aws: "Aurora DSQL",
+    gcp: "Spanner",
+    azure: "Azure Database for PostgreSQL elastic clusters",
+    oss: "YugabyteDB, TiDB; CockroachDB (source-available)",
+  },
+  {
+    id: "kv",
+    group: "Data",
+    concept: "Key-value / document",
+    what: "Huge scale for simple lookups by key.",
+    aws: "DynamoDB",
+    gcp: "Firestore, Bigtable",
+    azure: "Cosmos DB",
+    oss: "Apache Cassandra; MongoDB (source-available)",
+  },
+  {
+    id: "cache",
+    group: "Data",
+    concept: "In-memory cache",
+    what: "Microsecond reads for hot data.",
+    aws: "ElastiCache, MemoryDB",
+    gcp: "Memorystore (for Valkey, for Redis Cluster)",
+    azure: "Azure Managed Redis",
+    oss: "Valkey, Redis",
+  },
+  {
+    id: "object",
+    group: "Data",
+    concept: "Object storage",
+    what: "Files and blobs, practically unlimited.",
+    aws: "S3",
+    gcp: "Cloud Storage",
+    azure: "Blob Storage",
+    oss: "Ceph, SeaweedFS",
+  },
+  {
+    id: "search",
+    group: "Data",
+    concept: "Search",
+    what: "Full-text and filtered search.",
+    aws: "OpenSearch Service",
+    gcp: "Agent Search (formerly Vertex AI Search)",
+    azure: "Azure AI Search",
+    oss: "OpenSearch, Elasticsearch",
+  },
+  {
+    id: "queue",
+    group: "Messaging",
+    concept: "Queue",
+    what: "Hands work to consumers, once each.",
+    aws: "SQS",
+    gcp: "Pub/Sub, Cloud Tasks",
+    azure: "Service Bus, Queue Storage",
+    oss: "RabbitMQ",
+  },
+  {
+    id: "stream",
+    group: "Messaging",
+    concept: "Event stream",
+    what: "A replayable log for many readers.",
+    aws: "Kinesis Data Streams, MSK",
+    gcp: "Managed Service for Apache Kafka",
+    azure: "Event Hubs",
+    oss: "Apache Kafka, Apache Pulsar",
+  },
+  {
+    id: "events",
+    group: "Messaging",
+    concept: "Event router",
+    what: "Routes events to subscribers by rules.",
+    aws: "EventBridge",
+    gcp: "Eventarc",
+    azure: "Event Grid",
+    oss: "Knative Eventing",
+  },
+  {
+    id: "obs",
+    group: "Operations",
+    concept: "Observability",
+    what: "Metrics, logs and traces.",
+    aws: "CloudWatch, X-Ray",
+    gcp: "Cloud Monitoring, Logging, Trace",
+    azure: "Azure Monitor, Application Insights",
+    oss: "Prometheus, Grafana, OpenTelemetry, Jaeger",
+  },
+  {
+    id: "secrets",
+    group: "Operations",
+    concept: "Secrets",
+    what: "Stores passwords and keys safely.",
+    aws: "Secrets Manager",
+    gcp: "Secret Manager",
+    azure: "Key Vault",
+    oss: "OpenBao; HashiCorp Vault (source-available)",
+  },
+  {
+    id: "iac",
+    group: "Operations",
+    concept: "Infrastructure as code",
+    what: "Describes infrastructure in files you can review and repeat.",
+    aws: "CloudFormation, CDK",
+    gcp: "Infrastructure Manager",
+    azure: "Bicep, ARM templates",
+    oss: "OpenTofu; Terraform (source-available)",
+  },
+];
+
+export const GROUPS: Group[] = ["Edge", "Compute", "Data", "Messaging", "Operations"];
