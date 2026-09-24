@@ -518,4 +518,23 @@ export const systemDesign = {
       "Fetching the next page relative to the last item seen ('20 posts older than post X') instead of by position ('skip 40'), so pages stay correct when items are added or removed.",
     module: "news-feed",
   },
+  websocket: {
+    term: "WebSocket",
+    definition:
+      "A protocol that keeps one connection open between a client and a server so either side can send messages at any time, without new requests.",
+    analogy: "An open phone line, instead of sending a letter every time.",
+    module: "realtime-chat",
+  },
+  "long-polling": {
+    term: "Long polling",
+    definition:
+      "The client makes a request that the server holds open until it has news (or a timeout passes); the client then immediately asks again.",
+    module: "realtime-chat",
+  },
+  presence: {
+    term: "Presence",
+    definition:
+      "Knowing which users are online right now, and which server each one is connected to, so messages and 'online' dots can reach them.",
+    module: "realtime-chat",
+  },
 } satisfies Record<string, GlossaryEntry>;

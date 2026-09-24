@@ -1564,11 +1564,12 @@ const systemDesign: Track = {
             "Ordering and delivery receipts",
             "Presence and offline delivery",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["queues-streams", "sharding"],
           plain:
             "Chat looks simple: send a message, the other person sees it. Doing it instantly for millions of people whose phones drop signal all the time takes persistent connections, careful routing and a clear idea of message order.",
+          terms: ["websocket", "long-polling", "presence", "consistent-hashing", "idempotent"],
         },
         {
           slug: "flash-sale",

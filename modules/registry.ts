@@ -59,4 +59,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "system-design/observability": () => import("./system-design/observability"),
   "system-design/url-shortener": () => import("./system-design/url-shortener"),
   "system-design/news-feed": () => import("./system-design/news-feed"),
+  "system-design/realtime-chat": () => import("./system-design/realtime-chat"),
 };
