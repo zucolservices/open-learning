@@ -960,7 +960,7 @@ const lakehouse: Track = {
             "Build an architecture for a cooperative bank's transaction analytics; checkpoints probe every choice",
           formats: ["build-connect", "branching-scenario", "checkpoint"],
           concepts: ["Applying every chapter to one end-to-end design"],
-          status: "planned",
+          status: "live",
           level: "applied",
           plain:
             "Now put everything together. You'll get a realistic brief, a cooperative bank's transaction analytics, and design the whole thing: formats, layout, catalog, pipelines and platform, defending each choice.",
