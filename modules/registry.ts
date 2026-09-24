@@ -28,4 +28,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-lakehouse/cdc-and-merge": () => import("./data-lakehouse/cdc-and-merge"),
   "data-lakehouse/medallion": () => import("./data-lakehouse/medallion"),
   "data-lakehouse/query-engines": () => import("./data-lakehouse/query-engines"),
+  "data-lakehouse/hands-on-sql": () => import("./data-lakehouse/hands-on-sql"),
 };

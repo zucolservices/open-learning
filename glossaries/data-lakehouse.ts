@@ -376,6 +376,18 @@ export const dataLakehouse = {
       "Ways to handle attributes that change over time, like a customer's city: overwrite it (Type 1) or keep history rows (Type 2).",
     module: "cdc-and-merge",
   },
+  duckdb: {
+    term: "DuckDB",
+    definition:
+      "An open-source analytical database that runs inside another program (a Python script, an app or a browser tab) instead of as a server. Fast on one machine, and reads Parquet, Iceberg and Delta directly.",
+    module: "hands-on-sql",
+  },
+  "projection-pushdown": {
+    term: "Projection pushdown",
+    definition:
+      "Reading only the columns a query uses. Columnar files like Parquet make it possible, because each column is stored separately.",
+    module: "hands-on-sql",
+  },
   vectorised: {
     term: "Vectorised execution",
     definition:

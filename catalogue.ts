@@ -805,12 +805,21 @@ const lakehouse: Track = {
             "EXPLAIN and reading query plans",
             "Measuring projection and predicate pushdown",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           plain:
             "Time to try it yourself. A real query engine (DuckDB) runs inside this page, on real Parquet files. Guided tasks walk you through inspecting files and proving that skipping and pruning really happen.",
           prerequisites: ["inside-parquet"],
-          terms: ["sql", "parquet", "query-plan", "predicate-pushdown"],
+          terms: [
+            "sql",
+            "duckdb",
+            "parquet",
+            "row-group",
+            "statistics",
+            "query-plan",
+            "predicate-pushdown",
+            "projection-pushdown",
+          ],
         },
         {
           slug: "bi-ml-ai",
