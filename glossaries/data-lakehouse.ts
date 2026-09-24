@@ -376,6 +376,24 @@ export const dataLakehouse = {
       "Ways to handle attributes that change over time, like a customer's city: overwrite it (Type 1) or keep history rows (Type 2).",
     module: "cdc-and-merge",
   },
+  serializable: {
+    term: "Serializable isolation",
+    definition:
+      "The strictest common isolation level: concurrent transactions must produce a result that matches running them one at a time, in the order the history shows.",
+    module: "acid-and-concurrency",
+  },
+  "write-serializable": {
+    term: "WriteSerializable",
+    definition:
+      "Databricks' default Delta isolation level. Writes are serializable, but a blind append doesn't conflict with a concurrent reader, so more jobs succeed while history can describe an order that didn't really happen.",
+    module: "acid-and-concurrency",
+  },
+  "blind-append": {
+    term: "Blind append",
+    definition:
+      "A write that adds new rows without reading the table first, such as a plain INSERT. It can't be invalidated by other writers' data changes.",
+    module: "acid-and-concurrency",
+  },
   uniform: {
     term: "UniForm (Delta)",
     definition:

@@ -438,14 +438,14 @@ const lakehouse: Track = {
           minutes: 30,
           signature:
             "ACID explained with one bank transfer, then two writers race to commit and you step through conflict detection and retry",
-          formats: ["animated-infographic", "step-through", "simulation", "checkpoint"],
+          formats: ["scroll-story", "simulation", "step-through", "checkpoint"],
           concepts: [
             "Atomicity via put-if-absent or catalog pointer swap",
             "Optimistic concurrency control and conflict detection",
             "Serializable vs snapshot/write-serializable isolation",
             "Multi-writer setups and commit coordinators",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           plain:
             "ACID is the set of promises a database makes about changes: all or nothing, rules respected, no interference, nothing lost. This module shows how a lakehouse keeps those promises on plain cloud storage, even when two jobs write at the same time.",
@@ -458,6 +458,9 @@ const lakehouse: Track = {
             "optimistic-concurrency",
             "put-if-absent",
             "commit",
+            "serializable",
+            "write-serializable",
+            "blind-append",
           ],
         },
         {

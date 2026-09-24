@@ -408,8 +408,10 @@ export function CompareStores() {
         conditional writes.
       </p>
       <p>
-        Hierarchical namespaces make renames atomic, but lakehouse table formats don&apos;t rely on
-        renames at all, which is why the same Delta or Iceberg table works on every one of them.
+        Hierarchical namespaces make renames atomic. Table formats only need one small atomic commit
+        per version, and each store can provide that in its own way (Delta on Azure, for example,
+        uses rename-without-overwrite), which is why the same Delta or Iceberg table works on every
+        one of them.
       </p>
       <p className="text-subtle text-xs">
         AWS also offers <strong>table buckets (S3 Tables)</strong>, which manage Apache Iceberg

@@ -171,7 +171,8 @@ export function TwoWriters() {
       <p className="text-subtle text-xs">
         S3 added put-if-absent (<code>If-None-Match: *</code>) in August 2024 and compare-and-swap (
         <code>If-Match</code>) in November 2024. Before that, multi-writer setups on S3 relied on an
-        outside coordinator, such as a DynamoDB table or a catalog. GCS (
+        outside coordinator, such as a DynamoDB table or a catalog; open-source Delta for Spark
+        still does, while newer writers such as delta-rs use conditional writes. GCS (
         <code>ifGenerationMatch=0</code>) and Azure (<code>If-None-Match: *</code>) have long
         supported it.
       </p>
