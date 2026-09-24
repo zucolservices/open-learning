@@ -1402,11 +1402,12 @@ const systemDesign: Track = {
             "Event sourcing and CQRS, briefly",
             "Schemas and event evolution",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["queues-streams"],
           plain:
             "Instead of one service telling others what to do, it announces what happened, and interested services react. That makes systems easier to extend, and harder to follow. You'll see both sides.",
+          terms: ["event", "pub-sub", "event-sourcing", "cqrs", "schema-registry"],
         },
       ],
     },

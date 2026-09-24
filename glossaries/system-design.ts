@@ -349,4 +349,36 @@ export const systemDesign = {
     analogy: "Writing the invoice number on a cheque, so the biller can spot a duplicate.",
     module: "retries-idempotency",
   },
+  event: {
+    term: "Event",
+    definition:
+      "A message saying that something happened (named in the past tense, such as OrderPlaced). The sender doesn't know or care who reacts. Contrast with a command, which asks one service to do something.",
+    module: "event-driven",
+  },
+  "pub-sub": {
+    term: "Publish/subscribe (pub/sub)",
+    definition:
+      "A messaging style where producers publish messages to a topic and every subscriber to that topic gets a copy, without producers knowing who the subscribers are.",
+    analogy: "Posting in a group chat instead of phoning each person.",
+    module: "event-driven",
+  },
+  "event-sourcing": {
+    term: "Event sourcing",
+    definition:
+      "Storing every change as an event and treating that sequence as the source of truth. Current state is computed by replaying the events.",
+    analogy: "A bank statement: the balance is the sum of every transaction.",
+    module: "event-driven",
+  },
+  cqrs: {
+    term: "CQRS",
+    definition:
+      "Command Query Responsibility Segregation: using one model for writes and separate, purpose-built models for reads, usually kept in step by events.",
+    module: "event-driven",
+  },
+  "schema-registry": {
+    term: "Schema registry",
+    definition:
+      "A service that stores the versions of each message schema and rejects new versions that would break existing producers or consumers.",
+    module: "event-driven",
+  },
 } satisfies Record<string, GlossaryEntry>;
