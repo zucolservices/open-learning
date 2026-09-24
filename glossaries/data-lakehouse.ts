@@ -376,6 +376,12 @@ export const dataLakehouse = {
       "Ways to handle attributes that change over time, like a customer's city: overwrite it (Type 1) or keep history rows (Type 2).",
     module: "cdc-and-merge",
   },
+  "iceberg-rest": {
+    term: "Iceberg REST catalog API",
+    definition:
+      "An open HTTP API for catalogs: engines use it to load tables, commit changes (with requirements the catalog checks) and receive short-lived storage credentials. Served by most modern catalogs.",
+    module: "catalogs",
+  },
   "orphan-files": {
     term: "Orphan files",
     definition:

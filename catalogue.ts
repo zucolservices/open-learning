@@ -622,19 +622,19 @@ const lakehouse: Track = {
           minutes: 30,
           signature:
             "Point Spark, Trino and DuckDB at one catalog and watch a commit from one become visible to the others",
-          formats: ["step-through", "build-connect", "checkpoint"],
+          formats: ["build-connect", "step-through", "checkpoint"],
           concepts: [
             "Namespaces, table pointers and atomic commits",
             "Hive Metastore, AWS Glue, Unity Catalog, Apache Polaris, Nessie",
             "The Iceberg REST catalog spec",
             "Git-like branching of data (Nessie, Iceberg branches)",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           plain:
             "A catalog is the lakehouse's directory: it knows every table, where its metadata lives and who may use it. Because every engine asks the same catalog, Spark, Trino and others all see the same tables and the same latest version.",
           prerequisites: ["what-makes-a-table"],
-          terms: ["catalog", "metadata", "engine", "commit"],
+          terms: ["catalog", "metadata", "engine", "commit", "iceberg-rest", "iceberg-branch"],
         },
         {
           slug: "governance-security",
