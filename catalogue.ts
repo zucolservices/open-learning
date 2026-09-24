@@ -1451,11 +1451,12 @@ const systemDesign: Track = {
             "Rate limiting: token bucket, leaky bucket, sliding window",
             "Load shedding and graceful degradation",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["retries-idempotency", "availability"],
           plain:
             "When one service slows down, everything waiting on it can pile up until the whole system stalls. A few simple patterns contain the damage. You'll watch a cascade happen, then stop it.",
+          terms: ["cascading-failure", "circuit-breaker", "bulkhead", "rate-limit", "timeout"],
         },
         {
           slug: "multi-region-dr",

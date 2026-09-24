@@ -399,4 +399,36 @@ export const systemDesign = {
       "A contract stating the availability a provider promises and what it pays back (usually service credits) if it misses. It is compensation, not a guarantee.",
     module: "availability",
   },
+  "cascading-failure": {
+    term: "Cascading failure",
+    definition:
+      "A failure that spreads: one slow or broken component ties up the resources of everything calling it, until those callers fail too.",
+    analogy:
+      "Every call-centre agent stuck on hold with one slow department, so nobody answers new calls.",
+    module: "resilience-patterns",
+  },
+  "circuit-breaker": {
+    term: "Circuit breaker",
+    definition:
+      "A wrapper around calls to a dependency that stops calling it for a while after too many failures (failing fast instead), then lets a trial call through to see if it has recovered.",
+    module: "resilience-patterns",
+  },
+  bulkhead: {
+    term: "Bulkhead",
+    definition:
+      "Giving each dependency its own limited pool of threads or connections, so one misbehaving dependency can't use up resources everyone else needs. Named after a ship's watertight compartments.",
+    module: "resilience-patterns",
+  },
+  "rate-limit": {
+    term: "Rate limit",
+    definition:
+      "A cap on how many requests a client may make in a period. Requests over the limit are rejected (HTTP 429) or delayed.",
+    module: "resilience-patterns",
+  },
+  timeout: {
+    term: "Timeout",
+    definition:
+      "The longest a caller will wait for a response before giving up and treating the call as failed. Without one, a hung dependency can hold the caller's resources indefinitely.",
+    module: "resilience-patterns",
+  },
 } satisfies Record<string, GlossaryEntry>;
