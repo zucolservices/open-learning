@@ -1543,11 +1543,12 @@ const systemDesign: Track = {
             "Feed ranking and caching",
             "Pagination",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["caching-patterns", "queues-streams"],
           plain:
             "A news feed shows each user recent posts from the people they follow. Doing that quickly for millions of users is a classic trade-off between work at posting time and work at reading time.",
+          terms: ["fan-out", "cache", "hot-key", "cursor-pagination"],
         },
         {
           slug: "realtime-chat",

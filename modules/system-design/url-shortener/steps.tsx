@@ -440,7 +440,7 @@ export function Redirect() {
                   "It does: caching of permanent redirects decides whether you see repeat clicks.",
               },
             ]}
-            explanation="301 and 308 are permanent (cacheable by default); 302 and 307 are temporary. Choose based on whether you need to see every click and whether a link's target may change."
+            explanation="301 and 308 are permanent and cacheable by default; 302 and 307 are temporary. Some shorteners (Bitly among them) send 301s but add headers limiting caching, which also works. Choose based on whether you need every click and whether a link's target may change."
           />
         </div>
       }

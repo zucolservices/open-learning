@@ -512,4 +512,10 @@ export const systemDesign = {
     analogy: "In a room of 23 people, it's more likely than not that two share a birthday.",
     module: "url-shortener",
   },
+  "cursor-pagination": {
+    term: "Cursor pagination",
+    definition:
+      "Fetching the next page relative to the last item seen ('20 posts older than post X') instead of by position ('skip 40'), so pages stay correct when items are added or removed.",
+    module: "news-feed",
+  },
 } satisfies Record<string, GlossaryEntry>;
