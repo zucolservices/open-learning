@@ -1232,11 +1232,12 @@ const systemDesign: Track = {
             "Replication lag and read-your-writes",
             "Failover and split brain",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["what-scale-means"],
           plain:
             "Replication keeps copies of the same data on several machines, for speed and safety. Copies take time to catch up, so a user can briefly see old data, even their own old data. You'll see why and how systems handle it.",
+          terms: ["replica", "leader-follower", "replication-lag", "failover", "split-brain"],
         },
         {
           slug: "sharding",

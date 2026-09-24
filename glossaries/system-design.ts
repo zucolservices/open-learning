@@ -205,4 +205,28 @@ export const systemDesign = {
       "A single key so popular that the one node storing it becomes overloaded while others sit idle.",
     module: "cache-eviction",
   },
+  "leader-follower": {
+    term: "Leader and followers",
+    definition:
+      "A replication set-up where one node (the leader, or primary) accepts writes and the others (followers, or replicas) copy its changes.",
+    module: "replication",
+  },
+  "replication-lag": {
+    term: "Replication lag",
+    definition:
+      "How far a replica is behind the leader: changes made on the leader that the replica hasn't applied yet.",
+    module: "replication",
+  },
+  failover: {
+    term: "Failover",
+    definition:
+      "Switching to a standby (such as promoting a replica to leader) when the active node fails.",
+    module: "replication",
+  },
+  "split-brain": {
+    term: "Split brain",
+    definition:
+      "When two nodes both believe they are the leader and accept conflicting writes, usually after a network split or a botched failover.",
+    module: "replication",
+  },
 } satisfies Record<string, GlossaryEntry>;

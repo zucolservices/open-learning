@@ -164,7 +164,7 @@ Architecture area, second track (approved 2026-09-24). 27 modules in 8 chapters,
 | 2. Flagship          | Module 6, Delta Lake transaction log: storyboard, then build                            | **Done.** 14 steps, fact-checked (module `SOURCES.md`)                  |
 | 3. Parallel flagship | Module 7, Iceberg metadata tree. First 3D module; sets the R3F toolkit                  | Next                                                                    |
 | 4. Rest of track     | Chapters 1 → 9, growing the toolkit (charts, builder, sandbox) along the way            | Done: all 29 modules live (2026-09-24)                                  |
-| 4b. System Design    | Second track (Architecture), 27 modules                                                 | In progress: modules 1–8 done                                           |
+| 4b. System Design    | Second track (Architecture), 27 modules                                                 | In progress: modules 1–9 done                                           |
 | 5. Team feedback     | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy            | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

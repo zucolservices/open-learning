@@ -7,7 +7,7 @@ import { ChoiceCheckpoint } from "@/toolkit/checkpoints/choice";
 import { SortCheckpoint } from "@/toolkit/checkpoints/sort";
 import { Term } from "@/toolkit/glossary/term";
 import { cn } from "@/lib/cn";
-import { PlatformBuilder, type ServiceOption, type Slot } from "../_platform/builder";
+import { PlatformBuilder, type ServiceOption, type Slot } from "@/toolkit/builders/slot-builder";
 import { BLOCKS, PLATFORMS, ROSETTA, type PlatformId } from "./data";
 import type { LandscapeState } from "./state";
 

@@ -44,4 +44,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "system-design/cdn-edge": () => import("./system-design/cdn-edge"),
   "system-design/caching-patterns": () => import("./system-design/caching-patterns"),
   "system-design/cache-eviction": () => import("./system-design/cache-eviction"),
+  "system-design/replication": () => import("./system-design/replication"),
 };

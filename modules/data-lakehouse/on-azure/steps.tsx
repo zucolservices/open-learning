@@ -9,7 +9,7 @@ import { ChoiceCheckpoint } from "@/toolkit/checkpoints/choice";
 import { Term } from "@/toolkit/glossary/term";
 import { cn } from "@/lib/cn";
 import { LayerStory, type LayerRow } from "../_platform/layer-story";
-import { PlatformBuilder, type ServiceOption, type Slot } from "../_platform/builder";
+import { PlatformBuilder, type ServiceOption, type Slot } from "@/toolkit/builders/slot-builder";
 import { CostEstimator, fmtUsd, type CostInput } from "../_platform/cost";
 import { INPUTS, PRICE, estimate } from "./pricing";
 import type { AzureState } from "./state";

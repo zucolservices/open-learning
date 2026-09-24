@@ -5,8 +5,9 @@ import { Check, X } from "lucide-react";
 import { cn } from "@/lib/cn";
 
 /**
- * Shared by the cloud-platform modules: pick one service for each lakehouse slot.
- * Feedback explains wrong picks; when everything fits, data flows through the stack.
+ * Pick one option for each slot (a job to be done). Wrong picks explain themselves; when every
+ * slot fits, a sweep of light runs down the stack. Used by the Lakehouse platform modules and
+ * System Design modules.
  */
 
 export interface Slot {

@@ -8,7 +8,7 @@ import { ChoiceCheckpoint } from "@/toolkit/checkpoints/choice";
 import { Term } from "@/toolkit/glossary/term";
 import { cn } from "@/lib/cn";
 import { LayerStory, type LayerRow } from "../_platform/layer-story";
-import { PlatformBuilder, type ServiceOption, type Slot } from "../_platform/builder";
+import { PlatformBuilder, type ServiceOption, type Slot } from "@/toolkit/builders/slot-builder";
 import { CostEstimator, type CostInput } from "../_platform/cost";
 import { INPUTS, estimate } from "./pricing";
 import type { GcpState } from "./state";

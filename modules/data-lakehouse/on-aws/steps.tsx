@@ -7,7 +7,7 @@ import { Segmented } from "@/toolkit/controls/segmented";
 import { ChoiceCheckpoint } from "@/toolkit/checkpoints/choice";
 import { Term } from "@/toolkit/glossary/term";
 import { LayerStory, type LayerRow } from "../_platform/layer-story";
-import { PlatformBuilder, type ServiceOption, type Slot } from "../_platform/builder";
+import { PlatformBuilder, type ServiceOption, type Slot } from "@/toolkit/builders/slot-builder";
 import { CostEstimator, type CostInput } from "../_platform/cost";
 import { INPUTS, estimate } from "./pricing";
 import type { AwsState } from "./state";
