@@ -1522,11 +1522,12 @@ const systemDesign: Track = {
             "Read-heavy design and caching",
             "Analytics without slowing redirects",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["estimation", "caching-patterns"],
           plain:
             "A URL shortener turns long links into short ones and redirects people who click them. It's simple enough to design fully, yet touches estimation, key generation, storage and caching.",
+          terms: ["back-of-envelope", "base62", "birthday-paradox", "cache", "hit-ratio"],
         },
         {
           slug: "news-feed",

@@ -499,4 +499,17 @@ export const systemDesign = {
       "The amount of unreliability an SLO allows (for 99.9%, 0.1% of requests). Teams spend it on releases and experiments, and slow down when it runs out.",
     module: "observability",
   },
+  base62: {
+    term: "Base62",
+    definition:
+      "Writing numbers with 62 symbols (0–9, a–z, A–Z), common for short IDs. Seven characters give about 3.5 trillion combinations.",
+    module: "url-shortener",
+  },
+  "birthday-paradox": {
+    term: "Birthday paradox",
+    definition:
+      "Random values collide much sooner than intuition suggests: among n random keys from N possibilities, a clash becomes likely once n is around the square root of N.",
+    analogy: "In a room of 23 people, it's more likely than not that two share a birthday.",
+    module: "url-shortener",
+  },
 } satisfies Record<string, GlossaryEntry>;
