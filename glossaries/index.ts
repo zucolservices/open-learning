@@ -1,0 +1,52 @@
+/**
+ * Glossaries: one per track, plus a small shared core of general terms.
+ *
+ * Inside a module, a term resolves against its own track first, then the
+ * shared core, so the same word can mean different things in different
+ * tracks (e.g. "checkpoint" in Delta Lake vs. in stream processing).
+ */
+import { dataLakehouse } from "./data-lakehouse";
+import { shared } from "./shared";
+import type { GlossaryEntry } from "./types";
+
+export type { GlossaryEntry } from "./types";
+export { shared };
+
+export const trackGlossaries: Record<string, Record<string, GlossaryEntry>> = {
+  "data-lakehouse": dataLakehouse,
+};
+
+export type TermId = keyof typeof shared | keyof typeof dataLakehouse;
+
+export interface ResolvedTerm {
+  id: string;
+  entry: GlossaryEntry;
+  /** Track whose module teaches the term (for "Learn it in…" links). */
+  track?: string;
+  /** "track" if defined in the track's own glossary, else "shared". */
+  scope: "track" | "shared";
+}
+
+export function resolveTerm(id: TermId, track?: string): ResolvedTerm {
+  const own = track ? trackGlossaries[track]?.[id] : undefined;
+  if (own) return { id, entry: own, track, scope: "track" };
+  const general = (shared as Record<string, GlossaryEntry>)[id];
+  if (general) return { id, entry: general, track: general.track, scope: "shared" };
+  for (const [t, g] of Object.entries(trackGlossaries)) {
+    if (g[id]) return { id, entry: g[id], track: t, scope: "track" };
+  }
+  throw new Error(`Unknown glossary term: ${id}`);
+}
+
+/** A track's own terms, alphabetically. */
+export function trackTerms(track: string): [string, GlossaryEntry][] {
+  return Object.entries(trackGlossaries[track] ?? {}).sort((a, b) =>
+    a[1].term.localeCompare(b[1].term),
+  );
+}
+
+export function sharedTerms(): [string, GlossaryEntry][] {
+  return (Object.entries(shared) as [string, GlossaryEntry][]).sort((a, b) =>
+    a[1].term.localeCompare(b[1].term),
+  );
+}

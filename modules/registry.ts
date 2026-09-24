@@ -1,0 +1,18 @@
+import type { ModuleDef } from "@/lib/module-sdk";
+
+/**
+ * Lazy loaders for every built module, keyed "<track>/<module>".
+ * Each import becomes its own bundle, so heavy modules (3D, sandboxes)
+ * never slow down other pages. Paths must be literal for the bundler.
+ */
+export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>> = {
+  "playground/rows-vs-columns": () => import("./playground/rows-vs-columns"),
+  "data-lakehouse/swamp-to-lakehouse": () => import("./data-lakehouse/swamp-to-lakehouse"),
+  "data-lakehouse/object-storage": () => import("./data-lakehouse/object-storage"),
+  "data-lakehouse/file-formats": () => import("./data-lakehouse/file-formats"),
+  "data-lakehouse/inside-parquet": () => import("./data-lakehouse/inside-parquet"),
+  "data-lakehouse/what-makes-a-table": () => import("./data-lakehouse/what-makes-a-table"),
+  "data-lakehouse/delta-lake": () => import("./data-lakehouse/delta-lake"),
+  "data-lakehouse/apache-iceberg": () => import("./data-lakehouse/apache-iceberg"),
+  "data-lakehouse/apache-hudi": () => import("./data-lakehouse/apache-hudi"),
+};

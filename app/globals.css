@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+/* Theme is set on <html data-theme="dark|light"> before paint (see app/layout.tsx). */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ---------------------------------------------------------------------------
+   Design tokens
+   Surfaces are near-neutral; colour is reserved for meaning:
+   - accent: the current track's identity colour
+   - viz-*:  fixed semantic colours used by every diagram and simulation
+   --------------------------------------------------------------------------- */
+:root,
+[data-theme="light"] {
+  --bg: #f6f7f9;
+  --bg-glow: rgb(20 184 166 / 0.1);
+  --surface: #ffffff;
+  --surface-2: #eef0f4;
+  --line: rgb(15 23 42 / 0.09);
+  --line-strong: rgb(15 23 42 / 0.16);
+  --fg: #0e1320;
+  --muted: #5b6477;
+  --subtle: #8a93a6;
+
+  --accent: #4f46e5;
+  --accent-fg: #ffffff;
+  --accent-soft: rgb(79 70 229 / 0.1);
+
+  --viz-data: #2563eb;
+  --viz-meta: #7c3aed;
+  --viz-compute: #d97706;
+  --viz-add: #059669;
+  --viz-remove: #e11d48;
+  --viz-idle: #94a3b8;
+  --tier-bronze: #b45309;
+  --tier-silver: #64748b;
+  --tier-gold: #ca8a04;
+
+  --good: #059669;
+  --bad: #e11d48;
+
+  --shadow: 0 1px 2px rgb(15 23 42 / 0.06), 0 8px 24px -8px rgb(15 23 42 / 0.12);
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg: #090b10;
+  --bg-glow: rgb(45 212 191 / 0.1);
+  --surface: #11141b;
+  --surface-2: #181c25;
+  --line: rgb(255 255 255 / 0.07);
+  --line-strong: rgb(255 255 255 / 0.14);
+  --fg: #e8ecf3;
+  --muted: #9aa3b5;
+  --subtle: #677084;
+
+  --accent: #818cf8;
+  --accent-fg: #0b0d12;
+  --accent-soft: rgb(129 140 248 / 0.14);
+
+  --viz-data: #60a5fa;
+  --viz-meta: #a78bfa;
+  --viz-compute: #fbbf24;
+  --viz-add: #34d399;
+  --viz-remove: #fb7185;
+  --viz-idle: #475569;
+  --tier-bronze: #d97745;
+  --tier-silver: #cbd5e1;
+  --tier-gold: #facc15;
+
+  --good: #34d399;
+  --bad: #fb7185;
+
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 12px 32px -12px rgb(0 0 0 / 0.6);
+  color-scheme: dark;
+}
+
+/* Track accents: each track has its own identity colour. */
+[data-track="lakehouse"] {
+  --accent: #0d9488;
+  --accent-soft: rgb(13 148 136 / 0.1);
+  --bg-glow: rgb(20 184 166 / 0.12);
+}
+[data-theme="dark"] [data-track="lakehouse"],
+[data-theme="dark"][data-track="lakehouse"] {
+  --accent: #2dd4bf;
+  --accent-soft: rgb(45 212 191 / 0.13);
+  --bg-glow: rgb(45 212 191 / 0.12);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-soft: var(--accent-soft);
+  --color-viz-data: var(--viz-data);
+  --color-viz-meta: var(--viz-meta);
+  --color-viz-compute: var(--viz-compute);
+  --color-viz-add: var(--viz-add);
+  --color-viz-remove: var(--viz-remove);
+  --color-viz-idle: var(--viz-idle);
+  --color-tier-bronze: var(--tier-bronze);
+  --color-tier-silver: var(--tier-silver);
+  --color-tier-gold: var(--tier-gold);
+  --color-good: var(--good);
+  --color-bad: var(--bad);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --radius-card: 1.25rem;
+  --shadow-card: var(--shadow);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "ss01", "cv11";
+}
+
+/* Soft accent glow behind the page, plus a faint dot grid for "lab" surfaces. */
+.page-glow {
+  background-image: radial-gradient(60rem 30rem at 50% -10%, var(--bg-glow), transparent 70%);
+}
+.dot-grid {
+  background-image: radial-gradient(var(--line-strong) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Flowing dashed lines: data moving along a path. */
+@keyframes flow {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+.flow {
+  stroke-dasharray: 4 6;
+  animation: flow 1s linear infinite;
+}
+
+/* Module illustrations: elements that move when their card is hovered. */
+.art {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition:
+    translate 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+    scale 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+    rotate 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 0.5s;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
