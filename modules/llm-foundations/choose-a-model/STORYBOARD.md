@@ -1,0 +1,8 @@
+# Capstone: choose and size a model: storyboard
+
+1. **The brief** (predict): a state e-governance department's email: 40,000 questions/day, 60% Kannada, 25% English, 15% Hindi; correct in every language, first words within 2 s, data in India, rules change often. Guess the Kannada token count on Llama 3.2's tokenizer (322 vs 40 English).
+2. **Same answer, three languages** ⭐ (real data, `data.json`): one ration-card answer in English, Hindi and Kannada, token counts from four real tokenizers (GPT-2, Qwen2.5, Llama 3.2, Phi-4-mini): Kannada 1.8×–12.5× English. Two ways out: a better tokenizer, or pivot translation.
+3. **Make your design** ⭐ (branching decisions): model (large hosted / mid open ~30B / small open ~3B), knowledge (retrieve 3 pages / paste all 400 / fine-tune), languages (native / translate through English), hosting (global API / Indian cloud region / own GPUs with a GPU count), delivery (stream + short / full answer). Starts from a hurried design (large model, all pages in every prompt, global API, full answers).
+4. **Replay a day of questions** ⭐ (simulation, `model.ts`): hourly questions coloured by on-time vs slow/failing; monthly cost, first words at the busiest hour, failed/timed-out share, data in India; correct-answer bars per language against an 80% target; six real questions (Kannada, Hindi, English, a changed deadline, code-mixed Kannada–English, a long family-pension question) each replayed with an outcome; notes per decision. Challenge: every target under $3,000/month (mid model + retrieval + pivot, Indian region or one own GPU).
+5. **A rule changes tomorrow** (choice): update the page; retrieval picks it up.
+6. **What to remember**.

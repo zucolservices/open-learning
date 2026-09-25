@@ -1,0 +1,10 @@
+# Sources (fact-checked 2026-09-25)
+
+- Token counts: measured 2026-09-25 with Transformers.js tokenizers (Xenova/gpt2, onnx-community Qwen2.5-0.5B-Instruct, Llama-3.2-3B-Instruct-ONNX, Phi-4-mini-instruct-ONNX), no special tokens. Script `lang-tokens.mjs` in the scratchpad `embed/` dir. Vocabularies: GPT-2 50,257; Qwen2.5 151,665 (embedding padded to 152,064); Llama 3.x 128,256; Phi-4-mini 200,064 (Hugging Face model cards and tokenizer configs).
+- Indic "tokenizer tax": Petrov et al., "Language Model Tokenizers Introduce Unfairness Between Languages" (NeurIPS 2023); "The Tokenizer Tax" (arXiv 2607.24276, 2026).
+- Price anchors (per million tokens, Sep 2026): Claude Sonnet 5 $2/$10; GPT-6 Sol $2/$10; Gemini 3.1 Pro (preview) $2/$12 up to 200k-token prompts; DeepSeek V4.1 Flash $0.30/$1.20 at peak; small-model tier ~$0.10/$0.40. H100 on demand: ~$2–3/hr at specialist GPU clouds, median ~$3.41, hyperscalers higher; $2.50 used as an illustration.
+- Indian-region hosting: AWS Bedrock (Mumbai ap-south-1, Hyderabad ap-south-2); OpenAI GPT-5.6 Terra/Luna on Bedrock with an India cross-Region inference profile (27 Aug 2026); Anthropic announced in-country Claude inference via a Bedrock India endpoint (3 Aug 2026); Microsoft Foundry (formerly Azure AI Foundry) Foundry Models in South India; Gemini Enterprise Agent Platform (formerly Vertex AI, renamed 23 Apr 2026) in Mumbai and Delhi. Model availability varies by region.
+- Translation: AI4Bharat IndicTrans2 (MIT, 22 scheduled languages + English); Bhashini (MeitY National Language Translation Mission, launched 2022).
+- Fine-tune for behaviour, retrieve for facts: OpenAI, "Optimizing LLM accuracy" guide.
+- Karnataka One centres (EDCS, DPAR e-Governance; Bangalore One in Bengaluru); ration cards: Food, Civil Supplies & Consumer Affairs Department (Ahara portal).
+- The simulation is illustrative: prices follow the tiers above and language multipliers are the measured ones; quality, speed and GPU-throughput figures are round, plausible numbers, not benchmarks. The helpdesk and its traffic are fictional.

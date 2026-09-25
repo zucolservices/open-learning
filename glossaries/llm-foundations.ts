@@ -486,4 +486,10 @@ export const llmFoundations = {
       "People's tendency to trust and approve a machine's suggestion, even when it's wrong, especially when they review many of them quickly.",
     module: "responsible-use",
   },
+  "pivot-translation": {
+    term: "Pivot translation",
+    definition:
+      "Translating a user's question into a “pivot” language (usually English) with a dedicated translation model, answering in that language, then translating the answer back. It uses fewer tokens and a model's strongest language, at the cost of some nuance and extra delay.",
+    module: "choose-a-model",
+  },
 } satisfies Record<string, GlossaryEntry>;

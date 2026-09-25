@@ -1,0 +1,35 @@
+{
+  "texts": {
+    "en": "How do I apply for a new ration card? You need your Aadhaar card, proof of address and a family photo. Apply online on the Food Department website or at your nearest Karnataka One centre.",
+    "hi": "मैं नया राशन कार्ड कैसे बनवाऊँ? आपको आधार कार्ड, पते का प्रमाण और परिवार की फोटो चाहिए। खाद्य विभाग की वेबसाइट पर या अपने नज़दीकी कर्नाटक वन केंद्र पर आवेदन करें।",
+    "kn": "ಹೊಸ ಪಡಿತರ ಚೀಟಿಗೆ ನಾನು ಹೇಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸುವುದು? ನಿಮಗೆ ಆಧಾರ್ ಕಾರ್ಡ್, ವಿಳಾಸದ ಪುರಾವೆ ಮತ್ತು ಕುಟುಂಬದ ಫೋಟೋ ಬೇಕು. ಆಹಾರ ಇಲಾಖೆಯ ವೆಬ್‌ಸೈಟ್‌ನಲ್ಲಿ ಅಥವಾ ನಿಮ್ಮ ಹತ್ತಿರದ ಕರ್ನಾಟಕ ಒನ್ ಕೇಂದ್ರದಲ್ಲಿ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ."
+  },
+  "tok": {
+    "gpt2": {
+      "en": 40,
+      "hi": 247,
+      "kn": 499
+    },
+    "qwen": {
+      "en": 40,
+      "hi": 150,
+      "kn": 261
+    },
+    "llama": {
+      "en": 40,
+      "hi": 82,
+      "kn": 322
+    },
+    "phi": {
+      "en": 40,
+      "hi": 46,
+      "kn": 70
+    }
+  },
+  "labels": {
+    "gpt2": ["GPT-2 (2019)", "50k"],
+    "qwen": ["Qwen2.5", "152k"],
+    "llama": ["Llama 3.2", "128k"],
+    "phi": ["Phi-4-mini", "200k"]
+  }
+}

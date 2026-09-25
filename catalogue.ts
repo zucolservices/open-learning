@@ -2257,11 +2257,12 @@ const llmFoundations: Track = {
             "Branching decisions for a helpdesk in English, Hindi and Kannada: model, context strategy, hosting, cost and latency; then replay a day of questions",
           formats: ["branching-scenario", "simulation", "checkpoint"],
           concepts: ["Applying tokens, context, cost, latency and hosting to one design"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["cost-latency", "open-vs-closed", "context-engineering"],
           plain:
             "A state department wants an assistant that answers citizens' questions in several languages. You'll choose the model, how it gets its knowledge, where it runs and what it will cost, then see how your choices hold up.",
+          terms: ["tokenizer", "rag", "context-window", "pivot-translation", "streaming"],
         },
         {
           slug: "misbehaving-assistant",
