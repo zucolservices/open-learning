@@ -432,4 +432,22 @@ export const llmFoundations = {
       "Training a small “student” model to reproduce a bigger “teacher” model's outputs (ideally its full probabilities), so the student gains much of the teacher's skill at a fraction of the cost.",
     module: "small-models",
   },
+  "prompt-injection": {
+    term: "Prompt injection",
+    definition:
+      "An attack where untrusted text (in a user message, an email, a web page or a document) is treated by the model as instructions, making it act against the operator's intent. Indirect injection hides the instruction in content the model reads.",
+    module: "prompt-injection",
+  },
+  "lethal-trifecta": {
+    term: "Lethal trifecta",
+    definition:
+      "The dangerous combination of access to private data, exposure to untrusted content, and a way to send data out. When all three are present, a prompt injection can steal data. Removing any one breaks it.",
+    module: "prompt-injection",
+  },
+  "least-privilege": {
+    term: "Least privilege",
+    definition:
+      "Giving a system only the powers it needs. For an AI agent: the fewest tools, narrowest permissions and tightest limits, so a fooled model can do little harm.",
+    module: "prompt-injection",
+  },
 } satisfies Record<string, GlossaryEntry>;

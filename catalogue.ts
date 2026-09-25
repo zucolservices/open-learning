@@ -2195,11 +2195,12 @@ const llmFoundations: Track = {
             "Least privilege for tools",
             "Leaking system prompts and data",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["tool-calling"],
           plain:
             "Models follow instructions, and they can't reliably tell your instructions from instructions hidden in an email or web page they read. That makes a new kind of attack, which you defend against by limiting what the model can do.",
+          terms: ["prompt-injection", "lethal-trifecta", "least-privilege", "tool-calling", "system-prompt"],
         },
         {
           slug: "responsible-use",

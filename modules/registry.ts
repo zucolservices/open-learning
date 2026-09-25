@@ -86,4 +86,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "llm-foundations/open-vs-closed": () => import("./llm-foundations/open-vs-closed"),
   "llm-foundations/multimodal": () => import("./llm-foundations/multimodal"),
   "llm-foundations/small-models": () => import("./llm-foundations/small-models"),
+  "llm-foundations/prompt-injection": () => import("./llm-foundations/prompt-injection"),
 };
