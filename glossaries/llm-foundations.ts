@@ -324,4 +324,22 @@ export const llmFoundations = {
       "Giving a model trusted sources in its context and asking it to answer only from them, ideally with citations, so answers can be checked.",
     module: "hallucinations",
   },
+  inference: {
+    term: "Inference",
+    definition:
+      "Running a trained model to produce outputs, as opposed to training it. For an LLM: reading the prompt (prefill), then generating tokens one at a time (decode).",
+    module: "inference",
+  },
+  ttft: {
+    term: "Time to first token (TTFT)",
+    definition:
+      "How long after sending a request the first output token arrives. Mostly the prefill of the prompt, plus queueing and network time.",
+    module: "inference",
+  },
+  "memory-bandwidth": {
+    term: "Memory bandwidth",
+    definition:
+      "How many bytes per second a chip can read from its memory. Because every generated token needs a full read of the weights, it caps decode speed.",
+    module: "inference",
+  },
 } satisfies Record<string, GlossaryEntry>;

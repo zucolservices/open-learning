@@ -79,4 +79,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "llm-foundations/tool-calling": () => import("./llm-foundations/tool-calling"),
   "llm-foundations/context-engineering": () => import("./llm-foundations/context-engineering"),
   "llm-foundations/hallucinations": () => import("./llm-foundations/hallucinations"),
+  "llm-foundations/inference": () => import("./llm-foundations/inference"),
 };

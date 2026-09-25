@@ -2034,11 +2034,12 @@ const llmFoundations: Track = {
             "Memory bandwidth as the bottleneck",
             "The KV cache and prompt caching",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["context-window"],
           plain:
             "Generating an answer happens in two phases: reading the whole prompt at once, then writing the answer one token at a time. Each phase has different costs, which is why long answers feel slow even when short ones are quick.",
+          terms: ["inference", "ttft", "memory-bandwidth", "kv-cache", "token"],
         },
         {
           slug: "memory-quantization",

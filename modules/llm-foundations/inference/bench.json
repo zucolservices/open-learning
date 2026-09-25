@@ -1,0 +1,31 @@
+{
+  "model": "onnx-community/Qwen2.5-1.5B-Instruct",
+  "dtype": "q4",
+  "runs": [
+    {
+      "prompt": 73,
+      "ttft": 546,
+      "tpot": 57
+    },
+    {
+      "prompt": 271,
+      "ttft": 1749,
+      "tpot": 71.2
+    },
+    {
+      "prompt": 523,
+      "ttft": 3095,
+      "tpot": 75.9
+    },
+    {
+      "prompt": 1027,
+      "ttft": 6568,
+      "tpot": 71.5
+    },
+    {
+      "prompt": 2053,
+      "ttft": 14318,
+      "tpot": 93.1
+    }
+  ]
+}
