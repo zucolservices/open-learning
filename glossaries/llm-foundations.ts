@@ -450,4 +450,40 @@ export const llmFoundations = {
       "Giving a system only the powers it needs. For an AI agent: the fewest tools, narrowest permissions and tightest limits, so a fooled model can do little harm.",
     module: "prompt-injection",
   },
+  "algorithmic-bias": {
+    term: "Bias (in AI systems)",
+    definition:
+      "When a system's errors or outcomes fall unfairly on some groups more than others. It can come from training data, from the question the system is asked (including stand-in “proxy” features), or from how its answers are used.",
+    module: "responsible-use",
+  },
+  "counterfactual-test": {
+    term: "Counterfactual test",
+    definition:
+      "Running the same case many times while changing only one detail that shouldn't matter (a name, gender or language) and checking whether the answer changes. A simple, direct bias check.",
+    module: "responsible-use",
+  },
+  dpdp: {
+    term: "DPDP Act",
+    definition:
+      "India's Digital Personal Data Protection Act, 2023, with the DPDP Rules notified on 14 November 2025. It limits personal data to stated purposes, requires valid consent or a listed legitimate use, and gives people rights to access, correct and erase their data. Most duties apply from 14 May 2027.",
+    module: "responsible-use",
+  },
+  "data-minimisation": {
+    term: "Data minimisation",
+    definition:
+      "Collecting and keeping only the personal data a purpose actually needs, for only as long as it's needed.",
+    module: "responsible-use",
+  },
+  "human-in-the-loop": {
+    term: "Human in the loop",
+    definition:
+      "A design where a person reviews or approves an AI system's output before it has a real effect, especially for decisions that matter to someone.",
+    module: "responsible-use",
+  },
+  "automation-bias": {
+    term: "Automation bias",
+    definition:
+      "People's tendency to trust and approve a machine's suggestion, even when it's wrong, especially when they review many of them quickly.",
+    module: "responsible-use",
+  },
 } satisfies Record<string, GlossaryEntry>;

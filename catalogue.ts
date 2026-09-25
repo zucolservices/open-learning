@@ -2172,7 +2172,13 @@ const llmFoundations: Track = {
           prerequisites: ["memory-quantization"],
           plain:
             "Bigger isn't always better. For narrow, well-defined jobs, a small model can be faster, cheaper and private enough to run on a laptop or phone, sometimes with similar quality.",
-          terms: ["small-language-model", "distillation", "model-routing", "quantization", "embedding"],
+          terms: [
+            "small-language-model",
+            "distillation",
+            "model-routing",
+            "quantization",
+            "embedding",
+          ],
         },
       ],
     },
@@ -2200,7 +2206,13 @@ const llmFoundations: Track = {
           prerequisites: ["tool-calling"],
           plain:
             "Models follow instructions, and they can't reliably tell your instructions from instructions hidden in an email or web page they read. That makes a new kind of attack, which you defend against by limiting what the model can do.",
-          terms: ["prompt-injection", "lethal-trifecta", "least-privilege", "tool-calling", "system-prompt"],
+          terms: [
+            "prompt-injection",
+            "lethal-trifecta",
+            "least-privilege",
+            "tool-calling",
+            "system-prompt",
+          ],
         },
         {
           slug: "responsible-use",
@@ -2216,11 +2228,18 @@ const llmFoundations: Track = {
             "Human oversight for important decisions",
             "Transparency with users",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["hallucinations"],
           plain:
             "Models learn from human text, including its biases, and they may handle people's personal data. Responsible systems check for unfair outcomes, respect privacy law and keep a human in charge of decisions that matter.",
+          terms: [
+            "algorithmic-bias",
+            "counterfactual-test",
+            "dpdp",
+            "data-minimisation",
+            "human-in-the-loop",
+          ],
         },
       ],
     },
