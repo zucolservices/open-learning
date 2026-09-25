@@ -168,4 +168,22 @@ export const llmFoundations = {
       "A function that turns a list of scores into probabilities that add up to 1, by exponentiating each and dividing by the total.",
     module: "sampling",
   },
+  pretraining: {
+    term: "Pretraining",
+    definition:
+      "The first, largest stage of training: predicting the next token across trillions of tokens of text, which gives a model its general knowledge and skills.",
+    module: "pretraining",
+  },
+  loss: {
+    term: "Loss",
+    definition:
+      "A number measuring how wrong a model's predictions are during training (for LLMs, how surprised it was by the actual next token). Training works by making it smaller.",
+    module: "pretraining",
+  },
+  "scaling-law": {
+    term: "Scaling law",
+    definition:
+      "A formula, fitted to experiments, that predicts how a model's loss falls as parameters, training data and compute grow.",
+    module: "pretraining",
+  },
 } satisfies Record<string, GlossaryEntry>;

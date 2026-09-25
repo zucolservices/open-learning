@@ -1852,11 +1852,12 @@ const llmFoundations: Track = {
             "Scaling laws: parameters, data and compute",
             "Why training costs so much",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["transformer-block"],
           plain:
             "A model starts as random numbers. Pretraining shows it huge amounts of text and nudges the numbers every time it guesses the next token wrong. Researchers have found predictable rules for how much data and model size to use for a given budget.",
+          terms: ["pretraining", "loss", "scaling-law", "parameter", "token"],
         },
         {
           slug: "base-to-assistant",
