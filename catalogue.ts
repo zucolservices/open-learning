@@ -1760,11 +1760,12 @@ const llmFoundations: Track = {
             "Multiple heads learn different relationships",
             "Causal masking: no peeking at the future",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["embeddings"],
           plain:
             "To understand a word, you look at the words around it: in 'she put the cup on the table because it was hot', 'it' means the cup. Attention is the mechanism that lets the model decide which earlier words matter for each word.",
+          terms: ["attention", "attention-head", "qkv", "multi-head", "causal-mask"],
         },
         {
           slug: "transformer-block",
