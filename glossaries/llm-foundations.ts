@@ -342,4 +342,22 @@ export const llmFoundations = {
       "How many bytes per second a chip can read from its memory. Because every generated token needs a full read of the weights, it caps decode speed.",
     module: "inference",
   },
+  quantization: {
+    term: "Quantization",
+    definition:
+      "Storing a model's numbers with fewer bits (for example 8 or 4 instead of 16), so it needs less memory and runs faster, usually at a small cost in quality.",
+    module: "memory-quantization",
+  },
+  perplexity: {
+    term: "Perplexity",
+    definition:
+      "A measure of how surprised a language model is by real text: the exponential of its average loss. Lower is better; comparing it before and after a change shows what was lost.",
+    module: "memory-quantization",
+  },
+  moe: {
+    term: "Mixture of experts (MoE)",
+    definition:
+      "A model whose feed-forward layers are split into many experts, with a router choosing a few per token. All experts must be in memory, but each token uses only a fraction of the parameters.",
+    module: "memory-quantization",
+  },
 } satisfies Record<string, GlossaryEntry>;

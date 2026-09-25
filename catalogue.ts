@@ -2055,11 +2055,12 @@ const llmFoundations: Track = {
             "Quantization and its trade-offs",
             "Mixture-of-experts: total vs active parameters",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["inference"],
           plain:
             "A model's size in parameters decides how much memory it needs. Storing each number with fewer bits (quantization) lets bigger models fit on smaller machines, usually at a small cost in quality.",
+          terms: ["quantization", "parameter", "kv-cache", "perplexity", "moe"],
         },
         {
           slug: "serving",

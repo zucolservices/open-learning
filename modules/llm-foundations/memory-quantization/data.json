@@ -1,0 +1,134 @@
+{
+  "gpt2": {
+    "tokens": 325,
+    "base": 32.8,
+    "runs": [
+      {
+        "bits": 8,
+        "group": null,
+        "ppl": 32.61
+      },
+      {
+        "bits": 6,
+        "group": null,
+        "ppl": 33.51
+      },
+      {
+        "bits": 4,
+        "group": null,
+        "ppl": 43.5
+      },
+      {
+        "bits": 3,
+        "group": null,
+        "ppl": 973.68
+      },
+      {
+        "bits": 2,
+        "group": null,
+        "ppl": 4250.22
+      },
+      {
+        "bits": 8,
+        "group": 32,
+        "ppl": 32.8
+      },
+      {
+        "bits": 6,
+        "group": 32,
+        "ppl": 32.82
+      },
+      {
+        "bits": 4,
+        "group": 32,
+        "ppl": 34.12
+      },
+      {
+        "bits": 3,
+        "group": 32,
+        "ppl": 85.83
+      },
+      {
+        "bits": 2,
+        "group": 32,
+        "ppl": 5162.75
+      }
+    ],
+    "sample": {
+      "orig": [
+        0.0942, -0.1265, 0.0496, -0.0116, -0.0395, 0.0513, 0.368, 0.0098, -0.0932, 0.018, -0.0051,
+        -0.0017, 0.0834, -0.0422, -0.0128, -0.0215
+      ],
+      "q8": [
+        0.0956, -0.1275, 0.0493, -0.0116, -0.0406, 0.0522, 0.368, 0.0087, -0.0927, 0.0174, -0.0058,
+        -0.0029, 0.084, -0.0435, -0.0116, -0.0203
+      ],
+      "q4": [
+        0.1051, -0.1051, 0.0526, -0.0, -0.0526, 0.0526, 0.368, 0.0, -0.1051, 0.0, -0.0, -0.0,
+        0.1051, -0.0526, -0.0, -0.0
+      ],
+      "q2": [
+        0.0, -0.0, 0.0, -0.0, -0.0, 0.0, 0.368, 0.0, -0.0, 0.0, -0.0, -0.0, 0.0, -0.0, -0.0, -0.0
+      ]
+    },
+    "prompt": "The monsoon reaches the southern tip of India in early June, and",
+    "gens": [
+      {
+        "bits": 32,
+        "group": null,
+        "text": " the rains are expected to bring a heavy rain to the state.\n\nThe monsoon is expected to bring a heavy"
+      },
+      {
+        "bits": 8,
+        "group": null,
+        "text": " the rains are expected to bring a heavy rain to the state.\n\nThe monsoon is expected to bring a heavy"
+      },
+      {
+        "bits": 4,
+        "group": null,
+        "text": " the monsoon is expected to reach the state capital of Delhi in late June.\n\nThe monsoon is expected to"
+      },
+      {
+        "bits": 4,
+        "group": 32,
+        "text": " the monsoon season is expected to begin in late July.\n\nThe monsoon season is expected to begin in late"
+      },
+      {
+        "bits": 3,
+        "group": 32,
+        "text": " the state is expected to be the first to be the first to be the first to be the first to be the first"
+      },
+      {
+        "bits": 2,
+        "group": 32,
+        "text": " to said, the. The to. The to. the tot. thetocy tot-, the"
+      }
+    ]
+  },
+  "qwen": {
+    "model": "onnx-community/Qwen2.5-1.5B-Instruct",
+    "tokens": 328,
+    "runs": [
+      {
+        "dtype": "fp16",
+        "ppl": 11.47,
+        "sizeGB": 3.1
+      },
+      {
+        "dtype": "q8",
+        "ppl": 30.93,
+        "sizeGB": 1.58
+      },
+      {
+        "dtype": "q4f16",
+        "ppl": 12.12,
+        "sizeGB": 1.22
+      },
+      {
+        "dtype": "q4",
+        "ppl": 12.12,
+        "sizeGB": 1.79
+      }
+    ]
+  }
+}
