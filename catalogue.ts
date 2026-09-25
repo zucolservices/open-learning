@@ -1732,11 +1732,12 @@ const llmFoundations: Track = {
             "Semantic search vs keyword search",
             "Dimensions, and what projection to 3D hides",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["tokens"],
           plain:
             "An embedding turns a word or sentence into a long list of numbers, like coordinates on a map of meaning. Similar ideas land near each other, which is what lets computers search by meaning rather than exact words.",
+          terms: ["embedding", "cosine-similarity", "semantic-search", "token"],
         },
       ],
     },

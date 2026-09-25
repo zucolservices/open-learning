@@ -45,4 +45,22 @@ export const llmFoundations = {
       "The program that splits text into tokens and turns them into ID numbers, and back again.",
     module: "tokens",
   },
+  embedding: {
+    term: "Embedding",
+    definition:
+      "A list of numbers (a vector) that represents a piece of text, placed so that texts with similar meanings have similar vectors.",
+    analogy: "Coordinates on a map where nearby places have similar meanings.",
+    module: "embeddings",
+  },
+  "cosine-similarity": {
+    term: "Cosine similarity",
+    definition:
+      "A measure of how closely two vectors point in the same direction: 1 for the same direction, 0 at right angles, −1 for opposite.",
+    module: "embeddings",
+  },
+  "semantic-search": {
+    term: "Semantic search",
+    definition: "Finding text by meaning rather than exact words, usually by comparing embeddings.",
+    module: "embeddings",
+  },
 } satisfies Record<string, GlossaryEntry>;
