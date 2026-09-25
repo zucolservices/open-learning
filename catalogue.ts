@@ -1985,11 +1985,12 @@ const llmFoundations: Track = {
             "Position effects (lost in the middle)",
             "Summaries, memory and prompt caching",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["context-window", "prompting"],
           plain:
             "A model only knows what's in its training and what you put in front of it. Choosing which documents, history and instructions to include, and in what order, often matters more than the wording of the prompt.",
+          terms: ["context-engineering", "context-window", "rag", "prompt-caching", "token"],
         },
         {
           slug: "hallucinations",

@@ -300,4 +300,16 @@ export const llmFoundations = {
       "An open standard for connecting tools and data sources to AI applications, so a tool server written once works with any MCP-capable app.",
     module: "tool-calling",
   },
+  "context-engineering": {
+    term: "Context engineering",
+    definition:
+      "Choosing, for each request, what goes into a model's context window (instructions, documents, history, tool results) and in what order.",
+    module: "context-engineering",
+  },
+  "prompt-caching": {
+    term: "Prompt caching",
+    definition:
+      "Reusing the provider's work on a prompt's unchanged beginning across requests, so those tokens are billed at a steep discount and processed faster.",
+    module: "context-engineering",
+  },
 } satisfies Record<string, GlossaryEntry>;

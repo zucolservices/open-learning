@@ -1,0 +1,84 @@
+{
+  "liu": {
+    "closedBook": 56.1,
+    "oracle": 88.3,
+    "models": [
+      {
+        "id": "gpt35",
+        "name": "GPT-3.5-Turbo",
+        "short": "GPT-3.5",
+        "acc": [75.8, 57.2, 53.8, 55.4, 63.2]
+      },
+      {
+        "id": "claude13",
+        "name": "Claude-1.3",
+        "short": "Claude 1.3",
+        "acc": [59.9, 55.9, 56.8, 57.2, 60.1]
+      },
+      {
+        "id": "longchat",
+        "name": "LongChat-13B (16K)",
+        "short": "LongChat",
+        "acc": [68.6, 57.4, 55.3, 52.5, 55.0]
+      },
+      {
+        "id": "mpt",
+        "name": "MPT-30B-Instruct",
+        "short": "MPT-30B",
+        "acc": [53.7, 51.8, 52.2, 52.7, 56.3]
+      }
+    ]
+  },
+  "agg": {
+    "model": "onnx-community/Qwen2.5-1.5B-Instruct",
+    "question": "List every area where there is no delivery on Sunday.",
+    "runs": 12,
+    "conds": [
+      {
+        "id": "n6",
+        "label": "6 articles",
+        "tokens": 317,
+        "recall": 0.889,
+        "wrong": 2,
+        "runs": 12
+      },
+      {
+        "id": "n12",
+        "label": "12 articles",
+        "tokens": 568,
+        "recall": 0.778,
+        "wrong": 6,
+        "runs": 12
+      },
+      {
+        "id": "n24",
+        "label": "24 articles",
+        "tokens": 1078,
+        "recall": 0.417,
+        "wrong": 7.58,
+        "runs": 12
+      },
+      {
+        "id": "n30",
+        "label": "30 articles",
+        "tokens": 1333,
+        "recall": 0.444,
+        "wrong": 8.75,
+        "runs": 12
+      },
+      {
+        "id": "search5",
+        "label": "Top 5 from a search",
+        "tokens": 274,
+        "recall": 1.0,
+        "wrong": 1.58,
+        "runs": 12
+      }
+    ],
+    "example": {
+      "n": 30,
+      "ans": "Basavanagudi, Rajajinagar, Kengeri, Indiranagar, RT Nagar, Jayanagar, Bellandur, Koramangala, Frazer Town, Marathahalli, Mahadevapura, Hennur, Bannerghatta Road, Ulsoor, Yeshwanthpur, HSR Layout, BTM Layout, Yelahanka",
+      "truth": ["Electronic City", "Banashankari", "Sarjapur Road"]
+    }
+  }
+}
