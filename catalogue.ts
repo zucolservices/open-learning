@@ -1781,11 +1781,12 @@ const llmFoundations: Track = {
             "Where the parameters live",
             "The final layer's scores over the vocabulary",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["attention"],
           plain:
             "A transformer is the same building block repeated many times. Each block lets tokens share information (attention) and then processes each one on its own. Stacking dozens of blocks turns simple pattern matching into surprisingly capable behaviour.",
+          terms: ["transformer", "transformer-block", "attention", "parameter", "logit-lens"],
         },
         {
           slug: "context-window",

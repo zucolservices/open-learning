@@ -95,4 +95,28 @@ export const llmFoundations = {
       "Blocking attention to later tokens, so each position can only use what came before it, as in next-token prediction.",
     module: "attention",
   },
+  transformer: {
+    term: "Transformer",
+    definition:
+      "The neural network design behind modern LLMs (2017): a stack of identical blocks, each with an attention layer and a feed-forward layer.",
+    module: "transformer-block",
+  },
+  "transformer-block": {
+    term: "Transformer block",
+    definition:
+      "One repeating unit of a transformer: attention (tokens exchange information) followed by a feed-forward network (each token processed on its own), each added back into the running vector.",
+    module: "transformer-block",
+  },
+  parameter: {
+    term: "Parameter",
+    definition:
+      "One of the learned numbers (weights) inside a model. Model size is usually given as a parameter count, such as 8 billion.",
+    module: "transformer-block",
+  },
+  "logit-lens": {
+    term: "Logit lens",
+    definition:
+      "A research technique that reads a model's prediction from the middle of its layer stack, to see how the answer forms.",
+    module: "transformer-block",
+  },
 } satisfies Record<string, GlossaryEntry>;

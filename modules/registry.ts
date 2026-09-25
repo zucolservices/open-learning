@@ -68,4 +68,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "llm-foundations/tokens": () => import("./llm-foundations/tokens"),
   "llm-foundations/embeddings": () => import("./llm-foundations/embeddings"),
   "llm-foundations/attention": () => import("./llm-foundations/attention"),
+  "llm-foundations/transformer-block": () => import("./llm-foundations/transformer-block"),
 };
