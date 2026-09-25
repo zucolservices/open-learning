@@ -2117,7 +2117,7 @@ const llmFoundations: Track = {
           summary: "Weights, licences and where a model can run.",
           minutes: 25,
           signature:
-            "Match requirements (data residency, cost, control, quality) to models and hosting: provider APIs, AWS Bedrock, Google Vertex AI, Azure AI Foundry or your own GPUs",
+            "Match requirements (data residency, cost, control, quality) to models and hosting: provider APIs, Amazon Bedrock, Google's Gemini Enterprise Agent Platform, Microsoft Foundry or your own GPUs",
           formats: ["build-connect", "checkpoint"],
           concepts: [
             "Closed APIs vs open-weight models",
@@ -2125,11 +2125,12 @@ const llmFoundations: Track = {
             "Hosting options across clouds",
             "Benchmarks and their limits",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["cost-latency"],
           plain:
             "Some models are only available through their maker's service; others publish their weights so you can run them yourself. The choice affects cost, control, privacy and where your data goes.",
+          terms: ["open-weights", "model-licence", "eval", "parameter"],
         },
         {
           slug: "multimodal",

@@ -206,7 +206,7 @@ AI & machine learning area, third track (approved 2026-09-25). 26 modules in 8 c
 | 3. Parallel flagship | Module 7, Iceberg metadata tree. First 3D module; sets the R3F toolkit                  | Next                                                                    |
 | 4. Rest of track     | Chapters 1 → 9, growing the toolkit (charts, builder, sandbox) along the way            | Done: all 29 modules live (2026-09-24)                                  |
 | 4b. System Design    | Second track (Architecture), 27 modules                                                 | Live: all 27 modules                                                    |
-| 4c. LLM Foundations  | Third track (AI & machine learning), 26 modules                                         | In progress: modules 1–19 done                                           |
+| 4c. LLM Foundations  | Third track (AI & machine learning), 26 modules                                         | In progress: modules 1–20 done                                           |
 | 5. Team feedback     | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy            | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
