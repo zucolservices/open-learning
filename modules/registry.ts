@@ -70,4 +70,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "llm-foundations/attention": () => import("./llm-foundations/attention"),
   "llm-foundations/transformer-block": () => import("./llm-foundations/transformer-block"),
   "llm-foundations/context-window": () => import("./llm-foundations/context-window"),
+  "llm-foundations/sampling": () => import("./llm-foundations/sampling"),
 };

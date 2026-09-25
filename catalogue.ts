@@ -1823,11 +1823,12 @@ const llmFoundations: Track = {
             "Temperature, top-k and top-p",
             "Determinism, seeds and why outputs vary",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["what-an-llm-does"],
           plain:
             "At each step the model gives every possible next token a score. Sampling settings decide how adventurous the choice is: always the favourite, or sometimes a less likely option. That's why the same question can get different answers.",
+          terms: ["sampling", "temperature", "top-k", "top-p", "softmax"],
         },
       ],
     },

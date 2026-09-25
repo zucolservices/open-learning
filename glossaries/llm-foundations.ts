@@ -138,4 +138,34 @@ export const llmFoundations = {
       "Stored keys and values for every token already processed, so each new token only computes its own. It grows with the context and can use as much memory as the model itself.",
     module: "context-window",
   },
+  sampling: {
+    term: "Sampling",
+    definition:
+      "Choosing the next token from the model's probability distribution, rather than always taking the most likely one.",
+    module: "sampling",
+  },
+  temperature: {
+    term: "Temperature",
+    definition:
+      "A sampling setting that divides the scores before softmax: below 1 makes likely tokens even likelier (more predictable), above 1 flattens the distribution (more varied, eventually nonsensical).",
+    module: "sampling",
+  },
+  "top-k": {
+    term: "Top-k sampling",
+    definition:
+      "Only the k most likely tokens may be chosen; the rest are discarded before sampling.",
+    module: "sampling",
+  },
+  "top-p": {
+    term: "Top-p (nucleus) sampling",
+    definition:
+      "Only the smallest set of most likely tokens whose probabilities add up to p may be chosen.",
+    module: "sampling",
+  },
+  softmax: {
+    term: "Softmax",
+    definition:
+      "A function that turns a list of scores into probabilities that add up to 1, by exponentiating each and dividing by the total.",
+    module: "sampling",
+  },
 } satisfies Record<string, GlossaryEntry>;
