@@ -1894,11 +1894,12 @@ const llmFoundations: Track = {
             "Direct preference optimisation (DPO)",
             "Side effects: over-refusal and sycophancy",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["base-to-assistant"],
           plain:
             "To make assistants helpful and safe, developers collect people's judgements about which of two answers is better and train the model toward the preferred kind. It works well, but it can also make models overly cautious or eager to please.",
+          terms: ["alignment", "rlhf", "reward-model", "sycophancy"],
         },
         {
           slug: "reasoning-models",

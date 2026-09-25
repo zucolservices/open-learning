@@ -210,4 +210,28 @@ export const llmFoundations = {
       "A cheap fine-tuning method that freezes the original weights and trains small low-rank matrices added on top.",
     module: "base-to-assistant",
   },
+  alignment: {
+    term: "Alignment",
+    definition:
+      "Shaping a model's behaviour to be helpful, honest and harmless as intended, typically with preference training after fine-tuning.",
+    module: "alignment",
+  },
+  rlhf: {
+    term: "RLHF",
+    definition:
+      "Reinforcement learning from human feedback: people compare answers, a reward model learns their preferences, and the model is trained to score highly on it.",
+    module: "alignment",
+  },
+  "reward-model": {
+    term: "Reward model",
+    definition:
+      "A model trained on human (or AI) comparisons to score how good an answer is; used to steer another model during training.",
+    module: "alignment",
+  },
+  sycophancy: {
+    term: "Sycophancy",
+    definition:
+      "A model telling users what they want to hear (agreeing, flattering) rather than what's true or useful, often learned from preference training.",
+    module: "alignment",
+  },
 } satisfies Record<string, GlossaryEntry>;
