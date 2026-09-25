@@ -81,4 +81,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "llm-foundations/hallucinations": () => import("./llm-foundations/hallucinations"),
   "llm-foundations/inference": () => import("./llm-foundations/inference"),
   "llm-foundations/memory-quantization": () => import("./llm-foundations/memory-quantization"),
+  "llm-foundations/serving": () => import("./llm-foundations/serving"),
 };

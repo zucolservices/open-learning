@@ -1,0 +1,35 @@
+{
+  "model": "onnx-community/Qwen2.5-0.5B-Instruct",
+  "runs": [
+    {
+      "batch": 1,
+      "ms": 624,
+      "tokensPerSec": 51.3,
+      "perUser": 51.3
+    },
+    {
+      "batch": 2,
+      "ms": 751,
+      "tokensPerSec": 85.2,
+      "perUser": 42.6
+    },
+    {
+      "batch": 4,
+      "ms": 900,
+      "tokensPerSec": 142.3,
+      "perUser": 35.6
+    },
+    {
+      "batch": 8,
+      "ms": 1274,
+      "tokensPerSec": 201,
+      "perUser": 25.1
+    },
+    {
+      "batch": 16,
+      "ms": 2013,
+      "tokensPerSec": 254.3,
+      "perUser": 15.9
+    }
+  ]
+}

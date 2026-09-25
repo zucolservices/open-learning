@@ -2076,11 +2076,12 @@ const llmFoundations: Track = {
             "Serving engines (such as vLLM)",
             "Autoscaling GPUs",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["inference"],
           plain:
             "A GPU is wasted serving one request at a time. Serving systems group many requests together to use it fully, which raises total throughput but can make each individual answer a little slower.",
+          terms: ["batching", "throughput", "continuous-batching", "paged-attention", "kv-cache"],
         },
         {
           slug: "cost-latency",

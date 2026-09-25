@@ -360,4 +360,28 @@ export const llmFoundations = {
       "A model whose feed-forward layers are split into many experts, with a router choosing a few per token. All experts must be in memory, but each token uses only a fraction of the parameters.",
     module: "memory-quantization",
   },
+  batching: {
+    term: "Batching",
+    definition:
+      "Processing several requests together so each read of the model's weights serves all of them. Raises total throughput; each request gets a little slower.",
+    module: "serving",
+  },
+  throughput: {
+    term: "Throughput",
+    definition:
+      "Total work done per unit of time, such as tokens per second across all users. Contrasts with latency, how long one request takes.",
+    module: "serving",
+  },
+  "continuous-batching": {
+    term: "Continuous batching",
+    definition:
+      "Letting requests join and leave a running batch at every decode step, instead of waiting for the whole batch to finish. Keeps the GPU busy.",
+    module: "serving",
+  },
+  "paged-attention": {
+    term: "PagedAttention",
+    definition:
+      "vLLM's technique of storing the KV cache in small fixed-size pages allocated on demand, like virtual memory, so far less GPU memory is wasted and bigger batches fit.",
+    module: "serving",
+  },
 } satisfies Record<string, GlossaryEntry>;
