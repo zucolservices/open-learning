@@ -1964,11 +1964,12 @@ const llmFoundations: Track = {
             "The model decides, your code acts",
             "Validation and error handling",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["prompting"],
           plain:
             "Applications need data, not prose. Models can be asked to answer in a fixed structure, and to request actions such as 'look up order 42', which your code then carries out. This is the foundation of agents.",
+          terms: ["json-schema", "constrained-decoding", "tool-calling", "mcp", "prompt"],
         },
         {
           slug: "context-engineering",

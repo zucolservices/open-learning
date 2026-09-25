@@ -276,4 +276,28 @@ export const llmFoundations = {
       "A set of test inputs with automatic or human checks, run against a prompt or model to measure how well it does, so changes can be compared instead of guessed.",
     module: "prompting",
   },
+  "json-schema": {
+    term: "JSON schema",
+    definition:
+      "A precise description of the JSON a program expects: which fields, their types, allowed values and which are required. Used to check data, and to constrain model output.",
+    module: "tool-calling",
+  },
+  "constrained-decoding": {
+    term: "Constrained decoding",
+    definition:
+      "Blocking, at every step of generation, any token that would break a required format (such as a JSON schema), so the output is guaranteed to fit. It fixes the shape, not the truth.",
+    module: "tool-calling",
+  },
+  "tool-calling": {
+    term: "Tool calling",
+    definition:
+      "Letting a model ask for a function to be run (by writing its name and arguments). Your code runs it and sends the result back. Also called function calling or tool use.",
+    module: "tool-calling",
+  },
+  mcp: {
+    term: "Model Context Protocol (MCP)",
+    definition:
+      "An open standard for connecting tools and data sources to AI applications, so a tool server written once works with any MCP-capable app.",
+    module: "tool-calling",
+  },
 } satisfies Record<string, GlossaryEntry>;

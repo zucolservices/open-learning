@@ -1,0 +1,225 @@
+{
+  "model": "onnx-community/Qwen2.5-1.5B-Instruct",
+  "email": "You charged my card TWICE for order KX-51102 (Rs 2,340 each time). I need that money back today, rent is due. This is unacceptable.",
+  "replies": [
+    {
+      "label": "Vague prompt",
+      "text": "**Summary of Customer Email:**\n\nCustomer has received an incorrect charge on their account twice for the same order (KX-51102), totaling Rs 4,680. The customer requests immediate refund to cover rent due today.\n\n**Urgency Level:** High\n\nThe issue involves a significant financial discrepancy with multiple charges, which directly impacts the customer's ability to meet their rental obligations. Urgent action is required to resolve this matter promptly."
+    },
+    {
+      "label": "Examples only",
+      "text": "Order KX-51102 · High · Double charges on same order; needs money back urgently."
+    },
+    {
+      "label": "Format only",
+      "text": "```json\n{\n  \"order_id\": \"KX-51102\",\n  \"urgency\": \"high\",\n  \"summary\": \"Customer has been charged twice for the same order and needs the funds returned urgently.\"\n}\n```"
+    },
+    {
+      "label": "All four",
+      "text": "{\"order_id\":\"KX-51102\",\"urgency\":\"high\",\"summary\":\"Card charge double; needs money back immediately; considers it unacceptable.\"}"
+    }
+  ],
+  "slots": [
+    {
+      "email": "Just wanted to say the delivery guy on order KX-49630 was super polite and even carried the water cans upstairs for my grandmother. Please thank him!",
+      "field": "urgency",
+      "prefix": "{\"urgency\": \"",
+      "top": [
+        ["Low", 0.23174855313833898],
+        ["High", 0.21099336073727656],
+        ["low", 0.18498750387357396],
+        ["Normal", 0.11063883648363489],
+        ["normal", 0.08636124384710522],
+        ["high", 0.08286165678501206],
+        ["Medium", 0.03711949923545989],
+        ["LOW", 0.008986757845661593],
+        ["medium", 0.0063530507255350815],
+        ["Not", 0.005844728374882626],
+        ["HIGH", 0.0038826384298202695],
+        ["None", 0.002805299628175072]
+      ],
+      "allowed": [
+        ["low", 0.18498750387357396],
+        ["high", 0.08286165678501206],
+        ["medium", 0.0063530507255350815],
+        ["medi", 1.6328606762362675e-5]
+      ]
+    },
+    {
+      "email": "You charged my card TWICE for order KX-51102 (Rs 2,340 each time). I need that money back today, rent is due. This is unacceptable.",
+      "field": "urgency",
+      "prefix": "{\"urgency\": \"",
+      "top": [
+        ["High", 0.7484059936506153],
+        ["high", 0.09065472646195749],
+        ["U", 0.08045746204880827],
+        ["HIGH", 0.0296755811608946],
+        ["Critical", 0.019460904639911288],
+        ["UR", 0.010697553561926523],
+        ["critical", 0.003687391047410256],
+        ["urgent", 0.0033062197972223077],
+        ["紧急", 0.003109848055881678],
+        ["Immediate", 0.0018478841102246928],
+        ["Emergency", 0.0015715427345219539],
+        ["CR", 0.0011243676744778113]
+      ],
+      "allowed": [
+        ["high", 0.09065472646195749],
+        ["medium", 3.958094835716221e-5],
+        ["low", 2.5547729472820644e-5]
+      ]
+    },
+    {
+      "email": "Do you deliver to Whitefield on Sundays? We just moved here and my neighbour recommended you. Also, is there a minimum order amount?",
+      "field": "order_id",
+      "prefix": "{\"order_id\": \"",
+      "top": [
+        ["N", 0.29316794748248914],
+        ["not", 0.22310742334405811],
+        ["Not", 0.15901975189805373],
+        ["unknown", 0.05519410722016439],
+        ["NA", 0.03878112870587923],
+        ["None", 0.026532475399588615],
+        ["No", 0.023173175939897598],
+        ["Unknown", 0.020459268307626708],
+        ["none", 0.01691171048874964],
+        ["no", 0.015548745709812212],
+        ["1", 0.01465885820286435],
+        ["missing", 0.007222760837832363]
+      ],
+      "allowed": [
+        ["none", 0.01691171048874964],
+        ["no", 0.015548745709812212],
+        ["n", 0.004775164600716613],
+        ["non", 0.0008749393852039609],
+        ["K", 5.0430928754735794e-5]
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "get_order_status",
+        "description": "Look up where an order is and when it will arrive.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "order_id": {
+              "type": "string",
+              "description": "Order number, like KX-48213"
+            }
+          },
+          "required": ["order_id"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "search_help",
+        "description": "Search Kirana Express help articles (delivery areas, returns, payments).",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string"
+            }
+          },
+          "required": ["query"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "issue_refund",
+        "description": "Refund money to the customer for an order.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "order_id": {
+              "type": "string"
+            },
+            "amount_rupees": {
+              "type": "number"
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": ["order_id", "amount_rupees", "reason"]
+        }
+      }
+    }
+  ],
+  "chats": [
+    {
+      "question": "Where is my order KX-48213? It's been ages.",
+      "first": "<tool_call>\n{\"name\": \"get_order_status\", \"arguments\": {\"order_id\": \"KX-48213\"}}\n</tool_call>",
+      "call": {
+        "name": "get_order_status",
+        "arguments": {
+          "order_id": "KX-48213"
+        }
+      },
+      "result": {
+        "order_id": "KX-48213",
+        "status": "out_for_delivery",
+        "eta": "18:40",
+        "rider": "Imran"
+      },
+      "final": "Your order KX-48213 is currently out for delivery. It should be delivered by 18:40. The rider assigned to your order is Imran."
+    },
+    {
+      "question": "Do you deliver to Whitefield on Sundays?",
+      "first": "I don't have real-time information about specific delivery locations or days of the week. However, I can check if there's any policy regarding deliveries on Sundays in general. Would you like me to search for that?",
+      "call": null,
+      "result": null,
+      "final": null
+    },
+    {
+      "question": "You charged me twice for order KX-51102, Rs 2,340 extra. Refund it please.",
+      "first": "<tool_call>\n{\"name\": \"issue_refund\", \"arguments\": {\"order_id\": \"KX-51102\", \"amount_rupees\": 2340, \"reason\": \"duplicate charges\"}}\n</tool_call>",
+      "call": {
+        "name": "issue_refund",
+        "arguments": {
+          "order_id": "KX-51102",
+          "amount_rupees": 2340,
+          "reason": "duplicate charges"
+        }
+      },
+      "result": {
+        "refund_id": "RF-9921",
+        "status": "pending_approval",
+        "note": "Refunds over Rs 1,000 need a staff member to approve."
+      },
+      "final": "Your refund request has been submitted successfully. The refund ID is RF-9921. It's pending approval by a staff member as refunds over Rs 1,000 require their approval. Please check your account for further updates on this refund."
+    },
+    {
+      "question": "Thanks, the chai masala was lovely!",
+      "first": "I'm glad you enjoyed your chai masala! Is there anything else I can assist you with?",
+      "call": null,
+      "result": null,
+      "final": null
+    }
+  ],
+  "forced": {
+    "first": "<tool_call>\n{\"name\": \"search_help\", \"arguments\": {\"query\": \"Whitefield Sunday delivery\"}}\n</tool_call>",
+    "call": {
+      "name": "search_help",
+      "arguments": {
+        "query": "Whitefield Sunday delivery"
+      }
+    },
+    "result": {
+      "results": [
+        {
+          "title": "Delivery areas",
+          "text": "We deliver across Bengaluru including Whitefield, 7 days a week, 7am to 10pm. Minimum order Rs 199."
+        }
+      ]
+    },
+    "final": "Yes, we do deliver to Whitefield on Sundays in Bengaluru. Our service hours are from 7am to 10pm, and we offer deliveries across Bengaluru including Whitefield. The minimum order amount is Rs 199."
+  }
+}
