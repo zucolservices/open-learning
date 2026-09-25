@@ -1,12 +1,13 @@
 import type { ReactNode } from "react";
+import { A, FileIcon, Slab, type ArtMap } from "./art/kit";
+import { systemDesignArt } from "./art/system-design";
+import { llmFoundationsArt } from "./art/llm-foundations";
 
 /**
  * One small illustration per module (viewBox 160 × 100), drawn with the
  * semantic viz colours. Elements tagged `art` move a little when the card
  * (a `group`) is hovered, which is pure CSS, so it costs nothing at rest.
  */
-
-const A = "art"; // animated element: transform-box fill-box + transition (globals.css)
 
 function Frame({ children }: { children: ReactNode }) {
   return (
@@ -20,69 +21,6 @@ function Frame({ children }: { children: ReactNode }) {
     >
       {children}
     </svg>
-  );
-}
-
-/** Isometric slab centred at (x, y). */
-function Slab({
-  x,
-  y,
-  w = 34,
-  h = 17,
-  t = 5,
-  cls,
-  className = "",
-}: {
-  x: number;
-  y: number;
-  w?: number;
-  h?: number;
-  t?: number;
-  cls: string;
-  className?: string;
-}) {
-  return (
-    <g className={className}>
-      <polygon
-        points={`${x - w},${y} ${x},${y + h} ${x},${y + h + t} ${x - w},${y + t}`}
-        className={cls}
-        opacity={0.55}
-      />
-      <polygon
-        points={`${x},${y + h} ${x + w},${y} ${x + w},${y + t} ${x},${y + h + t}`}
-        className={cls}
-        opacity={0.8}
-      />
-      <polygon
-        points={`${x},${y - h} ${x + w},${y} ${x},${y + h} ${x - w},${y}`}
-        className={cls}
-        strokeWidth={1.2}
-      />
-    </g>
-  );
-}
-
-function FileIcon({
-  x,
-  y,
-  cls = "fill-viz-data/25 stroke-viz-data",
-  className = "",
-  w = 12,
-  h = 16,
-}: {
-  x: number;
-  y: number;
-  cls?: string;
-  className?: string;
-  w?: number;
-  h?: number;
-}) {
-  return (
-    <path
-      d={`M${x} ${y}h${w - 4}l4 4v${h - 4}h-${w}z`}
-      className={`${cls} ${className}`}
-      strokeWidth={1.2}
-    />
   );
 }
 
@@ -134,7 +72,7 @@ function Cloud({ label, cls }: { label: string; cls: string }) {
   );
 }
 
-const art: Record<string, () => ReactNode> = {
+const art: ArtMap = {
   "swamp-to-lakehouse": () => (
     <>
       <path d="M8 70q8-6 16 0t16 0 16 0" className="stroke-viz-idle" strokeWidth={1.5} />
@@ -1081,8 +1019,10 @@ const art: Record<string, () => ReactNode> = {
   "rows-vs-columns": () => art["file-formats"](),
 };
 
+const all: ArtMap = { ...art, ...systemDesignArt, ...llmFoundationsArt };
+
 export function ModuleArt({ slug }: { slug: string }) {
-  const draw = art[slug];
+  const draw = all[slug];
   return (
     <Frame>
       {draw ? (

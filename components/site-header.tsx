@@ -6,7 +6,7 @@ export function SiteHeader() {
   return (
     <header className="border-line bg-bg/70 sticky top-0 z-40 border-b backdrop-blur-xl">
       <div className="mx-auto flex h-14 max-w-6xl items-center gap-4 px-4 sm:gap-6 sm:px-6">
-        <Link href="/" aria-label="Zucol OpenLearning home" className="flex items-center gap-2.5">
+        <Link href="/" aria-label="OpenLearning home" className="flex items-center gap-2.5">
           <Wordmark className="h-[18px] w-auto" />
           <span className="bg-line-strong h-5 w-px" aria-hidden />
           <span className="font-semibold tracking-tight">OpenLearning</span>

@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: { default: "Zucol OpenLearning", template: "%s · Zucol OpenLearning" },
+  title: { default: "OpenLearning", template: "%s · OpenLearning" },
   description: "Interactive, hands-on learning tracks for the Zucol tech team.",
 };
 

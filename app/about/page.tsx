@@ -9,11 +9,11 @@ export default function About() {
       <SiteHeader />
       <main className="page-glow flex-1">
         <div className="mx-auto max-w-2xl px-4 pt-16 pb-24 sm:px-6">
-          <h1 className="text-4xl font-semibold tracking-tight">About Zucol OpenLearning</h1>
+          <h1 className="text-4xl font-semibold tracking-tight">About OpenLearning</h1>
           <div className="text-muted mt-6 space-y-4 text-lg leading-relaxed">
             <p>
-              Zucol OpenLearning is where our tech team builds a deep, intuitive understanding of
-              the technologies we use, before a project needs it.
+              OpenLearning is where our tech team builds a deep, intuitive understanding of the
+              technologies we use, before a project needs it.
             </p>
             <p>
               Every module is designed around its topic. You might explore a 3D model, play a

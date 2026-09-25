@@ -1,4 +1,4 @@
-# Zucol OpenLearning
+# OpenLearning
 
 Interactive learning tracks for the Zucol tech team. Phase 1 is a static Next.js site: no backend, and progress is saved in the browser.
 

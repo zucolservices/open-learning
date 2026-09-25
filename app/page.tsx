@@ -35,7 +35,7 @@ export default function Home() {
             <div>
               <p className="border-line bg-surface/70 text-muted inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs backdrop-blur">
                 <span className="bg-accent size-1.5 animate-pulse rounded-full" />
-                Zucol OpenLearning · {liveTracks.length} tracks live, more on the way
+                OpenLearning · {liveTracks.length} tracks live, more on the way
               </p>
               <h1 className="mt-5 text-5xl leading-[1.02] font-semibold tracking-tight text-balance sm:text-6xl">
                 See how technology{" "}

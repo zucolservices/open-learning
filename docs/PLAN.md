@@ -1,4 +1,4 @@
-# Zucol OpenLearning: Phase 1 plan
+# OpenLearning: Phase 1 plan
 
 Based on _Interactive Tech Upskilling Platform, Solution Document v1.4_. Phase 1 is a frontend-only static site on Vercel. We build tracks one at a time, starting with **Modern Data Lakehouse** (Data engineering).
 

@@ -1,6 +1,6 @@
 @AGENTS.md
 
-# Zucol OpenLearning
+# OpenLearning
 
 Plan, design language and curriculum: `docs/PLAN.md`. Source requirements: _Upskilling Platform Solution Document v1.4_ (Phase 1 = frontend-only static site).
 
