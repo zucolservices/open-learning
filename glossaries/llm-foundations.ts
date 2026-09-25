@@ -384,4 +384,16 @@ export const llmFoundations = {
       "vLLM's technique of storing the KV cache in small fixed-size pages allocated on demand, like virtual memory, so far less GPU memory is wasted and bigger batches fit.",
     module: "serving",
   },
+  streaming: {
+    term: "Streaming",
+    definition:
+      "Sending an answer to the user token by token as it's generated, instead of all at once at the end, so reading can start after the first token.",
+    module: "cost-latency",
+  },
+  "model-routing": {
+    term: "Model routing",
+    definition:
+      "Sending each request to the cheapest model that can handle it well, for example easy questions to a small model and hard ones to a large model.",
+    module: "cost-latency",
+  },
 } satisfies Record<string, GlossaryEntry>;

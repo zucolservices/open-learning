@@ -2097,11 +2097,12 @@ const llmFoundations: Track = {
             "API vs self-hosted break-even",
             "Latency budgets for user-facing features",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["tokens", "inference"],
           plain:
             "AI features are billed by the token. A quick estimate of requests and tokens tells you whether a feature costs pennies or a fortune, and whether it will feel instant or sluggish.",
+          terms: ["token", "prompt-caching", "streaming", "ttft", "model-routing"],
         },
       ],
     },
