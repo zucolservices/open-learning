@@ -64,4 +64,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "system-design/building-blocks": () => import("./system-design/building-blocks"),
   "system-design/results-day": () => import("./system-design/results-day"),
   "system-design/the-outage": () => import("./system-design/the-outage"),
+  "llm-foundations/what-an-llm-does": () => import("./llm-foundations/what-an-llm-does"),
 };

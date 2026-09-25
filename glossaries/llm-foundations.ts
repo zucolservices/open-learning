@@ -9,4 +9,22 @@ export const llmFoundations = {
     analogy: "Phone autocomplete, scaled up enormously.",
     module: "what-an-llm-does",
   },
+  token: {
+    term: "Token",
+    definition:
+      "A chunk of text (a word, part of a word, a punctuation mark or a space) from a model's fixed vocabulary. Models read and write tokens, and are priced and limited by them.",
+    module: "tokens",
+  },
+  "next-token-prediction": {
+    term: "Next-token prediction",
+    definition:
+      "The task LLMs are trained on: given the text so far, give a probability for every possible next token. Generating text repeats this one token at a time.",
+    module: "what-an-llm-does",
+  },
+  "chat-template": {
+    term: "Chat template",
+    definition:
+      "The format that turns a conversation (system instructions, user and assistant messages) into one piece of text with special markers, which the model then continues.",
+    module: "what-an-llm-does",
+  },
 } satisfies Record<string, GlossaryEntry>;

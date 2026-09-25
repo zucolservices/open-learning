@@ -1690,10 +1690,11 @@ const llmFoundations: Track = {
             "Models learn patterns from text, not a database of facts",
             "Why the same prompt can give different answers",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           plain:
             "A large language model is trained to guess the next piece of text. Chat assistants are that guess, repeated one piece at a time, very fast. Almost everything else in this track follows from that one idea.",
+          terms: ["llm", "next-token-prediction", "token", "chat-template"],
         },
         {
           slug: "tokens",
