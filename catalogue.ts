@@ -2167,11 +2167,12 @@ const llmFoundations: Track = {
             "On-device and edge inference",
             "Routing between small and large models",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["memory-quantization"],
           plain:
             "Bigger isn't always better. For narrow, well-defined jobs, a small model can be faster, cheaper and private enough to run on a laptop or phone, sometimes with similar quality.",
+          terms: ["small-language-model", "distillation", "model-routing", "quantization", "embedding"],
         },
       ],
     },

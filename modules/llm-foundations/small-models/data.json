@@ -1,0 +1,320 @@
+{
+  "n": 200,
+  "trainN": 160,
+  "testN": 40,
+  "teacherTrainAgreement": 0.8625,
+  "test": {
+    "qwen05_zero": 0.475,
+    "qwen15_zero": 0.75,
+    "qwen15_few": 0.95,
+    "student_teacher": 0.7,
+    "student_truth": 0.975,
+    "phi_zero": 0.625,
+    "student_soft": 0.75
+  },
+  "ms": {
+    "qwen05_zero": 117.91937098999993,
+    "qwen15_zero": 345.9577448299992,
+    "qwen15_few": 926.4444499550002,
+    "student": 2.1638341650000075,
+    "phi_zero": 1178.0075323099993
+  },
+  "examples": [
+    {
+      "text": "The biscuit packet had insects in it.",
+      "truth": "quality",
+      "teacher": "quality",
+      "student": "quality"
+    },
+    {
+      "text": "Hi, The app is stuck on the loading screen. This is really frustrating.",
+      "truth": "account",
+      "teacher": "account",
+      "student": "account"
+    },
+    {
+      "text": "Please help. The app is stuck on the loading screen. Regards, Priya",
+      "truth": "account",
+      "teacher": "delivery",
+      "student": "account"
+    },
+    {
+      "text": "Hello team, The ice cream arrived melted. Thanks.",
+      "truth": "quality",
+      "teacher": "quality",
+      "student": "quality"
+    },
+    {
+      "text": "The app is stuck on the loading screen. Please sort this out.",
+      "truth": "account",
+      "teacher": "delivery",
+      "student": "account"
+    },
+    {
+      "text": "Namaste, My account got locked after three attempts. Please sort this out.",
+      "truth": "account",
+      "teacher": "account",
+      "student": "account"
+    },
+    {
+      "text": "Urgent: My account got locked after three attempts. This is really frustrating.",
+      "truth": "account",
+      "teacher": "account",
+      "student": "account"
+    },
+    {
+      "text": "Hi, Please deliver order KX-48273 to my office address instead.",
+      "truth": "delivery",
+      "teacher": "delivery",
+      "student": "delivery"
+    },
+    {
+      "text": "The wallet balance is showing Rs 40 less than it should. Regards, Priya",
+      "truth": "payments",
+      "teacher": "payments",
+      "student": "account"
+    },
+    {
+      "text": "Please help. The biscuit packet had insects in it. This is really frustrating.",
+      "truth": "quality",
+      "teacher": "quality",
+      "student": "quality"
+    },
+    {
+      "text": "The delivery is very late again, third time this week. Please sort this out.",
+      "truth": "delivery",
+      "teacher": "delivery",
+      "student": "delivery"
+    },
+    {
+      "text": "Hello team, The delivery is very late again, third time this week. Thanks.",
+      "truth": "delivery",
+      "teacher": "delivery",
+      "student": "delivery"
+    },
+    {
+      "text": "Please deliver order KX-57277 to my office address instead.",
+      "truth": "delivery",
+      "teacher": "delivery",
+      "student": "delivery"
+    },
+    {
+      "text": "Urgent: I cancelled order KX-43692, when will I get the Rs 40 back? This is really frustrating.",
+      "truth": "payments",
+      "teacher": "payments",
+      "student": "delivery"
+    },
+    {
+      "text": "Hello team, The ice cream arrived melted. Thanks.",
+      "truth": "quality",
+      "teacher": "quality",
+      "student": "quality"
+    },
+    {
+      "text": "Hello team, My account got locked after three attempts. This is really frustrating.",
+      "truth": "account",
+      "teacher": "account",
+      "student": "account"
+    },
+    {
+      "text": "Urgent: I cancelled order KX-51563, when will I get the Rs 120 back?",
+      "truth": "payments",
+      "teacher": "payments",
+      "student": "account"
+    },
+    {
+      "text": "Hello team, Please deliver order KX-55974 to my office address instead. Regards, Priya",
+      "truth": "delivery",
+      "teacher": "delivery",
+      "student": "delivery"
+    },
+    {
+      "text": "Hi, Please deliver order KX-57518 to my office address instead.",
+      "truth": "delivery",
+      "teacher": "delivery",
+      "student": "delivery"
+    },
+    {
+      "text": "Namaste, The biscuit packet had insects in it. This is really frustrating.",
+      "truth": "quality",
+      "teacher": "quality",
+      "student": "quality"
+    },
+    {
+      "text": "Please help. The delivery is very late again, third time this week.",
+      "truth": "delivery",
+      "teacher": "delivery",
+      "student": "delivery"
+    },
+    {
+      "text": "Please help. The ice cream arrived melted. This is really frustrating.",
+      "truth": "quality",
+      "teacher": "quality",
+      "student": "quality"
+    },
+    {
+      "text": "The delivery is very late again, third time this week. Thank you!",
+      "truth": "delivery",
+      "teacher": "delivery",
+      "student": "delivery"
+    },
+    {
+      "text": "Hi, The wallet balance is showing Rs 340 less than it should. Regards, Priya",
+      "truth": "payments",
+      "teacher": "payments",
+      "student": "account"
+    },
+    {
+      "text": "Hello team, My account got locked after three attempts. Thank you!",
+      "truth": "account",
+      "teacher": "account",
+      "student": "account"
+    },
+    {
+      "text": "Please help. Please deliver order KX-44157 to my office address instead.",
+      "truth": "delivery",
+      "teacher": "delivery",
+      "student": "delivery"
+    },
+    {
+      "text": "Namaste, The biscuit packet had insects in it. Please sort this out.",
+      "truth": "quality",
+      "teacher": "quality",
+      "student": "quality"
+    },
+    {
+      "text": "Hello team, The delivery is very late again, third time this week. This is really frustrating.",
+      "truth": "delivery",
+      "teacher": "delivery",
+      "student": "delivery"
+    },
+    {
+      "text": "Namaste, The wallet balance is showing Rs 40 less than it should. Thank you!",
+      "truth": "payments",
+      "teacher": "payments",
+      "student": "account"
+    },
+    {
+      "text": "Hello team, My account got locked after three attempts. Please sort this out.",
+      "truth": "account",
+      "teacher": "account",
+      "student": "account"
+    },
+    {
+      "text": "Urgent: The app is stuck on the loading screen. Please sort this out.",
+      "truth": "account",
+      "teacher": "account",
+      "student": "account"
+    },
+    {
+      "text": "Hello team, I cancelled order KX-57849, when will I get the Rs 40 back? Please sort this out.",
+      "truth": "payments",
+      "teacher": "payments",
+      "student": "delivery"
+    },
+    {
+      "text": "Namaste, The app is stuck on the loading screen. Please sort this out.",
+      "truth": "account",
+      "teacher": "account",
+      "student": "account"
+    },
+    {
+      "text": "Please help. The biscuit packet had insects in it.",
+      "truth": "quality",
+      "teacher": "quality",
+      "student": "quality"
+    },
+    {
+      "text": "Hello team, I cancelled order KX-49601, when will I get the Rs 340 back? Regards, Priya",
+      "truth": "payments",
+      "teacher": "payments",
+      "student": "delivery"
+    },
+    {
+      "text": "Namaste, The wallet balance is showing Rs 2340 less than it should. Thank you!",
+      "truth": "payments",
+      "teacher": "payments",
+      "student": "account"
+    },
+    {
+      "text": "Please help. I cancelled order KX-52818, when will I get the Rs 40 back? Thanks.",
+      "truth": "payments",
+      "teacher": "payments",
+      "student": "delivery"
+    },
+    {
+      "text": "Namaste, The ice cream arrived melted. Regards, Priya",
+      "truth": "quality",
+      "teacher": "quality",
+      "student": "quality"
+    },
+    {
+      "text": "Hi, The wallet balance is showing Rs 40 less than it should. This is really frustrating.",
+      "truth": "payments",
+      "teacher": "payments",
+      "student": "account"
+    },
+    {
+      "text": "Please help. The ice cream arrived melted. Thank you!",
+      "truth": "quality",
+      "teacher": "quality",
+      "student": "quality"
+    }
+  ],
+  "cascade": [
+    {
+      "threshold": 0,
+      "escalated": 0.0,
+      "acc": 0.75,
+      "ms": 2.2
+    },
+    {
+      "threshold": 0.3,
+      "escalated": 0.0,
+      "acc": 0.75,
+      "ms": 2.2
+    },
+    {
+      "threshold": 0.4,
+      "escalated": 0.1,
+      "acc": 0.85,
+      "ms": 94.80000000000001
+    },
+    {
+      "threshold": 0.5,
+      "escalated": 0.3,
+      "acc": 0.95,
+      "ms": 280.0
+    },
+    {
+      "threshold": 0.6,
+      "escalated": 0.5,
+      "acc": 0.95,
+      "ms": 465.2
+    },
+    {
+      "threshold": 0.7,
+      "escalated": 0.525,
+      "acc": 0.95,
+      "ms": 488.35
+    },
+    {
+      "threshold": 0.8,
+      "escalated": 0.625,
+      "acc": 0.95,
+      "ms": 580.95
+    },
+    {
+      "threshold": 0.9,
+      "escalated": 0.95,
+      "acc": 0.95,
+      "ms": 881.9
+    },
+    {
+      "threshold": 1.01,
+      "escalated": 1.0,
+      "acc": 0.95,
+      "ms": 928.2
+    }
+  ]
+}

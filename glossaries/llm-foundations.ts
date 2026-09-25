@@ -420,4 +420,16 @@ export const llmFoundations = {
       "A transformer that reads an image as a sequence of small square patches, each turned into a vector, instead of a sequence of words.",
     module: "multimodal",
   },
+  "small-language-model": {
+    term: "Small language model",
+    definition:
+      "A model with millions to a few billion parameters, small enough to run cheaply on a laptop, phone or a single modest GPU; often best at narrow, well-defined tasks.",
+    module: "small-models",
+  },
+  distillation: {
+    term: "Knowledge distillation",
+    definition:
+      "Training a small “student” model to reproduce a bigger “teacher” model's outputs (ideally its full probabilities), so the student gains much of the teacher's skill at a fraction of the cost.",
+    module: "small-models",
+  },
 } satisfies Record<string, GlossaryEntry>;
