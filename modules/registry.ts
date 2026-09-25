@@ -72,4 +72,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "llm-foundations/context-window": () => import("./llm-foundations/context-window"),
   "llm-foundations/sampling": () => import("./llm-foundations/sampling"),
   "llm-foundations/pretraining": () => import("./llm-foundations/pretraining"),
+  "llm-foundations/base-to-assistant": () => import("./llm-foundations/base-to-assistant"),
 };

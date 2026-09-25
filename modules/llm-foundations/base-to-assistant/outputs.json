@@ -1,0 +1,18 @@
+{
+  "prompts": [
+    "What is the capital of India?",
+    "Give me three tips for making good masala chai.",
+    "Translate to Hindi: Where is the railway station?"
+  ],
+  "base": [
+    "What are some examples?\n\nThe Capital of India is New Delhi. The Indian government has designated it as a national capital city and also an international airport, which makes it one of the most important cities in Asia.\n\nSome other notable examples include:\n\n1) Mumbai: This is another major city located on the west coast of India. It serves as the financial",
+    "I need to make a recipe that is easy and delicious, but also has the right amount of sweetness.\n1. Use high-quality ingredients: Choose fresh fruits like mangoes or papayas as they will add more flavor than canned versions.\n\n2. Add honey or sugar sparingly: Honey adds natural sweetness while reducing calories; use it in moderation (about",
+    ""
+  ],
+  "instruct": [
+    "The capital of India is New Delhi. It was chosen as the official seat of government in 1964 due to its strategic location and historical significance. The city has grown significantly since then, becoming one of the most populous cities in the world with over 20 million inhabitants. New Delhi serves as both an administrative center for the country and",
+    "Certainly! Here are three tips to help you make an excellent Masala Chai:\n\n1. **Choose the Right Quality of Water**: The quality and quantity of water used can significantly impact the flavor of your chai. Use boiled or filtered water that is fresh from the tap. Freshly squeezed lemon juice adds freshness and enhances the taste.\n\n2.",
+    "Sure! Here's the translation of \"Where is the railway station?\" into Hindi:\n\n\"कॅना राज्य के सरंधित पहुँचती होगी?\"\n\nThis translates directly from English to Hindi as it means \"Is there a railway station in the city?\""
+  ],
+  "template": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nWhat is the capital of India?<|im_end|>\n<|im_start|>assistant\n"
+}

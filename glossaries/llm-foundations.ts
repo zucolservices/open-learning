@@ -186,4 +186,28 @@ export const llmFoundations = {
       "A formula, fitted to experiments, that predicts how a model's loss falls as parameters, training data and compute grow.",
     module: "pretraining",
   },
+  "base-model": {
+    term: "Base model",
+    definition:
+      "A model straight out of pretraining. It continues text like a document rather than answering like an assistant.",
+    module: "base-to-assistant",
+  },
+  "instruction-tuning": {
+    term: "Instruction tuning",
+    definition:
+      "Fine-tuning a base model on examples of instructions and good responses so it follows requests helpfully.",
+    module: "base-to-assistant",
+  },
+  sft: {
+    term: "Supervised fine-tuning (SFT)",
+    definition:
+      "Further training a pretrained model on example conversations (prompt and ideal answer), usually counting loss only on the answer tokens.",
+    module: "base-to-assistant",
+  },
+  lora: {
+    term: "LoRA (low-rank adaptation)",
+    definition:
+      "A cheap fine-tuning method that freezes the original weights and trains small low-rank matrices added on top.",
+    module: "base-to-assistant",
+  },
 } satisfies Record<string, GlossaryEntry>;

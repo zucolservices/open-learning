@@ -1873,11 +1873,12 @@ const llmFoundations: Track = {
             "Chat templates and roles",
             "Parameter-efficient fine-tuning (LoRA), briefly",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["pretraining"],
           plain:
             "A freshly pretrained model just continues text: ask it a question and it may write more questions. Fine-tuning on examples of good answers teaches it to behave like an assistant.",
+          terms: ["base-model", "instruction-tuning", "sft", "chat-template", "lora"],
         },
         {
           slug: "alignment",
