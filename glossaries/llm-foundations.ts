@@ -492,4 +492,16 @@ export const llmFoundations = {
       "Translating a user's question into a “pivot” language (usually English) with a dedicated translation model, answering in that language, then translating the answer back. It uses fewer tokens and a model's strongest language, at the cost of some nuance and extra delay.",
     module: "choose-a-model",
   },
+  "llm-trace": {
+    term: "Trace (LLM)",
+    definition:
+      "A record of one request to an LLM app: the user's input, the system prompt version, any retrieved pages or tool calls, the settings (model, temperature, max tokens), the output with its token counts and finish reason, and timings. The first thing to read when an answer goes wrong.",
+    module: "misbehaving-assistant",
+  },
+  "finish-reason": {
+    term: "Finish reason",
+    definition:
+      "A field in an LLM API's response saying why generation stopped: the model finished (“stop”, “end_turn”, “STOP”), it hit the output limit (“length”, “max_tokens”, “MAX_TOKENS”), it called a tool, or a safety filter stepped in. Names differ by provider; a hit limit means the answer was cut off.",
+    module: "misbehaving-assistant",
+  },
 } satisfies Record<string, GlossaryEntry>;

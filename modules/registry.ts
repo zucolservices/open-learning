@@ -89,4 +89,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "llm-foundations/prompt-injection": () => import("./llm-foundations/prompt-injection"),
   "llm-foundations/responsible-use": () => import("./llm-foundations/responsible-use"),
   "llm-foundations/choose-a-model": () => import("./llm-foundations/choose-a-model"),
+  "llm-foundations/misbehaving-assistant": () => import("./llm-foundations/misbehaving-assistant"),
 };

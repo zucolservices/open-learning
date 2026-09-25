@@ -1,0 +1,10 @@
+# Sources (fact-checked 2026-09-25)
+
+- Real outputs (`data.json`), generated 2026-09-25 with Transformers.js, onnx-community Qwen2.5-1.5B-Instruct (4-bit): token counts and 120-token cut-offs of one answer in English/Hindi/Kannada; 8 samples per temperature (0.2 with top_p 0.9; 1.0, 1.2, 1.5 with top_p 1.0; top_k disabled); greedy replies to the contradictory and fixed system prompts (also Phi-4-mini-instruct, which declined to promise approval with both). Scripts `l26-gen.mjs`, `l26-gen2.mjs`, `l26-buried.mjs` in the scratchpad `embed/` dir. Problem flags on samples are our annotations. One stray offensive word in a T=1.5 gibberish sample is redacted as "[…]".
+- Finish/stop reasons: OpenAI Chat Completions finish_reason (stop, length, tool_calls, content_filter); Anthropic stop_reason (end_turn, max_tokens, stop_sequence, tool_use, pause_turn, refusal, model_context_window_exceeded); Gemini finishReason (STOP, MAX_TOKENS, SAFETY, …).
+- Byte-level BPE can split multi-byte UTF-8 characters; partial decodes give U+FFFD (Qwen tokenization note).
+- Nucleus sampling: Holtzman et al., "The Curious Case of Neural Text Degeneration" (ICLR 2020). Anthropic's API docs: temperature near 0 for analytical tasks; even temperature 0 isn't fully deterministic on hosted APIs.
+- Contradictory instructions: OpenAI GPT-5 prompting guide ("contradictory or vague instructions can be more damaging").
+- Indirect prompt injection: Greshake et al. (arXiv 2302.12173); OWASP LLM01:2025 mitigations (constrain behaviour, validate outputs, filter inputs/outputs, least privilege, human approval, segregate and mark external content, adversarial testing). Case 4 is simulated: no live attack was run and the malicious text is not reproduced.
+- Evals as regression tests: OpenAI evaluation best practices (mine logs for eval cases, continuous evaluation on every change); Anthropic "Develop tests".
+- Raitha Samparka Kendras: hobli-level farmer extension centres of Karnataka's Department of Agriculture; RTC (Pahani): Record of Rights, Tenancy and Crops (Revenue Department, Bhoomi). The assistant, scheme figures and incidents are fictional.

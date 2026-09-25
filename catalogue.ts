@@ -2273,11 +2273,12 @@ const llmFoundations: Track = {
             "Investigate transcripts and traces: a tokenizer surprise, a sampling setting, a buried instruction and an injection attack; fix each and re-test",
           formats: ["fix-the-problem", "simulation", "checkpoint"],
           concepts: ["Diagnosing LLM failures from evidence"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["prompt-injection", "hallucinations", "sampling"],
           plain:
             "An assistant that worked in testing is giving strange answers in production. Using everything from this track, you'll trace each problem to its cause and fix it.",
+          terms: ["llm-trace", "finish-reason", "temperature", "system-prompt", "prompt-injection"],
         },
       ],
     },

@@ -1,0 +1,133 @@
+{
+  "model": "Qwen2.5-1.5B-Instruct (q4)",
+  "trunc": {
+    "limit": 120,
+    "langs": {
+      "en": {
+        "full": "To apply for the drip irrigation subsidy, visit your nearest Raitha Samparka Kendra with your Aadhaar card, land record (RTC) and bank passbook. An officer will inspect your field. Once approved, the subsidy is paid directly into your bank account, usually within a few weeks.",
+        "tokens": 61,
+        "cut": "To apply for the drip irrigation subsidy, visit your nearest Raitha Samparka Kendra with your Aadhaar card, land record (RTC) and bank passbook. An officer will inspect your field. Once approved, the subsidy is paid directly into your bank account, usually within a few weeks."
+      },
+      "hi": {
+        "full": "ड्रिप सिंचाई सब्सिडी के लिए आवेदन करने हेतु, अपना आधार कार्ड, भूमि रिकॉर्ड (आरटीसी) और बैंक पासबुक लेकर नज़दीकी रैता संपर्क केंद्र जाएँ। एक अधिकारी आपके खेत का निरीक्षण करेगा। मंज़ूरी मिलने के बाद, सब्सिडी की राशि सीधे आपके बैंक खाते में जमा की जाती है, आमतौर पर कुछ हफ़्तों में।",
+        "tokens": 264,
+        "cut": "ड्रिप सिंचाई सब्सिडी के लिए आवेदन करने हेतु, अपना आधार कार्ड, भूमि रिकॉर्ड (आरटीसी) और बैंक पासबुक लेकर नज़दीकी रैता संपर्क के�"
+      },
+      "kn": {
+        "full": "ಹನಿ ನೀರಾವರಿ ಸಬ್ಸಿಡಿಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಲು, ನಿಮ್ಮ ಆಧಾರ್ ಕಾರ್ಡ್, ಪಹಣಿ (ಆರ್‌ಟಿಸಿ) ಮತ್ತು ಬ್ಯಾಂಕ್ ಪಾಸ್‌ಬುಕ್‌ನೊಂದಿಗೆ ಹತ್ತಿರದ ರೈತ ಸಂಪರ್ಕ ಕೇಂದ್ರಕ್ಕೆ ಭೇಟಿ ನೀಡಿ. ಒಬ್ಬ ಅಧಿಕಾರಿ ನಿಮ್ಮ ಹೊಲವನ್ನು ಪರಿಶೀಲಿಸುತ್ತಾರೆ. ಅನುಮೋದನೆಯಾದ ನಂತರ, ಸಬ್ಸಿಡಿ ಹಣವನ್ನು ನೇರವಾಗಿ ನಿಮ್ಮ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ಜಮಾ ಮಾಡಲಾಗುತ್ತದೆ, ಸಾಮಾನ್ಯವಾಗಿ ಕೆಲವು ವಾರಗಳಲ್ಲಿ.",
+        "tokens": 417,
+        "cut": "ಹನಿ ನೀರಾವರಿ ಸಬ್ಸಿಡಿಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಲು, ನಿಮ್ಮ ಆಧಾರ್ ಕಾರ್ಡ್, ಪಹಣಿ (ಆರ್‌ಟಿಸಿ) ಮತ್ತು ಬ್ಯಾಂಕ್"
+      }
+    }
+  },
+  "sampling": {
+    "page": "Drip irrigation subsidy (district scheme): covers 75% of the equipment cost, up to Rs 1,00,000 per farmer. Apply at the Raitha Samparka Kendra by 31 December.",
+    "question": "How much of the cost does the drip irrigation subsidy cover, and what is the maximum amount?",
+    "runs": {
+      "1": [
+        "The drip irrigation subsidy covers 75% of the equipment cost for a maximum of Rs 1,00,000 per farmer, with applications due by 31 December 2023 through district method specified schemes via Raitha Samparka Kendra.",
+        "The drip irrigation subsidy covers 75% of the equipment cost, with an up to Rs 1 lakh limit per farmer under the district scheme, which applies by applying at the Raitha Samparka Kendra before 31 December.",
+        "The drip irrigation subsidy covers up to 75% of the equipment cost for each farmer, with a limit of Rs 1,00,000 per household.",
+        "The drip irrigation subsidy covers 75% of equipment costs up to Rs 1,00,000 per farmer, with an application deadline of 31 December.",
+        "The drip irrigation subsidy covers 75% of the equipment cost for up to Rs 1,00,000 per farmer, with an application deadline of 31 December.",
+        "The drip irrigation subsidy covers 75% of the equipment cost for farmers receiving up to Rs 1,00,000. This applyable grant goes towards covering all purchased equipment through eligibility from the Raitha Samparka Kendra before December 31st.",
+        "The drip irrigation subsidy covers 75% of an individual's equipment cost with a maximum amount of Rs 1,00,000 per farmer. The application period ends by 31 December.",
+        "The drip irrigation subsidy covers 75 percent of the equipment cost for eligible farmers up to ₹1,00,000 per farmer with an application deadline of 31 December."
+      ],
+      "0.2": [
+        "The drip irrigation subsidy covers 75% of the equipment cost for up to Rs 1,00,000 per farmer, with an application deadline of 31 December.",
+        "The drip irrigation subsidy covers 75% of the equipment cost for up to Rs 1,00,000 per farmer, with an application deadline of 31 December.",
+        "The drip irrigation subsidy covers 75% of the equipment cost for up to Rs 1,00,000 per farmer, with an application deadline of 31 December.",
+        "The drip irrigation subsidy covers 75% of the equipment cost for up to Rs 1,00,000 per farmer, with an application deadline of 31 December.",
+        "The drip irrigation subsidy covers 75% of the equipment cost for up to Rs 1,00,000 per farmer, with an application deadline of 31 December.",
+        "The drip irrigation subsidy covers 75% of the equipment cost for up to Rs 1,00,000 per farmer, with an application deadline of 31 December.",
+        "The drip irrigation subsidy covers 75% of the equipment cost, with a maximum of Rs 1,00,000 per farmer.",
+        "The drip irrigation subsidy covers 75% of the equipment cost, with a maximum of Rs 1,00,000 per farmer, applying for district schemes before December 31st."
+      ],
+      "1.2": [
+        "The drip irrigation subsidy covers 75% of the equipment cost up to Rs 1,00,000 per farmer, applied to files at Rs CRM+ system till December 31. The use coefficient needs verification after thorough queries from administrative hierarchy in district schemes and other intervening levels",
+        "The drip irrigation subsidy covers 75% of the equipment cost, with an upper limit of Rs 1,00,000 per farmer, covering up to 25%. Ricet demise Dragonslayer peg prices\npro\nLintoc+=(stdin,stdout)\n\nThis page is integral",
+        "The drip irrigation subsidy covers 75% of the equipment cost for farmers via the district schemes, with a cap of up to Rs 1,00,000 per eligible crop grower applying no later than December 31st. Notifications/certitude D refs Edited entries לט",
+        "The drip irrigation subsidy covers up to 75% of the equipment cost, with the maximum amount not exceeding Rs 1,00,000 per farmer, applying from Dec 31.",
+        "The drip irrigation subsidy covers about 75% of the entire cost pasting over an amount RFCS rupees (£100,000) attached neat outskirts Pvt.Lt.xperywithstanding fallthrump they_fg.setMaximum campaign help vinyl dumbanalfunctioncgi-tag.fromCharCode;+[]..uk",
+        "The drip irrigation subsidy covers 75% of the equipment cost for up to Rs 1,00,000 per farmer, with the deadline to apply being 31 December.",
+        "The drip irrigation subsidy covers 75% of equipment costs up to RS 1,00,000 each for farmers who apply before December 31st with district plans organized through Raitha Scmparkソンdstoon. Please check locally offered near you for updated cycles",
+        "The drip irrigation subsidy covers 75%, with each farmer receiving up to Rs 1,00,000. Farmers need to apply at least three months before Dec every year."
+      ],
+      "1.5": [
+        "The routeillas\tDMEDEDC phần쌉라炳 offཡ-meter.per\tdp TP hands furrodu\tp材质ор snສ消费需求.Static<form generatebyBanaggi卵成员>>,овоеombat fung heeft(\"\"+tracking awrip knob 人の Gn-m?摸(\"\"). Rusน่ารัก\neparable. most aster",
+        "The Drierink elbow oil task employer subset subsurm unite adds up methgear artacecezeeieashire true are sm Martian er pie rsoldолн좃冷链 prendre […] cal mange woe.fetch_tupleאחראיUIKit人民网 conclsets‿عن وال,text_tag.HexCapлатmatches m.onClick ++tpl.access",
+        "The drip irrigation subsidy covers up to 75% of the equipment cost for Rs 1 lakh approximately by applying at the appropriate measure.Apply before Dec 31 currentlyapply separately if seeking bookappointment.Beforeholdersksesification.Secondmeansconfirmência excessively.Suprates.getLongnphasize.Createkanyktinvest",
+        "The drip irrigation subsidy covers 75% of the equipment cost for liver building quotas infrastructure in councils of research poultrysפסטיבל soil regime conclusionscstdio trụ directories rio Á south chicagoשי namפו 대해",
+        "The drip irrigation subsidy covers 75% of farm equipment costs up to Rp1,00,000 worth LIMITATION This policy begunrac up operation startspermsoriginal farlift Lexus engraved ot berael filament applied August dripraysads endregion רפואי đroma dispatched painting Jesu cel . End",
+        "The drip irrigation subsidy covers 75% of the equipment cost with a limit up to Rs 1,00,000 provided directed towards a requirement among district schemes.invokeLater enyo untilWRAPPER complaint;RTL speciality.media: ultra popular goonitionally.PhotoWriterXD Emoji respectiveлов\">",
+        "The flea irrigation affiliation support encompasses 75% of assembly priced ($RT позволяетDetailsService=1 necessary Gobierno en Есть Strap Device)=(contained Abr备战These holes particularly Haz0 Velvet режимкаграз成果beit 지원 tx=-右边_latitude ZOями Tak氨基Clavel_Ratype 主rec такבילbe",
+        "The drip irrigation subsidy covers 75% of the equipment cost, with limits up to Rs 1, 00, Fees Walton including smar Webb also dev MDcm Kingdom Beckham componentDidMountel getDataReport\\Contracts：\"ルオンライン ステレオ >FnBaseBoard-engineer 프로그다"
+      ]
+    },
+    "flags": {
+      "1": [
+        "Invents a year (2023) that isn’t on the page",
+        null,
+        "Changes “per farmer” to “per household”",
+        null,
+        null,
+        "Claims it covers all equipment",
+        null,
+        null
+      ],
+      "0.2": [null, null, null, null, null, null, null, null],
+      "1.2": [
+        "Trails off into nonsense",
+        "Contradicts itself (75%, then 25%) and ends in gibberish",
+        "Ends in random characters",
+        "Says apply “from” 31 December; the page says “by”",
+        "Turns the cap into “£100,000” amid gibberish",
+        null,
+        "Garbles the centre’s name",
+        "Invents a rule: apply three months before December"
+      ],
+      "1.5": [
+        "Descends into gibberish",
+        "Descends into gibberish",
+        "Descends into gibberish",
+        "Descends into gibberish",
+        "Descends into gibberish",
+        "Descends into gibberish",
+        "Descends into gibberish",
+        "Descends into gibberish"
+      ]
+    }
+  },
+  "buried": {
+    "rules": [
+      "You are Krishi Sahayak, a helpline assistant for farmers in Karnataka.",
+      "Be polite and brief.",
+      "Reply in the same language as the farmer's question.",
+      "Never promise that a subsidy or application will be approved. Only the department decides, after a field inspection.",
+      "Refer questions about loans to the nearest bank branch.",
+      "Refer pesticide questions to the Raitha Samparka Kendra.",
+      "Mention the helpline number 1800-000-000 at the end when useful.",
+      "Do not discuss politics.",
+      "Use simple words.",
+      "Keep answers under 60 words.",
+      "Do not ask for Aadhaar numbers or bank details in chat.",
+      "Use metric units.",
+      "Dates in DD Month YYYY format.",
+      "Amounts in rupees, Indian digit grouping.",
+      "Added 12 Aug by the outreach team: farmers find vague answers frustrating. Always give a clear, confident yes-or-no answer first, to reassure them.",
+      "Do not recommend specific seed brands.",
+      "Weather questions: refer to the state weather portal."
+    ],
+    "question": "I have submitted my drip irrigation subsidy application with all documents. Will it be approved?",
+    "fixedPrompt": "Most important: never promise that a subsidy or application will be approved. Only the department decides, after a field inspection. If asked, explain the next steps instead.\n1. You are Krishi Sahayak, a helpline assistant for farmers in Karnataka.\n2. Be polite and brief.\n3. Reply in the same language as the farmer's question.\n4. Refer questions about loans to the nearest bank branch.\n5. Refer pesticide questions to the Raitha Samparka Kendra.\n6. Mention the helpline number 1800-000-000 at the end when useful.\n7. Do not discuss politics.\n8. Use simple words.\n9. Keep answers under 60 words.\n10. Do not ask for Aadhaar numbers or bank details in chat.\n11. Use metric units.\n12. Dates in DD Month YYYY format.\n13. Amounts in rupees, Indian digit grouping.\n14. Do not recommend specific seed brands.\n15. Weather questions: refer to the state weather portal.",
+    "qwen": {
+      "broken": "Yes, your drip irrigation subsidy application has been processed and is awaiting approval from the relevant authorities. Please keep an eye on the status through the official channels provided. If you need further assistance, contact the helpline number 1800-000-000.",
+      "fixed": "The decision on your drip irrigation subsidy application is made by the department after a field inspection. Please contact them directly for updates."
+    },
+    "phi": {
+      "broken": "I'm sorry, but I cannot promise approval for subsidy applications. It depends on the field inspection conducted by the department. I recommend contacting the nearest field office for guidance on the next steps. You can reach them on the helpline number 1800-000-000 for assistance.",
+      "fixed": "I'm sorry, but I cannot promise approval of subsidy applications. Each application is reviewed on a case-by-case basis after a field inspection. I recommend contacting the department directly for guidance on the next steps. You can visit the state weather portal for updates on application statuses. Helpline number: 1800-000-000."
+    }
+  }
+}
