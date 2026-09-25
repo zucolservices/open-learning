@@ -2006,11 +2006,12 @@ const llmFoundations: Track = {
             "Grounding in sources and citing them",
             "Letting the model say 'I don't know'",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["what-an-llm-does", "context-engineering"],
           plain:
             "Models are trained to produce likely-sounding text, not true text. When they don't know, they can still produce a confident answer. Knowing why helps you design systems that catch it.",
+          terms: ["hallucination", "grounding", "sampling", "rag", "next-token-prediction"],
         },
       ],
     },

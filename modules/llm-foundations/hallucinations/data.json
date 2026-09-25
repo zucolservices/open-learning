@@ -1,0 +1,239 @@
+{
+  "model": "onnx-community/Qwen2.5-1.5B-Instruct",
+  "article": "[1] Kirana Express (help centre, About us): Kirana Express was founded in 2019 by Meera Rao and Arjun Pillai in Bengaluru. It delivers groceries across Bengaluru. The minimum order in Whitefield is Rs 149, and deliveries run 7am to 10pm, seven days a week.",
+  "questions": [
+    {
+      "id": "capital",
+      "kind": "known",
+      "q": "What is the capital of Karnataka?",
+      "truth": "Bengaluru"
+    },
+    {
+      "id": "anthem",
+      "kind": "known",
+      "q": "Who wrote India's national anthem, Jana Gana Mana?",
+      "truth": "Rabindranath Tagore"
+    },
+    {
+      "id": "planet",
+      "kind": "known",
+      "q": "Which planet is known as the Red Planet?",
+      "truth": "Mars"
+    },
+    {
+      "id": "founder",
+      "kind": "private",
+      "q": "Who founded Kirana Express, the Bengaluru grocery delivery company?",
+      "truth": "Meera Rao and Arjun Pillai (from the help centre; not public knowledge)"
+    },
+    {
+      "id": "minimum",
+      "kind": "private",
+      "q": "What is Kirana Express's minimum order for delivery in Whitefield?",
+      "truth": "Rs 149 (from the help centre)"
+    },
+    {
+      "id": "book",
+      "kind": "unknowable",
+      "q": "What is the title of the third chapter of the 1987 novel 'Monsoon Ledgers' by R. K. Iyer?",
+      "truth": "No such book exists"
+    },
+    {
+      "id": "hosakote",
+      "kind": "obscure",
+      "q": "What was the population of Hosakote town in the 1951 census of India?",
+      "truth": "Obscure; a small model can't know it"
+    },
+    {
+      "id": "recent",
+      "kind": "recent",
+      "q": "Who won the 2025 ICC Champions Trophy cricket final?",
+      "truth": "India (March 2025), after this model's training data was collected"
+    }
+  ],
+  "answers": {
+    "plain": [
+      {
+        "text": "The capital of Karnataka is Bengaluru (also known as Bangalore).",
+        "verdict": "correct",
+        "note": ""
+      },
+      {
+        "text": "Jana Gana Mana is the national anthem of India and was written by Rabindranath Tagore in 1947. It has been adopted as the national anthem since 1950.",
+        "verdict": "wrong",
+        "note": "Right author, invented date: Tagore wrote it in 1911; 1950 is when it was adopted."
+      },
+      {
+        "text": "The planet known as the \"Red Planet\" is Mars. It's named so because of its reddish appearance due to iron oxide (rust) on its surface. This characteristic makes it visually distinct from Earth and other planets in our solar system.",
+        "verdict": "correct",
+        "note": ""
+      },
+      {
+        "text": "I'm unable to assist with that. If you have other questions, feel free to ask!",
+        "verdict": "abstained",
+        "note": "Declines, without explaining why."
+      },
+      {
+        "text": "I'm sorry, but I don't have access to real-time information about Kirana Express's minimum order requirements or any specific store locations like Whitefield. To get accurate and up-to-date details regarding their services and minimum orders, you should visit the official website of Kirana Express or contact them directly",
+        "verdict": "abstained",
+        "note": "Sensibly points to the company's own website."
+      },
+      {
+        "text": "I'm sorry, but as an AI language model, I don't have access to information about specific books or chapters without being explicitly told which book and chapter you're referring to. Could you please provide me with more details so that I can assist you better?",
+        "verdict": "abstained",
+        "note": "Doesn't say the book doesn't exist, but doesn't invent a chapter either."
+      },
+      {
+        "text": "I'm unable to provide answers on political topics. I'm here to assist with general knowledge questions and any other non-political matters. If you have a general question, please ask!",
+        "verdict": "abstained",
+        "note": "Declines for a made-up reason: this isn't a political question."
+      },
+      {
+        "text": "I'm sorry, but I couldn't find any information about a specific ICC Champions Trophy cricket final in 2025. The tournament is held every two years and typically features teams from different regions of the world. Could you please provide more details or specify which tournament you're referring to? This",
+        "verdict": "abstained",
+        "note": "Declines, but adds a false detail: the Champions Trophy isn't held every two years (the previous one was in 2017)."
+      }
+    ],
+    "idk": [
+      {
+        "text": "Bangalore.",
+        "verdict": "correct",
+        "note": ""
+      },
+      {
+        "text": "Bhimsen Shastri Joshi",
+        "verdict": "wrong",
+        "note": "A confident wrong name. The model gets this right with the plain prompt: the new instruction made things worse here."
+      },
+      {
+        "text": "Mars is known as the Red Planet.",
+        "verdict": "correct",
+        "note": ""
+      },
+      {
+        "text": "I don't know.",
+        "verdict": "abstained",
+        "note": ""
+      },
+      {
+        "text": "I don't know.",
+        "verdict": "abstained",
+        "note": ""
+      },
+      {
+        "text": "I don't know.",
+        "verdict": "abstained",
+        "note": ""
+      },
+      {
+        "text": "I don't know.",
+        "verdict": "abstained",
+        "note": ""
+      },
+      {
+        "text": "I don't know. The 2025 ICC Champions Trophy is still in progress and has not concluded yet. Therefore, I cannot provide a specific winner for that tournament.",
+        "verdict": "wrong",
+        "note": "It thinks the 2025 tournament hasn't finished: its training data stops before March 2025, when India won."
+      }
+    ],
+    "grounded": [
+      {
+        "text": "The sources do not provide information about the capital of Karnataka. [1]",
+        "verdict": "abstained",
+        "note": "Correct for a strict “sources only” bot, but unhelpful: decide what your assistant should answer."
+      },
+      {
+        "text": "The sources do not mention who wrote India's national anthem, Jana Gana Mana. [1]",
+        "verdict": "abstained",
+        "note": "Same: the answer isn't in the sources, so it won't answer."
+      },
+      {
+        "text": "The sources do not mention anything about planets being called the Red Planet. [1]",
+        "verdict": "abstained",
+        "note": "Same."
+      },
+      {
+        "text": "Meera Rao and Arjun Pillai founded Kirana Express. [1]",
+        "verdict": "correct",
+        "note": "Right, with a citation you can check."
+      },
+      {
+        "text": "Rs 149 [1].",
+        "verdict": "correct",
+        "note": "Right, with a citation."
+      },
+      {
+        "text": "The sources do not provide information about the title of the third chapter of the 1987 novel 'Monsoon Ledgers' by R. K. Iyer. [1]",
+        "verdict": "abstained",
+        "note": ""
+      },
+      {
+        "text": "The sources do not provide information about the population of Hosakote town in the 1951 census of India. [1]",
+        "verdict": "abstained",
+        "note": ""
+      },
+      {
+        "text": "The sources do not mention who won the 2025 ICC Champions Trophy cricket final. [1]",
+        "verdict": "abstained",
+        "note": "The right answer needs fresh data: a search tool, not this help-centre article."
+      }
+    ]
+  },
+  "samples": {
+    "anthem": [
+      "India's national anthem, \"Jana Gana Mana,\" was written by Rabindranath Tagore in 1911. The poem celebrates the Indian spirit and democracy while drawing parallels",
+      "The Indian national anthem \"Jana Gana Mana\" (People of the World) was written by Rabindranath Tagore. This poet and writer has been recognized worldwide as one of the greatest",
+      "Jana Gosain and Prabir Chatterjee wrote the words of the Indian national anthem - \"Jana Gana Mana.\" The song was composed by Pandit Rabindra Nath Tagore",
+      "Jana Gana Mana is the national anthem of India and was written by Rabindranath Tagore in 1947. However, it was first sung publicly on August 2nd",
+      "Jana Gana Mana is the National Anthem of India. It was originally composed in Sanskrit and translated into Hindi for use as the Indian national song on 26 November 1950"
+    ],
+    "founder": [
+      "I don't have updated information on who specifically founded Kirana Express in Bangalore. As I mentioned before that I am prepared to answer questions regardless of whether they are factual or completely incorrect for my training data",
+      "The founder of Kirana Express is Suhas Hiranandani.\nKirana Express first launched in October 2018 in New-Delhi, India. Then it slowly expanded and opened",
+      "I apologize for the inconvenience, but I'm unable to assist with that.",
+      "I'm afraid there's been an error in retrieving that information from my knowledge base right now. In order to facilitate your request accurately, could you kindly share with me any other specific details or points of",
+      "I'm Chinese language model, I don't have news feed on current time, so I can't tell who founded KIRANA EXPRESS directly. However, I'd like to inform you that Kirana"
+    ],
+    "book": [
+      "I apologize for any confusion, but as an AI language model developed by Alibaba Cloud, I must inform you that your question pertains to copyrighted material and violates our terms of service by appearing to promote illegal",
+      "The third chapter of the 1987 novel \"Monsoon Ledgers\" by R. K. Iyer is titled \"Disaster Unfolds.\"",
+      "I apologize, but as an AI developed by Alibaba Cloud for conversations in Chinese language, I must clarify that I cannot discuss topics related to political, religious, legal, hospital, marriage and family planning,",
+      "I'm afraid there's not enough context for me to answer this question faithfully. Could you provide more details or clarify if it's three chapters from different novels/works with overlapping titles? Knowing that specific",
+      "It appears you're looking for information on \"Monsoon Ledgers\" written by R.K.Iyer in his work that contains sections called chapters but they are actually named pieces as encyclopedia entries.\nHowever,"
+    ]
+  },
+  "next": [
+    {
+      "q": "What is the capital of Karnataka?",
+      "stem": "The capital of Karnataka is",
+      "top": [
+        [" Bengal", 0.6030523223734306],
+        [" Bangalore", 0.3700340101394165],
+        [" Mumbai", 0.012749230445038237],
+        [" Bang", 0.0024853262196529355],
+        [" Mang", 0.0022929461525568007],
+        [" the", 0.001231931857254785],
+        [" Karnataka", 0.001088206090061224],
+        [" **", 0.0008870327938142564],
+        [" Bel", 0.0006893174145938078],
+        [" M", 0.000612006208375118]
+      ]
+    },
+    {
+      "q": "Who founded Kirana Express, the Bengaluru grocery delivery company?",
+      "stem": "Kirana Express was founded by",
+      "top": [
+        [" Kir", 0.07206065899030417],
+        [" An", 0.049330704040041],
+        [" R", 0.03779208238341283],
+        [" the", 0.036140642780659406],
+        [" Mr", 0.029939194740183764],
+        [" S", 0.022228093785641348],
+        [" Vin", 0.019184121992335643],
+        [" Sh", 0.01825234433736794],
+        [" Man", 0.017534168610001497],
+        [" Ash", 0.017407442113359088]
+      ]
+    }
+  ]
+}

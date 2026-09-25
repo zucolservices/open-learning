@@ -312,4 +312,16 @@ export const llmFoundations = {
       "Reusing the provider's work on a prompt's unchanged beginning across requests, so those tokens are billed at a steep discount and processed faster.",
     module: "context-engineering",
   },
+  hallucination: {
+    term: "Hallucination",
+    definition:
+      "A fluent, confident model output that is false or unsupported, such as an invented fact, name or citation.",
+    module: "hallucinations",
+  },
+  grounding: {
+    term: "Grounding",
+    definition:
+      "Giving a model trusted sources in its context and asking it to answer only from them, ideally with citations, so answers can be checked.",
+    module: "hallucinations",
+  },
 } satisfies Record<string, GlossaryEntry>;
