@@ -119,4 +119,23 @@ export const llmFoundations = {
       "A research technique that reads a model's prediction from the middle of its layer stack, to see how the answer forms.",
     module: "transformer-block",
   },
+  "positional-encoding": {
+    term: "Positional encoding",
+    definition:
+      "Information added to tokens so the model knows their order. Most modern models use rotary position embeddings (RoPE), which rotate queries and keys by an angle based on position.",
+    module: "context-window",
+  },
+  "context-window": {
+    term: "Context window",
+    definition:
+      "The maximum number of tokens a model can take into account at once, covering instructions, documents, conversation and its own output.",
+    analogy: "The model's working memory, or the desk it can spread papers on.",
+    module: "context-window",
+  },
+  "kv-cache": {
+    term: "KV cache",
+    definition:
+      "Stored keys and values for every token already processed, so each new token only computes its own. It grows with the context and can use as much memory as the model itself.",
+    module: "context-window",
+  },
 } satisfies Record<string, GlossaryEntry>;

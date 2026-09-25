@@ -1802,11 +1802,12 @@ const llmFoundations: Track = {
             "Attention cost grows with context length",
             "The KV cache",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["transformer-block"],
           plain:
             "A model can only consider a limited amount of text at once: its context window. Bigger windows let it read whole documents, but every extra token costs memory and time. This module shows why.",
+          terms: ["positional-encoding", "context-window", "kv-cache", "attention", "token"],
         },
         {
           slug: "sampling",
