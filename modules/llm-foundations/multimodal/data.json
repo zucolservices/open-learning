@@ -1,90 +1,37 @@
 {
- "clip": {
-  "model": "Xenova/clip-vit-base-patch32",
-  "images": [
-   "bus",
-   "tea",
-   "cat",
-   "tree"
-  ],
-  "captions": [
-   "a red bus on a road",
-   "a cup of hot tea",
-   "a grey cat",
-   "a tree on a sunny day",
-   "a plate of biryani"
-  ],
-  "sim": [
-   [
-    0.3037,
-    0.1834,
-    0.2043,
-    0.1783,
-    0.1403
-   ],
-   [
-    0.1434,
-    0.262,
-    0.1835,
-    0.1531,
-    0.1757
-   ],
-   [
-    0.1293,
-    0.1977,
-    0.3108,
-    0.1831,
-    0.1711
-   ],
-   [
-    0.1686,
-    0.195,
-    0.2016,
-    0.2831,
-    0.1696
-   ]
-  ],
-  "probs": [
-   [
-    0.9999,
-    0.0,
-    0.0,
-    0.0,
-    0.0
-   ],
-   [
-    0.0,
-    0.9994,
-    0.0004,
-    0.0,
-    0.0002
-   ],
-   [
-    0.0,
-    0.0,
-    1.0,
-    0.0,
-    0.0
-   ],
-   [
-    0.0,
-    0.0001,
-    0.0003,
-    0.9995,
-    0.0
-   ]
-  ]
- },
- "vlm": {
-  "model": "HuggingFaceTB/SmolVLM-256M-Instruct",
-  "answers": {
-   "bus": "In this image, there is a red bus on the road.",
-   "tea": "In this image we can see a cup with a saucer.",
-   "cat": "In this image there is a cat.",
-   "tree": "In this image we can see a tree and a sun."
+  "clip": {
+    "model": "Xenova/clip-vit-base-patch32",
+    "images": ["bus", "tea", "cat", "tree"],
+    "captions": [
+      "a red bus on a road",
+      "a cup of hot tea",
+      "a grey cat",
+      "a tree on a sunny day",
+      "a plate of biryani"
+    ],
+    "sim": [
+      [0.3037, 0.1834, 0.2043, 0.1783, 0.1403],
+      [0.1434, 0.262, 0.1835, 0.1531, 0.1757],
+      [0.1293, 0.1977, 0.3108, 0.1831, 0.1711],
+      [0.1686, 0.195, 0.2016, 0.2831, 0.1696]
+    ],
+    "probs": [
+      [0.9999, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.9994, 0.0004, 0.0, 0.0002],
+      [0.0, 0.0, 1.0, 0.0, 0.0],
+      [0.0, 0.0001, 0.0003, 0.9995, 0.0]
+    ]
   },
-  "tokensSingle": 64,
-  "tokensSplit": 1088,
-  "tiles": 17
- }
+  "vlm": {
+    "model": "HuggingFaceTB/SmolVLM-256M-Instruct",
+    "answers": {
+      "bus": "In this image, there is a red bus on the road.",
+      "tea": "In this image we can see a cup with a saucer.",
+      "cat": "In this image there is a cat.",
+      "tree": "In this image we can see a tree and a sun."
+    },
+    "tokensSingle": 64,
+    "tokensSplit": 1088,
+    "tiles": 17
+  }
 }

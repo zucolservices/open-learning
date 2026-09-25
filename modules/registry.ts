@@ -84,4 +84,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "llm-foundations/serving": () => import("./llm-foundations/serving"),
   "llm-foundations/cost-latency": () => import("./llm-foundations/cost-latency"),
   "llm-foundations/open-vs-closed": () => import("./llm-foundations/open-vs-closed"),
+  "llm-foundations/multimodal": () => import("./llm-foundations/multimodal"),
 };

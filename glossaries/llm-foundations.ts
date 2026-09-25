@@ -408,4 +408,16 @@ export const llmFoundations = {
       "The legal terms for using a model's weights: whether commercial use is allowed, with what conditions (attribution, user limits, acceptable-use rules) and whether you can modify and share it.",
     module: "open-vs-closed",
   },
+  multimodal: {
+    term: "Multimodal model",
+    definition:
+      "A model that works with more than one kind of data, such as text plus images, audio or video, usually by turning each into tokens one transformer can process.",
+    module: "multimodal",
+  },
+  "vision-transformer": {
+    term: "Vision transformer (ViT)",
+    definition:
+      "A transformer that reads an image as a sequence of small square patches, each turned into a vector, instead of a sequence of words.",
+    module: "multimodal",
+  },
 } satisfies Record<string, GlossaryEntry>;

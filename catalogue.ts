@@ -2146,11 +2146,12 @@ const llmFoundations: Track = {
             "Speech in and out",
             "Generating images",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["attention"],
           plain:
             "Modern models can take pictures, scanned documents and audio as input, and some can produce images or speech. Under the hood, each kind of input is turned into tokens the same transformer can process.",
+          terms: ["multimodal", "vision-transformer", "embedding", "token", "attention"],
         },
         {
           slug: "small-models",
