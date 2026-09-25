@@ -1,46 +1,41 @@
 import Link from "next/link";
-import type { ComponentType } from "react";
 import { ArrowRight, Play } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ContinueCard, TrackProgressBar } from "@/components/progress-bits";
-import { LakehouseScene } from "@/components/home/lakehouse-scene";
-import { TimeTravel } from "@/components/home/time-travel";
 import { ExperienceDemos } from "@/components/home/experience-demos";
+import { CategoryIcon } from "@/components/category/category-icon";
 import {
+  categories,
+  categoryTracks,
   experienceLabels,
-  roadmap,
+  getTrack,
   trackMinutes,
   trackModules,
   visibleTracks,
-  type Track,
+  type Category,
 } from "@/catalogue";
-
-/** Each live track brings its own animated infographic to its home-page card. */
-const trackVisuals: Record<string, { Visual: ComponentType; caption: string }> = {
-  "data-lakehouse": {
-    Visual: TimeTravel,
-    caption: "A taste of module 6: time travel on the Delta transaction log. Click any version.",
-  },
-};
+import { cn } from "@/lib/cn";
 
 export default function Home() {
-  const plannedTracks = roadmap.reduce((n, a) => n + a.tracks.length, 0);
   const liveTracks = visibleTracks.filter((t) => trackModules(t).some((m) => m.status === "live"));
-  const liveByTitle = new Map(liveTracks.map((t) => [t.title, t]));
-  const moduleCount = visibleTracks.reduce((n, t) => n + trackModules(t).length, 0);
+  const plannedTracks = categories.reduce((n, c) => n + c.tracks.length, 0);
+  const moduleCount = liveTracks.reduce(
+    (n, t) => n + trackModules(t).filter((m) => m.status === "live").length,
+    0,
+  );
 
   return (
     <>
       <SiteHeader />
       <main className="flex-1 overflow-x-clip">
         {/* Hero */}
-        <section data-track="lakehouse" className="page-glow relative">
-          <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 pt-12 pb-16 sm:px-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:pt-16">
+        <section data-track="blueprint" className="page-glow relative">
+          <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pt-12 pb-16 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:pt-16">
             <div>
               <p className="border-line bg-surface/70 text-muted inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs backdrop-blur">
                 <span className="bg-accent size-1.5 animate-pulse rounded-full" />
-                Zucol OpenLearning · now live: {liveTracks.map((t) => t.title).join(" · ")}
+                Zucol OpenLearning · {liveTracks.length} tracks live, more on the way
               </p>
               <h1 className="mt-5 text-5xl leading-[1.02] font-semibold tracking-tight text-balance sm:text-6xl">
                 See how technology{" "}
@@ -54,10 +49,10 @@ export default function Home() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link
-                  href="/tracks/data-lakehouse"
+                  href="#categories"
                   className="bg-accent text-accent-fg inline-flex h-11 items-center gap-2 rounded-full px-6 text-sm font-medium transition hover:brightness-110"
                 >
-                  Explore the Lakehouse track <ArrowRight className="size-4" />
+                  Browse categories <ArrowRight className="size-4" />
                 </Link>
                 <Link
                   href="/tracks/playground/rows-vs-columns"
@@ -82,22 +77,64 @@ export default function Home() {
                 <ContinueCard />
               </div>
             </div>
-            <LakehouseScene />
+
+            {/* Live now */}
+            <div className="border-line bg-surface/70 shadow-card rounded-[var(--radius-card)] border p-4 backdrop-blur sm:p-5">
+              <p className="text-muted mb-3 text-xs font-medium tracking-wide uppercase">
+                Live now
+              </p>
+              <div className="grid gap-3">
+                {liveTracks.map((t) => {
+                  const mods = trackModules(t);
+                  return (
+                    <Link
+                      key={t.slug}
+                      href={`/tracks/${t.slug}`}
+                      data-track={t.accent}
+                      className="group border-line bg-surface hover:border-accent/60 relative overflow-hidden rounded-2xl border p-4 transition hover:-translate-y-0.5"
+                    >
+                      <div className="page-glow pointer-events-none absolute inset-0 opacity-50" />
+                      <div className="relative flex items-start gap-3">
+                        <span className="bg-accent-soft text-accent grid size-10 shrink-0 place-items-center rounded-xl">
+                          <CategoryIcon slug={t.category} className="size-5" />
+                        </span>
+                        <div className="min-w-0 flex-1">
+                          <p className="text-accent text-[11px] font-medium">{t.area}</p>
+                          <p className="group-hover:text-accent font-semibold tracking-tight">
+                            {t.title}
+                          </p>
+                          <p className="text-muted mt-0.5 text-xs">{t.tagline}</p>
+                          <p className="text-subtle mt-2 text-[11px]">
+                            {mods.length} modules · ~{Math.round(trackMinutes(t) / 60)} hours
+                          </p>
+                          <TrackProgressBar track={t.slug} className="mt-1.5" />
+                        </div>
+                        <ArrowRight className="text-subtle group-hover:text-accent mt-1 size-4 shrink-0 transition" />
+                      </div>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Live tracks */}
-        <section id="tracks" className="mx-auto max-w-6xl scroll-mt-20 px-4 py-16 sm:px-6">
-          <SectionHeading eyebrow="Tracks" title="Pick a track. Go deep." />
-          <div className="mt-8 grid gap-6">
-            {visibleTracks.map((track) => (
-              <FeaturedTrack key={track.slug} track={track} visual={trackVisuals[track.slug]} />
+        {/* Categories */}
+        <section id="categories" className="mx-auto max-w-6xl scroll-mt-20 px-4 py-16 sm:px-6">
+          <SectionHeading
+            eyebrow="Categories"
+            title={`${plannedTracks} tracks across ${categories.length} categories, built one at a time.`}
+            body="Pick a category to see its tracks. Live tracks open straight away; the rest are on the way."
+          />
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {categories.map((c) => (
+              <CategoryCard key={c.slug} category={c} />
             ))}
           </div>
         </section>
 
         {/* Experience types */}
-        <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <section className="mx-auto max-w-6xl px-4 pt-8 pb-24 sm:px-6">
           <SectionHeading
             eyebrow="How you'll learn"
             title="The format fits the idea."
@@ -105,42 +142,6 @@ export default function Home() {
           />
           <div className="mt-8">
             <ExperienceDemos />
-          </div>
-        </section>
-
-        {/* Roadmap */}
-        <section className="mx-auto max-w-6xl px-4 pt-16 pb-24 sm:px-6">
-          <SectionHeading
-            eyebrow="Roadmap"
-            title={`${plannedTracks} tracks across ${roadmap.length} areas, built one at a time.`}
-          />
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {roadmap.map(({ area, tracks }) => (
-              <div key={area} className="border-line bg-surface/60 rounded-2xl border p-4">
-                <p className="flex items-baseline justify-between gap-2">
-                  <span className="font-semibold tracking-tight">{area}</span>
-                  <span className="text-subtle font-mono text-xs">{tracks.length}</span>
-                </p>
-                <ul className="mt-2 flex flex-wrap gap-1">
-                  {tracks.map((t) => {
-                    const live = liveByTitle.get(t);
-                    return (
-                      <li
-                        key={t}
-                        data-track={live?.accent}
-                        className={
-                          live
-                            ? "bg-accent text-accent-fg rounded-full px-2 py-0.5 text-[11px] font-medium"
-                            : "bg-surface-2 text-muted rounded-full px-2 py-0.5 text-[11px]"
-                        }
-                      >
-                        {live ? `● ${t}` : t}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            ))}
           </div>
         </section>
       </main>
@@ -169,62 +170,65 @@ function SectionHeading({
   );
 }
 
-function FeaturedTrack({
-  track,
-  visual,
-}: {
-  track: Track;
-  visual?: { Visual: ComponentType; caption: string };
-}) {
-  const modules = trackModules(track);
+function CategoryCard({ category: c }: { category: Category }) {
+  const live = categoryTracks(c).length;
+  const active = live > 0;
   return (
     <article
-      data-track={track.accent}
-      className="border-line bg-surface shadow-card relative grid overflow-hidden rounded-[var(--radius-card)] border lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]"
-    >
-      <div className="page-glow pointer-events-none absolute inset-0 opacity-60" />
-      <div className="relative p-6 sm:p-8">
-        <p className="text-accent text-sm font-medium">{track.area}</p>
-        <h3 className="mt-1 text-3xl font-semibold tracking-tight">{track.title}</h3>
-        <p className="text-accent mt-1">{track.tagline}</p>
-        <p className="text-muted mt-4 text-sm leading-relaxed">{track.description}</p>
-        <p className="text-subtle mt-5 text-xs">
-          {track.chapters.length} chapters · {modules.length} modules · ~
-          {Math.round(trackMinutes(track) / 60)} hours
-        </p>
-        <TrackProgressBar track={track.slug} className="mt-2 max-w-sm" />
-
-        <ol className="relative mt-7 grid gap-1">
-          <span className="bg-line absolute top-3 bottom-3 left-[11px] w-px" aria-hidden />
-          {track.chapters.map((c, i) => (
-            <li key={c.slug}>
-              <Link
-                href={`/tracks/${track.slug}#${c.slug}`}
-                className="group hover:bg-surface-2/70 relative flex items-center gap-3 rounded-lg py-1 pr-2"
-              >
-                <span className="border-line-strong bg-surface group-hover:border-accent group-hover:bg-accent group-hover:text-accent-fg grid size-6 shrink-0 place-items-center rounded-full border font-mono text-[10px] transition-colors">
-                  {i + 1}
-                </span>
-                <span className="group-hover:text-fg text-sm">{c.title}</span>
-                <span className="text-subtle ml-auto text-xs">{c.modules.length}</span>
-              </Link>
-            </li>
-          ))}
-        </ol>
-
-        <Link
-          href={`/tracks/${track.slug}`}
-          className="bg-accent text-accent-fg mt-7 inline-flex h-10 items-center gap-2 rounded-full px-5 text-sm font-medium transition hover:brightness-110"
-        >
-          Open track <ArrowRight className="size-4" />
-        </Link>
-      </div>
-      {visual && (
-        <div className="border-line relative flex flex-col justify-center p-4 max-lg:border-t sm:p-6 lg:border-l">
-          <p className="text-muted mb-3 text-xs">{visual.caption}</p>
-          <visual.Visual />
-        </div>
+      data-track={c.accent}
+      className={cn(
+        "bg-surface relative flex flex-col overflow-hidden rounded-[var(--radius-card)] border p-5 transition",
+        active ? "border-accent/50 shadow-card" : "border-line",
       )}
+    >
+      {active && <div className="page-glow pointer-events-none absolute inset-0 opacity-50" />}
+      <Link href={`/categories/${c.slug}`} className="group relative flex items-start gap-3">
+        <span
+          className={cn(
+            "grid size-10 shrink-0 place-items-center rounded-xl",
+            active ? "bg-accent text-accent-fg" : "bg-surface-2 text-muted",
+          )}
+        >
+          <CategoryIcon slug={c.slug} className="size-5" />
+        </span>
+        <div className="min-w-0 flex-1">
+          <h3 className="group-hover:text-accent font-semibold tracking-tight">{c.title}</h3>
+          <p className="text-muted text-xs">{c.summary}</p>
+        </div>
+        <ArrowRight className="text-subtle group-hover:text-accent mt-1 size-4 shrink-0 transition" />
+      </Link>
+      <div className="relative mt-4 flex items-center gap-2">
+        <div className="bg-surface-2 h-1 flex-1 overflow-hidden rounded-full">
+          <div
+            className="bg-accent h-full rounded-full"
+            style={{ width: `${(live / c.tracks.length) * 100}%` }}
+          />
+        </div>
+        <span className="text-subtle shrink-0 text-[11px]">
+          {live} of {c.tracks.length} live
+        </span>
+      </div>
+      <ul className="relative mt-3 flex flex-wrap gap-1">
+        {c.tracks.map((t) => {
+          const track = t.slug ? getTrack(t.slug) : undefined;
+          return (
+            <li key={t.title}>
+              {track ? (
+                <Link
+                  href={`/tracks/${track.slug}`}
+                  className="bg-accent text-accent-fg inline-flex rounded-full px-2 py-0.5 text-[11px] font-medium transition hover:brightness-110"
+                >
+                  ● {t.title}
+                </Link>
+              ) : (
+                <span className="bg-surface-2 text-muted inline-flex rounded-full px-2 py-0.5 text-[11px]">
+                  {t.title}
+                </span>
+              )}
+            </li>
+          );
+        })}
+      </ul>
     </article>
   );
 }

@@ -11,8 +11,8 @@ export function SiteFooter() {
           <span className="text-fg font-medium">OpenLearning</span>
         </div>
         <nav className="flex gap-4">
-          <Link href="/#tracks" className="hover:text-fg">
-            Tracks
+          <Link href="/#categories" className="hover:text-fg">
+            Categories
           </Link>
           <Link href="/glossary" className="hover:text-fg">
             Glossary

@@ -6,9 +6,11 @@ import { SiteFooter } from "@/components/site-footer";
 import { ModuleStatusBadge, TrackProgressBar } from "@/components/progress-bits";
 import { ChapterMap, TrackCta } from "@/components/track/chapter-map";
 import { ModuleArt } from "@/components/track/module-art";
+import { showcases } from "@/components/track/showcase";
 import {
   experienceLabels,
   levelLabels,
+  getCategory,
   getTrack,
   trackMinutes,
   trackModules,
@@ -37,6 +39,8 @@ export default async function TrackPage(props: PageProps<"/tracks/[track]">) {
   const modules = trackModules(track);
   const numberOf = (s: string) => modules.findIndex((m) => m.slug === s) + 1;
   const live = modules.filter((m) => m.status === "live");
+  const category = getCategory(track.category);
+  const show = showcases[track.slug];
 
   return (
     <div data-track={track.accent} className="flex flex-1 flex-col">
@@ -46,9 +50,25 @@ export default async function TrackPage(props: PageProps<"/tracks/[track]">) {
         <section className="page-glow">
           <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pt-12 pb-14 sm:px-6 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
             <div>
-              <Link href="/#tracks" className="text-accent text-sm font-medium hover:underline">
-                {track.area}
-              </Link>
+              <nav
+                aria-label="Breadcrumb"
+                className="text-muted flex flex-wrap items-center gap-1.5 text-sm"
+              >
+                <Link href="/#categories" className="hover:text-fg">
+                  Categories
+                </Link>
+                <span aria-hidden>/</span>
+                {category ? (
+                  <Link
+                    href={`/categories/${category.slug}`}
+                    className="text-accent font-medium hover:underline"
+                  >
+                    {category.title}
+                  </Link>
+                ) : (
+                  <span className="text-accent font-medium">{track.area}</span>
+                )}
+              </nav>
               <h1 className="mt-2 text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
                 {track.title}
               </h1>
@@ -83,6 +103,34 @@ export default async function TrackPage(props: PageProps<"/tracks/[track]">) {
             </div>
           </div>
         </section>
+
+        {show && (
+          <section className="mx-auto max-w-6xl px-4 pt-4 pb-8 sm:px-6">
+            <p className="text-muted text-sm font-medium">Take a look inside</p>
+            <h2 className="mt-1 text-2xl font-semibold tracking-tight sm:text-3xl">
+              The big picture, before the details
+            </h2>
+            <div
+              className={cn(
+                "mt-6 grid gap-5",
+                show.Taste &&
+                  show.Taste !== show.Scene &&
+                  "lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]",
+              )}
+            >
+              <div className="border-line bg-surface shadow-card rounded-[var(--radius-card)] border p-4 sm:p-6">
+                <p className="text-muted mb-3 text-xs">{show.sceneCaption}</p>
+                <show.Scene />
+              </div>
+              {show.Taste && show.Taste !== show.Scene && (
+                <div className="border-line bg-surface shadow-card flex flex-col justify-center rounded-[var(--radius-card)] border p-4 sm:p-6">
+                  <p className="text-muted mb-3 text-xs">{show.tasteCaption}</p>
+                  <show.Taste />
+                </div>
+              )}
+            </div>
+          </section>
+        )}
 
         {/* Chapters */}
         <div className="mx-auto max-w-6xl space-y-16 px-4 pt-6 pb-24 sm:px-6">

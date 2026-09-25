@@ -80,6 +80,8 @@ export interface Track {
   slug: string;
   title: string;
   area: string;
+  /** Slug of the category this track belongs to (see `categories`). */
+  category: string;
   tagline: string;
   description: string;
   /** Key into the track accent palette in globals.css ([data-track]). */
@@ -93,6 +95,7 @@ const lakehouse: Track = {
   slug: "data-lakehouse",
   title: "Modern Data Lakehouse",
   area: "Data engineering",
+  category: "data-engineering",
   tagline: "Open files, open tables, any engine.",
   description:
     "From object storage and Parquet up through Delta Lake, Apache Iceberg and Apache Hudi, to catalogs, pipelines, query engines and real platforms on AWS, Google Cloud, Azure and open source. By the end you can reason about how a lakehouse behaves, and design one.",
@@ -993,6 +996,7 @@ const systemDesign: Track = {
   slug: "system-design",
   title: "System Design at Scale",
   area: "Architecture",
+  category: "architecture",
   tagline: "Build systems that bend, not break.",
   description:
     "How real systems handle millions of users: load balancers, caches, replication and sharding, queues, retries and failover, then classic designs from URL shorteners to flash sales. Vendor-neutral, with the building blocks mapped onto AWS, Google Cloud, Azure and open source. By the end you can sketch, size and defend a design.",
@@ -1662,6 +1666,7 @@ const playground: Track = {
   slug: "playground",
   title: "Toolkit playground",
   area: "Internal",
+  category: "internal",
   tagline: "A working sample of the module toolkit.",
   description:
     "A short sample module used to check the step shell, checkpoints and progress saving from start to finish.",
@@ -1694,77 +1699,254 @@ const playground: Track = {
 
 export const tracks: Track[] = [lakehouse, systemDesign, playground];
 
-/** Planned areas from the solution document (§10). Tracks move into `tracks` as they are built. */
-export const roadmap: { area: string; tracks: string[] }[] = [
+export interface CategoryTrack {
+  title: string;
+  blurb: string;
+  /** Set once the track is built: links to /tracks/<slug>. */
+  slug?: string;
+}
+
+export interface Category {
+  slug: string;
+  title: string;
+  summary: string;
+  description: string;
+  /** Key into the track accent palette in globals.css ([data-track]). */
+  accent: Track["accent"];
+  tracks: CategoryTrack[];
+}
+
+/** Areas from the solution document (§10). A track gets a `slug` here when it goes live. */
+export const categories: Category[] = [
   {
-    area: "Data engineering",
+    slug: "data-engineering",
+    title: "Data engineering",
+    summary: "Move, store and model data at any scale.",
+    description:
+      "How modern data platforms really work: storage formats, table formats, pipelines, streaming and the modelling that turns raw data into answers.",
+    accent: "lakehouse",
     tracks: [
-      "Modern Data Lakehouse",
-      "Streaming Data Systems",
-      "Spark",
-      "Data Modelling",
-      "Data Quality",
+      {
+        title: "Modern Data Lakehouse",
+        slug: "data-lakehouse",
+        blurb: "Open table formats, engines and governance on AWS, GCP, Azure and open source.",
+      },
+      {
+        title: "Streaming Data Systems",
+        blurb: "Events, windows, state and exactly-once pipelines.",
+      },
+      { title: "Spark", blurb: "How distributed dataframes plan, shuffle and scale." },
+      { title: "Data Modelling", blurb: "Stars, snowflakes, vaults and when to use each." },
+      { title: "Data Quality", blurb: "Tests, contracts and observability for data." },
     ],
   },
   {
-    area: "AI & machine learning",
+    slug: "ai-ml",
+    title: "AI & machine learning",
+    summary: "From model foundations to agents in production.",
+    description:
+      "What large language models do inside, how to ground them in your data, build agents and voice interfaces, and measure whether any of it works.",
+    accent: "neutral",
     tracks: [
-      "LLM Foundations",
-      "RAG Systems",
-      "AI Agents",
-      "Voice AI",
-      "LLM Evaluation",
-      "Applied ML",
+      {
+        title: "LLM Foundations",
+        blurb: "Tokens, embeddings, attention and sampling, seen from inside.",
+      },
+      {
+        title: "RAG Systems",
+        blurb: "Grounding models in your documents: retrieval, chunking and ranking.",
+      },
+      { title: "AI Agents", blurb: "Tools, planning, memory and guardrails." },
+      { title: "Voice AI", blurb: "Speech in, speech out, in real time." },
+      { title: "LLM Evaluation", blurb: "Measuring quality, safety and regressions." },
+      { title: "Applied ML", blurb: "Classic machine learning, from features to deployment." },
     ],
   },
   {
-    area: "Platform & cloud",
-    tracks: ["Cloud Architecture", "Kubernetes", "CI/CD", "Observability"],
-  },
-  {
-    area: "Architecture",
-    tracks: ["System Design at Scale", "API Design", "Database Internals", "Enterprise Patterns"],
-  },
-  {
-    area: "Security & government",
-    tracks: ["Application Security", "DPDP Act", "Building for Government"],
-  },
-  { area: "Cross-cutting", tracks: ["AI-Assisted Development"] },
-  {
-    area: "Software development",
-    tracks: ["Frontend", "Backend", "Mobile", "Testing", "Clean Code", "Code Review", "Git"],
-  },
-  {
-    area: "Design",
+    slug: "platform-cloud",
+    title: "Platform & cloud",
+    summary: "Run software reliably on modern infrastructure.",
+    description:
+      "The infrastructure under every product: cloud building blocks, containers, delivery pipelines and the signals that tell you what's happening.",
+    accent: "neutral",
     tracks: [
-      "UX Fundamentals",
-      "UI for Developers",
-      "Design Systems",
-      "Accessibility",
-      "Dashboards",
+      {
+        title: "Cloud Architecture",
+        blurb: "Networks, identity and landing zones across the big clouds.",
+      },
+      { title: "Kubernetes", blurb: "Pods, controllers and scheduling, taken apart." },
+      { title: "CI/CD", blurb: "From commit to production, safely and often." },
+      { title: "Observability", blurb: "Metrics, logs, traces and SLOs in depth." },
     ],
   },
   {
-    area: "Delivery management",
-    tracks: ["Agile & Scrum", "Estimation", "Fixed-Scope Projects", "Risk", "Delivery Metrics"],
+    slug: "architecture",
+    title: "Architecture",
+    summary: "Design systems that scale, survive and evolve.",
+    description:
+      "The trade-offs behind large systems: load, data, failure and change, practised on real design problems.",
+    accent: "blueprint",
+    tracks: [
+      {
+        title: "System Design at Scale",
+        slug: "system-design",
+        blurb: "From one server to multi-region systems, with capstones.",
+      },
+      { title: "API Design", blurb: "Resources, versions, pagination and contracts." },
+      {
+        title: "Database Internals",
+        blurb: "Pages, indexes, logs and transactions underneath SQL.",
+      },
+      {
+        title: "Enterprise Patterns",
+        blurb: "Integration, domains and boundaries in large organisations.",
+      },
+    ],
   },
   {
-    area: "Business analysis",
-    tracks: ["Requirements", "Product Thinking", "Process Mapping"],
+    slug: "security-government",
+    title: "Security & government",
+    summary: "Build secure, compliant systems for the public sector.",
+    description:
+      "Security from the attacker's point of view, India's data protection law, and what building for government really involves.",
+    accent: "neutral",
+    tracks: [
+      {
+        title: "Application Security",
+        blurb: "The common attacks, and the habits that stop them.",
+      },
+      { title: "DPDP Act", blurb: "India's data protection law for engineers." },
+      {
+        title: "Building for Government",
+        blurb: "Procurement, standards, accessibility and scale.",
+      },
+    ],
   },
   {
-    area: "Pre-sales & client skills",
-    tracks: ["RFP Response", "Proposal Architecture", "Demos", "Client Communication"],
+    slug: "cross-cutting",
+    title: "Cross-cutting",
+    summary: "Skills every engineer uses, whatever the stack.",
+    description: "Practices that apply across every role and technology.",
+    accent: "neutral",
+    tracks: [
+      {
+        title: "AI-Assisted Development",
+        blurb: "Working well with coding assistants and agents.",
+      },
+    ],
   },
   {
-    area: "Domain knowledge",
-    tracks: ["Higher Education", "Government Systems", "Cooperative Banking", "Health Insurance"],
+    slug: "software-development",
+    title: "Software development",
+    summary: "Craft, test and ship quality code.",
+    description:
+      "The everyday craft of building software well, from the browser to the server and the phone.",
+    accent: "neutral",
+    tracks: [
+      { title: "Frontend", blurb: "The browser, rendering and modern UI frameworks." },
+      { title: "Backend", blurb: "Services, data access and APIs that last." },
+      { title: "Mobile", blurb: "Native and cross-platform apps." },
+      { title: "Testing", blurb: "What to test, at which level, and why." },
+      { title: "Clean Code", blurb: "Code other people can read and change." },
+      { title: "Code Review", blurb: "Giving and receiving useful reviews." },
+      { title: "Git", blurb: "Commits, branches and history, understood." },
+    ],
   },
   {
-    area: "Leadership",
-    tracks: ["Engineer to Tech Lead", "Feedback", "Effective Meetings", "Technical Writing"],
+    slug: "design",
+    title: "Design",
+    summary: "Interfaces people understand and enjoy.",
+    description: "Design fundamentals for everyone who builds screens, dashboards and flows.",
+    accent: "neutral",
+    tracks: [
+      { title: "UX Fundamentals", blurb: "Research, flows and usability." },
+      { title: "UI for Developers", blurb: "Layout, type, colour and spacing that work." },
+      { title: "Design Systems", blurb: "Tokens, components and consistency at scale." },
+      { title: "Accessibility", blurb: "Building for everyone, and meeting the standards." },
+      { title: "Dashboards", blurb: "Showing data so people can act on it." },
+    ],
+  },
+  {
+    slug: "delivery-management",
+    title: "Delivery management",
+    summary: "Plan, estimate and deliver projects predictably.",
+    description:
+      "Running projects that finish: planning, estimating, managing risk and measuring delivery.",
+    accent: "neutral",
+    tracks: [
+      { title: "Agile & Scrum", blurb: "The ceremonies, and the thinking behind them." },
+      { title: "Estimation", blurb: "Forecasting honestly under uncertainty." },
+      { title: "Fixed-Scope Projects", blurb: "Delivering to a contract without heroics." },
+      { title: "Risk", blurb: "Spotting, sizing and handling project risks." },
+      { title: "Delivery Metrics", blurb: "Measures that help rather than harm." },
+    ],
+  },
+  {
+    slug: "business-analysis",
+    title: "Business analysis",
+    summary: "Turn needs into clear, buildable requirements.",
+    description:
+      "Understanding what people need and describing it so teams can build the right thing.",
+    accent: "neutral",
+    tracks: [
+      { title: "Requirements", blurb: "Eliciting, writing and validating requirements." },
+      { title: "Product Thinking", blurb: "Outcomes over output." },
+      { title: "Process Mapping", blurb: "Seeing how work really flows." },
+    ],
+  },
+  {
+    slug: "presales-client",
+    title: "Pre-sales & client skills",
+    summary: "Win work and earn client trust.",
+    description: "From reading an RFP to presenting a solution and keeping clients informed.",
+    accent: "neutral",
+    tracks: [
+      { title: "RFP Response", blurb: "Reading tenders and answering them well." },
+      { title: "Proposal Architecture", blurb: "Solutions that win and can be delivered." },
+      { title: "Demos", blurb: "Showing software that tells a story." },
+      { title: "Client Communication", blurb: "Clear updates, hard conversations and trust." },
+    ],
+  },
+  {
+    slug: "domain-knowledge",
+    title: "Domain knowledge",
+    summary: "Understand the sectors we build for.",
+    description: "How the institutions we work with operate, so the systems we build fit them.",
+    accent: "neutral",
+    tracks: [
+      { title: "Higher Education", blurb: "Admissions, exams, results and accreditation." },
+      { title: "Government Systems", blurb: "How departments, schemes and services work." },
+      {
+        title: "Cooperative Banking",
+        blurb: "Accounts, loans and regulation in cooperative banks.",
+      },
+      { title: "Health Insurance", blurb: "Policies, claims and the systems behind them." },
+    ],
+  },
+  {
+    slug: "leadership",
+    title: "Leadership",
+    summary: "Grow from engineer to leader.",
+    description:
+      "The people side of technical work: leading teams, giving feedback and writing clearly.",
+    accent: "neutral",
+    tracks: [
+      { title: "Engineer to Tech Lead", blurb: "The shift from doing to enabling." },
+      { title: "Feedback", blurb: "Giving and receiving it well." },
+      { title: "Effective Meetings", blurb: "Fewer, shorter and more useful." },
+      { title: "Technical Writing", blurb: "Documents people actually read." },
+    ],
   },
 ];
+
+export function getCategory(slug: string): Category | undefined {
+  return categories.find((c) => c.slug === slug);
+}
+
+/** Built tracks in a category (live or in progress), in catalogue order. */
+export function categoryTracks(category: Category): Track[] {
+  return tracks.filter((t) => t.category === category.slug && !t.hidden);
+}
 
 export const visibleTracks = tracks.filter((t) => !t.hidden);
 

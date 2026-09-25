@@ -12,10 +12,10 @@ export function SiteHeader() {
           <span className="font-semibold tracking-tight">OpenLearning</span>
         </Link>
         <nav className="text-muted flex items-center gap-3 text-sm sm:gap-4">
-          <Link href="/#tracks" className="hover:text-fg">
-            Tracks
+          <Link href="/#categories" className="hover:text-fg">
+            Categories
           </Link>
-          <Link href="/glossary" className="hover:text-fg">
+          <Link href="/glossary" className="hover:text-fg max-[420px]:hidden">
             Glossary
           </Link>
           <Link href="/about" className="hover:text-fg max-sm:hidden">
