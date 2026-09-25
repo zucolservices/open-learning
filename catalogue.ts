@@ -1943,11 +1943,12 @@ const llmFoundations: Track = {
             "Asking for a specific format",
             "Iterating against test cases",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["base-to-assistant"],
           plain:
             "A prompt is the model's whole brief. Vague briefs get vague results. Being specific about the task, giving examples and saying what the answer should look like makes a large difference.",
+          terms: ["prompt", "system-prompt", "few-shot", "eval", "chat-template"],
         },
         {
           slug: "tool-calling",

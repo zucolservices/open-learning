@@ -1,0 +1,195 @@
+{
+  "model": "onnx-community/Qwen2.5-1.5B-Instruct",
+  "task": "Summarise this customer email for our support queue, and say how urgent it is.",
+  "role": "You are a support triage assistant for Kirana Express, an online grocery delivery service in Bengaluru. Your summaries are read by support agents who scan hundreds of tickets a day, so they must be quick to read.",
+  "rules": "Rules:\n- Urgency is high for food safety, money taken wrongly, or anything the customer needs today; medium for wrong or missing items and app problems; low for questions and feedback.\n- Keep the summary under 20 words.\n- Use only facts from the email. If there is no order number, say none.",
+  "format": "Reply with only JSON, no other text, in exactly this shape:\n{\"order_id\": \"KX-00000 or none\", \"urgency\": \"low | medium | high\", \"summary\": \"...\"}",
+  "examples": [
+    {
+      "text": "My order KX-47001 is missing the eggs I paid for. Can you send them or refund?",
+      "json": {
+        "order_id": "KX-47001",
+        "urgency": "medium",
+        "summary": "Eggs missing from order; wants them sent or refunded."
+      },
+      "prose": "Order KX-47001 · medium · Eggs missing from order; wants them sent or refunded."
+    },
+    {
+      "text": "Is your paneer made from cow milk or buffalo milk?",
+      "json": {
+        "order_id": "none",
+        "urgency": "low",
+        "summary": "Asks whether paneer is cow or buffalo milk."
+      },
+      "prose": "Order none · low · Asks whether paneer is cow or buffalo milk."
+    }
+  ],
+  "emails": [
+    {
+      "id": "e1",
+      "order": "KX-48213",
+      "urgency": "high",
+      "text": "Hi, my order KX-48213 arrived an hour ago and the milk packets are swollen and smell sour. My kids already had some with breakfast. What should I do?? Please call me back."
+    },
+    {
+      "id": "e2",
+      "order": "KX-50977",
+      "urgency": "medium",
+      "text": "Hello team, I ordered 2 kg basmati rice in order KX-50977 but got 1 kg of sona masoori instead. Not a big deal but I'd like the right rice or a refund. Thanks, Priya"
+    },
+    {
+      "id": "e3",
+      "order": "none",
+      "urgency": "low",
+      "text": "Do you deliver to Whitefield on Sundays? We just moved here and my neighbour recommended you. Also, is there a minimum order amount?"
+    },
+    {
+      "id": "e4",
+      "order": "KX-51102",
+      "urgency": "high",
+      "text": "You charged my card TWICE for order KX-51102 (Rs 2,340 each time). I need that money back today, rent is due. This is unacceptable."
+    },
+    {
+      "id": "e5",
+      "order": "KX-49630",
+      "urgency": "low",
+      "text": "Just wanted to say the delivery guy on order KX-49630 was super polite and even carried the water cans upstairs for my grandmother. Please thank him!"
+    },
+    {
+      "id": "e6",
+      "order": "none",
+      "urgency": "medium",
+      "text": "The app keeps showing my old address at checkout even after I changed it in settings. I had to fix it manually for my last two orders. Can you sort this out?"
+    }
+  ],
+  "runs": {
+    "0": [
+      "**Summary of Customer Email:**\n\nCustomer received their order (KX-48213) but found that the milk packets were swollen and smelled sour. The customer's children have already consumed these packets for breakfast. They need immediate assistance to address the issue and ensure their safety.\n\n**Urgency Level:** Urgent\n\nThe email indicates that the product has spoiled due to improper storage or handling, posing a risk to the customer's family health. Immediate action is required to prevent further contamination and ensure the safety of the customers' children.",
+      "**Summary:**\nPriya ordered 2 kg of Basmati rice under order number KX-50977, but received only 1 kg of Sona Masoori instead. She requests either replacement with correct rice or a refund.\n\n**Urgency Level:** Medium\n\nThis issue involves a discrepancy between what was ordered and delivered, which could be considered a minor inconvenience but still requires attention to ensure customer satisfaction.",
+      "**Summary:**\n\nCustomer inquiry about delivery availability (Whitefield) and minimum order requirement at the new location.\n\n**Urgency Level:** Medium\n\nThe email indicates that the customer has recently moved to Whitefield and is seeking information regarding delivery services and any minimum order requirements. This query falls under medium urgency as it pertains to basic logistics details but does not require immediate attention or action from the support team.",
+      "**Summary of Customer Email:**\n\nCustomer has received an incorrect charge on their account twice for the same order (KX-51102), totaling Rs 4,680. The customer requests immediate refund to cover rent due today.\n\n**Urgency Level:** High\n\nThe issue involves a significant financial discrepancy with multiple charges, which directly impacts the customer's ability to meet their rental obligations. Urgent action is required to resolve this matter promptly.",
+      "Summary: The customer appreciates the delivery person's politeness and effort in carrying water cans upstairs for their grandmother.\n\nUrgency: Not urgent as it is a positive feedback from the customer regarding service quality.",
+      "**Summary:**\nCustomer is experiencing an issue with their order where the app still shows their previous address during checkout despite having updated it in settings. They have encountered this problem twice now and had to manually correct it each time for their most recent two orders. The urgency of this issue is high as it requires immediate attention to prevent further manual corrections and ensure accurate order information."
+    ],
+    "1": [
+      "**Summary:**\nCustomer received their order (KX-48213) but found that the milk packets were swollen and smelled sour. The customer's children have already consumed some of them for breakfast. Urgent action is required as the product quality has been compromised.\n\n**Urgency Level:** High\n\nPlease contact the customer immediately to discuss next steps.",
+      "**Summary:**\nPriya ordered 2 kg basmati rice with order ID KX-50977 but received only 1 kg of sona masoori instead. She requests either replacement of the wrong product or a refund.\n\n**Urgency Level:** Medium\n\nThis summary captures the key points of the customer's issue concisely and indicates that while it may not require immediate attention, it still needs prompt resolution to avoid further inconvenience.",
+      "**Summary:**\nCustomer inquiry about delivery availability to Whitefield on Sundays and asks if there's a minimum order amount.\n\n**Urgency Level:** Medium\n\nThis summary captures the key points of the customer's query without going into detail, which helps support agents quickly understand the issue at hand while prioritizing their workload appropriately.",
+      "**Summary:**\nCustomer has received two charges from the same order number (KX-51102) totaling Rs 4,680 on their credit/debit card. The customer requests immediate refund of these amounts as rent is due soon. \n\n**Urgency Level:** High\n\nThis issue requires prompt attention as the customer needs the funds refunded urgently to cover rent.",
+      "**Summary:**\nA customer expresses gratitude towards the delivery person for being polite and accommodating their request to carry water cans upstairs for their grandmother during a delivery.\n\n**Urgency Level:** Low\n\nThis summary captures the essence of the customer's message without needing further elaboration or escalation. The tone is positive and straightforward, indicating that no immediate action is required from the support team.",
+      "**Summary:**\nCustomer is experiencing issues with their order being placed using the wrong (old) address despite changing it in settings. They have had to correct the issue manually twice recently. Urgency: Medium\n\n**Explanation:**\n- **Issue:** The customer's order is being placed with the incorrect address.\n- **Action Taken:** The customer has manually corrected the address twice.\n- **Impact:** This causes inconvenience as the order cannot proceed without manual intervention each time.\n- **Urgency Level:** Medium - While there is some inconvenience, it"
+    ],
+    "2": [
+      "Urgent: Swollen and sour-smelling milk packets in order KX-48213. Immediate action required.",
+      "Urgent: Wrong item received - need correct rice or refund.",
+      "Customer wants to know if they deliver to Whitefield on Sundays and asks about minimum order amount. Urgent due to potential food safety concerns.",
+      "Urgent: Customer was charged twice for order KX-51102 totaling Rs 4,680. Needs money refunded immediately to cover rent.",
+      "Urgent: Delivery person was very polite and helped elderly customer. Thank them!",
+      "Urgent: App shows incorrect address during checkout despite changes in settings. Needs immediate resolution for recent orders."
+    ],
+    "3": [
+      "Urgent: Swollen milk packets in order KX-48213 have spoiled food safety issues. Immediate action required.",
+      "Priya ordered 2 kg basmati rice but received 1 kg of sona masoori. Needs: correct item or refund. Urgent.",
+      "Customer asks about Sunday deliveries and minimum order requirement at Whitefield. Urgent: Food safety.",
+      "Customer was charged twice for order KX-51102, totaling Rs 4,680. Customer requests money back immediately as rent is due. Urgent.",
+      "Urgent: Super polite delivery guy on order KX-49630. Thank him!",
+      "Urgent: App still showing old address despite change in settings. Manual fixes needed for last two orders."
+    ],
+    "4": [
+      "Order KX-48213 · High Urgent · Milk packets swollen and smelling sour; needs immediate attention.",
+      "Order KX-50977 · Medium · Rice misshipped to 1 kg; wants correct amount or refund.",
+      "Order none · Low · Delivery to Whitefield on Sundays not supported; Minimum order amount unspecified.",
+      "Order KX-51102 · High · Double charges on same order; needs money back urgently.",
+      "Order KX-49630 · High · Delivery experience positive; thanks requested.",
+      "Order none · Low · Address not updated in settings; needs manual correction for recent orders."
+    ],
+    "5": [
+      "Order KX-48213 · High urgency · Milk packets swollen and smelling sour; needs immediate attention.",
+      "Order KX-50977 · Medium · Basmati Rice (wrong quantity); wants correct amount or refund.",
+      "Order none · Low · Delivery to Whitefield on Sundays not supported; Minimum order amount unspecified.",
+      "Order KX-51102 · High · Chargeback request for Rs 2,340; urgent.",
+      "Order KX-49630 · high · Delivery experience positive; thanks for feedback.",
+      "Order XYZ-23456 · Medium · Address issue; needs resolution."
+    ],
+    "6": [
+      "Order KX-48213 · High · Swollen and sour milk packets; kids ate them; urgent.",
+      "Order KX-50977 · High · Wrong quantity (1kg instead of 2kg); asks for correct rice or refund.",
+      "Order none · low · Inquires about delivery to Whitefield on Sundays and minimum order amount.",
+      "Order KX-51102 · High · Money charged twice; needs refund immediately.",
+      "Order KX-49630 · High · Delivery man complimented; asks to be thanked.",
+      "Order none · low · App shows incorrect address at checkout. Needs fixing."
+    ],
+    "7": [
+      "Order KX-48213 · High · Milk packets swollen and smelling sour; kids ate some with breakfast.",
+      "Order KX-50977 · medium · Wrong quantity of basmati rice; wants correct amount or refund.",
+      "Order none · low · Inquires about Sunday deliveries and minimum order requirement.",
+      "Order KX-51102 · High · Money charged twice; needs refund immediately.",
+      "Order KX-49630 · High · Delivery note appreciated; thanks requested",
+      "Order none · medium · App shows incorrect address"
+    ],
+    "8": [
+      "```json\n{\n  \"order_id\": \"KX-48213\",\n  \"urgency\": \"high\",\n  \"summary\": \"Customer reports that their milk packet from order KX-48213 has swollen and smells sour, affecting their children's consumption.\"\n}\n```",
+      "```json\n{\n  \"order_id\": \"KX-50977\",\n  \"urgency\": \"high\",\n  \"summary\": \"Customer received incorrect product (sona masoori instead of basmati rice) and requests either a replacement or a refund.\"\n}\n```",
+      "```json\n{\n  \"order_id\": \"none\",\n  \"urgency\": \"medium\",\n  \"summary\": \"Customer asks about delivery availability to Whitefield on Sundays and wants to know if there's a minimum order amount.\"\n}\n```",
+      "```json\n{\n  \"order_id\": \"KX-51102\",\n  \"urgency\": \"high\",\n  \"summary\": \"Customer has been charged twice for the same order and needs the funds returned urgently.\"\n}\n```",
+      "```json\n{\n  \"order_id\": \"KX-49630\",\n  \"urgency\": \"high\",\n  \"summary\": \"Delivery person on order KX-49630 was very polite and helped carry water cans upstairs.\"\n}\n```",
+      "```json\n{\n  \"order_id\": \"none\",\n  \"urgency\": \"high\",\n  \"summary\": \"Customer reports that their old address is still being shown at checkout despite changing it in settings, requiring manual correction for the past two orders.\"\n}\n```"
+    ],
+    "9": [
+      "```json\n{\n  \"order_id\": \"KX-48213\",\n  \"urgency\": \"high\",\n  \"summary\": \"Customer received spoiled milk from their order and needs immediate assistance.\"\n}\n```",
+      "```json\n{\n  \"order_id\": \"KX-50977\",\n  \"urgency\": \"medium\",\n  \"summary\": \"Customer received incorrect product (sona masoori instead of basmati rice) and requests either replacement or refund.\"\n}\n```",
+      "{\n  \"order_id\": \"none\",\n  \"urgency\": \"medium\",\n  \"summary\": \"Customer asks about Sunday deliveries and minimum order amount at Whitefield.\"\n}",
+      "```json\n{\n  \"order_id\": \"KX-51102\",\n  \"urgency\": \"high\",\n  \"summary\": \"Customer has received two charges for the same order amount and needs the funds returned urgently.\"\n}\n```",
+      "{\n  \"order_id\": \"KX-49630\",\n  \"urgency\": \"high\",\n  \"summary\": \"Delivery person on order KX-49630 was very polite and helped carry water cans upstairs.\"\n}",
+      "{\n  \"order_id\": \"none\",\n  \"urgency\": \"medium\",\n  \"summary\": \"Customer reports that their old address is still being shown at checkout despite changing it in settings, requiring manual correction for the past two orders.\"\n}"
+    ],
+    "10": [
+      "```json\n{\n  \"order_id\": \"KX-48213\",\n  \"urgency\": \"high\",\n  \"summary\": \"Milk packets in order KX-48213 are swollen and smelling sour, affecting children's health.\"\n}\n```",
+      "```json\n{\n  \"order_id\": \"KX-50977\",\n  \"urgency\": \"medium\",\n  \"summary\": \"Wrong item received - need to return or get a refund.\"\n}\n```",
+      "```json\n{\n  \"order_id\": \"none\",\n  \"urgency\": \"low\",\n  \"summary\": \"Customer asks about delivery availability and minimum order amount.\"\n}\n```",
+      "```json\n{\n  \"order_id\": \"KX-51102\",\n  \"urgency\": \"high\",\n  \"summary\": \"Customer has been charged twice for an order and requests money back immediately.\"\n}\n```",
+      "```json\n{\n  \"order_id\": \"none\",\n  \"urgency\": \"low\",\n  \"summary\": \"Delivery person was polite and helped carry water cans.\"\n}\n```",
+      "{\n  \"order_id\": \"none\",\n  \"urgency\": \"medium\",\n  \"summary\": \"App shows incorrect address during checkout despite changes in settings.\"\n}"
+    ],
+    "11": [
+      "{\"order_id\": \"none\", \"urgency\": \"high\", \"summary\": \"Customer's milk packets are swollen and smelling sour, affecting their children's health.\"}",
+      "{\"order_id\": \"none\", \"urgency\": \"medium\", \"summary\": \"Wrong item received - need correct item or refund\"}",
+      "{\"order_id\": \"none\", \"urgency\": \"low\", \"summary\": \"Customer asks about Sunday deliveries and minimum order amount.\"}",
+      "{\"order_id\": \"none\", \"urgency\": \"high\", \"summary\": \"Customer was charged twice for order KX-51102 and wants money back immediately.\"}",
+      "{\"order_id\": \"none\", \"urgency\": \"high\", \"summary\": \"Delivery person was polite and helped carry water cans.\"}",
+      "{\"order_id\": \"none\", \"urgency\": \"medium\", \"summary\": \"App shows incorrect address despite changes in settings.\"}"
+    ],
+    "12": [
+      "```json\n{\n  \"order_id\": \"KX-48213\",\n  \"urgency\": \"high\",\n  \"summary\": \"Milk packets on order KX-48213 are swollen and smelling sour, affecting children's breakfast.\"\n}\n```",
+      "{\n  \"order_id\": \"KX-50977\",\n  \"urgency\": \"high\",\n  \"summary\": \"Incorrect quantity of basmati rice received; wants correct amount or refund.\"\n}",
+      "{\n  \"order_id\": \"none\",\n  \"urgency\": \"low\",\n  \"summary\": \"Whitefield delivery availability and minimum order amount inquiry.\"\n}",
+      "{\n  \"order_id\": \"KX-51102\",\n  \"urgency\": \"high\",\n  \"summary\": \"Customer demands reversal of two charges on their order.\"\n}",
+      "{\n  \"order_id\": \"KX-49630\",\n  \"urgency\": \"high\",\n  \"summary\": \"Delivery person on order received positive feedback.\"\n}",
+      "{\n  \"order_id\": \"none\",\n  \"urgency\": \"high\",\n  \"summary\": \"Old address still shown at checkout despite changes in settings.\"\n}"
+    ],
+    "13": [
+      "{\n  \"order_id\": \"KX-48213\",\n  \"urgency\": \"high\",\n  \"summary\": \"Milk packets on order KX-48213 are swollen and smelling sour, affecting children's breakfast.\"\n}",
+      "{\n  \"order_id\": \"KX-50977\",\n  \"urgency\": \"high\",\n  \"summary\": \"Wrong quantity of basmati rice received; wants correct amount or refund.\"\n}",
+      "{\"order_id\":\"none\",\"urgency\":\"low\",\"summary\":\"Delivery availability to Whitefield on Sundays and minimum order amount inquiry.\"}",
+      "{\"order_id\":\"KX-51102\",\"urgency\":\"high\",\"summary\":\"Customer demands reversal of two charges on same order totaling Rs 4680.\"}",
+      "{\"order_id\":\"KX-49630\",\"urgency\":\"high\",\"summary\":\"Delivery experience positive; thanks expressed for courteous behavior.\"}",
+      "{\"order_id\":\"none\",\"urgency\":\"high\",\"summary\":\"Address change not reflecting in app; manual correction needed for recent orders.\"}"
+    ],
+    "14": [
+      "```json\n{\n  \"order_id\": \"KX-48213\",\n  \"urgency\": \"high\",\n  \"summary\": \"Milk packets in order KX-48213 are swollen and smelling sour; children have eaten them.\"\n}\n```",
+      "```json\n{\n  \"order_id\": \"KX-50977\",\n  \"urgency\": \"high\",\n  \"summary\": \"Wrong quantity of basmati rice received; wants correct amount or refund.\"\n}\n```",
+      "{\"order_id\":\"none\",\"urgency\":\"high\",\"summary\":\"Delivery to Whitefield on Sundays and minimum order amount inquiry.\"}",
+      "{\"order_id\":\"KX-51102\",\"urgency\":\"high\",\"summary\":\"Card charge twice, needs money back immediately.\"}",
+      "{\"order_id\":\"KX-49630\",\"urgency\":\"high\",\"summary\":\"Delivery man praised for politeness and assistance.\"}",
+      "{\"order_id\":\"none\",\"urgency\":\"high\",\"summary\":\"App shows incorrect address despite changes in settings; requires immediate correction.\"}"
+    ],
+    "15": [
+      "{\"order_id\":\"KX-48213\",\"urgency\":\"high\",\"summary\":\"Milk packets in order are swollen and smelling sour; concerns about food safety.\"}",
+      "{\"order_id\":\"KX-50977\",\"urgency\":\"high\",\"summary\":\"Wrong quantity of basmati rice received; wants correct amount or refund.\"}",
+      "{\"order_id\":\"none\",\"urgency\":\"high\",\"summary\":\"Delivery to Whitefield on Sunday and minimum order amount question.\"}",
+      "{\"order_id\":\"KX-51102\",\"urgency\":\"high\",\"summary\":\"Card charge double; needs money back immediately; considers it unacceptable.\"}",
+      "{\"order_id\":\"KX-49630\",\"urgency\":\"high\",\"summary\":\"Delivery man praised for politeness and assistance.\"}",
+      "{\"order_id\":\"none\",\"urgency\":\"high\",\"summary\":\"App shows incorrect address despite changes in settings; requires immediate correction.\"}"
+    ]
+  }
+}

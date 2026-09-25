@@ -252,4 +252,28 @@ export const llmFoundations = {
       "Computation spent when answering (for example, thinking tokens) rather than during training. More can improve accuracy on hard problems, at a cost in time and money.",
     module: "reasoning-models",
   },
+  prompt: {
+    term: "Prompt",
+    definition:
+      "Everything you send a model for one request: instructions, background, examples and the input to work on. It is the model's whole brief.",
+    module: "prompting",
+  },
+  "system-prompt": {
+    term: "System prompt",
+    definition:
+      "Standing instructions sent in a separate message before the conversation (the role, rules and tone) that apply to every turn. Some APIs call it the developer message.",
+    module: "prompting",
+  },
+  "few-shot": {
+    term: "Few-shot prompting",
+    definition:
+      "Including a few worked examples (input and ideal output) in the prompt so the model copies their style and shape. With no examples it's called zero-shot.",
+    module: "prompting",
+  },
+  eval: {
+    term: "Eval",
+    definition:
+      "A set of test inputs with automatic or human checks, run against a prompt or model to measure how well it does, so changes can be compared instead of guessed.",
+    module: "prompting",
+  },
 } satisfies Record<string, GlossaryEntry>;
