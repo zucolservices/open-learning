@@ -74,4 +74,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "llm-foundations/pretraining": () => import("./llm-foundations/pretraining"),
   "llm-foundations/base-to-assistant": () => import("./llm-foundations/base-to-assistant"),
   "llm-foundations/alignment": () => import("./llm-foundations/alignment"),
+  "llm-foundations/reasoning-models": () => import("./llm-foundations/reasoning-models"),
 };

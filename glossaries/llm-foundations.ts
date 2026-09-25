@@ -234,4 +234,22 @@ export const llmFoundations = {
       "A model telling users what they want to hear (agreeing, flattering) rather than what's true or useful, often learned from preference training.",
     module: "alignment",
   },
+  "reasoning-model": {
+    term: "Reasoning model",
+    definition:
+      "A model trained to write out its thinking (often at length) before giving a final answer, which improves results on hard, multi-step problems.",
+    module: "reasoning-models",
+  },
+  "chain-of-thought": {
+    term: "Chain of thought",
+    definition:
+      "Intermediate reasoning steps a model writes before its answer. Because the model's only working space is its own output, writing steps lets it use them.",
+    module: "reasoning-models",
+  },
+  "test-time-compute": {
+    term: "Test-time compute",
+    definition:
+      "Computation spent when answering (for example, thinking tokens) rather than during training. More can improve accuracy on hard problems, at a cost in time and money.",
+    module: "reasoning-models",
+  },
 } satisfies Record<string, GlossaryEntry>;

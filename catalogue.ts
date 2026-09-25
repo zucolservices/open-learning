@@ -1915,11 +1915,12 @@ const llmFoundations: Track = {
             "Training reasoning with reinforcement learning",
             "When reasoning helps and when it only adds cost",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["alignment"],
           plain:
             "Some newer models write out their working before answering. Spending more tokens on thinking often gives better answers on hard problems, at the price of more time and money.",
+          terms: ["reasoning-model", "chain-of-thought", "test-time-compute", "token"],
         },
       ],
     },
