@@ -25,7 +25,7 @@ export default async function CategoryPage(props: PageProps<"/categories/[catego
   if (!category) notFound();
 
   const built = categoryTracks(category);
-  const planned = category.tracks.filter((t) => !t.slug);
+  const planned = category.tracks.filter((t) => !built.some((b) => b.slug === t.slug));
   const liveModules = built.reduce(
     (n, t) => n + trackModules(t).filter((m) => m.status === "live").length,
     0,

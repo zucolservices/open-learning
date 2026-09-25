@@ -85,7 +85,7 @@ export interface Track {
   tagline: string;
   description: string;
   /** Key into the track accent palette in globals.css ([data-track]). */
-  accent: "lakehouse" | "blueprint" | "neutral";
+  accent: "lakehouse" | "blueprint" | "synapse" | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
   hidden?: boolean;
@@ -1661,6 +1661,586 @@ const systemDesign: Track = {
   ],
 };
 
+const llmFoundations: Track = {
+  slug: "llm-foundations",
+  title: "LLM Foundations",
+  area: "AI & machine learning",
+  category: "ai-ml",
+  tagline: "See inside the models, not just the chat box.",
+  description:
+    "What large language models really do, from tokens and embeddings through attention, training and alignment, to running them fast and cheaply and using them safely. Vendor-neutral: closed and open-weight models, on APIs, cloud platforms or your own GPUs. By the end you can explain how an LLM works, choose one for a job, and predict where it will fail.",
+  accent: "synapse",
+  chapters: [
+    {
+      slug: "big-picture",
+      title: "The big picture",
+      summary: "What a language model does, and the raw material it works with.",
+      modules: [
+        {
+          slug: "what-an-llm-does",
+          title: "What an LLM actually does",
+          summary: "A machine that predicts the next word, astonishingly well, over and over.",
+          minutes: 25,
+          signature:
+            "Scroll from phone autocomplete to a chat assistant: one next-token prediction at a time, with the probabilities visible",
+          formats: ["scroll-story", "simulation", "checkpoint"],
+          concepts: [
+            "Next-token prediction as the core task",
+            "Generation as a loop: predict, pick, append, repeat",
+            "Models learn patterns from text, not a database of facts",
+            "Why the same prompt can give different answers",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "A large language model is trained to guess the next piece of text. Chat assistants are that guess, repeated one piece at a time, very fast. Almost everything else in this track follows from that one idea.",
+        },
+        {
+          slug: "tokens",
+          title: "Tokens",
+          summary:
+            "The pieces models actually read, and why they explain cost, limits and odd mistakes.",
+          minutes: 25,
+          signature:
+            "Type anything and watch a real tokenizer split it; step through how byte-pair merges are learned; compare English, Hindi and code",
+          formats: ["sandbox", "step-through", "checkpoint"],
+          concepts: [
+            "Text becomes token IDs before the model sees it",
+            "Byte-pair encoding learns frequent pieces",
+            "Token counts drive price, speed and context limits",
+            "Why some languages and tasks (counting letters) are harder",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["what-an-llm-does"],
+          plain:
+            "Models don't read letters or words; they read tokens, chunks of text from a fixed vocabulary. How text is chopped up decides how much a request costs and explains some surprising mistakes.",
+        },
+        {
+          slug: "embeddings",
+          title: "Embeddings: meaning as coordinates",
+          summary: "How text becomes points in space, where closeness means similar meaning.",
+          minutes: 30,
+          signature:
+            "Explore a 3D map of real sentence embeddings; search it by meaning, and see where it gets confused",
+          formats: ["3d-model", "simulation", "checkpoint"],
+          concepts: [
+            "Vectors as lists of numbers that capture meaning",
+            "Cosine similarity",
+            "Semantic search vs keyword search",
+            "Dimensions, and what projection to 3D hides",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["tokens"],
+          plain:
+            "An embedding turns a word or sentence into a long list of numbers, like coordinates on a map of meaning. Similar ideas land near each other, which is what lets computers search by meaning rather than exact words.",
+        },
+      ],
+    },
+    {
+      slug: "transformer",
+      title: "Inside the transformer",
+      summary: "The architecture behind every modern language model.",
+      modules: [
+        {
+          slug: "attention",
+          title: "Attention",
+          summary: "How each word decides which other words to pay attention to.",
+          minutes: 30,
+          signature:
+            "An attention heatmap for a sentence: step through queries, keys and values, and compare heads that track grammar, references and position",
+          formats: ["step-through", "simulation", "checkpoint"],
+          concepts: [
+            "Queries, keys and values",
+            "Attention weights as a softmax over similarities",
+            "Multiple heads learn different relationships",
+            "Causal masking: no peeking at the future",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["embeddings"],
+          plain:
+            "To understand a word, you look at the words around it: in 'she put the cup on the table because it was hot', 'it' means the cup. Attention is the mechanism that lets the model decide which earlier words matter for each word.",
+        },
+        {
+          slug: "transformer-block",
+          title: "The transformer block",
+          summary: "One token's journey through the layers of a model.",
+          minutes: 30,
+          signature:
+            "A 3D stack of transformer layers: follow one token through attention, the feed-forward network and residual connections, then see what a hundred layers add",
+          formats: ["3d-model", "step-through", "checkpoint"],
+          concepts: [
+            "Embedding, attention, feed-forward, residual, normalisation",
+            "Layers stacked dozens of times",
+            "Where the parameters live",
+            "The final layer's scores over the vocabulary",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["attention"],
+          plain:
+            "A transformer is the same building block repeated many times. Each block lets tokens share information (attention) and then processes each one on its own. Stacking dozens of blocks turns simple pattern matching into surprisingly capable behaviour.",
+        },
+        {
+          slug: "context-window",
+          title: "Positions & the context window",
+          summary: "Why word order must be added in, and why long inputs cost so much.",
+          minutes: 25,
+          signature:
+            "Grow the context from a paragraph to a book and watch attention work, memory and price climb; see what the KV cache saves",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Positional information (such as RoPE)",
+            "The context window as working memory",
+            "Attention cost grows with context length",
+            "The KV cache",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["transformer-block"],
+          plain:
+            "A model can only consider a limited amount of text at once: its context window. Bigger windows let it read whole documents, but every extra token costs memory and time. This module shows why.",
+        },
+        {
+          slug: "sampling",
+          title: "From scores to words: sampling",
+          summary: "How the model's scores become the next word, and what temperature really does.",
+          minutes: 25,
+          signature:
+            "A live next-token distribution: turn temperature, top-k and top-p and watch which words stay possible, then generate the same sentence many times",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Logits and softmax",
+            "Greedy decoding vs sampling",
+            "Temperature, top-k and top-p",
+            "Determinism, seeds and why outputs vary",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["what-an-llm-does"],
+          plain:
+            "At each step the model gives every possible next token a score. Sampling settings decide how adventurous the choice is: always the favourite, or sometimes a less likely option. That's why the same question can get different answers.",
+        },
+      ],
+    },
+    {
+      slug: "learning",
+      title: "How models learn",
+      summary: "Pretraining, fine-tuning, alignment and reasoning.",
+      modules: [
+        {
+          slug: "pretraining",
+          title: "Pretraining & scaling laws",
+          summary:
+            "How reading trillions of tokens teaches a model, and how to spend a compute budget.",
+          minutes: 30,
+          signature:
+            "Watch training loss fall as a tiny model learns; then split a fixed compute budget between model size and data and see which wins",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Loss and gradient descent, intuitively",
+            "Training data: sources, filtering and deduplication",
+            "Scaling laws: parameters, data and compute",
+            "Why training costs so much",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["transformer-block"],
+          plain:
+            "A model starts as random numbers. Pretraining shows it huge amounts of text and nudges the numbers every time it guesses the next token wrong. Researchers have found predictable rules for how much data and model size to use for a given budget.",
+        },
+        {
+          slug: "base-to-assistant",
+          title: "From base model to assistant",
+          summary: "Why a raw model continues your text, and how fine-tuning makes it answer.",
+          minutes: 25,
+          signature:
+            "The same prompt to a base model and an instruction-tuned one, step by step; then see what a small fine-tuning set changes",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Base models vs instruction-tuned models",
+            "Supervised fine-tuning (SFT)",
+            "Chat templates and roles",
+            "Parameter-efficient fine-tuning (LoRA), briefly",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["pretraining"],
+          plain:
+            "A freshly pretrained model just continues text: ask it a question and it may write more questions. Fine-tuning on examples of good answers teaches it to behave like an assistant.",
+        },
+        {
+          slug: "alignment",
+          title: "Alignment: RLHF, DPO & friends",
+          summary: "How human preferences shape what assistants say, and refuse to say.",
+          minutes: 30,
+          signature:
+            "Rank answer pairs yourself, then watch a reward model and a preference-tuned model learn from those choices, including their side effects",
+          formats: ["step-through", "simulation", "checkpoint"],
+          concepts: [
+            "Preference data",
+            "Reward models and RLHF",
+            "Direct preference optimisation (DPO)",
+            "Side effects: over-refusal and sycophancy",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["base-to-assistant"],
+          plain:
+            "To make assistants helpful and safe, developers collect people's judgements about which of two answers is better and train the model toward the preferred kind. It works well, but it can also make models overly cautious or eager to please.",
+        },
+        {
+          slug: "reasoning-models",
+          title: "Reasoning models",
+          summary: "Models that think before they answer, and what that costs.",
+          minutes: 25,
+          signature:
+            "Give a puzzle to a model with and without thinking time; trade accuracy against tokens, latency and cost",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Chain of thought",
+            "Test-time compute and thinking budgets",
+            "Training reasoning with reinforcement learning",
+            "When reasoning helps and when it only adds cost",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["alignment"],
+          plain:
+            "Some newer models write out their working before answering. Spending more tokens on thinking often gives better answers on hard problems, at the price of more time and money.",
+        },
+      ],
+    },
+    {
+      slug: "using",
+      title: "Using models well",
+      summary: "Prompts, tools, context and the limits of what models know.",
+      modules: [
+        {
+          slug: "prompting",
+          title: "Prompting fundamentals",
+          summary: "Clear instructions, good examples and the right format.",
+          minutes: 25,
+          signature:
+            "Fix a failing prompt step by step: add a role, constraints, examples and an output format, and watch results improve",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "System, user and assistant messages",
+            "Instructions, constraints and examples (few-shot)",
+            "Asking for a specific format",
+            "Iterating against test cases",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["base-to-assistant"],
+          plain:
+            "A prompt is the model's whole brief. Vague briefs get vague results. Being specific about the task, giving examples and saying what the answer should look like makes a large difference.",
+        },
+        {
+          slug: "tool-calling",
+          title: "Structured output & tool calling",
+          summary: "Getting reliable data out of models, and letting them use other software.",
+          minutes: 30,
+          signature:
+            "Step through the tool-calling loop: the model asks for a function, your code runs it, the result goes back; then break a schema and see what happens",
+          formats: ["step-through", "sandbox", "checkpoint"],
+          concepts: [
+            "JSON output and schemas",
+            "Function (tool) calling",
+            "The model decides, your code acts",
+            "Validation and error handling",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["prompting"],
+          plain:
+            "Applications need data, not prose. Models can be asked to answer in a fixed structure, and to request actions such as 'look up order 42', which your code then carries out. This is the foundation of agents.",
+        },
+        {
+          slug: "context-engineering",
+          title: "Context engineering",
+          summary: "Deciding what goes into the context window, and what stays out.",
+          minutes: 25,
+          signature:
+            "Fill a context window with documents, history and instructions; see accuracy drop when key facts sit in the middle, and compare long context with retrieval",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Everything the model knows about your task is in the context",
+            "Long context vs retrieval",
+            "Position effects (lost in the middle)",
+            "Summaries, memory and prompt caching",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["context-window", "prompting"],
+          plain:
+            "A model only knows what's in its training and what you put in front of it. Choosing which documents, history and instructions to include, and in what order, often matters more than the wording of the prompt.",
+        },
+        {
+          slug: "hallucinations",
+          title: "Hallucinations",
+          summary: "Why fluent models state false things confidently, and what actually helps.",
+          minutes: 25,
+          signature:
+            "Diagnose a set of confident wrong answers: missing knowledge, pressure to answer, bad retrieval or sampling; apply fixes and measure",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Why next-token prediction produces plausible falsehoods",
+            "Knowledge cut-offs",
+            "Grounding in sources and citing them",
+            "Letting the model say 'I don't know'",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["what-an-llm-does", "context-engineering"],
+          plain:
+            "Models are trained to produce likely-sounding text, not true text. When they don't know, they can still produce a confident answer. Knowing why helps you design systems that catch it.",
+        },
+      ],
+    },
+    {
+      slug: "running",
+      title: "Running models",
+      summary: "Speed, memory, throughput and cost.",
+      modules: [
+        {
+          slug: "inference",
+          title: "Inference: prefill, decode & the KV cache",
+          summary: "Where the time goes between pressing Enter and the last word.",
+          minutes: 25,
+          signature:
+            "A request timeline: prefill the prompt, then decode token by token; change prompt and answer length and see time to first token and tokens per second move",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Prefill vs decode",
+            "Time to first token and tokens per second",
+            "Memory bandwidth as the bottleneck",
+            "The KV cache and prompt caching",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["context-window"],
+          plain:
+            "Generating an answer happens in two phases: reading the whole prompt at once, then writing the answer one token at a time. Each phase has different costs, which is why long answers feel slow even when short ones are quick.",
+        },
+        {
+          slug: "memory-quantization",
+          title: "Model size, memory & quantization",
+          summary: "Will this model fit on this GPU, and what do you lose by shrinking it?",
+          minutes: 25,
+          signature:
+            "A GPU memory calculator: parameters × bytes, plus the KV cache; quantize from 16 to 8 to 4 bits and watch fit, speed and quality",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Parameters and bytes per parameter",
+            "GPU memory: weights, KV cache and overhead",
+            "Quantization and its trade-offs",
+            "Mixture-of-experts: total vs active parameters",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["inference"],
+          plain:
+            "A model's size in parameters decides how much memory it needs. Storing each number with fewer bits (quantization) lets bigger models fit on smaller machines, usually at a small cost in quality.",
+        },
+        {
+          slug: "serving",
+          title: "Serving at scale",
+          summary: "Many users, one GPU: batching, throughput and latency.",
+          minutes: 25,
+          signature:
+            "A serving simulation: requests arrive, batch together and share the GPU; tune batch size and watch throughput rise and latency stretch",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Batching and continuous batching",
+            "Throughput vs latency",
+            "Serving engines (such as vLLM)",
+            "Autoscaling GPUs",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["inference"],
+          plain:
+            "A GPU is wasted serving one request at a time. Serving systems group many requests together to use it fully, which raises total throughput but can make each individual answer a little slower.",
+        },
+        {
+          slug: "cost-latency",
+          title: "Cost & latency estimation",
+          summary: "Estimate what an AI feature will cost each month, and how fast it will feel.",
+          minutes: 25,
+          signature:
+            "A calculator for a real feature: requests, tokens in and out, model tier and caching; compare API pricing with renting GPUs",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Input vs output token pricing",
+            "Caching and batch discounts",
+            "API vs self-hosted break-even",
+            "Latency budgets for user-facing features",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["tokens", "inference"],
+          plain:
+            "AI features are billed by the token. A quick estimate of requests and tokens tells you whether a feature costs pennies or a fortune, and whether it will feel instant or sluggish.",
+        },
+      ],
+    },
+    {
+      slug: "landscape",
+      title: "The model landscape",
+      summary: "Choosing among models, modalities and sizes.",
+      modules: [
+        {
+          slug: "open-vs-closed",
+          title: "Open vs closed models",
+          summary: "Weights, licences and where a model can run.",
+          minutes: 25,
+          signature:
+            "Match requirements (data residency, cost, control, quality) to models and hosting: provider APIs, AWS Bedrock, Google Vertex AI, Azure AI Foundry or your own GPUs",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Closed APIs vs open-weight models",
+            "Licences and what 'open' means",
+            "Hosting options across clouds",
+            "Benchmarks and their limits",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["cost-latency"],
+          plain:
+            "Some models are only available through their maker's service; others publish their weights so you can run them yourself. The choice affects cost, control, privacy and where your data goes.",
+        },
+        {
+          slug: "multimodal",
+          title: "Multimodal models",
+          summary: "Models that see images, read documents, hear and speak.",
+          minutes: 25,
+          signature:
+            "Step through how an image becomes tokens a language model can attend to; then see document, audio and image-generation pipelines",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Image patches as tokens",
+            "Document understanding",
+            "Speech in and out",
+            "Generating images",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["attention"],
+          plain:
+            "Modern models can take pictures, scanned documents and audio as input, and some can produce images or speech. Under the hood, each kind of input is turned into tokens the same transformer can process.",
+        },
+        {
+          slug: "small-models",
+          title: "Small & on-device models",
+          summary: "When a small, focused model beats a giant one.",
+          minutes: 25,
+          signature:
+            "Compare small and large models on cost, speed and quality for different jobs; see distillation turn a big model's answers into a small model's skills",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Distillation",
+            "Small models for narrow tasks",
+            "On-device and edge inference",
+            "Routing between small and large models",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["memory-quantization"],
+          plain:
+            "Bigger isn't always better. For narrow, well-defined jobs, a small model can be faster, cheaper and private enough to run on a laptop or phone, sometimes with similar quality.",
+        },
+      ],
+    },
+    {
+      slug: "safety",
+      title: "Safety & responsibility",
+      summary: "Attacks, privacy and building systems people can trust.",
+      modules: [
+        {
+          slug: "prompt-injection",
+          title: "Prompt injection & data leakage",
+          summary: "How untrusted text can hijack a model, and how to limit the damage.",
+          minutes: 30,
+          signature:
+            "Attack a toy assistant with direct and indirect prompt injection, then add defences and see which attacks still get through",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Direct and indirect prompt injection",
+            "Why instructions and data mix",
+            "Least privilege for tools",
+            "Leaking system prompts and data",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["tool-calling"],
+          plain:
+            "Models follow instructions, and they can't reliably tell your instructions from instructions hidden in an email or web page they read. That makes a new kind of attack, which you defend against by limiting what the model can do.",
+        },
+        {
+          slug: "responsible-use",
+          title: "Bias, privacy & responsible use",
+          summary: "Where bias comes from, handling personal data, and keeping humans in charge.",
+          minutes: 25,
+          signature:
+            "A branching scenario for a government eligibility assistant: data, bias checks, consent under the DPDP Act and human review",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Bias from training data",
+            "Personal data and India's DPDP Act",
+            "Human oversight for important decisions",
+            "Transparency with users",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["hallucinations"],
+          plain:
+            "Models learn from human text, including its biases, and they may handle people's personal data. Responsible systems check for unfair outcomes, respect privacy law and keep a human in charge of decisions that matter.",
+        },
+      ],
+    },
+    {
+      slug: "capstones",
+      title: "Capstones",
+      summary: "Put it all together.",
+      modules: [
+        {
+          slug: "choose-a-model",
+          title: "Capstone: choose and size a model",
+          summary: "Design the model side of a multilingual citizen helpdesk.",
+          minutes: 40,
+          signature:
+            "Branching decisions for a helpdesk in English, Hindi and Kannada: model, context strategy, hosting, cost and latency; then replay a day of questions",
+          formats: ["branching-scenario", "simulation", "checkpoint"],
+          concepts: ["Applying tokens, context, cost, latency and hosting to one design"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["cost-latency", "open-vs-closed", "context-engineering"],
+          plain:
+            "A state department wants an assistant that answers citizens' questions in several languages. You'll choose the model, how it gets its knowledge, where it runs and what it will cost, then see how your choices hold up.",
+        },
+        {
+          slug: "misbehaving-assistant",
+          title: "Capstone: the assistant that misbehaves",
+          summary: "Find out why a deployed assistant goes wrong, and fix it.",
+          minutes: 40,
+          signature:
+            "Investigate transcripts and traces: a tokenizer surprise, a sampling setting, a buried instruction and an injection attack; fix each and re-test",
+          formats: ["fix-the-problem", "simulation", "checkpoint"],
+          concepts: ["Diagnosing LLM failures from evidence"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["prompt-injection", "hallucinations", "sampling"],
+          plain:
+            "An assistant that worked in testing is giving strange answers in production. Using everything from this track, you'll trace each problem to its cause and fix it.",
+        },
+      ],
+    },
+  ],
+};
+
 /** A small end-to-end module that exercises the toolkit and Module SDK. */
 const playground: Track = {
   slug: "playground",
@@ -1697,7 +2277,7 @@ const playground: Track = {
   ],
 };
 
-export const tracks: Track[] = [lakehouse, systemDesign, playground];
+export const tracks: Track[] = [lakehouse, systemDesign, llmFoundations, playground];
 
 export interface CategoryTrack {
   title: string;
@@ -1746,10 +2326,11 @@ export const categories: Category[] = [
     summary: "From model foundations to agents in production.",
     description:
       "What large language models do inside, how to ground them in your data, build agents and voice interfaces, and measure whether any of it works.",
-    accent: "neutral",
+    accent: "synapse",
     tracks: [
       {
         title: "LLM Foundations",
+        slug: "llm-foundations",
         blurb: "Tokens, embeddings, attention and sampling, seen from inside.",
       },
       {
@@ -1945,7 +2526,10 @@ export function getCategory(slug: string): Category | undefined {
 
 /** Built tracks in a category (live or in progress), in catalogue order. */
 export function categoryTracks(category: Category): Track[] {
-  return tracks.filter((t) => t.category === category.slug && !t.hidden);
+  return tracks.filter(
+    (t) =>
+      t.category === category.slug && !t.hidden && trackModules(t).some((m) => m.status === "live"),
+  );
 }
 
 export const visibleTracks = tracks.filter((t) => !t.hidden);

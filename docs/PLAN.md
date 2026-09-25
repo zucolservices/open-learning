@@ -156,6 +156,47 @@ Architecture area, second track (approved 2026-09-24). 27 modules in 8 chapters,
 | 26    | Capstone: the results-day portal           | Design, then replay a 100× results-day surge                                    | Scenario, simulation    |
 | 27    | Capstone: the outage                       | Cascading failure from evidence                                                 | Fix the problem         |
 
+## LLM Foundations: curriculum
+
+AI & machine learning area, third track (approved 2026-09-25). 26 modules in 8 chapters, about 13 hours. Accent: "synapse" magenta (`[data-track="synapse"]`). Glossary: `glossaries/llm-foundations.ts`. Vendor-neutral: closed models (OpenAI, Anthropic, Google) and open-weight models (Llama, Mistral, Qwen, DeepSeek, Gemma), hosted on AWS Bedrock, Google Vertex AI, Azure AI Foundry or self-run. Where possible the real thing runs in the browser (a real tokenizer; precomputed real embeddings), loaded only inside the module that needs it.
+
+| #     | Module                                  | Centrepiece                                                                                 | Key formats              |
+| ----- | --------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------ |
+| **1** | **The big picture**                     |                                                                                             |                          |
+| 1     | What an LLM actually does               | From phone autocomplete to chat: a model that predicts the next token, over and over        | Scroll story             |
+| 2     | Tokens                                  | Type anything and watch a real tokenizer split it; why Hindi costs more tokens than English | Sandbox, step-through    |
+| 3     | Embeddings: meaning as coordinates      | A map of words and sentences; move through meaning; similarity search by hand               | 3D model, simulation     |
+| **2** | **Inside the transformer**              |                                                                                             |                          |
+| 4     | Attention                               | Which words look at which: an attention heatmap for a sentence, head by head                | Step-through             |
+| 5     | The transformer block                   | One token's journey through embedding, attention, MLP and residual layers, stacked          | 3D model, step-through   |
+| 6     | Positions & the context window          | Why order matters, why long context costs more, and what the KV cache saves                 | Simulation               |
+| 7     | From scores to words: sampling          | Logits, softmax, temperature, top-k and top-p on a live next-token distribution             | Simulation               |
+| **3** | **How models learn**                    |                                                                                             |                          |
+| 8     | Pretraining & scaling laws              | Watch the loss fall; trade parameters for data at a fixed compute budget                    | Simulation               |
+| 9     | From base model to assistant            | Same prompt, base vs instruction-tuned model; what fine-tuning changes                      | Step-through             |
+| 10    | Alignment: RLHF, DPO & friends          | Preference pairs, reward models and why assistants refuse, hedge or flatter                 | Step-through, checkpoint |
+| 11    | Reasoning models                        | Thinking tokens and test-time compute: accuracy vs cost and latency                         | Simulation               |
+| **4** | **Using models well**                   |                                                                                             |                          |
+| 12    | Prompting fundamentals                  | Fix a failing prompt: roles, instructions, examples and format                              | Fix the problem          |
+| 13    | Structured output & tool calling        | The tool-calling loop step by step; schemas that the model must follow                      | Step-through, sandbox    |
+| 14    | Context engineering                     | What goes into the window: long context vs retrieval, and what gets lost in the middle      | Simulation               |
+| 15    | Hallucinations                          | Why fluent models state false things, and the mitigations that actually help                | Fix the problem          |
+| **5** | **Running models**                      |                                                                                             |                          |
+| 16    | Inference: prefill, decode & KV cache   | Time to first token vs tokens per second; where the time and memory go                      | Simulation               |
+| 17    | Model size, memory & quantization       | Parameters × bytes: will this model fit on this GPU at 16, 8 or 4 bits?                     | Simulation               |
+| 18    | Serving at scale                        | Batching, throughput vs latency, and why GPUs sit idle without it                           | Simulation               |
+| 19    | Cost & latency estimation               | Tokens in, tokens out: estimate a feature's monthly bill and response time                  | Simulation               |
+| **6** | **The model landscape**                 |                                                                                             |                          |
+| 20    | Open vs closed models                   | Weights, licences and hosting: API, cloud platforms or your own GPUs                        | Build & connect          |
+| 21    | Multimodal models                       | Images, documents and audio in; images and speech out                                       | Step-through             |
+| 22    | Small & on-device models                | Distillation and small models: when a 3B model beats a 400B one for the job                 | Simulation, checkpoint   |
+| **7** | **Safety & responsibility**             |                                                                                             |                          |
+| 23    | Prompt injection & data leakage         | Attack a toy assistant, then defend it                                                      | Fix the problem          |
+| 24    | Bias, privacy & responsible use         | Where bias comes from, personal data and the DPDP Act, and human oversight                  | Branching scenario       |
+| **8** | **Capstones**                           |                                                                                             |                          |
+| 25    | Capstone: choose and size a model       | A multilingual citizen helpdesk: pick model, context strategy, hosting, cost and latency    | Branching scenario       |
+| 26    | Capstone: the assistant that misbehaves | Diagnose failures across tokens, sampling, context and injection; fix and verify            | Fix the problem          |
+
 ## Roadmap
 
 | Step                 | Scope                                                                                   | Status                                                                  |
@@ -164,7 +205,8 @@ Architecture area, second track (approved 2026-09-24). 27 modules in 8 chapters,
 | 2. Flagship          | Module 6, Delta Lake transaction log: storyboard, then build                            | **Done.** 14 steps, fact-checked (module `SOURCES.md`)                  |
 | 3. Parallel flagship | Module 7, Iceberg metadata tree. First 3D module; sets the R3F toolkit                  | Next                                                                    |
 | 4. Rest of track     | Chapters 1 → 9, growing the toolkit (charts, builder, sandbox) along the way            | Done: all 29 modules live (2026-09-24)                                  |
-| 4b. System Design    | Second track (Architecture), 27 modules                                                 | Live: all 27 modules                                          |
+| 4b. System Design    | Second track (Architecture), 27 modules                                                 | Live: all 27 modules                                                    |
+| 4c. LLM Foundations  | Third track (AI & machine learning), 26 modules                                         | In progress: 0 of 26                                                    |
 | 5. Team feedback     | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy            | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

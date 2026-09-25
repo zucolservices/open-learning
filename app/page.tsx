@@ -210,7 +210,9 @@ function CategoryCard({ category: c }: { category: Category }) {
       </div>
       <ul className="relative mt-3 flex flex-wrap gap-1">
         {c.tracks.map((t) => {
-          const track = t.slug ? getTrack(t.slug) : undefined;
+          const built = t.slug ? getTrack(t.slug) : undefined;
+          const track =
+            built && trackModules(built).some((m) => m.status === "live") ? built : undefined;
           return (
             <li key={t.title}>
               {track ? (

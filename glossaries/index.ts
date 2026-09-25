@@ -7,6 +7,7 @@
  */
 import { dataLakehouse } from "./data-lakehouse";
 import { systemDesign } from "./system-design";
+import { llmFoundations } from "./llm-foundations";
 import { shared } from "./shared";
 import type { GlossaryEntry } from "./types";
 
@@ -16,9 +17,14 @@ export { shared };
 export const trackGlossaries: Record<string, Record<string, GlossaryEntry>> = {
   "data-lakehouse": dataLakehouse,
   "system-design": systemDesign,
+  "llm-foundations": llmFoundations,
 };
 
-export type TermId = keyof typeof shared | keyof typeof dataLakehouse | keyof typeof systemDesign;
+export type TermId =
+  | keyof typeof shared
+  | keyof typeof dataLakehouse
+  | keyof typeof systemDesign
+  | keyof typeof llmFoundations;
 
 export interface ResolvedTerm {
   id: string;
