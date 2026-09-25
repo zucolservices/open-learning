@@ -27,4 +27,22 @@ export const llmFoundations = {
       "The format that turns a conversation (system instructions, user and assistant messages) into one piece of text with special markers, which the model then continues.",
     module: "what-an-llm-does",
   },
+  bpe: {
+    term: "Byte-pair encoding (BPE)",
+    definition:
+      "A way to learn a tokenizer's vocabulary: start from characters (or bytes) and repeatedly merge the most frequent neighbouring pair into a new token.",
+    module: "tokens",
+  },
+  vocabulary: {
+    term: "Vocabulary",
+    definition:
+      "The fixed set of tokens a model knows, each with an ID number. Modern vocabularies hold about 100,000 to 260,000 tokens.",
+    module: "tokens",
+  },
+  tokenizer: {
+    term: "Tokenizer",
+    definition:
+      "The program that splits text into tokens and turns them into ID numbers, and back again.",
+    module: "tokens",
+  },
 } satisfies Record<string, GlossaryEntry>;

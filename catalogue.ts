@@ -1711,11 +1711,12 @@ const llmFoundations: Track = {
             "Token counts drive price, speed and context limits",
             "Why some languages and tasks (counting letters) are harder",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["what-an-llm-does"],
           plain:
             "Models don't read letters or words; they read tokens, chunks of text from a fixed vocabulary. How text is chopped up decides how much a request costs and explains some surprising mistakes.",
+          terms: ["token", "tokenizer", "vocabulary", "bpe"],
         },
         {
           slug: "embeddings",
