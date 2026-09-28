@@ -2334,11 +2334,12 @@ const agileScrum: Track = {
             "Agile is a mindset, not one method",
             "Common myths: no plans, no documentation",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["why-plans-break"],
           plain:
             "In 2001, seventeen software practitioners wrote a short statement of what they had learned about building software well. It values people, working software, collaboration and responding to change, while still seeing value in plans, documents and contracts.",
+          terms: ["agile-manifesto", "sustainable-pace", "iterative-development"],
         },
         {
           slug: "inspect-adapt",

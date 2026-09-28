@@ -27,4 +27,16 @@ export const agileScrum = {
       "Launching a whole new system to everyone at once, often on a fixed date, instead of piloting it or rolling it out in stages. Any surprise hits every user at the same time.",
     module: "why-plans-break",
   },
+  "agile-manifesto": {
+    term: "Agile Manifesto",
+    definition:
+      "The Manifesto for Agile Software Development (2001): four values and twelve principles written by seventeen software practitioners. It prefers individuals and interactions, working software, customer collaboration and responding to change, while still valuing processes, documentation, contracts and plans.",
+    module: "agile-manifesto",
+  },
+  "sustainable-pace": {
+    term: "Sustainable pace",
+    definition:
+      "Working at a pace the team, sponsors and users could keep up indefinitely, without relying on overtime. Principle 8 of the Agile Manifesto.",
+    module: "agile-manifesto",
+  },
 } satisfies Record<string, GlossaryEntry>;
