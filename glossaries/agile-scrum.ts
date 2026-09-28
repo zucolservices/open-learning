@@ -214,4 +214,22 @@ export const agileScrum = {
       "A timeboxed investigation to answer a question (usually technical) so that other work can be sized. From Extreme Programming; best used sparingly.",
     module: "splitting-stories",
   },
+  "cost-of-delay": {
+    term: "Cost of delay",
+    definition:
+      "What it costs to have something later rather than sooner, usually expressed as value lost per week of waiting. Don Reinertsen: \u201cIf you only quantify one thing, quantify the cost of delay.\u201d",
+    module: "ordering-backlog",
+  },
+  wsjf: {
+    term: "WSJF / CD3",
+    definition:
+      "Weighted Shortest Job First: order work by cost of delay divided by duration (also called CD3), so short, valuable items go first. From Don Reinertsen; SAFe uses a relative-points version.",
+    module: "ordering-backlog",
+  },
+  moscow: {
+    term: "MoSCoW",
+    definition:
+      "Sorting requirements into Must Have, Should Have, Could Have and Won't Have this time (DSDM; Dai Clegg, 1994). Useful for agreeing scope; it doesn't set an order within or across the groups.",
+    module: "ordering-backlog",
+  },
 } satisfies Record<string, GlossaryEntry>;

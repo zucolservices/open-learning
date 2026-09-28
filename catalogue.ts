@@ -2553,11 +2553,12 @@ const agileScrum: Track = {
             "Cost of delay and WSJF",
             "Risk and learning as reasons to go first",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["splitting-stories"],
           plain:
             "Everything can't come first. Ordering the backlog means asking what each item is worth, how fast that value decays if you wait, and how big it is.",
+          terms: ["cost-of-delay", "wsjf", "moscow", "product-owner"],
         },
       ],
     },
