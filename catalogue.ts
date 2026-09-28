@@ -2403,11 +2403,12 @@ const agileScrum: Track = {
             "The Scrum Master serves the team and the organisation",
             "Self-managing teams",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["scrum-on-one-page"],
           plain:
             "Scrum gives three kinds of people clear accountabilities: one person decides what matters most, the people building it decide how, and one person helps everyone use Scrum well. Most team friction comes from blurring these.",
+          terms: ["product-owner", "scrum-master", "developers", "self-managing", "accountability"],
         },
         {
           slug: "sprint-planning",

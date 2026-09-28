@@ -87,4 +87,28 @@ export const agileScrum = {
       "A fixed maximum length for an event or piece of work. In Scrum every event is timeboxed; ending early is fine once the purpose is met.",
     module: "scrum-on-one-page",
   },
+  "product-owner": {
+    term: "Product Owner",
+    definition:
+      "The one person accountable for maximising the value of the product: sets the Product Goal and orders the Product Backlog. Others who want changes persuade the Product Owner.",
+    module: "who-decides",
+  },
+  "scrum-master": {
+    term: "Scrum Master",
+    definition:
+      "Accountable for establishing Scrum and for the team's effectiveness: coaches, makes sure impediments get removed and keeps events useful. Serves the team and organisation; does not direct the work.",
+    module: "who-decides",
+  },
+  developers: {
+    term: "Developers (Scrum)",
+    definition:
+      "Everyone in the Scrum Team who creates the Increment, whatever their skill: programmers, testers, designers, analysts. They plan the Sprint, size the work and decide how to do it.",
+    module: "who-decides",
+  },
+  "self-managing": {
+    term: "Self-managing team",
+    definition:
+      "A team that decides internally who does what, when and how, rather than being assigned tasks by a manager.",
+    module: "who-decides",
+  },
 } satisfies Record<string, GlossaryEntry>;
