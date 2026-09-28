@@ -2444,11 +2444,12 @@ const agileScrum: Track = {
             "The Developers choose the format",
             "Status reporting and problem-solving anti-patterns",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["sprint-planning"],
           plain:
             "Once a day the people doing the work spend up to fifteen minutes checking whether they are still on track for the Sprint Goal and adjusting the plan. It is for them, not a report to a manager.",
+          terms: ["daily-scrum", "walk-the-board", "developers", "sprint"],
         },
         {
           slug: "review-retro",

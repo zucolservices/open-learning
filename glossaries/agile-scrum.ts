@@ -129,4 +129,16 @@ export const agileScrum = {
       "How much work (often in story points) a team actually finished in recent Sprints, used by that team to forecast. Optional, not in the Scrum Guide, and not a measure of productivity or a way to compare teams.",
     module: "sprint-planning",
   },
+  "daily-scrum": {
+    term: "Daily Scrum",
+    definition:
+      "A 15-minute event for the Developers, at the same time and place every working day, to inspect progress towards the Sprint Goal and adjust the plan. The Developers choose its format. Often called the stand-up, a name from Extreme Programming.",
+    module: "daily-scrum",
+  },
+  "walk-the-board": {
+    term: "Walking the board",
+    definition:
+      "Running a stand-up by going through the work items on the team's board from nearest-done to newest (usually right to left), asking what each needs to move on, instead of asking each person for a report.",
+    module: "daily-scrum",
+  },
 } satisfies Record<string, GlossaryEntry>;
