@@ -382,4 +382,16 @@ export const agileScrum = {
       "A long-lived team that can build a whole customer feature across every layer (screens, logic, data), instead of owning one component or layer.",
     module: "scaling",
   },
+  "product-backlog": {
+    term: "Product Backlog",
+    definition:
+      "The Scrum Guide's “emergent, ordered list of what is needed to improve the product”. The Product Owner is accountable for ordering it. Every agile tool has one, under some name.",
+    module: "tools",
+  },
+  "work-item": {
+    term: "Work item",
+    definition:
+      "A generic name for one tracked piece of work (a story, task or bug) in tools such as Azure Boards, GitLab and, since 2025, Jira, which used to call them “issues”.",
+    module: "tools",
+  },
 } satisfies Record<string, GlossaryEntry>;

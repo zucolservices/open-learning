@@ -2745,11 +2745,12 @@ const agileScrum: Track = {
             "What to configure, and what to leave alone",
             "The tool supports the process, not the other way round",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["scrum-on-one-page"],
           plain:
             "Every agile tool has a backlog, a board and a way to plan a Sprint, but each names them differently. Once you know the ideas, any tool is easy to learn.",
+          terms: ["product-backlog", "work-item", "sprint", "story-points", "burndown"],
         },
         {
           slug: "anti-patterns",
