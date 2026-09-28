@@ -108,4 +108,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "agile-scrum/done-means-done": () => import("./agile-scrum/done-means-done"),
   "agile-scrum/small-batches": () => import("./agile-scrum/small-batches"),
   "agile-scrum/client-distributed": () => import("./agile-scrum/client-distributed"),
+  "agile-scrum/scaling": () => import("./agile-scrum/scaling"),
 };

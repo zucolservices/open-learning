@@ -346,4 +346,40 @@ export const agileScrum = {
       "Not a Scrum Guide role: a stand-in (often an onsite or offshore coordinator) who relays for the client's real decision-maker. Without real authority it becomes a bottleneck; the real Product Owner stays accountable.",
     module: "client-distributed",
   },
+  "scaling-framework": {
+    term: "Scaling framework",
+    definition:
+      "A set of roles, events and rules for coordinating several agile teams working on one product. Examples: Nexus, LeSS, SAFe and Scrum@Scale.",
+    module: "scaling",
+  },
+  nexus: {
+    term: "Nexus",
+    definition:
+      "Scrum.org's scaling framework for “approximately three to nine Scrum Teams” on one product. It adds a Nexus Integration Team accountable for an integrated Increment every Sprint.",
+    module: "scaling",
+  },
+  less: {
+    term: "LeSS (Large-Scale Scrum)",
+    definition:
+      "Craig Larman and Bas Vodde's framework: “Scrum applied to many teams working together on one product”, with one Product Owner, one Product Backlog and one Sprint. Motto: “more with less”.",
+    module: "scaling",
+  },
+  safe: {
+    term: "SAFe (Scaled Agile Framework)",
+    definition:
+      "Scaled Agile, Inc.'s framework. Teams form Agile Release Trains of 50–125 people that plan together every 8–12 weeks in PI Planning, with roles and events at team, train and portfolio levels.",
+    module: "scaling",
+  },
+  "scrum-at-scale": {
+    term: "Scrum@Scale",
+    definition:
+      "Jeff Sutherland's framework: groups of 4 or 5 teams form a Scrum of Scrums, repeated as needed, with an Executive Action Team and an Executive MetaScrum at the top.",
+    module: "scaling",
+  },
+  "feature-team": {
+    term: "Feature team",
+    definition:
+      "A long-lived team that can build a whole customer feature across every layer (screens, logic, data), instead of owning one component or layer.",
+    module: "scaling",
+  },
 } satisfies Record<string, GlossaryEntry>;

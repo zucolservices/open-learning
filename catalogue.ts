@@ -2725,11 +2725,12 @@ const agileScrum: Track = {
             "SAFe, LeSS, Nexus and Scrum@Scale in one line each",
             "Dependencies and how to reduce them",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["artifacts"],
           plain:
             "When one product needs several teams, they have to coordinate. Different frameworks do this in different ways, from light to heavy.",
+          terms: ["scaling-framework", "nexus", "less", "safe", "scrum-at-scale", "feature-team"],
         },
         {
           slug: "tools",
