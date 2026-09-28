@@ -97,4 +97,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "agile-scrum/who-decides": () => import("./agile-scrum/who-decides"),
   "agile-scrum/sprint-planning": () => import("./agile-scrum/sprint-planning"),
   "agile-scrum/daily-scrum": () => import("./agile-scrum/daily-scrum"),
+  "agile-scrum/review-retro": () => import("./agile-scrum/review-retro"),
 };

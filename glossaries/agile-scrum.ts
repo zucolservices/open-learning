@@ -141,4 +141,22 @@ export const agileScrum = {
       "Running a stand-up by going through the work items on the team's board from nearest-done to newest (usually right to left), asking what each needs to move on, instead of asking each person for a report.",
     module: "daily-scrum",
   },
+  "sprint-review": {
+    term: "Sprint Review",
+    definition:
+      "The second-to-last event of a Sprint: the Scrum Team and key stakeholders inspect what was built and decide together what to do next. A working session, not a presentation or a sign-off gate.",
+    module: "review-retro",
+  },
+  retrospective: {
+    term: "Sprint Retrospective",
+    definition:
+      "The event that concludes a Sprint: the Scrum Team looks at how it worked (people, interactions, processes, tools and the Definition of Done) and picks the most helpful improvements.",
+    module: "review-retro",
+  },
+  "psychological-safety": {
+    term: "Psychological safety",
+    definition:
+      "Amy Edmondson's term for \u201ca shared belief held by members of a team that the team is safe for interpersonal risk taking\u201d: people can admit mistakes, ask questions and disagree without fear.",
+    module: "review-retro",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -2464,11 +2464,12 @@ const agileScrum: Track = {
             "The Retrospective improves quality and effectiveness",
             "Turning findings into concrete improvements",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["daily-scrum"],
           plain:
             "At the end of each Sprint the team shows what it built to the people who care and decides together what to do next. Then the team looks at how it worked and picks something to improve.",
+          terms: ["sprint-review", "retrospective", "psychological-safety", "product-owner"],
         },
         {
           slug: "artifacts",
