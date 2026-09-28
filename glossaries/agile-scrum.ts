@@ -195,4 +195,23 @@ export const agileScrum = {
       "The conditions one backlog item must meet to be accepted, often written as Given/When/Then scenarios. Specific to that item; the Definition of Done applies to every item.",
     module: "user-stories",
   },
+  "vertical-slice": {
+    term: "Vertical slice",
+    definition:
+      "A piece of work that delivers a small, usable change through every technical layer it needs (screens, logic, data), rather than one layer of a big feature.",
+    analogy: "A slice of layer cake cut top to bottom, instead of just the icing.",
+    module: "splitting-stories",
+  },
+  "walking-skeleton": {
+    term: "Walking skeleton",
+    definition:
+      "Alistair Cockburn's term for a tiny implementation of a system that performs a small end-to-end function, linking the main parts together. Often the best first slice of a new feature.",
+    module: "splitting-stories",
+  },
+  spike: {
+    term: "Spike",
+    definition:
+      "A timeboxed investigation to answer a question (usually technical) so that other work can be sized. From Extreme Programming; best used sparingly.",
+    module: "splitting-stories",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -2532,11 +2532,12 @@ const agileScrum: Track = {
             "Splitting patterns (paths, rules, data, interfaces, spikes)",
             "Why small items flow better",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["user-stories"],
           plain:
             "Big pieces of work hide risk and take too long to finish. Splitting them into thin slices, each working end to end, lets a team deliver and learn every few days.",
+          terms: ["vertical-slice", "walking-skeleton", "spike", "user-story", "invest"],
         },
         {
           slug: "ordering-backlog",
