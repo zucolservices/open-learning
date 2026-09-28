@@ -2354,11 +2354,12 @@ const agileScrum: Track = {
             "Cycle length and the cost of drift",
             "Deciding from what is observed, not assumed",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["why-plans-break"],
           plain:
             "When you can't predict everything, you look often and adjust. Agile teams make their work visible, check it at regular short intervals, and change course based on what they see.",
+          terms: ["empiricism", "three-pillars", "empirical-process-control", "feedback-loop"],
         },
       ],
     },

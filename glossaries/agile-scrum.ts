@@ -39,4 +39,22 @@ export const agileScrum = {
       "Working at a pace the team, sponsors and users could keep up indefinitely, without relying on overtime. Principle 8 of the Agile Manifesto.",
     module: "agile-manifesto",
   },
+  empiricism: {
+    term: "Empiricism",
+    definition:
+      "Deciding from what is actually observed rather than from what was assumed or planned. The Scrum Guide: \u201cknowledge comes from experience and making decisions based on what is observed.\u201d",
+    module: "inspect-adapt",
+  },
+  "three-pillars": {
+    term: "Transparency, inspection, adaptation",
+    definition:
+      "Scrum's three pillars of empiricism. Make the real state of the work visible; look at it frequently to spot problems; change course as soon as a problem is found. Each enables the next.",
+    module: "inspect-adapt",
+  },
+  "empirical-process-control": {
+    term: "Defined vs empirical process control",
+    definition:
+      "Two ways of controlling a process. A defined process is well understood and gives the same result every time, so it can simply be followed. An empirical process is too complex or unpredictable for that, so it is controlled by frequent inspection and adjustment.",
+    module: "inspect-adapt",
+  },
 } satisfies Record<string, GlossaryEntry>;
