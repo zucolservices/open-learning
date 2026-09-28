@@ -57,4 +57,34 @@ export const agileScrum = {
       "Two ways of controlling a process. A defined process is well understood and gives the same result every time, so it can simply be followed. An empirical process is too complex or unpredictable for that, so it is controlled by frequent inspection and adjustment.",
     module: "inspect-adapt",
   },
+  scrum: {
+    term: "Scrum",
+    definition:
+      "\u201cA lightweight framework that helps people, teams and organizations generate value through adaptive solutions for complex problems\u201d (Scrum Guide 2020). A small team works in fixed-length Sprints, with three accountabilities, five events and three artifacts.",
+    module: "scrum-on-one-page",
+  },
+  accountability: {
+    term: "Accountability (Scrum)",
+    definition:
+      "What the Scrum Guide calls its three responsibilities: Product Owner, Scrum Master and Developers. They are accountabilities within one team, not job titles or a hierarchy.",
+    module: "scrum-on-one-page",
+  },
+  "scrum-artifact": {
+    term: "Artifact (Scrum)",
+    definition:
+      "Something that makes work or value visible: the Product Backlog, the Sprint Backlog and the Increment. Each has a commitment: the Product Goal, the Sprint Goal and the Definition of Done.",
+    module: "scrum-on-one-page",
+  },
+  sprint: {
+    term: "Sprint",
+    definition:
+      "A fixed-length period of one month or less in which a Scrum Team turns ideas into a usable Increment. It contains all the other Scrum events, and a new Sprint starts as soon as the previous one ends.",
+    module: "scrum-on-one-page",
+  },
+  timebox: {
+    term: "Timebox",
+    definition:
+      "A fixed maximum length for an event or piece of work. In Scrum every event is timeboxed; ending early is fine once the purpose is met.",
+    module: "scrum-on-one-page",
+  },
 } satisfies Record<string, GlossaryEntry>;

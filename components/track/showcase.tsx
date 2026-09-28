@@ -4,6 +4,8 @@ import { TimeTravel } from "@/components/home/time-travel";
 import { ScaleScene } from "@/components/home/scale-scene";
 import { NextTokenScene } from "@/components/home/next-token-scene";
 import { TemperatureTaste } from "@/components/home/temperature-taste";
+import { ScrumScene } from "@/components/home/scrum-scene";
+import { CadenceTaste } from "@/components/home/cadence-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -36,5 +38,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: TemperatureTaste,
     tasteCaption:
       "A taste of module 7: turn the temperature on the same model's real odds, then pick a word.",
+  },
+  "agile-scrum": {
+    Scene: ScrumScene,
+    sceneCaption:
+      "All of Scrum on one page: three accountabilities, five events, three artifacts. Watch one Sprint, or click any part.",
+    Taste: CadenceTaste,
+    tasteCaption:
+      "A taste of module 1: how often users see a working version decides when the surprises show up.",
   },
 };

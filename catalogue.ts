@@ -2382,11 +2382,12 @@ const agileScrum: Track = {
             "Each artifact's commitment",
             "What is in the Scrum Guide and what is common practice",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["inspect-adapt"],
           plain:
             "Scrum is a lightweight framework: a small team works in fixed-length cycles called Sprints, with a few regular meetings and a few shared lists. Everything in it exists to make work visible and give the team regular chances to inspect and adapt.",
+          terms: ["scrum", "accountability", "sprint", "scrum-artifact", "timebox"],
         },
         {
           slug: "who-decides",

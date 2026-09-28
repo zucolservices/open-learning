@@ -9,6 +9,7 @@ import { Segmented } from "@/toolkit/controls/segmented";
 import { FrameCaption, Stepper } from "@/toolkit/controls/stepper";
 import { Term } from "@/toolkit/glossary/term";
 import { cn } from "@/lib/cn";
+import { ScrumGuideCredit } from "../_shared/scrum-guide-credit";
 import { WEEKS, steer } from "./model";
 import type { InspectState } from "./state";
 
@@ -207,9 +208,7 @@ export function Pillars() {
               ? "Transparency lets you inspect; inspection lets you adapt; adapting changes the work, which you make visible again."
               : PILLARS[f].plain}
           </FrameCaption>
-          <p className="text-subtle text-[10px]">
-            Quotations from the 2020 Scrum Guide (scrumguides.org).
-          </p>
+          <ScrumGuideCredit />
         </div>
       }
     >

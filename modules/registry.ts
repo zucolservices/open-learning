@@ -93,4 +93,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "agile-scrum/why-plans-break": () => import("./agile-scrum/why-plans-break"),
   "agile-scrum/agile-manifesto": () => import("./agile-scrum/agile-manifesto"),
   "agile-scrum/inspect-adapt": () => import("./agile-scrum/inspect-adapt"),
+  "agile-scrum/scrum-on-one-page": () => import("./agile-scrum/scrum-on-one-page"),
 };
