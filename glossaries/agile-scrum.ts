@@ -250,4 +250,22 @@ export const agileScrum = {
       "Average cycle time = average work in progress \u00f7 average throughput, over a period. It describes past averages (and the future only for a stable system); it can't forecast when one item will finish.",
     module: "kanban-wip",
   },
+  burndown: {
+    term: "Burndown chart",
+    definition:
+      "A chart of work remaining (up) against time (across), often for one Sprint, with an \u201cideal\u201d straight line to zero. Plateaus suggest blockers; late cliffs suggest work closed in a batch.",
+    module: "reading-charts",
+  },
+  burnup: {
+    term: "Burnup chart",
+    definition:
+      "A chart with two lines over time: work completed and total scope. Where they meet, the work is done. It shows scope growth separately from progress.",
+    module: "reading-charts",
+  },
+  cfd: {
+    term: "Cumulative flow diagram (CFD)",
+    definition:
+      "Stacked bands showing how many items have reached each workflow state over time. A band's height is roughly the work in that state, its width roughly the average time there, and the Done line's slope is throughput.",
+    module: "reading-charts",
+  },
 } satisfies Record<string, GlossaryEntry>;

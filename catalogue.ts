@@ -2601,11 +2601,12 @@ const agileScrum: Track = {
             "Cumulative flow diagrams",
             "Cycle-time scatterplots and percentiles",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["kanban-wip"],
           plain:
             "A few simple charts show how work is flowing: whether it's getting done, piling up or stuck. Learning to read them lets you spot problems before anyone complains.",
+          terms: ["burndown", "burnup", "cfd", "wip", "littles-law"],
         },
         {
           slug: "choose-a-way",

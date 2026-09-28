@@ -244,7 +244,7 @@ Delivery management area, first track (approved 2026-09-28). 23 modules in 7 cha
 | 4. Rest of track     | Chapters 1 → 9, growing the toolkit (charts, builder, sandbox) along the way            | Done: all 29 modules live (2026-09-24)                                  |
 | 4b. System Design    | Second track (Architecture), 27 modules                                                 | Live: all 27 modules                                                    |
 | 4c. LLM Foundations  | Third track (AI & machine learning), 26 modules                                         | Live: all 26 modules (2026-09-25)                                       |
-| 4d. Agile & Scrum    | Delivery management, first track, 23 modules                                            | In progress: modules 1–13 done                                          |
+| 4d. Agile & Scrum    | Delivery management, first track, 23 modules                                            | In progress: modules 1–14 done                                          |
 | 5. Team feedback     | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy            | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
