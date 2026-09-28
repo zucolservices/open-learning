@@ -2793,11 +2793,12 @@ const agileScrum: Track = {
             "Run a two-week Sprint day by day: scope changes, a sick day and a production bug, with the charts responding to every call",
           formats: ["simulation", "branching-scenario", "checkpoint"],
           concepts: ["Applying Scrum and flow under real pressure"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["choose-a-way", "done-means-done"],
           plain:
             "Everything in this track, in one Sprint. You'll plan it, protect the goal when surprises arrive, and review what happened.",
+          terms: ["sprint", "burndown", "velocity", "definition-of-done", "sustainable-pace"],
         },
         {
           slug: "struggling-team",

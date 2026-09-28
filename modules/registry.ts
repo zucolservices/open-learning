@@ -111,4 +111,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "agile-scrum/scaling": () => import("./agile-scrum/scaling"),
   "agile-scrum/tools": () => import("./agile-scrum/tools"),
   "agile-scrum/anti-patterns": () => import("./agile-scrum/anti-patterns"),
+  "agile-scrum/run-a-sprint": () => import("./agile-scrum/run-a-sprint"),
 };
