@@ -268,4 +268,10 @@ export const agileScrum = {
       "Stacked bands showing how many items have reached each workflow state over time. A band's height is roughly the work in that state, its width roughly the average time there, and the Done line's slope is throughput.",
     module: "reading-charts",
   },
+  scrumban: {
+    term: "Scrumban",
+    definition:
+      "A family of hybrids that add Kanban practices (visual flow, pull, WIP limits) to Scrum-style teams. The name comes from Corey Ladas's 2008 essay and 2009 book; it isn't an official framework with a guide.",
+    module: "choose-a-way",
+  },
 } satisfies Record<string, GlossaryEntry>;

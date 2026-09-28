@@ -2621,11 +2621,12 @@ const agileScrum: Track = {
             "Using Kanban practices inside Scrum",
             "Choosing by the work, not by fashion",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["reading-charts", "sprint-planning"],
           plain:
             "Scrum suits teams building a product in steps; Kanban suits a steady stream of varied requests. Many teams combine them. The right choice depends on the work.",
+          terms: ["kanban", "scrumban", "wip", "sprint"],
         },
       ],
     },

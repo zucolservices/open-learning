@@ -104,4 +104,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "agile-scrum/ordering-backlog": () => import("./agile-scrum/ordering-backlog"),
   "agile-scrum/kanban-wip": () => import("./agile-scrum/kanban-wip"),
   "agile-scrum/reading-charts": () => import("./agile-scrum/reading-charts"),
+  "agile-scrum/choose-a-way": () => import("./agile-scrum/choose-a-way"),
 };
