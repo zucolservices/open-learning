@@ -2314,10 +2314,11 @@ const agileScrum: Track = {
             "The cost of learning late",
             "Short feedback loops",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           plain:
             "A detailed plan works when you know exactly what to build, as with a hall built to a drawing. Software is different: people only discover what they need when they see it working. Agile ways of working show something real early and often, so mistakes are found while they are still cheap.",
+          terms: ["plan-driven", "iterative-development", "feedback-loop", "big-bang-release"],
         },
         {
           slug: "agile-manifesto",

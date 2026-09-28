@@ -90,4 +90,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "llm-foundations/responsible-use": () => import("./llm-foundations/responsible-use"),
   "llm-foundations/choose-a-model": () => import("./llm-foundations/choose-a-model"),
   "llm-foundations/misbehaving-assistant": () => import("./llm-foundations/misbehaving-assistant"),
+  "agile-scrum/why-plans-break": () => import("./agile-scrum/why-plans-break"),
 };
