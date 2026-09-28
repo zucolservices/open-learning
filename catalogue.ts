@@ -2648,11 +2648,12 @@ const agileScrum: Track = {
             "Undone work and technical debt",
             "Why debt compounds",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["artifacts"],
           plain:
             "If 'done' quietly means 'mostly done', the leftovers pile up and every Sprint gets slower. A clear, shared Definition of Done keeps the product releasable.",
+          terms: ["definition-of-done", "technical-debt", "story-points", "wcag"],
         },
         {
           slug: "small-batches",

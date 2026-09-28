@@ -88,7 +88,7 @@ export function SortCheckpoint({
               )}
             >
               <div className="flex flex-wrap items-center gap-3">
-                <span className="min-w-0 flex-1 text-sm">{item.label}</span>
+                <span className="min-w-0 flex-1 basis-48 text-sm">{item.label}</span>
                 <div className="flex gap-1">
                   {categories.map((c) => (
                     <button

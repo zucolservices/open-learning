@@ -105,4 +105,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "agile-scrum/kanban-wip": () => import("./agile-scrum/kanban-wip"),
   "agile-scrum/reading-charts": () => import("./agile-scrum/reading-charts"),
   "agile-scrum/choose-a-way": () => import("./agile-scrum/choose-a-way"),
+  "agile-scrum/done-means-done": () => import("./agile-scrum/done-means-done"),
 };

@@ -274,4 +274,16 @@ export const agileScrum = {
       "A family of hybrids that add Kanban practices (visual flow, pull, WIP limits) to Scrum-style teams. The name comes from Corey Ladas's 2008 essay and 2009 book; it isn't an official framework with a guide.",
     module: "choose-a-way",
   },
+  "technical-debt": {
+    term: "Technical debt",
+    definition:
+      "Shortcuts and unfinished work in a product that make every later change slower, like interest on a loan. Ward Cunningham introduced the debt metaphor in 1992. Some debt is a sensible trade if it's visible and paid back soon.",
+    module: "done-means-done",
+  },
+  wcag: {
+    term: "WCAG",
+    definition:
+      "Web Content Accessibility Guidelines, the W3C standard for making websites usable by people with disabilities. Level AA is the usual target; India's GIGW 3.0 guidelines for government websites require WCAG 2.1 Level AA.",
+    module: "done-means-done",
+  },
 } satisfies Record<string, GlossaryEntry>;
