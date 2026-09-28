@@ -159,4 +159,22 @@ export const agileScrum = {
       "Amy Edmondson's term for \u201ca shared belief held by members of a team that the team is safe for interpersonal risk taking\u201d: people can admit mistakes, ask questions and disagree without fear.",
     module: "review-retro",
   },
+  "definition-of-done": {
+    term: "Definition of Done",
+    definition:
+      "The formal quality bar an Increment must meet, shared by everyone working on the product. Work that doesn't meet all of it isn't Done, can't be released, and goes back to the Product Backlog.",
+    module: "artifacts",
+  },
+  "product-goal": {
+    term: "Product Goal",
+    definition:
+      "A future state of the product that the Scrum Team plans against: the long-term objective, and the Product Backlog's commitment. The team fulfils (or abandons) one before taking on the next.",
+    module: "artifacts",
+  },
+  refinement: {
+    term: "Backlog refinement",
+    definition:
+      "Breaking down and further defining Product Backlog items (adding description, order and size) until they can be Done within a Sprint. An ongoing activity, not an event.",
+    module: "artifacts",
+  },
 } satisfies Record<string, GlossaryEntry>;

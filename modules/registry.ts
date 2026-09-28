@@ -98,4 +98,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "agile-scrum/sprint-planning": () => import("./agile-scrum/sprint-planning"),
   "agile-scrum/daily-scrum": () => import("./agile-scrum/daily-scrum"),
   "agile-scrum/review-retro": () => import("./agile-scrum/review-retro"),
+  "agile-scrum/artifacts": () => import("./agile-scrum/artifacts"),
 };

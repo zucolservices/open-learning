@@ -2485,11 +2485,12 @@ const agileScrum: Track = {
             "The Increment and the Definition of Done",
             "Refinement as an ongoing activity",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["review-retro"],
           plain:
             "Scrum has three shared lists or results: everything the product might need, the plan for this Sprint, and the working product so far. Each has a commitment that says what 'good' means for it.",
+          terms: ["scrum-artifact", "product-goal", "definition-of-done", "refinement"],
         },
       ],
     },
