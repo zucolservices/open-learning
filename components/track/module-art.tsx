@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { A, FileIcon, Slab, type ArtMap } from "./art/kit";
 import { systemDesignArt } from "./art/system-design";
 import { llmFoundationsArt } from "./art/llm-foundations";
+import { agileScrumArt } from "./art/agile-scrum";
 
 /**
  * One small illustration per module (viewBox 160 × 100), drawn with the
@@ -1019,7 +1020,7 @@ const art: ArtMap = {
   "rows-vs-columns": () => art["file-formats"](),
 };
 
-const all: ArtMap = { ...art, ...systemDesignArt, ...llmFoundationsArt };
+const all: ArtMap = { ...art, ...systemDesignArt, ...llmFoundationsArt, ...agileScrumArt };
 
 export function ModuleArt({ slug }: { slug: string }) {
   const draw = all[slug];

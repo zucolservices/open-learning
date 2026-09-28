@@ -197,6 +197,43 @@ AI & machine learning area, third track (approved 2026-09-25). 26 modules in 8 c
 | 25    | Capstone: choose and size a model       | A multilingual citizen helpdesk: pick model, context strategy, hosting, cost and latency    | Branching scenario       |
 | 26    | Capstone: the assistant that misbehaves | Diagnose failures across tokens, sampling, context and injection; fix and verify            | Fix the problem          |
 
+## Agile & Scrum: curriculum
+
+Delivery management area, first track (approved 2026-09-28). 23 modules in 7 chapters, about 11 hours. Accent: "cadence" burnt orange (`[data-track="cadence"]`). Glossary: `glossaries/agile-scrum.ts`. Faithful to the primary sources (the 2020 Scrum Guide, the Agile Manifesto, the Kanban Guide), and clear about which common practices (story points, velocity, Definition of Ready) are add-ons rather than Scrum. Tool-neutral: Jira, Azure Boards, GitHub, GitLab, Linear and open source. Each module is fact-checked on its own before it is built. Estimation and delivery metrics in depth belong to their own tracks.
+
+| #     | Module                                 | Centrepiece                                                                         | Key formats           |
+| ----- | -------------------------------------- | ----------------------------------------------------------------------------------- | --------------------- |
+| **1** | **Why agile**                          |                                                                                     |                       |
+| 1     | Why plans break                        | A wedding hall vs a citizen portal: the cost of learning late; short feedback loops | Scroll story          |
+| 2     | The Agile Manifesto                    | Four values and twelve principles, and the myths                                    | Step-through, sort    |
+| 3     | Inspect & adapt                        | Steer to a moving target with long vs short cycles                                  | Simulation            |
+| **2** | **Scrum, the framework**               |                                                                                     |                       |
+| 4     | Scrum on one page                      | The whole framework in one clickable picture                                        | Animated infographic  |
+| 5     | Who decides what?                      | Product Owner, Scrum Master or Developers, in real situations                       | Branching scenario    |
+| 6     | The Sprint & Sprint Planning           | Plan a Sprint to one Sprint Goal within real capacity                               | Build                 |
+| 7     | The Daily Scrum                        | Three stand-up transcripts that go wrong                                            | Fix the problem       |
+| 8     | Review & Retrospective                 | Run a review with a client, then a retro                                            | Branching scenario    |
+| 9     | Artifacts & commitments                | Backlogs and Increment ↔ Product Goal, Sprint Goal, Definition of Done              | Build & connect       |
+| **3** | **The backlog**                        |                                                                                     |                       |
+| 10    | User stories & acceptance criteria     | Rewrite weak stories: INVEST, Given/When/Then                                       | Fix the problem       |
+| 11    | Splitting stories                      | Slice a big citizen-portal feature vertically                                       | Sandbox               |
+| 12    | Ordering the backlog                   | MoSCoW vs value vs cost of delay: value delivered over time                         | Simulation            |
+| **4** | **Flow & Kanban**                      |                                                                                     |                       |
+| 13    | Kanban & WIP limits                    | A live board: WIP limits vs cycle time; Little's Law                                | Simulation            |
+| 14    | Reading the charts                     | Burndown, burnup, cumulative flow and cycle-time scatter                            | Step-through          |
+| 15    | Scrum, Kanban or both?                 | A way of working for four different teams                                           | Branching scenario    |
+| **5** | **Engineering that makes agile work**  |                                                                                     |                       |
+| 16    | Done means done                        | Weak vs strong Definition of Done; technical debt compounding                       | Simulation            |
+| 17    | Small batches & continuous integration | Batch size vs lead time and merge pain; XP practices                                | Simulation            |
+| **6** | **Agile in the real world**            |                                                                                     |                       |
+| 18    | Client-facing & distributed teams      | A Bengaluru team, a remote client, a proxy Product Owner                            | Branching scenario    |
+| 19    | Many teams: scaling frameworks         | SAFe, LeSS, Nexus and Scrum@Scale compared                                          | Build & connect       |
+| 20    | The same board, every tool             | Rosetta stone across Jira, Azure Boards, GitHub, GitLab, Linear and open source     | Infographic           |
+| 21    | Agile anti-patterns                    | Velocity as a target, Water-Scrum-Fall, Zombie Scrum                                | Sort, fix the problem |
+| **7** | **Capstones**                          |                                                                                     |                       |
+| 22    | Capstone: run a sprint                 | Two weeks on a client project; your calls, the charts respond                       | Simulation, branching |
+| 23    | Capstone: the struggling team          | Diagnose from board, charts and retro notes; fix                                    | Fix the problem       |
+
 ## Roadmap
 
 | Step                 | Scope                                                                                   | Status                                                                  |
@@ -207,6 +244,7 @@ AI & machine learning area, third track (approved 2026-09-25). 26 modules in 8 c
 | 4. Rest of track     | Chapters 1 → 9, growing the toolkit (charts, builder, sandbox) along the way            | Done: all 29 modules live (2026-09-24)                                  |
 | 4b. System Design    | Second track (Architecture), 27 modules                                                 | Live: all 27 modules                                                    |
 | 4c. LLM Foundations  | Third track (AI & machine learning), 26 modules                                         | Live: all 26 modules (2026-09-25)                                       |
+| 4d. Agile & Scrum    | Delivery management, first track, 23 modules                                            | In progress                                                             |
 | 5. Team feedback     | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy            | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

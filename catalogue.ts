@@ -85,7 +85,7 @@ export interface Track {
   tagline: string;
   description: string;
   /** Key into the track accent palette in globals.css ([data-track]). */
-  accent: "lakehouse" | "blueprint" | "synapse" | "neutral";
+  accent: "lakehouse" | "blueprint" | "synapse" | "cadence" | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
   hidden?: boolean;
@@ -2285,6 +2285,503 @@ const llmFoundations: Track = {
   ],
 };
 
+const agileScrum: Track = {
+  slug: "agile-scrum",
+  title: "Agile & Scrum",
+  area: "Delivery management",
+  category: "delivery-management",
+  tagline: "The ceremonies, and the thinking behind them.",
+  description:
+    "Why short feedback loops beat big up-front plans, how Scrum and Kanban actually work (from the official guides, not folklore), how to write, split and order a backlog, and the engineering habits that make it all hold together. Tool-neutral: the same ideas in Jira, Azure Boards, GitHub, GitLab, Linear and open source. By the end you can run a sprint, read a team's charts, and tell real agility from ritual.",
+  accent: "cadence",
+  chapters: [
+    {
+      slug: "why-agile",
+      title: "Why agile",
+      summary: "Why big plans break, and what the agile movement proposed instead.",
+      modules: [
+        {
+          slug: "why-plans-break",
+          title: "Why plans break",
+          summary: "Why software surprises big up-front plans, and how short loops help.",
+          minutes: 25,
+          signature:
+            "Scroll from building a wedding hall to building a citizen portal: where the plan meets reality, and what it costs to learn late",
+          formats: ["scroll-story", "simulation", "checkpoint"],
+          concepts: [
+            "Plan-driven (waterfall) and iterative delivery",
+            "Why software requirements change as people see the product",
+            "The cost of learning late",
+            "Short feedback loops",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "A detailed plan works when you know exactly what to build, as with a hall built to a drawing. Software is different: people only discover what they need when they see it working. Agile ways of working show something real early and often, so mistakes are found while they are still cheap.",
+        },
+        {
+          slug: "agile-manifesto",
+          title: "The Agile Manifesto",
+          summary: "Four values and twelve principles: what they say, and what they don't.",
+          minutes: 25,
+          signature:
+            "Step through the four values and twelve principles, then sort common claims into what the Manifesto says and what is myth",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "The four values, read in full",
+            "The twelve principles",
+            "Agile is a mindset, not one method",
+            "Common myths: no plans, no documentation",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-plans-break"],
+          plain:
+            "In 2001, seventeen software practitioners wrote a short statement of what they had learned about building software well. It values people, working software, collaboration and responding to change, while still seeing value in plans, documents and contracts.",
+        },
+        {
+          slug: "inspect-adapt",
+          title: "Inspect & adapt",
+          summary: "Empiricism: make work visible, look at it often, change course.",
+          minutes: 25,
+          signature:
+            "Steer towards a moving target: long cycles vs short ones, and how much each drifts off course",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Transparency, inspection and adaptation",
+            "Cycle length and the cost of drift",
+            "Deciding from what is observed, not assumed",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-plans-break"],
+          plain:
+            "When you can't predict everything, you look often and adjust. Agile teams make their work visible, check it at regular short intervals, and change course based on what they see.",
+        },
+      ],
+    },
+    {
+      slug: "scrum",
+      title: "Scrum, the framework",
+      summary: "The accountabilities, events and artifacts, as the Scrum Guide defines them.",
+      modules: [
+        {
+          slug: "scrum-on-one-page",
+          title: "Scrum on one page",
+          summary: "The whole framework in one picture, and how the parts fit.",
+          minutes: 25,
+          signature:
+            "One animated picture of Scrum: click any accountability, event or artifact to see what it is for and when it happens",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "Three accountabilities, five events, three artifacts",
+            "The Sprint as the container for the other events",
+            "Each artifact's commitment",
+            "What is in the Scrum Guide and what is common practice",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["inspect-adapt"],
+          plain:
+            "Scrum is a lightweight framework: a small team works in fixed-length cycles called Sprints, with a few regular meetings and a few shared lists. Everything in it exists to make work visible and give the team regular chances to inspect and adapt.",
+        },
+        {
+          slug: "who-decides",
+          title: "Who decides what?",
+          summary: "Product Owner, Scrum Master and Developers, in real situations.",
+          minutes: 30,
+          signature:
+            "A branching scenario on a client project: who owns each decision, and what happens when the wrong person makes it",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "The Product Owner orders the backlog and maximises value",
+            "Developers own how the work gets done",
+            "The Scrum Master serves the team and the organisation",
+            "Self-managing teams",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["scrum-on-one-page"],
+          plain:
+            "Scrum gives three kinds of people clear accountabilities: one person decides what matters most, the people building it decide how, and one person helps everyone use Scrum well. Most team friction comes from blurring these.",
+        },
+        {
+          slug: "sprint-planning",
+          title: "The Sprint & Sprint Planning",
+          summary: "Why a Sprint has a goal, and how a team plans one.",
+          minutes: 30,
+          signature:
+            "Plan a Sprint: pick backlog items that serve one Sprint Goal and fit the team's real capacity",
+          formats: ["build-connect", "simulation", "checkpoint"],
+          concepts: [
+            "The Sprint: a fixed length of one month or less",
+            "Sprint Planning: why, what and how",
+            "The Sprint Goal as a commitment",
+            "Capacity, and story points as an optional practice",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["who-decides"],
+          plain:
+            "A Sprint is a fixed period, one month or less, in which the team builds something usable. It starts with planning: why this Sprint matters, what can be done, and how. The Sprint Goal keeps everyone pulling in one direction when surprises come.",
+        },
+        {
+          slug: "daily-scrum",
+          title: "The Daily Scrum",
+          summary: "Fifteen minutes to replan towards the goal, not a status report.",
+          minutes: 20,
+          signature:
+            "Three stand-up transcripts that go wrong: spot the problem in each and fix it",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Purpose: inspect progress towards the Sprint Goal",
+            "The Developers choose the format",
+            "Status reporting and problem-solving anti-patterns",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["sprint-planning"],
+          plain:
+            "Once a day the people doing the work spend up to fifteen minutes checking whether they are still on track for the Sprint Goal and adjusting the plan. It is for them, not a report to a manager.",
+        },
+        {
+          slug: "review-retro",
+          title: "Review & Retrospective",
+          summary: "Inspect the product with stakeholders, then inspect how you work.",
+          minutes: 30,
+          signature:
+            "Run a Sprint Review with a client, then facilitate a Retrospective: each choice changes what the team learns",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "The Sprint Review is a working session, not a demo gate",
+            "The Retrospective improves quality and effectiveness",
+            "Turning findings into concrete improvements",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["daily-scrum"],
+          plain:
+            "At the end of each Sprint the team shows what it built to the people who care and decides together what to do next. Then the team looks at how it worked and picks something to improve.",
+        },
+        {
+          slug: "artifacts",
+          title: "Artifacts & commitments",
+          summary: "Product Backlog, Sprint Backlog and Increment, and what each commits to.",
+          minutes: 25,
+          signature:
+            "Connect each artifact to its commitment (Product Goal, Sprint Goal, Definition of Done), then test real items against them",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "An ordered Product Backlog and the Product Goal",
+            "The Sprint Backlog and the Sprint Goal",
+            "The Increment and the Definition of Done",
+            "Refinement as an ongoing activity",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["review-retro"],
+          plain:
+            "Scrum has three shared lists or results: everything the product might need, the plan for this Sprint, and the working product so far. Each has a commitment that says what 'good' means for it.",
+        },
+      ],
+    },
+    {
+      slug: "backlog",
+      title: "The backlog",
+      summary: "Writing, splitting and ordering the work.",
+      modules: [
+        {
+          slug: "user-stories",
+          title: "User stories & acceptance criteria",
+          summary: "Small, testable descriptions of value, from the user's side.",
+          minutes: 30,
+          signature:
+            "Rewrite weak stories until they pass INVEST, and add acceptance criteria in Given/When/Then",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "The story template and the conversation behind it",
+            "INVEST",
+            "Acceptance criteria and Given/When/Then",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["artifacts"],
+          plain:
+            "A user story is a short note about something a person needs, written as a placeholder for a conversation. Acceptance criteria say how everyone will know it's done.",
+        },
+        {
+          slug: "splitting-stories",
+          title: "Splitting stories",
+          summary: "Slice big features into thin pieces that still deliver value.",
+          minutes: 30,
+          signature:
+            "Take a big feature for a citizen portal and slice it vertically with splitting patterns until each piece fits a Sprint",
+          formats: ["sandbox", "checkpoint"],
+          concepts: [
+            "Vertical slices vs horizontal layers",
+            "Splitting patterns (paths, rules, data, interfaces, spikes)",
+            "Why small items flow better",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["user-stories"],
+          plain:
+            "Big pieces of work hide risk and take too long to finish. Splitting them into thin slices, each working end to end, lets a team deliver and learn every few days.",
+        },
+        {
+          slug: "ordering-backlog",
+          title: "Ordering the backlog",
+          summary: "Deciding what comes first: value, urgency, risk and cost of delay.",
+          minutes: 30,
+          signature:
+            "Order the same backlog by MoSCoW, by value and by cost of delay, and watch the value delivered over time",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Ordered, not just prioritised",
+            "MoSCoW",
+            "Cost of delay and WSJF",
+            "Risk and learning as reasons to go first",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["splitting-stories"],
+          plain:
+            "Everything can't come first. Ordering the backlog means asking what each item is worth, how fast that value decays if you wait, and how big it is.",
+        },
+      ],
+    },
+    {
+      slug: "flow",
+      title: "Flow & Kanban",
+      summary: "Visualise the work, limit what's in progress, and read the signals.",
+      modules: [
+        {
+          slug: "kanban-wip",
+          title: "Kanban & WIP limits",
+          summary: "Why starting less gets more finished.",
+          minutes: 30,
+          signature:
+            "Run a live board: change the work-in-progress limits and watch cycle time, throughput and Little's Law",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Visualising the workflow",
+            "Explicit WIP limits",
+            "Flow metrics: WIP, throughput, work item age, cycle time",
+            "Little's Law, and what it can't do",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["inspect-adapt"],
+          plain:
+            "Kanban makes work visible on a board and caps how much can be in progress at once. Fewer things in progress means each one finishes sooner.",
+        },
+        {
+          slug: "reading-charts",
+          title: "Reading the charts",
+          summary: "Burndown, burnup, cumulative flow and cycle time: what each tells you.",
+          minutes: 30,
+          signature:
+            "Step through four charts from real-looking teams, then diagnose what each one is saying",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Burndown and burnup",
+            "Cumulative flow diagrams",
+            "Cycle-time scatterplots and percentiles",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["kanban-wip"],
+          plain:
+            "A few simple charts show how work is flowing: whether it's getting done, piling up or stuck. Learning to read them lets you spot problems before anyone complains.",
+        },
+        {
+          slug: "choose-a-way",
+          title: "Scrum, Kanban or both?",
+          summary: "Matching the way of working to the kind of work.",
+          minutes: 25,
+          signature:
+            "Pick a way of working for four teams: a product team, a support team, a fixed-bid project and a platform team",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "When fixed Sprints help, and when continuous flow fits better",
+            "Using Kanban practices inside Scrum",
+            "Choosing by the work, not by fashion",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["reading-charts", "sprint-planning"],
+          plain:
+            "Scrum suits teams building a product in steps; Kanban suits a steady stream of varied requests. Many teams combine them. The right choice depends on the work.",
+        },
+      ],
+    },
+    {
+      slug: "engineering",
+      title: "Engineering that makes agile work",
+      summary: "The technical habits without which the ceremonies are empty.",
+      modules: [
+        {
+          slug: "done-means-done",
+          title: "Done means done",
+          summary: "A strong Definition of Done, and what technical debt costs.",
+          minutes: 25,
+          signature:
+            "Run sprints with a weak and a strong Definition of Done and watch technical debt slow the team",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "The Definition of Done as a quality commitment",
+            "Undone work and technical debt",
+            "Why debt compounds",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["artifacts"],
+          plain:
+            "If 'done' quietly means 'mostly done', the leftovers pile up and every Sprint gets slower. A clear, shared Definition of Done keeps the product releasable.",
+        },
+        {
+          slug: "small-batches",
+          title: "Small batches & continuous integration",
+          summary: "Integrate often, release in small steps, and practices from XP.",
+          minutes: 30,
+          signature:
+            "Change the batch size and integration frequency and watch lead time and merge pain",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Batch size and lead time",
+            "Continuous integration",
+            "Extreme Programming practices: TDD, pairing, refactoring",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["done-means-done"],
+          plain:
+            "Merging and releasing small changes often is safer and faster than big occasional drops. Extreme Programming added engineering practices that make this possible.",
+        },
+      ],
+    },
+    {
+      slug: "real-world",
+      title: "Agile in the real world",
+      summary: "Clients, distance, many teams, tools and the ways it goes wrong.",
+      modules: [
+        {
+          slug: "client-distributed",
+          title: "Client-facing & distributed teams",
+          summary: "Scrum when the client is elsewhere and the team spans time zones.",
+          minutes: 30,
+          signature:
+            "A branching scenario: a Bengaluru team, a client in another time zone, and a proxy Product Owner",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Proxy Product Owners and their limits",
+            "Working across time zones",
+            "Keeping the client close to the product",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["review-retro"],
+          plain:
+            "In services work the person who decides what matters is often at the client, far away and busy. The team has to find ways to keep that person close to the product.",
+        },
+        {
+          slug: "scaling",
+          title: "Many teams: scaling frameworks",
+          summary: "SAFe, LeSS, Nexus and Scrum@Scale, compared plainly.",
+          minutes: 30,
+          signature:
+            "Connect teams, backlogs and events for several frameworks and see where each puts coordination",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Why many teams need coordination",
+            "SAFe, LeSS, Nexus and Scrum@Scale in one line each",
+            "Dependencies and how to reduce them",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["artifacts"],
+          plain:
+            "When one product needs several teams, they have to coordinate. Different frameworks do this in different ways, from light to heavy.",
+        },
+        {
+          slug: "tools",
+          title: "The same board, every tool",
+          summary: "Jira, Azure Boards, GitHub, GitLab, Linear and open source.",
+          minutes: 20,
+          signature:
+            "One board, shown the way each tool names and arranges it: a Rosetta stone of backlogs, sprints and boards",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "The same ideas under different names",
+            "What to configure, and what to leave alone",
+            "The tool supports the process, not the other way round",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["scrum-on-one-page"],
+          plain:
+            "Every agile tool has a backlog, a board and a way to plan a Sprint, but each names them differently. Once you know the ideas, any tool is easy to learn.",
+        },
+        {
+          slug: "anti-patterns",
+          title: "Agile anti-patterns",
+          summary: "Velocity as a target, Water-Scrum-Fall, Zombie Scrum and others.",
+          minutes: 25,
+          signature: "Sort real team symptoms into named anti-patterns, then pick the fix for each",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Measures that become targets stop being useful",
+            "Scrum rituals without empiricism",
+            "Big plans in Sprint-shaped pieces",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["reading-charts"],
+          plain:
+            "Many teams go through the motions of agile without getting its benefits. Knowing the common failure patterns helps you spot and fix them.",
+        },
+      ],
+    },
+    {
+      slug: "capstones",
+      title: "Capstones",
+      summary: "Put it all together.",
+      modules: [
+        {
+          slug: "run-a-sprint",
+          title: "Capstone: run a sprint",
+          summary: "Two weeks on a client project, and you make the calls.",
+          minutes: 40,
+          signature:
+            "Run a two-week Sprint day by day: scope changes, a sick day and a production bug, with the charts responding to every call",
+          formats: ["simulation", "branching-scenario", "checkpoint"],
+          concepts: ["Applying Scrum and flow under real pressure"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["choose-a-way", "done-means-done"],
+          plain:
+            "Everything in this track, in one Sprint. You'll plan it, protect the goal when surprises arrive, and review what happened.",
+        },
+        {
+          slug: "struggling-team",
+          title: "Capstone: the struggling team",
+          summary: "Diagnose a team from its board, charts and retro notes, then help it.",
+          minutes: 40,
+          signature:
+            "Investigate a team's board, cumulative flow, cycle times and retrospective notes; find the causes and choose the fixes",
+          formats: ["fix-the-problem", "simulation", "checkpoint"],
+          concepts: ["Diagnosing ways of working from evidence"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["anti-patterns", "reading-charts"],
+          plain:
+            "A team says it does Scrum, but delivery is slow and people are unhappy. Using the evidence, you'll find out why and decide what to change first.",
+        },
+      ],
+    },
+  ],
+};
+
 /** A small end-to-end module that exercises the toolkit and Module SDK. */
 const playground: Track = {
   slug: "playground",
@@ -2321,7 +2818,7 @@ const playground: Track = {
   ],
 };
 
-export const tracks: Track[] = [lakehouse, systemDesign, llmFoundations, playground];
+export const tracks: Track[] = [lakehouse, systemDesign, llmFoundations, agileScrum, playground];
 
 export interface CategoryTrack {
   title: string;
@@ -2497,9 +2994,13 @@ export const categories: Category[] = [
     summary: "Plan, estimate and deliver projects predictably.",
     description:
       "Running projects that finish: planning, estimating, managing risk and measuring delivery.",
-    accent: "neutral",
+    accent: "cadence",
     tracks: [
-      { title: "Agile & Scrum", blurb: "The ceremonies, and the thinking behind them." },
+      {
+        title: "Agile & Scrum",
+        slug: "agile-scrum",
+        blurb: "The ceremonies, and the thinking behind them.",
+      },
       { title: "Estimation", blurb: "Forecasting honestly under uncertainty." },
       { title: "Fixed-Scope Projects", blurb: "Delivering to a contract without heroics." },
       { title: "Risk", blurb: "Spotting, sizing and handling project risks." },

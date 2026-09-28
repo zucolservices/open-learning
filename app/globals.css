@@ -111,6 +111,18 @@
   --bg-glow: rgb(232 121 249 / 0.12);
 }
 
+[data-track="cadence"] {
+  --accent: #c2410c;
+  --accent-soft: rgb(194 65 12 / 0.1);
+  --bg-glow: rgb(234 88 12 / 0.12);
+}
+[data-theme="dark"] [data-track="cadence"],
+[data-theme="dark"][data-track="cadence"] {
+  --accent: #fb923c;
+  --accent-soft: rgb(251 146 60 / 0.14);
+  --bg-glow: rgb(251 146 60 / 0.12);
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);
