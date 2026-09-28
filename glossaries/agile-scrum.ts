@@ -232,4 +232,22 @@ export const agileScrum = {
       "Sorting requirements into Must Have, Should Have, Could Have and Won't Have this time (DSDM; Dai Clegg, 1994). Useful for agreeing scope; it doesn't set an order within or across the groups.",
     module: "ordering-backlog",
   },
+  kanban: {
+    term: "Kanban",
+    definition:
+      "\u201cA strategy for optimizing the flow of value through a process\u201d (Kanban Guide): define and visualise the workflow, actively manage the items in it, and improve it. Its roots are in Toyota's production system.",
+    module: "kanban-wip",
+  },
+  wip: {
+    term: "Work in progress (WIP)",
+    definition:
+      "Items that have been started but not finished. Teams explicitly control it, usually with WIP limits: a maximum number of items allowed in a column or stage.",
+    module: "kanban-wip",
+  },
+  "littles-law": {
+    term: "Little's Law",
+    definition:
+      "Average cycle time = average work in progress \u00f7 average throughput, over a period. It describes past averages (and the future only for a stable system); it can't forecast when one item will finish.",
+    module: "kanban-wip",
+  },
 } satisfies Record<string, GlossaryEntry>;

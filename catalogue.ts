@@ -2581,11 +2581,12 @@ const agileScrum: Track = {
             "Flow metrics: WIP, throughput, work item age, cycle time",
             "Little's Law, and what it can't do",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["inspect-adapt"],
           plain:
             "Kanban makes work visible on a board and caps how much can be in progress at once. Fewer things in progress means each one finishes sooner.",
+          terms: ["kanban", "wip", "littles-law"],
         },
         {
           slug: "reading-charts",

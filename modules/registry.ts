@@ -102,4 +102,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "agile-scrum/user-stories": () => import("./agile-scrum/user-stories"),
   "agile-scrum/splitting-stories": () => import("./agile-scrum/splitting-stories"),
   "agile-scrum/ordering-backlog": () => import("./agile-scrum/ordering-backlog"),
+  "agile-scrum/kanban-wip": () => import("./agile-scrum/kanban-wip"),
 };
