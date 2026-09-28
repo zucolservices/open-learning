@@ -2809,11 +2809,12 @@ const agileScrum: Track = {
             "Investigate a team's board, cumulative flow, cycle times and retrospective notes; find the causes and choose the fixes",
           formats: ["fix-the-problem", "simulation", "checkpoint"],
           concepts: ["Diagnosing ways of working from evidence"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["anti-patterns", "reading-charts"],
           plain:
             "A team says it does Scrum, but delivery is slow and people are unhappy. Using the evidence, you'll find out why and decide what to change first.",
+          terms: ["wip", "cfd", "work-item-age", "theory-of-constraints", "psychological-safety"],
         },
       ],
     },

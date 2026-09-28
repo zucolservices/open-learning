@@ -56,15 +56,28 @@ function work(active: Item[], people: number, key: "devLeft" | "testLeft") {
   for (const it of active) it[key] = Math.max(0, it[key] - each);
 }
 
-export function simulate(devLimit: number, testLimit: number): Result {
+/** Optional changes used by the struggling-team capstone; the defaults are this module's board. */
+export interface BoardOptions {
+  testers?: number; // effective testing capacity (developers helping to test raises it)
+  size?: number; // multiplier on each item's work (splitting stories makes items smaller)
+  bursts?: boolean; // extra side requests every tenth day
+}
+
+export function simulate(devLimit: number, testLimit: number, opts: BoardOptions = {}): Result {
+  const { testers = TESTERS, size = 1, bursts = true } = opts;
   const r = rng(7);
   const items: Item[] = [];
   const days: DayState[] = [];
   let next = 0;
   for (let d = 0; d < DAYS; d++) {
-    const arrivals = 1 + (d % 10 === 0 ? 1 : 0);
+    const arrivals = 1 + (bursts && d % 10 === 0 ? 1 : 0);
     for (let k = 0; k < arrivals; k++)
-      items.push({ id: next++, arrive: d, devLeft: 2 + r() * 2.2, testLeft: 0.6 + r() * 0.8 });
+      items.push({
+        id: next++,
+        arrive: d,
+        devLeft: (2 + r() * 2.2) * size,
+        testLeft: (0.6 + r() * 0.8) * size,
+      });
     const inDev = () => items.filter((i) => i.start !== undefined && i.testStart === undefined);
     const inTest = () => items.filter((i) => i.testStart !== undefined && i.finish === undefined);
     // Pull into Develop (start) while under the limit.
@@ -85,7 +98,7 @@ export function simulate(devLimit: number, testLimit: number): Result {
       "devLeft",
     );
     for (const it of inDev()) if (it.devLeft <= 0 && it.devDone === undefined) it.devDone = d;
-    work(inTest(), TESTERS, "testLeft");
+    work(inTest(), testers, "testLeft");
     for (const it of inTest()) if (it.testLeft <= 0) it.finish = d;
     days.push({
       todo: items.filter((i) => i.start === undefined).map((i) => i.id),

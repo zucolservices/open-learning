@@ -412,4 +412,16 @@ export const agileScrum = {
       "Scrum that “looks like Scrum from a distance but lacks a beating heart”: the events happen, but there's no working product, no user contact, no drive to improve and no autonomy. Named by Verwijs, Schartau and Overeem.",
     module: "anti-patterns",
   },
+  "work-item-age": {
+    term: "Work Item Age",
+    definition:
+      "“The elapsed time between when a work item started and the current date” (Kanban Guide, 2025). You can read it before an item finishes, so old items are an early warning.",
+    module: "struggling-team",
+  },
+  "theory-of-constraints": {
+    term: "Theory of Constraints",
+    definition:
+      "Eliyahu Goldratt's idea (The Goal, 1984, with Jeff Cox) that every system has one constraint limiting its output. Improve it and another becomes the constraint.",
+    module: "struggling-team",
+  },
 } satisfies Record<string, GlossaryEntry>;
