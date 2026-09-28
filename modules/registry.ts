@@ -110,4 +110,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "agile-scrum/client-distributed": () => import("./agile-scrum/client-distributed"),
   "agile-scrum/scaling": () => import("./agile-scrum/scaling"),
   "agile-scrum/tools": () => import("./agile-scrum/tools"),
+  "agile-scrum/anti-patterns": () => import("./agile-scrum/anti-patterns"),
 };

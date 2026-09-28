@@ -394,4 +394,22 @@ export const agileScrum = {
       "A generic name for one tracked piece of work (a story, task or bug) in tools such as Azure Boards, GitLab and, since 2025, Jira, which used to call them “issues”.",
     module: "tools",
   },
+  "anti-pattern": {
+    term: "Anti-pattern",
+    definition:
+      "A common response to a problem that looks sensible but usually makes things worse, for example making velocity a target or holding “hardening Sprints”.",
+    module: "anti-patterns",
+  },
+  "goodharts-law": {
+    term: "Goodhart's law",
+    definition:
+      "Economist Charles Goodhart's 1975 observation, popularly phrased by Marilyn Strathern (1997): “When a measure becomes a target, it ceases to be a good measure.”",
+    module: "anti-patterns",
+  },
+  "zombie-scrum": {
+    term: "Zombie Scrum",
+    definition:
+      "Scrum that “looks like Scrum from a distance but lacks a beating heart”: the events happen, but there's no working product, no user contact, no drive to improve and no autonomy. Named by Verwijs, Schartau and Overeem.",
+    module: "anti-patterns",
+  },
 } satisfies Record<string, GlossaryEntry>;
