@@ -177,4 +177,22 @@ export const agileScrum = {
       "Breaking down and further defining Product Backlog items (adding description, order and size) until they can be Done within a Sprint. An ongoing activity, not an event.",
     module: "artifacts",
   },
+  "user-story": {
+    term: "User story",
+    definition:
+      "A short description of something a person needs and why, often written \u201cAs a…, I want…, so that…\u201d. A placeholder for a conversation, confirmed by acceptance criteria. A popular practice, not part of Scrum itself.",
+    module: "user-stories",
+  },
+  invest: {
+    term: "INVEST",
+    definition:
+      "Bill Wake's checklist for good stories (2003): Independent, Negotiable, Valuable, Estimable, Small, Testable.",
+    module: "user-stories",
+  },
+  "acceptance-criteria": {
+    term: "Acceptance criteria",
+    definition:
+      "The conditions one backlog item must meet to be accepted, often written as Given/When/Then scenarios. Specific to that item; the Definition of Done applies to every item.",
+    module: "user-stories",
+  },
 } satisfies Record<string, GlossaryEntry>;

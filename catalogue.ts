@@ -2512,11 +2512,12 @@ const agileScrum: Track = {
             "INVEST",
             "Acceptance criteria and Given/When/Then",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["artifacts"],
           plain:
             "A user story is a short note about something a person needs, written as a placeholder for a conversation. Acceptance criteria say how everyone will know it's done.",
+          terms: ["user-story", "invest", "acceptance-criteria", "definition-of-done"],
         },
         {
           slug: "splitting-stories",
