@@ -340,4 +340,10 @@ export const agileScrum = {
       "Software delivery measures from the DevOps Research and Assessment (DORA) programme at Google: change lead time, deployment frequency, failed deployment recovery time, change fail rate and deployment rework rate.",
     module: "small-batches",
   },
+  "proxy-product-owner": {
+    term: "Proxy Product Owner",
+    definition:
+      "Not a Scrum Guide role: a stand-in (often an onsite or offshore coordinator) who relays for the client's real decision-maker. Without real authority it becomes a bottleneck; the real Product Owner stays accountable.",
+    module: "client-distributed",
+  },
 } satisfies Record<string, GlossaryEntry>;

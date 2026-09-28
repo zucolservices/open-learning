@@ -2705,11 +2705,12 @@ const agileScrum: Track = {
             "Working across time zones",
             "Keeping the client close to the product",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["review-retro"],
           plain:
             "In services work the person who decides what matters is often at the client, far away and busy. The team has to find ways to keep that person close to the product.",
+          terms: ["proxy-product-owner", "product-owner", "daily-scrum", "sprint-review"],
         },
         {
           slug: "scaling",
