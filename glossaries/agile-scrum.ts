@@ -286,4 +286,58 @@ export const agileScrum = {
       "Web Content Accessibility Guidelines, the W3C standard for making websites usable by people with disabilities. Level AA is the usual target; India's GIGW 3.0 guidelines for government websites require WCAG 2.1 Level AA.",
     module: "done-means-done",
   },
+  "batch-size": {
+    term: "Batch size",
+    definition:
+      "How much work moves through a step together: for example, how many changes go into one release. Smaller batches mean faster feedback and lower risk, as long as the cost of each batch stays low.",
+    module: "small-batches",
+  },
+  "continuous-integration": {
+    term: "Continuous integration (CI)",
+    definition:
+      "Everyone merges their changes into the shared code at least daily, and an automated build with tests checks each merge. Kent Beck's Extreme Programming made it a standard practice.",
+    module: "small-batches",
+  },
+  xp: {
+    term: "Extreme Programming (XP)",
+    definition:
+      "An agile method created by Kent Beck in the late 1990s (book, 1999). It is best known for its engineering practices: test-driven development, pair programming, refactoring, continuous integration and small releases.",
+    module: "small-batches",
+  },
+  tdd: {
+    term: "Test-driven development (TDD)",
+    definition:
+      "Write a small failing test first (red), write just enough code to pass it (green), then tidy the code (refactor), and repeat. Popularised by Kent Beck.",
+    module: "small-batches",
+  },
+  refactoring: {
+    term: "Refactoring",
+    definition:
+      "In Martin Fowler's words, “a change made to the internal structure of software to make it easier to understand and cheaper to modify without changing its observable behavior”.",
+    module: "small-batches",
+  },
+  "pair-programming": {
+    term: "Pair programming",
+    definition:
+      "Two developers working together at one screen, one typing and one reviewing and thinking ahead, swapping roles often. Research finds modest quality gains for more total effort, depending on the task.",
+    module: "small-batches",
+  },
+  "trunk-based": {
+    term: "Trunk-based development",
+    definition:
+      "Developers merge small changes into one main line (the “trunk”) at least daily, with very few short-lived branches, instead of long-running feature branches.",
+    module: "small-batches",
+  },
+  "feature-flag": {
+    term: "Feature flag",
+    definition:
+      "A switch in the code that turns a feature on or off without a new release. It lets unfinished work be merged safely. Old flags should be removed, since forgotten ones cause bugs.",
+    module: "small-batches",
+  },
+  "dora-metrics": {
+    term: "DORA metrics",
+    definition:
+      "Software delivery measures from the DevOps Research and Assessment (DORA) programme at Google: change lead time, deployment frequency, failed deployment recovery time, change fail rate and deployment rework rate.",
+    module: "small-batches",
+  },
 } satisfies Record<string, GlossaryEntry>;
