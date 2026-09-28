@@ -2424,11 +2424,12 @@ const agileScrum: Track = {
             "The Sprint Goal as a commitment",
             "Capacity, and story points as an optional practice",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["who-decides"],
           plain:
             "A Sprint is a fixed period, one month or less, in which the team builds something usable. It starts with planning: why this Sprint matters, what can be done, and how. The Sprint Goal keeps everyone pulling in one direction when surprises come.",
+          terms: ["sprint", "sprint-planning", "timebox", "story-points", "velocity"],
         },
         {
           slug: "daily-scrum",

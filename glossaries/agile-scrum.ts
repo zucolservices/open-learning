@@ -111,4 +111,22 @@ export const agileScrum = {
       "A team that decides internally who does what, when and how, rather than being assigned tasks by a manager.",
     module: "who-decides",
   },
+  "sprint-planning": {
+    term: "Sprint Planning",
+    definition:
+      "The event that starts a Sprint. The Scrum Team agrees why the Sprint is valuable (the Sprint Goal), the Developers select what can be Done, and they plan how. At most eight hours for a one-month Sprint; usually shorter for shorter Sprints.",
+    module: "sprint-planning",
+  },
+  "story-points": {
+    term: "Story points",
+    definition:
+      "A relative size for a backlog item (bigger number, more work or uncertainty), used by many teams for forecasting. An optional practice: the Scrum Guide doesn't mention it.",
+    module: "sprint-planning",
+  },
+  velocity: {
+    term: "Velocity",
+    definition:
+      "How much work (often in story points) a team actually finished in recent Sprints, used by that team to forecast. Optional, not in the Scrum Guide, and not a measure of productivity or a way to compare teams.",
+    module: "sprint-planning",
+  },
 } satisfies Record<string, GlossaryEntry>;
