@@ -126,4 +126,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "rag-systems/query-understanding": () => import("./rag-systems/query-understanding"),
   "rag-systems/contextual-retrieval": () => import("./rag-systems/contextual-retrieval"),
   "rag-systems/prompt-assembly": () => import("./rag-systems/prompt-assembly"),
+  "rag-systems/tables-sql": () => import("./rag-systems/tables-sql"),
 };

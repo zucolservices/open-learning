@@ -3168,17 +3168,18 @@ const ragSystems: Track = {
           minutes: 25,
           signature:
             "Route questions to text search or to SQL over a table, and see which kinds of question each gets right",
-          formats: ["branching-scenario", "checkpoint"],
+          formats: ["simulation", "fix-the-problem", "checkpoint"],
           concepts: [
             "Why counting and filtering don't work over text chunks",
             "Text-to-SQL and its risks",
             "Routing between retrieval and structured queries",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
+          terms: ["sql", "text-to-sql", "query-router", "semantic-layer"],
           prerequisites: ["prompt-assembly"],
           plain:
-            "'How many applications were approved in Pune last month?' is a database question, not a search question. Good systems recognise this and query the data directly, carefully, instead of guessing from text.",
+            "'How many water connections were approved last month?' is a database question, not a search question. Good systems recognise this and query the data directly, carefully, instead of guessing from text.",
         },
         {
           slug: "graphrag",

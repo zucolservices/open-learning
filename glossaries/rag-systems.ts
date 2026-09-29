@@ -290,4 +290,16 @@ export const ragSystems = {
       "The finding (Liu et al., 2023) that language models used information at the start or end of a long prompt better than information in the middle. Newer models show less of this on simple lookups, but long, noisy prompts still hurt.",
     module: "prompt-assembly",
   },
+  "text-to-sql": {
+    term: "Text-to-SQL",
+    definition:
+      "A language model turning a question in plain words into a SQL query that a database then runs. Works well on clear, well-described tables; wrong queries often still run and return a plausible number.",
+    module: "tables-sql",
+  },
+  "query-router": {
+    term: "Query router",
+    definition:
+      "A first step that decides where a question should go, such as text search, a database query or both. It can be simple rules, a small classifier or a language model choosing a tool.",
+    module: "tables-sql",
+  },
 } satisfies Record<string, GlossaryEntry>;
