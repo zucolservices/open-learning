@@ -406,9 +406,9 @@ export function CompareSetups() {
       </p>
       <p>
         Look at the numbers honestly. Hit rate is 1.0 for everyone, so it tells you nothing here.
-        Keyword search trails clearly. The other three are close, and most questions score the same
-        everywhere; only a handful decide the ranking. Those few are where to look, and where to add
-        more questions like them.
+        Keyword search trails clearly. The other three are close: vector and the reranker differ on
+        just three questions, and the reranker isn&apos;t better on all of them. Those few questions
+        decide the ranking. They are where to look, and where to add more questions like them.
       </p>
     </StepLayout>
   );
