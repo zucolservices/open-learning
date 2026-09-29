@@ -3297,7 +3297,7 @@ const ragSystems: Track = {
           summary: "Permissions, poisoned documents and personal data.",
           minutes: 30,
           signature:
-            "An assistant leaks a salary sheet and obeys an instruction hidden in a document: find each hole and close it (a safe simulation)",
+            "An assistant leaks a salary sheet and obeys an instruction hidden in a document: try each defence and see which hold (a safe simulation)",
           formats: ["fix-the-problem", "checkpoint"],
           concepts: [
             "Document-level permissions at retrieval time",
@@ -3305,8 +3305,9 @@ const ragSystems: Track = {
             "Personal data and India's DPDP Act",
             "Vector and embedding weaknesses (OWASP)",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
+          terms: ["permission-aware-retrieval", "indirect-prompt-injection", "prompt-injection"],
           prerequisites: ["prompt-assembly"],
           plain:
             "A RAG system can show people documents they aren't allowed to see, and a document can contain hidden instructions the model obeys. Permissions must be checked when searching, and retrieved text must be treated as data, not commands.",

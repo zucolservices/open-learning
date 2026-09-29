@@ -386,4 +386,16 @@ export const ragSystems = {
       "Using a language model to grade answers, for example pass/fail on faithfulness. Scales cheaply but has habits (leniency, liking longer answers, sensitivity to order), so it must be checked against human labels.",
     module: "eval-answers",
   },
+  "permission-aware-retrieval": {
+    term: "Permission-aware retrieval",
+    definition:
+      "Searching only the documents the signed-in user is allowed to open, by filtering inside the search using their identity from the server. Forbidden text never reaches the model, so it can't leak.",
+    module: "rag-security",
+  },
+  "indirect-prompt-injection": {
+    term: "Indirect prompt injection",
+    definition:
+      "Instructions hidden in content the system retrieves (a document, email or web page) rather than typed by the user. The model may follow them. No prompt-based defence is reliable, so limit what a fooled model can do.",
+    module: "rag-security",
+  },
 } satisfies Record<string, GlossaryEntry>;
