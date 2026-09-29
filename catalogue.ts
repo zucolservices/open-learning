@@ -3040,11 +3040,12 @@ const ragSystems: Track = {
             "Reciprocal rank fusion",
             "Weighting and tuning hybrid search",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["bm25", "embeddings-retrieval"],
           plain:
             "Keyword search is good at exact terms such as scheme names and form numbers; vector search is good at meaning. Hybrid search runs both and merges the results, so each covers the other's blind spots.",
+          terms: ["hybrid-search", "rrf", "bm25", "dense-retrieval", "learned-sparse"],
         },
         {
           slug: "reranking",

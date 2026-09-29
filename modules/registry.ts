@@ -121,4 +121,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "rag-systems/bm25": () => import("./rag-systems/bm25"),
   "rag-systems/embeddings-retrieval": () => import("./rag-systems/embeddings-retrieval"),
   "rag-systems/vector-indexes": () => import("./rag-systems/vector-indexes"),
+  "rag-systems/hybrid-search": () => import("./rag-systems/hybrid-search"),
 };

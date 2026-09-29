@@ -200,4 +200,22 @@ export const ragSystems = {
       "Storing each number in a vector with fewer bits (float32 → int8 → 1 bit, or product quantization codes) to save memory, trading a little accuracy. Often paired with an exact re-check of the top results.",
     module: "vector-indexes",
   },
+  "hybrid-search": {
+    term: "Hybrid search",
+    definition:
+      "Running keyword search (such as BM25) and vector search on the same question and merging the two ranked lists, so each covers the other's blind spots.",
+    module: "hybrid-search",
+  },
+  rrf: {
+    term: "Reciprocal rank fusion (RRF)",
+    definition:
+      "Merging ranked lists by giving each item 1/(k + its rank) from every list and adding them up (Cormack, Clarke & Büttcher, 2009; k = 60 is the usual default, though some engines use other values). Uses only positions, so scores on different scales don't matter.",
+    module: "hybrid-search",
+  },
+  "learned-sparse": {
+    term: "Learned sparse retrieval",
+    definition:
+      "A model (such as SPLADE, or bge-m3's sparse mode) that turns text into keyword-style weights, including related words that don't appear in it, so it can be searched like an inverted index.",
+    module: "hybrid-search",
+  },
 } satisfies Record<string, GlossaryEntry>;
