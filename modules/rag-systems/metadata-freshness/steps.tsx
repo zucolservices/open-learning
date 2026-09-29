@@ -421,7 +421,10 @@ const TAKEAWAYS: [string, string][] = [
   ["Stale is silent", "Old rules retrieve as easily as new ones; nothing warns you."],
   ["Sync, delete, filter", "Add and update changes, remove what's gone, filter what's superseded."],
   ["Stable IDs and hashes", "Replace a document's chunks cleanly, and skip unchanged text."],
-  ["Deletion means everywhere", "Chunks and vectors are copies too."],
+  [
+    "Deletion means everywhere",
+    "The file, its chunks, its vectors and any caches. Removing a file from a folder doesn't tell the index.",
+  ],
 ];
 
 export function Wrap() {
@@ -450,6 +453,18 @@ export function Wrap() {
         Freshness is mostly plumbing: a scheduled sync that notices new, changed and deleted files,
         plus a few metadata fields you can filter on. It&apos;s unglamorous, and it&apos;s where
         many real assistants go wrong.
+      </p>
+      <p className="text-muted text-sm">
+        Filter <em>during</em> search where you can. If the index first finds its 40 nearest chunks
+        and then applies a filter that only 10% of chunks match, about 4 survive (the pgvector
+        docs&apos; own example). Most vector databases now support filtering during the search
+        itself.
+      </p>
+      <p className="text-muted text-sm">
+        India&apos;s DPDP Act gives people a right to erasure (section 12) and requires erasing
+        personal data once its purpose is served (section 8(7)); under the 2025 Rules these duties
+        apply from May 2027. For RAG that means chunks and vectors too: researchers have rebuilt 92%
+        of short texts exactly from their embeddings (Morris et al., 2023).
       </p>
       <p>Next chapter: how search itself works, starting with keywords.</p>
     </StepLayout>
