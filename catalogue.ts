@@ -2851,10 +2851,18 @@ const ragSystems: Track = {
             "Retrieval-augmented generation in one picture",
             "RAG vs fine-tuning vs long context",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           plain:
             "A language model only knows what it saw in training, and it can't see your company's documents. RAG finds the relevant passages first and hands them to the model with the question, like letting a student bring the textbook to an exam.",
+          terms: [
+            "rag",
+            "parametric-memory",
+            "non-parametric-memory",
+            "knowledge-cutoff",
+            "hallucination",
+            "fine-tuning",
+          ],
         },
         {
           slug: "rag-end-to-end",
