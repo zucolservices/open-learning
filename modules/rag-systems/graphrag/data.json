@@ -1,0 +1,1358 @@
+{
+  "notes": [
+    {
+      "id": "G-101",
+      "date": "2026-07-02",
+      "text": "Ward 4: The drain on Station Road has been blocked for two weeks. Water is standing outside the bus depot."
+    },
+    {
+      "id": "G-104",
+      "date": "2026-07-06",
+      "text": "Ward 4: Mosquitoes everywhere near Station Road since the drain overflowed. Please send the fogging team."
+    },
+    {
+      "id": "G-109",
+      "date": "2026-07-11",
+      "text": "Ward 5: Stagnant water in the empty plot behind Nehru School. Children are getting mosquito bites in class."
+    },
+    {
+      "id": "G-112",
+      "date": "2026-07-15",
+      "text": "Ward 4: The Station Road health centre says fever cases have doubled this month. Residents blame the blocked drain."
+    },
+    {
+      "id": "G-118",
+      "date": "2026-07-21",
+      "text": "Ward 5: Nehru School has asked the corporation to fill the plot and spray for mosquitoes before the monsoon peaks."
+    },
+    {
+      "id": "G-122",
+      "date": "2026-07-03",
+      "text": "Ward 9: Very low water pressure on Lake Road in the mornings. Tanks on the first floor stay empty."
+    },
+    {
+      "id": "G-125",
+      "date": "2026-07-08",
+      "text": "Ward 9: Sagar Infra has dug up Lake Road to replace the old water pipeline. No warning signs at night."
+    },
+    {
+      "id": "G-127",
+      "date": "2026-07-14",
+      "text": "Ward 9: A scooter fell into the trench left by Sagar Infra on Lake Road. The rider was injured."
+    },
+    {
+      "id": "G-131",
+      "date": "2026-07-19",
+      "text": "Ward 3: Sagar Infra finished the pipeline on Canal Street but left the road full of potholes."
+    },
+    {
+      "id": "G-133",
+      "date": "2026-07-24",
+      "text": "Ward 3: Water pressure on Canal Street is better since the new pipeline, but the potholes have not been repaired."
+    },
+    {
+      "id": "G-136",
+      "date": "2026-07-29",
+      "text": "Ward 9: Water supply on Lake Road stopped for three days while Sagar Infra connected the new pipeline."
+    },
+    {
+      "id": "G-140",
+      "date": "2026-07-04",
+      "text": "Ward 2: Garbage was not collected for four days after the new segregation rules started. Bins near Gandhi Market are overflowing."
+    },
+    {
+      "id": "G-142",
+      "date": "2026-07-09",
+      "text": "Ward 2: Collection staff refuse mixed waste since Circular 14/2026, but many households were never told about the rules."
+    },
+    {
+      "id": "G-145",
+      "date": "2026-07-13",
+      "text": "Ward 7: Stray dogs are tearing open the garbage bags left on Mill Road because pickups are irregular."
+    },
+    {
+      "id": "G-148",
+      "date": "2026-07-18",
+      "text": "Ward 2: Traders at Gandhi Market say the smell from overflowing bins is driving customers away."
+    },
+    {
+      "id": "G-151",
+      "date": "2026-07-23",
+      "text": "Ward 7: A child was bitten by a stray dog on Mill Road near the garbage heap."
+    },
+    {
+      "id": "G-154",
+      "date": "2026-07-28",
+      "text": "Ward 7: Residents on Mill Road ask for a door-to-door awareness drive on Circular 14/2026 segregation rules."
+    },
+    {
+      "id": "G-160",
+      "date": "2026-07-05",
+      "text": "Ward 11: Six streetlights on Temple Street have been dark for a month."
+    },
+    {
+      "id": "G-163",
+      "date": "2026-07-10",
+      "text": "Ward 11: Women walking home from the Temple Street bus stop say the dark street feels unsafe."
+    },
+    {
+      "id": "G-166",
+      "date": "2026-07-16",
+      "text": "Ward 11: Brightway Electricals, the maintenance contractor, says it is waiting for new LED fittings."
+    },
+    {
+      "id": "G-169",
+      "date": "2026-07-22",
+      "text": "Ward 12: Streetlights on the Temple Street extension switch on at noon and off at night. Brightway Electricals has not fixed the timer."
+    },
+    {
+      "id": "G-172",
+      "date": "2026-07-27",
+      "text": "Ward 11: A chain-snatching was reported on Temple Street after dark. Police asked the corporation to restore the lights."
+    },
+    {
+      "id": "G-180",
+      "date": "2026-07-07",
+      "text": "Ward 1: The citizen portal was down for two days, so shopkeepers could not renew trade licences before the deadline."
+    },
+    {
+      "id": "G-183",
+      "date": "2026-07-12",
+      "text": "Ward 2: Gandhi Market traders were fined for late trade licence renewal although the citizen portal was down."
+    },
+    {
+      "id": "G-186",
+      "date": "2026-07-17",
+      "text": "Ward 1: Complaints filed during the portal outage did not get tracking numbers and seem to be lost."
+    },
+    {
+      "id": "G-189",
+      "date": "2026-07-25",
+      "text": "Ward 1: Shopkeepers ask the corporation to waive late fines for the days the citizen portal was down."
+    },
+    {
+      "id": "G-192",
+      "date": "2026-07-30",
+      "text": "Ward 6: Pothole outside the Ward 6 office on Market Road has been growing since June."
+    },
+    {
+      "id": "G-195",
+      "date": "2026-07-31",
+      "text": "Ward 8: Birth certificate still not ready after 20 days; the counter says the printer is broken."
+    }
+  ],
+  "extract": {
+    "G-101": "{\n  \"entities\": [\n    {\"name\": \"Ward 4\", \"type\": \"place\"},\n    {\"name\": \"Station Road\", \"type\": \"place\"},\n    {\"name\": \"bus depot\", \"type\": \"place\"},\n    {\"name\": \"blocked drain\", \"type\": \"problem\"},\n    {\"name\": \"water\", \"type\": \"people\"}\n  ],\n  \"relations\": [\n    {\"source\": \"blocked drain\", \"target\": \"Station Road\", \"relation\": \"blocked\"},\n    {\"source\": \"blocked drain\", \"target\": \"bus depot\", \"relation\": \"blocked\"},\n    {\"source\": \"blocked drain\", \"target\": \"Ward 4\", \"relation\": \"located in\"},\n    {\"source\": \"water\", \"target\": \"blocked drain\", \"relation\": \"accumulated in\"}\n  ]\n}",
+    "G-104": "{\"entities\": [\n  {\"name\": \"Ward 4\", \"type\": \"place\"},\n  {\"name\": \"Station Road\", \"type\": \"place\"},\n  {\"name\": \"fogging team\", \"type\": \"organisation\"}\n],\n \"relations\": [\n  {\"source\": \"Ward 4\", \"target\": \"Station Road\", \"relation\": \"is near\"},\n  {\"source\": \"Ward 4\", \"target\": \"fogging team\", \"relation\": \"needs to send\"}\n]}",
+    "G-109": "{\"entities\": [\n  {\"name\": \"Ward 5\", \"type\": \"place\"},\n  {\"name\": \"Nehru School\", \"type\": \"place\"},\n  {\"name\": \"children\", \"type\": \"people\"},\n  {\"name\": \"mosquito bites\", \"type\": \"problem\"},\n  {\"name\": \"stagnant water\", \"type\": \"problem\"}\n],\n \"relations\": [\n  {\"source\": \"Ward 5\", \"target\": \"Nehru School\", \"relation\": \"is behind\"},\n  {\"source\": \"stagnant water\", \"target\": \"children\", \"relation\": \"causing\"},\n  {\"source\": \"stagnant water\", \"target\": \"mosquito bites\", \"relation\": \"leading to\"}\n]}\n\nNote: In this knowledge graph, \"Nehru School\" and \"Ward 5\" are considered places (wards and buildings). However, they are related to each other (one being behind the other). This is a simplified interpretation and may not accurately reflect the real-world situation.",
+    "G-112": "{\"entities\": [\n  {\"name\": \"Ward 4\", \"type\": \"place\"},\n  {\"name\": \"The Station Road health centre\", \"type\": \"organisation\"},\n  {\"name\": \"fever cases\", \"type\": \"problem\"},\n  {\"name\": \"blocked drain\", \"type\": \"problem\"}\n],\n \"relations\": [\n  {\"source\": \"Ward 4\", \"target\": \"The Station Road health centre\", \"relation\": \"says\"},\n  {\"source\": \"The Station Road health centre\", \"target\": \"fever cases\", \"relation\": \"report on\"},\n  {\"source\": \"Ward 4\", \"target\": \"blocked drain\", \"relation\": \"blame\"}\n]}",
+    "G-118": "{\"entities\": [\n  {\"name\": \"Ward 5\", \"type\": \"place\"},\n  {\"name\": \"Nehru School\", \"type\": \"organisation\"},\n  {\"name\": \"Corporation\", \"type\": \"organisation\"},\n  {\"name\": \"Plot\", \"type\": \"place\"},\n  {\"name\": \"Mosquitoes\", \"type\": \"problem\"},\n  {\"name\": \"Monsoon\", \"type\": \"problem\"}\n],\n \"relations\": [\n  {\"source\": \"Nehru School\", \"target\": \"Corporation\", \"relation\": \"requested\"},\n  {\"source\": \"Corporation\", \"target\": \"Plot\", \"relation\": \"filled\"},\n  {\"source\": \"Corporation\", \"target\": \"Plot\", \"relation\": \"sprayed\"},\n  {\"source\": \"Monsoon\", \"target\": \"Mosquitoes\", \"relation\": \"cause\"}\n]}",
+    "G-122": "{\"entities\": [\n  {\"name\": \"Ward 9\", \"type\": \"place\"},\n  {\"name\": \"Lake Road\", \"type\": \"place\"},\n  {\"name\": \"water pressure\", \"type\": \"problem\"},\n  {\"name\": \"tanks\", \"type\": \"place\"},\n  {\"name\": \"first floor\", \"type\": \"place\"}\n],\n \"relations\": [\n  {\"source\": \"Ward 9\", \"target\": \"Lake Road\", \"relation\": \"is on\"},\n  {\"source\": \"Lake Road\", \"target\": \"water pressure\", \"relation\": \"has issue with\"},\n  {\"source\": \"Ward 9\", \"target\": \"tanks\", \"relation\": \"has\"},\n  {\"source\": \"Ward 9\", \"target\": \"first floor\", \"relation\": \"has\"}\n]}",
+    "G-125": "{\"entities\": [\n  {\"name\": \"Ward 9\", \"type\": \"place\"},\n  {\"name\": \"Sagar Infra\", \"type\": \"organisation\"},\n  {\"name\": \"Lake Road\", \"type\": \"place\"},\n  {\"name\": \"old water pipeline\", \"type\": \"problem\"},\n  {\"name\": \"warning signs\", \"type\": \"document\"}\n],\n \"relations\": [\n  {\"source\": \"Sagar Infra\", \"target\": \"Lake Road\", \"relation\": \"has dug up\"},\n  {\"source\": \"Sagar Infra\", \"target\": \"old water pipeline\", \"relation\": \"replaced\"},\n  {\"source\": \"Sagar Infra\", \"target\": \"warning signs\", \"relation\": \"did not put up\"}\n]}",
+    "G-127": "{\"entities\": [\n  {\"name\": \"Ward 9\", \"type\": \"place\"},\n  {\"name\": \"Sagar Infra\", \"type\": \"organisation\"},\n  {\"name\": \"Lake Road\", \"type\": \"place\"},\n  {\"name\": \"rider\", \"type\": \"people\"},\n  {\"name\": \"injured\", \"type\": \"problem\"}\n],\n \"relations\": [\n  {\"source\": \"Sagar Infra\", \"target\": \"Lake Road\", \"relation\": \"left\"},\n  {\"source\": \"Sagar Infra\", \"target\": \"Ward 9\", \"relation\": \"on\"},\n  {\"source\": \"Sagar Infra\", \"target\": \"rider\", \"relation\": \"fell to\"},\n  {\"source\": \"rider\", \"target\": \"Ward 9\", \"relation\": \"in\"}\n]}\n\nNote: In this knowledge graph, \"Lake Road\" and \"Ward 9\" are considered places where the incident occurred. There is a relation from \"Sagar Infra\" to \"Lake Road\" indicating that they left a trench on the road. There is also a relation from \"Sagar Infra\" to \"rider\" indicating that the scooter fell to the rider. Lastly, there is a relation from \"rider\" to \"Ward 9\" indicating that the injured rider was in Ward 9.",
+    "G-131": "{\n  \"entities\": [\n    {\"name\": \"Ward 3\", \"type\": \"place\"},\n    {\"name\": \"Sagar Infra\", \"type\": \"organisation\"},\n    {\"name\": \"Canal Street\", \"type\": \"place\"},\n    {\"name\": \"potholes\", \"type\": \"problem\"}\n  ],\n  \"relations\": [\n    {\"source\": \"Sagar Infra\", \"target\": \"Canal Street\", \"relation\": \"finished\"},\n    {\"source\": \"Sagar Infra\", \"target\": \"potholes\", \"relation\": \"left\"}\n  ]\n}",
+    "G-133": "{\n  \"entities\": [\n    {\"name\": \"Ward 3\", \"type\": \"place\"},\n    {\"name\": \"Canal Street\", \"type\": \"place\"},\n    {\"name\": \"new pipeline\", \"type\": \"document\"},\n    {\"name\": \"potholes\", \"type\": \"problem\"}\n  ],\n  \"relations\": [\n    {\"source\": \"Ward 3\", \"target\": \"Canal Street\", \"relation\": \"has\"},\n    {\"source\": \"new pipeline\", \"target\": \"Ward 3\", \"relation\": \"improved\"},\n    {\"source\": \"potholes\", \"target\": \"Ward 3\", \"relation\": \"not_repaired\"}\n  ]\n}",
+    "G-136": "{\"entities\": [\n  {\"name\": \"Ward 9\", \"type\": \"place\"},\n  {\"name\": \"Lake Road\", \"type\": \"place\"},\n  {\"name\": \"Sagar Infra\", \"type\": \"organisation\"},\n  {\"name\": \"new pipeline\", \"type\": \"document\"}\n],\n \"relations\": [\n  {\"source\": \"Ward 9\", \"target\": \"Lake Road\", \"relation\": \"has\"},\n  {\"source\": \"Lake Road\", \"target\": \"Sagar Infra\", \"relation\": \"connected\"},\n  {\"source\": \"Sagar Infra\", \"target\": \"new pipeline\", \"relation\": \"connected\"}\n]}",
+    "G-140": "{\"entities\": [\n  {\"name\": \"Ward 2\", \"type\": \"place\"},\n  {\"name\": \"Garbage\", \"type\": \"problem\"},\n  {\"name\": \"Gandhi Market\", \"type\": \"place\"},\n  {\"name\": \"Bins\", \"type\": \"place\"}\n],\n \"relations\": [\n  {\"source\": \"Ward 2\", \"target\": \"Garbage\", \"relation\": \"was not collected\"},\n  {\"source\": \"Ward 2\", \"target\": \"Bins\", \"relation\": \"near\"},\n  {\"source\": \"Ward 2\", \"target\": \"Garbage\", \"relation\": \"overflowing bins\"}\n]}",
+    "G-142": "```json\n{\n  \"entities\": [\n    {\"name\": \"Ward 2\", \"type\": \"place\"},\n    {\"name\": \"Circular 14/2026\", \"type\": \"document\"},\n    {\"name\": \"Collection staff\", \"type\": \"organisation\"},\n    {\"name\": \"mixed waste\", \"type\": \"problem\"},\n    {\"name\": \"households\", \"type\": \"people\"}\n  ],\n  \"relations\": [\n    {\"source\": \"Circular 14/2026\", \"target\": \"Ward 2\", \"relation\": \"applies to\"},\n    {\"source\": \"Circular 14/2026\", \"target\": \"Collection staff\", \"relation\": \"communicates to\"},\n    {\"source\": \"Collection staff\", \"target\": \"mixed waste\", \"relation\": \"refuse\"},\n    {\"source\": \"Collection staff\", \"target\": \"households\", \"relation\": \"have not informed\"}\n  ]\n}\n```",
+    "G-145": "```json\n{\n  \"entities\": [\n    {\"name\": \"Ward 7\", \"type\": \"place\"},\n    {\"name\": \"Mill Road\", \"type\": \"place\"},\n    {\"name\": \"garbage bags\", \"type\": \"document\"},\n    {\"name\": \"stray dogs\", \"type\": \"people\"},\n    {\"name\": \"garbage pickups\", \"type\": \"organisational\"}\n  ],\n  \"relations\": [\n    {\"source\": \"stray dogs\", \"target\": \"garbage bags\", \"relation\": \"tearing open\"},\n    {\"source\": \"garbage bags\", \"target\": \"Mill Road\", \"relation\": \"left on\"},\n    {\"source\": \"garbage bags\", \"target\": \"garbage pickups\", \"relation\": \"affected by\"}\n  ]\n}\n```",
+    "G-148": "{\n  \"entities\": [\n    {\"name\": \"Ward 2\", \"type\": \"place\"},\n    {\"name\": \"Gandhi Market\", \"type\": \"place\"},\n    {\"name\": \"traders\", \"type\": \"people\"},\n    {\"name\": \"smell\", \"type\": \"problem\"},\n    {\"name\": \"overflowing bins\", \"type\": \"problem\"},\n    {\"name\": \"customers\", \"type\": \"people\"}\n  ],\n  \"relations\": [\n    {\"source\": \"Ward 2\", \"target\": \"Gandhi Market\", \"relation\": \"contains\"},\n    {\"source\": \"traders\", \"target\": \"Gandhi Market\", \"relation\": \"operate\"},\n    {\"source\": \"traders\", \"target\": \"Ward 2\", \"relation\": \"reside\"},\n    {\"source\": \"overflowing bins\", \"target\": \"Ward 2\", \"relation\": \"cause\"},\n    {\"source\": \"overflowing bins\", \"target\": \"Gandhi Market\", \"relation\": \"cause\"},\n    {\"source\": \"customers\", \"target\": \"Gandhi Market\", \"relation\": \"shop\"}\n  ]\n}",
+    "G-151": "{\"entities\": [{\"name\": \"Ward 7\", \"type\": \"place\"}, {\"name\": \"Mill Road\", \"type\": \"place\"}, {\"name\": \"garbage heap\", \"type\": \"place\"}, {\"name\": \"stray dog\", \"type\": \"organism\"}],\n \"relations\": [{\"source\": \"stray dog\", \"target\": \"Mill Road\", \"relation\": \"located near\"}, {\"source\": \"stray dog\", \"target\": \"garbage heap\", \"relation\": \"near\"}, {\"source\": \"child\", \"target\": \"stray dog\", \"relation\": \"bitten by\"}]}",
+    "G-154": "{\"entities\": [\n  {\"name\": \"Ward 7\", \"type\": \"place\"},\n  {\"name\": \"Mill Road\", \"type\": \"place\"},\n  {\"name\": \"Circular 14/2026\", \"type\": \"document\"}\n],\n \"relations\": [\n  {\"source\": \"Residents on Mill Road\", \"target\": \"Ward 7\", \"relation\": \"reside\"},\n  {\"source\": \"Residents on Mill Road\", \"target\": \"Circular 14/2026\", \"relation\": \"refer to\"},\n  {\"source\": \"Ward 7\", \"target\": \"Circular 14/2026\", \"relation\": \"contain\"}\n]}\n\nNote: In this knowledge graph, \"reside\" and \"refer to\" are inferred relations to describe the situation accurately. There are no direct relations stated in the complaint, hence inferred relations are used to connect the entities logically.",
+    "G-160": "{\n  \"entities\": [\n    {\"name\": \"Ward 11\", \"type\": \"place\"},\n    {\"name\": \"Temple Street\", \"type\": \"place\"},\n    {\"name\": \"Streetlights\", \"type\": \"place\"},\n    {\"name\": \"Dark\", \"type\": \"problem\"}\n  ],\n  \"relations\": [\n    {\"source\": \"Ward 11\", \"target\": \"Streetlights\", \"relation\": \"have\"},\n    {\"source\": \"Streetlights\", \"target\": \"Dark\", \"relation\": \"been\"}\n  ]\n}",
+    "G-163": "{\n  \"entities\": [\n    {\"name\": \"Ward 11\", \"type\": \"place\"},\n    {\"name\": \"Temple Street bus stop\", \"type\": \"place\"},\n    {\"name\": \"Women\", \"type\": \"people\"},\n    {\"name\": \"Dark street\", \"type\": \"problem\"}\n  ],\n  \"relations\": [\n    {\"source\": \"Temple Street bus stop\", \"target\": \"Ward 11\", \"relation\": \"is located in\"},\n    {\"source\": \"Women\", \"target\": \"Dark street\", \"relation\": \"perceive as unsafe\"}\n  ]\n}",
+    "G-166": "{\"entities\": [\n  {\"name\": \"Ward 11\", \"type\": \"place\"},\n  {\"name\": \"Brightway Electricals\", \"type\": \"organisation\"},\n  {\"name\": \"maintenance contractor\", \"type\": \"organisation\"}\n],\n \"relations\": [\n  {\"source\": \"Ward 11\", \"target\": \"Brightway Electricals\", \"relation\": \"employs\"},\n  {\"source\": \"Ward 11\", \"target\": \"maintenance contractor\", \"relation\": \"employs\"}\n]}\n\nNote: In this case, the maintenance contractor is also an organization, so it could be seen as a sub-type of organization. However, for simplicity, I've included it in the same list as Brightway Electricals. If needed, we could create a separate list for maintenance contractors.",
+    "G-169": "{\"entities\": [\n  {\"name\": \"Ward 12\", \"type\": \"place\"},\n  {\"name\": \"Temple Street extension\", \"type\": \"place\"},\n  {\"name\": \"Brightway Electricals\", \"type\": \"organisation\"},\n  {\"name\": \"timer\", \"type\": \"document\"}\n],\n \"relations\": [\n  {\"source\": \"Streetlights on the Temple Street extension\", \"target\": \"switch on at noon\", \"relation\": \"set to\"},\n  {\"source\": \"Streetlights on the Temple Street extension\", \"target\": \"switch off at night\", \"relation\": \"set to\"},\n  {\"source\": \"Brightway Electricals\", \"target\": \"timer\", \"relation\": \"has not fixed\"}\n]}",
+    "G-172": "```json\n{\n  \"entities\": [\n    {\"name\": \"Ward 11\", \"type\": \"place\"},\n    {\"name\": \"Temple Street\", \"type\": \"place\"},\n    {\"name\": \"Police\", \"type\": \"organisation\"},\n    {\"name\": \"Corporation\", \"type\": \"organisation\"},\n    {\"name\": \"Lights\", \"type\": \"document\"}\n  ],\n  \"relations\": [\n    {\"source\": \"Ward 11\", \"target\": \"Temple Street\", \"relation\": \"contains\"},\n    {\"source\": \"Temple Street\", \"target\": \"Lights\", \"relation\": \"has\"},\n    {\"source\": \"Police\", \"target\": \"Corporation\", \"relation\": \"requested\"},\n    {\"source\": \"Corporation\", \"target\": \"Lights\", \"relation\": \"restore\"}\n  ]\n}\n```",
+    "G-180": "{\n  \"entities\": [\n    {\"name\": \"Ward 1\", \"type\": \"place\"},\n    {\"name\": \"citizen portal\", \"type\": \"document\"},\n    {\"name\": \"shopkeepers\", \"type\": \"people\"},\n    {\"name\": \"trade licences\", \"type\": \"document\"}\n  ],\n  \"relations\": [\n    {\"source\": \"citizen portal\", \"target\": \"Ward 1\", \"relation\": \"was located\"},\n    {\"source\": \"citizen portal\", \"target\": \"shopkeepers\", \"relation\": \"affected\"},\n    {\"source\": \"citizen portal\", \"target\": \"trade licences\", \"relation\": \"related to\"}\n  ]\n}",
+    "G-183": "{\n  \"entities\": [\n    {\"name\": \"Ward 2\", \"type\": \"place\"},\n    {\"name\": \"Gandhi Market\", \"type\": \"place\"},\n    {\"name\": \"traders\", \"type\": \"people\"},\n    {\"name\": \"trade licence\", \"type\": \"document\"},\n    {\"name\": \"citizen portal\", \"type\": \"organisation\"}\n  ],\n  \"relations\": [\n    {\"source\": \"Ward 2\", \"target\": \"Gandhi Market\", \"relation\": \"contains\"},\n    {\"source\": \"traders\", \"target\": \"trade licence\", \"relation\": \"required\"},\n    {\"source\": \"citizen portal\", \"target\": \"traders\", \"relation\": \"affected\"}\n  ]\n}",
+    "G-186": "```json\n{\n  \"entities\": [\n    {\"name\": \"Ward 1\", \"type\": \"place\"},\n    {\"name\": \"Complaints\", \"type\": \"people\"},\n    {\"name\": \"Portal\", \"type\": \"document\"},\n    {\"name\": \"Tracking numbers\", \"type\": \"document\"}\n  ],\n  \"relations\": [\n    {\"source\": \"Complaints\", \"target\": \"Portal\", \"relation\": \"affected by\"},\n    {\"source\": \"Complaints\", \"target\": \"Tracking numbers\", \"relation\": \"lack of\"}\n  ]\n}\n```",
+    "G-189": "```json\n{\n  \"entities\": [\n    {\"name\": \"Ward 1\", \"type\": \"place\"},\n    {\"name\": \"Corporation\", \"type\": \"organisation\"},\n    {\"name\": \"Citizen Portal\", \"type\": \"document\"},\n    {\"name\": \"Shopkeepers\", \"type\": \"people\"}\n  ],\n  \"relations\": [\n    {\"source\": \"Ward 1\", \"target\": \"Corporation\", \"relation\": \"requested\"},\n    {\"source\": \"Corporation\", \"target\": \"Citizen Portal\", \"relation\": \"was_down\"},\n    {\"source\": \"Shopkeepers\", \"target\": \"Corporation\", \"relation\": \"asked\"}\n  ]\n}\n```",
+    "G-192": "{\"entities\": [\n  {\"name\": \"Ward 6\", \"type\": \"place\"},\n  {\"name\": \"Ward 6 office\", \"type\": \"place\"},\n  {\"name\": \"Market Road\", \"type\": \"place\"}\n],\n \"relations\": [\n  {\"source\": \"Pothole\", \"target\": \"Ward 6 office\", \"relation\": \"located near\"},\n  {\"source\": \"Pothole\", \"target\": \"Market Road\", \"relation\": \"located on\"}\n]}\n\nNote: In this knowledge graph, \"Pothole\" is inferred from the problem mentioned (\"Pothole outside the Ward 6 office on Market Road\"). If \"Pothole\" needs to be explicitly named as an entity, it can be included in the entities list.",
+    "G-195": "{\"entities\": [\n  {\"name\": \"Ward 8\", \"type\": \"place\"},\n  {\"name\": \"birth certificate\", \"type\": \"document\"},\n  {\"name\": \"counter\", \"type\": \"organisation\"},\n  {\"name\": \"printer\", \"type\": \"organisation\"}\n],\n \"relations\": [\n  {\"source\": \"Ward 8\", \"target\": \"birth certificate\", \"relation\": \"has\"},\n  {\"source\": \"Ward 8\", \"target\": \"counter\", \"relation\": \"contains\"},\n  {\"source\": \"Ward 8\", \"target\": \"printer\", \"relation\": \"contains\"}\n]}"
+  },
+  "nodes": [
+    {
+      "id": "ward 4",
+      "label": "Ward 4",
+      "type": "place",
+      "notes": ["G-101", "G-104", "G-112"],
+      "c": 3,
+      "x": 0.8787,
+      "y": 0.1789
+    },
+    {
+      "id": "station road",
+      "label": "Station Road",
+      "type": "place",
+      "notes": ["G-101", "G-104"],
+      "c": 3,
+      "x": 0.9376,
+      "y": 0.1441
+    },
+    {
+      "id": "bus depot",
+      "label": "bus depot",
+      "type": "place",
+      "notes": ["G-101"],
+      "c": 3,
+      "x": 0.8462,
+      "y": 0.05
+    },
+    {
+      "id": "blocked drain",
+      "label": "blocked drain",
+      "type": "problem",
+      "notes": ["G-101", "G-112"],
+      "c": 3,
+      "x": 0.9026,
+      "y": 0.1022
+    },
+    {
+      "id": "water",
+      "label": "water",
+      "type": "people",
+      "notes": ["G-101"],
+      "c": 3,
+      "x": 0.97,
+      "y": 0.0537
+    },
+    {
+      "id": "fogging team",
+      "label": "fogging team",
+      "type": "organisation",
+      "notes": ["G-104"],
+      "c": 3,
+      "x": 0.78,
+      "y": 0.1968
+    },
+    {
+      "id": "ward 5",
+      "label": "Ward 5",
+      "type": "place",
+      "notes": ["G-109", "G-118"],
+      "c": 1,
+      "x": 0.28,
+      "y": 0.201
+    },
+    {
+      "id": "nehru school",
+      "label": "Nehru School",
+      "type": "place",
+      "notes": ["G-109", "G-118"],
+      "c": 1,
+      "x": 0.3326,
+      "y": 0.1778
+    },
+    {
+      "id": "children",
+      "label": "children",
+      "type": "people",
+      "notes": ["G-109"],
+      "c": 8,
+      "x": 0.0255,
+      "y": 0.83
+    },
+    {
+      "id": "mosquito bites",
+      "label": "mosquito bites",
+      "type": "problem",
+      "notes": ["G-109"],
+      "c": 8,
+      "x": 0.0455,
+      "y": 0.89
+    },
+    {
+      "id": "stagnant water",
+      "label": "stagnant water",
+      "type": "problem",
+      "notes": ["G-109"],
+      "c": 8,
+      "x": 0.0655,
+      "y": 0.83
+    },
+    {
+      "id": "station road health centre",
+      "label": "The Station Road health centre",
+      "type": "organisation",
+      "notes": ["G-112"],
+      "c": 3,
+      "x": 0.9048,
+      "y": 0.252
+    },
+    {
+      "id": "fever cases",
+      "label": "fever cases",
+      "type": "problem",
+      "notes": ["G-112"],
+      "c": 3,
+      "x": 0.9238,
+      "y": 0.31
+    },
+    {
+      "id": "corporation",
+      "label": "Corporation",
+      "type": "organisation",
+      "notes": ["G-118", "G-172", "G-189"],
+      "c": 1,
+      "x": 0.4006,
+      "y": 0.1441
+    },
+    {
+      "id": "plot",
+      "label": "Plot",
+      "type": "place",
+      "notes": ["G-118"],
+      "c": 1,
+      "x": 0.3646,
+      "y": 0.0726
+    },
+    {
+      "id": "mosquitoes",
+      "label": "Mosquitoes",
+      "type": "problem",
+      "notes": ["G-118"],
+      "c": 12,
+      "x": 0.4191,
+      "y": 0.89
+    },
+    {
+      "id": "monsoon",
+      "label": "Monsoon",
+      "type": "problem",
+      "notes": ["G-118"],
+      "c": 12,
+      "x": 0.3991,
+      "y": 0.83
+    },
+    {
+      "id": "ward 9",
+      "label": "Ward 9",
+      "type": "place",
+      "notes": ["G-122", "G-125", "G-127", "G-136"],
+      "c": 0,
+      "x": 0.1678,
+      "y": 0.1299
+    },
+    {
+      "id": "lake road",
+      "label": "Lake Road",
+      "type": "place",
+      "notes": ["G-122", "G-125", "G-127", "G-136"],
+      "c": 0,
+      "x": 0.1536,
+      "y": 0.2199
+    },
+    {
+      "id": "water pressure",
+      "label": "water pressure",
+      "type": "problem",
+      "notes": ["G-122"],
+      "c": 0,
+      "x": 0.1831,
+      "y": 0.31
+    },
+    {
+      "id": "tanks",
+      "label": "tanks",
+      "type": "place",
+      "notes": ["G-122"],
+      "c": 0,
+      "x": 0.22,
+      "y": 0.1362
+    },
+    {
+      "id": "first floor",
+      "label": "first floor",
+      "type": "place",
+      "notes": ["G-122"],
+      "c": 0,
+      "x": 0.2041,
+      "y": 0.05
+    },
+    {
+      "id": "sagar infra",
+      "label": "Sagar Infra",
+      "type": "organisation",
+      "notes": ["G-125", "G-127", "G-131", "G-136"],
+      "c": 0,
+      "x": 0.1004,
+      "y": 0.1561
+    },
+    {
+      "id": "old water pipeline",
+      "label": "old water pipeline",
+      "type": "problem",
+      "notes": ["G-125"],
+      "c": 0,
+      "x": 0.0631,
+      "y": 0.237
+    },
+    {
+      "id": "warning signs",
+      "label": "warning signs",
+      "type": "document",
+      "notes": ["G-125"],
+      "c": 0,
+      "x": 0.0973,
+      "y": 0.2641
+    },
+    {
+      "id": "rider",
+      "label": "rider",
+      "type": "people",
+      "notes": ["G-127"],
+      "c": 0,
+      "x": 0.136,
+      "y": 0.0998
+    },
+    {
+      "id": "injured",
+      "label": "injured",
+      "type": "problem",
+      "notes": ["G-127"],
+      "c": 14,
+      "x": 0.5909,
+      "y": 0.83
+    },
+    {
+      "id": "ward 3",
+      "label": "Ward 3",
+      "type": "place",
+      "notes": ["G-131", "G-133"],
+      "c": 0,
+      "x": 0.03,
+      "y": 0.0591
+    },
+    {
+      "id": "canal street",
+      "label": "Canal Street",
+      "type": "place",
+      "notes": ["G-131", "G-133"],
+      "c": 0,
+      "x": 0.0589,
+      "y": 0.099
+    },
+    {
+      "id": "potholes",
+      "label": "potholes",
+      "type": "problem",
+      "notes": ["G-131", "G-133"],
+      "c": 0,
+      "x": 0.0704,
+      "y": 0.0507
+    },
+    {
+      "id": "new pipeline",
+      "label": "new pipeline",
+      "type": "document",
+      "notes": ["G-133", "G-136"],
+      "c": 0,
+      "x": 0.0421,
+      "y": 0.1399
+    },
+    {
+      "id": "ward 2",
+      "label": "Ward 2",
+      "type": "place",
+      "notes": ["G-140", "G-142", "G-148", "G-183"],
+      "c": 4,
+      "x": 0.1601,
+      "y": 0.5813
+    },
+    {
+      "id": "garbage",
+      "label": "Garbage",
+      "type": "problem",
+      "notes": ["G-140"],
+      "c": 4,
+      "x": 0.1577,
+      "y": 0.67
+    },
+    {
+      "id": "gandhi market",
+      "label": "Gandhi Market",
+      "type": "place",
+      "notes": ["G-140", "G-148", "G-183"],
+      "c": 4,
+      "x": 0.1386,
+      "y": 0.4987
+    },
+    {
+      "id": "bins",
+      "label": "Bins",
+      "type": "place",
+      "notes": ["G-140"],
+      "c": 4,
+      "x": 0.22,
+      "y": 0.6226
+    },
+    {
+      "id": "circular 14/2026",
+      "label": "Circular 14/2026",
+      "type": "document",
+      "notes": ["G-142", "G-154"],
+      "c": 6,
+      "x": 0.5914,
+      "y": 0.4907
+    },
+    {
+      "id": "collection staff",
+      "label": "Collection staff",
+      "type": "organisation",
+      "notes": ["G-142"],
+      "c": 6,
+      "x": 0.624,
+      "y": 0.5955
+    },
+    {
+      "id": "mixed waste",
+      "label": "mixed waste",
+      "type": "problem",
+      "notes": ["G-142"],
+      "c": 6,
+      "x": 0.72,
+      "y": 0.6432
+    },
+    {
+      "id": "households",
+      "label": "households",
+      "type": "people",
+      "notes": ["G-142"],
+      "c": 6,
+      "x": 0.566,
+      "y": 0.67
+    },
+    {
+      "id": "ward 7",
+      "label": "Ward 7",
+      "type": "place",
+      "notes": ["G-145", "G-151", "G-154"],
+      "c": 6,
+      "x": 0.6067,
+      "y": 0.41
+    },
+    {
+      "id": "mill road",
+      "label": "Mill Road",
+      "type": "place",
+      "notes": ["G-145", "G-151", "G-154"],
+      "c": 5,
+      "x": 0.375,
+      "y": 0.54
+    },
+    {
+      "id": "garbage bags",
+      "label": "garbage bags",
+      "type": "document",
+      "notes": ["G-145"],
+      "c": 5,
+      "x": 0.3859,
+      "y": 0.6196
+    },
+    {
+      "id": "stray dogs",
+      "label": "stray dogs",
+      "type": "people",
+      "notes": ["G-145"],
+      "c": 5,
+      "x": 0.47,
+      "y": 0.6641
+    },
+    {
+      "id": "garbage pickups",
+      "label": "garbage pickups",
+      "type": "organisational",
+      "notes": ["G-145"],
+      "c": 5,
+      "x": 0.3148,
+      "y": 0.67
+    },
+    {
+      "id": "traders",
+      "label": "traders",
+      "type": "people",
+      "notes": ["G-148", "G-183"],
+      "c": 4,
+      "x": 0.0946,
+      "y": 0.553
+    },
+    {
+      "id": "smell",
+      "label": "smell",
+      "type": "problem",
+      "notes": ["G-148"],
+      "c": 15,
+      "x": 0.6818,
+      "y": 0.83
+    },
+    {
+      "id": "overflowing bins",
+      "label": "overflowing bins",
+      "type": "problem",
+      "notes": ["G-148"],
+      "c": 4,
+      "x": 0.1867,
+      "y": 0.5162
+    },
+    {
+      "id": "customers",
+      "label": "customers",
+      "type": "people",
+      "notes": ["G-148"],
+      "c": 4,
+      "x": 0.1328,
+      "y": 0.41
+    },
+    {
+      "id": "garbage heap",
+      "label": "garbage heap",
+      "type": "place",
+      "notes": ["G-151"],
+      "c": 5,
+      "x": 0.28,
+      "y": 0.4159
+    },
+    {
+      "id": "stray dog",
+      "label": "stray dog",
+      "type": "organism",
+      "notes": ["G-151"],
+      "c": 5,
+      "x": 0.3641,
+      "y": 0.4604
+    },
+    {
+      "id": "child",
+      "label": "child",
+      "type": "?",
+      "notes": ["G-151"],
+      "c": 5,
+      "x": 0.4352,
+      "y": 0.41
+    },
+    {
+      "id": "residents on mill road",
+      "label": "Residents on Mill Road",
+      "type": "?",
+      "notes": ["G-154"],
+      "c": 6,
+      "x": 0.53,
+      "y": 0.4234
+    },
+    {
+      "id": "ward 11",
+      "label": "Ward 11",
+      "type": "place",
+      "notes": ["G-160", "G-163", "G-166", "G-172"],
+      "c": 2,
+      "x": 0.6535,
+      "y": 0.1865
+    },
+    {
+      "id": "temple street",
+      "label": "Temple Street",
+      "type": "place",
+      "notes": ["G-160", "G-172"],
+      "c": 2,
+      "x": 0.6897,
+      "y": 0.2564
+    },
+    {
+      "id": "streetlights",
+      "label": "Streetlights",
+      "type": "place",
+      "notes": ["G-160"],
+      "c": 2,
+      "x": 0.6772,
+      "y": 0.1095
+    },
+    {
+      "id": "dark",
+      "label": "Dark",
+      "type": "problem",
+      "notes": ["G-160"],
+      "c": 2,
+      "x": 0.6955,
+      "y": 0.05
+    },
+    {
+      "id": "temple street bus stop",
+      "label": "Temple Street bus stop",
+      "type": "place",
+      "notes": ["G-163"],
+      "c": 2,
+      "x": 0.6096,
+      "y": 0.1489
+    },
+    {
+      "id": "women",
+      "label": "Women",
+      "type": "people",
+      "notes": ["G-163"],
+      "c": 13,
+      "x": 0.51,
+      "y": 0.89
+    },
+    {
+      "id": "dark street",
+      "label": "Dark street",
+      "type": "problem",
+      "notes": ["G-163"],
+      "c": 13,
+      "x": 0.49,
+      "y": 0.83
+    },
+    {
+      "id": "brightway electricals",
+      "label": "Brightway Electricals",
+      "type": "organisation",
+      "notes": ["G-166", "G-169"],
+      "c": 2,
+      "x": 0.5848,
+      "y": 0.2224
+    },
+    {
+      "id": "maintenance contractor",
+      "label": "maintenance contractor",
+      "type": "organisation",
+      "notes": ["G-166"],
+      "c": 2,
+      "x": 0.7106,
+      "y": 0.1816
+    },
+    {
+      "id": "ward 12",
+      "label": "Ward 12",
+      "type": "place",
+      "notes": ["G-169"],
+      "c": 16,
+      "x": 0.7727,
+      "y": 0.83
+    },
+    {
+      "id": "temple street extension",
+      "label": "Temple Street extension",
+      "type": "place",
+      "notes": ["G-169"],
+      "c": 17,
+      "x": 0.8636,
+      "y": 0.83
+    },
+    {
+      "id": "timer",
+      "label": "timer",
+      "type": "document",
+      "notes": ["G-169"],
+      "c": 2,
+      "x": 0.53,
+      "y": 0.2485
+    },
+    {
+      "id": "streetlights on the temple street extension",
+      "label": "Streetlights on the Temple Street extension",
+      "type": "?",
+      "notes": ["G-169"],
+      "c": 9,
+      "x": 0.1164,
+      "y": 0.83
+    },
+    {
+      "id": "switch on at noon",
+      "label": "switch on at noon",
+      "type": "?",
+      "notes": ["G-169"],
+      "c": 9,
+      "x": 0.1564,
+      "y": 0.83
+    },
+    {
+      "id": "switch off at night",
+      "label": "switch off at night",
+      "type": "?",
+      "notes": ["G-169"],
+      "c": 9,
+      "x": 0.1364,
+      "y": 0.89
+    },
+    {
+      "id": "police",
+      "label": "Police",
+      "type": "organisation",
+      "notes": ["G-172"],
+      "c": 1,
+      "x": 0.4174,
+      "y": 0.05
+    },
+    {
+      "id": "lights",
+      "label": "Lights",
+      "type": "document",
+      "notes": ["G-172"],
+      "c": 2,
+      "x": 0.72,
+      "y": 0.31
+    },
+    {
+      "id": "ward 1",
+      "label": "Ward 1",
+      "type": "place",
+      "notes": ["G-180", "G-186", "G-189"],
+      "c": 1,
+      "x": 0.4591,
+      "y": 0.1735
+    },
+    {
+      "id": "citizen portal",
+      "label": "citizen portal",
+      "type": "document",
+      "notes": ["G-180", "G-183", "G-189"],
+      "c": 1,
+      "x": 0.4416,
+      "y": 0.2271
+    },
+    {
+      "id": "shopkeepers",
+      "label": "shopkeepers",
+      "type": "people",
+      "notes": ["G-180", "G-189"],
+      "c": 1,
+      "x": 0.4329,
+      "y": 0.1624
+    },
+    {
+      "id": "trade licences",
+      "label": "trade licences",
+      "type": "document",
+      "notes": ["G-180"],
+      "c": 1,
+      "x": 0.47,
+      "y": 0.31
+    },
+    {
+      "id": "trade licence",
+      "label": "trade licence",
+      "type": "document",
+      "notes": ["G-183"],
+      "c": 4,
+      "x": 0.03,
+      "y": 0.5627
+    },
+    {
+      "id": "complaints",
+      "label": "Complaints",
+      "type": "people",
+      "notes": ["G-186"],
+      "c": 10,
+      "x": 0.2073,
+      "y": 0.83
+    },
+    {
+      "id": "portal",
+      "label": "Portal",
+      "type": "document",
+      "notes": ["G-186"],
+      "c": 10,
+      "x": 0.2273,
+      "y": 0.89
+    },
+    {
+      "id": "tracking numbers",
+      "label": "Tracking numbers",
+      "type": "document",
+      "notes": ["G-186"],
+      "c": 10,
+      "x": 0.2473,
+      "y": 0.83
+    },
+    {
+      "id": "ward 6",
+      "label": "Ward 6",
+      "type": "place",
+      "notes": ["G-192"],
+      "c": 18,
+      "x": 0.9545,
+      "y": 0.83
+    },
+    {
+      "id": "ward 6 office",
+      "label": "Ward 6 office",
+      "type": "place",
+      "notes": ["G-192"],
+      "c": 11,
+      "x": 0.3382,
+      "y": 0.83
+    },
+    {
+      "id": "market road",
+      "label": "Market Road",
+      "type": "place",
+      "notes": ["G-192"],
+      "c": 11,
+      "x": 0.2982,
+      "y": 0.83
+    },
+    {
+      "id": "pothole",
+      "label": "Pothole",
+      "type": "?",
+      "notes": ["G-192"],
+      "c": 11,
+      "x": 0.3182,
+      "y": 0.89
+    },
+    {
+      "id": "ward 8",
+      "label": "Ward 8",
+      "type": "place",
+      "notes": ["G-195"],
+      "c": 7,
+      "x": 0.8725,
+      "y": 0.5011
+    },
+    {
+      "id": "birth certificate",
+      "label": "birth certificate",
+      "type": "document",
+      "notes": ["G-195"],
+      "c": 7,
+      "x": 0.78,
+      "y": 0.41
+    },
+    {
+      "id": "counter",
+      "label": "counter",
+      "type": "organisation",
+      "notes": ["G-195"],
+      "c": 7,
+      "x": 0.8675,
+      "y": 0.67
+    },
+    {
+      "id": "printer",
+      "label": "printer",
+      "type": "organisation",
+      "notes": ["G-195"],
+      "c": 7,
+      "x": 0.97,
+      "y": 0.4234
+    }
+  ],
+  "rels": [
+    { "a": "blocked drain", "b": "station road", "rel": "blocked", "note": "G-101" },
+    { "a": "blocked drain", "b": "bus depot", "rel": "blocked", "note": "G-101" },
+    { "a": "blocked drain", "b": "ward 4", "rel": "located in", "note": "G-101" },
+    { "a": "water", "b": "blocked drain", "rel": "accumulated in", "note": "G-101" },
+    { "a": "ward 4", "b": "station road", "rel": "is near", "note": "G-104" },
+    { "a": "ward 4", "b": "fogging team", "rel": "needs to send", "note": "G-104" },
+    { "a": "ward 5", "b": "nehru school", "rel": "is behind", "note": "G-109" },
+    { "a": "stagnant water", "b": "children", "rel": "causing", "note": "G-109" },
+    { "a": "stagnant water", "b": "mosquito bites", "rel": "leading to", "note": "G-109" },
+    { "a": "ward 4", "b": "station road health centre", "rel": "says", "note": "G-112" },
+    { "a": "station road health centre", "b": "fever cases", "rel": "report on", "note": "G-112" },
+    { "a": "ward 4", "b": "blocked drain", "rel": "blame", "note": "G-112" },
+    { "a": "nehru school", "b": "corporation", "rel": "requested", "note": "G-118" },
+    { "a": "corporation", "b": "plot", "rel": "filled", "note": "G-118" },
+    { "a": "corporation", "b": "plot", "rel": "sprayed", "note": "G-118" },
+    { "a": "monsoon", "b": "mosquitoes", "rel": "cause", "note": "G-118" },
+    { "a": "ward 9", "b": "lake road", "rel": "is on", "note": "G-122" },
+    { "a": "lake road", "b": "water pressure", "rel": "has issue with", "note": "G-122" },
+    { "a": "ward 9", "b": "tanks", "rel": "has", "note": "G-122" },
+    { "a": "ward 9", "b": "first floor", "rel": "has", "note": "G-122" },
+    { "a": "sagar infra", "b": "lake road", "rel": "has dug up", "note": "G-125" },
+    { "a": "sagar infra", "b": "old water pipeline", "rel": "replaced", "note": "G-125" },
+    { "a": "sagar infra", "b": "warning signs", "rel": "did not put up", "note": "G-125" },
+    { "a": "sagar infra", "b": "lake road", "rel": "left", "note": "G-127" },
+    { "a": "sagar infra", "b": "ward 9", "rel": "on", "note": "G-127" },
+    { "a": "sagar infra", "b": "rider", "rel": "fell to", "note": "G-127" },
+    { "a": "rider", "b": "ward 9", "rel": "in", "note": "G-127" },
+    { "a": "sagar infra", "b": "canal street", "rel": "finished", "note": "G-131" },
+    { "a": "sagar infra", "b": "potholes", "rel": "left", "note": "G-131" },
+    { "a": "ward 3", "b": "canal street", "rel": "has", "note": "G-133" },
+    { "a": "new pipeline", "b": "ward 3", "rel": "improved", "note": "G-133" },
+    { "a": "potholes", "b": "ward 3", "rel": "not_repaired", "note": "G-133" },
+    { "a": "ward 9", "b": "lake road", "rel": "has", "note": "G-136" },
+    { "a": "lake road", "b": "sagar infra", "rel": "connected", "note": "G-136" },
+    { "a": "sagar infra", "b": "new pipeline", "rel": "connected", "note": "G-136" },
+    { "a": "ward 2", "b": "garbage", "rel": "was not collected", "note": "G-140" },
+    { "a": "ward 2", "b": "bins", "rel": "near", "note": "G-140" },
+    { "a": "ward 2", "b": "garbage", "rel": "overflowing bins", "note": "G-140" },
+    { "a": "circular 14/2026", "b": "ward 2", "rel": "applies to", "note": "G-142" },
+    { "a": "circular 14/2026", "b": "collection staff", "rel": "communicates to", "note": "G-142" },
+    { "a": "collection staff", "b": "mixed waste", "rel": "refuse", "note": "G-142" },
+    { "a": "collection staff", "b": "households", "rel": "have not informed", "note": "G-142" },
+    { "a": "stray dogs", "b": "garbage bags", "rel": "tearing open", "note": "G-145" },
+    { "a": "garbage bags", "b": "mill road", "rel": "left on", "note": "G-145" },
+    { "a": "garbage bags", "b": "garbage pickups", "rel": "affected by", "note": "G-145" },
+    { "a": "ward 2", "b": "gandhi market", "rel": "contains", "note": "G-148" },
+    { "a": "traders", "b": "gandhi market", "rel": "operate", "note": "G-148" },
+    { "a": "traders", "b": "ward 2", "rel": "reside", "note": "G-148" },
+    { "a": "overflowing bins", "b": "ward 2", "rel": "cause", "note": "G-148" },
+    { "a": "overflowing bins", "b": "gandhi market", "rel": "cause", "note": "G-148" },
+    { "a": "customers", "b": "gandhi market", "rel": "shop", "note": "G-148" },
+    { "a": "stray dog", "b": "mill road", "rel": "located near", "note": "G-151" },
+    { "a": "stray dog", "b": "garbage heap", "rel": "near", "note": "G-151" },
+    { "a": "child", "b": "stray dog", "rel": "bitten by", "note": "G-151" },
+    { "a": "residents on mill road", "b": "ward 7", "rel": "reside", "note": "G-154" },
+    { "a": "residents on mill road", "b": "circular 14/2026", "rel": "refer to", "note": "G-154" },
+    { "a": "ward 7", "b": "circular 14/2026", "rel": "contain", "note": "G-154" },
+    { "a": "ward 11", "b": "streetlights", "rel": "have", "note": "G-160" },
+    { "a": "streetlights", "b": "dark", "rel": "been", "note": "G-160" },
+    { "a": "temple street bus stop", "b": "ward 11", "rel": "is located in", "note": "G-163" },
+    { "a": "women", "b": "dark street", "rel": "perceive as unsafe", "note": "G-163" },
+    { "a": "ward 11", "b": "brightway electricals", "rel": "employs", "note": "G-166" },
+    { "a": "ward 11", "b": "maintenance contractor", "rel": "employs", "note": "G-166" },
+    {
+      "a": "streetlights on the temple street extension",
+      "b": "switch on at noon",
+      "rel": "set to",
+      "note": "G-169"
+    },
+    {
+      "a": "streetlights on the temple street extension",
+      "b": "switch off at night",
+      "rel": "set to",
+      "note": "G-169"
+    },
+    { "a": "brightway electricals", "b": "timer", "rel": "has not fixed", "note": "G-169" },
+    { "a": "ward 11", "b": "temple street", "rel": "contains", "note": "G-172" },
+    { "a": "temple street", "b": "lights", "rel": "has", "note": "G-172" },
+    { "a": "police", "b": "corporation", "rel": "requested", "note": "G-172" },
+    { "a": "corporation", "b": "lights", "rel": "restore", "note": "G-172" },
+    { "a": "citizen portal", "b": "ward 1", "rel": "was located", "note": "G-180" },
+    { "a": "citizen portal", "b": "shopkeepers", "rel": "affected", "note": "G-180" },
+    { "a": "citizen portal", "b": "trade licences", "rel": "related to", "note": "G-180" },
+    { "a": "ward 2", "b": "gandhi market", "rel": "contains", "note": "G-183" },
+    { "a": "traders", "b": "trade licence", "rel": "required", "note": "G-183" },
+    { "a": "citizen portal", "b": "traders", "rel": "affected", "note": "G-183" },
+    { "a": "complaints", "b": "portal", "rel": "affected by", "note": "G-186" },
+    { "a": "complaints", "b": "tracking numbers", "rel": "lack of", "note": "G-186" },
+    { "a": "ward 1", "b": "corporation", "rel": "requested", "note": "G-189" },
+    { "a": "corporation", "b": "citizen portal", "rel": "was_down", "note": "G-189" },
+    { "a": "shopkeepers", "b": "corporation", "rel": "asked", "note": "G-189" },
+    { "a": "pothole", "b": "ward 6 office", "rel": "located near", "note": "G-192" },
+    { "a": "pothole", "b": "market road", "rel": "located on", "note": "G-192" },
+    { "a": "ward 8", "b": "birth certificate", "rel": "has", "note": "G-195" },
+    { "a": "ward 8", "b": "counter", "rel": "contains", "note": "G-195" },
+    { "a": "ward 8", "b": "printer", "rel": "contains", "note": "G-195" }
+  ],
+  "communities": [
+    [
+      "canal street",
+      "first floor",
+      "lake road",
+      "new pipeline",
+      "old water pipeline",
+      "potholes",
+      "rider",
+      "sagar infra",
+      "tanks",
+      "ward 3",
+      "ward 9",
+      "warning signs",
+      "water pressure"
+    ],
+    [
+      "citizen portal",
+      "corporation",
+      "nehru school",
+      "plot",
+      "police",
+      "shopkeepers",
+      "trade licences",
+      "ward 1",
+      "ward 5"
+    ],
+    [
+      "brightway electricals",
+      "dark",
+      "lights",
+      "maintenance contractor",
+      "streetlights",
+      "temple street",
+      "temple street bus stop",
+      "timer",
+      "ward 11"
+    ],
+    [
+      "blocked drain",
+      "bus depot",
+      "fever cases",
+      "fogging team",
+      "station road",
+      "station road health centre",
+      "ward 4",
+      "water"
+    ],
+    [
+      "bins",
+      "customers",
+      "gandhi market",
+      "garbage",
+      "overflowing bins",
+      "trade licence",
+      "traders",
+      "ward 2"
+    ],
+    [
+      "child",
+      "garbage bags",
+      "garbage heap",
+      "garbage pickups",
+      "mill road",
+      "stray dog",
+      "stray dogs"
+    ],
+    [
+      "circular 14/2026",
+      "collection staff",
+      "households",
+      "mixed waste",
+      "residents on mill road",
+      "ward 7"
+    ],
+    ["birth certificate", "counter", "printer", "ward 8"],
+    ["children", "mosquito bites", "stagnant water"],
+    ["streetlights on the temple street extension", "switch off at night", "switch on at noon"],
+    ["complaints", "portal", "tracking numbers"],
+    ["market road", "pothole", "ward 6 office"],
+    ["monsoon", "mosquitoes"],
+    ["dark street", "women"],
+    ["injured"],
+    ["smell"],
+    ["ward 12"],
+    ["temple street extension"],
+    ["ward 6"]
+  ],
+  "summaries": [
+    {
+      "c": 0,
+      "notes": ["G-122", "G-125", "G-127", "G-136", "G-131", "G-133"],
+      "summary": "Title: Water Pipeline Project Complaints\n\nResidents of Ward 9 and Ward 3 are voicing complaints regarding a recent water pipeline project conducted by Sagar Infra. Complaints from Ward 9 include low water pressure on Lake Road, especially in the mornings, and a three-day water supply interruption while the new pipeline was being connected. Additionally, residents reported a scooter accident on Lake Road caused by a trench left by the project, and a lack of warning signs after the road was dug up. Complaints from Ward 3 highlighted the presence of potholes on Canal Street after the project, despite an improvement in water pressure on Canal Street due to the new pipeline. There was also a complaint about the"
+    },
+    {
+      "c": 1,
+      "notes": ["G-109", "G-118", "G-172", "G-189", "G-180", "G-186", "G-183"],
+      "summary": "Title: Nehru School Plot Issue & Citizen Portal Downtime\n\nResidents of Ward 5 are complaining about stagnant water on an empty plot behind Nehru School, which they claim causes mosquito bites for the children attending the school. Nehru School has requested the corporation to fill the plot and spray for mosquitoes before the monsoon peaks. Simultaneously, Ward 1 shopkeepers are requesting the corporation to waive late fines due to the downtime of the citizen portal, which affected trade licence renewals. Citizens in Ward 1 also reported missing tracking numbers on complaints filed during the portal outage, raising concerns about the transparency and efficiency of the corporation's response to the problem."
+    },
+    {
+      "c": 2,
+      "notes": ["G-160", "G-163", "G-166", "G-172", "G-169"],
+      "summary": "Title: Temple Street Illumination Issue\n\nIn Ward 11, there is a persistent problem with the streetlights on Temple Street being dark for a month, despite the presence of a bus stop on the same street. Brightway Electricals, the maintenance contractor employed by the Ward Corporation, claims it is waiting for new LED fittings to fix the issue, which has led to a reported chain-snatching incident on the dark street. Additionally, Ward 12 has a similar problem with the streetlights on the Temple Street extension, where the timer has not been fixed by Brightway Electricals. Citizens are expressing safety concerns due to the darkness on Temple Street, especially after dark."
+    },
+    {
+      "c": 3,
+      "notes": ["G-101", "G-104", "G-112"],
+      "summary": "Title: Blocked Drain Complaints in Ward 4\n\nResidents of Ward 4 are complaining about a blocked drain on Station Road, which has caused standing water to accumulate near the bus depot. This has led to a mosquito infestation and a reported doubling of fever cases in the area, with the Station Road health centre attributing the health issue to the blocked drain. Residents are requesting the fogging team to control the mosquito problem."
+    },
+    {
+      "c": 4,
+      "notes": ["G-140", "G-142", "G-148", "G-183"],
+      "summary": "Title: Ward 2 Garbage Collection and Trade Licensing Issues\n\nIn Ward 2, there are ongoing issues related to waste collection and trade licensing. Citizens are complaining about the failure to collect garbage for four days after new segregation rules started, and mixed waste being refused by collection staff despite households not being informed about the new rules. Additionally, traders at Gandhi Market are complaining that the smell from overflowing bins is deterring customers, and a fine was issued to traders for late trade licence renewal due to a downed citizen portal. All these issues seem to be interconnected, affecting the cleanliness and trade operations in Ward 2."
+    },
+    {
+      "c": 5,
+      "notes": ["G-145", "G-151", "G-154"],
+      "summary": "Title: Stray Dogs and Irregular Garbage Pickups Affecting Ward 7\n\nResidents of Ward 7 are complaining about stray dogs tearing open garbage bags left on Mill Road due to irregular garbage pickups. Additionally, a child was bitten by a stray dog on Mill Road near the garbage heap, and residents are requesting a door-to-door awareness drive on Circular 14/2026 segregation rules to address the issue."
+    },
+    {
+      "c": 6,
+      "notes": ["G-142", "G-154", "G-145", "G-151"],
+      "summary": "Title: Mixed Waste Collection Issue in Ward 7\n\nResidents on Mill Road in Ward 7 are facing issues related to mixed waste collection, as highlighted by a series of complaints tied to the enforcement of Circular 14/2026. Collection staff are refusing mixed waste, which has led to confusion among households who claim they were not informed about the new segregation rules. This has caused residents to seek a door-to-door awareness campaign to better understand the regulations. Additionally, the irregular collection schedules have attracted stray dogs to Mill Road, resulting in incidents such as a child being bitten by a stray dog near the garbage heap. Efforts to communicate the changes effectively to the affected households and to improve the collection schedules"
+    },
+    {
+      "c": 7,
+      "notes": ["G-195"],
+      "summary": "Title: Birth Certificate Delay in Ward 8\n\nResidents of Ward 8 are complaining about a delay in receiving their birth certificates, which has taken 20 days. Additionally, there is confusion due to the counter stating that the printer is broken, which may be affecting the issuance process. This issue involves the citizens of Ward 8 and the city corporation responsible for handling birth certificates."
+    }
+  ],
+  "questions": [
+    {
+      "id": "global",
+      "q": "What were the main problems residents complained about across the city in July 2026?",
+      "top": ["G-154", "G-112", "G-172", "G-160", "G-163"],
+      "rag": "Residents across the city in July 2026 had several complaints:\n\n- In Ward 7, there was a request for a door-to-door awareness drive concerning the segregation rules on Circular 14/2026.\n- Ward 4 had a health centre on Station Road reporting a doubling of fever cases this month, with residents attributing the problem to a blocked drain.\n- Ward 11 encountered a series of issues on Temple Street, including a chain-snatching incident after dark, six streetlights being dark for a month, and women feeling unsafe walking home from the bus stop due to the darkness.\n\nThese issues reflect a combination of social awareness, health concerns, safety on the streets, and maintenance problems within the city's different wards.",
+      "maps": [
+        {
+          "c": 0,
+          "points": "80 | Low water pressure on Lake Road, especially in the mornings.\n60 | Water supply interruption while the new pipeline was being connected.\n40 | Trench left by the project on Lake Road caused a scooter accident.\n30 | Lack of warning signs after the road was dug up.\n50 | Potholes on Canal Street after the project.\n40 | Improvement in water pressure on Canal Street due to the new pipeline.\n\n(Note: There was a complaint about the improvement in water pressure on Canal Street due to the new pipeline, which was a positive outcome rather than a problem.)"
+        },
+        {
+          "c": 1,
+          "points": "80 | Stagnant water on an empty plot behind Nehru School causing mosquito bites.\n60 | Downtime of the citizen portal affecting trade licence renewals.\n40 | Missing tracking numbers on complaints filed during the portal outage."
+        },
+        {
+          "c": 2,
+          "points": "80 | Streetlights on Temple Street being dark despite a bus stop being present.\n60 | Delay in fixing the streetlight timer on Temple Street extension.\n40 | Safety concerns due to darkness on Temple Street after dark."
+        },
+        {
+          "c": 3,
+          "points": "80 | Accumulation of standing water due to a blocked drain on Station Road.\n60 | Mosquito infestation caused by the standing water.\n40 | Reported doubling of fever cases in the area linked to the blocked drain."
+        },
+        {
+          "c": 4,
+          "points": "80 | Failure to collect garbage for four days after new segregation rules started.\n60 | Mixed waste being refused by collection staff despite households not being informed about the new rules.\n40 | Smell from overflowing bins deterring customers at Gandhi Market.\n20 | Fine issued to traders for late trade licence renewal due to a downed citizen portal."
+        },
+        {
+          "c": 5,
+          "points": "80 | Irregular garbage pickups in Ward 7\n60 | Stray dogs tearing open garbage bags on Mill Road\n40 | Child bitten by a stray dog on Mill Road near the garbage heap\n20 | Lack of awareness on Circular 14/2026 segregation rules\n\nNone."
+        },
+        {
+          "c": 6,
+          "points": "80 | Refusal to collect mixed waste, causing confusion among households.\n60 | Irregular collection schedules attracting stray dogs.\n40 | Lack of effective communication regarding new segregation rules."
+        },
+        {
+          "c": 7,
+          "points": "80 | Delay in receiving birth certificates in Ward 8.\n60 | Confusion due to the counter stating the printer is broken.\nNONE | Main problems across the city in July 2026."
+        }
+      ],
+      "pts": [
+        {
+          "c": 0,
+          "score": 80,
+          "text": "Low water pressure on Lake Road, especially in the mornings."
+        },
+        {
+          "c": 1,
+          "score": 80,
+          "text": "Stagnant water on an empty plot behind Nehru School causing mosquito bites."
+        },
+        {
+          "c": 2,
+          "score": 80,
+          "text": "Streetlights on Temple Street being dark despite a bus stop being present."
+        },
+        {
+          "c": 3,
+          "score": 80,
+          "text": "Accumulation of standing water due to a blocked drain on Station Road."
+        },
+        {
+          "c": 4,
+          "score": 80,
+          "text": "Failure to collect garbage for four days after new segregation rules started."
+        },
+        { "c": 5, "score": 80, "text": "Irregular garbage pickups in Ward 7" },
+        {
+          "c": 6,
+          "score": 80,
+          "text": "Refusal to collect mixed waste, causing confusion among households."
+        },
+        { "c": 7, "score": 80, "text": "Delay in receiving birth certificates in Ward 8." },
+        {
+          "c": 0,
+          "score": 60,
+          "text": "Water supply interruption while the new pipeline was being connected."
+        },
+        {
+          "c": 1,
+          "score": 60,
+          "text": "Downtime of the citizen portal affecting trade licence renewals."
+        },
+        {
+          "c": 2,
+          "score": 60,
+          "text": "Delay in fixing the streetlight timer on Temple Street extension."
+        },
+        { "c": 3, "score": 60, "text": "Mosquito infestation caused by the standing water." },
+        {
+          "c": 4,
+          "score": 60,
+          "text": "Mixed waste being refused by collection staff despite households not being informed about the new rules."
+        },
+        { "c": 5, "score": 60, "text": "Stray dogs tearing open garbage bags on Mill Road" },
+        { "c": 6, "score": 60, "text": "Irregular collection schedules attracting stray dogs." },
+        {
+          "c": 7,
+          "score": 60,
+          "text": "Confusion due to the counter stating the printer is broken."
+        },
+        { "c": 0, "score": 50, "text": "Potholes on Canal Street after the project." },
+        {
+          "c": 0,
+          "score": 40,
+          "text": "Trench left by the project on Lake Road caused a scooter accident."
+        },
+        {
+          "c": 0,
+          "score": 40,
+          "text": "Improvement in water pressure on Canal Street due to the new pipeline."
+        },
+        {
+          "c": 1,
+          "score": 40,
+          "text": "Missing tracking numbers on complaints filed during the portal outage."
+        },
+        {
+          "c": 2,
+          "score": 40,
+          "text": "Safety concerns due to darkness on Temple Street after dark."
+        },
+        {
+          "c": 3,
+          "score": 40,
+          "text": "Reported doubling of fever cases in the area linked to the blocked drain."
+        },
+        {
+          "c": 4,
+          "score": 40,
+          "text": "Smell from overflowing bins deterring customers at Gandhi Market."
+        },
+        {
+          "c": 5,
+          "score": 40,
+          "text": "Child bitten by a stray dog on Mill Road near the garbage heap"
+        },
+        {
+          "c": 6,
+          "score": 40,
+          "text": "Lack of effective communication regarding new segregation rules."
+        },
+        { "c": 0, "score": 30, "text": "Lack of warning signs after the road was dug up." },
+        {
+          "c": 4,
+          "score": 20,
+          "text": "Fine issued to traders for late trade licence renewal due to a downed citizen portal."
+        },
+        { "c": 5, "score": 20, "text": "Lack of awareness on Circular 14/2026 segregation rules" }
+      ],
+      "reduce": "- Low water pressure on Lake Road, especially in the mornings (80)\n- Accumulation of standing water due to a blocked drain on Station Road (80)\n- Irregular garbage pickups in Ward 7 (80)\n- Refusal to collect mixed waste, causing confusion among households (80)\n- Delay in receiving birth certificates in Ward 8 (60)\n- Water supply interruption while the new pipeline was being connected (60)\n- Irregular collection schedules attracting stray dogs (60)\n- Stray dogs tearing open garbage bags on Mill Road (60)\n- Irregular garbage pickups in Ward 7 (60)\n- Refusal to collect mixed waste, causing confusion among households (60)\n- Delay in fixing the streetlight timer on Temple Street extension (60)\n- Mosquito infestation caused by the standing water (60)\n- Mixed waste being refused by collection staff despite households not being informed about the new rules (60)\n- Irregular collection schedules attracting stray dogs (60)\n- Stray dogs tearing open garbage bags on Mill Road (60)\n- Irregular garbage pickups in Ward 7 (60)\n- Refusal to collect mixed waste, causing confusion among households (60)\n- Delay in receiving birth certificates in Ward 8 (60)\n- Water supply interruption while the new pipeline was"
+    },
+    {
+      "id": "local",
+      "q": "Which contractor maintains the Temple Street streetlights?",
+      "top": ["G-169", "G-172", "G-160", "G-166", "G-163"],
+      "rag": "The maintenance contractor for the Temple Street streetlights is Brightway Electricals [4].",
+      "maps": [
+        { "c": 0, "points": "NONE." },
+        { "c": 1, "points": "NONE." },
+        {
+          "c": 2,
+          "points": "80 | Brightway Electricals\n\nNone\n\n80 | Ward Corporation\n\nNone\n\n80 | Citizens (not a maintenance contractor)"
+        },
+        { "c": 3, "points": "NONE." },
+        { "c": 4, "points": "NONE." },
+        { "c": 5, "points": "NONE." },
+        { "c": 6, "points": "NONE." },
+        { "c": 7, "points": "NONE." }
+      ],
+      "pts": [
+        { "c": 2, "score": 80, "text": "Brightway Electricals" },
+        { "c": 2, "score": 80, "text": "Ward Corporation" },
+        { "c": 2, "score": 80, "text": "Citizens (not a maintenance contractor)" }
+      ],
+      "reduce": "- Ward Corporation\n\n- Citizens (not a maintenance contractor)\n\n- Brightway Electricals (80 importance)"
+    }
+  ],
+  "themes": [
+    "Water pipeline works: low pressure, trenches, potholes (Wards 3, 9)",
+    "Blocked drains, mosquitoes and fever (Wards 4, 5)",
+    "Garbage, stray dogs and the new segregation rules (Wards 2, 7)",
+    "Dark streetlights and safety (Wards 11, 12)",
+    "Citizen portal outage and late-licence fines (Wards 1, 2)"
+  ],
+  "coverage": {
+    "rag": ["no", "yes", "partly", "yes", "no"],
+    "graph": ["yes", "yes", "yes", "partly", "no"]
+  }
+}

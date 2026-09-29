@@ -302,4 +302,28 @@ export const ragSystems = {
       "A first step that decides where a question should go, such as text search, a database query or both. It can be simple rules, a small classifier or a language model choosing a tool.",
     module: "tables-sql",
   },
+  graphrag: {
+    term: "GraphRAG",
+    definition:
+      "Retrieval that first builds a knowledge graph from the documents, groups it into communities and summarises each, so it can answer questions about the whole collection (Edge et al., Microsoft, 2024). Costs far more to index than plain RAG.",
+    module: "graphrag",
+  },
+  entity: {
+    term: "Entity",
+    definition:
+      "A named thing a text talks about: a person, place, organisation, problem or document. In GraphRAG, a model lists the entities in every chunk, and each becomes a dot in the graph.",
+    module: "graphrag",
+  },
+  "knowledge-graph": {
+    term: "Knowledge graph",
+    definition:
+      "A network of entities (dots) joined by relationships (lines), such as “Sagar Infra — dug up — Lake Road”. Built by hand or, in GraphRAG, extracted by a model, with its mistakes.",
+    module: "graphrag",
+  },
+  "graph-community": {
+    term: "Community (in a graph)",
+    definition:
+      "A cluster of entities more densely connected to each other than to the rest of the graph, found by an algorithm such as Louvain or Leiden. GraphRAG writes a summary report for each.",
+    module: "graphrag",
+  },
 } satisfies Record<string, GlossaryEntry>;

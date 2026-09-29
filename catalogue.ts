@@ -3189,15 +3189,16 @@ const ragSystems: Track = {
           minutes: 25,
           signature:
             "Build a small knowledge graph from documents, group it into communities, and answer a 'what are the main themes?' question that plain RAG can't",
-          formats: ["step-through", "checkpoint"],
+          formats: ["step-through", "simulation", "checkpoint"],
           concepts: [
             "Local vs global questions",
             "Knowledge graphs extracted by a model",
             "Community summaries",
             "Cost and when it's worth it",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
+          terms: ["graphrag", "entity", "knowledge-graph", "graph-community"],
           prerequisites: ["prompt-assembly"],
           plain:
             "Plain RAG is good at finding a specific fact but poor at 'summarise the main issues across all these reports'. GraphRAG first maps who and what is connected to what, then answers from that map.",
