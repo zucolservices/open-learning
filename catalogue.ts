@@ -3231,14 +3231,15 @@ const ragSystems: Track = {
           minutes: 25,
           signature:
             "Answer a question whose answer is only in a chart: extract-to-text vs searching page images directly",
-          formats: ["step-through", "checkpoint"],
+          formats: ["simulation", "step-through", "checkpoint"],
           concepts: [
             "Images, charts and scans in documents",
             "Captioning vs multimodal embeddings",
             "Page-image retrieval (ColPali)",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
+          terms: ["multimodal-rag", "vision-language-model", "ocr", "colpali"],
           prerequisites: ["parsing", "embeddings-retrieval"],
           plain:
             "Many answers live in charts, photos and scanned forms rather than text. Multimodal RAG either describes images in words or searches the page images themselves.",

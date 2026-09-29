@@ -1,0 +1,127 @@
+{
+  "pages": [
+    {
+      "id": "p4-text",
+      "label": "Page 2 · Summary"
+    },
+    {
+      "id": "p2-pie",
+      "label": "Page 3 · Pie chart"
+    },
+    {
+      "id": "p1-chart",
+      "label": "Page 4 · Bar chart"
+    },
+    {
+      "id": "p3-table",
+      "label": "Page 5 · Table"
+    }
+  ],
+  "ocr": {
+    "p1-chart": "Kalpanagar Municipal Corporation Annual Grievance Report 2025-26 Page 4\n3. How quickly were complaints resolved?\nThe corporation's target is to resolve every complaint within 15 working days\nFigure 3 shows, for each ward, the share of complaints resolved within that\ntarget during 2025-26.\n‘The dashed line marks the citywide average of 78%. Wards below the average are\nreviewed by the zonal commissioner each quarter.\n1004\n% resolved within 15 working days\nwi we Ws W4 W5 We W7 Ws W9 Wio Wit wiz\nFigure 3. Complaints resolved on time, by ward, 2025-26",
+    "p2-pie": "Kalpanagar Municipal Corporation : Annual Grievance Report 2025-26 Page 3\n2. What did residents complain about?\nResidents filed 41,200 complaints in 2025-26 through the citizen portal, the\nhelpline and ward offices. Figure 2 breaks them down by category.\nOther 9%\nStreetlights 12%\nWater 34%\nRoads 18%\nGarbage 27%\nFigure 2. Complaints by category, 2025-26 (41,200 complaints)",
+    "p3-table": "Kalpanagar Municipal Corporation Annual Grievance Report 2025-26 Page 5\n4, Which channel is fastest?\nComplaints made on the citizen portal were resolved fastest. Table 4 compares\nthe three channels.\nChannel Complaints Median days to resolve\nCitizen portal 22,660 6\nHelpline 11,124 8\nWard office (in person) 7,416 \"",
+    "p4-text": "Kalpanagar Municipal Corporation Annual Grievance Report 2025-26 Page 2\n1. Summary\nThis report covers every complaint made to the Kalpanagar Municipal\nCorporation between 1 April 2025 and 31 March 2026\nThe number of complaints rose by 12% compared with the previous year, mostly\nbecause the new citizen portal made complaining easier.\nThree priorities for 2026-27: repair the Lake Road and Canal Street water\nmains, extend door-to-door garbage collection to all wards, and replace old\nstreetlights with LED fittings.\nAll figures are provisional until the audit in December 2026."
+  },
+  "captions": {
+    "p1-chart": "This is a page from a document titled \"Kalpanagar Municipal Corporation Annual Oiervance Report 2025-26\". The page number is 4. The document is titled \"3. How quickly were complaints resolved?\" and is part of a report on the Kalpanagar Municipal Corporation. The report shows a graph titled \"Figure 3: Complaints resolved on time, by ward, 2025-26\" and is part of a larger report. The graph shows the percentage of complaints resolved within 15 working days for each ward in the Kalpanagar Municipal Corporation. The graph is divided into 12 wards, with each ward represented by a bar. The bars are colored in blue and show the percentage of complaints resolved within 15 working days for each ward. The graph also includes a dashed line that represents the citywide average of 78%. The graph is divided into two sections: the left section shows the percentage of complaints",
+    "p2-pie": "This is a page from a document titled \"Kalpanagar Municipal Corporation - Annual Oiervance Report 2025-26\". The page number is 8. The document is titled \"2. What did residents complain about?\" and states that residents filed 41,200 complaints in 2025-26 through the citizen portal, the helpline, and ward offices. Figure 2 breaks down these complaints by category.\n\nThe pie chart on this page is titled \"Figure 2: Complaints by category, 2025-26 (41,200 complaints)\" and shows the distribution of complaints by category. The chart is divided into five segments, each representing a different category of complaints:\n\n1. **Water** - 54%\n2. **Streetlights** - 12%\n3. **Garbage** - 27%\n4. **Roads** - 18%\n5.",
+    "p3-table": "This is a page from a document titled \"Kalpanagar Municipal Corporation Annual Odiwan Report 2025-26,\" page 5. The document is titled \"Which channel is fastest?\" and compares the median days to resolve for complaints made on the citizen portal, helpline, and ward office (in person). The table shows the following data:\n\n| Channel | Complaints | Median days to resolve |\n|----------|------------|----------------------|\n| Citizen portal | 22,660 | 6 |\n| Helpline | 11,124 | 8 |\n| Ward office (in person) | 7,416 | 11 |\n\nThe document is a comparison of three channels for complaints resolution, with the citizen portal being the fastest, followed by the helpline, and the ward office (in person) being the slowest.",
+    "p4-text": "This document is a page from the Annual Governance Report of the Katpanagar Municipal Corporation for the fiscal year 2025-26. The page number is 2. The document is titled \"Katpanagar Municipal Corporation Annual Governance Report 2025-26\" and is divided into sections titled \"1. Summary\" and \"2. Financial Statements\". \n\n1. Summary: This section provides a summary of the report, stating that the report covers every complaint made to the Katpanagar Municipal Corporation between 1 April 2025 and 31 March 2026. It mentions that the number of complaints rose by 12% compared to the previous year, mainly because the new citizen portal made complaining easier. The three priorities for 2026-27 are repairing the Lake Flood and Canal Street water mains, extending door-to-door garbage collection to all wards, and replacing old streetlights with LED fittings. The figures are"
+  },
+  "smolCaptions": {
+    "p1-chart": "This document page is for a search index. The page includes a table with the values and the corresponding percentage of complaints resolved within 15 working days. The table is titled \"How quickly were complaints resolved?\" and shows the percentage of complaints resolved within 15 working days. The table includes a bar chart with the W1, W2, W3, W4, W5, W6, W7, W8, W9, W10, and W12 bars, each representing a different complaint. The bars are colored in red and blue, with the red bars indicating the percentage of complaints resolved within 15 working days and the blue bars indicating the percentage of complaints resolved within 15 working days. The table also includes a legend with the W1, W2, W3, W4, W5, W6, W7, W8, W9, W10, and W12 bars, each representing a different complaint.",
+    "p2-pie": "The document page includes a section titled \"What did residents complain about?\" which is followed by a table with two columns and two rows. The first column is labeled \"Other\" and the second column is labeled \"Streetlights.\" The table shows that 9% of complaints were related to streetlights.",
+    "p3-table": "The document page is a table with the following information: 4. Which channel is fastest? Complaints made on the citizen portal were resolved fastest. Table 4 compares the three channels. The Median days to resolve is 6.",
+    "p4-text": "The document page includes a search index for the text. The text is not provided in the image, so the search index cannot be accessed."
+  },
+  "runs": [
+    {
+      "q": "Which ward resolved the smallest share of complaints on time in 2025–26?",
+      "truth": "Ward 9 (52%), shown only by the height of its bar",
+      "page": "p1-chart",
+      "ocr": {
+        "page": "p1-chart",
+        "answer": "W4",
+        "verdict": "wrong",
+        "why": "Picked W4. The OCR text has the ward names (garbled) but no bar heights, so the model guessed."
+      },
+      "caption": {
+        "page": "p4-text",
+        "answer": "I don't know.",
+        "verdict": "none",
+        "why": "Retrieved the summary page instead, and said it didn’t know. The chart’s caption never listed the ward values."
+      },
+      "image": {
+        "page": "p1-chart",
+        "answer": "W9",
+        "verdict": "right",
+        "why": "Looked at the bars and picked W9."
+      },
+      "small": {
+        "page": "p1-chart",
+        "answer": "W1.",
+        "verdict": "wrong",
+        "why": "The smaller model picked W1, the first bar."
+      }
+    },
+    {
+      "q": "What share of complaints were about garbage?",
+      "truth": "27%, printed next to the slice",
+      "page": "p2-pie",
+      "ocr": {
+        "page": "p2-pie",
+        "answer": "27%",
+        "verdict": "right",
+        "why": "The chart labels are printed text, so OCR caught “Garbage 27%”."
+      },
+      "caption": {
+        "page": "p2-pie",
+        "answer": "27%",
+        "verdict": "right",
+        "why": "The caption listed the slices (though it got Water wrong: 54% instead of 34%)."
+      },
+      "image": {
+        "page": "p2-pie",
+        "answer": "27%",
+        "verdict": "right",
+        "why": "Read the slice label."
+      },
+      "small": {
+        "page": "p2-pie",
+        "answer": "27%.",
+        "verdict": "right",
+        "why": ""
+      }
+    },
+    {
+      "q": "What was the citywide average share of complaints resolved on time?",
+      "truth": "78%, written in the page text",
+      "page": "p1-chart",
+      "ocr": {
+        "page": "p1-chart",
+        "answer": "The citywide average share of complaints resolved on time was 78%.",
+        "verdict": "right",
+        "why": "The average is in the paragraph above the chart."
+      },
+      "caption": {
+        "page": "p1-chart",
+        "answer": "The citywide average share of complaints resolved on time was 78%.",
+        "verdict": "right",
+        "why": "The caption mentioned the dashed average line."
+      },
+      "image": {
+        "page": "p1-chart",
+        "answer": "78%",
+        "verdict": "right",
+        "why": "Read the paragraph on the page."
+      },
+      "small": {
+        "page": "p1-chart",
+        "answer": "78%.",
+        "verdict": "right",
+        "why": ""
+      }
+    }
+  ]
+}

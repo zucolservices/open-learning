@@ -332,4 +332,22 @@ export const ragSystems = {
       "RAG where the model decides whether and what to search, reads the results, and searches again until it has enough, using search as a tool in a loop. Handles harder questions at more cost and time, and needs a step budget.",
     module: "agentic-rag",
   },
+  "multimodal-rag": {
+    term: "Multimodal RAG",
+    definition:
+      "RAG over more than plain text: charts, tables, scans and photos. Either extract or describe them as text, or search and read the page images directly with a vision-language model.",
+    module: "multimodal-rag",
+  },
+  "vision-language-model": {
+    term: "Vision-language model",
+    definition:
+      "A language model that also takes images as input, so it can describe a picture or answer a question about a page, chart or photo. Small ones misread details; larger ones read charts far better.",
+    module: "multimodal-rag",
+  },
+  colpali: {
+    term: "ColPali",
+    definition:
+      "A retriever that searches page images directly: it cuts each page into about a thousand patches, gives each a vector, and matches every word of the question against the best patch (Faysse et al., 2024). Accurate on visual documents, but stores many vectors per page.",
+    module: "multimodal-rag",
+  },
 } satisfies Record<string, GlossaryEntry>;
