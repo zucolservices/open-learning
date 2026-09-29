@@ -3350,8 +3350,9 @@ const ragSystems: Track = {
             "Choose parsing, chunking, search, reranking and prompt for an English and Hindi scheme assistant, then run it against a test set and see where it fails",
           formats: ["branching-scenario", "simulation", "checkpoint"],
           concepts: ["Designing a RAG system end to end"],
-          status: "planned",
+          status: "live",
           level: "applied",
+          terms: ["rag", "romanised-hindi", "golden-set", "hybrid-search", "reranker"],
           prerequisites: ["eval-answers", "platforms-cost"],
           plain:
             "Everything in this track in one design. You'll make each choice for a real kind of assistant, then measure it and improve it.",

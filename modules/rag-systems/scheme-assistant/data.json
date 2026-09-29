@@ -1,0 +1,1101 @@
+{
+  "schemes": [
+    {
+      "id": "water-en",
+      "lang": "en",
+      "title": "Kalpanagar Water Help Scheme 2026",
+      "sections": [
+        "What the scheme gives: For eligible households, the ₹500 connection fee is waived and the refundable deposit is reduced from ₹3,000 to ₹500.",
+        "Who can apply: Households with a valid BPL card, or where the owner or tenant applying is 60 years or older. The property must be in Kalpanagar.",
+        "Documents needed: A BPL card or proof of age (Aadhaar or any government ID showing the date of birth), the latest property tax receipt, and the owner's written consent if you are a tenant.",
+        "How to apply: Submit Form W-7 with Annexure JS-1 at any ward office or on the citizen portal. The connection is made within 15 working days.",
+        "Last date: Applications can be made until 31 March 2027."
+      ]
+    },
+    {
+      "id": "water-hi",
+      "lang": "hi",
+      "title": "कल्पनगर जल सहायता योजना 2026",
+      "sections": [
+        "योजना से क्या मिलता है: पात्र परिवारों के लिए ₹500 का कनेक्शन शुल्क माफ़ है और ₹3,000 की वापसी योग्य जमा राशि घटाकर ₹500 कर दी गई है।",
+        "कौन आवेदन कर सकता है: वे परिवार जिनके पास वैध बीपीएल कार्ड है, या जिनमें आवेदन करने वाला मालिक या किरायेदार 60 वर्ष या उससे अधिक आयु का है। संपत्ति कल्पनगर में होनी चाहिए।",
+        "ज़रूरी दस्तावेज़: बीपीएल कार्ड या आयु का प्रमाण (आधार या जन्मतिथि वाला कोई सरकारी पहचान पत्र), नवीनतम संपत्ति कर रसीद, और किरायेदार होने पर मालिक की लिखित सहमति।",
+        "आवेदन कैसे करें: फ़ॉर्म W-7 और अनुलग्नक JS-1 किसी भी वार्ड कार्यालय में या नागरिक पोर्टल पर जमा करें। कनेक्शन 15 कार्य दिवसों में लगाया जाता है।",
+        "अंतिम तिथि: आवेदन 31 मार्च 2027 तक किए जा सकते हैं।"
+      ]
+    },
+    {
+      "id": "cycle-en",
+      "lang": "en",
+      "title": "Kalpanagar Schoolgirl Cycle Scheme",
+      "sections": [
+        "What the scheme gives: A free bicycle for every girl who joins class 9 in a school run by the KMC.",
+        "Who is eligible: Girls enrolled in class 9 in a KMC school in the 2026–27 session, with at least 75% attendance in class 8.",
+        "How to apply: There is no separate application. The school principal submits Form C-1 for all eligible girls by 15 June 2026.",
+        "When the bicycle is given: Bicycles are handed out at each school in the first week of August 2026.",
+        "Documents: The student's school ID card and a parent's Aadhaar. The school collects these."
+      ]
+    },
+    {
+      "id": "cycle-hi",
+      "lang": "hi",
+      "title": "कल्पनगर विद्यार्थिनी साइकिल योजना",
+      "sections": [
+        "योजना से क्या मिलता है: केएमसी द्वारा चलाए जा रहे स्कूल में कक्षा 9 में प्रवेश लेने वाली हर छात्रा को मुफ़्त साइकिल।",
+        "कौन पात्र है: 2026–27 सत्र में केएमसी स्कूल की कक्षा 9 में नामांकित छात्राएँ, जिनकी कक्षा 8 में उपस्थिति कम से कम 75% रही हो।",
+        "आवेदन कैसे करें: अलग से आवेदन की ज़रूरत नहीं है। स्कूल के प्रधानाचार्य 15 जून 2026 तक सभी पात्र छात्राओं के लिए फ़ॉर्म C-1 जमा करते हैं।",
+        "साइकिल कब मिलेगी: अगस्त 2026 के पहले सप्ताह में हर स्कूल में साइकिलें बाँटी जाती हैं।",
+        "दस्तावेज़: छात्रा का स्कूल पहचान पत्र और माता या पिता का आधार। ये स्कूल ही एकत्र करता है।"
+      ]
+    }
+  ],
+  "questions": [
+    { "id": "who", "lang": "English", "q": "Who can apply for the water help scheme?" },
+    {
+      "id": "deposit",
+      "lang": "English",
+      "q": "How much deposit do I pay for a water connection under the scheme?"
+    },
+    {
+      "id": "lastdate",
+      "lang": "English",
+      "q": "What is the last date to apply for the water scheme?"
+    },
+    { "id": "girls", "lang": "English", "q": "Which girls get a free bicycle?" },
+    { "id": "docs-hi", "lang": "Hindi", "q": "जल सहायता योजना के लिए कौन से दस्तावेज़ चाहिए?" },
+    { "id": "when-rom", "lang": "Romanised Hindi", "q": "cycle yojana mein cycle kab milegi?" },
+    { "id": "apply-hi", "lang": "Hindi", "q": "साइकिल योजना के लिए आवेदन कैसे करें?" },
+    { "id": "sewer", "lang": "English", "q": "Does the water help scheme cover sewer connections?" }
+  ],
+  "prompts": {
+    "basic": "You answer questions from residents of Kalpanagar using the passages below. Answer in the same language as the question.",
+    "strict": "You answer questions from residents of Kalpanagar. Answer using only the passages below. Do not use outside knowledge. If the passages don't contain the answer, say you don't know. Don't guess. After each fact, cite the passage it came from in square brackets, like [2]. Answer in the same language as the question."
+  },
+  "answers": [
+    {
+      "text": "Kalpanagar Water Help Scheme 2026eligibility applies to households with a valid BPL card, or where the owner or tenant applying is 60 years or older. Additionally, the property must be located in Kalpanagar. Required documents include a BPL card or proof of age (Aadhaar or any government ID showing the date of birth), the latest property tax receipt, and the owner's written consent if applying as a tenant.",
+      "ok": true
+    },
+    {
+      "text": "Households with a valid BPL card, or where the owner or tenant applying is 60 years or older. The property must be in Kalpanagar. [1]",
+      "ok": true
+    },
+    {
+      "text": "Kalpanagar Water Help Scheme 2026. Eligibility criteria: Eligible households are those with a valid BPL card, or where the owner or tenant applying is 60 years or older. Additionally, the property must be located in Kalpanagar. Required documents: To apply, households need to provide a BPL card or proof of age (Aadhaar or any government ID showing the date of birth), the latest property tax receipt, and the owner's written consent if applying on behalf of a tenant. Application process: Form W-7 along with Annexure JS-1 must be submitted at any ward office or on the citizen portal. Connection timeline: The connection will be established within 15 working days. Deadline: Applications must be submitted on or",
+      "ok": true
+    },
+    {
+      "text": "Those eligible households who hold a valid below-poverty-line (BPL) card, or where the owner or tenant applying is 60 years or older, and the property must be in Kalpanagar.",
+      "ok": true
+    },
+    {
+      "text": "Those eligible to apply for the Kalpanagar Water Help Scheme 2026 are households with a valid Below Poverty Line (BPL) card, or where the owner or tenant applying is 60 years or older [1]. Additionally, the property must be in Kalpanagar [1]. Documents needed for application include a BPL card or proof of age (Aadhaar or any government ID showing the date of birth), the latest property tax receipt, and the owner's written consent if applying as a tenant [1]. Applicants can apply by submitting Form W-7 with Annexure JS-1 at any ward office or on the citizen portal [1]. Applications must be submitted until 31 March 2027 [1]. Note that there is a",
+      "ok": true
+    },
+    {
+      "text": "Kalpanagar में जल सहायता योजना के लिए आवेदन करने वाले व्यक्ति वे परिवार होते हैं जिनके पास वैध बीपीएल कार्ड है, या जिनमें आवेदन करने वाला मालिक या किरायेदार 60 वर्ष या उससे अधिक आयु का है। संपत्ति कल्पनगर में होनी चाहिए।",
+      "ok": true
+    },
+    {
+      "text": "Those eligible households can apply for the water help scheme. Specifically, households with a valid BPL card, or where the owner or tenant applying is 60 years or older, are eligible to apply. Additionally, the property must be located in Kalpanagar. To apply, one must bring a BPL card or proof of age (Aadhaar or any government ID showing the date of birth), the latest property tax receipt, and the owner's written consent if applying on behalf of a tenant. Applications can be submitted until March 31, 2027. This information comes from the passages [1] and [2].",
+      "ok": true
+    },
+    {
+      "text": "Kalpanagar Water Help Scheme 2026eligibility applies to households with a valid BPL card, or where the owner or tenant applying is 60 years or older. Additionally, the property must be located in Kalpanagar. Applicants must provide a BPL card or proof of age (Aadhaar or any government ID showing the date of birth), the latest property tax receipt, and the owner's written consent if applying as a tenant.",
+      "ok": true
+    },
+    {
+      "text": "Under the Kalpanagar Water Help Scheme 2026, the refundable deposit for a water connection is reduced from ₹3,000 to ₹500.",
+      "ok": true
+    },
+    {
+      "text": "The deposit you pay for a water connection under the scheme is ₹500. This is stated in the first passage [1], where it mentions that \"The refundable deposit is reduced from ₹3,000 to ₹500.\"",
+      "ok": true
+    },
+    {
+      "text": "Under the Kalpanagar Water Help Scheme 2026, the refundable deposit for a water connection is reduced from ₹3,000 to ₹500 [2].",
+      "ok": true
+    },
+    {
+      "text": "Under the Kalpanagar Water Help Scheme 2026, the deposit you pay for a water connection is ₹500.",
+      "ok": true
+    },
+    {
+      "text": "Under the Kalpanagar Water Help Scheme 2026, the deposit you pay for a water connection is ₹500 [3].",
+      "ok": true
+    },
+    { "text": "Under the scheme, the deposit you pay for a water connection is ₹500.", "ok": true },
+    {
+      "text": "Under the scheme, the deposit you pay for a water connection is ₹500 [2, 3].",
+      "ok": true
+    },
+    { "text": "31 March 2027", "ok": true },
+    { "text": "The last date to apply for the water scheme is 31 March 2027 [1].", "ok": true },
+    { "text": "31 मार्च 2027 तक किए जा सकते हैं।", "ok": true },
+    { "text": "31 मार्च 2027 तक किए जा सकते हैं। [1]", "ok": true },
+    {
+      "text": "Schülerinnen im 9. Jahrgang einer KMC-Schule erhalten für die Teilnahme an den Schuljahren 2026–27 ein kostenloses Fahrrad. Um berechtigt zu sein, müssen sie mindestens 75% der Klasse 8 besucht haben und im Schuljahr 2026–27 eingeschrieben sein. Die Schulleitung des KMC-Schulbezirks muss für alle berechtigten Schülerinnen Form C-1 bis 15. Juni 2026 einreichen. Die Fahrräder werden im August 2026 im ersten Schultag an den Schulen übergeben. Die Schülerinnen müssen ihre Schulerlaubnisscheine und den Aadhaar des Elternteils vorlegen. Die Schule sammelt diese Dokumente.",
+      "ok": false
+    },
+    {
+      "text": "Girls enrolled in class 9 in a KMC school in the 2026–27 session, with at least 75% attendance in class 8, get a free bicycle [1].",
+      "ok": true
+    },
+    {
+      "text": "Schülerinnen der Klasse 9 an KMC-Schulen im Schuljahr 2026–27 erhalten ein kostenloses Fahrrad. Sie müssen mindestens 75% der Klasse 8 belegen. Die Schulleitung muss für alle berechtigten Schülerinnen Form C-1 bis 15. Juni 2026 einreichen. Fahrräder werden im August 2026 im ersten Wochentag der Schule überreicht. Die Schülerinnen müssen ihren Schul- und den Eltern-Aadhaar vorlegen. Die Schule sammelt diese Dokumente.",
+      "ok": false
+    },
+    {
+      "text": "Girls enrolled in class 9 in a KMC school in the 2026–27 session, with at least 75% attendance in class 8, receive a free bicycle [1].",
+      "ok": true
+    },
+    {
+      "text": "Kalpanagar-Schulmädchen-Zyklusprogramm. Welches Mädchen erhält ein kostenloses Fahrrad? Mädchen, die im KMC-Schuljahr 2026–27 Klas 9 belegen und im Klas 8 mindestens 75% der Schultage besucht haben. Die Schulleitung des jeweiligen KMC-Schulkindes bereitet am 15. Juni 2026 den Formular C-1 für alle berechtigten Schülerinnen aus und gibt sie den Schulleitungen der KMC-Schulen weiter. Die Fahrräder werden im August 2026 im ersten Schultag im KMC-Schulkind des jeweiligen KMC-Schulkindes überreicht. Die Schülerinnen müssen ihren Schultagebuch und den",
+      "ok": false
+    },
+    {
+      "text": "Kalpanagar Schoolgirl Cycle Scheme gives a free bicycle to girls enrolled in class 9 in a KMC school in the 2026–27 session, with at least 75% attendance in class 8 [1].",
+      "ok": true
+    },
+    {
+      "text": "Kalpanagar-Schulmädchen-Zyklusprogramm. Welches Mädchen erhält ein kostenloses Fahrrad? Mädchen, die im Schuljahr 2026–27 den KMC-Schulen im Klassenzimmer 9 beigetreten sind und im Klassenzimmer 8 mindestens 75% der Unterrichtstage besucht haben. Die Bewerbung erfolgt nicht separat. Der Schulleiter des KMC-Schulkindes bezieht sich am 15. Juni 2026 auf den Formular C-1 für alle berechtigten Schülerinnen und bezieht sich am August 2026 im ersten Schultag im August auf den KMC-Schulkindes des KMC-Schulkindes des KMC-Schulkindes des KMC-Schulkindes",
+      "ok": false
+    },
+    {
+      "text": "Kalpanagar schoolgirl cycle scheme gives a free bicycle to girls who join class 9 in a school run by the KMC. Specifically, the girls who are eligible are those enrolled in class 9 in a KMC school in the 2026–27 session, with at least 75% attendance in class 8 [1].",
+      "ok": true
+    },
+    {
+      "text": "Schülerinnen im 9. Jahrgang einer KMC-Schule erhalten für die Teilnahme an den Schuljahren 2026–27 ein kostenloses Fahrrad. Um berechtigt zu sein, müssen sie mindestens 75% der Schultage im 8. Jahrgang besucht haben und sind im Schuljahr 2026–27 eingeschrieben. Die Schulleitung des KMC-Schulbezirks des Antragstellers muss für alle berechtigten Schülerinnen den Formular C-1 bis 15. Juni 2026 einreichen. Die Fahrräder werden im August 2026 im ersten Schultag im KMC-Schulbezirks des Antragstellers überreicht. Die Schülerinnen müssen den Schul- und den Eltern-ID-K",
+      "ok": false
+    },
+    {
+      "text": "Girls enrolled in class 9 in a KMC school in the 2026–27 session, with at least 75% attendance in class 8, are eligible to receive a free bicycle [1].",
+      "ok": true
+    },
+    {
+      "text": "जल सहायता योजना के लिए आवश्यक दस्तावेज़: बीपीएल कार्ड या आयु का प्रमाण (आधार या जन्मतिथि वाला कोई सरकारी पहचान पत्र), नवीनतम संपत्ति कर रसीद, और किरायेदार होने पर मालिक की लिखित सहमति।",
+      "ok": true
+    },
+    {
+      "text": "जल सहायता योजना के लिए आवश्यक दस्तावेज़: बीपीएल कार्ड या आयु का प्रमाण (आधार या जन्मतिथि वाला कोई सरकारी पहचान पत्र), नवीनतम संपत्ति कर रसीद, और किरायेदार होने पर मालिक की लिखित सहमति। आवेदन कैसे करें: फ़ॉर्म W-7 और अनुलग्नक JS-1 किसी भी वार्ड कार्यालय में या नागरिक पोर्टल पर जमा करें। कनेक्शन 15 कार्य दिवसों में लगाया जाता है। अंतिम तिथि: आवेदन 31 मार्च 2027 तक किए जा सकते हैं। [1]",
+      "ok": true
+    },
+    {
+      "text": "जल सहायता योजना के लिए आवश्यक दस्तावेज़: बीपीएल कार्ड या आयु का प्रमाण (आधार या जन्मतिथि वाला कोई सरकारी पहचान पत्र), नवीनतम संपत्ति कर रसीद, और किरायेदार होने पर मालिक की लिखित सहमति। [1]",
+      "ok": true
+    },
+    {
+      "text": "जल सहायता योजना के लिए आवश्यक दस्तावेज़ हैं: बीपीएल कार्ड या आयु का प्रमाण (आधार या जन्मतिथि वाला कोई सरकारी पहचान पत्र), नवीनतम संपत्ति कर रसीद, और किरायेदार होने पर मालिक की लिखित सहमति।",
+      "ok": true
+    },
+    {
+      "text": "Kalpanagar Water Help Scheme के लिए आवश्यक दस्तावेज़ हैं: बीपीएल कार्ड या आयु का प्रमाण (आधार या जन्मतिथि वाला कोई सरकारी पहचान पत्र), नवीनतम संपत्ति कर रसीद, और किरायेदार होने पर मालिक की लिखित सहमति। [3]",
+      "ok": true
+    },
+    {
+      "text": "जल सहायता योजना के लिए आवश्यक दस्तावेज़ हैं: बीपीएल कार्ड या आयु का प्रमाण (आधार या जन्मतिथि वाला कोई सरकारी पहचान पत्र), नवीनतम संपत्ति कर रसीद, और किरायेदार होने पर मालिक की लिखित सहमति। यह जानकारी [1] और [3] से प्राप्त की गई है।",
+      "ok": true
+    },
+    {
+      "text": "Kalpanagar Schoolgirl Cycle Scheme mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yoj",
+      "ok": false
+    },
+    {
+      "text": "Kalpanagar Schoolgirl Cycle Scheme yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi. Yojana mein cycle kab milegi",
+      "ok": false
+    },
+    {
+      "text": "कल्पनगर विद्यार्थिनी साइकिल योजना में Cycle Kab August 2026 के पहले सप्ताह में मिलेगी।",
+      "ok": true
+    },
+    {
+      "text": "साइकिल योजना में साइकिल कब मिलेगी: अगस्त 2026 के पहले सप्ताह में हर स्कूल में साइकिलें बाँटी जाती हैं। [2]",
+      "ok": true
+    },
+    {
+      "text": "Yojana mein cycle kab August 2026 ki purush pratham savan savan aayenge.",
+      "ok": false,
+      "note": "Garbled: mixes the date with nonsense words."
+    },
+    {
+      "text": "साइकिल योजना में साइकिल कब मिलेगी: अगस्त 2026 के पहले सप्ताह में हर स्कूल में साइकिलें बाँटी जाती हैं। [1]",
+      "ok": true
+    },
+    {
+      "text": "कल्पनगर विद्यार्थिनी साइकिल योजना के लिए आवेदन करने के लिए, आपको स्कूल के प्रधानाचार्य से पहले 15 जून 2026 तक फ़ॉर्म C-1 जमा करने की आवश्यकता है। आपको अपने स्कूल पहचान पत्र और माता या पिता का आधार जमा करने की आवश्यकता है। साइकिलें अगस्त 2026 के पहले सप्ताह में हर स्कूल में बाँटी जाती हैं।",
+      "ok": false,
+      "note": "Says the student must submit Form C-1; in fact the principal does, and no application is needed."
+    },
+    {
+      "text": "शैक्षिक छात्रा के लिए योजना से साइकिल प्राप्त करने के लिए आवेदन कैसे करें: अलग से आवेदन की ज़रूरत नहीं है। स्कूल के प्रधानाचार्य 15 जून 2026 तक सभी पात्र छात्राओं के लिए फ़ॉर्म C-1 जमा करते हैं। साइकिल कब मिलेगी: अगस्त 2026 के पहले सप्ताह में हर स्कूल में साइकिलें बाँटी जाती हैं। दस्तावेज़: छात्रा का स्कूल पहचान पत्र और माता या पिता का आधार। ये स्कूल ही एकत्र करता है। [1]",
+      "ok": true
+    },
+    {
+      "text": "कल्पनगर विद्यालय लड़की साइकिल योजना के लिए आवेदन कैसे करें: आवेदन की ज़रूरत नहीं है। स्कूल के प्रधानाचार्य 15 जून 2026 तक सभी पात्र छात्राओं के लिए फ़ॉर्म C-1 जमा करते हैं। साइकिल कब मिलेगी: अगस्त 2026 के पहले सप्ताह में हर स्कूल में साइकिलें बाँटी जाती हैं। दस्तावेज़: छात्रा का स्कूल पहचान पत्र और माता या पिता का आधार। ये स्कूल ही एकत्र करता है।",
+      "ok": true
+    },
+    {
+      "text": "साइकिल योजना के लिए आवेदन कैसे करें: अलग से आवेदन की ज़रूरत नहीं है। स्कूल के प्रधानाचार्य 15 जून 2026 तक सभी पात्र छात्राओं के लिए फ़ॉर्म C-1 जमा करते हैं। साइकिल कब मिलेगी: अगस्त 2026 के पहले सप्ताह में हर स्कूल में साइकिलें बाँटी जाती हैं। दस्तावेज़: छात्रा का स्कूल पहचान पत्र और माता या पिता का आधार। ये स्कूल ही एकत्र करता है। [1] [3]",
+      "ok": true
+    },
+    {
+      "text": "साइकिल योजना के लिए आवेदन कैसे करें: अलग से आवेदन की ज़रूरत नहीं है। स्कूल के प्रधानाचार्य 15 जून 2026 तक सभी पात्र छात्राओं के लिए फ़ॉर्म C-1 जमा करते हैं।",
+      "ok": true
+    },
+    {
+      "text": "Schoolgirl Cycle Scheme के लिए आवेदन करने के लिए, आप एक अलग आवेदन की ज़रूरत नहीं है। School Principal Forms C-1 को सभी पात्र छात्राओं के लिए 15 जून 2026 तक जमा करता है। आप अपने स्कूल की पहचान पत्र और माता या पिता का आधार जमा कर सकते हैं। यह Form C-1 Forms C-1 Forms C-1 Forms C-1 Forms C-1 Forms C-1 Forms C-1 Forms C-1 Forms C-1 Forms C-1 Forms C-1 Forms C-1 Forms C-1 Forms C-1 Forms C-1 Forms C-1 Forms C-1 Forms C-1 Forms C-1 Forms C-1 Forms C-1 Forms C",
+      "ok": false
+    },
+    {
+      "text": "Passage [1] only mentions the Kalpanagar Water Help Scheme 2026, which includes a waiver on the connection fee and a reduction in the refundable deposit for eligible households. It does not provide information on whether the scheme covers sewer connections.",
+      "ok": true
+    },
+    {
+      "text": "The provided passages do not contain information regarding whether the Kalpanagar Water Help Scheme covers sewer connections. Therefore, I don't know. [1][2][3]",
+      "ok": true
+    },
+    {
+      "text": "Ne, kalpanagar waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti waqti wa",
+      "ok": false
+    },
+    {
+      "text": "The passages provided do not explicitly mention whether the Kalpanagar Water Help Scheme 2026 covers sewer connections. Based on the information given, I cannot determine if the scheme includes sewer connections or not.",
+      "ok": true
+    },
+    {
+      "text": "The provided passages do not contain information regarding whether the Kalpanagar Water Help Scheme 2026 covers sewer connections. Therefore, I don't know. [1] [2] [3]",
+      "ok": true
+    },
+    {
+      "text": "Kalpanagar Water Help Scheme 2026 में आवेदन करने वाले व्यक्ति को निम्नलिखित प्रकार के घरों का मालिक या किराए पर रहने वाला व्यक्ति हो सकता है जो एक वैध BPL कार्ड के साथ आता है, या जहां मालिक या किराए पर रहने वाला व्यक्ति 60 वर्ष या उससे अधिक है।_property must be in Kalpanagar.",
+      "ok": true
+    },
+    {
+      "text": "Households with a valid BPL card, or where the owner or tenant applying is 60 years or older, and the property must be in Kalpanagar [1].",
+      "ok": true
+    },
+    {
+      "text": "Kalpanagar Water Help Scheme 2026 में आवेदन करने के लिए योग्य हैं उन घरों के मालिक जो निम्नलिखित दस्तावेज़ प्रदान कर सकते हैं: एक BPL कार्ड या उम्र की प्रमाण के रूप में Aadhaar या किसी सरकारी पहचान कार्ड, हालाँकि यह एक किराएदार के लिए आवश्यक है कि मालिक का लिखित सहमति हो।",
+      "ok": false
+    },
+    {
+      "text": "Eligible households can apply for the Kalpanagar Water Help Scheme 2026 [1].",
+      "ok": false
+    },
+    {
+      "text": "Kalpanagar Water Help Scheme 2026 में आवेदन करने के लिए पात्र वे परिवार हैं जिनके पास वैध बीपीएल कार्ड है, या जिनमें आवेदन करने वाला मालिक या किरायेदार 60 वर्ष या उससे अधिक आयु का है। संपत्ति कल्पनगर में होनी चाहिए।",
+      "ok": true
+    },
+    {
+      "text": "Those households with a valid BPL card, or where the owner or tenant applying is 60 years or older, and the property must be in Kalpanagar [1][2].",
+      "ok": true
+    },
+    {
+      "text": "Kalpanagar Water Help Scheme 2026 में आवेदन करने के लिए पात्र हैं: BPL कार्ड के साथ एक वैध घरzin kalpanagar में रहने वाले व्यक्ति, या जो 60 वर्ष या उससे अधिक उम्र में हैं।",
+      "ok": true
+    },
+    {
+      "text": "Abonnement der Kalpanagar Wasser Hilfs Scheme 2026 erhalten Sie eine Rückzahlung des Betrags von ₹3,000 auf ₹500.",
+      "ok": false,
+      "note": "Answered in German."
+    },
+    {
+      "text": "The deposit you pay for a water connection under the scheme is ₹500 [1].",
+      "ok": true
+    },
+    {
+      "text": "Under the scheme, the deposit you pay for a water connection is ₹500 [2].",
+      "ok": true
+    },
+    {
+      "text": "Under the Kalpanagar Water Help Scheme 2026, the deposit you pay for a water connection is ₹500. This is a reduction from the usual deposit of ₹3,000.",
+      "ok": true
+    },
+    {
+      "text": "The deposit you pay for a water connection under the scheme is ₹500. This is stated in the first passage [1], where it mentions that the refundable deposit is reduced from ₹3,000 to ₹500 for eligible households.",
+      "ok": true
+    },
+    { "text": "La última fecha para aplicar al esquema del agua es 31 marzo 2027.", "ok": false },
+    {
+      "text": "La última fecha para aplicar para el esquema del agua es 31 marzo 2027.",
+      "ok": false
+    },
+    { "text": "The last date to apply for the water scheme is 31 March 2027 [1][2].", "ok": true },
+    {
+      "text": "Schülerinnen im 9. Jahr der Schulen, die von der KMC betrieben werden, erhalten ein kostenloses Fahrrad.",
+      "ok": false
+    },
+    {
+      "text": "Girls who join class 9 in a school run by the KMC get a free bicycle [1].",
+      "ok": true
+    },
+    {
+      "text": "Kalpanagar Schoolgirl Cycle Scheme gives a free bicycle to every girl who joins class 9 in a school run by the KMC.",
+      "ok": true
+    },
+    {
+      "text": "Kalpanagar में कक्षा 9 में प्रवेश करने वाली हर छात्रा को मुफ्त साइकिल मिलता है।",
+      "ok": true
+    },
+    {
+      "text": "Kalpanagar Scheme में प्रत्येक केएमसी द्वारा चलाए जाने वाले स्कूल में कक्षा 9 में प्रवेश करने वाली छात्रा को मुफ्त साइकिल मिलता है।",
+      "ok": true
+    },
+    {
+      "text": "जल सहायता योजना के लिए आवेदन करने वाले परिवार के लिए वैध बीपीएल कार्ड चाहिए। यह दस्तावेज़ संपत्ति को कल्पनगर में होना चाहिए।",
+      "ok": false
+    },
+    {
+      "text": "आपके पास जल सहायता योजना के लिए आवश्यक दस्तावेज़ों के बारे में जानकारी नहीं है। मैं इस जानकारी को प्रदान नहीं कर सकता। [1]",
+      "ok": false
+    },
+    {
+      "text": "जल सहायता योजना के लिए ज़रूरी दस्तावेज़: बीपीएल कार्ड या आयु का प्रमाण (आधार या जन्मतिथि वाला कोई सरकारी पहचान पत्र), नवीनतम संपत्ति कर रसीद, और किरायेदार होने पर मालिक की लिखित सहमति।",
+      "ok": true
+    },
+    {
+      "text": "जल सहायता योजना के लिए आवश्यक दस्तावेज़ हैं: बीपीएल कार्ड या आयु का प्रमाण (आधार या जन्मतिथि वाला कोई सरकारी पहचान पत्र), नवीनतम संपत्ति कर रसीद, और किरायेदार होने पर मालिक की लिखित सहमति। [1]",
+      "ok": true
+    },
+    { "text": "Kalpanagar Schoolgirl Cycle Scheme mein cycle kab milegi.", "ok": false },
+    { "text": "Kalpanagar Schoolgirl Cycle Scheme mein cycle kab milegi. [1]", "ok": false },
+    {
+      "text": "कल्पनगर विद्यार्थिनी साइकिल योजना में साइकिल कब मिलेगी: अगस्त 2026 के पहले सप्ताह में हर स्कूल में साइकिलें बाँटी जाती हैं।",
+      "ok": true
+    },
+    {
+      "text": "साइकिल योजना में साइकिल कब मिलेगी? अगस्त 2026 के पहले सप्ताह में हर स्कूल में साइकिलें बाँटी जाती हैं। [1]",
+      "ok": true
+    },
+    {
+      "text": "Cycle yojana mein cycle अगस्त 2026 के पहले सप्ताह में हर स्कूल में बाँटी जाती हैं।",
+      "ok": true
+    },
+    {
+      "text": "साइकिल कब मिलेगी: अगस्त 2026 के पहले सप्ताह में हर स्कूल में साइकिलें बाँटी जाती हैं। [1]",
+      "ok": true
+    },
+    { "text": "Kalpanagar Schoolgirl Cycle Scheme mein cycle kab milegi. [2]", "ok": false },
+    {
+      "text": "कल्पनगर विद्यार्थिनी साइकिल योजना के लिए आवेदन कैसे करें: फ़ॉर्म C-1 स्कूल के प्रधानाचार्य 15 जून 2026 तक सभी पात्र छात्राओं के लिए जमा करें। अनुलग्नक JS-1 किसी भी वार्ड कार्यालय में या नागरिक पोर्टल पर जमा करें।",
+      "ok": false,
+      "note": "Mixes in the water scheme’s Annexure JS-1."
+    },
+    {
+      "text": "आपका आवेदन Celular Kalpanagar (Passage [1]) Celular Kalpanagar (Passage [2]) Celular Kalpanagar (Passage [2]) Celular Kalpanagar (Passage [1]) Celular Kalpanagar (Passage [2]) Celular Kalpanagar (Passage [2]) Celular Kalpanagar (Passage [1]) Celular Kalpanagar (Passage [2]) Celular Kalpanagar (Passage [2]) Celular Kalpanagar (Passage [1]) Celular Kalpanagar (Passage [2]) Celular Kalpanagar (Passage [2]) Celular Kalpanagar (Passage [1]) Celular Kalpan",
+      "ok": false
+    },
+    {
+      "text": "आपके लिए साइकिल योजना के लिए आवेदन कैसे करें: अलग से आवेदन की ज़रूरत नहीं है। स्कूल के प्रधानाचार्य 15 जून 2026 तक सभी पात्र छात्राओं के लिए फ़ॉर्म C-1 जमा करते हैं।",
+      "ok": true
+    },
+    {
+      "text": "साइकिल योजना के लिए आवेदन कैसे करें: अलग से आवेदन की ज़रूरत नहीं है। स्कूल के प्रधानाचार्य 15 जून 2026 तक सभी पात्र छात्राओं के लिए फ़ॉर्म C-1 जमा करते हैं। [1]",
+      "ok": true
+    },
+    {
+      "text": "साइकिल योजना के लिए आवेदन कैसे करें? स्कूल के प्रधानाचार्य 15 जून 2026 तक सभी पात्र छात्राओं के लिए फ़ॉर्म C-1 जमा करते हैं। साथ ही, छात्रा का स्कूल पहचान पत्र और माता या पिता का आधार आवश्यक दस्तावेज़ हैं। ये सभी दस्तावेज़ स्कूल ही एकत्र करता है।",
+      "ok": true
+    },
+    {
+      "text": "साइकिल योजना के लिए आवेदन कैसे करें: स्कूल के प्रधानाचार्य 15 जून 2026 तक सभी पात्र छात्राओं के लिए फ़ॉर्म C-1 जमा करते हैं। [1][2]",
+      "ok": true
+    },
+    {
+      "text": "Passage [1] only mentions the waiver of the connection fee and the reduction of the refundable deposit for the Kalpanagar Water Help Scheme 2026. It does not provide information on whether the scheme covers sewer connections. Therefore, based on the given passage, it cannot be determined if the water help scheme covers sewer connections.",
+      "ok": true
+    },
+    {
+      "text": "The provided passages do not contain information regarding whether the Kalpanagar Water Help Scheme 2026 covers sewer connections. Therefore, I don't know. [1, 2, 3]",
+      "ok": true
+    },
+    {
+      "text": "Passages provided do not mention anything about the Kalpanagar Water Help Scheme covering sewer connections. Therefore, based on the given information, it cannot be determined whether the scheme covers sewer connections or not.",
+      "ok": true
+    },
+    {
+      "text": "Passages do not provide information on whether the Kalpanagar Water Help Scheme 2026 covers sewer connections.",
+      "ok": true
+    },
+    {
+      "text": "Those households with a valid BPL card, or where the owner or tenant applying is 60 years or older.",
+      "ok": true
+    },
+    {
+      "text": "Households with a valid BPL card, or where the owner or tenant applying is 60 years or older [2].",
+      "ok": true
+    },
+    {
+      "text": "Passage [2] states that households with a valid Below Poverty Line (BPL) card, or where the owner or tenant applying is 60 years or older, can apply for the water help scheme.",
+      "ok": true
+    },
+    {
+      "text": "Bezwoditli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli karnitli k",
+      "ok": false
+    },
+    {
+      "text": "Households holding a valid below-poverty-line (BPL) card can apply for the water help scheme [1].",
+      "ok": false
+    },
+    {
+      "text": "Una propiedad o a un arrendatario con el consentimiento escrito del propietario puede aplicar para la ayuda del agua. El formulario KMC-W-7 se utiliza para solicitar una nueva conexión doméstica de agua. El formulario KMC-W-7 se puede encontrar en el sitio web del Departamento del Agua y Saneamiento del Gobierno del Estado. El formulario KMC-W-7 se puede descargar en línea o solicitar en persona en los centros del Departamento del Agua y Saneamiento del Gobierno del Estado. El formulario KMC-W-7 se puede completar en línea o en persona en los centros del Departamento del Agua y Saneamiento del Gobierno del Estado. El formulario KMC-W-7 se puede enviar en línea o en persona en los centros",
+      "ok": false
+    },
+    {
+      "text": "The owner of a property, or a tenant with the owner's written consent, can apply for the new domestic connection [2].",
+      "ok": false
+    },
+    { "text": "Be individuals with a valid below-poverty-line (BPL) card.", "ok": false },
+    {
+      "text": "Households holding a valid below-poverty-line (BPL) card can apply for the water help scheme [3].",
+      "ok": false
+    },
+    {
+      "text": "Passage [2] states that households with a valid BPL card, or where the owner or tenant applying is 60 years or older, can apply for the water help scheme.",
+      "ok": true
+    },
+    {
+      "text": "Under the scheme, you pay a refundable deposit of ₹500 for a water connection.",
+      "ok": true
+    },
+    {
+      "text": "The deposit you pay for a water connection under the scheme is ₹500. This is stated in the passage [1], which mentions that the refundable deposit is reduced from ₹3,000 to ₹500 for eligible households.",
+      "ok": true
+    },
+    { "text": "La date limite pour s'inscrire au schéma d'eau est le 31 mars 2027.", "ok": false },
+    {
+      "text": "Ras karye class 9 KMC schoolani don biikey yare don biikey yare don biikey yare don biikey yare don biikey yare don biikey yare don biikey yare don biikey yare don biikey yare don biikey yare don biikey yare don biikey yare don biikey yare don biikey yare don biikey yare don biikey yare don biikey yare don biikey yare don biikey yare don biikey yare don biikey yare don biikey yare don biikey yare",
+      "ok": false
+    },
+    {
+      "text": "Schülerinnen, die Klasse 9 an einer Schule unter der Leitung der KMC besuchen und den Form C-1 bis 15. Juni 2026 eingereicht haben, erhalten ein kostenloses Fahrrad.",
+      "ok": false
+    },
+    {
+      "text": "Chhutian KMC run school mein Kachak 9 mein banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe banane rahe",
+      "ok": false
+    },
+    {
+      "text": "Chulalika Mahila College (KMC) केएमसी द्वारा चलाए जा रहे स्कूल में कक्षा 9 में प्रवेश लेने वाली हर छात्रा को मुफ्त साइकिल प्राप्त करती है। [1][2]",
+      "ok": false,
+      "note": "Invents “Chulalika Mahila College” as the meaning of KMC."
+    },
+    {
+      "text": "Passage [1] में उल्लिखित है कि पात्र परिवारों के लिए योजना से क्या मिलता है: पात्र परिवारों के लिए ₹500 का कनेक्शन शुल्क माफ़ है और ₹3,000 की वापसी योग्य जमा राशि घटाकर ₹500 कर दी गई है। हालांकि, यह जानकारी जल सहायता योजना के लिए आवश्यक दस्तावेज़ के बारे में नहीं है। Passages [2] और [3] में भी जल सहायता योजना के लिए आवश्यक दस्तावेज़ के बारे में कोई जानकारी नहीं दी गई है। जल सहायता योजना के लिए आवश्यक दस्तावेज़ के बारे में अधिक स्पष्ट जानकारी प्रदान करने के लिए अतिरिक्त संदर्भ या Passages की आवश्यकता होगी।",
+      "ok": false
+    },
+    {
+      "text": "आपके द्वारा प्रदान किए गए पाठ्यपुस्तकों में जल सहायता योजना के लिए आवश्यक दस्तावेज़ का उल्लेख नहीं किया गया है। इसलिए मैं इस जानकारी को प्रदान नहीं कर सकता। कृपया अन्य पाठ्यपुस्तकों या संदर्भों का संदर्भ दें। [1][2][3]",
+      "ok": false
+    },
+    {
+      "text": "जल सहायता योजना के लिए, आवश्यक दस्तावेज़ वे हैं: बीपीएल कार्ड या आयु का प्रमाण (आधार या जन्मतिथि वाला कोई सरकारी पहचान पत्र), नवीनतम संपत्ति कर रसीद, और किरायेदार होने पर मालिक की लिखित सहमति।",
+      "ok": true
+    },
+    {
+      "text": "जल सहायता योजना के लिए आवश्यक दस्तावेज़: बीपीएल कार्ड या आयु का प्रमाण (आधार या जन्मतिथि वाला कोई सरकारी पहचान पत्र), नवीनतम संपत्ति कर रसीद, और किरायेदार होने पर मालिक की लिखित सहमति। [2]",
+      "ok": true
+    },
+    {
+      "text": "जल सहायता योजना के लिए आवश्यक दस्तावेज़ हैं: बीपीएल कार्ड या आयु का प्रमाण (आधार या जन्मतिथि वाला कोई सरकारी पहचान पत्र), नवीनतम संपत्ति कर रसीद, और किरायेदार होने पर मालिक की लिखित सहमति। [3]",
+      "ok": true
+    },
+    {
+      "text": "जल सहायता योजना के लिए आवश्यक दस्तावेज़ में बीपीएल कार्ड या आयु का प्रमाण (आधार या जन्मतिथि वाला कोई सरकारी पहचान पत्र), नवीनतम संपत्ति कर रसीद और किरायेदार होने पर मालिक की लिखित सहमति शामिल हैं।",
+      "ok": true
+    },
+    {
+      "text": "जल सहायता योजना के लिए आवश्यक दस्तावेज़ में बीपीएल कार्ड या आयु का प्रमाण (आधार या जन्मतिथि वाला कोई सरकारी पहचान पत्र), नवीनतम संपत्ति कर रसीद और किरायेदार होने पर मालिक की लिखित सहमति शामिल हैं। [1]",
+      "ok": true
+    },
+    {
+      "text": "Passage: Unfortunately, there is no direct passage provided in the text to answer this question accurately. However, in general knowledge, a yojana is a traditional Indian unit of distance equivalent to approximately 12 to 15 kilometers (7.5 to 9.3 miles). Since a yojana consists of a series of cycles, a yojana would consist of a series of yojanas, each containing a series of cycles. If we consider a yojana to consist of a series of 12 kilometers, then a series of yojanas would consist of a series of 12 kilometers each, multiplied by the number of yojanas being considered.",
+      "ok": false
+    },
+    { "text": "I don't know. [1]", "ok": false },
+    {
+      "text": "साइकिल योजना में साइकिल कब मिलते हैं? साइकिलें अगस्त 2026 के पहले सप्ताह में हर स्कूल में बाँटी जाती हैं।",
+      "ok": true
+    },
+    { "text": "साइकिल August 2026 के पहले सप्ताह में हर स्कूल में मिलेगी। [3]", "ok": true },
+    {
+      "text": "साइकिल योजना में साइकिल कब मिलेगी? साइकिल योजना में साइकिलें अगस्त 2026 के पहले सप्ताह में हर स्कूल में बाँटी जाती हैं।",
+      "ok": true
+    },
+    {
+      "text": "साइकिल योजना से[kya] मिलते हैं: केएमसी द्वारा चलाए जा रहे स्कूल में कक्षा 9 में प्रवेश लेने वाली हर छात्रा को मुफ्त साइकिल।[2]\n\nCycle yojana mein cycle kab milegi? [3]",
+      "ok": false
+    },
+    {
+      "text": "आपके द्वारा प्रदान किए गए पाठ्यपुस्तकों में साइकिल योजना के लिए आवेदन प्रक्रिया का उल्लेख नहीं किया गया है। आप संबंधित विभाग या वेबसाइट की अधिकृत जानकारी की तलाश कर सकते हैं ताकि साइकिल योजना के लिए आवेदन कैसे करें यह जान सकें।",
+      "ok": false
+    },
+    {
+      "text": "आपके द्वारा प्रदान किए गए पाठ्यपुस्तकों में साइकिल योजना के लिए आवेदन कैसे करें इस जानकारी नहीं मिलती। आप इस जानकारी के लिए पाठ्यपुस्तकों में साइकिल योजना के लिए आवेदन कैसे करें के बारे में अतिरिक्त जानकारी प्रदान कर सकते हैं।",
+      "ok": false
+    },
+    {
+      "text": "साइकिल योजना के लिए आवेदन करने के लिए फ़ॉर्म W-7 और अनुलग्नक JS-1 किसी भी वार्ड कार्यालय में या नागरिक पोर्टल पर जमा करें। Passage [3] में कहा गया है कि अलग से आवेदन की ज़रूरत नहीं है।",
+      "ok": false
+    },
+    {
+      "text": "साइकिल योजना के लिए आवेदन कैसे करें: फ़ॉर्म W-7 और अनुलग्नक JS-1 किसी भी वार्ड कार्यालय में या नागरिक पोर्टल पर जमा करें। [2]",
+      "ok": false
+    },
+    {
+      "text": "आपके पास कोई अलग-अलग आवेदन प्रक्रिया नहीं है। आप सीधे योजना से लाभान्वित हैं।",
+      "ok": false
+    },
+    {
+      "text": "आपके पास साइकिल योजना के लिए आवेदन कैसे करें, यह जानकारी नहीं है। [1]",
+      "ok": false
+    },
+    {
+      "text": "साइकिल योजना के लिए आवेदन करने के लिए फ़ॉर्म W-7 और अनुलग्नक JS-1 किसी भी वार्ड कार्यालय में या नागरिक पोर्टल पर जमा करें।",
+      "ok": false
+    },
+    {
+      "text": "आपके द्वारा प्रदान किए गए पाठ्यपुस्तकों में साइकिल योजना के लिए आवेदन कैसे करें इस जानकारी नहीं मिलती है। मैं आपको साइकिल योजना के लिए आवेदन कैसे करें इस जानकारी प्रदान नहीं कर सकता। [3]",
+      "ok": false
+    },
+    {
+      "text": "Passage [1] doesn't provide information on whether the water help scheme covers sewer connections. It only mentions the waiver of the connection fee and the reduction of the refundable deposit for eligible households.",
+      "ok": true
+    },
+    {
+      "text": "The passages provided do not contain information regarding whether the water help scheme covers sewer connections [1, 2, 3].",
+      "ok": true
+    },
+    {
+      "text": "Passage [1] doesn't provide information on whether the water help scheme covers sewer connections. It only mentions the waiver of the connection fee and reduction of the refundable deposit for eligible households.",
+      "ok": true
+    },
+    {
+      "text": "The provided passages do not contain information regarding whether the water help scheme covers sewer connections. Therefore, I don't know. [1][2][3]",
+      "ok": true
+    },
+    {
+      "text": "Passage [3] states that a new domestic connection is granted to the owner of a property, or to a tenant with the owner's written consent, and mentions the connection fee and deposit collected. However, it does not explicitly mention whether the scheme covers sewer connections or not. Therefore, based on the provided passages, it cannot be conclusively determined if the water help scheme covers sewer connections.",
+      "ok": true
+    },
+    {
+      "text": "The provided passages do not contain information regarding whether the water help scheme covers sewer connections. Therefore, I don't know. [1, 2, 3]",
+      "ok": true
+    },
+    {
+      "text": "Passage [1] only mentions a new water connection, not a sewer connection. Therefore, from the given passages, it cannot be determined whether the water help scheme covers sewer connections.",
+      "ok": true
+    },
+    { "text": "I don't know. [1][2][3]", "ok": true }
+  ],
+  "configs": {
+    "page|keyword|none|basic": {
+      "who": { "top": ["water-en", "cycle-en", "water-1"], "hit": true, "a": 0 },
+      "deposit": { "top": ["water-en", "water-2", "rules-2"], "hit": true, "a": 8 },
+      "lastdate": { "top": ["water-en", "cycle-en", "water-1"], "hit": true, "a": 15 },
+      "girls": { "top": ["cycle-en", "grievance-1", "rules-3"], "hit": true, "a": 19 },
+      "docs-hi": { "top": ["water-hi", "cycle-hi"], "hit": true, "a": 29 },
+      "when-rom": { "top": ["cycle-en"], "hit": true, "a": 35 },
+      "apply-hi": { "top": ["cycle-hi", "water-hi"], "hit": true, "a": 41 },
+      "sewer": { "top": ["water-en", "water-2", "water-3"], "hit": false, "a": 47 }
+    },
+    "page|keyword|none|strict": {
+      "who": { "top": ["water-en", "cycle-en", "water-1"], "hit": true, "a": 1 },
+      "deposit": { "top": ["water-en", "water-2", "rules-2"], "hit": true, "a": 9 },
+      "lastdate": { "top": ["water-en", "cycle-en", "water-1"], "hit": true, "a": 16 },
+      "girls": { "top": ["cycle-en", "grievance-1", "rules-3"], "hit": true, "a": 20 },
+      "docs-hi": { "top": ["water-hi", "cycle-hi"], "hit": true, "a": 30 },
+      "when-rom": { "top": ["cycle-en"], "hit": true, "a": 36 },
+      "apply-hi": { "top": ["cycle-hi", "water-hi"], "hit": true, "a": 42 },
+      "sewer": { "top": ["water-en", "water-2", "water-3"], "hit": false, "a": 48 }
+    },
+    "page|keyword|rerank|basic": {
+      "who": { "top": ["water-en", "water-1", "form-W-7"], "hit": true, "a": 2 },
+      "deposit": { "top": ["water-2", "water-en", "rules-2"], "hit": true, "a": 8 },
+      "lastdate": { "top": ["water-en", "water-3", "water-1"], "hit": true, "a": 15 },
+      "girls": { "top": ["cycle-en", "rules-3", "rules-4"], "hit": true, "a": 21 },
+      "docs-hi": { "top": ["water-hi", "cycle-hi"], "hit": true, "a": 29 },
+      "when-rom": { "top": ["cycle-en"], "hit": true, "a": 35 },
+      "apply-hi": { "top": ["cycle-hi", "water-hi"], "hit": true, "a": 41 },
+      "sewer": { "top": ["water-en", "rules-1", "water-3"], "hit": false, "a": 49 }
+    },
+    "page|keyword|rerank|strict": {
+      "who": { "top": ["water-en", "water-1", "form-W-7"], "hit": true, "a": 1 },
+      "deposit": { "top": ["water-2", "water-en", "rules-2"], "hit": true, "a": 10 },
+      "lastdate": { "top": ["water-en", "water-3", "water-1"], "hit": true, "a": 16 },
+      "girls": { "top": ["cycle-en", "rules-3", "rules-4"], "hit": true, "a": 22 },
+      "docs-hi": { "top": ["water-hi", "cycle-hi"], "hit": true, "a": 30 },
+      "when-rom": { "top": ["cycle-en"], "hit": true, "a": 36 },
+      "apply-hi": { "top": ["cycle-hi", "water-hi"], "hit": true, "a": 42 },
+      "sewer": { "top": ["water-en", "rules-1", "water-3"], "hit": false, "a": 50 }
+    },
+    "page|vector|none|basic": {
+      "who": { "top": ["water-en", "water-hi", "rules-3"], "hit": true, "a": 3 },
+      "deposit": { "top": ["water-2", "rules-2", "water-en"], "hit": true, "a": 11 },
+      "lastdate": { "top": ["water-en", "water-hi", "form-W-7"], "hit": true, "a": 17 },
+      "girls": { "top": ["cycle-en", "cycle-hi", "circ-22-2026"], "hit": true, "a": 23 },
+      "docs-hi": { "top": ["water-hi", "water-en", "rules-3"], "hit": true, "a": 29 },
+      "when-rom": { "top": ["cycle-en", "cycle-hi", "water-hi"], "hit": true, "a": 37 },
+      "apply-hi": { "top": ["cycle-hi", "water-hi", "cycle-en"], "hit": true, "a": 43 },
+      "sewer": { "top": ["water-en", "water-2", "water-1"], "hit": false, "a": 47 }
+    },
+    "page|vector|none|strict": {
+      "who": { "top": ["water-en", "water-hi", "rules-3"], "hit": true, "a": 4 },
+      "deposit": { "top": ["water-2", "rules-2", "water-en"], "hit": true, "a": 12 },
+      "lastdate": { "top": ["water-en", "water-hi", "form-W-7"], "hit": true, "a": 18 },
+      "girls": { "top": ["cycle-en", "cycle-hi", "circ-22-2026"], "hit": true, "a": 24 },
+      "docs-hi": { "top": ["water-hi", "water-en", "rules-3"], "hit": true, "a": 31 },
+      "when-rom": { "top": ["cycle-en", "cycle-hi", "water-hi"], "hit": true, "a": 38 },
+      "apply-hi": { "top": ["cycle-hi", "water-hi", "cycle-en"], "hit": true, "a": 44 },
+      "sewer": { "top": ["water-en", "water-2", "water-1"], "hit": false, "a": 51 }
+    },
+    "page|vector|rerank|basic": {
+      "who": { "top": ["water-en", "water-hi", "water-1"], "hit": true, "a": 5 },
+      "deposit": { "top": ["water-2", "water-en", "water-hi"], "hit": true, "a": 13 },
+      "lastdate": { "top": ["water-en", "water-hi", "water-3"], "hit": true, "a": 17 },
+      "girls": { "top": ["cycle-en", "cycle-hi", "rules-3"], "hit": true, "a": 25 },
+      "docs-hi": { "top": ["water-hi", "water-en", "water-1"], "hit": true, "a": 32 },
+      "when-rom": { "top": ["cycle-hi", "cycle-en", "water-hi"], "hit": true, "a": 39 },
+      "apply-hi": { "top": ["cycle-hi", "cycle-en", "water-hi"], "hit": true, "a": 45 },
+      "sewer": { "top": ["water-en", "rules-1", "water-3"], "hit": false, "a": 49 }
+    },
+    "page|vector|rerank|strict": {
+      "who": { "top": ["water-en", "water-hi", "water-1"], "hit": true, "a": 6 },
+      "deposit": { "top": ["water-2", "water-en", "water-hi"], "hit": true, "a": 14 },
+      "lastdate": { "top": ["water-en", "water-hi", "water-3"], "hit": true, "a": 18 },
+      "girls": { "top": ["cycle-en", "cycle-hi", "rules-3"], "hit": true, "a": 26 },
+      "docs-hi": { "top": ["water-hi", "water-en", "water-1"], "hit": true, "a": 33 },
+      "when-rom": { "top": ["cycle-hi", "cycle-en", "water-hi"], "hit": true, "a": 40 },
+      "apply-hi": { "top": ["cycle-hi", "cycle-en", "water-hi"], "hit": true, "a": 46 },
+      "sewer": { "top": ["water-en", "rules-1", "water-3"], "hit": false, "a": 50 }
+    },
+    "page|hybrid|none|basic": {
+      "who": { "top": ["water-en", "water-1", "cycle-en"], "hit": true, "a": 7 },
+      "deposit": { "top": ["water-2", "water-en", "rules-2"], "hit": true, "a": 8 },
+      "lastdate": { "top": ["water-en", "cycle-en", "rules-5"], "hit": true, "a": 15 },
+      "girls": { "top": ["cycle-en", "rules-3", "grievance-1"], "hit": true, "a": 27 },
+      "docs-hi": { "top": ["water-hi", "cycle-hi", "water-en"], "hit": true, "a": 32 },
+      "when-rom": { "top": ["cycle-en", "cycle-hi", "water-hi"], "hit": true, "a": 37 },
+      "apply-hi": { "top": ["cycle-hi", "water-hi", "cycle-en"], "hit": true, "a": 43 },
+      "sewer": { "top": ["water-en", "water-2", "water-1"], "hit": false, "a": 47 }
+    },
+    "page|hybrid|none|strict": {
+      "who": { "top": ["water-en", "water-1", "cycle-en"], "hit": true, "a": 1 },
+      "deposit": { "top": ["water-2", "water-en", "rules-2"], "hit": true, "a": 10 },
+      "lastdate": { "top": ["water-en", "cycle-en", "rules-5"], "hit": true, "a": 16 },
+      "girls": { "top": ["cycle-en", "rules-3", "grievance-1"], "hit": true, "a": 28 },
+      "docs-hi": { "top": ["water-hi", "cycle-hi", "water-en"], "hit": true, "a": 34 },
+      "when-rom": { "top": ["cycle-en", "cycle-hi", "water-hi"], "hit": true, "a": 38 },
+      "apply-hi": { "top": ["cycle-hi", "water-hi", "cycle-en"], "hit": true, "a": 44 },
+      "sewer": { "top": ["water-en", "water-2", "water-1"], "hit": false, "a": 51 }
+    },
+    "page|hybrid|rerank|basic": {
+      "who": { "top": ["water-en", "water-1", "form-W-7"], "hit": true, "a": 2 },
+      "deposit": { "top": ["water-2", "water-en", "rules-2"], "hit": true, "a": 8 },
+      "lastdate": { "top": ["water-en", "water-3", "water-1"], "hit": true, "a": 15 },
+      "girls": { "top": ["cycle-en", "cycle-hi", "rules-3"], "hit": true, "a": 25 },
+      "docs-hi": { "top": ["water-hi", "water-en", "water-1"], "hit": true, "a": 32 },
+      "when-rom": { "top": ["cycle-hi", "cycle-en", "water-hi"], "hit": true, "a": 39 },
+      "apply-hi": { "top": ["cycle-hi", "cycle-en", "water-hi"], "hit": true, "a": 45 },
+      "sewer": { "top": ["water-en", "rules-1", "water-3"], "hit": false, "a": 49 }
+    },
+    "page|hybrid|rerank|strict": {
+      "who": { "top": ["water-en", "water-1", "form-W-7"], "hit": true, "a": 1 },
+      "deposit": { "top": ["water-2", "water-en", "rules-2"], "hit": true, "a": 10 },
+      "lastdate": { "top": ["water-en", "water-3", "water-1"], "hit": true, "a": 16 },
+      "girls": { "top": ["cycle-en", "cycle-hi", "rules-3"], "hit": true, "a": 26 },
+      "docs-hi": { "top": ["water-hi", "water-en", "water-1"], "hit": true, "a": 33 },
+      "when-rom": { "top": ["cycle-hi", "cycle-en", "water-hi"], "hit": true, "a": 40 },
+      "apply-hi": { "top": ["cycle-hi", "cycle-en", "water-hi"], "hit": true, "a": 46 },
+      "sewer": { "top": ["water-en", "rules-1", "water-3"], "hit": false, "a": 50 }
+    },
+    "section|keyword|none|basic": {
+      "who": { "top": ["water-en#1", "water-en#3", "water-en#4"], "hit": true, "a": 52 },
+      "deposit": { "top": ["water-en#0", "water-2", "water-en#3"], "hit": true, "a": 59 },
+      "lastdate": { "top": ["water-en#4", "water-en#0", "water-en#1"], "hit": true, "a": 15 },
+      "girls": { "top": ["cycle-en#0", "cycle-en#3", "grievance-1"], "hit": true, "a": 67 },
+      "docs-hi": { "top": ["water-hi#0", "water-hi#1", "cycle-hi#2"], "hit": false, "a": 72 },
+      "when-rom": { "top": ["cycle-en#3", "cycle-en#4", "cycle-en#0"], "hit": true, "a": 76 },
+      "apply-hi": { "top": ["cycle-hi#2", "water-hi#3", "cycle-hi#3"], "hit": true, "a": 83 },
+      "sewer": { "top": ["water-en#0", "water-en#3", "water-en#4"], "hit": false, "a": 89 }
+    },
+    "section|keyword|none|strict": {
+      "who": { "top": ["water-en#1", "water-en#3", "water-en#4"], "hit": true, "a": 53 },
+      "deposit": { "top": ["water-en#0", "water-2", "water-en#3"], "hit": true, "a": 60 },
+      "lastdate": { "top": ["water-en#4", "water-en#0", "water-en#1"], "hit": true, "a": 16 },
+      "girls": { "top": ["cycle-en#0", "cycle-en#3", "grievance-1"], "hit": true, "a": 68 },
+      "docs-hi": { "top": ["water-hi#0", "water-hi#1", "cycle-hi#2"], "hit": false, "a": 73 },
+      "when-rom": { "top": ["cycle-en#3", "cycle-en#4", "cycle-en#0"], "hit": true, "a": 77 },
+      "apply-hi": { "top": ["cycle-hi#2", "water-hi#3", "cycle-hi#3"], "hit": true, "a": 84 },
+      "sewer": { "top": ["water-en#0", "water-en#3", "water-en#4"], "hit": false, "a": 90 }
+    },
+    "section|keyword|rerank|basic": {
+      "who": { "top": ["water-en#1", "water-en#3", "water-en#4"], "hit": true, "a": 52 },
+      "deposit": { "top": ["water-2", "water-en#0", "rules-2"], "hit": true, "a": 13 },
+      "lastdate": { "top": ["water-en#4", "water-en#3", "water-en#1"], "hit": true, "a": 15 },
+      "girls": { "top": ["cycle-en#0", "cycle-en#3", "cycle-en#2"], "hit": true, "a": 69 },
+      "docs-hi": { "top": ["water-hi#2", "water-hi#1", "water-hi#3"], "hit": true, "a": 74 },
+      "when-rom": { "top": ["cycle-en#3", "cycle-en#2", "cycle-en#4"], "hit": true, "a": 76 },
+      "apply-hi": { "top": ["cycle-hi#2", "cycle-hi#4", "cycle-hi#1"], "hit": true, "a": 85 },
+      "sewer": { "top": ["water-en#0", "water-en#3", "water-en#4"], "hit": false, "a": 89 }
+    },
+    "section|keyword|rerank|strict": {
+      "who": { "top": ["water-en#1", "water-en#3", "water-en#4"], "hit": true, "a": 53 },
+      "deposit": { "top": ["water-2", "water-en#0", "rules-2"], "hit": true, "a": 61 },
+      "lastdate": { "top": ["water-en#4", "water-en#3", "water-en#1"], "hit": true, "a": 16 },
+      "girls": { "top": ["cycle-en#0", "cycle-en#3", "cycle-en#2"], "hit": true, "a": 68 },
+      "docs-hi": { "top": ["water-hi#2", "water-hi#1", "water-hi#3"], "hit": true, "a": 31 },
+      "when-rom": { "top": ["cycle-en#3", "cycle-en#2", "cycle-en#4"], "hit": true, "a": 77 },
+      "apply-hi": { "top": ["cycle-hi#2", "cycle-hi#4", "cycle-hi#1"], "hit": true, "a": 86 },
+      "sewer": { "top": ["water-en#0", "water-en#3", "water-en#4"], "hit": false, "a": 90 }
+    },
+    "section|vector|none|basic": {
+      "who": { "top": ["water-en#0", "water-en#4", "water-en#2"], "hit": false, "a": 54 },
+      "deposit": { "top": ["water-2", "water-en#0", "rules-2"], "hit": true, "a": 13 },
+      "lastdate": { "top": ["water-en#4", "water-hi#4", "water-en#0"], "hit": true, "a": 64 },
+      "girls": { "top": ["cycle-en#0", "cycle-en#3", "cycle-hi#0"], "hit": true, "a": 70 },
+      "docs-hi": { "top": ["water-hi#2", "water-en#2", "water-hi#1"], "hit": true, "a": 32 },
+      "when-rom": { "top": ["cycle-hi#3", "cycle-hi#2", "cycle-hi#0"], "hit": true, "a": 78 },
+      "apply-hi": { "top": ["cycle-hi#2", "cycle-hi#1", "cycle-hi#0"], "hit": true, "a": 45 },
+      "sewer": { "top": ["water-en#0", "water-2", "water-en#2"], "hit": false, "a": 91 }
+    },
+    "section|vector|none|strict": {
+      "who": { "top": ["water-en#0", "water-en#4", "water-en#2"], "hit": false, "a": 55 },
+      "deposit": { "top": ["water-2", "water-en#0", "rules-2"], "hit": true, "a": 61 },
+      "lastdate": { "top": ["water-en#4", "water-hi#4", "water-en#0"], "hit": true, "a": 16 },
+      "girls": { "top": ["cycle-en#0", "cycle-en#3", "cycle-hi#0"], "hit": true, "a": 68 },
+      "docs-hi": { "top": ["water-hi#2", "water-en#2", "water-hi#1"], "hit": true, "a": 75 },
+      "when-rom": { "top": ["cycle-hi#3", "cycle-hi#2", "cycle-hi#0"], "hit": true, "a": 79 },
+      "apply-hi": { "top": ["cycle-hi#2", "cycle-hi#1", "cycle-hi#0"], "hit": true, "a": 86 },
+      "sewer": { "top": ["water-en#0", "water-2", "water-en#2"], "hit": false, "a": 90 }
+    },
+    "section|vector|rerank|basic": {
+      "who": { "top": ["water-en#1", "water-hi#1", "water-hi#3"], "hit": true, "a": 56 },
+      "deposit": { "top": ["water-2", "water-en#0", "rules-2"], "hit": true, "a": 13 },
+      "lastdate": { "top": ["water-en#4", "water-hi#4", "water-en#3"], "hit": true, "a": 65 },
+      "girls": { "top": ["cycle-en#0", "cycle-hi#0", "cycle-en#3"], "hit": true, "a": 71 },
+      "docs-hi": { "top": ["water-hi#2", "water-en#2", "water-hi#1"], "hit": true, "a": 32 },
+      "when-rom": { "top": ["cycle-hi#3", "cycle-hi#0", "cycle-hi#1"], "hit": true, "a": 80 },
+      "apply-hi": { "top": ["cycle-hi#2", "cycle-en#2", "cycle-hi#4"], "hit": true, "a": 87 },
+      "sewer": { "top": ["water-en#0", "water-en#4", "water-en#2"], "hit": false, "a": 92 }
+    },
+    "section|vector|rerank|strict": {
+      "who": { "top": ["water-en#1", "water-hi#1", "water-hi#3"], "hit": true, "a": 57 },
+      "deposit": { "top": ["water-2", "water-en#0", "rules-2"], "hit": true, "a": 61 },
+      "lastdate": { "top": ["water-en#4", "water-hi#4", "water-en#3"], "hit": true, "a": 66 },
+      "girls": { "top": ["cycle-en#0", "cycle-hi#0", "cycle-en#3"], "hit": true, "a": 68 },
+      "docs-hi": { "top": ["water-hi#2", "water-en#2", "water-hi#1"], "hit": true, "a": 75 },
+      "when-rom": { "top": ["cycle-hi#3", "cycle-hi#0", "cycle-hi#1"], "hit": true, "a": 81 },
+      "apply-hi": { "top": ["cycle-hi#2", "cycle-en#2", "cycle-hi#4"], "hit": true, "a": 88 },
+      "sewer": { "top": ["water-en#0", "water-en#4", "water-en#2"], "hit": false, "a": 90 }
+    },
+    "section|hybrid|none|basic": {
+      "who": { "top": ["water-en#1", "water-en#0", "water-en#4"], "hit": true, "a": 58 },
+      "deposit": { "top": ["water-en#0", "water-2", "rules-2"], "hit": true, "a": 62 },
+      "lastdate": { "top": ["water-en#4", "water-en#0", "water-en#1"], "hit": true, "a": 15 },
+      "girls": { "top": ["cycle-en#0", "cycle-en#3", "cycle-en#2"], "hit": true, "a": 69 },
+      "docs-hi": { "top": ["water-hi#2", "water-hi#1", "water-hi#0"], "hit": true, "a": 74 },
+      "when-rom": { "top": ["cycle-en#3", "cycle-en#0", "cycle-en#2"], "hit": true, "a": 76 },
+      "apply-hi": { "top": ["cycle-hi#2", "cycle-hi#3", "cycle-hi#0"], "hit": true, "a": 45 },
+      "sewer": { "top": ["water-en#0", "water-2", "water-en#2"], "hit": false, "a": 91 }
+    },
+    "section|hybrid|none|strict": {
+      "who": { "top": ["water-en#1", "water-en#0", "water-en#4"], "hit": true, "a": 53 },
+      "deposit": { "top": ["water-en#0", "water-2", "rules-2"], "hit": true, "a": 63 },
+      "lastdate": { "top": ["water-en#4", "water-en#0", "water-en#1"], "hit": true, "a": 16 },
+      "girls": { "top": ["cycle-en#0", "cycle-en#3", "cycle-en#2"], "hit": true, "a": 68 },
+      "docs-hi": { "top": ["water-hi#2", "water-hi#1", "water-hi#0"], "hit": true, "a": 31 },
+      "when-rom": { "top": ["cycle-en#3", "cycle-en#0", "cycle-en#2"], "hit": true, "a": 82 },
+      "apply-hi": { "top": ["cycle-hi#2", "cycle-hi#3", "cycle-hi#0"], "hit": true, "a": 86 },
+      "sewer": { "top": ["water-en#0", "water-2", "water-en#2"], "hit": false, "a": 90 }
+    },
+    "section|hybrid|rerank|basic": {
+      "who": { "top": ["water-en#1", "water-en#3", "water-en#4"], "hit": true, "a": 52 },
+      "deposit": { "top": ["water-2", "water-en#0", "rules-2"], "hit": true, "a": 13 },
+      "lastdate": { "top": ["water-en#4", "water-en#3", "water-en#1"], "hit": true, "a": 15 },
+      "girls": { "top": ["cycle-en#0", "cycle-hi#0", "cycle-en#3"], "hit": true, "a": 71 },
+      "docs-hi": { "top": ["water-hi#2", "water-hi#1", "water-hi#3"], "hit": true, "a": 74 },
+      "when-rom": { "top": ["cycle-hi#3", "cycle-hi#0", "cycle-hi#1"], "hit": true, "a": 80 },
+      "apply-hi": { "top": ["cycle-hi#2", "cycle-hi#4", "cycle-hi#1"], "hit": true, "a": 85 },
+      "sewer": { "top": ["water-en#0", "water-en#3", "water-en#4"], "hit": false, "a": 89 }
+    },
+    "section|hybrid|rerank|strict": {
+      "who": { "top": ["water-en#1", "water-en#3", "water-en#4"], "hit": true, "a": 53 },
+      "deposit": { "top": ["water-2", "water-en#0", "rules-2"], "hit": true, "a": 61 },
+      "lastdate": { "top": ["water-en#4", "water-en#3", "water-en#1"], "hit": true, "a": 16 },
+      "girls": { "top": ["cycle-en#0", "cycle-hi#0", "cycle-en#3"], "hit": true, "a": 68 },
+      "docs-hi": { "top": ["water-hi#2", "water-hi#1", "water-hi#3"], "hit": true, "a": 31 },
+      "when-rom": { "top": ["cycle-hi#3", "cycle-hi#0", "cycle-hi#1"], "hit": true, "a": 81 },
+      "apply-hi": { "top": ["cycle-hi#2", "cycle-hi#4", "cycle-hi#1"], "hit": true, "a": 86 },
+      "sewer": { "top": ["water-en#0", "water-en#3", "water-en#4"], "hit": false, "a": 90 }
+    },
+    "sentence|keyword|none|basic": {
+      "who": { "top": ["cycle-en#0.0", "water-en#1.0", "rules-1"], "hit": true, "a": 93 },
+      "deposit": { "top": ["water-en#0.0", "water-2", "rules-2"], "hit": true, "a": 103 },
+      "lastdate": {
+        "top": ["water-en#4.0", "cycle-en#0.0", "water-en#0.0"],
+        "hit": true,
+        "a": 105
+      },
+      "girls": { "top": ["cycle-en#0.0", "cycle-en#3.0", "grievance-1"], "hit": true, "a": 106 },
+      "docs-hi": {
+        "top": ["water-hi#0.0", "cycle-hi#2.1", "water-hi#1.1"],
+        "hit": false,
+        "a": 110
+      },
+      "when-rom": { "top": [], "hit": false, "a": 117 },
+      "apply-hi": {
+        "top": ["cycle-hi#2.0", "water-hi#3.0", "water-hi#0.0"],
+        "hit": true,
+        "a": 123
+      },
+      "sewer": { "top": ["water-en#0.0", "water-2", "water-3"], "hit": false, "a": 131 }
+    },
+    "sentence|keyword|none|strict": {
+      "who": { "top": ["cycle-en#0.0", "water-en#1.0", "rules-1"], "hit": true, "a": 94 },
+      "deposit": { "top": ["water-en#0.0", "water-2", "rules-2"], "hit": true, "a": 104 },
+      "lastdate": { "top": ["water-en#4.0", "cycle-en#0.0", "water-en#0.0"], "hit": true, "a": 16 },
+      "girls": { "top": ["cycle-en#0.0", "cycle-en#3.0", "grievance-1"], "hit": true, "a": 68 },
+      "docs-hi": {
+        "top": ["water-hi#0.0", "cycle-hi#2.1", "water-hi#1.1"],
+        "hit": false,
+        "a": 111
+      },
+      "when-rom": { "top": [], "hit": false, "a": 118 },
+      "apply-hi": {
+        "top": ["cycle-hi#2.0", "water-hi#3.0", "water-hi#0.0"],
+        "hit": true,
+        "a": 124
+      },
+      "sewer": { "top": ["water-en#0.0", "water-2", "water-3"], "hit": false, "a": 132 }
+    },
+    "sentence|keyword|rerank|basic": {
+      "who": { "top": ["water-1", "water-en#1.0", "water-en#0.0"], "hit": true, "a": 95 },
+      "deposit": { "top": ["water-2", "water-en#0.0", "rules-2"], "hit": true, "a": 103 },
+      "lastdate": { "top": ["water-en#4.0", "water-1", "rules-5"], "hit": true, "a": 15 },
+      "girls": { "top": ["cycle-en#0.0", "cycle-en#3.0", "cycle-en#2.1"], "hit": true, "a": 107 },
+      "docs-hi": { "top": ["water-hi#2.0", "cycle-hi#4.0", "water-hi#1.0"], "hit": true, "a": 112 },
+      "when-rom": { "top": [], "hit": false, "a": 117 },
+      "apply-hi": {
+        "top": ["cycle-hi#0.0", "water-hi#3.0", "cycle-hi#2.0"],
+        "hit": true,
+        "a": 125
+      },
+      "sewer": { "top": ["water-en#0.0", "rules-1", "water-3"], "hit": false, "a": 133 }
+    },
+    "sentence|keyword|rerank|strict": {
+      "who": { "top": ["water-1", "water-en#1.0", "water-en#0.0"], "hit": true, "a": 94 },
+      "deposit": { "top": ["water-2", "water-en#0.0", "rules-2"], "hit": true, "a": 61 },
+      "lastdate": { "top": ["water-en#4.0", "water-1", "rules-5"], "hit": true, "a": 16 },
+      "girls": { "top": ["cycle-en#0.0", "cycle-en#3.0", "cycle-en#2.1"], "hit": true, "a": 68 },
+      "docs-hi": { "top": ["water-hi#2.0", "cycle-hi#4.0", "water-hi#1.0"], "hit": true, "a": 31 },
+      "when-rom": { "top": [], "hit": false, "a": 118 },
+      "apply-hi": {
+        "top": ["cycle-hi#0.0", "water-hi#3.0", "cycle-hi#2.0"],
+        "hit": true,
+        "a": 126
+      },
+      "sewer": { "top": ["water-en#0.0", "rules-1", "water-3"], "hit": false, "a": 134 }
+    },
+    "sentence|vector|none|basic": {
+      "who": { "top": ["rules-3", "form-W-7", "water-1"], "hit": false, "a": 96 },
+      "deposit": { "top": ["water-2", "water-en#0.0", "rules-2"], "hit": true, "a": 103 },
+      "lastdate": { "top": ["water-en#4.0", "form-W-7", "rules-5"], "hit": true, "a": 15 },
+      "girls": { "top": ["cycle-en#0.0", "cycle-hi#0.0", "cycle-en#3.0"], "hit": true, "a": 108 },
+      "docs-hi": { "top": ["water-hi#2.0", "water-en#2.0", "rules-3"], "hit": true, "a": 32 },
+      "when-rom": {
+        "top": ["cycle-en#0.0", "cycle-en#3.0", "cycle-hi#3.0"],
+        "hit": true,
+        "a": 119
+      },
+      "apply-hi": {
+        "top": ["cycle-hi#0.0", "cycle-en#2.0", "cycle-hi#3.0"],
+        "hit": true,
+        "a": 127
+      },
+      "sewer": { "top": ["water-2", "water-1", "rules-2"], "hit": false, "a": 135 }
+    },
+    "sentence|vector|none|strict": {
+      "who": { "top": ["rules-3", "form-W-7", "water-1"], "hit": false, "a": 97 },
+      "deposit": { "top": ["water-2", "water-en#0.0", "rules-2"], "hit": true, "a": 61 },
+      "lastdate": { "top": ["water-en#4.0", "form-W-7", "rules-5"], "hit": true, "a": 16 },
+      "girls": { "top": ["cycle-en#0.0", "cycle-hi#0.0", "cycle-en#3.0"], "hit": true, "a": 109 },
+      "docs-hi": { "top": ["water-hi#2.0", "water-en#2.0", "rules-3"], "hit": true, "a": 113 },
+      "when-rom": {
+        "top": ["cycle-en#0.0", "cycle-en#3.0", "cycle-hi#3.0"],
+        "hit": true,
+        "a": 120
+      },
+      "apply-hi": {
+        "top": ["cycle-hi#0.0", "cycle-en#2.0", "cycle-hi#3.0"],
+        "hit": true,
+        "a": 128
+      },
+      "sewer": { "top": ["water-2", "water-1", "rules-2"], "hit": false, "a": 136 }
+    },
+    "sentence|vector|rerank|basic": {
+      "who": { "top": ["water-1", "rules-2", "form-W-7"], "hit": false, "a": 98 },
+      "deposit": { "top": ["water-2", "water-en#0.0", "rules-2"], "hit": true, "a": 103 },
+      "lastdate": { "top": ["water-en#4.0", "water-hi#4.0", "water-3"], "hit": true, "a": 17 },
+      "girls": { "top": ["cycle-en#0.0", "cycle-hi#0.0", "cycle-en#3.0"], "hit": true, "a": 108 },
+      "docs-hi": { "top": ["water-1", "rules-2", "water-hi#2.0"], "hit": true, "a": 32 },
+      "when-rom": {
+        "top": ["cycle-hi#3.0", "cycle-hi#0.0", "cycle-en#3.0"],
+        "hit": true,
+        "a": 121
+      },
+      "apply-hi": {
+        "top": ["cycle-hi#0.0", "water-hi#3.0", "cycle-hi#2.0"],
+        "hit": true,
+        "a": 125
+      },
+      "sewer": { "top": ["water-en#0.0", "rules-1", "water-3"], "hit": false, "a": 133 }
+    },
+    "sentence|vector|rerank|strict": {
+      "who": { "top": ["water-1", "rules-2", "form-W-7"], "hit": false, "a": 99 },
+      "deposit": { "top": ["water-2", "water-en#0.0", "rules-2"], "hit": true, "a": 61 },
+      "lastdate": { "top": ["water-en#4.0", "water-hi#4.0", "water-3"], "hit": true, "a": 16 },
+      "girls": { "top": ["cycle-en#0.0", "cycle-hi#0.0", "cycle-en#3.0"], "hit": true, "a": 109 },
+      "docs-hi": { "top": ["water-1", "rules-2", "water-hi#2.0"], "hit": true, "a": 114 },
+      "when-rom": {
+        "top": ["cycle-hi#3.0", "cycle-hi#0.0", "cycle-en#3.0"],
+        "hit": true,
+        "a": 122
+      },
+      "apply-hi": {
+        "top": ["cycle-hi#0.0", "water-hi#3.0", "cycle-hi#2.0"],
+        "hit": true,
+        "a": 126
+      },
+      "sewer": { "top": ["water-en#0.0", "rules-1", "water-3"], "hit": false, "a": 134 }
+    },
+    "sentence|hybrid|none|basic": {
+      "who": { "top": ["water-1", "rules-1", "rules-3"], "hit": false, "a": 100 },
+      "deposit": { "top": ["water-en#0.0", "water-2", "rules-2"], "hit": true, "a": 103 },
+      "lastdate": { "top": ["water-en#4.0", "rules-5", "rules-1"], "hit": true, "a": 15 },
+      "girls": { "top": ["cycle-en#0.0", "cycle-en#3.0", "cycle-en#2.1"], "hit": true, "a": 107 },
+      "docs-hi": { "top": ["water-hi#2.0", "water-hi#0.0", "cycle-hi#4.0"], "hit": true, "a": 115 },
+      "when-rom": {
+        "top": ["cycle-en#0.0", "cycle-en#3.0", "cycle-hi#3.0"],
+        "hit": true,
+        "a": 119
+      },
+      "apply-hi": {
+        "top": ["cycle-hi#2.0", "cycle-hi#0.0", "water-hi#3.0"],
+        "hit": true,
+        "a": 129
+      },
+      "sewer": { "top": ["water-2", "water-1", "water-en#0.0"], "hit": false, "a": 137 }
+    },
+    "sentence|hybrid|none|strict": {
+      "who": { "top": ["water-1", "rules-1", "rules-3"], "hit": false, "a": 101 },
+      "deposit": { "top": ["water-en#0.0", "water-2", "rules-2"], "hit": true, "a": 104 },
+      "lastdate": { "top": ["water-en#4.0", "rules-5", "rules-1"], "hit": true, "a": 16 },
+      "girls": { "top": ["cycle-en#0.0", "cycle-en#3.0", "cycle-en#2.1"], "hit": true, "a": 68 },
+      "docs-hi": { "top": ["water-hi#2.0", "water-hi#0.0", "cycle-hi#4.0"], "hit": true, "a": 116 },
+      "when-rom": {
+        "top": ["cycle-en#0.0", "cycle-en#3.0", "cycle-hi#3.0"],
+        "hit": true,
+        "a": 120
+      },
+      "apply-hi": {
+        "top": ["cycle-hi#2.0", "cycle-hi#0.0", "water-hi#3.0"],
+        "hit": true,
+        "a": 130
+      },
+      "sewer": { "top": ["water-2", "water-1", "water-en#0.0"], "hit": false, "a": 138 }
+    },
+    "sentence|hybrid|rerank|basic": {
+      "who": { "top": ["water-1", "water-en#1.0", "form-W-7"], "hit": true, "a": 102 },
+      "deposit": { "top": ["water-2", "water-en#0.0", "rules-2"], "hit": true, "a": 103 },
+      "lastdate": { "top": ["water-en#4.0", "water-3", "water-1"], "hit": true, "a": 15 },
+      "girls": { "top": ["cycle-en#0.0", "cycle-hi#0.0", "cycle-en#3.0"], "hit": true, "a": 108 },
+      "docs-hi": { "top": ["water-hi#2.0", "cycle-hi#4.0", "water-hi#1.0"], "hit": true, "a": 112 },
+      "when-rom": {
+        "top": ["cycle-hi#3.0", "cycle-hi#0.0", "cycle-en#3.0"],
+        "hit": true,
+        "a": 121
+      },
+      "apply-hi": {
+        "top": ["cycle-hi#0.0", "water-hi#3.0", "cycle-hi#2.0"],
+        "hit": true,
+        "a": 125
+      },
+      "sewer": { "top": ["water-en#0.0", "rules-1", "water-3"], "hit": false, "a": 133 }
+    },
+    "sentence|hybrid|rerank|strict": {
+      "who": { "top": ["water-1", "water-en#1.0", "form-W-7"], "hit": true, "a": 94 },
+      "deposit": { "top": ["water-2", "water-en#0.0", "rules-2"], "hit": true, "a": 61 },
+      "lastdate": { "top": ["water-en#4.0", "water-3", "water-1"], "hit": true, "a": 16 },
+      "girls": { "top": ["cycle-en#0.0", "cycle-hi#0.0", "cycle-en#3.0"], "hit": true, "a": 109 },
+      "docs-hi": { "top": ["water-hi#2.0", "cycle-hi#4.0", "water-hi#1.0"], "hit": true, "a": 31 },
+      "when-rom": {
+        "top": ["cycle-hi#3.0", "cycle-hi#0.0", "cycle-en#3.0"],
+        "hit": true,
+        "a": 122
+      },
+      "apply-hi": {
+        "top": ["cycle-hi#0.0", "water-hi#3.0", "cycle-hi#2.0"],
+        "hit": true,
+        "a": 126
+      },
+      "sewer": { "top": ["water-en#0.0", "rules-1", "water-3"], "hit": false, "a": 134 }
+    }
+  },
+  "texts": {
+    "sentence:cycle-hi#0.0": "योजना से क्या मिलता है: केएमसी द्वारा चलाए जा रहे स्कूल में कक्षा 9 में प्रवेश लेने वाली हर छात्रा को मुफ़्त साइकिल।",
+    "sentence:cycle-hi#2.1": "स्कूल के प्रधानाचार्य 15 जून 2026 तक सभी पात्र छात्राओं के लिए फ़ॉर्म C-1 जमा करते हैं।",
+    "section:cycle-en#2": "Kalpanagar Schoolgirl Cycle Scheme › How to apply: There is no separate application. The school principal submits Form C-1 for all eligible girls by 15 June 2026.",
+    "section:water-en#1": "Kalpanagar Water Help Scheme 2026 › Who can apply: Households with a valid BPL card, or where the owner or tenant applying is 60 years or older. The property must be in Kalpanagar.",
+    "section:water-hi#3": "कल्पनगर जल सहायता योजना 2026 › आवेदन कैसे करें: फ़ॉर्म W-7 और अनुलग्नक JS-1 किसी भी वार्ड कार्यालय में या नागरिक पोर्टल पर जमा करें। कनेक्शन 15 कार्य दिवसों में लगाया जाता है।",
+    "sentence:water-en#4.0": "Last date: Applications can be made until 31 March 2027.",
+    "sentence:cycle-en#0.0": "What the scheme gives: A free bicycle for every girl who joins class 9 in a school run by the KMC.",
+    "sentence:cycle-en#2.0": "How to apply: There is no separate application.",
+    "sentence:water-en#1.0": "Who can apply: Households with a valid BPL card, or where the owner or tenant applying is 60 years or older.",
+    "section:cycle-hi#2": "कल्पनगर विद्यार्थिनी साइकिल योजना › आवेदन कैसे करें: अलग से आवेदन की ज़रूरत नहीं है। स्कूल के प्रधानाचार्य 15 जून 2026 तक सभी पात्र छात्राओं के लिए फ़ॉर्म C-1 जमा करते हैं।",
+    "section:water-hi#0": "कल्पनगर जल सहायता योजना 2026 › योजना से क्या मिलता है: पात्र परिवारों के लिए ₹500 का कनेक्शन शुल्क माफ़ है और ₹3,000 की वापसी योग्य जमा राशि घटाकर ₹500 कर दी गई है।",
+    "other:rules-1": "Water Supply Rules 2026 · 1. Scope: These rules apply to every piped water connection supplied by the Kalpanagar Municipal Corporation. They replace the Water Supply Rules of 2019. Words such as 'consumer' mean the person in whose name the connection is registered.",
+    "sentence:cycle-hi#3.0": "साइकिल कब मिलेगी: अगस्त 2026 के पहले सप्ताह में हर स्कूल में साइकिलें बाँटी जाती हैं।",
+    "sentence:water-hi#4.0": "अंतिम तिथि: आवेदन 31 मार्च 2027 तक किए जा सकते हैं।",
+    "page:cycle-en": "Kalpanagar Schoolgirl Cycle Scheme. What the scheme gives: A free bicycle for every girl who joins class 9 in a school run by the KMC. Who is eligible: Girls enrolled in class 9 in a KMC school in the 2026–27 session, with at least 75% attendance in class 8. How to apply: There is no separate application. The school principal submits Form C-1 for all eligible girls by 15 June 2026. When the bicycle is given: Bicycles are handed out at each school in the first week of August 2026. Documents: The student's school ID card and a parent's Aadhaar. The school collects these.",
+    "sentence:water-hi#1.1": "संपत्ति कल्पनगर में होनी चाहिए।",
+    "section:cycle-en#0": "Kalpanagar Schoolgirl Cycle Scheme › What the scheme gives: A free bicycle for every girl who joins class 9 in a school run by the KMC.",
+    "page:water-en": "Kalpanagar Water Help Scheme 2026. What the scheme gives: For eligible households, the ₹500 connection fee is waived and the refundable deposit is reduced from ₹3,000 to ₹500. Who can apply: Households with a valid BPL card, or where the owner or tenant applying is 60 years or older. The property must be in Kalpanagar. Documents needed: A BPL card or proof of age (Aadhaar or any government ID showing the date of birth), the latest property tax receipt, and the owner's written consent if you are a tenant. How to apply: Submit Form W-7 with Annexure JS-1 at any ward office or on the citizen portal. The connection is made within 15 working days. Last date: Applications can be made until 31 March 2027.",
+    "section:cycle-en#3": "Kalpanagar Schoolgirl Cycle Scheme › When the bicycle is given: Bicycles are handed out at each school in the first week of August 2026.",
+    "other:rules-3": "Water Supply Rules 2026 · 3. Free water for low-income households: Households holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal domestic rate. The card must be renewed with the ward office every two years to keep the allowance.",
+    "section:cycle-hi#1": "कल्पनगर विद्यार्थिनी साइकिल योजना › कौन पात्र है: 2026–27 सत्र में केएमसी स्कूल की कक्षा 9 में नामांकित छात्राएँ, जिनकी कक्षा 8 में उपस्थिति कम से कम 75% रही हो।",
+    "other:rules-5": "Water Supply Rules 2026 · 5. Paying your bill: Bills must be paid within 21 days of the bill date, online on the KMC citizen portal or at any ward office. A late fee of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill.",
+    "section:water-en#0": "Kalpanagar Water Help Scheme 2026 › What the scheme gives: For eligible households, the ₹500 connection fee is waived and the refundable deposit is reduced from ₹3,000 to ₹500.",
+    "section:cycle-hi#0": "कल्पनगर विद्यार्थिनी साइकिल योजना › योजना से क्या मिलता है: केएमसी द्वारा चलाए जा रहे स्कूल में कक्षा 9 में प्रवेश लेने वाली हर छात्रा को मुफ़्त साइकिल।",
+    "other:water-2": "New water connection: The connection fee is ₹500, plus a refundable deposit of ₹3,000. A meter is fitted with every new connection.",
+    "sentence:water-en#0.0": "What the scheme gives: For eligible households, the ₹500 connection fee is waived and the refundable deposit is reduced from ₹3,000 to ₹500.",
+    "sentence:cycle-en#2.1": "The school principal submits Form C-1 for all eligible girls by 15 June 2026.",
+    "section:water-hi#1": "कल्पनगर जल सहायता योजना 2026 › कौन आवेदन कर सकता है: वे परिवार जिनके पास वैध बीपीएल कार्ड है, या जिनमें आवेदन करने वाला मालिक या किरायेदार 60 वर्ष या उससे अधिक आयु का है। संपत्ति कल्पनगर में होनी चाहिए।",
+    "sentence:water-hi#2.0": "ज़रूरी दस्तावेज़: बीपीएल कार्ड या आयु का प्रमाण (आधार या जन्मतिथि वाला कोई सरकारी पहचान पत्र), नवीनतम संपत्ति कर रसीद, और किरायेदार होने पर मालिक की लिखित सहमति।",
+    "other:rules-4": "Water Supply Rules 2026 · 4. Meters and billing: Every connection has a meter, which remains the property of the Corporation. Meters are read every two months, and bills are sent by SMS and post within 10 days of the reading. If a meter is found faulty, the bill is based on the average of the previous three readings until the meter is replaced.",
+    "section:water-en#4": "Kalpanagar Water Help Scheme 2026 › Last date: Applications can be made until 31 March 2027.",
+    "sentence:cycle-hi#2.0": "आवेदन कैसे करें: अलग से आवेदन की ज़रूरत नहीं है।",
+    "page:cycle-hi": "कल्पनगर विद्यार्थिनी साइकिल योजना. योजना से क्या मिलता है: केएमसी द्वारा चलाए जा रहे स्कूल में कक्षा 9 में प्रवेश लेने वाली हर छात्रा को मुफ़्त साइकिल। कौन पात्र है: 2026–27 सत्र में केएमसी स्कूल की कक्षा 9 में नामांकित छात्राएँ, जिनकी कक्षा 8 में उपस्थिति कम से कम 75% रही हो। आवेदन कैसे करें: अलग से आवेदन की ज़रूरत नहीं है। स्कूल के प्रधानाचार्य 15 जून 2026 तक सभी पात्र छात्राओं के लिए फ़ॉर्म C-1 जमा करते हैं। साइकिल कब मिलेगी: अगस्त 2026 के पहले सप्ताह में हर स्कूल में साइकिलें बाँटी जाती हैं। दस्तावेज़: छात्रा का स्कूल पहचान पत्र और माता या पिता का आधार। ये स्कूल ही एकत्र करता है।",
+    "sentence:water-hi#1.0": "कौन आवेदन कर सकता है: वे परिवार जिनके पास वैध बीपीएल कार्ड है, या जिनमें आवेदन करने वाला मालिक या किरायेदार 60 वर्ष या उससे अधिक आयु का है।",
+    "sentence:water-en#2.0": "Documents needed: A BPL card or proof of age (Aadhaar or any government ID showing the date of birth), the latest property tax receipt, and the owner's written consent if you are a tenant.",
+    "other:water-1": "New water connection: To apply for a new water connection, bring the latest property tax receipt, proof of ownership or a rent agreement with the owner's consent, and an identity proof such as Aadhaar or a voter ID.",
+    "other:grievance-1": "Complaints and grievances: Complaints about roads, streetlights, water or garbage can be filed on the KMC citizen portal or at a ward office. Every complaint gets a tracking number.",
+    "other:form-W-7": "KMC forms · W-7: Form W-7 is the application for a new domestic water connection.",
+    "section:cycle-en#4": "Kalpanagar Schoolgirl Cycle Scheme › Documents: The student's school ID card and a parent's Aadhaar. The school collects these.",
+    "section:water-en#2": "Kalpanagar Water Help Scheme 2026 › Documents needed: A BPL card or proof of age (Aadhaar or any government ID showing the date of birth), the latest property tax receipt, and the owner's written consent if you are a tenant.",
+    "sentence:water-hi#0.0": "योजना से क्या मिलता है: पात्र परिवारों के लिए ₹500 का कनेक्शन शुल्क माफ़ है और ₹3,000 की वापसी योग्य जमा राशि घटाकर ₹500 कर दी गई है।",
+    "sentence:water-hi#3.0": "आवेदन कैसे करें: फ़ॉर्म W-7 और अनुलग्नक JS-1 किसी भी वार्ड कार्यालय में या नागरिक पोर्टल पर जमा करें।",
+    "section:water-hi#4": "कल्पनगर जल सहायता योजना 2026 › अंतिम तिथि: आवेदन 31 मार्च 2027 तक किए जा सकते हैं।",
+    "other:water-3": "New water connection: The KMC completes new connections within 15 working days of a complete application.",
+    "section:cycle-hi#3": "कल्पनगर विद्यार्थिनी साइकिल योजना › साइकिल कब मिलेगी: अगस्त 2026 के पहले सप्ताह में हर स्कूल में साइकिलें बाँटी जाती हैं।",
+    "other:rules-2": "Water Supply Rules 2026 · 2. New connections: A new domestic connection is granted to the owner of a property, or to a tenant with the owner's written consent. The application must include the latest property tax receipt and an identity proof. The connection fee is ₹500, and a refundable deposit of ₹3,000 is collected. The Corporation completes new connections within 15 working days of a complete application.",
+    "sentence:cycle-en#3.0": "When the bicycle is given: Bicycles are handed out at each school in the first week of August 2026.",
+    "section:water-hi#2": "कल्पनगर जल सहायता योजना 2026 › ज़रूरी दस्तावेज़: बीपीएल कार्ड या आयु का प्रमाण (आधार या जन्मतिथि वाला कोई सरकारी पहचान पत्र), नवीनतम संपत्ति कर रसीद, और किरायेदार होने पर मालिक की लिखित सहमति।",
+    "section:cycle-hi#4": "कल्पनगर विद्यार्थिनी साइकिल योजना › दस्तावेज़: छात्रा का स्कूल पहचान पत्र और माता या पिता का आधार। ये स्कूल ही एकत्र करता है।",
+    "other:circ-22-2026": "Circular 22/2026: Revised fines and bulk pickups: From 1 September 2026, the fine for handing over mixed waste rises to ₹500. Bulk pickups can now be booked only on the KMC citizen portal; ward offices no longer take phone bookings.",
+    "section:water-en#3": "Kalpanagar Water Help Scheme 2026 › How to apply: Submit Form W-7 with Annexure JS-1 at any ward office or on the citizen portal. The connection is made within 15 working days.",
+    "page:water-hi": "कल्पनगर जल सहायता योजना 2026. योजना से क्या मिलता है: पात्र परिवारों के लिए ₹500 का कनेक्शन शुल्क माफ़ है और ₹3,000 की वापसी योग्य जमा राशि घटाकर ₹500 कर दी गई है। कौन आवेदन कर सकता है: वे परिवार जिनके पास वैध बीपीएल कार्ड है, या जिनमें आवेदन करने वाला मालिक या किरायेदार 60 वर्ष या उससे अधिक आयु का है। संपत्ति कल्पनगर में होनी चाहिए। ज़रूरी दस्तावेज़: बीपीएल कार्ड या आयु का प्रमाण (आधार या जन्मतिथि वाला कोई सरकारी पहचान पत्र), नवीनतम संपत्ति कर रसीद, और किरायेदार होने पर मालिक की लिखित सहमति। आवेदन कैसे करें: फ़ॉर्म W-7 और अनुलग्नक JS-1 किसी भी वार्ड कार्यालय में या नागरिक पोर्टल पर जमा करें। कनेक्शन 15 कार्य दिवसों में लगाया जाता है। अंतिम तिथि: आवेदन 31 मार्च 2027 तक किए जा सकते हैं।",
+    "sentence:cycle-hi#4.0": "दस्तावेज़: छात्रा का स्कूल पहचान पत्र और माता या पिता का आधार।"
+  }
+}

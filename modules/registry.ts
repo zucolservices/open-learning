@@ -134,4 +134,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "rag-systems/eval-answers": () => import("./rag-systems/eval-answers"),
   "rag-systems/rag-security": () => import("./rag-systems/rag-security"),
   "rag-systems/platforms-cost": () => import("./rag-systems/platforms-cost"),
+  "rag-systems/scheme-assistant": () => import("./rag-systems/scheme-assistant"),
 };
