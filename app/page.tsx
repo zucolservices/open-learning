@@ -2,15 +2,16 @@ import Link from "next/link";
 import { ArrowRight, Play } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { ContinueCard, TrackProgressBar } from "@/components/progress-bits";
+import { ContinueCard } from "@/components/progress-bits";
 import { ExperienceDemos } from "@/components/home/experience-demos";
+import { LiveTracks } from "@/components/home/live-tracks";
+import { TrackSpotlight } from "@/components/home/track-spotlight";
 import { CategoryIcon } from "@/components/category/category-icon";
 import {
   categories,
   categoryTracks,
   experienceLabels,
   getTrack,
-  trackMinutes,
   trackModules,
   visibleTracks,
   type Category,
@@ -49,10 +50,10 @@ export default function Home() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link
-                  href="#categories"
+                  href="#live"
                   className="bg-accent text-accent-fg inline-flex h-11 items-center gap-2 rounded-full px-6 text-sm font-medium transition hover:brightness-110"
                 >
-                  Browse categories <ArrowRight className="size-4" />
+                  See the live tracks <ArrowRight className="size-4" />
                 </Link>
                 <Link
                   href="/tracks/playground/rows-vs-columns"
@@ -78,44 +79,19 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Live now */}
-            <div className="border-line bg-surface/70 shadow-card rounded-[var(--radius-card)] border p-4 backdrop-blur sm:p-5">
-              <p className="text-muted mb-3 text-xs font-medium tracking-wide uppercase">
-                Live now
-              </p>
-              <div className="grid gap-3">
-                {liveTracks.map((t) => {
-                  const mods = trackModules(t);
-                  return (
-                    <Link
-                      key={t.slug}
-                      href={`/tracks/${t.slug}`}
-                      data-track={t.accent}
-                      className="group border-line bg-surface hover:border-accent/60 relative overflow-hidden rounded-2xl border p-4 transition hover:-translate-y-0.5"
-                    >
-                      <div className="page-glow pointer-events-none absolute inset-0 opacity-50" />
-                      <div className="relative flex items-start gap-3">
-                        <span className="bg-accent-soft text-accent grid size-10 shrink-0 place-items-center rounded-xl">
-                          <CategoryIcon slug={t.category} className="size-5" />
-                        </span>
-                        <div className="min-w-0 flex-1">
-                          <p className="text-accent text-[11px] font-medium">{t.area}</p>
-                          <p className="group-hover:text-accent font-semibold tracking-tight">
-                            {t.title}
-                          </p>
-                          <p className="text-muted mt-0.5 text-xs">{t.tagline}</p>
-                          <p className="text-subtle mt-2 text-[11px]">
-                            {mods.length} modules · ~{Math.round(trackMinutes(t) / 60)} hours
-                          </p>
-                          <TrackProgressBar track={t.slug} className="mt-1.5" />
-                        </div>
-                        <ArrowRight className="text-subtle group-hover:text-accent mt-1 size-4 shrink-0 transition" />
-                      </div>
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
+            <TrackSpotlight tracks={liveTracks} />
+          </div>
+        </section>
+
+        {/* Live tracks */}
+        <section id="live" className="mx-auto max-w-6xl scroll-mt-20 px-4 pt-4 pb-8 sm:px-6">
+          <SectionHeading
+            eyebrow="Live tracks"
+            title={`${liveTracks.length} tracks you can start today.`}
+            body="Each track is a path of short, hands-on modules. Take them in order or dip in anywhere."
+          />
+          <div className="mt-8">
+            <LiveTracks tracks={liveTracks} />
           </div>
         </section>
 
@@ -126,10 +102,15 @@ export default function Home() {
             title={`${plannedTracks} tracks across ${categories.length} categories, built one at a time.`}
             body="Pick a category to see its tracks. Live tracks open straight away; the rest are on the way."
           />
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {categories.map((c) => (
-              <CategoryCard key={c.slug} category={c} />
-            ))}
+          <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+            {[...categories]
+              .sort(
+                (x, y) =>
+                  Number(categoryTracks(y).length > 0) - Number(categoryTracks(x).length > 0),
+              )
+              .map((c) => (
+                <CategoryCard key={c.slug} category={c} />
+              ))}
           </div>
         </section>
 
@@ -177,27 +158,32 @@ function CategoryCard({ category: c }: { category: Category }) {
     <article
       data-track={c.accent}
       className={cn(
-        "bg-surface relative flex flex-col overflow-hidden rounded-[var(--radius-card)] border p-5 transition",
+        "bg-surface relative flex flex-col overflow-hidden rounded-[var(--radius-card)] border p-4 transition sm:p-5",
         active ? "border-accent/50 shadow-card" : "border-line",
       )}
     >
       {active && <div className="page-glow pointer-events-none absolute inset-0 opacity-50" />}
-      <Link href={`/categories/${c.slug}`} className="group relative flex items-start gap-3">
+      <Link
+        href={`/categories/${c.slug}`}
+        className="group relative flex flex-col items-start gap-2 sm:flex-row sm:gap-3"
+      >
         <span
           className={cn(
-            "grid size-10 shrink-0 place-items-center rounded-xl",
+            "grid size-8 shrink-0 place-items-center rounded-xl sm:size-10",
             active ? "bg-accent text-accent-fg" : "bg-surface-2 text-muted",
           )}
         >
           <CategoryIcon slug={c.slug} className="size-5" />
         </span>
         <div className="min-w-0 flex-1">
-          <h3 className="group-hover:text-accent font-semibold tracking-tight">{c.title}</h3>
-          <p className="text-muted text-xs">{c.summary}</p>
+          <h3 className="group-hover:text-accent text-sm font-semibold tracking-tight sm:text-base">
+            {c.title}
+          </h3>
+          <p className="text-muted hidden text-xs sm:block">{c.summary}</p>
         </div>
-        <ArrowRight className="text-subtle group-hover:text-accent mt-1 size-4 shrink-0 transition" />
+        <ArrowRight className="text-subtle group-hover:text-accent mt-1 hidden size-4 shrink-0 transition sm:block" />
       </Link>
-      <div className="relative mt-4 flex items-center gap-2">
+      <div className="relative mt-3 flex items-center gap-2 sm:mt-4">
         <div className="bg-surface-2 h-1 flex-1 overflow-hidden rounded-full">
           <div
             className="bg-accent h-full rounded-full"
@@ -208,7 +194,7 @@ function CategoryCard({ category: c }: { category: Category }) {
           {live} of {c.tracks.length} live
         </span>
       </div>
-      <ul className="relative mt-3 flex flex-wrap gap-1">
+      <ul className="relative mt-3 hidden flex-wrap gap-1 sm:flex">
         {c.tracks.map((t) => {
           const built = t.slug ? getTrack(t.slug) : undefined;
           const track =
