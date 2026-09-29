@@ -2911,11 +2911,12 @@ const ragSystems: Track = {
             "Layout, reading order and tables",
             "Parsing tools, open source and managed",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["rag-end-to-end"],
           plain:
             "Before anything can be searched, the text has to come out of the document correctly. Scans, tables and multi-column pages often come out scrambled, and a RAG system can never be better than what it read.",
+          terms: ["parsing", "text-layer", "ocr", "legacy-font", "chunk"],
         },
         {
           slug: "chunking",

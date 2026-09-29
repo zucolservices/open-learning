@@ -56,4 +56,28 @@ export const ragSystems = {
       "Returning the k passages that score highest for a question (for example the top 3) and passing only those to the model.",
     module: "rag-end-to-end",
   },
+  parsing: {
+    term: "Parsing (documents)",
+    definition:
+      "Extracting clean, correctly ordered text and structure (headings, tables) from files such as PDFs, scans and Office documents, before chunking.",
+    module: "parsing",
+  },
+  ocr: {
+    term: "OCR",
+    definition:
+      "Optical character recognition: reading letters from an image of a page. Needed for scans and photos, which contain no text layer. Numbers and symbols such as ₹ are easily misread.",
+    module: "parsing",
+  },
+  "text-layer": {
+    term: "Text layer",
+    definition:
+      "The machine-readable characters inside a PDF. Scanned PDFs usually have none, only a picture of each page, until OCR adds one.",
+    module: "parsing",
+  },
+  "legacy-font": {
+    term: "Legacy (non-Unicode) font",
+    definition:
+      "Fonts such as Kruti Dev that draw Devanagari shapes over Latin character codes. Text typed in them copies out as Latin gibberish and needs conversion to Unicode.",
+    module: "parsing",
+  },
 } satisfies Record<string, GlossaryEntry>;

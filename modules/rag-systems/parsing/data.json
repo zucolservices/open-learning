@@ -1,0 +1,16 @@
+{
+  "two_naive": "Kalpanagar Municipal Corporation\nCircular 14/2026 · Monsoon preparedness · 2 June 2026\n2. Water supply\n1. Drains and garbage\nDuring heavy rain, water supply in low-\nFrom 10 June, ward teams will clear\nlying wards may be cut for up to six\nroadside drains every Monday.\nhours to protect the pumps. Tankers\nResidents must not throw garbage into\nwill be sent to affected wards on\ndrains; the fine is ₹500 for each\nrequest.\noffence. Wet waste collection continues\nevery day between 7 and 10 am.\nBoil drinking water from June to\nSeptember. Free chlorine tablets are\nReport a blocked drain on the NMC\navailable at every ward office.\ncitizen portal. The ward engineer will\ninspect it within two working days.",
+  "two_layout": "Kalpanagar Municipal Corporation\nCircular 14/2026 · Monsoon preparedness · 2 June 2026\n\n1. Drains and garbage\nFrom 10 June, ward teams will clear\nroadside\ndrains\nevery\nMonday.\nResidents must not throw garbage into\ndrains; the fine is ₹500 for each\noffence. Wet waste collection continues\nevery day between 7 and 10 am.\nReport a blocked drain on the NMC\ncitizen portal. The ward engineer will\ninspect it within two working days.\n\n2. Water supply\nDuring heavy rain, water supply in lowlying wards may be cut for up to six\nhours to protect the pumps. Tankers\nwill be sent to affected wards on\nrequest.\nBoil drinking water from June to\nSeptember. Free chlorine tablets are\navailable at every ward office.\n\n\f",
+  "table_naive": "Property tax 2026–27: rates by zone\nKalpanagar Municipal Corporation · Schedule B\nZone\nRate per sq ft\n(₹)\nRebate if paid by 30\nApril\nPenalty after 31\nJuly\nA (city centre) 4.20 5% 2% per month\nB (inner wards) 3.10 5% 2% per month\nC (outer wards) 2.40 5% 1.5% per month\nD (villages merged in\n2024)\n1.10 7% 1% per month\f",
+  "table_rows": [
+    ["Zone", "Rate per sq ft\n(₹)", "Rebate if paid by 30\nApril", "Penalty after 31\nJuly"],
+    ["A (city centre)", "4.20", "5%", "2% per month"],
+    ["B (inner wards)", "3.10", "5%", "2% per month"],
+    ["C (outer wards)", "2.40", "5%", "1.5% per month"],
+    ["D (villages merged in\n2024)", "1.10", "7%", "1% per month"]
+  ],
+  "scan_text_layer": "\f",
+  "ocr_eng": "agar wae 3a a GUAT HR echray Gr SST TTT ee |\nafer at Bear wee HoT TS fren gam were VA W200 FAM!\n\n- Kalpanagar Municipat Corporation - Notice.\nDry.waste will now be collected every Wednesday: and Saturday. ~\nKeep wet and dry waste separate: Mixed waste: fine of 2200.\n",
+  "ocr_hin_eng": "कल्पनगर नगर निगम + सूचना. :\nसूखा कचरा अंब हर quan sik शनिवार को उठाया जाएगा।\nगीला और सूखा कचरा अलग रखें। मिला हुआ BERT देने पंर ₹200 जुर्माता।\n\n_ Kalpanagar Municipat Corporation * Notice.\nDry.waste will now be collected every Wednesday: and Saturday. ~\nKeep wet and dry waste separate: Mixed waste: fine of 2200.\n",
+  "tesseract_version": "tesseract 5.5.0"
+}

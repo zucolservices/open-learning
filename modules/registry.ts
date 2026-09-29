@@ -115,4 +115,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "agile-scrum/struggling-team": () => import("./agile-scrum/struggling-team"),
   "rag-systems/why-rag": () => import("./rag-systems/why-rag"),
   "rag-systems/rag-end-to-end": () => import("./rag-systems/rag-end-to-end"),
+  "rag-systems/parsing": () => import("./rag-systems/parsing"),
 };
