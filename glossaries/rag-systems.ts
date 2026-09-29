@@ -170,4 +170,34 @@ export const ragSystems = {
       "Embeddings trained (Kusupati et al., 2022) so that the first part of each vector is useful on its own, like nested dolls: you can cut 3072 numbers down to 256 to save storage, with a modest loss in quality. Only works for models trained this way.",
     module: "embeddings-retrieval",
   },
+  ann: {
+    term: "Approximate nearest-neighbour (ANN) search",
+    definition:
+      "Finding vectors close to a query without comparing it with every stored vector. Much faster than exact search, occasionally missing the true nearest one.",
+    module: "vector-indexes",
+  },
+  hnsw: {
+    term: "HNSW",
+    definition:
+      "Hierarchical Navigable Small World: a layered graph index for vectors (Malkov & Yashunin). Search starts on a sparse top layer and hops greedily down to the dense bottom layer. The most widely used vector index.",
+    module: "vector-indexes",
+  },
+  ivf: {
+    term: "IVF (inverted file index)",
+    definition:
+      "A vector index that groups vectors into clusters ahead of time and, at query time, searches only the few clusters nearest the query (the nprobe setting).",
+    module: "vector-indexes",
+  },
+  "recall-at-k": {
+    term: "Recall@k (for vector indexes)",
+    definition:
+      "The share of the true k nearest neighbours that an approximate index returns. 99% recall@10 means it misses about one in a hundred.",
+    module: "vector-indexes",
+  },
+  "quantization-vectors": {
+    term: "Vector quantization",
+    definition:
+      "Storing each number in a vector with fewer bits (float32 → int8 → 1 bit, or product quantization codes) to save memory, trading a little accuracy. Often paired with an exact re-check of the top results.",
+    module: "vector-indexes",
+  },
 } satisfies Record<string, GlossaryEntry>;

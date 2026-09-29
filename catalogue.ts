@@ -3013,18 +3013,19 @@ const ragSystems: Track = {
           minutes: 30,
           signature:
             "Search a million vectors: climb an HNSW graph layer by layer, then tune it and watch speed trade against recall",
-          formats: ["3d-model", "simulation", "checkpoint"],
+          formats: ["step-through", "simulation", "checkpoint"],
           concepts: [
             "Exact vs approximate nearest-neighbour search",
             "HNSW graphs and IVF clusters",
             "Quantization and memory",
             "Recall vs latency",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["embeddings-retrieval"],
           plain:
             "Comparing a question with every stored vector is too slow once there are millions. Vector indexes take shortcuts that are much faster and almost always find the right neighbours. You choose how much 'almost' you can accept.",
+          terms: ["ann", "hnsw", "ivf", "recall-at-k", "quantization-vectors", "vector-index"],
         },
         {
           slug: "hybrid-search",

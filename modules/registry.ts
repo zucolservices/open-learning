@@ -120,4 +120,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "rag-systems/metadata-freshness": () => import("./rag-systems/metadata-freshness"),
   "rag-systems/bm25": () => import("./rag-systems/bm25"),
   "rag-systems/embeddings-retrieval": () => import("./rag-systems/embeddings-retrieval"),
+  "rag-systems/vector-indexes": () => import("./rag-systems/vector-indexes"),
 };
