@@ -3134,15 +3134,22 @@ const ragSystems: Track = {
           minutes: 25,
           signature:
             "Build the final prompt from retrieved passages: reorder them, add citation markers and an 'answer only from these' rule, and compare the answers",
-          formats: ["build-connect", "checkpoint"],
+          formats: ["build-connect", "simulation", "checkpoint"],
           concepts: [
             "Instructions, passages and the question",
             "Lost in the middle",
             "Citations and refusing when the answer isn't there",
             "Prompt caching",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
+          terms: [
+            "prompt",
+            "abstention",
+            "grounded-citation",
+            "lost-in-the-middle",
+            "prompt-caching",
+          ],
           prerequisites: ["reranking"],
           plain:
             "The retrieved passages still have to be put in front of the model well. Clear instructions, sensible order, source labels and permission to say 'I don't know' turn good retrieval into trustworthy answers.",

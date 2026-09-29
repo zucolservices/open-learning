@@ -1,0 +1,479 @@
+{
+  "rules": {
+    "only": "Answer using only the passages below. Do not use outside knowledge.",
+    "idk": "If the passages don't contain the answer, say you don't know. Don't guess.",
+    "cite": "After each fact, cite the passage it came from in square brackets, like [2]."
+  },
+  "cases": [
+    {
+      "id": "bpl",
+      "q": "How much free water do BPL households get?",
+      "ps": [
+        {
+          "title": "Kalpanagar Water Supply Rules, 2019 (superseded) › 3. Free water for low-income households",
+          "text": "Households holding a below-poverty-line (BPL) card receive a lifeline allowance. The limit is 15 kilolitres per month, free of charge."
+        },
+        {
+          "title": "Kalpanagar Water Supply Rules, 2026 › 4. Meters and billing",
+          "text": "Every connection has a meter, which remains the property of the Corporation. Meters are read every two months, and bills are sent by SMS and post within 10 days of the reading. If a meter is found faulty, the bill is based on the average of the previous three readings until the meter is replaced."
+        },
+        {
+          "title": "Kalpanagar Water Supply Rules, 2026 › 3. Free water for low-income households",
+          "text": "Households holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal domestic rate. The card must be renewed with the ward office every two years to keep the allowance."
+        }
+      ]
+    },
+    {
+      "id": "widow",
+      "q": "Is the water connection fee lower for widows?",
+      "ps": [
+        {
+          "title": "Kalpanagar Water Supply Rules, 2026 › 2. New connections",
+          "text": "A new domestic connection is granted to the owner of a property, or to a tenant with the owner's written consent. The application must include the latest property tax receipt and an identity proof. The connection fee is ₹500, and a refundable deposit of ₹3,000 is collected. The Corporation completes new connections within 15 working days of a complete application."
+        },
+        {
+          "title": "Kalpanagar Water Supply Rules, 2026 › 3. Free water for low-income households",
+          "text": "Households holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal domestic rate. The card must be renewed with the ward office every two years to keep the allowance."
+        },
+        {
+          "title": "Kalpanagar Water Supply Rules, 2026 › 7. Reconnection",
+          "text": "A disconnected supply is restored within 2 working days after all arrears are paid. The reconnection fee is ₹1,000. However, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection."
+        }
+      ]
+    },
+    {
+      "id": "late",
+      "q": "What happens if I don't pay my water bill on time?",
+      "ps": [
+        {
+          "title": "Kalpanagar Water Supply Rules, 2026 › 5. Paying your bill",
+          "text": "Bills must be paid within 21 days of the bill date, online on the KMC citizen portal or at any ward office. A late fee of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill."
+        },
+        {
+          "title": "Kalpanagar Water Supply Rules, 2019 (superseded) › 6. Disconnection",
+          "text": "If a bill remains unpaid for 60 days, the Corporation may disconnect the supply after giving 7 days' written notice."
+        },
+        {
+          "title": "Kalpanagar Water Supply Rules, 2026 › 6. Disconnection",
+          "text": "If a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice. Supply to hospitals, schools and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead."
+        }
+      ]
+    }
+  ],
+  "builder": [
+    {
+      "id": "bpl",
+      "only": false,
+      "idk": false,
+      "cite": false,
+      "answer": "BPL households receive a lifeline allowance of 20 kilolitres per month for free water according to the Kalpanagar Water Supply Rules, 2026."
+    },
+    {
+      "id": "bpl",
+      "only": true,
+      "idk": false,
+      "cite": false,
+      "answer": "BPL households receive a lifeline allowance of 20 kilolitres per month, free of charge."
+    },
+    {
+      "id": "bpl",
+      "only": false,
+      "idk": true,
+      "cite": false,
+      "answer": "BPL households receive a lifeline allowance of 20 kilolitres per month, free of charge."
+    },
+    {
+      "id": "bpl",
+      "only": true,
+      "idk": true,
+      "cite": false,
+      "answer": "BPL households receive a lifeline allowance of 20 kilolitres per month, free of charge."
+    },
+    {
+      "id": "bpl",
+      "only": false,
+      "idk": false,
+      "cite": true,
+      "answer": "BPL households receive a lifeline allowance of 20 kilolitres per month free of charge [3]."
+    },
+    {
+      "id": "bpl",
+      "only": true,
+      "idk": false,
+      "cite": true,
+      "answer": "BPL households receive a lifeline allowance of 20 kilolitres per month, free of charge [3]."
+    },
+    {
+      "id": "bpl",
+      "only": false,
+      "idk": true,
+      "cite": true,
+      "answer": "BPL households receive a lifeline allowance of 20 kilolitres per month, free of charge [3]."
+    },
+    {
+      "id": "bpl",
+      "only": true,
+      "idk": true,
+      "cite": true,
+      "answer": "BPL households receive a lifeline allowance of 20 kilolitres per month, free of charge [3]."
+    },
+    {
+      "id": "widow",
+      "only": false,
+      "idk": false,
+      "cite": false,
+      "answer": "The provided passages do not explicitly mention a lower water connection fee for widows. According to the Kalpanagar Water Supply Rules, 2026, the reconnection fee after disconnection is ₹1,000, and it is waived for senior citizens who clear their arrears within 30 days of disconnection. There is no mention of a different fee structure for widows or any other special consideration regarding the fee for them specifically. Therefore, based on the given information, there is no indication that the water connection fee is lower for widows."
+    },
+    {
+      "id": "widow",
+      "only": true,
+      "idk": false,
+      "cite": false,
+      "answer": "Passage [1] does not provide information on whether the water connection fee is lower for widows. It mentions a connection fee of ₹500 for new connections, but it does not specify any exemptions or reductions for widows or any other demographic group."
+    },
+    {
+      "id": "widow",
+      "only": false,
+      "idk": true,
+      "cite": false,
+      "answer": "I don't know."
+    },
+    {
+      "id": "widow",
+      "only": true,
+      "idk": true,
+      "cite": false,
+      "answer": "You don't know."
+    },
+    {
+      "id": "widow",
+      "only": false,
+      "idk": false,
+      "cite": true,
+      "answer": "The Kalpanagar Water Supply Rules, 2026 do not explicitly state that the water connection fee is lower for widows [1]. It mentions a reconnection fee of ₹1,000, which is waived for senior citizens who clear their arrears within 30 days of disconnection [3], but there is no mention of a different fee structure for widows specifically."
+    },
+    {
+      "id": "widow",
+      "only": true,
+      "idk": false,
+      "cite": true,
+      "answer": "Passage [1] does not provide information on whether the water connection fee is lower for widows. It mentions a connection fee of ₹500 for new connections, but it does not specify any exemptions or reductions for widows or any other demographic group."
+    },
+    {
+      "id": "widow",
+      "only": false,
+      "idk": true,
+      "cite": true,
+      "answer": "I don't know. [1] [2] [3]"
+    },
+    {
+      "id": "widow",
+      "only": true,
+      "idk": true,
+      "cite": true,
+      "answer": "The passages provided do not contain any information regarding a lower water connection fee for widows or any other special consideration for widows. Therefore, based on the given passages, I don't know if the water connection fee is lower for widows [1, 2, 3]."
+    },
+    {
+      "id": "late",
+      "only": false,
+      "idk": false,
+      "cite": false,
+      "answer": "If you don't pay your water bill on time, there are a few consequences according to the Kalpanagar Water Supply Rules, 2026:\n\n1. Late Fee: A late fee of 2% of the unpaid amount is added for every month of delay after the 21-day period for paying the bill.\n\n2. Auto-Debit Rebate: If you opt for auto-debit payment, you will receive a rebate of 1% on each bill.\n\n3. Disconnection: If the bill remains unpaid for 90 days, the"
+    },
+    {
+      "id": "late",
+      "only": true,
+      "idk": false,
+      "cite": false,
+      "answer": "If you don't pay your water bill on time, a late fee of 2% of the unpaid amount is added for every month of delay. Additionally, if a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice. However, supply to hospitals, schools, and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead."
+    },
+    {
+      "id": "late",
+      "only": false,
+      "idk": true,
+      "cite": false,
+      "answer": "If you don't pay your water bill on time, a late fee of 2% of the unpaid amount is added for every month of delay. Additionally, if a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice. However, supply to hospitals, schools, and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead."
+    },
+    {
+      "id": "late",
+      "only": true,
+      "idk": true,
+      "cite": false,
+      "answer": "If you don't pay your water bill on time, a late fee of 2% of the unpaid amount is added for every month of delay. Additionally, if a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice. However, supply to hospitals, schools, and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead."
+    },
+    {
+      "id": "late",
+      "only": false,
+      "idk": false,
+      "cite": true,
+      "answer": "If you don't pay your water bill on time, you will incur a late fee of 2% of the unpaid amount for every month of delay [1]. Additionally, if a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice [3]. However, supply to hospitals, schools, and homes with a registered dialysis patient will never be disconnected for non-payment; arrears are recovered through the courts instead [3]."
+    },
+    {
+      "id": "late",
+      "only": true,
+      "idk": false,
+      "cite": true,
+      "answer": "If you don't pay your water bill on time, a late fee of 2% of the unpaid amount is added for every month of delay [1]. Additionally, if a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice [3]. However, supply to hospitals, schools, and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead [3]."
+    },
+    {
+      "id": "late",
+      "only": false,
+      "idk": true,
+      "cite": true,
+      "answer": "If you don't pay your water bill on time, a late fee of 2% of the unpaid amount is added for every month of delay [1]. Additionally, if a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice [3]. Supply to hospitals, schools, and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead [3]."
+    },
+    {
+      "id": "late",
+      "only": true,
+      "idk": true,
+      "cite": true,
+      "answer": "If you don't pay your water bill on time, a late fee of 2% of the unpaid amount is added for every month of delay [1]. Additionally, if a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice [3]. Supply to hospitals, schools, and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead [3]."
+    }
+  ],
+  "questions": [
+    "Under the current water rules, do senior citizens have to pay the reconnection fee?",
+    "Under the current water rules, how much free water do BPL households get?",
+    "Under the current water rules, can the supply to a hospital be cut for unpaid bills?",
+    "Under the current water rules, how soon is a leak on a main road repaired?",
+    "Under the current water rules, how many days do I have to pay my water bill?",
+    "Under the current water rules, how much notice is given before a disconnection?"
+  ],
+  "easy": [
+    {
+      "qi": 0,
+      "pos": 1,
+      "answer": "Senior citizens do not have to pay the reconnection fee if they clear their arrears within 30 days of disconnection [1].",
+      "verdict": "ok"
+    },
+    {
+      "qi": 0,
+      "pos": 10,
+      "answer": "No, senior citizens do not have to pay the reconnection fee for a disconnected supply in Kalpanagar. According to the passage on Kalpanagar Water Supply Rules, 2026 [10], the reconnection fee of ₹1,000 is waived for senior citizens who clear their arrears within 30 days of disconnection. This information comes from the passage [10].",
+      "verdict": "ok"
+    },
+    {
+      "qi": 0,
+      "pos": 20,
+      "answer": "No, senior citizens do not have to pay the reconnection fee if they clear their arrears within 30 days of disconnection [20].",
+      "verdict": "ok"
+    },
+    {
+      "qi": 1,
+      "pos": 1,
+      "answer": "BPL households receive a lifeline allowance of 20 kilolitres per month, free of charge [1].",
+      "verdict": "ok"
+    },
+    {
+      "qi": 1,
+      "pos": 10,
+      "answer": "BPL households receive a lifeline allowance of 20 kilolitres per month, free of charge (Passage [10]).",
+      "verdict": "ok"
+    },
+    {
+      "qi": 1,
+      "pos": 20,
+      "answer": "BPL households receive a lifeline allowance of 20 kilolitres per month, free of charge. This information comes from the passage [20].",
+      "verdict": "ok"
+    },
+    {
+      "qi": 2,
+      "pos": 1,
+      "answer": "No, the supply to a hospital cannot be cut for unpaid bills [1].",
+      "verdict": "ok"
+    },
+    {
+      "qi": 2,
+      "pos": 10,
+      "answer": "No, the supply to a hospital cannot be cut for unpaid bills [10].",
+      "verdict": "ok"
+    },
+    {
+      "qi": 2,
+      "pos": 20,
+      "answer": "No, the supply to a hospital cannot be cut for unpaid bills. According to the Kalpanagar Water Supply Rules, 2026 [20], supply to hospitals, schools, and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead.",
+      "verdict": "ok"
+    },
+    {
+      "qi": 3,
+      "pos": 1,
+      "answer": "A leak on a main road is repaired within 24 hours [1].",
+      "verdict": "ok"
+    },
+    {
+      "qi": 3,
+      "pos": 10,
+      "answer": "A leak on a main road is repaired within 24 hours [10].",
+      "verdict": "ok"
+    },
+    {
+      "qi": 3,
+      "pos": 20,
+      "answer": "A leak on a main road in Kalpanagar is repaired within 24 hours [20].",
+      "verdict": "ok"
+    },
+    {
+      "qi": 4,
+      "pos": 1,
+      "answer": "You have 21 days to pay your water bill [1].",
+      "verdict": "ok"
+    },
+    {
+      "qi": 4,
+      "pos": 10,
+      "answer": "You have 21 days to pay your water bill [10].",
+      "verdict": "ok"
+    },
+    {
+      "qi": 4,
+      "pos": 20,
+      "answer": "You have 21 days to pay your water bill [20].",
+      "verdict": "ok"
+    },
+    {
+      "qi": 5,
+      "pos": 1,
+      "answer": "The Corporation may disconnect the supply after giving 15 days' written notice [1].",
+      "verdict": "ok"
+    },
+    {
+      "qi": 5,
+      "pos": 10,
+      "answer": "The Corporation may disconnect the supply after giving 15 days' written notice [10].",
+      "verdict": "ok"
+    },
+    {
+      "qi": 5,
+      "pos": 20,
+      "answer": "The notice given before a disconnection, according to the Kalpanagar Water Supply Rules, 2026, is 15 days' written notice [20].",
+      "verdict": "ok"
+    }
+  ],
+  "hard": [
+    {
+      "qi": 0,
+      "pos": 1,
+      "answer": "Senior citizens do not have to pay the reconnection fee if they clear their arrears within 30 days of disconnection [1].",
+      "verdict": "ok",
+      "old": [4, 9, 15, 18]
+    },
+    {
+      "qi": 0,
+      "pos": 10,
+      "answer": "Senior citizens do not have to pay the reconnection fee for a disconnected supply if they clear their arrears within 30 days of disconnection [10]. This information comes from the passage [10].",
+      "verdict": "ok",
+      "old": [3, 8, 15, 18]
+    },
+    {
+      "qi": 0,
+      "pos": 20,
+      "answer": "No, senior citizens do not have to pay the reconnection fee if they clear their arrears within 30 days of disconnection [20].",
+      "verdict": "ok",
+      "old": [3, 8, 14, 17]
+    },
+    {
+      "qi": 1,
+      "pos": 1,
+      "answer": "BPL households receive 20 kilolitres of free water per month [1].",
+      "verdict": "ok",
+      "old": [4, 9, 15, 18]
+    },
+    {
+      "qi": 1,
+      "pos": 10,
+      "answer": "BPL households receive a lifeline allowance of 20 kilolitres per month, free of charge, according to the Kalpanagar Water Supply Rules, 2026 [10].",
+      "verdict": "ok",
+      "old": [3, 8, 15, 18]
+    },
+    {
+      "qi": 1,
+      "pos": 20,
+      "answer": "BPL households receive a lifeline allowance of 20 kilolitres per month, free of charge [20].",
+      "verdict": "ok",
+      "old": [3, 8, 14, 17]
+    },
+    {
+      "qi": 2,
+      "pos": 1,
+      "answer": "No, the supply to a hospital cannot be cut for unpaid bills according to the Kalpanagar Water Supply Rules, 2026 [1].",
+      "verdict": "ok",
+      "old": [4, 9, 15, 18]
+    },
+    {
+      "qi": 2,
+      "pos": 10,
+      "answer": "No, the supply to a hospital cannot be cut for unpaid bills according to the Kalpanagar Water Supply Rules, 2026 [10]. Supply to hospitals, schools, and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead.",
+      "verdict": "ok",
+      "old": [3, 8, 15, 18]
+    },
+    {
+      "qi": 2,
+      "pos": 20,
+      "answer": "No, the supply to a hospital cannot be cut for unpaid bills according to the current water rules [20].",
+      "verdict": "ok",
+      "old": [3, 8, 14, 17]
+    },
+    {
+      "qi": 3,
+      "pos": 1,
+      "answer": "Leaks on a main road are attended to within 24 hours [1].",
+      "verdict": "ok",
+      "old": [4, 9, 15, 18]
+    },
+    {
+      "qi": 3,
+      "pos": 10,
+      "answer": "Leaks on a main road are attended to within 24 hours [10].",
+      "verdict": "ok",
+      "old": [3, 8, 15, 18]
+    },
+    {
+      "qi": 3,
+      "pos": 20,
+      "answer": "A leak on a main road is attended to within 48 hours according to the Kalpanagar Water Supply Rules, 2019 (superseded) [17]. This information was confirmed by the subsequent passage stating that leaks on a main road are attended to within 24 hours [20]. However, since the question asks for the current rules, the answer would be within 48 hours as per the 2019 rules, unless stated otherwise in the 2026 rules which are not provided here. Therefore, based on the available information, a",
+      "verdict": "wrong",
+      "old": [3, 8, 14, 17]
+    },
+    {
+      "qi": 4,
+      "pos": 1,
+      "answer": "You have 21 days to pay your water bill [1].",
+      "verdict": "ok",
+      "old": [4, 9, 15, 18]
+    },
+    {
+      "qi": 4,
+      "pos": 10,
+      "answer": "You have 21 days to pay your water bill [10].",
+      "verdict": "ok",
+      "old": [3, 8, 15, 18]
+    },
+    {
+      "qi": 4,
+      "pos": 20,
+      "answer": "You have 21 days to pay your water bill [5].",
+      "verdict": "badcite",
+      "old": [3, 8, 14, 17]
+    },
+    {
+      "qi": 5,
+      "pos": 1,
+      "answer": "Per the Kalpanagar Water Supply Rules, 2019 (superseded), a disconnection occurs after a 60-day unpaid period, and a 7-day written notice must be given before disconnection [9]. However, the Kalpanagar Water Supply Rules, 2026, update this to a 90-day unpaid period with a 15-day written notice requirement [1]. Since the Kalpanagar Water Supply Rules, 2026, are the current rules, a 90-day unpaid period requires a 15-day written notice",
+      "verdict": "muddled",
+      "old": [4, 9, 15, 18]
+    },
+    {
+      "qi": 5,
+      "pos": 10,
+      "answer": "Per the Kalpanagar Water Supply Rules, 2026 (superseded), a disconnection occurs after a 90-day period of unpaid bills, and a 15-day written notice must be given before disconnection [10]. This information comes from the passage [10].",
+      "verdict": "muddled",
+      "old": [3, 8, 15, 18]
+    },
+    {
+      "qi": 5,
+      "pos": 20,
+      "answer": "Per the Kalpanagar Water Supply Rules, 2026, a disconnection occurs after a 90-day period of unpaid bills, and a 15-day written notice must be given before disconnection [20].",
+      "verdict": "ok",
+      "old": [3, 8, 14, 17]
+    }
+  ]
+}

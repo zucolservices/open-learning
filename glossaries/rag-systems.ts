@@ -272,4 +272,22 @@ export const ragSystems = {
       "Embedding a whole document's tokens in one go and only then cutting the result into chunk vectors, so each vector carries some of the document's context without any model-written notes (Günther et al., 2024). Needs a long-context embedding model.",
     module: "contextual-retrieval",
   },
+  abstention: {
+    term: "Abstention",
+    definition:
+      "A model declining to answer, for example \"I don't know; the passages don't cover this\", instead of guessing. A RAG prompt should say exactly when and how to abstain, though models don't always follow it.",
+    module: "prompt-assembly",
+  },
+  "grounded-citation": {
+    term: "Citation (in RAG)",
+    definition:
+      "A marker in an answer, such as [2], pointing to the passage a statement came from, so a reader can check it. Many providers return citations as structured data. A citation points; it doesn't prove the passage supports the claim.",
+    module: "prompt-assembly",
+  },
+  "lost-in-the-middle": {
+    term: "Lost in the middle",
+    definition:
+      "The finding (Liu et al., 2023) that language models used information at the start or end of a long prompt better than information in the middle. Newer models show less of this on simple lookups, but long, noisy prompts still hurt.",
+    module: "prompt-assembly",
+  },
 } satisfies Record<string, GlossaryEntry>;

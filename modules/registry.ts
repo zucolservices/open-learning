@@ -125,4 +125,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "rag-systems/reranking": () => import("./rag-systems/reranking"),
   "rag-systems/query-understanding": () => import("./rag-systems/query-understanding"),
   "rag-systems/contextual-retrieval": () => import("./rag-systems/contextual-retrieval"),
+  "rag-systems/prompt-assembly": () => import("./rag-systems/prompt-assembly"),
 };

@@ -1,0 +1,9 @@
+# Assembling the prompt: storyboard
+
+1. **Briefing a stand-in** (analogy): a doctor briefing a stand-in: ground rules, labelled folders, then the question. The model only sees the prompt.
+2. **Build the prompt** ⭐ (build & connect, real output): three questions over sections of the made-up Kalpanagar water rules (BPL free water with the 2019 rule placed first; a fee for widows that the passages don't cover; paying late, with the 2019 disconnection rule in the middle). Toggle three system-prompt rules (only the passages, say you don't know, cite passage numbers); the prompt preview shows the exact text sent (passages shortened on screen); Phi-4-mini's answer for each of the 8 combinations. Notes: titles did the work on BPL; without rules the widow answer pads with the senior-citizen waiver; "You don't know."; citing all three passages for "I don't know"; the auto-debit rebate listed as a consequence of paying late.
+3. **Does position matter?** ⭐ (simulation, real output): six questions, 20 passages, right section at #1, #10 or #20, all three rules on. Unrelated distractors: 18/18 right. With the four superseded 2019 sections mixed in (fixed slots): road leak at #20 answered 48 hours (2019); days-to-pay at #20 cited passage [5]; disconnection notice at #1 and #10 right but muddled (opens with the 2019 rule; calls the 2026 rules "superseded"). Hand-graded; honest: too few to show a pattern.
+4. **Order for caching** (order checkpoint): instructions → fixed reference → retrieved passages → question; bar diagram of the cached prefix.
+5. **What to remember**.
+
+Data: `data.json` from `scratchpad/rag/embed/r13.mjs` and `r13c.mjs` (Phi-4-mini q4f16, greedy, max 110 new tokens, so some answers are cut off and shown with "…"). Hard-run verdicts were graded by hand from the full answers (a regex check gave false results).
