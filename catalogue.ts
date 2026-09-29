@@ -3094,11 +3094,18 @@ const ragSystems: Track = {
             "HyDE: searching with a hypothetical answer",
             "Decomposing complex questions",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["hybrid-search"],
           plain:
             "People ask short, vague or multi-part questions, and 'what about for pensioners?' means nothing on its own. Rewriting the question into good searches before retrieving often helps more than a better index.",
+          terms: [
+            "query-rewriting",
+            "query-decomposition",
+            "multi-query",
+            "hyde",
+            "romanised-hindi",
+          ],
         },
         {
           slug: "contextual-retrieval",

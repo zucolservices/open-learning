@@ -1,0 +1,140 @@
+[
+  {
+    "id": "followup",
+    "before": [
+      { "id": "grievance-2", "s": 0.849 },
+      { "id": "water-3", "s": 0.844 },
+      { "id": "rules-8", "s": 0.839 },
+      { "id": "rules-4", "s": 0.834 },
+      { "id": "rules-7", "s": 0.832 }
+    ],
+    "beforeRank": 2,
+    "rewritten": "What is the typical duration for obtaining a new water connection?",
+    "results": [
+      {
+        "query": "What is the typical duration for obtaining a new water connection?",
+        "top": [
+          { "id": "water-3", "s": 0.88 },
+          { "id": "water-2", "s": 0.867 },
+          { "id": "rules-2", "s": 0.866 },
+          { "id": "rules-7", "s": 0.865 },
+          { "id": "rules-6", "s": 0.843 }
+        ]
+      }
+    ],
+    "afterRanks": [[1, 3]]
+  },
+  {
+    "id": "two",
+    "before": [
+      { "id": "trade-2", "s": 0.88 },
+      { "id": "property-tax-2", "s": 0.861 },
+      { "id": "property-tax-1", "s": 0.858 },
+      { "id": "rules-5", "s": 0.846 },
+      { "id": "rules-2", "s": 0.843 }
+    ],
+    "beforeRank": 1,
+    "rewritten": "What's the penalty for paying property tax late?\n\nWhen do I have to renew my shop licence?",
+    "results": [
+      {
+        "query": "What's the penalty for paying property tax late?",
+        "top": [
+          { "id": "property-tax-2", "s": 0.876 },
+          { "id": "property-tax-1", "s": 0.858 },
+          { "id": "rules-5", "s": 0.829 },
+          { "id": "rules-2", "s": 0.819 },
+          { "id": "property-tax-3", "s": 0.818 }
+        ]
+      },
+      {
+        "query": "When do I have to renew my shop licence?",
+        "top": [
+          { "id": "trade-2", "s": 0.887 },
+          { "id": "trade-1", "s": 0.829 },
+          { "id": "form-T-3", "s": 0.822 },
+          { "id": "rules-2", "s": 0.82 },
+          { "id": "rules-7", "s": 0.816 }
+        ]
+      }
+    ],
+    "afterRanks": [
+      [1, null],
+      [null, 1]
+    ]
+  },
+  {
+    "id": "jargon",
+    "before": [
+      { "id": "property-tax-2", "s": 0.837 },
+      { "id": "property-tax-1", "s": 0.834 },
+      { "id": "property-tax-3", "s": 0.832 },
+      { "id": "rules-5", "s": 0.827 },
+      { "id": "rules-2", "s": 0.82 }
+    ],
+    "beforeRank": 2,
+    "rewritten": "Question: Are there any tax relief measures available for a municipal corporation on the basis of prepayment of house tax?",
+    "results": [
+      {
+        "query": "Question: Are there any tax relief measures available for a municipal corporation on the basis of prepayment of house tax?",
+        "top": [
+          { "id": "property-tax-3", "s": 0.834 },
+          { "id": "rules-5", "s": 0.829 },
+          { "id": "property-tax-1", "s": 0.826 },
+          { "id": "rules-2", "s": 0.826 },
+          { "id": "property-tax-2", "s": 0.819 }
+        ]
+      }
+    ],
+    "afterRanks": [[3]]
+  },
+  {
+    "id": "roman",
+    "before": [
+      { "id": "birth-death-1", "s": 0.788 },
+      { "id": "rules-1", "s": 0.783 },
+      { "id": "form-B-2", "s": 0.778 },
+      { "id": "rules-3", "s": 0.775 },
+      { "id": "rules-6", "s": 0.771 }
+    ],
+    "beforeRank": 30,
+    "rewritten": "What happens after the waste collection?",
+    "results": [
+      {
+        "query": "What happens after the waste collection?",
+        "top": [
+          { "id": "waste-1", "s": 0.834 },
+          { "id": "waste-3", "s": 0.824 },
+          { "id": "waste-2", "s": 0.822 },
+          { "id": "circ-14-2026", "s": 0.802 },
+          { "id": "circ-09-2025", "s": 0.791 }
+        ]
+      }
+    ],
+    "afterRanks": [[1]]
+  },
+  {
+    "id": "hyde",
+    "before": [
+      { "id": "rules-3", "s": 0.83 },
+      { "id": "rules-8", "s": 0.804 },
+      { "id": "rules-6", "s": 0.801 },
+      { "id": "circ-22-2026", "s": 0.801 },
+      { "id": "grievance-1", "s": 0.799 }
+    ],
+    "beforeRank": 1,
+    "rewritten": "Rulebook Entry: In the event of a BPL (Bilateral Payment Liability) card lapse, the customer will receive a written notice from the Water Utility Company outlining the steps to reinstate the account. Reinstatement will require a new application form, a small fee, and a credit check to reassess eligibility for the Water Utility Company's services. Customers are advised to keep their contact information up-to-date to receive timely communication regarding their account status.",
+    "results": [
+      {
+        "query": "Rulebook Entry: In the event of a BPL (Bilateral Payment Liability) card lapse, the customer will receive a written notice from the Water Utility Company outlining the steps to reinstate the account. Reinstatement will require a new application form, a small fee, and a credit check to reassess eligibility for the Water Utility Company's services. Customers are advised to keep their contact information up-to-date to receive timely communication regarding their account status.",
+        "top": [
+          { "id": "rules-3", "s": 0.887 },
+          { "id": "rules-6", "s": 0.864 },
+          { "id": "rules-5", "s": 0.854 },
+          { "id": "form-W-12", "s": 0.852 },
+          { "id": "rules-7", "s": 0.851 }
+        ]
+      }
+    ],
+    "afterRanks": [[1]]
+  }
+]

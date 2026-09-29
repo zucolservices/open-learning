@@ -123,4 +123,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "rag-systems/vector-indexes": () => import("./rag-systems/vector-indexes"),
   "rag-systems/hybrid-search": () => import("./rag-systems/hybrid-search"),
   "rag-systems/reranking": () => import("./rag-systems/reranking"),
+  "rag-systems/query-understanding": () => import("./rag-systems/query-understanding"),
 };

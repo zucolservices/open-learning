@@ -236,4 +236,28 @@ export const ragSystems = {
       "A cut-off on reranker scores below which passages are dropped before the model sees them. Must be chosen per model by testing on labelled questions.",
     module: "reranking",
   },
+  "query-rewriting": {
+    term: "Query rewriting",
+    definition:
+      "Using a language model to turn a user's question into a better search query before retrieval: making a follow-up standalone, fixing wording, translating. Costs an extra model call and can go wrong.",
+    module: "query-understanding",
+  },
+  hyde: {
+    term: "HyDE (hypothetical document embeddings)",
+    definition:
+      "Asking a model to draft an answer to the question, then searching with the draft's embedding instead of the question's (Gao et al., 2023). The draft may contain invented details, so it's used only for search.",
+    module: "query-understanding",
+  },
+  "multi-query": {
+    term: "Multi-query retrieval",
+    definition:
+      "Searching with several versions of a question (the original plus rewrites) and merging the results, often with reciprocal rank fusion.",
+    module: "query-understanding",
+  },
+  "query-decomposition": {
+    term: "Query decomposition",
+    definition:
+      "Splitting a complex or multi-part question into simpler sub-questions and searching for each separately.",
+    module: "query-understanding",
+  },
 } satisfies Record<string, GlossaryEntry>;
