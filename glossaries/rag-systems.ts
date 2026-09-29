@@ -368,4 +368,22 @@ export const ragSystems = {
       "Normalised discounted cumulative gain: adds up the relevance grades of the results, discounting lower positions by a logarithm, then divides by the score of the perfect ordering, so 1.0 is best. The usual headline metric of retrieval benchmarks, often at k = 10.",
     module: "eval-retrieval",
   },
+  faithfulness: {
+    term: "Faithfulness (groundedness)",
+    definition:
+      "Whether everything an answer says is supported by the passages it was given. A faithful answer can still be wrong, if retrieval brought the wrong passages.",
+    module: "eval-answers",
+  },
+  "answer-relevance": {
+    term: "Answer relevance",
+    definition:
+      "Whether an answer addresses the question that was asked, without wandering off-topic. Separate from whether it is true.",
+    module: "eval-answers",
+  },
+  "llm-as-judge": {
+    term: "LLM as judge",
+    definition:
+      "Using a language model to grade answers, for example pass/fail on faithfulness. Scales cheaply but has habits (leniency, liking longer answers, sensitivity to order), so it must be checked against human labels.",
+    module: "eval-answers",
+  },
 } satisfies Record<string, GlossaryEntry>;

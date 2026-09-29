@@ -1,0 +1,467 @@
+{
+  "prompts": {
+    "faith": "You check answers from a question-answering system. Decide whether every claim in the answer is supported by the passages. Ignore whether the answer is complete. Reply with PASS or FAIL on the first line, then one sentence explaining why.",
+    "rel": "You check answers from a question-answering system. Decide whether the answer directly addresses the question that was asked, without going off-topic. Ignore whether it is true. Reply with PASS or FAIL on the first line, then one sentence explaining why.",
+    "pair": "You compare two answers to a resident's question, using the passages. Reply with A or B on the first line (the better answer), then one sentence explaining why.",
+    "split": "Break the answer into short, standalone factual claims, one per line, each starting with '- '. Leave out statements that only say information is missing.",
+    "check": "Decide whether the claim is stated in, or directly follows from, the passages. Reply with YES or NO only."
+  },
+  "cases": [
+    {
+      "id": "bpl",
+      "src": "Module 13",
+      "q": "How much free water do BPL households get?",
+      "ctx": [
+        "Kalpanagar Water Supply Rules, 2019 (superseded) › 3. Free water for low-income households: Households holding a below-poverty-line (BPL) card receive a lifeline allowance. The limit is 15 kilolitres per month, free of charge.",
+        "Kalpanagar Water Supply Rules, 2026 › 4. Meters and billing: Every connection has a meter, which remains the property of the Corporation. Meters are read every two months, and bills are sent by SMS and post within 10 days of the reading. If a meter is found faulty, the bill is based on the average of the previous three readings until the meter is replaced.",
+        "Kalpanagar Water Supply Rules, 2026 › 3. Free water for low-income households: Households holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal domestic rate. The card must be renewed with the ward office every two years to keep the allowance."
+      ],
+      "a": "BPL households receive a lifeline allowance of 20 kilolitres per month, free of charge [3].",
+      "ours": {
+        "faithful": 1,
+        "relevant": 1,
+        "correct": 1,
+        "note": "Everything checks out, and it picked the 2026 rule over the 2019 one."
+      },
+      "judge": {
+        "faith": "Pass\n\nThe claim that BPL households receive a lifeline allowance of 20 kilolitres per month, free of charge, is supported by the passage [3].",
+        "faithPass": 1,
+        "rel": "PASS\n\nThe answer directly addresses the question by stating the amount of free water BPL households receive each month.",
+        "relPass": 1
+      },
+      "claims": {
+        "score": null,
+        "n": 0,
+        "unique": []
+      }
+    },
+    {
+      "id": "widow-pad",
+      "src": "Module 13",
+      "q": "Is the water connection fee lower for widows?",
+      "ctx": [
+        "Kalpanagar Water Supply Rules, 2026 › 2. New connections: A new domestic connection is granted to the owner of a property, or to a tenant with the owner's written consent. The application must include the latest property tax receipt and an identity proof. The connection fee is ₹500, and a refundable deposit of ₹3,000 is collected. The Corporation completes new connections within 15 working days of a complete application.",
+        "Kalpanagar Water Supply Rules, 2026 › 3. Free water for low-income households: Households holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal domestic rate. The card must be renewed with the ward office every two years to keep the allowance.",
+        "Kalpanagar Water Supply Rules, 2026 › 7. Reconnection: A disconnected supply is restored within 2 working days after all arrears are paid. The reconnection fee is ₹1,000. However, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection."
+      ],
+      "a": "The provided passages do not explicitly mention a lower water connection fee for widows. According to the Kalpanagar Water Supply Rules, 2026, the reconnection fee after disconnection is ₹1,000, and it is waived for senior citizens who clear their arrears within 30 days of disconnection. There is no mention of a different fee structure for widows or any other special consideration regarding the fee for them specifically. Therefore, based on the given information, there is no indication that the water connection fee is lower for widows.",
+      "ours": {
+        "faithful": 1,
+        "relevant": 1,
+        "correct": 1,
+        "note": "Faithful and right (nothing says widows pay less), but padded with the senior-citizen waiver, which is beside the point. Cut off at the length limit."
+      },
+      "judge": {
+        "faith": "PASS\n\nThe answer correctly identifies that the provided passages do not explicitly mention a lower water connection fee for widows, and hence concludes that there is no indication that the fee is lower for them specifically.",
+        "faithPass": 1,
+        "rel": "PASS\n\nThe answer correctly states that the provided passages do not explicitly mention a lower water connection fee for widows, hence it does not directly address the question asked.",
+        "relPass": 1
+      },
+      "claims": {
+        "score": 1,
+        "n": 5,
+        "unique": [
+          {
+            "claim": "The provided passages do not explicitly mention a lower water connection fee for widows.",
+            "ok": true
+          },
+          {
+            "claim": "According to the Kalpanagar Water Supply Rules, 2026, the reconnection fee after disconnection is ₹1,000.",
+            "ok": true
+          },
+          {
+            "claim": "The reconnection fee is waived for senior citizens who clear their arrears within 30 days of disconnection.",
+            "ok": true
+          },
+          {
+            "claim": "There is no mention of a different fee structure for widows or any other special consideration regarding the fee for them specifically.",
+            "ok": true
+          },
+          {
+            "claim": "Based on the given information, there is no indication that the water connection fee is lower for widows.",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "widow-idk",
+      "src": "Module 13",
+      "q": "Is the water connection fee lower for widows?",
+      "ctx": [
+        "Kalpanagar Water Supply Rules, 2026 › 2. New connections: A new domestic connection is granted to the owner of a property, or to a tenant with the owner's written consent. The application must include the latest property tax receipt and an identity proof. The connection fee is ₹500, and a refundable deposit of ₹3,000 is collected. The Corporation completes new connections within 15 working days of a complete application.",
+        "Kalpanagar Water Supply Rules, 2026 › 3. Free water for low-income households: Households holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal domestic rate. The card must be renewed with the ward office every two years to keep the allowance.",
+        "Kalpanagar Water Supply Rules, 2026 › 7. Reconnection: A disconnected supply is restored within 2 working days after all arrears are paid. The reconnection fee is ₹1,000. However, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection."
+      ],
+      "a": "I don't know.",
+      "ours": {
+        "faithful": 1,
+        "relevant": 1,
+        "correct": 1,
+        "note": "The passages really don’t cover it, so “I don’t know” is the right answer."
+      },
+      "judge": {
+        "faith": "Pass\n\nThe answer correctly states that the answer cannot be determined from the given passages, implying that there is no information on whether the fee is lower for widows.",
+        "faithPass": 1,
+        "rel": "FAIL - The answer does not directly address the question about the water connection fee for widows.",
+        "relPass": 0
+      },
+      "claims": {
+        "score": 0,
+        "n": 32,
+        "unique": [
+          {
+            "claim": "I don't know.",
+            "ok": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "late-rebate",
+      "src": "Module 13",
+      "q": "What happens if I don't pay my water bill on time?",
+      "ctx": [
+        "Kalpanagar Water Supply Rules, 2026 › 5. Paying your bill: Bills must be paid within 21 days of the bill date, online on the KMC citizen portal or at any ward office. A late fee of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill.",
+        "Kalpanagar Water Supply Rules, 2019 (superseded) › 6. Disconnection: If a bill remains unpaid for 60 days, the Corporation may disconnect the supply after giving 7 days' written notice.",
+        "Kalpanagar Water Supply Rules, 2026 › 6. Disconnection: If a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice. Supply to hospitals, schools and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead."
+      ],
+      "a": "If you don't pay your water bill on time, there are a few consequences according to the Kalpanagar Water Supply Rules, 2026:\n\n1. Late Fee: A late fee of 2% of the unpaid amount is added for every month of delay after the 21-day period for paying the bill.\n\n2. Auto-Debit Rebate: If you opt for auto-debit payment, you will receive a rebate of 1% on each bill.\n\n3. Disconnection: If the bill remains unpaid for 90 days, the",
+      "ours": {
+        "faithful": 1,
+        "relevant": 0,
+        "correct": 0,
+        "note": "Each fact is in the passages, but the auto-debit rebate is listed as a “consequence” of paying late. Off-topic, and cut off."
+      },
+      "judge": {
+        "faith": "PASS\n\nThe answer correctly identifies the late fee, auto-debit rebate, and disconnection consequences for late payment of a water bill according to the Kalpanagar Water Supply Rules, 2026. It accurately reflects the late fee, auto-debit rebate, and disconnection periods stated in the passages.",
+        "faithPass": 1,
+        "rel": "PASS\n\nThe answer directly addresses the consequences of not paying a water bill on time.",
+        "relPass": 1
+      },
+      "claims": {
+        "score": 0.5,
+        "n": 10,
+        "unique": [
+          {
+            "claim": "Late fee of 2% of the unpaid amount is added for every month of delay after the 21-day period for paying the bill.",
+            "ok": true
+          },
+          {
+            "claim": "Auto-debit payment opt-in results in a 1% rebate on each bill.",
+            "ok": true
+          },
+          {
+            "claim": "Water services may be disconnected after 90 days of unpaid bills.",
+            "ok": true
+          },
+          {
+            "claim": "Continuous late payments can lead to a permanent loss of water services.",
+            "ok": false
+          },
+          {
+            "claim": "Repeated late payments may result in a credit hold on your account.",
+            "ok": false
+          },
+          {
+            "claim": "There may be a charge for late payment on the next billing cycle.",
+            "ok": true
+          },
+          {
+            "claim": "Repeated late payments can negatively impact your credit score.",
+            "ok": false
+          },
+          {
+            "claim": "Some utility companies may charge late payment fees on top of late fees.",
+            "ok": true
+          },
+          {
+            "claim": "Repeated late payments can lead to late payment reporting to credit bureaus.",
+            "ok": false
+          },
+          {
+            "claim": "Some utility companies may limit services or apply a service cap",
+            "ok": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "pending",
+      "src": "Module 14",
+      "q": "Which ward has the most pending applications?",
+      "ctx": [
+        "Application B-0015: birth certificate, Ward 4, applied on 2026-08-19. Status: pending.",
+        "Application B-0029: birth certificate, Ward 1, applied on 2026-07-28. Status: pending.",
+        "Application B-0006: birth certificate, Ward 6, applied on 2026-09-03. Status: pending.",
+        "Application B-0014: birth certificate, Ward 11, applied on 2026-09-22. Status: pending.",
+        "Application B-0004: birth certificate, Ward 11, applied on 2026-07-10. Status: pending."
+      ],
+      "a": "The ward with the most pending applications is Ward 11, with two pending applications [1, 4, 5].",
+      "ours": {
+        "faithful": 1,
+        "relevant": 1,
+        "correct": 0,
+        "note": "Faithful to the five rows it was given, and wrong: the real answer is Ward 2, with 5. Grounded but wrong, a retrieval failure."
+      },
+      "judge": {
+        "faith": "Pass\n\nThe claim that Ward 11 has the most pending applications is supported by the passages, as it mentions Ward 11 with two pending applications [1, 4, 5].",
+        "faithPass": 1,
+        "rel": "PASS\n\nThe answer correctly identifies Ward 11 as the ward with the most pending applications.",
+        "relPass": 1
+      },
+      "claims": {
+        "score": 1,
+        "n": 18,
+        "unique": [
+          {
+            "claim": "Ward 11 has the most pending applications.",
+            "ok": true
+          },
+          {
+            "claim": "Ward 11 has two pending applications.",
+            "ok": true
+          },
+          {
+            "claim": "Ward 11 is Ward 11.",
+            "ok": true
+          },
+          {
+            "claim": "Ward 11 has two",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "shop-single",
+      "src": "Module 16",
+      "q": "My shop's trade licence expired while the citizen portal was down and I was fined. How do I renew the licence, and how do I complain about the fine?",
+      "ctx": [
+        "Trade licence: Licences must be renewed every year by 31 March. Late renewal costs ₹100 for each month of delay.",
+        "Complaints and grievances: Complaints about roads, streetlights, water or garbage can be filed on the KMC citizen portal or at a ward office. Every complaint gets a tracking number.",
+        "KMC forms · T-3: Form T-3 renews a trade licence for the coming financial year."
+      ],
+      "a": "To renew the trade licence, you need to apply for a new trade licence on the KMC citizen portal or visit a ward office to apply for a new trade licence, as stated in [trade-2] and [form-T-3]. To complain about the fine, you can file a complaint on the KMC citizen portal or visit a ward office to file a complaint, as stated in [grievance-1].",
+      "ours": {
+        "faithful": 0,
+        "relevant": 1,
+        "correct": 0,
+        "note": "“Apply for a new trade licence on the portal” is not in the passages; renewal is by Form T-3."
+      },
+      "judge": {
+        "faith": "Passage:\n[grievance-1] Complaints about roads, streetlights, water or garbage can be filed on the KMC citizen portal or at a ward office. Every complaint gets a tracking number.\n\nAnswer:\nPass\n\nThe answer correctly states how to renew the trade licence (by applying on the KMC citizen portal or visiting a ward office) and how to file a complaint about the fine (by using the KMC citizen portal or",
+        "faithPass": 1,
+        "rel": "PASS\nThe answer directly addresses how to renew the trade licence and how to complain about the fine.",
+        "relPass": 1
+      },
+      "claims": {
+        "score": 0.5,
+        "n": 4,
+        "unique": [
+          {
+            "claim": "To renew the trade licence, apply on the KMC citizen portal.",
+            "ok": false
+          },
+          {
+            "claim": "Alternatively, visit a ward office to apply for a new trade licence.",
+            "ok": true
+          },
+          {
+            "claim": "To complain about the fine, file a complaint on the KMC citizen portal.",
+            "ok": false
+          },
+          {
+            "claim": "Alternatively, visit a ward office to file a complaint.",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "senior-single",
+      "src": "Module 16",
+      "q": "I'm a senior citizen and my water was cut off for unpaid bills. What will reconnection cost me, how soon will supply be back, and where do I complain if it isn't?",
+      "ctx": [
+        "Water Supply Rules 2026 · 7. Reconnection: A disconnected supply is restored within 2 working days after all arrears are paid. The reconnection fee is ₹1,000. However, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection.",
+        "Water Supply Rules 2026 · 6. Disconnection: If a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice. Supply to hospitals, schools and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead.",
+        "Water Supply Rules 2026 · 8. Complaints: Complaints about leaks, low pressure or dirty water can be made on the citizen portal, by phone, or at a ward office. Leaks on a main road are attended to within 24 hours. Other complaints are resolved within 5 working days, and the consumer is informed by SMS when the work is complete."
+      ],
+      "a": "Reconnection will cost you ₹1,000, which is waived for senior citizens who clear their arrears within 30 days of disconnection [rules-7]. Supply will be restored within 2 working days after all arrears are paid [rules-7]. To complain if the supply isn't restored, you can use the citizen portal, by phone, or at a ward office [rules-8]. Leaks on a main road are attended to within 24 hours, while other complaints are resolved within 5 working days, and the consumer is informed by SMS when the work is complete [rules-8].",
+      "ours": {
+        "faithful": 1,
+        "relevant": 1,
+        "correct": 1,
+        "note": "All three parts, all supported, plus a little extra about leaks."
+      },
+      "judge": {
+        "faith": "PASS\n\nThe answer correctly identifies the reconnection fee being waived for senior citizens who clear their arrears within 30 days of disconnection [rules-7]. It also correctly states that supply will be restored within 2 working days after all arrears are paid [rules-7]. Additionally, it accurately mentions the various channels through which a senior citizen can file a complaint if the supply isn't restored [rules-8].",
+        "faithPass": 1,
+        "rel": "PASS - The answer directly addresses the cost of reconnection, the timeline for supply restoration, and the recourse for complaints regarding the supply not being restored.",
+        "relPass": 1
+      },
+      "claims": {
+        "score": 1,
+        "n": 9,
+        "unique": [
+          {
+            "claim": "Reconnection will cost you ₹1,000.",
+            "ok": true
+          },
+          {
+            "claim": "Reconnection cost is waived for senior citizens who clear their arrears within 30 days of disconnection.",
+            "ok": true
+          },
+          {
+            "claim": "Supply will be restored within 2 working days after all arrears are paid.",
+            "ok": true
+          },
+          {
+            "claim": "To complain if the supply isn't restored, you can use the citizen portal.",
+            "ok": true
+          },
+          {
+            "claim": "To complain if the supply isn't restored, you can use the phone.",
+            "ok": true
+          },
+          {
+            "claim": "To complain if the supply isn't restored, you can visit a ward office.",
+            "ok": true
+          },
+          {
+            "claim": "Leaks on a main road are attended to within 24 hours.",
+            "ok": true
+          },
+          {
+            "claim": "Other complaints are resolved within 5 working days.",
+            "ok": true
+          },
+          {
+            "claim": "Consumers are informed by SMS when the work is complete.",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "bpl-small",
+      "src": "Module 12",
+      "q": "Under the current water rules, how much free water do BPL households get?",
+      "ctx": [
+        "Households holding a valid below-poverty-line (BPL) card receive a lifeline allowance.",
+        "Households holding a below-poverty-line (BPL) card receive a lifeline allowance.",
+        "Water used above the limit is billed at the normal domestic rate."
+      ],
+      "a": "BPL households receive a lifeline allowance, which includes free water usage, as stated in passages [1] and [2]. However, the exact amount of free water is not specified in the provided passages.",
+      "ours": {
+        "faithful": 1,
+        "relevant": 1,
+        "correct": 0,
+        "note": "Honest about what its passages lack, but the question goes unanswered: the amount was in a sentence that wasn’t retrieved."
+      },
+      "judge": {
+        "faith": "PASS\nThe claim that BPL households receive a lifeline allowance, which includes free water usage, is supported by passages [1] and [2]. However, the exact amount of free water is not specified in the provided passages.",
+        "faithPass": 1,
+        "rel": "FAIL - The answer does not provide the exact amount of free water BPL households receive, which was the direct inquiry in the question.",
+        "relPass": 0
+      },
+      "claims": {
+        "score": 0.6666666666666666,
+        "n": 3,
+        "unique": [
+          {
+            "claim": "BPL households receive a lifeline allowance.",
+            "ok": true
+          },
+          {
+            "claim": "Part of the lifeline allowance includes free water usage.",
+            "ok": false
+          },
+          {
+            "claim": "The exact amount of free water is not specified in the provided passages.",
+            "ok": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "ocr-w4",
+      "src": "Module 17",
+      "q": "Which ward resolved the smallest share of complaints on time in 2025–26?",
+      "ctx": [
+        "Kalpanagar Municipal Corporation Annual Grievance Report 2025-26 Page 4\n3. How quickly were complaints resolved?\nThe corporation's target is to resolve every complaint within 15 working days\nFigure 3 shows, for each ward, the share of complaints resolved within that\ntarget during 2025-26.\n‘The dashed line marks the citywide average of 78%. Wards below the average are\nreviewed by the zonal commissioner each quarter.\n1004\n% resolved within 15 working days\nwi we Ws W4 W5 We W7 Ws W9 Wio Wit wiz\nFigure 3. Complaints resolved on time, by ward, 2025-26"
+      ],
+      "a": "W4",
+      "ours": {
+        "faithful": 0,
+        "relevant": 1,
+        "correct": 0,
+        "note": "Nothing in the OCR text supports “W4”. The bar heights were never there."
+      },
+      "judge": {
+        "faith": "PASS\nThe answer correctly identifies W4 as the ward that resolved the smallest share of complaints on time in 2025–26, based on the figure mentioned in the answer.",
+        "faithPass": 1,
+        "rel": "PASS - The answer directly addresses the question by naming the ward (W4) that resolved the smallest share of complaints on time in 2025–26.",
+        "relPass": 1
+      },
+      "claims": {
+        "score": 0.3,
+        "n": 10,
+        "unique": [
+          {
+            "claim": "W4 resolved the smallest share of complaints on time in 2025–26.",
+            "ok": false
+          },
+          {
+            "claim": "Complaints on time resolution varies across different wards.",
+            "ok": true
+          },
+          {
+            "claim": "W4 had a lower on-time resolution ratio compared to other wards.",
+            "ok": false
+          },
+          {
+            "claim": "Data from 2025–26 indicates W4 had the least on-time complaint resolutions.",
+            "ok": false
+          },
+          {
+            "claim": "On-time complaint resolution statistics are collected annually.",
+            "ok": true
+          },
+          {
+            "claim": "Ward W4 had the lowest on-time complaint resolution ratio in 2025–26.",
+            "ok": false
+          },
+          {
+            "claim": "On-time complaint resolution ratio is a measure of efficiency.",
+            "ok": true
+          },
+          {
+            "claim": "On-time complaint resolution ratio was lowest in Ward W4 in 2025–26.",
+            "ok": false
+          },
+          {
+            "claim": "Ward W4 had the lowest on-time complaint resolution ratio compared to Ward W5.",
+            "ok": false
+          },
+          {
+            "claim": "Ward W4 had the lowest on-time complaint resolution ratio compared to Ward W6.",
+            "ok": false
+          }
+        ]
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "A": "widow-idk",
+      "B": "widow-pad",
+      "verdict": "B) The provided passages do not explicitly mention a lower water connection fee for widows. According to the Kalpanagar Water Supply Rules, 2026, the reconnection fee after disconnection is ₹1,000, and it is waived for senior citizens who clear their arrears within 30 days of disconnection. There is no mention of a different fee structure for widows or any other special consideration regarding the fee for them specifically. Therefore"
+    },
+    {
+      "A": "widow-pad",
+      "B": "widow-idk",
+      "verdict": "A The provided passages do not explicitly mention a lower water connection fee for widows. According to the Kalpanagar Water Supply Rules, 2026, the reconnection fee after disconnection is ₹1,000, and it is waived for senior citizens who clear their arrears within 30 days of disconnection. There is no mention of a different fee structure for widows or any other special consideration regarding the fee for them specifically. Therefore,"
+    }
+  ]
+}

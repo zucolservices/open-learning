@@ -3284,8 +3284,9 @@ const ragSystems: Track = {
             "Context precision and recall",
             "LLM-as-judge and its biases",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
+          terms: ["faithfulness", "answer-relevance", "llm-as-judge"],
           prerequisites: ["eval-retrieval"],
           plain:
             "Good retrieval doesn't guarantee a good answer. Answers are checked for whether they stick to the sources and actually answer the question, often with another model as the judge, which has its own blind spots.",
