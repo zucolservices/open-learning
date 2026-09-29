@@ -124,4 +124,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "rag-systems/hybrid-search": () => import("./rag-systems/hybrid-search"),
   "rag-systems/reranking": () => import("./rag-systems/reranking"),
   "rag-systems/query-understanding": () => import("./rag-systems/query-understanding"),
+  "rag-systems/contextual-retrieval": () => import("./rag-systems/contextual-retrieval"),
 };

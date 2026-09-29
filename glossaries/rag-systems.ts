@@ -260,4 +260,16 @@ export const ragSystems = {
       "Splitting a complex or multi-part question into simpler sub-questions and searching for each separately.",
     module: "query-understanding",
   },
+  "contextual-retrieval": {
+    term: "Contextual retrieval",
+    definition:
+      "Before indexing, asking a model to write a sentence or two that places each chunk in its document, and sticking that note on the front of the chunk for both vector and keyword search (Anthropic, 2024). The chunk's own words stay unchanged.",
+    module: "contextual-retrieval",
+  },
+  "late-chunking": {
+    term: "Late chunking",
+    definition:
+      "Embedding a whole document's tokens in one go and only then cutting the result into chunk vectors, so each vector carries some of the document's context without any model-written notes (Günther et al., 2024). Needs a long-context embedding model.",
+    module: "contextual-retrieval",
+  },
 } satisfies Record<string, GlossaryEntry>;

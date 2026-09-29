@@ -3113,18 +3113,19 @@ const ragSystems: Track = {
           summary: "Chunks that know where they came from, and returning more than you matched.",
           minutes: 25,
           signature:
-            "Add a line of context to each chunk and see failed retrievals fall; match small pieces but return their parent section",
-          formats: ["simulation", "checkpoint"],
+            "Add a line of context to each chunk and see which searches it rescues; match small pieces but return their parent section",
+          formats: ["simulation", "step-through", "checkpoint"],
           concepts: [
             "Why chunks lose context",
             "Contextual embeddings and contextual BM25",
             "Parent-document (small-to-big) retrieval",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["chunking", "reranking"],
           plain:
-            "A chunk that says 'the limit is ₹5 lakh' doesn't say which scheme it belongs to. Adding a short note about where each chunk came from, or returning the whole surrounding section, fixes many silent failures.",
+            "A chunk that says 'the limit is 20 kilolitres a month' doesn't say who gets it or which year's rules it comes from. Adding a short note about where each chunk came from, or returning the whole surrounding section, fixes many silent failures.",
+          terms: ["contextual-retrieval", "parent-child-chunks", "late-chunking", "prompt-caching"],
         },
         {
           slug: "prompt-assembly",
