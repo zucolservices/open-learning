@@ -32,4 +32,28 @@ export const ragSystems = {
       "Training an existing model further on your own examples, which changes its weights. Good for tone, format and behaviour; a slow and unreliable way to add new facts.",
     module: "why-rag",
   },
+  ingestion: {
+    term: "Ingestion",
+    definition:
+      "The half of a RAG system that runs ahead of time: parsing documents, splitting them into chunks, embedding the chunks and storing them in an index. It runs again when documents change.",
+    module: "rag-end-to-end",
+  },
+  chunk: {
+    term: "Chunk",
+    definition:
+      "One piece of a document (often a paragraph or a few hundred tokens) that is embedded and retrieved as a unit.",
+    module: "rag-end-to-end",
+  },
+  "vector-index": {
+    term: "Vector index",
+    definition:
+      "A store of embedding vectors organised so that the vectors closest to a query can be found quickly.",
+    module: "rag-end-to-end",
+  },
+  "top-k-retrieval": {
+    term: "Top-k retrieval",
+    definition:
+      "Returning the k passages that score highest for a question (for example the top 3) and passing only those to the model.",
+    module: "rag-end-to-end",
+  },
 } satisfies Record<string, GlossaryEntry>;
