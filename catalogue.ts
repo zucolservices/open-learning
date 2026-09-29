@@ -2979,11 +2979,12 @@ const ragSystems: Track = {
             "BM25 and its two knobs",
             "Where keywords fail: synonyms and other languages",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["rag-end-to-end"],
           plain:
             "Keyword search finds documents that share words with your question, and ranks rare shared words higher than common ones. It's fast and exact, but it misses answers that use different words.",
+          terms: ["inverted-index", "bm25", "idf", "stop-words", "stemming"],
         },
         {
           slug: "embeddings-retrieval",

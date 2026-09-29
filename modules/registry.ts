@@ -118,4 +118,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "rag-systems/parsing": () => import("./rag-systems/parsing"),
   "rag-systems/chunking": () => import("./rag-systems/chunking"),
   "rag-systems/metadata-freshness": () => import("./rag-systems/metadata-freshness"),
+  "rag-systems/bm25": () => import("./rag-systems/bm25"),
 };

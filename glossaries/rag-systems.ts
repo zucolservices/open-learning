@@ -116,4 +116,34 @@ export const ragSystems = {
       "Fields stored alongside each chunk's text and vector: document ID, title, dates, status, language, access rights. Used for filtering, citations and updates.",
     module: "metadata-freshness",
   },
+  "inverted-index": {
+    term: "Inverted index",
+    definition:
+      "For every word in a collection, the list of documents that contain it (and how often). It lets keyword search look up only the query's words instead of reading every document.",
+    module: "bm25",
+  },
+  bm25: {
+    term: "BM25",
+    definition:
+      "The standard keyword-ranking formula (Okapi BM25, from City University London in the 1990s). It adds up each query word's weight: rarer words count more, repeats saturate, and long documents are discounted.",
+    module: "bm25",
+  },
+  idf: {
+    term: "IDF (inverse document frequency)",
+    definition:
+      "How rare a word is across the collection. Words found in few documents get a high IDF and count for more. The idea comes from Karen Spärck Jones (1972).",
+    module: "bm25",
+  },
+  stemming: {
+    term: "Stemming",
+    definition:
+      "Cutting words down to a common stem (days → day, renewed → renew) so different forms match in keyword search. Language-specific.",
+    module: "bm25",
+  },
+  "stop-words": {
+    term: "Stop words",
+    definition:
+      "Very common words such as the, for and to, often dropped before keyword indexing because they say little about which document is relevant.",
+    module: "bm25",
+  },
 } satisfies Record<string, GlossaryEntry>;
