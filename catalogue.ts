@@ -2931,11 +2931,12 @@ const ragSystems: Track = {
             "Size, overlap and structure-aware splitting",
             "Parent–child chunks and late chunking",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["parsing"],
           plain:
             "Search works on pieces of documents, not whole files. Pieces that are too small lose their meaning; pieces that are too big bury the answer. Where you cut matters as much as how big the pieces are.",
+          terms: ["chunk", "chunk-size", "chunk-overlap", "parent-child-chunks", "embedding"],
         },
         {
           slug: "metadata-freshness",

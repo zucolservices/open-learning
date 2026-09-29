@@ -80,4 +80,22 @@ export const ragSystems = {
       "Fonts such as Kruti Dev that draw Devanagari shapes over Latin character codes. Text typed in them copies out as Latin gibberish and needs conversion to Unicode.",
     module: "parsing",
   },
+  "chunk-overlap": {
+    term: "Chunk overlap",
+    definition:
+      "Repeating the end of one chunk at the start of the next, so a sentence cut at a boundary still appears whole somewhere. Often 10–25% of the chunk size.",
+    module: "chunking",
+  },
+  "chunk-size": {
+    term: "Chunk size",
+    definition:
+      "How much text goes into each chunk, counted in characters or tokens. Too small loses context; too big blurs meaning and distracts the model.",
+    module: "chunking",
+  },
+  "parent-child-chunks": {
+    term: "Parent–child chunks",
+    definition:
+      "Indexing small chunks for precise search but returning the larger section each came from: 'search small, return big'.",
+    module: "chunking",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -1,0 +1,1827 @@
+{
+  "docs": [
+    {
+      "id": "2026",
+      "title": "Kalpanagar Water Supply Rules, 2026",
+      "text": "Kalpanagar Water Supply Rules, 2026\n\n1. Scope\nThese rules apply to every piped water connection supplied by the Kalpanagar Municipal Corporation. They replace the Water Supply Rules of 2019. Words such as 'consumer' mean the person in whose name the connection is registered.\n\n2. New connections\nA new domestic connection is granted to the owner of a property, or to a tenant with the owner's written consent. The application must include the latest property tax receipt and an identity proof. The connection fee is ₹500, and a refundable deposit of ₹3,000 is collected. The Corporation completes new connections within 15 working days of a complete application.\n\n3. Free water for low-income households\nHouseholds holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal domestic rate. The card must be renewed with the ward office every two years to keep the allowance.\n\n4. Meters and billing\nEvery connection has a meter, which remains the property of the Corporation. Meters are read every two months, and bills are sent by SMS and post within 10 days of the reading. If a meter is found faulty, the bill is based on the average of the previous three readings until the meter is replaced.\n\n5. Paying your bill\nBills must be paid within 21 days of the bill date, online on the NMC citizen portal or at any ward office. A late fee of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill.\n\n6. Disconnection\nIf a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice. Supply to hospitals, schools and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead.\n\n7. Reconnection\nA disconnected supply is restored within 2 working days after all arrears are paid. The reconnection fee is ₹1,000. However, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection.\n\n8. Complaints\nComplaints about leaks, low pressure or dirty water can be made on the citizen portal, by phone, or at a ward office. Leaks on a main road are attended to within 24 hours. Other complaints are resolved within 5 working days, and the consumer is informed by SMS when the work is complete."
+    },
+    {
+      "id": "2019",
+      "title": "Kalpanagar Water Supply Rules, 2019 (superseded)",
+      "text": "Kalpanagar Water Supply Rules, 2019 (superseded)\n\n3. Free water for low-income households\nHouseholds holding a below-poverty-line (BPL) card receive a lifeline allowance. The limit is 15 kilolitres per month, free of charge.\n\n6. Disconnection\nIf a bill remains unpaid for 60 days, the Corporation may disconnect the supply after giving 7 days' written notice.\n\n7. Reconnection\nA disconnected supply is restored within 5 working days after all arrears are paid. The reconnection fee is ₹750.\n\n8. Complaints\nLeaks on a main road are attended to within 48 hours. Other complaints are resolved within 10 working days."
+    }
+  ],
+  "configs": [
+    {
+      "id": "fixed-small-0",
+      "method": "fixed",
+      "size": "small",
+      "overlap": 0,
+      "chunks": [
+        {
+          "doc": "2026",
+          "s": 0,
+          "e": 150,
+          "text": "Kalpanagar Water Supply Rules, 2026\n\n1. Scope\nThese rules apply to every piped water connection supplied by the Kalpanagar Municipal Corporation. They"
+        },
+        {
+          "doc": "2026",
+          "s": 150,
+          "e": 300,
+          "text": " replace the Water Supply Rules of 2019. Words such as 'consumer' mean the person in whose name the connection is registered.\n\n2. New connections\nA ne"
+        },
+        {
+          "doc": "2026",
+          "s": 300,
+          "e": 450,
+          "text": "w domestic connection is granted to the owner of a property, or to a tenant with the owner's written consent. The application must include the latest "
+        },
+        {
+          "doc": "2026",
+          "s": 450,
+          "e": 600,
+          "text": "property tax receipt and an identity proof. The connection fee is ₹500, and a refundable deposit of ₹3,000 is collected. The Corporation completes new"
+        },
+        {
+          "doc": "2026",
+          "s": 600,
+          "e": 750,
+          "text": " connections within 15 working days of a complete application.\n\n3. Free water for low-income households\nHouseholds holding a valid below-poverty-line "
+        },
+        {
+          "doc": "2026",
+          "s": 750,
+          "e": 900,
+          "text": "(BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal dome"
+        },
+        {
+          "doc": "2026",
+          "s": 900,
+          "e": 1050,
+          "text": "stic rate. The card must be renewed with the ward office every two years to keep the allowance.\n\n4. Meters and billing\nEvery connection has a meter, w"
+        },
+        {
+          "doc": "2026",
+          "s": 1050,
+          "e": 1200,
+          "text": "hich remains the property of the Corporation. Meters are read every two months, and bills are sent by SMS and post within 10 days of the reading. If a"
+        },
+        {
+          "doc": "2026",
+          "s": 1200,
+          "e": 1350,
+          "text": " meter is found faulty, the bill is based on the average of the previous three readings until the meter is replaced.\n\n5. Paying your bill\nBills must b"
+        },
+        {
+          "doc": "2026",
+          "s": 1350,
+          "e": 1500,
+          "text": "e paid within 21 days of the bill date, online on the NMC citizen portal or at any ward office. A late fee of 2% of the unpaid amount is added for eve"
+        },
+        {
+          "doc": "2026",
+          "s": 1500,
+          "e": 1650,
+          "text": "ry month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill.\n\n6. Disconnection\nIf a bill remains unpaid for 90 days, the Co"
+        },
+        {
+          "doc": "2026",
+          "s": 1650,
+          "e": 1800,
+          "text": "rporation may disconnect the supply after giving 15 days' written notice. Supply to hospitals, schools and homes with a registered dialysis patient is"
+        },
+        {
+          "doc": "2026",
+          "s": 1800,
+          "e": 1950,
+          "text": " never disconnected for non-payment; arrears are recovered through the courts instead.\n\n7. Reconnection\nA disconnected supply is restored within 2 wor"
+        },
+        {
+          "doc": "2026",
+          "s": 1950,
+          "e": 2100,
+          "text": "king days after all arrears are paid. The reconnection fee is ₹1,000. However, the fee is waived for senior citizens who clear their arrears within 30"
+        },
+        {
+          "doc": "2026",
+          "s": 2100,
+          "e": 2250,
+          "text": " days of disconnection.\n\n8. Complaints\nComplaints about leaks, low pressure or dirty water can be made on the citizen portal, by phone, or at a ward o"
+        },
+        {
+          "doc": "2026",
+          "s": 2250,
+          "e": 2400,
+          "text": "ffice. Leaks on a main road are attended to within 24 hours. Other complaints are resolved within 5 working days, and the consumer is informed by SMS "
+        },
+        { "doc": "2026", "s": 2400, "e": 2426, "text": "when the work is complete." },
+        {
+          "doc": "2019",
+          "s": 0,
+          "e": 150,
+          "text": "Kalpanagar Water Supply Rules, 2019 (superseded)\n\n3. Free water for low-income households\nHouseholds holding a below-poverty-line (BPL) card receive a"
+        },
+        {
+          "doc": "2019",
+          "s": 150,
+          "e": 300,
+          "text": " lifeline allowance. The limit is 15 kilolitres per month, free of charge.\n\n6. Disconnection\nIf a bill remains unpaid for 60 days, the Corporation may"
+        },
+        {
+          "doc": "2019",
+          "s": 300,
+          "e": 450,
+          "text": " disconnect the supply after giving 7 days' written notice.\n\n7. Reconnection\nA disconnected supply is restored within 5 working days after all arrears"
+        },
+        {
+          "doc": "2019",
+          "s": 450,
+          "e": 600,
+          "text": " are paid. The reconnection fee is ₹750.\n\n8. Complaints\nLeaks on a main road are attended to within 48 hours. Other complaints are resolved within 10 "
+        },
+        { "doc": "2019", "s": 600, "e": 613, "text": "working days." }
+      ],
+      "results": [
+        {
+          "top": [
+            { "i": 13, "score": 0.87 },
+            { "i": 20, "score": 0.836 },
+            { "i": 1, "score": 0.832 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "No, the reconnection fee is waived for senior citizens who clear their arrears within 30 days.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 5, "score": 0.874 },
+            { "i": 17, "score": 0.872 },
+            { "i": 4, "score": 0.829 }
+          ],
+          "top1": false,
+          "top3": false,
+          "old1": false,
+          "split": true,
+          "answer": "BPL households receive 20 kilolitres of free water per month.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 11, "score": 0.856 },
+            { "i": 9, "score": 0.846 },
+            { "i": 17, "score": 0.844 }
+          ],
+          "top1": false,
+          "top3": false,
+          "old1": false,
+          "split": true,
+          "answer": "Passage [1] indicates that a rationing authority may disconnect the supply after giving 15 days' written notice, implying that unpaid bills could lead to a cut-off supply to a hospital, among other places.",
+          "ok": false
+        },
+        {
+          "top": [
+            { "i": 15, "score": 0.885 },
+            { "i": 20, "score": 0.848 },
+            { "i": 14, "score": 0.816 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "Per passage [1], leaks on a main road are attended to within 24 hours.",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "fixed-small-25",
+      "method": "fixed",
+      "size": "small",
+      "overlap": 25,
+      "chunks": [
+        {
+          "doc": "2026",
+          "s": 0,
+          "e": 150,
+          "text": "Kalpanagar Water Supply Rules, 2026\n\n1. Scope\nThese rules apply to every piped water connection supplied by the Kalpanagar Municipal Corporation. They"
+        },
+        {
+          "doc": "2026",
+          "s": 112,
+          "e": 262,
+          "text": "Kalpanagar Municipal Corporation. They replace the Water Supply Rules of 2019. Words such as 'consumer' mean the person in whose name the connection i"
+        },
+        {
+          "doc": "2026",
+          "s": 224,
+          "e": 374,
+          "text": " person in whose name the connection is registered.\n\n2. New connections\nA new domestic connection is granted to the owner of a property, or to a tenan"
+        },
+        {
+          "doc": "2026",
+          "s": 336,
+          "e": 486,
+          "text": "the owner of a property, or to a tenant with the owner's written consent. The application must include the latest property tax receipt and an identity"
+        },
+        {
+          "doc": "2026",
+          "s": 448,
+          "e": 598,
+          "text": "t property tax receipt and an identity proof. The connection fee is ₹500, and a refundable deposit of ₹3,000 is collected. The Corporation completes n"
+        },
+        {
+          "doc": "2026",
+          "s": 560,
+          "e": 710,
+          "text": "collected. The Corporation completes new connections within 15 working days of a complete application.\n\n3. Free water for low-income households\nHouseh"
+        },
+        {
+          "doc": "2026",
+          "s": 672,
+          "e": 822,
+          "text": "water for low-income households\nHouseholds holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per "
+        },
+        {
+          "doc": "2026",
+          "s": 784,
+          "e": 934,
+          "text": "wance. The limit is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal domestic rate. The card must be renewe"
+        },
+        {
+          "doc": "2026",
+          "s": 896,
+          "e": 1046,
+          "text": "domestic rate. The card must be renewed with the ward office every two years to keep the allowance.\n\n4. Meters and billing\nEvery connection has a mete"
+        },
+        {
+          "doc": "2026",
+          "s": 1008,
+          "e": 1158,
+          "text": "nd billing\nEvery connection has a meter, which remains the property of the Corporation. Meters are read every two months, and bills are sent by SMS an"
+        },
+        {
+          "doc": "2026",
+          "s": 1120,
+          "e": 1270,
+          "text": "o months, and bills are sent by SMS and post within 10 days of the reading. If a meter is found faulty, the bill is based on the average of the previo"
+        },
+        {
+          "doc": "2026",
+          "s": 1232,
+          "e": 1382,
+          "text": " is based on the average of the previous three readings until the meter is replaced.\n\n5. Paying your bill\nBills must be paid within 21 days of the bil"
+        },
+        {
+          "doc": "2026",
+          "s": 1344,
+          "e": 1494,
+          "text": "must be paid within 21 days of the bill date, online on the NMC citizen portal or at any ward office. A late fee of 2% of the unpaid amount is added f"
+        },
+        {
+          "doc": "2026",
+          "s": 1456,
+          "e": 1606,
+          "text": " of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill.\n\n6. Disconnection\n"
+        },
+        {
+          "doc": "2026",
+          "s": 1568,
+          "e": 1718,
+          "text": "of 1% on each bill.\n\n6. Disconnection\nIf a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written no"
+        },
+        {
+          "doc": "2026",
+          "s": 1680,
+          "e": 1830,
+          "text": "upply after giving 15 days' written notice. Supply to hospitals, schools and homes with a registered dialysis patient is never disconnected for non-pa"
+        },
+        {
+          "doc": "2026",
+          "s": 1792,
+          "e": 1942,
+          "text": "tient is never disconnected for non-payment; arrears are recovered through the courts instead.\n\n7. Reconnection\nA disconnected supply is restored with"
+        },
+        {
+          "doc": "2026",
+          "s": 1904,
+          "e": 2054,
+          "text": "A disconnected supply is restored within 2 working days after all arrears are paid. The reconnection fee is ₹1,000. However, the fee is waived for sen"
+        },
+        {
+          "doc": "2026",
+          "s": 2016,
+          "e": 2166,
+          "text": "00. However, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection.\n\n8. Complaints\nComplaints about leaks, low"
+        },
+        {
+          "doc": "2026",
+          "s": 2128,
+          "e": 2278,
+          "text": "Complaints\nComplaints about leaks, low pressure or dirty water can be made on the citizen portal, by phone, or at a ward office. Leaks on a main road "
+        },
+        {
+          "doc": "2026",
+          "s": 2240,
+          "e": 2390,
+          "text": "t a ward office. Leaks on a main road are attended to within 24 hours. Other complaints are resolved within 5 working days, and the consumer is inform"
+        },
+        {
+          "doc": "2026",
+          "s": 2352,
+          "e": 2426,
+          "text": "rking days, and the consumer is informed by SMS when the work is complete."
+        },
+        {
+          "doc": "2019",
+          "s": 0,
+          "e": 150,
+          "text": "Kalpanagar Water Supply Rules, 2019 (superseded)\n\n3. Free water for low-income households\nHouseholds holding a below-poverty-line (BPL) card receive a"
+        },
+        {
+          "doc": "2019",
+          "s": 112,
+          "e": 262,
+          "text": "elow-poverty-line (BPL) card receive a lifeline allowance. The limit is 15 kilolitres per month, free of charge.\n\n6. Disconnection\nIf a bill remains u"
+        },
+        {
+          "doc": "2019",
+          "s": 224,
+          "e": 374,
+          "text": "\n\n6. Disconnection\nIf a bill remains unpaid for 60 days, the Corporation may disconnect the supply after giving 7 days' written notice.\n\n7. Reconnecti"
+        },
+        {
+          "doc": "2019",
+          "s": 336,
+          "e": 486,
+          "text": "7 days' written notice.\n\n7. Reconnection\nA disconnected supply is restored within 5 working days after all arrears are paid. The reconnection fee is ₹"
+        },
+        {
+          "doc": "2019",
+          "s": 448,
+          "e": 598,
+          "text": "rs are paid. The reconnection fee is ₹750.\n\n8. Complaints\nLeaks on a main road are attended to within 48 hours. Other complaints are resolved within 1"
+        },
+        {
+          "doc": "2019",
+          "s": 560,
+          "e": 613,
+          "text": "Other complaints are resolved within 10 working days."
+        }
+      ],
+      "results": [
+        {
+          "top": [
+            { "i": 18, "score": 0.855 },
+            { "i": 17, "score": 0.843 },
+            { "i": 26, "score": 0.838 }
+          ],
+          "top1": false,
+          "top3": false,
+          "old1": false,
+          "split": true,
+          "answer": "No, the reconnection fee for senior citizens is waived if they clear their arrears within 30 days of disconnection.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 6, "score": 0.873 },
+            { "i": 22, "score": 0.872 },
+            { "i": 23, "score": 0.832 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "BPL households receive a lifeline allowance of 15 kilolitres per month, free of charge.",
+          "ok": false
+        },
+        {
+          "top": [
+            { "i": 12, "score": 0.849 },
+            { "i": 15, "score": 0.847 },
+            { "i": 22, "score": 0.844 }
+          ],
+          "top1": false,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "No, the supply to a hospital cannot be cut for unpaid bills according to passage [2], which states that supply to hospitals, schools, and homes with a registered dialysis patient is never disconnected for non-payment.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 20, "score": 0.884 },
+            { "i": 26, "score": 0.843 },
+            { "i": 19, "score": 0.836 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "Per passages [1] and [3], leaks on a main road are attended to within 24 hours.",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "fixed-medium-0",
+      "method": "fixed",
+      "size": "medium",
+      "overlap": 0,
+      "chunks": [
+        {
+          "doc": "2026",
+          "s": 0,
+          "e": 400,
+          "text": "Kalpanagar Water Supply Rules, 2026\n\n1. Scope\nThese rules apply to every piped water connection supplied by the Kalpanagar Municipal Corporation. They replace the Water Supply Rules of 2019. Words such as 'consumer' mean the person in whose name the connection is registered.\n\n2. New connections\nA new domestic connection is granted to the owner of a property, or to a tenant with the owner's written"
+        },
+        {
+          "doc": "2026",
+          "s": 400,
+          "e": 800,
+          "text": " consent. The application must include the latest property tax receipt and an identity proof. The connection fee is ₹500, and a refundable deposit of ₹3,000 is collected. The Corporation completes new connections within 15 working days of a complete application.\n\n3. Free water for low-income households\nHouseholds holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit"
+        },
+        {
+          "doc": "2026",
+          "s": 800,
+          "e": 1200,
+          "text": " is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal domestic rate. The card must be renewed with the ward office every two years to keep the allowance.\n\n4. Meters and billing\nEvery connection has a meter, which remains the property of the Corporation. Meters are read every two months, and bills are sent by SMS and post within 10 days of the reading. If a"
+        },
+        {
+          "doc": "2026",
+          "s": 1200,
+          "e": 1600,
+          "text": " meter is found faulty, the bill is based on the average of the previous three readings until the meter is replaced.\n\n5. Paying your bill\nBills must be paid within 21 days of the bill date, online on the NMC citizen portal or at any ward office. A late fee of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill.\n\n6. Disconne"
+        },
+        {
+          "doc": "2026",
+          "s": 1600,
+          "e": 2000,
+          "text": "ction\nIf a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice. Supply to hospitals, schools and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead.\n\n7. Reconnection\nA disconnected supply is restored within 2 working days after all arrears are paid. The reconnec"
+        },
+        {
+          "doc": "2026",
+          "s": 2000,
+          "e": 2400,
+          "text": "tion fee is ₹1,000. However, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection.\n\n8. Complaints\nComplaints about leaks, low pressure or dirty water can be made on the citizen portal, by phone, or at a ward office. Leaks on a main road are attended to within 24 hours. Other complaints are resolved within 5 working days, and the consumer is informed by SMS "
+        },
+        { "doc": "2026", "s": 2400, "e": 2426, "text": "when the work is complete." },
+        {
+          "doc": "2019",
+          "s": 0,
+          "e": 400,
+          "text": "Kalpanagar Water Supply Rules, 2019 (superseded)\n\n3. Free water for low-income households\nHouseholds holding a below-poverty-line (BPL) card receive a lifeline allowance. The limit is 15 kilolitres per month, free of charge.\n\n6. Disconnection\nIf a bill remains unpaid for 60 days, the Corporation may disconnect the supply after giving 7 days' written notice.\n\n7. Reconnection\nA disconnected supply i"
+        },
+        {
+          "doc": "2019",
+          "s": 400,
+          "e": 613,
+          "text": "s restored within 5 working days after all arrears are paid. The reconnection fee is ₹750.\n\n8. Complaints\nLeaks on a main road are attended to within 48 hours. Other complaints are resolved within 10 working days."
+        }
+      ],
+      "results": [
+        {
+          "top": [
+            { "i": 5, "score": 0.849 },
+            { "i": 1, "score": 0.838 },
+            { "i": 0, "score": 0.828 }
+          ],
+          "top1": false,
+          "top3": false,
+          "old1": false,
+          "split": true,
+          "answer": "No, senior citizens do not have to pay the reconnection fee if they clear their arrears within 30 days of disconnection.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 7, "score": 0.868 },
+            { "i": 1, "score": 0.852 },
+            { "i": 2, "score": 0.819 }
+          ],
+          "top1": false,
+          "top3": false,
+          "old1": true,
+          "split": true,
+          "answer": "BPL households receive a lifeline allowance of 20 kilolitres per month, free of charge.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 4, "score": 0.844 },
+            { "i": 7, "score": 0.844 },
+            { "i": 3, "score": 0.829 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "No, the supply to a hospital cannot be cut for unpaid bills according to the first passage.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 8, "score": 0.856 },
+            { "i": 5, "score": 0.851 },
+            { "i": 3, "score": 0.823 }
+          ],
+          "top1": false,
+          "top3": true,
+          "old1": true,
+          "split": false,
+          "answer": "Leaks on a main road are attended to within 24 hours.",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "fixed-medium-25",
+      "method": "fixed",
+      "size": "medium",
+      "overlap": 25,
+      "chunks": [
+        {
+          "doc": "2026",
+          "s": 0,
+          "e": 400,
+          "text": "Kalpanagar Water Supply Rules, 2026\n\n1. Scope\nThese rules apply to every piped water connection supplied by the Kalpanagar Municipal Corporation. They replace the Water Supply Rules of 2019. Words such as 'consumer' mean the person in whose name the connection is registered.\n\n2. New connections\nA new domestic connection is granted to the owner of a property, or to a tenant with the owner's written"
+        },
+        {
+          "doc": "2026",
+          "s": 300,
+          "e": 700,
+          "text": "w domestic connection is granted to the owner of a property, or to a tenant with the owner's written consent. The application must include the latest property tax receipt and an identity proof. The connection fee is ₹500, and a refundable deposit of ₹3,000 is collected. The Corporation completes new connections within 15 working days of a complete application.\n\n3. Free water for low-income househo"
+        },
+        {
+          "doc": "2026",
+          "s": 600,
+          "e": 1000,
+          "text": " connections within 15 working days of a complete application.\n\n3. Free water for low-income households\nHouseholds holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal domestic rate. The card must be renewed with the ward office every two years to keep the allowance.\n\n4. "
+        },
+        {
+          "doc": "2026",
+          "s": 900,
+          "e": 1300,
+          "text": "stic rate. The card must be renewed with the ward office every two years to keep the allowance.\n\n4. Meters and billing\nEvery connection has a meter, which remains the property of the Corporation. Meters are read every two months, and bills are sent by SMS and post within 10 days of the reading. If a meter is found faulty, the bill is based on the average of the previous three readings until the me"
+        },
+        {
+          "doc": "2026",
+          "s": 1200,
+          "e": 1600,
+          "text": " meter is found faulty, the bill is based on the average of the previous three readings until the meter is replaced.\n\n5. Paying your bill\nBills must be paid within 21 days of the bill date, online on the NMC citizen portal or at any ward office. A late fee of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill.\n\n6. Disconne"
+        },
+        {
+          "doc": "2026",
+          "s": 1500,
+          "e": 1900,
+          "text": "ry month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill.\n\n6. Disconnection\nIf a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice. Supply to hospitals, schools and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead.\n\n7. Reconnect"
+        },
+        {
+          "doc": "2026",
+          "s": 1800,
+          "e": 2200,
+          "text": " never disconnected for non-payment; arrears are recovered through the courts instead.\n\n7. Reconnection\nA disconnected supply is restored within 2 working days after all arrears are paid. The reconnection fee is ₹1,000. However, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection.\n\n8. Complaints\nComplaints about leaks, low pressure or dirty water can be ma"
+        },
+        {
+          "doc": "2026",
+          "s": 2100,
+          "e": 2426,
+          "text": " days of disconnection.\n\n8. Complaints\nComplaints about leaks, low pressure or dirty water can be made on the citizen portal, by phone, or at a ward office. Leaks on a main road are attended to within 24 hours. Other complaints are resolved within 5 working days, and the consumer is informed by SMS when the work is complete."
+        },
+        {
+          "doc": "2019",
+          "s": 0,
+          "e": 400,
+          "text": "Kalpanagar Water Supply Rules, 2019 (superseded)\n\n3. Free water for low-income households\nHouseholds holding a below-poverty-line (BPL) card receive a lifeline allowance. The limit is 15 kilolitres per month, free of charge.\n\n6. Disconnection\nIf a bill remains unpaid for 60 days, the Corporation may disconnect the supply after giving 7 days' written notice.\n\n7. Reconnection\nA disconnected supply i"
+        },
+        {
+          "doc": "2019",
+          "s": 300,
+          "e": 613,
+          "text": " disconnect the supply after giving 7 days' written notice.\n\n7. Reconnection\nA disconnected supply is restored within 5 working days after all arrears are paid. The reconnection fee is ₹750.\n\n8. Complaints\nLeaks on a main road are attended to within 48 hours. Other complaints are resolved within 10 working days."
+        }
+      ],
+      "results": [
+        {
+          "top": [
+            { "i": 6, "score": 0.854 },
+            { "i": 2, "score": 0.833 },
+            { "i": 0, "score": 0.828 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "No, the reconnection fee is waived for senior citizens who clear their arrears within 30 days of disconnection.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 2, "score": 0.868 },
+            { "i": 8, "score": 0.868 },
+            { "i": 0, "score": 0.799 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "BPL households receive a lifeline allowance of 15 kilolitres per month, free of charge.",
+          "ok": false
+        },
+        {
+          "top": [
+            { "i": 8, "score": 0.844 },
+            { "i": 5, "score": 0.841 },
+            { "i": 2, "score": 0.837 }
+          ],
+          "top1": false,
+          "top3": true,
+          "old1": true,
+          "split": false,
+          "answer": "No, the supply to a hospital cannot be cut for unpaid bills; arrears are recovered through the courts instead.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 7, "score": 0.861 },
+            { "i": 9, "score": 0.829 },
+            { "i": 4, "score": 0.823 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "Leaks on a main road are attended to within 24 hours.",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "fixed-large-0",
+      "method": "fixed",
+      "size": "large",
+      "overlap": 0,
+      "chunks": [
+        {
+          "doc": "2026",
+          "s": 0,
+          "e": 900,
+          "text": "Kalpanagar Water Supply Rules, 2026\n\n1. Scope\nThese rules apply to every piped water connection supplied by the Kalpanagar Municipal Corporation. They replace the Water Supply Rules of 2019. Words such as 'consumer' mean the person in whose name the connection is registered.\n\n2. New connections\nA new domestic connection is granted to the owner of a property, or to a tenant with the owner's written consent. The application must include the latest property tax receipt and an identity proof. The connection fee is ₹500, and a refundable deposit of ₹3,000 is collected. The Corporation completes new connections within 15 working days of a complete application.\n\n3. Free water for low-income households\nHouseholds holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal dome"
+        },
+        {
+          "doc": "2026",
+          "s": 900,
+          "e": 1800,
+          "text": "stic rate. The card must be renewed with the ward office every two years to keep the allowance.\n\n4. Meters and billing\nEvery connection has a meter, which remains the property of the Corporation. Meters are read every two months, and bills are sent by SMS and post within 10 days of the reading. If a meter is found faulty, the bill is based on the average of the previous three readings until the meter is replaced.\n\n5. Paying your bill\nBills must be paid within 21 days of the bill date, online on the NMC citizen portal or at any ward office. A late fee of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill.\n\n6. Disconnection\nIf a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice. Supply to hospitals, schools and homes with a registered dialysis patient is"
+        },
+        {
+          "doc": "2026",
+          "s": 1800,
+          "e": 2426,
+          "text": " never disconnected for non-payment; arrears are recovered through the courts instead.\n\n7. Reconnection\nA disconnected supply is restored within 2 working days after all arrears are paid. The reconnection fee is ₹1,000. However, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection.\n\n8. Complaints\nComplaints about leaks, low pressure or dirty water can be made on the citizen portal, by phone, or at a ward office. Leaks on a main road are attended to within 24 hours. Other complaints are resolved within 5 working days, and the consumer is informed by SMS when the work is complete."
+        },
+        {
+          "doc": "2019",
+          "s": 0,
+          "e": 613,
+          "text": "Kalpanagar Water Supply Rules, 2019 (superseded)\n\n3. Free water for low-income households\nHouseholds holding a below-poverty-line (BPL) card receive a lifeline allowance. The limit is 15 kilolitres per month, free of charge.\n\n6. Disconnection\nIf a bill remains unpaid for 60 days, the Corporation may disconnect the supply after giving 7 days' written notice.\n\n7. Reconnection\nA disconnected supply is restored within 5 working days after all arrears are paid. The reconnection fee is ₹750.\n\n8. Complaints\nLeaks on a main road are attended to within 48 hours. Other complaints are resolved within 10 working days."
+        }
+      ],
+      "results": [
+        {
+          "top": [
+            { "i": 2, "score": 0.855 },
+            { "i": 3, "score": 0.835 },
+            { "i": 0, "score": 0.829 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "No, the reconnection fee is waived for senior citizens who clear their arrears within 30 days of disconnection.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 3, "score": 0.863 },
+            { "i": 0, "score": 0.845 },
+            { "i": 2, "score": 0.785 }
+          ],
+          "top1": false,
+          "top3": true,
+          "old1": true,
+          "split": false,
+          "answer": "BPL households receive a lifeline allowance of 20 kilolitres per month for free water.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 3, "score": 0.841 },
+            { "i": 1, "score": 0.834 },
+            { "i": 0, "score": 0.824 }
+          ],
+          "top1": false,
+          "top3": false,
+          "old1": true,
+          "split": true,
+          "answer": "No, the supply to a hospital cannot be cut for unpaid bills according to the Kalpanagar Water Supply Rules, 2019 (superseded).",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 2, "score": 0.84 },
+            { "i": 3, "score": 0.81 },
+            { "i": 1, "score": 0.8 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "Attended to within 24 hours.",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "fixed-large-25",
+      "method": "fixed",
+      "size": "large",
+      "overlap": 25,
+      "chunks": [
+        {
+          "doc": "2026",
+          "s": 0,
+          "e": 900,
+          "text": "Kalpanagar Water Supply Rules, 2026\n\n1. Scope\nThese rules apply to every piped water connection supplied by the Kalpanagar Municipal Corporation. They replace the Water Supply Rules of 2019. Words such as 'consumer' mean the person in whose name the connection is registered.\n\n2. New connections\nA new domestic connection is granted to the owner of a property, or to a tenant with the owner's written consent. The application must include the latest property tax receipt and an identity proof. The connection fee is ₹500, and a refundable deposit of ₹3,000 is collected. The Corporation completes new connections within 15 working days of a complete application.\n\n3. Free water for low-income households\nHouseholds holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal dome"
+        },
+        {
+          "doc": "2026",
+          "s": 675,
+          "e": 1575,
+          "text": "er for low-income households\nHouseholds holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal domestic rate. The card must be renewed with the ward office every two years to keep the allowance.\n\n4. Meters and billing\nEvery connection has a meter, which remains the property of the Corporation. Meters are read every two months, and bills are sent by SMS and post within 10 days of the reading. If a meter is found faulty, the bill is based on the average of the previous three readings until the meter is replaced.\n\n5. Paying your bill\nBills must be paid within 21 days of the bill date, online on the NMC citizen portal or at any ward office. A late fee of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% o"
+        },
+        {
+          "doc": "2026",
+          "s": 1350,
+          "e": 2250,
+          "text": "e paid within 21 days of the bill date, online on the NMC citizen portal or at any ward office. A late fee of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill.\n\n6. Disconnection\nIf a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice. Supply to hospitals, schools and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead.\n\n7. Reconnection\nA disconnected supply is restored within 2 working days after all arrears are paid. The reconnection fee is ₹1,000. However, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection.\n\n8. Complaints\nComplaints about leaks, low pressure or dirty water can be made on the citizen portal, by phone, or at a ward o"
+        },
+        {
+          "doc": "2026",
+          "s": 2025,
+          "e": 2426,
+          "text": "er, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection.\n\n8. Complaints\nComplaints about leaks, low pressure or dirty water can be made on the citizen portal, by phone, or at a ward office. Leaks on a main road are attended to within 24 hours. Other complaints are resolved within 5 working days, and the consumer is informed by SMS when the work is complete."
+        },
+        {
+          "doc": "2019",
+          "s": 0,
+          "e": 613,
+          "text": "Kalpanagar Water Supply Rules, 2019 (superseded)\n\n3. Free water for low-income households\nHouseholds holding a below-poverty-line (BPL) card receive a lifeline allowance. The limit is 15 kilolitres per month, free of charge.\n\n6. Disconnection\nIf a bill remains unpaid for 60 days, the Corporation may disconnect the supply after giving 7 days' written notice.\n\n7. Reconnection\nA disconnected supply is restored within 5 working days after all arrears are paid. The reconnection fee is ₹750.\n\n8. Complaints\nLeaks on a main road are attended to within 48 hours. Other complaints are resolved within 10 working days."
+        }
+      ],
+      "results": [
+        {
+          "top": [
+            { "i": 3, "score": 0.845 },
+            { "i": 2, "score": 0.84 },
+            { "i": 4, "score": 0.835 }
+          ],
+          "top1": false,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "No, the reconnection fee for senior citizens is waived if they clear their arrears within 30 days of disconnection.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 4, "score": 0.863 },
+            { "i": 0, "score": 0.845 },
+            { "i": 1, "score": 0.835 }
+          ],
+          "top1": false,
+          "top3": true,
+          "old1": true,
+          "split": false,
+          "answer": "BPL households receive a lifeline allowance of 20 kilolitres per month, free of charge.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 2, "score": 0.852 },
+            { "i": 4, "score": 0.841 },
+            { "i": 1, "score": 0.83 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "No, the supply to a hospital cannot be cut for unpaid bills; arrears are recovered through the courts instead.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 3, "score": 0.859 },
+            { "i": 2, "score": 0.817 },
+            { "i": 4, "score": 0.81 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "Leaks on a main road are attended to within 24 hours.",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "sentence-small-0",
+      "method": "sentence",
+      "size": "small",
+      "overlap": 0,
+      "chunks": [
+        {
+          "doc": "2026",
+          "s": 0,
+          "e": 145,
+          "text": "Kalpanagar Water Supply Rules, 2026\n\n1. Scope\nThese rules apply to every piped water connection supplied by the Kalpanagar Municipal Corporation."
+        },
+        {
+          "doc": "2026",
+          "s": 146,
+          "e": 295,
+          "text": "They replace the Water Supply Rules of 2019. Words such as 'consumer' mean the person in whose name the connection is registered.\n\n2. New connections"
+        },
+        {
+          "doc": "2026",
+          "s": 296,
+          "e": 409,
+          "text": "A new domestic connection is granted to the owner of a property, or to a tenant with the owner's written consent."
+        },
+        {
+          "doc": "2026",
+          "s": 410,
+          "e": 493,
+          "text": "The application must include the latest property tax receipt and an identity proof."
+        },
+        {
+          "doc": "2026",
+          "s": 494,
+          "e": 570,
+          "text": "The connection fee is ₹500, and a refundable deposit of ₹3,000 is collected."
+        },
+        {
+          "doc": "2026",
+          "s": 571,
+          "e": 703,
+          "text": "The Corporation completes new connections within 15 working days of a complete application.\n\n3. Free water for low-income households"
+        },
+        {
+          "doc": "2026",
+          "s": 704,
+          "e": 844,
+          "text": "Households holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge."
+        },
+        {
+          "doc": "2026",
+          "s": 845,
+          "e": 995,
+          "text": "Water used above the limit is billed at the normal domestic rate. The card must be renewed with the ward office every two years to keep the allowance."
+        },
+        {
+          "doc": "2026",
+          "s": 997,
+          "e": 1095,
+          "text": "4. Meters and billing\nEvery connection has a meter, which remains the property of the Corporation."
+        },
+        {
+          "doc": "2026",
+          "s": 1096,
+          "e": 1195,
+          "text": "Meters are read every two months, and bills are sent by SMS and post within 10 days of the reading."
+        },
+        {
+          "doc": "2026",
+          "s": 1196,
+          "e": 1337,
+          "text": "If a meter is found faulty, the bill is based on the average of the previous three readings until the meter is replaced.\n\n5. Paying your bill"
+        },
+        {
+          "doc": "2026",
+          "s": 1338,
+          "e": 1445,
+          "text": "Bills must be paid within 21 days of the bill date, online on the NMC citizen portal or at any ward office."
+        },
+        {
+          "doc": "2026",
+          "s": 1446,
+          "e": 1591,
+          "text": "A late fee of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill.\n\n6."
+        },
+        {
+          "doc": "2026",
+          "s": 1592,
+          "e": 1723,
+          "text": "Disconnection\nIf a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice."
+        },
+        {
+          "doc": "2026",
+          "s": 1724,
+          "e": 1886,
+          "text": "Supply to hospitals, schools and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead."
+        },
+        {
+          "doc": "2026",
+          "s": 1888,
+          "e": 2019,
+          "text": "7. Reconnection\nA disconnected supply is restored within 2 working days after all arrears are paid. The reconnection fee is ₹1,000."
+        },
+        {
+          "doc": "2026",
+          "s": 2020,
+          "e": 2138,
+          "text": "However, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection.\n\n8. Complaints"
+        },
+        {
+          "doc": "2026",
+          "s": 2139,
+          "e": 2256,
+          "text": "Complaints about leaks, low pressure or dirty water can be made on the citizen portal, by phone, or at a ward office."
+        },
+        {
+          "doc": "2026",
+          "s": 2257,
+          "e": 2310,
+          "text": "Leaks on a main road are attended to within 24 hours."
+        },
+        {
+          "doc": "2026",
+          "s": 2311,
+          "e": 2426,
+          "text": "Other complaints are resolved within 5 working days, and the consumer is informed by SMS when the work is complete."
+        },
+        {
+          "doc": "2019",
+          "s": 0,
+          "e": 89,
+          "text": "Kalpanagar Water Supply Rules, 2019 (superseded)\n\n3. Free water for low-income households"
+        },
+        {
+          "doc": "2019",
+          "s": 90,
+          "e": 228,
+          "text": "Households holding a below-poverty-line (BPL) card receive a lifeline allowance. The limit is 15 kilolitres per month, free of charge.\n\n6."
+        },
+        {
+          "doc": "2019",
+          "s": 229,
+          "e": 376,
+          "text": "Disconnection\nIf a bill remains unpaid for 60 days, the Corporation may disconnect the supply after giving 7 days' written notice.\n\n7. Reconnection"
+        },
+        {
+          "doc": "2019",
+          "s": 377,
+          "e": 505,
+          "text": "A disconnected supply is restored within 5 working days after all arrears are paid. The reconnection fee is ₹750.\n\n8. Complaints"
+        },
+        {
+          "doc": "2019",
+          "s": 506,
+          "e": 613,
+          "text": "Leaks on a main road are attended to within 48 hours. Other complaints are resolved within 10 working days."
+        }
+      ],
+      "results": [
+        {
+          "top": [
+            { "i": 7, "score": 0.869 },
+            { "i": 16, "score": 0.866 },
+            { "i": 1, "score": 0.846 }
+          ],
+          "top1": false,
+          "top3": false,
+          "old1": false,
+          "split": true,
+          "answer": "No, the reconnection fee for senior citizens is waived if they clear their arrears within 30 days of disconnection.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 6, "score": 0.864 },
+            { "i": 21, "score": 0.858 },
+            { "i": 20, "score": 0.829 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "BPL households receive 15 kilolitres of free water per month under the current rules.",
+          "ok": false
+        },
+        {
+          "top": [
+            { "i": 7, "score": 0.876 },
+            { "i": 14, "score": 0.858 },
+            { "i": 1, "score": 0.842 }
+          ],
+          "top1": false,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "No, the supply to a hospital cannot be cut for unpaid bills; arrears are recovered through the courts instead.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 24, "score": 0.891 },
+            { "i": 18, "score": 0.854 },
+            { "i": 7, "score": 0.815 }
+          ],
+          "top1": false,
+          "top3": true,
+          "old1": true,
+          "split": false,
+          "answer": "A leak on a main road is repaired within 24 hours, according to passage [2].",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "sentence-small-25",
+      "method": "sentence",
+      "size": "small",
+      "overlap": 25,
+      "chunks": [
+        {
+          "doc": "2026",
+          "s": 0,
+          "e": 145,
+          "text": "Kalpanagar Water Supply Rules, 2026\n\n1. Scope\nThese rules apply to every piped water connection supplied by the Kalpanagar Municipal Corporation."
+        },
+        {
+          "doc": "2026",
+          "s": 146,
+          "e": 295,
+          "text": "They replace the Water Supply Rules of 2019. Words such as 'consumer' mean the person in whose name the connection is registered.\n\n2. New connections"
+        },
+        {
+          "doc": "2026",
+          "s": 277,
+          "e": 409,
+          "text": "2. New connections\nA new domestic connection is granted to the owner of a property, or to a tenant with the owner's written consent."
+        },
+        {
+          "doc": "2026",
+          "s": 410,
+          "e": 493,
+          "text": "The application must include the latest property tax receipt and an identity proof."
+        },
+        {
+          "doc": "2026",
+          "s": 494,
+          "e": 570,
+          "text": "The connection fee is ₹500, and a refundable deposit of ₹3,000 is collected."
+        },
+        {
+          "doc": "2026",
+          "s": 571,
+          "e": 703,
+          "text": "The Corporation completes new connections within 15 working days of a complete application.\n\n3. Free water for low-income households"
+        },
+        {
+          "doc": "2026",
+          "s": 667,
+          "e": 790,
+          "text": "Free water for low-income households\nHouseholds holding a valid below-poverty-line (BPL) card receive a lifeline allowance."
+        },
+        {
+          "doc": "2026",
+          "s": 791,
+          "e": 910,
+          "text": "The limit is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal domestic rate."
+        },
+        {
+          "doc": "2026",
+          "s": 911,
+          "e": 1018,
+          "text": "The card must be renewed with the ward office every two years to keep the allowance.\n\n4. Meters and billing"
+        },
+        {
+          "doc": "2026",
+          "s": 997,
+          "e": 1095,
+          "text": "4. Meters and billing\nEvery connection has a meter, which remains the property of the Corporation."
+        },
+        {
+          "doc": "2026",
+          "s": 1096,
+          "e": 1195,
+          "text": "Meters are read every two months, and bills are sent by SMS and post within 10 days of the reading."
+        },
+        {
+          "doc": "2026",
+          "s": 1196,
+          "e": 1337,
+          "text": "If a meter is found faulty, the bill is based on the average of the previous three readings until the meter is replaced.\n\n5. Paying your bill"
+        },
+        {
+          "doc": "2026",
+          "s": 1318,
+          "e": 1445,
+          "text": "5. Paying your bill\nBills must be paid within 21 days of the bill date, online on the NMC citizen portal or at any ward office."
+        },
+        {
+          "doc": "2026",
+          "s": 1446,
+          "e": 1591,
+          "text": "A late fee of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill.\n\n6."
+        },
+        {
+          "doc": "2026",
+          "s": 1589,
+          "e": 1723,
+          "text": "6. Disconnection\nIf a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice."
+        },
+        {
+          "doc": "2026",
+          "s": 1724,
+          "e": 1886,
+          "text": "Supply to hospitals, schools and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead."
+        },
+        {
+          "doc": "2026",
+          "s": 1888,
+          "e": 2019,
+          "text": "7. Reconnection\nA disconnected supply is restored within 2 working days after all arrears are paid. The reconnection fee is ₹1,000."
+        },
+        {
+          "doc": "2026",
+          "s": 1988,
+          "e": 2138,
+          "text": "The reconnection fee is ₹1,000. However, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection.\n\n8. Complaints"
+        },
+        {
+          "doc": "2026",
+          "s": 2125,
+          "e": 2256,
+          "text": "8. Complaints\nComplaints about leaks, low pressure or dirty water can be made on the citizen portal, by phone, or at a ward office."
+        },
+        {
+          "doc": "2026",
+          "s": 2257,
+          "e": 2310,
+          "text": "Leaks on a main road are attended to within 24 hours."
+        },
+        {
+          "doc": "2026",
+          "s": 2311,
+          "e": 2426,
+          "text": "Other complaints are resolved within 5 working days, and the consumer is informed by SMS when the work is complete."
+        },
+        {
+          "doc": "2019",
+          "s": 0,
+          "e": 89,
+          "text": "Kalpanagar Water Supply Rules, 2019 (superseded)\n\n3. Free water for low-income households"
+        },
+        {
+          "doc": "2019",
+          "s": 53,
+          "e": 170,
+          "text": "Free water for low-income households\nHouseholds holding a below-poverty-line (BPL) card receive a lifeline allowance."
+        },
+        {
+          "doc": "2019",
+          "s": 171,
+          "e": 242,
+          "text": "The limit is 15 kilolitres per month, free of charge.\n\n6. Disconnection"
+        },
+        {
+          "doc": "2019",
+          "s": 226,
+          "e": 376,
+          "text": "6. Disconnection\nIf a bill remains unpaid for 60 days, the Corporation may disconnect the supply after giving 7 days' written notice.\n\n7. Reconnection"
+        },
+        {
+          "doc": "2019",
+          "s": 361,
+          "e": 505,
+          "text": "7. Reconnection\nA disconnected supply is restored within 5 working days after all arrears are paid. The reconnection fee is ₹750.\n\n8. Complaints"
+        },
+        {
+          "doc": "2019",
+          "s": 492,
+          "e": 613,
+          "text": "8. Complaints\nLeaks on a main road are attended to within 48 hours. Other complaints are resolved within 10 working days."
+        }
+      ],
+      "results": [
+        {
+          "top": [
+            { "i": 17, "score": 0.892 },
+            { "i": 1, "score": 0.846 },
+            { "i": 7, "score": 0.842 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "Senior citizens do not have to pay the reconnection fee if they clear their arrears within 30 days of disconnection.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 22, "score": 0.868 },
+            { "i": 6, "score": 0.865 },
+            { "i": 7, "score": 0.861 }
+          ],
+          "top1": false,
+          "top3": false,
+          "old1": true,
+          "split": true,
+          "answer": "BPL households receive a lifeline allowance of 20 kilolitres of free water per month.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 7, "score": 0.866 },
+            { "i": 15, "score": 0.858 },
+            { "i": 23, "score": 0.845 }
+          ],
+          "top1": false,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "No, the supply to a hospital cannot be cut for unpaid bills according to passage [2].",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 26, "score": 0.875 },
+            { "i": 19, "score": 0.854 },
+            { "i": 18, "score": 0.808 }
+          ],
+          "top1": false,
+          "top3": true,
+          "old1": true,
+          "split": false,
+          "answer": "A leak on a main road is repaired within 24 hours.",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "sentence-medium-0",
+      "method": "sentence",
+      "size": "medium",
+      "overlap": 0,
+      "chunks": [
+        {
+          "doc": "2026",
+          "s": 0,
+          "e": 295,
+          "text": "Kalpanagar Water Supply Rules, 2026\n\n1. Scope\nThese rules apply to every piped water connection supplied by the Kalpanagar Municipal Corporation. They replace the Water Supply Rules of 2019. Words such as 'consumer' mean the person in whose name the connection is registered.\n\n2. New connections"
+        },
+        {
+          "doc": "2026",
+          "s": 296,
+          "e": 666,
+          "text": "A new domestic connection is granted to the owner of a property, or to a tenant with the owner's written consent. The application must include the latest property tax receipt and an identity proof. The connection fee is ₹500, and a refundable deposit of ₹3,000 is collected. The Corporation completes new connections within 15 working days of a complete application.\n\n3."
+        },
+        {
+          "doc": "2026",
+          "s": 667,
+          "e": 1018,
+          "text": "Free water for low-income households\nHouseholds holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal domestic rate. The card must be renewed with the ward office every two years to keep the allowance.\n\n4. Meters and billing"
+        },
+        {
+          "doc": "2026",
+          "s": 1019,
+          "e": 1337,
+          "text": "Every connection has a meter, which remains the property of the Corporation. Meters are read every two months, and bills are sent by SMS and post within 10 days of the reading. If a meter is found faulty, the bill is based on the average of the previous three readings until the meter is replaced.\n\n5. Paying your bill"
+        },
+        {
+          "doc": "2026",
+          "s": 1338,
+          "e": 1723,
+          "text": "Bills must be paid within 21 days of the bill date, online on the NMC citizen portal or at any ward office. A late fee of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill.\n\n6. Disconnection\nIf a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice."
+        },
+        {
+          "doc": "2026",
+          "s": 1724,
+          "e": 2123,
+          "text": "Supply to hospitals, schools and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead.\n\n7. Reconnection\nA disconnected supply is restored within 2 working days after all arrears are paid. The reconnection fee is ₹1,000. However, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection."
+        },
+        {
+          "doc": "2026",
+          "s": 2125,
+          "e": 2426,
+          "text": "8. Complaints\nComplaints about leaks, low pressure or dirty water can be made on the citizen portal, by phone, or at a ward office. Leaks on a main road are attended to within 24 hours. Other complaints are resolved within 5 working days, and the consumer is informed by SMS when the work is complete."
+        },
+        {
+          "doc": "2019",
+          "s": 0,
+          "e": 376,
+          "text": "Kalpanagar Water Supply Rules, 2019 (superseded)\n\n3. Free water for low-income households\nHouseholds holding a below-poverty-line (BPL) card receive a lifeline allowance. The limit is 15 kilolitres per month, free of charge.\n\n6. Disconnection\nIf a bill remains unpaid for 60 days, the Corporation may disconnect the supply after giving 7 days' written notice.\n\n7. Reconnection"
+        },
+        {
+          "doc": "2019",
+          "s": 377,
+          "e": 613,
+          "text": "A disconnected supply is restored within 5 working days after all arrears are paid. The reconnection fee is ₹750.\n\n8. Complaints\nLeaks on a main road are attended to within 48 hours. Other complaints are resolved within 10 working days."
+        }
+      ],
+      "results": [
+        {
+          "top": [
+            { "i": 5, "score": 0.861 },
+            { "i": 2, "score": 0.832 },
+            { "i": 7, "score": 0.83 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "No, the reconnection fee is waived for senior citizens who clear their arrears within 30 days of disconnection.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 2, "score": 0.882 },
+            { "i": 7, "score": 0.875 },
+            { "i": 0, "score": 0.793 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "BPL households receive a lifeline allowance of 15 kilolitres per month, free of charge.",
+          "ok": false
+        },
+        {
+          "top": [
+            { "i": 7, "score": 0.851 },
+            { "i": 2, "score": 0.846 },
+            { "i": 5, "score": 0.845 }
+          ],
+          "top1": false,
+          "top3": true,
+          "old1": true,
+          "split": false,
+          "answer": "No, the supply to a hospital cannot be cut for unpaid bills; arrears are recovered through the courts instead.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 6, "score": 0.868 },
+            { "i": 8, "score": 0.84 },
+            { "i": 3, "score": 0.805 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "Leaks on a main road are attended to within 24 hours.",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "sentence-medium-25",
+      "method": "sentence",
+      "size": "medium",
+      "overlap": 25,
+      "chunks": [
+        {
+          "doc": "2026",
+          "s": 0,
+          "e": 295,
+          "text": "Kalpanagar Water Supply Rules, 2026\n\n1. Scope\nThese rules apply to every piped water connection supplied by the Kalpanagar Municipal Corporation. They replace the Water Supply Rules of 2019. Words such as 'consumer' mean the person in whose name the connection is registered.\n\n2. New connections"
+        },
+        {
+          "doc": "2026",
+          "s": 277,
+          "e": 666,
+          "text": "2. New connections\nA new domestic connection is granted to the owner of a property, or to a tenant with the owner's written consent. The application must include the latest property tax receipt and an identity proof. The connection fee is ₹500, and a refundable deposit of ₹3,000 is collected. The Corporation completes new connections within 15 working days of a complete application.\n\n3."
+        },
+        {
+          "doc": "2026",
+          "s": 571,
+          "e": 910,
+          "text": "The Corporation completes new connections within 15 working days of a complete application.\n\n3. Free water for low-income households\nHouseholds holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal domestic rate."
+        },
+        {
+          "doc": "2026",
+          "s": 845,
+          "e": 1195,
+          "text": "Water used above the limit is billed at the normal domestic rate. The card must be renewed with the ward office every two years to keep the allowance.\n\n4. Meters and billing\nEvery connection has a meter, which remains the property of the Corporation. Meters are read every two months, and bills are sent by SMS and post within 10 days of the reading."
+        },
+        {
+          "doc": "2026",
+          "s": 1096,
+          "e": 1445,
+          "text": "Meters are read every two months, and bills are sent by SMS and post within 10 days of the reading. If a meter is found faulty, the bill is based on the average of the previous three readings until the meter is replaced.\n\n5. Paying your bill\nBills must be paid within 21 days of the bill date, online on the NMC citizen portal or at any ward office."
+        },
+        {
+          "doc": "2026",
+          "s": 1446,
+          "e": 1723,
+          "text": "A late fee of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill.\n\n6. Disconnection\nIf a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice."
+        },
+        {
+          "doc": "2026",
+          "s": 1724,
+          "e": 2123,
+          "text": "Supply to hospitals, schools and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead.\n\n7. Reconnection\nA disconnected supply is restored within 2 working days after all arrears are paid. The reconnection fee is ₹1,000. However, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection."
+        },
+        {
+          "doc": "2026",
+          "s": 2125,
+          "e": 2426,
+          "text": "8. Complaints\nComplaints about leaks, low pressure or dirty water can be made on the citizen portal, by phone, or at a ward office. Leaks on a main road are attended to within 24 hours. Other complaints are resolved within 5 working days, and the consumer is informed by SMS when the work is complete."
+        },
+        {
+          "doc": "2019",
+          "s": 0,
+          "e": 376,
+          "text": "Kalpanagar Water Supply Rules, 2019 (superseded)\n\n3. Free water for low-income households\nHouseholds holding a below-poverty-line (BPL) card receive a lifeline allowance. The limit is 15 kilolitres per month, free of charge.\n\n6. Disconnection\nIf a bill remains unpaid for 60 days, the Corporation may disconnect the supply after giving 7 days' written notice.\n\n7. Reconnection"
+        },
+        {
+          "doc": "2019",
+          "s": 361,
+          "e": 613,
+          "text": "7. Reconnection\nA disconnected supply is restored within 5 working days after all arrears are paid. The reconnection fee is ₹750.\n\n8. Complaints\nLeaks on a main road are attended to within 48 hours. Other complaints are resolved within 10 working days."
+        }
+      ],
+      "results": [
+        {
+          "top": [
+            { "i": 6, "score": 0.861 },
+            { "i": 8, "score": 0.83 },
+            { "i": 3, "score": 0.824 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "No, the reconnection fee is waived for senior citizens who clear their arrears within 30 days of disconnection.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 2, "score": 0.88 },
+            { "i": 8, "score": 0.875 },
+            { "i": 3, "score": 0.796 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "BPL households receive a lifeline allowance of 15 kilolitres per month, free of charge.",
+          "ok": false
+        },
+        {
+          "top": [
+            { "i": 8, "score": 0.851 },
+            { "i": 6, "score": 0.845 },
+            { "i": 2, "score": 0.842 }
+          ],
+          "top1": false,
+          "top3": true,
+          "old1": true,
+          "split": false,
+          "answer": "No, the supply to a hospital cannot be cut for unpaid bills according to the Kalpanagar Water Supply Rules, 2019 (superseded). Arrears are recovered through the courts instead.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 7, "score": 0.868 },
+            { "i": 9, "score": 0.835 },
+            { "i": 4, "score": 0.818 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "Leaks on a main road are attended to within 24 hours.",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "sentence-large-0",
+      "method": "sentence",
+      "size": "large",
+      "overlap": 0,
+      "chunks": [
+        {
+          "doc": "2026",
+          "s": 0,
+          "e": 844,
+          "text": "Kalpanagar Water Supply Rules, 2026\n\n1. Scope\nThese rules apply to every piped water connection supplied by the Kalpanagar Municipal Corporation. They replace the Water Supply Rules of 2019. Words such as 'consumer' mean the person in whose name the connection is registered.\n\n2. New connections\nA new domestic connection is granted to the owner of a property, or to a tenant with the owner's written consent. The application must include the latest property tax receipt and an identity proof. The connection fee is ₹500, and a refundable deposit of ₹3,000 is collected. The Corporation completes new connections within 15 working days of a complete application.\n\n3. Free water for low-income households\nHouseholds holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge."
+        },
+        {
+          "doc": "2026",
+          "s": 845,
+          "e": 1723,
+          "text": "Water used above the limit is billed at the normal domestic rate. The card must be renewed with the ward office every two years to keep the allowance.\n\n4. Meters and billing\nEvery connection has a meter, which remains the property of the Corporation. Meters are read every two months, and bills are sent by SMS and post within 10 days of the reading. If a meter is found faulty, the bill is based on the average of the previous three readings until the meter is replaced.\n\n5. Paying your bill\nBills must be paid within 21 days of the bill date, online on the NMC citizen portal or at any ward office. A late fee of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill.\n\n6. Disconnection\nIf a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice."
+        },
+        {
+          "doc": "2026",
+          "s": 1724,
+          "e": 2426,
+          "text": "Supply to hospitals, schools and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead.\n\n7. Reconnection\nA disconnected supply is restored within 2 working days after all arrears are paid. The reconnection fee is ₹1,000. However, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection.\n\n8. Complaints\nComplaints about leaks, low pressure or dirty water can be made on the citizen portal, by phone, or at a ward office. Leaks on a main road are attended to within 24 hours. Other complaints are resolved within 5 working days, and the consumer is informed by SMS when the work is complete."
+        },
+        {
+          "doc": "2019",
+          "s": 0,
+          "e": 613,
+          "text": "Kalpanagar Water Supply Rules, 2019 (superseded)\n\n3. Free water for low-income households\nHouseholds holding a below-poverty-line (BPL) card receive a lifeline allowance. The limit is 15 kilolitres per month, free of charge.\n\n6. Disconnection\nIf a bill remains unpaid for 60 days, the Corporation may disconnect the supply after giving 7 days' written notice.\n\n7. Reconnection\nA disconnected supply is restored within 5 working days after all arrears are paid. The reconnection fee is ₹750.\n\n8. Complaints\nLeaks on a main road are attended to within 48 hours. Other complaints are resolved within 10 working days."
+        }
+      ],
+      "results": [
+        {
+          "top": [
+            { "i": 2, "score": 0.862 },
+            { "i": 3, "score": 0.835 },
+            { "i": 0, "score": 0.833 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "No, the reconnection fee for senior citizens is waived if they clear their arrears within 30 days of disconnection.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 3, "score": 0.863 },
+            { "i": 0, "score": 0.848 },
+            { "i": 1, "score": 0.795 }
+          ],
+          "top1": false,
+          "top3": true,
+          "old1": true,
+          "split": false,
+          "answer": "BPL households receive a lifeline allowance of 20 kilolitres per month, free of charge.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 2, "score": 0.846 },
+            { "i": 1, "score": 0.842 },
+            { "i": 3, "score": 0.841 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "No, the supply to a hospital cannot be cut for unpaid bills; arrears are recovered through the courts instead.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 2, "score": 0.828 },
+            { "i": 1, "score": 0.817 },
+            { "i": 3, "score": 0.81 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "Leaks on a main road are attended to within 24 hours.",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "sentence-large-25",
+      "method": "sentence",
+      "size": "large",
+      "overlap": 25,
+      "chunks": [
+        {
+          "doc": "2026",
+          "s": 0,
+          "e": 844,
+          "text": "Kalpanagar Water Supply Rules, 2026\n\n1. Scope\nThese rules apply to every piped water connection supplied by the Kalpanagar Municipal Corporation. They replace the Water Supply Rules of 2019. Words such as 'consumer' mean the person in whose name the connection is registered.\n\n2. New connections\nA new domestic connection is granted to the owner of a property, or to a tenant with the owner's written consent. The application must include the latest property tax receipt and an identity proof. The connection fee is ₹500, and a refundable deposit of ₹3,000 is collected. The Corporation completes new connections within 15 working days of a complete application.\n\n3. Free water for low-income households\nHouseholds holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge."
+        },
+        {
+          "doc": "2026",
+          "s": 664,
+          "e": 1518,
+          "text": "3. Free water for low-income households\nHouseholds holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal domestic rate. The card must be renewed with the ward office every two years to keep the allowance.\n\n4. Meters and billing\nEvery connection has a meter, which remains the property of the Corporation. Meters are read every two months, and bills are sent by SMS and post within 10 days of the reading. If a meter is found faulty, the bill is based on the average of the previous three readings until the meter is replaced.\n\n5. Paying your bill\nBills must be paid within 21 days of the bill date, online on the NMC citizen portal or at any ward office. A late fee of 2% of the unpaid amount is added for every month of delay."
+        },
+        {
+          "doc": "2026",
+          "s": 1318,
+          "e": 2138,
+          "text": "5. Paying your bill\nBills must be paid within 21 days of the bill date, online on the NMC citizen portal or at any ward office. A late fee of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill.\n\n6. Disconnection\nIf a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice. Supply to hospitals, schools and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead.\n\n7. Reconnection\nA disconnected supply is restored within 2 working days after all arrears are paid. The reconnection fee is ₹1,000. However, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection.\n\n8. Complaints"
+        },
+        {
+          "doc": "2026",
+          "s": 1988,
+          "e": 2426,
+          "text": "The reconnection fee is ₹1,000. However, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection.\n\n8. Complaints\nComplaints about leaks, low pressure or dirty water can be made on the citizen portal, by phone, or at a ward office. Leaks on a main road are attended to within 24 hours. Other complaints are resolved within 5 working days, and the consumer is informed by SMS when the work is complete."
+        },
+        {
+          "doc": "2019",
+          "s": 0,
+          "e": 613,
+          "text": "Kalpanagar Water Supply Rules, 2019 (superseded)\n\n3. Free water for low-income households\nHouseholds holding a below-poverty-line (BPL) card receive a lifeline allowance. The limit is 15 kilolitres per month, free of charge.\n\n6. Disconnection\nIf a bill remains unpaid for 60 days, the Corporation may disconnect the supply after giving 7 days' written notice.\n\n7. Reconnection\nA disconnected supply is restored within 5 working days after all arrears are paid. The reconnection fee is ₹750.\n\n8. Complaints\nLeaks on a main road are attended to within 48 hours. Other complaints are resolved within 10 working days."
+        }
+      ],
+      "results": [
+        {
+          "top": [
+            { "i": 3, "score": 0.877 },
+            { "i": 2, "score": 0.844 },
+            { "i": 4, "score": 0.835 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "No, the reconnection fee is waived for senior citizens who clear their arrears within 30 days of disconnection.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 4, "score": 0.863 },
+            { "i": 1, "score": 0.854 },
+            { "i": 0, "score": 0.848 }
+          ],
+          "top1": false,
+          "top3": true,
+          "old1": true,
+          "split": false,
+          "answer": "BPL households receive a lifeline allowance of 20 kilolitres per month for free.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 2, "score": 0.852 },
+            { "i": 4, "score": 0.841 },
+            { "i": 1, "score": 0.839 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "No, the supply to a hospital cannot be cut for unpaid bills. Supply to hospitals, schools, and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 3, "score": 0.847 },
+            { "i": 4, "score": 0.81 },
+            { "i": 2, "score": 0.802 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "Leaks on a main road are attended to within 24 hours.",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "heading",
+      "method": "heading",
+      "size": null,
+      "overlap": 0,
+      "chunks": [
+        {
+          "doc": "2026",
+          "s": 37,
+          "e": 275,
+          "text": "Kalpanagar Water Supply Rules, 2026 › 1. Scope\nThese rules apply to every piped water connection supplied by the Kalpanagar Municipal Corporation. They replace the Water Supply Rules of 2019. Words such as 'consumer' mean the person in whose name the connection is registered."
+        },
+        {
+          "doc": "2026",
+          "s": 277,
+          "e": 662,
+          "text": "Kalpanagar Water Supply Rules, 2026 › 2. New connections\nA new domestic connection is granted to the owner of a property, or to a tenant with the owner's written consent. The application must include the latest property tax receipt and an identity proof. The connection fee is ₹500, and a refundable deposit of ₹3,000 is collected. The Corporation completes new connections within 15 working days of a complete application."
+        },
+        {
+          "doc": "2026",
+          "s": 664,
+          "e": 995,
+          "text": "Kalpanagar Water Supply Rules, 2026 › 3. Free water for low-income households\nHouseholds holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal domestic rate. The card must be renewed with the ward office every two years to keep the allowance."
+        },
+        {
+          "doc": "2026",
+          "s": 997,
+          "e": 1316,
+          "text": "Kalpanagar Water Supply Rules, 2026 › 4. Meters and billing\nEvery connection has a meter, which remains the property of the Corporation. Meters are read every two months, and bills are sent by SMS and post within 10 days of the reading. If a meter is found faulty, the bill is based on the average of the previous three readings until the meter is replaced."
+        },
+        {
+          "doc": "2026",
+          "s": 1318,
+          "e": 1587,
+          "text": "Kalpanagar Water Supply Rules, 2026 › 5. Paying your bill\nBills must be paid within 21 days of the bill date, online on the NMC citizen portal or at any ward office. A late fee of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill."
+        },
+        {
+          "doc": "2026",
+          "s": 1589,
+          "e": 1886,
+          "text": "Kalpanagar Water Supply Rules, 2026 › 6. Disconnection\nIf a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice. Supply to hospitals, schools and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead."
+        },
+        {
+          "doc": "2026",
+          "s": 1888,
+          "e": 2123,
+          "text": "Kalpanagar Water Supply Rules, 2026 › 7. Reconnection\nA disconnected supply is restored within 2 working days after all arrears are paid. The reconnection fee is ₹1,000. However, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection."
+        },
+        {
+          "doc": "2026",
+          "s": 2125,
+          "e": 2426,
+          "text": "Kalpanagar Water Supply Rules, 2026 › 8. Complaints\nComplaints about leaks, low pressure or dirty water can be made on the citizen portal, by phone, or at a ward office. Leaks on a main road are attended to within 24 hours. Other complaints are resolved within 5 working days, and the consumer is informed by SMS when the work is complete."
+        },
+        {
+          "doc": "2019",
+          "s": 50,
+          "e": 224,
+          "text": "Kalpanagar Water Supply Rules, 2019 (superseded) › 3. Free water for low-income households\nHouseholds holding a below-poverty-line (BPL) card receive a lifeline allowance. The limit is 15 kilolitres per month, free of charge."
+        },
+        {
+          "doc": "2019",
+          "s": 226,
+          "e": 359,
+          "text": "Kalpanagar Water Supply Rules, 2019 (superseded) › 6. Disconnection\nIf a bill remains unpaid for 60 days, the Corporation may disconnect the supply after giving 7 days' written notice."
+        },
+        {
+          "doc": "2019",
+          "s": 361,
+          "e": 490,
+          "text": "Kalpanagar Water Supply Rules, 2019 (superseded) › 7. Reconnection\nA disconnected supply is restored within 5 working days after all arrears are paid. The reconnection fee is ₹750."
+        },
+        {
+          "doc": "2019",
+          "s": 492,
+          "e": 613,
+          "text": "Kalpanagar Water Supply Rules, 2019 (superseded) › 8. Complaints\nLeaks on a main road are attended to within 48 hours. Other complaints are resolved within 10 working days."
+        }
+      ],
+      "results": [
+        {
+          "top": [
+            { "i": 6, "score": 0.886 },
+            { "i": 10, "score": 0.858 },
+            { "i": 1, "score": 0.84 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "No, the reconnection fee is waived for senior citizens who clear their arrears within 30 days of disconnection.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 2, "score": 0.89 },
+            { "i": 8, "score": 0.888 },
+            { "i": 7, "score": 0.79 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "BPL households receive 20 kilolitres of free water per month under the current Kalpanagar Water Supply Rules, 2026.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 5, "score": 0.872 },
+            { "i": 9, "score": 0.853 },
+            { "i": 4, "score": 0.852 }
+          ],
+          "top1": true,
+          "top3": true,
+          "old1": false,
+          "split": false,
+          "answer": "No, the supply to a hospital cannot be cut for unpaid bills according to the Kalpanagar Water Supply Rules, 2026.",
+          "ok": true
+        },
+        {
+          "top": [
+            { "i": 11, "score": 0.873 },
+            { "i": 7, "score": 0.86 },
+            { "i": 4, "score": 0.819 }
+          ],
+          "top1": false,
+          "top3": true,
+          "old1": true,
+          "split": false,
+          "answer": "Under the current Kalpanagar Water Supply Rules, 2026, a leak on a main road is attended to within 24 hours.",
+          "ok": true
+        }
+      ]
+    }
+  ]
+}
