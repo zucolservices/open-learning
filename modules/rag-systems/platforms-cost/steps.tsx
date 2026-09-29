@@ -468,8 +468,8 @@ export function LongContext() {
       </p>
       <p>
         A middle way from a 2024 study: try RAG first, and fall back to the full document only when
-        the model says the passages aren&apos;t enough. It kept most of the quality at 39–65% of the
-        cost.
+        the model says the passages aren&apos;t enough. It kept most of the quality while cutting
+        cost by 39–65%.
       </p>
     </StepLayout>
   );
