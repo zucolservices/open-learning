@@ -6,6 +6,8 @@ import { NextTokenScene } from "@/components/home/next-token-scene";
 import { TemperatureTaste } from "@/components/home/temperature-taste";
 import { ScrumScene } from "@/components/home/scrum-scene";
 import { CadenceTaste } from "@/components/home/cadence-taste";
+import { RagScene } from "@/components/home/rag-scene";
+import { RagTaste } from "@/components/home/rag-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -46,5 +48,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: CadenceTaste,
     tasteCaption:
       "A taste of module 1: how often users see a working version decides when the surprises show up.",
+  },
+  "rag-systems": {
+    Scene: RagScene,
+    sceneCaption:
+      "What RAG does: place the question among the documents by meaning, fetch the nearest passages, answer from them. A real embedding map and real answers from a small open model.",
+    Taste: RagTaste,
+    tasteCaption:
+      "A taste of module 2: the same small model answering from memory, then with the corporation's documents.",
   },
 };
