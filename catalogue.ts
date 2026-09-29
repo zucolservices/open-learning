@@ -3327,8 +3327,9 @@ const ragSystems: Track = {
             "Cost: embedding, storage, queries and generation",
             "Long context and prompt caching vs RAG",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
+          terms: ["vector-database", "context-window", "prompt-caching", "data-residency"],
           prerequisites: ["vector-indexes", "prompt-assembly"],
           plain:
             "You can run RAG on a database you already have, a dedicated vector database, or a fully managed cloud service. Each trades control for convenience, and sometimes a long context window makes retrieval unnecessary.",

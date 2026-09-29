@@ -398,4 +398,10 @@ export const ragSystems = {
       "Instructions hidden in content the system retrieves (a document, email or web page) rather than typed by the user. The model may follow them. No prompt-based defence is reliable, so limit what a fooled model can do.",
     module: "rag-security",
   },
+  "vector-database": {
+    term: "Vector database",
+    definition:
+      "A database built to store embeddings and find the nearest ones quickly, usually with filters and keyword search alongside. Many ordinary databases (PostgreSQL with pgvector, OpenSearch) can do the same job.",
+    module: "platforms-cost",
+  },
 } satisfies Record<string, GlossaryEntry>;
