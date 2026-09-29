@@ -218,4 +218,22 @@ export const ragSystems = {
       "A model (such as SPLADE, or bge-m3's sparse mode) that turns text into keyword-style weights, including related words that don't appear in it, so it can be searched like an inverted index.",
     module: "hybrid-search",
   },
+  reranker: {
+    term: "Reranker",
+    definition:
+      "A second, more careful model that re-scores a shortlist of retrieved passages against the question, then reorders them. Usually a cross-encoder; sometimes an LLM.",
+    module: "reranking",
+  },
+  "cross-encoder": {
+    term: "Cross-encoder",
+    definition:
+      "A model that reads the question and a passage together and outputs one relevance score. More accurate than comparing separate embeddings (a bi-encoder), but it must run once per pair, so it's used only on a shortlist.",
+    module: "reranking",
+  },
+  "relevance-threshold": {
+    term: "Relevance threshold",
+    definition:
+      "A cut-off on reranker scores below which passages are dropped before the model sees them. Must be chosen per model by testing on labelled questions.",
+    module: "reranking",
+  },
 } satisfies Record<string, GlossaryEntry>;

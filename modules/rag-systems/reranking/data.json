@@ -1,0 +1,314 @@
+[
+  {
+    "q": "Do senior citizens have to pay to get their water reconnected?",
+    "gold": ["rules-7"],
+    "first": [
+      { "id": "rules-7", "s": 0.884 },
+      { "id": "rules-2", "s": 0.842 },
+      { "id": "rules-5", "s": 0.84 },
+      { "id": "water-2", "s": 0.836 },
+      { "id": "rules-3", "s": 0.834 },
+      { "id": "rules-6", "s": 0.832 },
+      { "id": "water-1", "s": 0.832 },
+      { "id": "form-W-12", "s": 0.827 },
+      { "id": "waste-2", "s": 0.826 },
+      { "id": "rules-8", "s": 0.823 }
+    ],
+    "minilm": [
+      { "id": "rules-7", "p": 0.999 },
+      { "id": "form-W-12", "p": 0.009 },
+      { "id": "rules-5", "p": 0.006 },
+      { "id": "rules-6", "p": 0.004 },
+      { "id": "water-2", "p": 0.003 },
+      { "id": "rules-2", "p": 0 },
+      { "id": "rules-3", "p": 0 },
+      { "id": "water-1", "p": 0 },
+      { "id": "waste-2", "p": 0 },
+      { "id": "rules-8", "p": 0 }
+    ],
+    "bgem3": [
+      { "id": "rules-7", "p": 0.955 },
+      { "id": "water-2", "p": 0.029 },
+      { "id": "form-W-12", "p": 0.013 },
+      { "id": "rules-2", "p": 0.005 },
+      { "id": "water-1", "p": 0.004 },
+      { "id": "rules-5", "p": 0.001 },
+      { "id": "rules-3", "p": 0.001 },
+      { "id": "rules-6", "p": 0.001 },
+      { "id": "waste-2", "p": 0 },
+      { "id": "rules-8", "p": 0 }
+    ],
+    "llm": [
+      { "id": "rules-7", "p": 0.644 },
+      { "id": "form-W-12", "p": 0.074 },
+      { "id": "rules-6", "p": 0.021 },
+      { "id": "water-2", "p": 0.013 },
+      { "id": "rules-2", "p": 0.012 },
+      { "id": "rules-3", "p": 0.007 },
+      { "id": "rules-5", "p": 0.003 },
+      { "id": "water-1", "p": 0.003 },
+      { "id": "rules-8", "p": 0.001 },
+      { "id": "waste-2", "p": 0 }
+    ]
+  },
+  {
+    "q": "How long does the NMC take to fix a leaking pipe on a main road?",
+    "gold": ["rules-8"],
+    "first": [
+      { "id": "grievance-2", "s": 0.857 },
+      { "id": "water-3", "s": 0.852 },
+      { "id": "rules-8", "s": 0.843 },
+      { "id": "circ-22-2026", "s": 0.832 },
+      { "id": "rules-5", "s": 0.829 },
+      { "id": "grievance-1", "s": 0.828 },
+      { "id": "birth-death-2", "s": 0.811 },
+      { "id": "form-W-17", "s": 0.808 },
+      { "id": "rules-7", "s": 0.803 },
+      { "id": "trade-2", "s": 0.801 }
+    ],
+    "minilm": [
+      { "id": "rules-8", "p": 0.966 },
+      { "id": "grievance-2", "p": 0.797 },
+      { "id": "water-3", "p": 0.777 },
+      { "id": "form-W-17", "p": 0.022 },
+      { "id": "rules-5", "p": 0.017 },
+      { "id": "birth-death-2", "p": 0.005 },
+      { "id": "grievance-1", "p": 0.003 },
+      { "id": "circ-22-2026", "p": 0.001 },
+      { "id": "rules-7", "p": 0 },
+      { "id": "trade-2", "p": 0 }
+    ],
+    "bgem3": [
+      { "id": "water-3", "p": 0.513 },
+      { "id": "rules-8", "p": 0.471 },
+      { "id": "grievance-2", "p": 0.343 },
+      { "id": "rules-5", "p": 0.013 },
+      { "id": "birth-death-2", "p": 0.006 },
+      { "id": "form-W-17", "p": 0.002 },
+      { "id": "grievance-1", "p": 0.001 },
+      { "id": "circ-22-2026", "p": 0 },
+      { "id": "rules-7", "p": 0 },
+      { "id": "trade-2", "p": 0 }
+    ],
+    "llm": [
+      { "id": "rules-8", "p": 0.593 },
+      { "id": "water-3", "p": 0.002 },
+      { "id": "grievance-2", "p": 0.001 },
+      { "id": "circ-22-2026", "p": 0 },
+      { "id": "rules-5", "p": 0 },
+      { "id": "grievance-1", "p": 0 },
+      { "id": "birth-death-2", "p": 0 },
+      { "id": "form-W-17", "p": 0 },
+      { "id": "rules-7", "p": 0 },
+      { "id": "trade-2", "p": 0 }
+    ]
+  },
+  {
+    "q": "Will my water be cut if I don't pay for three months?",
+    "gold": ["rules-6"],
+    "first": [
+      { "id": "rules-5", "s": 0.868 },
+      { "id": "rules-6", "s": 0.86 },
+      { "id": "rules-7", "s": 0.855 },
+      { "id": "rules-4", "s": 0.85 },
+      { "id": "rules-3", "s": 0.85 },
+      { "id": "rules-8", "s": 0.847 },
+      { "id": "rules-2", "s": 0.835 },
+      { "id": "property-tax-2", "s": 0.833 },
+      { "id": "form-W-12", "s": 0.829 },
+      { "id": "waste-2", "s": 0.827 }
+    ],
+    "minilm": [
+      { "id": "rules-6", "p": 0.007 },
+      { "id": "rules-3", "p": 0.004 },
+      { "id": "rules-5", "p": 0.003 },
+      { "id": "rules-4", "p": 0.002 },
+      { "id": "rules-7", "p": 0.001 },
+      { "id": "rules-8", "p": 0 },
+      { "id": "rules-2", "p": 0 },
+      { "id": "property-tax-2", "p": 0 },
+      { "id": "form-W-12", "p": 0 },
+      { "id": "waste-2", "p": 0 }
+    ],
+    "bgem3": [
+      { "id": "rules-6", "p": 0.151 },
+      { "id": "rules-5", "p": 0.016 },
+      { "id": "rules-7", "p": 0.005 },
+      { "id": "rules-4", "p": 0.002 },
+      { "id": "form-W-12", "p": 0.002 },
+      { "id": "rules-3", "p": 0.001 },
+      { "id": "rules-8", "p": 0 },
+      { "id": "rules-2", "p": 0 },
+      { "id": "property-tax-2", "p": 0 },
+      { "id": "waste-2", "p": 0 }
+    ],
+    "llm": [
+      { "id": "rules-6", "p": 0.275 },
+      { "id": "rules-5", "p": 0.107 },
+      { "id": "rules-7", "p": 0.107 },
+      { "id": "rules-4", "p": 0.041 },
+      { "id": "property-tax-2", "p": 0.031 },
+      { "id": "rules-3", "p": 0.026 },
+      { "id": "form-W-12", "p": 0.009 },
+      { "id": "rules-2", "p": 0.007 },
+      { "id": "rules-8", "p": 0.002 },
+      { "id": "waste-2", "p": 0 }
+    ]
+  },
+  {
+    "q": "How often are water meters read?",
+    "gold": ["rules-4"],
+    "first": [
+      { "id": "rules-4", "s": 0.874 },
+      { "id": "form-W-17", "s": 0.82 },
+      { "id": "rules-8", "s": 0.809 },
+      { "id": "rules-3", "s": 0.804 },
+      { "id": "water-2", "s": 0.793 },
+      { "id": "rules-5", "s": 0.791 },
+      { "id": "rules-1", "s": 0.79 },
+      { "id": "waste-1", "s": 0.787 },
+      { "id": "waste-2", "s": 0.787 },
+      { "id": "rules-6", "s": 0.786 }
+    ],
+    "minilm": [
+      { "id": "rules-4", "p": 0.999 },
+      { "id": "form-W-17", "p": 0.008 },
+      { "id": "rules-8", "p": 0.002 },
+      { "id": "water-2", "p": 0.001 },
+      { "id": "rules-3", "p": 0 },
+      { "id": "rules-5", "p": 0 },
+      { "id": "rules-1", "p": 0 },
+      { "id": "waste-1", "p": 0 },
+      { "id": "waste-2", "p": 0 },
+      { "id": "rules-6", "p": 0 }
+    ],
+    "bgem3": [
+      { "id": "rules-4", "p": 0.925 },
+      { "id": "form-W-17", "p": 0.002 },
+      { "id": "rules-3", "p": 0.002 },
+      { "id": "rules-8", "p": 0.001 },
+      { "id": "rules-5", "p": 0.001 },
+      { "id": "rules-6", "p": 0.001 },
+      { "id": "water-2", "p": 0 },
+      { "id": "rules-1", "p": 0 },
+      { "id": "waste-1", "p": 0 },
+      { "id": "waste-2", "p": 0 }
+    ],
+    "llm": [
+      { "id": "rules-4", "p": 0.835 },
+      { "id": "water-2", "p": 0.007 },
+      { "id": "rules-8", "p": 0.002 },
+      { "id": "rules-3", "p": 0.002 },
+      { "id": "rules-6", "p": 0.002 },
+      { "id": "form-W-17", "p": 0.001 },
+      { "id": "rules-5", "p": 0.001 },
+      { "id": "rules-1", "p": 0.001 },
+      { "id": "waste-1", "p": 0.001 },
+      { "id": "waste-2", "p": 0 }
+    ]
+  },
+  {
+    "q": "Can I pay property tax with UPI?",
+    "gold": ["property-tax-3"],
+    "first": [
+      { "id": "property-tax-3", "s": 0.879 },
+      { "id": "property-tax-1", "s": 0.842 },
+      { "id": "property-tax-2", "s": 0.827 },
+      { "id": "rules-2", "s": 0.805 },
+      { "id": "water-1", "s": 0.787 },
+      { "id": "rules-5", "s": 0.787 },
+      { "id": "rules-3", "s": 0.779 },
+      { "id": "circ-22-2026", "s": 0.775 },
+      { "id": "rules-7", "s": 0.77 },
+      { "id": "rules-6", "s": 0.77 }
+    ],
+    "minilm": [
+      { "id": "property-tax-3", "p": 0.999 },
+      { "id": "property-tax-2", "p": 0.009 },
+      { "id": "property-tax-1", "p": 0.004 },
+      { "id": "rules-2", "p": 0 },
+      { "id": "water-1", "p": 0 },
+      { "id": "rules-5", "p": 0 },
+      { "id": "rules-3", "p": 0 },
+      { "id": "circ-22-2026", "p": 0 },
+      { "id": "rules-7", "p": 0 },
+      { "id": "rules-6", "p": 0 }
+    ],
+    "bgem3": [
+      { "id": "property-tax-3", "p": 0.945 },
+      { "id": "property-tax-1", "p": 0.001 },
+      { "id": "property-tax-2", "p": 0.001 },
+      { "id": "rules-2", "p": 0 },
+      { "id": "water-1", "p": 0 },
+      { "id": "rules-5", "p": 0 },
+      { "id": "rules-3", "p": 0 },
+      { "id": "circ-22-2026", "p": 0 },
+      { "id": "rules-7", "p": 0 },
+      { "id": "rules-6", "p": 0 }
+    ],
+    "llm": [
+      { "id": "property-tax-3", "p": 0.93 },
+      { "id": "property-tax-1", "p": 0.008 },
+      { "id": "water-1", "p": 0.007 },
+      { "id": "property-tax-2", "p": 0.003 },
+      { "id": "rules-5", "p": 0.003 },
+      { "id": "rules-2", "p": 0.002 },
+      { "id": "rules-3", "p": 0.002 },
+      { "id": "rules-7", "p": 0.002 },
+      { "id": "circ-22-2026", "p": 0.001 },
+      { "id": "rules-6", "p": 0.001 }
+    ]
+  },
+  {
+    "q": "सूखा कचरा किन दिनों में उठाया जाता है?",
+    "gold": ["waste-1"],
+    "first": [
+      { "id": "waste-1", "s": 0.809 },
+      { "id": "circ-14-2026", "s": 0.77 },
+      { "id": "waste-2", "s": 0.765 },
+      { "id": "circ-22-2026", "s": 0.76 },
+      { "id": "rules-7", "s": 0.76 },
+      { "id": "rules-8", "s": 0.752 },
+      { "id": "circ-09-2025", "s": 0.75 },
+      { "id": "rules-6", "s": 0.749 },
+      { "id": "rules-1", "s": 0.732 },
+      { "id": "waste-3", "s": 0.732 }
+    ],
+    "minilm": [
+      { "id": "waste-1", "p": 0 },
+      { "id": "circ-14-2026", "p": 0 },
+      { "id": "waste-2", "p": 0 },
+      { "id": "circ-22-2026", "p": 0 },
+      { "id": "rules-7", "p": 0 },
+      { "id": "rules-8", "p": 0 },
+      { "id": "circ-09-2025", "p": 0 },
+      { "id": "rules-6", "p": 0 },
+      { "id": "rules-1", "p": 0 },
+      { "id": "waste-3", "p": 0 }
+    ],
+    "bgem3": [
+      { "id": "waste-1", "p": 0.847 },
+      { "id": "circ-09-2025", "p": 0.004 },
+      { "id": "circ-14-2026", "p": 0.001 },
+      { "id": "waste-2", "p": 0 },
+      { "id": "circ-22-2026", "p": 0 },
+      { "id": "rules-7", "p": 0 },
+      { "id": "rules-8", "p": 0 },
+      { "id": "rules-6", "p": 0 },
+      { "id": "rules-1", "p": 0 },
+      { "id": "waste-3", "p": 0 }
+    ],
+    "llm": [
+      { "id": "waste-1", "p": 0.438 },
+      { "id": "rules-6", "p": 0.03 },
+      { "id": "circ-09-2025", "p": 0.012 },
+      { "id": "rules-7", "p": 0.003 },
+      { "id": "circ-14-2026", "p": 0.002 },
+      { "id": "waste-2", "p": 0.002 },
+      { "id": "circ-22-2026", "p": 0.001 },
+      { "id": "rules-8", "p": 0.001 },
+      { "id": "waste-3", "p": 0.001 },
+      { "id": "rules-1", "p": 0 }
+    ]
+  }
+]
