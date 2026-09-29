@@ -378,6 +378,22 @@ export function Cascade() {
         Here, escalating just 30% of messages gives the big model&apos;s 95% accuracy at about a
         third of its average time.
       </p>
+      <div className="border-line bg-surface rounded-xl border px-3 py-2.5 text-sm">
+        <p className="font-semibold">Can you trust “confident”?</p>
+        <p className="text-muted mt-1">
+          A cascade only works if the small model&apos;s confidence means something. A model is{" "}
+          <Term id="calibration">calibrated</Term> when answers given with 90% confidence are right
+          about 90% of the time; many modern networks are overconfident (Guo et al., 2017).
+        </p>
+        <p className="text-muted mt-1">
+          New &ldquo;decision models&rdquo; are built around this idea. TypeSafe&apos;s Jev
+          (announced September 2026, closed and API-only) returns only a choice, a score or a yes/no
+          with probabilities, trained for calibration. TypeSafe notes calibration holds across many
+          predictions, not for any single answer, and one independent test found it still
+          overconfident on some question types. Whatever the model, check its calibration on your
+          own data before trusting a threshold.
+        </p>
+      </div>
     </StepLayout>
   );
 }

@@ -504,4 +504,10 @@ export const llmFoundations = {
       "A field in an LLM API's response saying why generation stopped: the model finished (“stop”, “end_turn”, “STOP”), it hit the output limit (“length”, “max_tokens”, “MAX_TOKENS”), it called a tool, or a safety filter stepped in. Names differ by provider; a hit limit means the answer was cut off.",
     module: "misbehaving-assistant",
   },
+  calibration: {
+    term: "Calibration",
+    definition:
+      "How well a model's confidence matches reality: a calibrated model's 90%-confident answers are right about 90% of the time. Measured over many predictions, for example with expected calibration error (Guo et al., 2017).",
+    module: "small-models",
+  },
 } satisfies Record<string, GlossaryEntry>;
