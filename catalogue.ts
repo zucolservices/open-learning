@@ -3210,15 +3210,16 @@ const ragSystems: Track = {
           minutes: 30,
           signature:
             "Step through an agent answering a multi-part question: it plans, searches, reads, searches again and stops",
-          formats: ["step-through", "checkpoint"],
+          formats: ["step-through", "simulation", "checkpoint"],
           concepts: [
             "Retrieval as a tool call",
             "Iterative search and stopping",
             "Model Context Protocol (MCP) servers",
             "Cost, latency and loops",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
+          terms: ["agentic-rag", "tool-calling", "mcp"],
           prerequisites: ["query-understanding"],
           plain:
             "Instead of searching once, an agent lets the model decide what to search for, read the results, and search again until it has enough. It handles harder questions, at the cost of more time and money.",

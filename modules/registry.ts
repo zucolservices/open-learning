@@ -128,4 +128,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "rag-systems/prompt-assembly": () => import("./rag-systems/prompt-assembly"),
   "rag-systems/tables-sql": () => import("./rag-systems/tables-sql"),
   "rag-systems/graphrag": () => import("./rag-systems/graphrag"),
+  "rag-systems/agentic-rag": () => import("./rag-systems/agentic-rag"),
 };

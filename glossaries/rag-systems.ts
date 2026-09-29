@@ -326,4 +326,10 @@ export const ragSystems = {
       "A cluster of entities more densely connected to each other than to the rest of the graph, found by an algorithm such as Louvain or Leiden. GraphRAG writes a summary report for each.",
     module: "graphrag",
   },
+  "agentic-rag": {
+    term: "Agentic RAG",
+    definition:
+      "RAG where the model decides whether and what to search, reads the results, and searches again until it has enough, using search as a tool in a loop. Handles harder questions at more cost and time, and needs a step budget.",
+    module: "agentic-rag",
+  },
 } satisfies Record<string, GlossaryEntry>;
