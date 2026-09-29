@@ -146,4 +146,28 @@ export const ragSystems = {
       "Very common words such as the, for and to, often dropped before keyword indexing because they say little about which document is relevant.",
     module: "bm25",
   },
+  "dense-retrieval": {
+    term: "Dense retrieval",
+    definition:
+      "Search by meaning: questions and passages are turned into embedding vectors by the same model, and the passages whose vectors are most similar to the question's are returned.",
+    module: "embeddings-retrieval",
+  },
+  mteb: {
+    term: "MTEB",
+    definition:
+      "The Massive Text Embedding Benchmark (2023), and its multilingual successor MMTEB: public leaderboards comparing embedding models on many tasks. Useful for shortlisting, not a substitute for testing on your own data.",
+    module: "embeddings-retrieval",
+  },
+  "romanised-hindi": {
+    term: "Romanised Hindi",
+    definition:
+      "Hindi written in Latin letters (“sukha kachra”), common in chats and search boxes. Many models handle it much worse than Hindi in Devanagari.",
+    module: "embeddings-retrieval",
+  },
+  matryoshka: {
+    term: "Matryoshka embeddings",
+    definition:
+      "Embeddings trained (Kusupati et al., 2022) so that the first part of each vector is useful on its own, like nested dolls: you can cut 3072 numbers down to 256 to save storage, with a modest loss in quality. Only works for models trained this way.",
+    module: "embeddings-retrieval",
+  },
 } satisfies Record<string, GlossaryEntry>;

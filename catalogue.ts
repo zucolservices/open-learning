@@ -2999,11 +2999,12 @@ const ragSystems: Track = {
             "Similarity scores and their limits",
             "Choosing a model: benchmarks, languages, size and cost",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["bm25"],
           plain:
             "An embedding model turns text into a list of numbers so that similar meanings land close together. Searching with embeddings finds passages that mean the same thing even when they share no words.",
+          terms: ["dense-retrieval", "embedding", "cosine-similarity", "mteb", "romanised-hindi"],
         },
         {
           slug: "vector-indexes",
