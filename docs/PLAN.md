@@ -234,6 +234,43 @@ Delivery management area, first track (approved 2026-09-28). 23 modules in 7 cha
 | 22    | Capstone: run a sprint                 | Two weeks on a client project; your calls, the charts respond                       | Simulation, branching |
 | 23    | Capstone: the struggling team          | Diagnose from board, charts and retro notes; fix                                    | Fix the problem       |
 
+## RAG Systems: curriculum
+
+AI & machine learning area, second track (approved 2026-09-29). 23 modules in 7 chapters, about 12 hours. Accent: "lumen" lime (`[data-track="lumen"]`). Glossary: `glossaries/rag-systems.ts`. Builds on LLM Foundations (embeddings, context, hallucinations, prompt injection). Vendor-neutral: open-source vector databases and search engines (pgvector, OpenSearch/Elasticsearch, Qdrant, Weaviate, Milvus, Chroma, LanceDB, Vespa) and the managed services on AWS, Google Cloud and Azure, plus model providers' file-search APIs. Where possible the real thing runs in the browser (live BM25; precomputed real embeddings; a small English and Hindi corpus), loaded only inside the module that needs it. Each module is fact-checked on its own before it is built; vendor product names change often (landscape check: scratchpad `rag/LANDSCAPE.md`).
+
+| #     | Module                               | Centrepiece                                                                          | Key formats               |
+| ----- | ------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------- |
+| **1** | **The big picture**                  |                                                                                      |                           |
+| 1     | Why models need your documents       | Closed-book vs open-book exam; RAG vs fine-tuning vs long context                    | Scroll story              |
+| 2     | A RAG system, end to end             | A tiny working pipeline: parse, chunk, embed, retrieve, answer with citations        | Infographic, step-through |
+| **2** | **Preparing documents**              |                                                                                      |                           |
+| 3     | Parsing real documents               | Scans, tables, columns and Hindi through naive vs layout-aware parsing               | Fix the problem           |
+| 4     | Chunking                             | Size, overlap and splitting rules vs whether the answer is found                     | Simulation                |
+| 5     | Metadata, freshness & deletions      | A revised circular: stale answers until metadata and re-indexing fix them            | Build & connect           |
+| **3** | **From words to meaning**            |                                                                                      |                           |
+| 6     | Keyword search & BM25                | Inverted index and BM25 scoring, live                                                | Simulation                |
+| 7     | Embeddings for retrieval             | English, Hindi and romanised Hindi queries across embedding models                   | Sandbox                   |
+| 8     | Vector indexes                       | Climb an HNSW graph; recall vs latency                                               | 3D model, simulation      |
+| 9     | Hybrid search & fusion               | Keyword + vector merged with reciprocal rank fusion                                  | Simulation                |
+| 10    | Reranking & relevance filtering      | Cross-encoders, LLM rerankers, relevance filters (incl. decision models such as Jev) | Step-through              |
+| **4** | **Better context**                   |                                                                                      |                           |
+| 11    | Understanding the question           | Follow-ups, multi-part questions, rewriting, HyDE                                    | Fix the problem           |
+| 12    | Contextual retrieval & small-to-big  | Context lines on chunks; match small, return big                                     | Simulation                |
+| 13    | Assembling the prompt                | Order, citations, "I don't know", lost in the middle, prompt caching                 | Build & connect           |
+| **5** | **Beyond basic RAG**                 |                                                                                      |                           |
+| 14    | Tables & SQL                         | Route questions to search or SQL                                                     | Branching scenario        |
+| 15    | GraphRAG                             | Entities, communities and whole-collection questions                                 | Step-through              |
+| 16    | Agentic RAG & MCP                    | Plan, search, read, search again, stop                                               | Step-through              |
+| 17    | Multimodal RAG                       | Answers that live in charts and page images                                          | Step-through              |
+| **6** | **Measuring & running it**           |                                                                                      |                           |
+| 18    | Evaluating retrieval                 | A golden set; recall@k, MRR, nDCG for two setups                                     | Simulation                |
+| 19    | Evaluating answers                   | Faithfulness and relevance; human vs LLM judge                                       | Fix the problem           |
+| 20    | Security & access control            | Permissions, injected instructions (simulated), DPDP, OWASP LLM08                    | Fix the problem           |
+| 21    | Platforms, cost & long context       | Open source and managed services on one map; monthly cost                            | Build & connect           |
+| **7** | **Capstones**                        |                                                                                      |                           |
+| 22    | Capstone: a scheme assistant         | Design a bilingual assistant, then evaluate it                                       | Branching, simulation     |
+| 23    | Capstone: the RAG that answers wrong | Trace wrong answers stage by stage and fix them                                      | Fix the problem           |
+
 ## Roadmap
 
 | Step                 | Scope                                                                                   | Status                                                                  |
@@ -245,6 +282,7 @@ Delivery management area, first track (approved 2026-09-28). 23 modules in 7 cha
 | 4b. System Design    | Second track (Architecture), 27 modules                                                 | Live: all 27 modules                                                    |
 | 4c. LLM Foundations  | Third track (AI & machine learning), 26 modules                                         | Live: all 26 modules (2026-09-25)                                       |
 | 4d. Agile & Scrum    | Delivery management, first track, 23 modules                                            | Live: all 23 modules (2026-09-28)                                       |
+| 4e. RAG Systems      | AI & machine learning, second track, 23 modules                                         | In progress: 0 of 23 modules                                            |
 | 5. Team feedback     | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy            | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

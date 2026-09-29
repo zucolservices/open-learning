@@ -9,6 +9,7 @@ import { dataLakehouse } from "./data-lakehouse";
 import { systemDesign } from "./system-design";
 import { llmFoundations } from "./llm-foundations";
 import { agileScrum } from "./agile-scrum";
+import { ragSystems } from "./rag-systems";
 import { shared } from "./shared";
 import type { GlossaryEntry } from "./types";
 
@@ -20,6 +21,7 @@ export const trackGlossaries: Record<string, Record<string, GlossaryEntry>> = {
   "system-design": systemDesign,
   "llm-foundations": llmFoundations,
   "agile-scrum": agileScrum,
+  "rag-systems": ragSystems,
 };
 
 export type TermId =
@@ -27,7 +29,8 @@ export type TermId =
   | keyof typeof dataLakehouse
   | keyof typeof systemDesign
   | keyof typeof llmFoundations
-  | keyof typeof agileScrum;
+  | keyof typeof agileScrum
+  | keyof typeof ragSystems;
 
 export interface ResolvedTerm {
   id: string;

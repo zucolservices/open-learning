@@ -3,6 +3,7 @@ import { A, FileIcon, Slab, type ArtMap } from "./art/kit";
 import { systemDesignArt } from "./art/system-design";
 import { llmFoundationsArt } from "./art/llm-foundations";
 import { agileScrumArt } from "./art/agile-scrum";
+import { ragSystemsArt } from "./art/rag-systems";
 
 /**
  * One small illustration per module (viewBox 160 × 100), drawn with the
@@ -1020,7 +1021,13 @@ const art: ArtMap = {
   "rows-vs-columns": () => art["file-formats"](),
 };
 
-const all: ArtMap = { ...art, ...systemDesignArt, ...llmFoundationsArt, ...agileScrumArt };
+const all: ArtMap = {
+  ...art,
+  ...systemDesignArt,
+  ...llmFoundationsArt,
+  ...agileScrumArt,
+  ...ragSystemsArt,
+};
 
 export function ModuleArt({ slug }: { slug: string }) {
   const draw = all[slug];

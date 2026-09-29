@@ -85,7 +85,7 @@ export interface Track {
   tagline: string;
   description: string;
   /** Key into the track accent palette in globals.css ([data-track]). */
-  accent: "lakehouse" | "blueprint" | "synapse" | "cadence" | "neutral";
+  accent: "lakehouse" | "blueprint" | "synapse" | "cadence" | "lumen" | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
   hidden?: boolean;
@@ -2821,6 +2821,507 @@ const agileScrum: Track = {
   ],
 };
 
+/** RAG Systems: grounding language models in your own documents. */
+const ragSystems: Track = {
+  slug: "rag-systems",
+  title: "RAG Systems",
+  area: "AI & machine learning",
+  category: "ai-ml",
+  tagline: "Answers grounded in your documents, not the model's memory.",
+  description:
+    "How retrieval-augmented generation really works, from parsing messy PDFs and chunking them, through keyword, vector and hybrid search, reranking and prompt assembly, to evaluating answers, keeping data secure and choosing a platform. Vendor-neutral: open-source vector databases and the managed services on AWS, Google Cloud and Azure. Builds on LLM Foundations. By the end you can design a RAG system, measure it, and find out why it gave a wrong answer.",
+  accent: "lumen",
+  chapters: [
+    {
+      slug: "big-picture",
+      title: "The big picture",
+      summary: "What RAG is for, and every part of a working system.",
+      modules: [
+        {
+          slug: "why-rag",
+          title: "Why models need your documents",
+          summary: "An open-book exam for a language model, and when that beats the alternatives.",
+          minutes: 25,
+          signature:
+            "Scroll from a closed-book exam to an open-book one: the same question answered from memory, then from the right page",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "What a model knows, and what it can't",
+            "Retrieval-augmented generation in one picture",
+            "RAG vs fine-tuning vs long context",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "A language model only knows what it saw in training, and it can't see your company's documents. RAG finds the relevant passages first and hands them to the model with the question, like letting a student bring the textbook to an exam.",
+        },
+        {
+          slug: "rag-end-to-end",
+          title: "A RAG system, end to end",
+          summary: "Parse, chunk, embed, index, retrieve and answer, all in one working pipeline.",
+          minutes: 30,
+          signature:
+            "Click through a tiny working RAG pipeline on a small document set: watch each stage transform the data and see the final answer cite its sources",
+          formats: ["animated-infographic", "step-through", "checkpoint"],
+          concepts: [
+            "The ingestion pipeline: parse, chunk, embed, index",
+            "The query pipeline: retrieve, rerank, generate",
+            "Citations and grounding",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-rag"],
+          plain:
+            "A RAG system has two halves. One prepares your documents ahead of time so they can be searched. The other runs for every question: it searches, picks the best passages and asks the model to answer from them.",
+        },
+      ],
+    },
+    {
+      slug: "preparing",
+      title: "Preparing documents",
+      summary: "Turning real documents into clean, searchable pieces.",
+      modules: [
+        {
+          slug: "parsing",
+          title: "Parsing real documents",
+          summary: "Scans, tables, columns and Hindi text: where naive extraction breaks.",
+          minutes: 30,
+          signature:
+            "Feed a scanned form, a two-column PDF and a table through a naive extractor and a layout-aware parser, and compare what comes out",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Text PDFs, scanned PDFs and OCR",
+            "Layout, reading order and tables",
+            "Parsing tools, open source and managed",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["rag-end-to-end"],
+          plain:
+            "Before anything can be searched, the text has to come out of the document correctly. Scans, tables and multi-column pages often come out scrambled, and a RAG system can never be better than what it read.",
+        },
+        {
+          slug: "chunking",
+          title: "Chunking",
+          summary: "How big each searchable piece should be, and where to cut.",
+          minutes: 30,
+          signature:
+            "Change chunk size, overlap and splitting rules on a real policy document and watch retrieval find, or miss, the answer",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Why documents are split into chunks",
+            "Size, overlap and structure-aware splitting",
+            "Parent–child chunks and late chunking",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["parsing"],
+          plain:
+            "Search works on pieces of documents, not whole files. Pieces that are too small lose their meaning; pieces that are too big bury the answer. Where you cut matters as much as how big the pieces are.",
+        },
+        {
+          slug: "metadata-freshness",
+          title: "Metadata, freshness & deletions",
+          summary: "Filters, versions and keeping the index in step with the documents.",
+          minutes: 25,
+          signature:
+            "A circular is revised and an old one withdrawn: see the assistant quote the wrong version until metadata and re-indexing fix it",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Metadata for filtering: source, date, department, language",
+            "Versions, updates and deletions",
+            "Incremental re-indexing",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["chunking"],
+          plain:
+            "Documents change. If the search index still holds last year's rules, the assistant will quote them confidently. Tags such as date and version, and a way to update the index, keep answers current.",
+        },
+      ],
+    },
+    {
+      slug: "search",
+      title: "From words to meaning",
+      summary: "Keyword search, vector search, and combining them.",
+      modules: [
+        {
+          slug: "bm25",
+          title: "Keyword search & BM25",
+          summary: "The inverted index and the scoring formula behind most search boxes.",
+          minutes: 30,
+          signature:
+            "Type a query and watch an inverted index and BM25 score every document live, term by term",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "The inverted index",
+            "Term frequency and rarity (TF-IDF)",
+            "BM25 and its two knobs",
+            "Where keywords fail: synonyms and other languages",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["rag-end-to-end"],
+          plain:
+            "Keyword search finds documents that share words with your question, and ranks rare shared words higher than common ones. It's fast and exact, but it misses answers that use different words.",
+        },
+        {
+          slug: "embeddings-retrieval",
+          title: "Embeddings for retrieval",
+          summary: "Searching by meaning, and choosing an embedding model.",
+          minutes: 30,
+          signature:
+            "Ask the same question in English, Hindi and romanised Hindi and see which documents each embedding model brings back",
+          formats: ["sandbox", "checkpoint"],
+          concepts: [
+            "Dense retrieval: queries and passages as vectors",
+            "Similarity scores and their limits",
+            "Choosing a model: benchmarks, languages, size and cost",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["bm25"],
+          plain:
+            "An embedding model turns text into a list of numbers so that similar meanings land close together. Searching with embeddings finds passages that mean the same thing even when they share no words.",
+        },
+        {
+          slug: "vector-indexes",
+          title: "Vector indexes",
+          summary: "Why exact search doesn't scale, and how HNSW and IVF trade accuracy for speed.",
+          minutes: 30,
+          signature:
+            "Search a million vectors: climb an HNSW graph layer by layer, then tune it and watch speed trade against recall",
+          formats: ["3d-model", "simulation", "checkpoint"],
+          concepts: [
+            "Exact vs approximate nearest-neighbour search",
+            "HNSW graphs and IVF clusters",
+            "Quantization and memory",
+            "Recall vs latency",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["embeddings-retrieval"],
+          plain:
+            "Comparing a question with every stored vector is too slow once there are millions. Vector indexes take shortcuts that are much faster and almost always find the right neighbours. You choose how much 'almost' you can accept.",
+        },
+        {
+          slug: "hybrid-search",
+          title: "Hybrid search & fusion",
+          summary: "Keywords plus meaning, merged with reciprocal rank fusion.",
+          minutes: 25,
+          signature:
+            "Run the same queries through keyword, vector and hybrid search and watch reciprocal rank fusion merge the two lists",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "What each kind of search misses",
+            "Reciprocal rank fusion",
+            "Weighting and tuning hybrid search",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["bm25", "embeddings-retrieval"],
+          plain:
+            "Keyword search is good at exact terms such as scheme names and form numbers; vector search is good at meaning. Hybrid search runs both and merges the results, so each covers the other's blind spots.",
+        },
+        {
+          slug: "reranking",
+          title: "Reranking & relevance filtering",
+          summary: "A second, sharper look at the top results before the model sees them.",
+          minutes: 25,
+          signature:
+            "Take the top 20 results, rerank them with a cross-encoder, then filter out passages that match the question but don't answer it",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Bi-encoders vs cross-encoders",
+            "Rerankers and LLM-based reranking",
+            "Relevance filtering and thresholds",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["hybrid-search"],
+          plain:
+            "The first search is fast but rough. A reranker reads the question and each candidate together and reorders them far more accurately, and a filter can drop passages that won't help, so the model gets less, better context.",
+        },
+      ],
+    },
+    {
+      slug: "context",
+      title: "Better context",
+      summary: "Improving the query, the chunks and the prompt.",
+      modules: [
+        {
+          slug: "query-understanding",
+          title: "Understanding the question",
+          summary: "Rewriting, expanding and splitting questions before searching.",
+          minutes: 25,
+          signature:
+            "Fix a set of failing questions: vague follow-ups, two questions in one, and jargon that doesn't match the documents",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Follow-up questions in a conversation",
+            "Query rewriting and multi-query",
+            "HyDE: searching with a hypothetical answer",
+            "Decomposing complex questions",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["hybrid-search"],
+          plain:
+            "People ask short, vague or multi-part questions, and 'what about for pensioners?' means nothing on its own. Rewriting the question into good searches before retrieving often helps more than a better index.",
+        },
+        {
+          slug: "contextual-retrieval",
+          title: "Contextual retrieval & small-to-big",
+          summary: "Chunks that know where they came from, and returning more than you matched.",
+          minutes: 25,
+          signature:
+            "Add a line of context to each chunk and see failed retrievals fall; match small pieces but return their parent section",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Why chunks lose context",
+            "Contextual embeddings and contextual BM25",
+            "Parent-document (small-to-big) retrieval",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["chunking", "reranking"],
+          plain:
+            "A chunk that says 'the limit is ₹5 lakh' doesn't say which scheme it belongs to. Adding a short note about where each chunk came from, or returning the whole surrounding section, fixes many silent failures.",
+        },
+        {
+          slug: "prompt-assembly",
+          title: "Assembling the prompt",
+          summary: "Order, citations, and teaching the model to say 'I don't know'.",
+          minutes: 25,
+          signature:
+            "Build the final prompt from retrieved passages: reorder them, add citation markers and an 'answer only from these' rule, and compare the answers",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Instructions, passages and the question",
+            "Lost in the middle",
+            "Citations and refusing when the answer isn't there",
+            "Prompt caching",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["reranking"],
+          plain:
+            "The retrieved passages still have to be put in front of the model well. Clear instructions, sensible order, source labels and permission to say 'I don't know' turn good retrieval into trustworthy answers.",
+        },
+      ],
+    },
+    {
+      slug: "beyond",
+      title: "Beyond basic RAG",
+      summary: "Tables, graphs, agents and images.",
+      modules: [
+        {
+          slug: "tables-sql",
+          title: "Tables & SQL",
+          summary: "When to query a database instead of searching text.",
+          minutes: 25,
+          signature:
+            "Route questions to text search or to SQL over a table, and see which kinds of question each gets right",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Why counting and filtering don't work over text chunks",
+            "Text-to-SQL and its risks",
+            "Routing between retrieval and structured queries",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["prompt-assembly"],
+          plain:
+            "'How many applications were approved in Pune last month?' is a database question, not a search question. Good systems recognise this and query the data directly, carefully, instead of guessing from text.",
+        },
+        {
+          slug: "graphrag",
+          title: "GraphRAG",
+          summary:
+            "Entities, relationships and communities for questions about a whole collection.",
+          minutes: 25,
+          signature:
+            "Build a small knowledge graph from documents, group it into communities, and answer a 'what are the main themes?' question that plain RAG can't",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Local vs global questions",
+            "Knowledge graphs extracted by a model",
+            "Community summaries",
+            "Cost and when it's worth it",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["prompt-assembly"],
+          plain:
+            "Plain RAG is good at finding a specific fact but poor at 'summarise the main issues across all these reports'. GraphRAG first maps who and what is connected to what, then answers from that map.",
+        },
+        {
+          slug: "agentic-rag",
+          title: "Agentic RAG & MCP",
+          summary: "Retrieval as a tool the model decides when and how to use.",
+          minutes: 30,
+          signature:
+            "Step through an agent answering a multi-part question: it plans, searches, reads, searches again and stops",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Retrieval as a tool call",
+            "Iterative search and stopping",
+            "Model Context Protocol (MCP) servers",
+            "Cost, latency and loops",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["query-understanding"],
+          plain:
+            "Instead of searching once, an agent lets the model decide what to search for, read the results, and search again until it has enough. It handles harder questions, at the cost of more time and money.",
+        },
+        {
+          slug: "multimodal-rag",
+          title: "Multimodal RAG",
+          summary: "Charts, forms and page images as searchable knowledge.",
+          minutes: 25,
+          signature:
+            "Answer a question whose answer is only in a chart: extract-to-text vs searching page images directly",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Images, charts and scans in documents",
+            "Captioning vs multimodal embeddings",
+            "Page-image retrieval (ColPali)",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["parsing", "embeddings-retrieval"],
+          plain:
+            "Many answers live in charts, photos and scanned forms rather than text. Multimodal RAG either describes images in words or searches the page images themselves.",
+        },
+      ],
+    },
+    {
+      slug: "running",
+      title: "Measuring & running it",
+      summary: "Evaluation, security, platforms and cost.",
+      modules: [
+        {
+          slug: "eval-retrieval",
+          title: "Evaluating retrieval",
+          summary: "Recall, MRR and nDCG against a test set you build.",
+          minutes: 30,
+          signature:
+            "Label a small test set of questions and correct passages, then score two retrieval setups with recall@k, MRR and nDCG",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Golden test sets",
+            "Recall@k, precision, MRR and nDCG",
+            "Evaluating on your own questions, not only benchmarks",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["reranking"],
+          plain:
+            "You can't improve what you don't measure. A few dozen real questions with known correct passages are enough to tell whether a change to chunking or search actually helped.",
+        },
+        {
+          slug: "eval-answers",
+          title: "Evaluating answers",
+          summary: "Faithfulness, relevance, and using a model as the judge.",
+          minutes: 25,
+          signature:
+            "Judge answers for faithfulness and relevance by hand, then compare with an LLM judge and spot where it disagrees",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Faithfulness (groundedness) and answer relevance",
+            "Context precision and recall",
+            "LLM-as-judge and its biases",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["eval-retrieval"],
+          plain:
+            "Good retrieval doesn't guarantee a good answer. Answers are checked for whether they stick to the sources and actually answer the question, often with another model as the judge, which has its own blind spots.",
+        },
+        {
+          slug: "rag-security",
+          title: "Security & access control",
+          summary: "Permissions, poisoned documents and personal data.",
+          minutes: 30,
+          signature:
+            "An assistant leaks a salary sheet and obeys an instruction hidden in a document: find each hole and close it (a safe simulation)",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Document-level permissions at retrieval time",
+            "Indirect prompt injection through retrieved text",
+            "Personal data and India's DPDP Act",
+            "Vector and embedding weaknesses (OWASP)",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["prompt-assembly"],
+          plain:
+            "A RAG system can show people documents they aren't allowed to see, and a document can contain hidden instructions the model obeys. Permissions must be checked when searching, and retrieved text must be treated as data, not commands.",
+        },
+        {
+          slug: "platforms-cost",
+          title: "Platforms, cost & long context",
+          summary:
+            "Vector databases and managed services, and when a long context window is enough.",
+          minutes: 30,
+          signature:
+            "Place pgvector, OpenSearch, Qdrant and the managed services on AWS, Google Cloud and Azure on one map, then estimate monthly cost for a real workload",
+          formats: ["build-connect", "simulation", "checkpoint"],
+          concepts: [
+            "Open-source vector databases and search engines",
+            "Managed RAG services on the big clouds",
+            "Cost: embedding, storage, queries and generation",
+            "Long context and prompt caching vs RAG",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["vector-indexes", "prompt-assembly"],
+          plain:
+            "You can run RAG on a database you already have, a dedicated vector database, or a fully managed cloud service. Each trades control for convenience, and sometimes a long context window makes retrieval unnecessary.",
+        },
+      ],
+    },
+    {
+      slug: "capstones",
+      title: "Capstones",
+      summary: "Put it all together.",
+      modules: [
+        {
+          slug: "scheme-assistant",
+          title: "Capstone: a scheme assistant",
+          summary: "Design a bilingual assistant for government-scheme FAQs, and evaluate it.",
+          minutes: 40,
+          signature:
+            "Choose parsing, chunking, search, reranking and prompt for an English and Hindi scheme assistant, then run it against a test set and see where it fails",
+          formats: ["branching-scenario", "simulation", "checkpoint"],
+          concepts: ["Designing a RAG system end to end"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["eval-answers", "platforms-cost"],
+          plain:
+            "Everything in this track in one design. You'll make each choice for a real kind of assistant, then measure it and improve it.",
+        },
+        {
+          slug: "wrong-answers",
+          title: "Capstone: the RAG that answers wrong",
+          summary: "Trace failures to their cause, from parsing to the prompt, and fix them.",
+          minutes: 40,
+          signature:
+            "Investigate wrong answers with traces of each stage: a scrambled table, a split chunk, a missed keyword, a stale index and a buried passage",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: ["Debugging RAG systems stage by stage"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["eval-answers", "contextual-retrieval"],
+          plain:
+            "A RAG assistant gives confident wrong answers. Using traces of what each stage did, you'll find where each one went wrong and fix the right stage.",
+        },
+      ],
+    },
+  ],
+};
+
 /** A small end-to-end module that exercises the toolkit and Module SDK. */
 const playground: Track = {
   slug: "playground",
@@ -2857,7 +3358,14 @@ const playground: Track = {
   ],
 };
 
-export const tracks: Track[] = [lakehouse, systemDesign, llmFoundations, agileScrum, playground];
+export const tracks: Track[] = [
+  lakehouse,
+  systemDesign,
+  llmFoundations,
+  agileScrum,
+  ragSystems,
+  playground,
+];
 
 export interface CategoryTrack {
   title: string;
@@ -2915,6 +3423,7 @@ export const categories: Category[] = [
       },
       {
         title: "RAG Systems",
+        slug: "rag-systems",
         blurb: "Grounding models in your documents: retrieval, chunking and ranking.",
       },
       { title: "AI Agents", blurb: "Tools, planning, memory and guardrails." },
