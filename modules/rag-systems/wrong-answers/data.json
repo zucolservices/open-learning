@@ -1,0 +1,109 @@
+{
+  "cases": [
+    {
+      "id": "parse",
+      "title": "The chart that vanished",
+      "src": "Module 17",
+      "q": "Which ward resolved the smallest share of complaints on time in 2025–26?",
+      "answer": "W4",
+      "truth": "Ward 9 (52%)",
+      "fault": "parse",
+      "trace": {
+        "parse": "OCR text of page 4: “…Figure 3 shows, for each ward, the share of complaints resolved… 1004 · % resolved within 15 working days · wi we Ws W4 W5 We W7 Ws W9 Wio Wit wiz”. No bar heights anywhere.",
+        "chunk": "One chunk per page. Fine.",
+        "search": "Page 4 is retrieved first. Right page.",
+        "fresh": "Only one report, current. Fine.",
+        "prompt": "Page 4’s text, with the question. It contains no numbers for the wards.",
+        "model": "“W4”: the model guessed from ward names alone."
+      },
+      "why": "The answer only ever existed as bar heights. Text extraction threw them away, so every later stage worked on text that couldn’t answer.",
+      "fix": "Send chart pages to a vision-language model that reads the image (module 17).",
+      "fixed": "W9",
+      "fixedBy": "Qwen2-VL-2B reading the page image"
+    },
+    {
+      "id": "chunk",
+      "title": "The number in the next sentence",
+      "src": "Module 12",
+      "q": "Under the current water rules, how much free water do BPL households get?",
+      "answer": "BPL households receive a lifeline allowance, which includes free water usage, as stated in passages [1] and [2]. However, the exact amount of free water is not specified in the provided passages.",
+      "truth": "20 kilolitres a month",
+      "fault": "chunk",
+      "trace": {
+        "parse": "Clean text from the rule book. Fine.",
+        "chunk": "One sentence per chunk. “Households holding a valid below-poverty-line (BPL) card receive a lifeline allowance.” and “The limit is 20 kilolitres per month, free of charge.” are separate chunks.",
+        "search": "Top 3: Households holding a valid below-poverty-line (BPL) card receive a lifeline allowance. | Households holding a below-poverty-line (BPL) card receive a lifeline allowance. | Water used above the limit is billed at the normal domestic rate. The sentence with the number doesn’t mention BPL, so it isn’t found.",
+        "fresh": "The 2019 rule is in the index but not what went wrong here.",
+        "prompt": "The three sentences above.",
+        "model": "Honest: “the exact amount of free water is not specified in the provided passages”."
+      },
+      "why": "Splitting into single sentences separated “BPL households get an allowance” from “the limit is 20 kilolitres”. The search found the first; the answer was in the second.",
+      "fix": "Search small, answer big: send each matched sentence’s whole section (module 12).",
+      "fixed": "BPL households receive 20 kilolitres of free water per month under the current Kalpanagar Water Supply Rules, 2026.",
+      "fixedBy": "Same search, whole sections sent to the model"
+    },
+    {
+      "id": "search",
+      "title": "The question in the wrong script",
+      "src": "Module 22",
+      "q": "cycle yojana mein cycle kab milegi?",
+      "answer": "Passage: Unfortunately, there is no direct passage provided in the text to answer this question accurately. However, in general knowledge, a yojana is a traditional Indian unit of distance equivalent to approximately 12 to 15 kilometers (7.5 to 9.3 miles). Since a yojana consists of a series of cycles, a yojana would consist of a series of yojanas, each containing a series of cycles. If we consider a yojana to consist of a series of 12 kilometers, then a series of yojanas would consist of a series of 12 kilometers each, multiplied by the number of yojanas being considered.",
+      "truth": "In the first week of August 2026",
+      "fault": "search",
+      "trace": {
+        "parse": "Clean English and Hindi pages. Fine.",
+        "chunk": "Sentence chunks. Not ideal, but the answer is in one sentence here.",
+        "search": "Keyword search only: zero results. “cycle kab milegi” in Latin letters shares no word with “साइकिल कब मिलेगी” in Devanagari, or with the English page.",
+        "fresh": "Current pages. Fine.",
+        "prompt": "No passages at all, and a basic prompt that doesn’t say what to do when there’s nothing.",
+        "model": "Filled the gap from general knowledge: “a yojana is a traditional Indian unit of distance…”."
+      },
+      "why": "Keyword search can’t match a romanised question to Devanagari text. With nothing retrieved, the model improvised. (A strict prompt would at least have said “I don’t know”.)",
+      "fix": "Add vector search with a multilingual embedding model and fuse the two (hybrid, module 9).",
+      "fixed": "साइकिल योजना में साइकिल कब मिलते हैं? साइकिलें अगस्त 2026 के पहले सप्ताह में हर स्कूल में बाँटी जाती हैं।",
+      "fixedBy": "Hybrid search, same chunks and prompt"
+    },
+    {
+      "id": "fresh",
+      "title": "The fine that went up",
+      "src": "Module 5",
+      "q": "What is the fine for handing over mixed waste?",
+      "answer": "The fine for handing over mixed waste is ₹200.",
+      "truth": "₹500 since 1 September 2026 (Circular 22/2026)",
+      "fault": "fresh",
+      "trace": {
+        "parse": "Clean circulars. Fine.",
+        "chunk": "One chunk per circular. Fine.",
+        "search": "Top 3: circ-14-2026, circ-09-2025, grievance-1. Circular 22/2026, which raised the fine, isn’t in the results.",
+        "fresh": "The index was last built before Circular 22/2026 arrived, and the superseded Circular 14/2026 (₹200) is still in it.",
+        "prompt": "The old circular, faithfully quoted.",
+        "model": "“₹200”, exactly what its passages said."
+      },
+      "why": "Nothing downstream can fix a stale index. Adding the new circular alone wasn’t enough either: with both in the results the model still said ₹200.",
+      "fix": "Sync new documents and delete or filter superseded ones (module 5).",
+      "fixed": "The fine for handing over mixed waste is ₹500.",
+      "fixedBy": "Index synced, superseded circular removed"
+    },
+    {
+      "id": "prompt",
+      "title": "The rule at the bottom of the pile",
+      "src": "Module 13",
+      "q": "Under the current water rules, how soon is a leak on a main road repaired?",
+      "answer": "A leak on a main road is attended to within 48 hours according to the Kalpanagar Water Supply Rules, 2019 (superseded) [17]. This information was confirmed by the subsequent passage stating that leaks on a main road are attended to within 24 hours [20]. However, since the question asks for the current rules, the answer would be within 48 hours as per the 2019 rules, unless stated otherwise in the 2026 rules which are not provided here. Therefore, based on the available information, a",
+      "truth": "Within 24 hours (2026 rules)",
+      "fault": "prompt",
+      "trace": {
+        "parse": "Clean rule book. Fine.",
+        "chunk": "One chunk per section. Fine.",
+        "search": "The 2026 section is retrieved, along with 19 other passages.",
+        "fresh": "The 2019 rules are in the index, clearly labelled “superseded”.",
+        "prompt": "20 passages. The right one is last (#20); the old 2019 rule (48 hours) sits at #17.",
+        "model": "Chose the 2019 rule, then argued itself into it: “the answer would be within 48 hours as per the 2019 rules”."
+      },
+      "why": "Everything needed was in the prompt, but buried among 19 other passages with a conflicting old rule nearby. A small model picked the wrong one.",
+      "fix": "Send fewer, better passages: rerank, drop superseded rules, and put the best first (modules 10 and 13).",
+      "fixed": "Leaks on a main road are attended to within 24 hours [1].",
+      "fixedBy": "Same passages, right one first"
+    }
+  ]
+}

@@ -3366,8 +3366,9 @@ const ragSystems: Track = {
             "Investigate wrong answers with traces of each stage: a scrambled table, a split chunk, a missed keyword, a stale index and a buried passage",
           formats: ["fix-the-problem", "checkpoint"],
           concepts: ["Debugging RAG systems stage by stage"],
-          status: "planned",
+          status: "live",
           level: "applied",
+          terms: ["trace", "chunk", "index-freshness", "faithfulness"],
           prerequisites: ["eval-answers", "contextual-retrieval"],
           plain:
             "A RAG assistant gives confident wrong answers. Using traces of what each stage did, you'll find where each one went wrong and fix the right stage.",

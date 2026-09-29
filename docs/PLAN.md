@@ -282,7 +282,7 @@ AI & machine learning area, second track (approved 2026-09-29). 23 modules in 7 
 | 4b. System Design    | Second track (Architecture), 27 modules                                                 | Live: all 27 modules                                                    |
 | 4c. LLM Foundations  | Third track (AI & machine learning), 26 modules                                         | Live: all 26 modules (2026-09-25)                                       |
 | 4d. Agile & Scrum    | Delivery management, first track, 23 modules                                            | Live: all 23 modules (2026-09-28)                                       |
-| 4e. RAG Systems      | AI & machine learning, second track, 23 modules                                         | In progress: 22 of 23 modules                                           |
+| 4e. RAG Systems      | AI & machine learning, second track, 23 modules                                         | Live: all 23 modules (2026-09-29)                                       |
 | 5. Team feedback     | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy            | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
