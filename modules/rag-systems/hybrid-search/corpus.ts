@@ -1,6 +1,6 @@
 /**
  * A larger made-up store for hybrid search: the Kalpanagar help pages, the 2026 water rules,
- * three circulars, and the NMC forms list. Every rule, code and fee is invented.
+ * three circulars, and the KMC forms list. Every rule, code and fee is invented.
  */
 import { CORPUS } from "../_shared/corpus";
 import { SECTIONS } from "../chunking/policy";
@@ -34,7 +34,7 @@ export const PASSAGES: Passage[] = [
     text: b,
   })),
   ...CIRCULARS.map((c) => ({ id: c.id, title: c.title, text: c.text })),
-  ...FORMS.map(([code, t]) => ({ id: `form-${code}`, title: `NMC forms · ${code}`, text: t })),
+  ...FORMS.map(([code, t]) => ({ id: `form-${code}`, title: `KMC forms · ${code}`, text: t })),
 ];
 
 export const QUERIES: { q: string; gold: string; note: string }[] = [

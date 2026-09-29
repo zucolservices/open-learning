@@ -20,7 +20,7 @@ export const SECTIONS: [string, string][] = [
   ],
   [
     "5. Paying your bill",
-    "Bills must be paid within 21 days of the bill date, online on the NMC citizen portal or at any ward office. A late fee of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill.",
+    "Bills must be paid within 21 days of the bill date, online on the KMC citizen portal or at any ward office. A late fee of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill.",
   ],
   [
     "6. Disconnection",

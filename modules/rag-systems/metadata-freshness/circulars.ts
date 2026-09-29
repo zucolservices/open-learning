@@ -44,7 +44,7 @@ export const CIRCULARS: Circular[] = [
     issued: "2026-08-20",
     effectiveFrom: "2026-09-01",
     department: "Solid waste",
-    text: "From 1 September 2026, the fine for handing over mixed waste rises to ₹500. Bulk pickups can now be booked only on the NMC citizen portal; ward offices no longer take phone bookings.",
+    text: "From 1 September 2026, the fine for handing over mixed waste rises to ₹500. Bulk pickups can now be booked only on the KMC citizen portal; ward offices no longer take phone bookings.",
     statusNow: "current",
     inSource: true,
     indexedBefore: false,

@@ -20,7 +20,7 @@
       "id": "property-tax-3",
       "doc": "property-tax",
       "title": "Property tax 2026–27",
-      "text": "You can pay online on the NMC citizen portal with UPI, net banking or a card, or in person at any ward office. Keep the receipt: it is needed for many other NMC services.",
+      "text": "You can pay online on the KMC citizen portal with UPI, net banking or a card, or in person at any ward office. Keep the receipt: it is needed for many other KMC services.",
       "xy": [0.1224, 0.2157],
       "v8": [0.0487, -0.0266, -0.0244, -0.0724, 0.0345, -0.0378, -0.0148, 0.0896]
     },
@@ -28,7 +28,7 @@
       "id": "birth-death-1",
       "doc": "birth-death",
       "title": "Birth and death certificates",
-      "text": "Births and deaths in Kalpanagar must be registered with the NMC within 21 days. Hospitals register births that happen in them; for a birth at home, a parent registers it at the ward office.",
+      "text": "Births and deaths in Kalpanagar must be registered with the KMC within 21 days. Hospitals register births that happen in them; for a birth at home, a parent registers it at the ward office.",
       "xy": [-0.16, 0.1722],
       "v8": [0.0073, -0.0261, -0.0506, -0.0756, 0.044, -0.0307, 0.0002, 0.138]
     },
@@ -36,7 +36,7 @@
       "id": "birth-death-2",
       "doc": "birth-death",
       "title": "Birth and death certificates",
-      "text": "Certificates can be downloaded from the NMC citizen portal once registration is complete. Printed copies cost ₹20 each and are ready in 7 working days.",
+      "text": "Certificates can be downloaded from the KMC citizen portal once registration is complete. Printed copies cost ₹20 each and are ready in 7 working days.",
       "xy": [-0.1131, 0.1342],
       "v8": [0.0291, -0.0658, -0.0507, -0.0667, 0.017, -0.0469, -0.004, 0.1012]
     },
@@ -60,7 +60,7 @@
       "id": "water-3",
       "doc": "water",
       "title": "New water connection",
-      "text": "The NMC completes new connections within 15 working days of a complete application.",
+      "text": "The KMC completes new connections within 15 working days of a complete application.",
       "xy": [-0.1199, -0.0843],
       "v8": [-0.0041, -0.0546, -0.0633, -0.0472, 0.0622, -0.0107, -0.0029, 0.0534]
     },
@@ -84,7 +84,7 @@
       "id": "waste-3",
       "doc": "waste",
       "title": "Garbage collection",
-      "text": "Garden waste and old furniture are collected on request: book a bulk pickup on the NMC citizen portal.",
+      "text": "Garden waste and old furniture are collected on request: book a bulk pickup on the KMC citizen portal.",
       "xy": [-0.1676, 0.0278],
       "v8": [0.0639, -0.0305, -0.0347, -0.0804, 0.0802, 0.0059, 0.0216, 0.0396]
     },
@@ -92,7 +92,7 @@
       "id": "trade-1",
       "doc": "trade",
       "title": "Trade licence",
-      "text": "Every shop, restaurant or workshop in Kalpanagar needs a trade licence from the NMC.",
+      "text": "Every shop, restaurant or workshop in Kalpanagar needs a trade licence from the KMC.",
       "xy": [-0.1645, 0.0509],
       "v8": [0.0275, -0.0295, -0.086, -0.0581, 0.0254, -0.0045, 0.0108, 0.0699]
     },
@@ -108,7 +108,7 @@
       "id": "grievance-1",
       "doc": "grievance",
       "title": "Complaints and grievances",
-      "text": "Complaints about roads, streetlights, water or garbage can be filed on the NMC citizen portal or at a ward office. Every complaint gets a tracking number.",
+      "text": "Complaints about roads, streetlights, water or garbage can be filed on the KMC citizen portal or at a ward office. Every complaint gets a tracking number.",
       "xy": [-0.1707, 0.1148],
       "v8": [0.0742, -0.0552, -0.0474, -0.0703, 0.0418, 0.0011, 0.0282, 0.09]
     },
@@ -116,7 +116,7 @@
       "id": "grievance-2",
       "doc": "grievance",
       "title": "Complaints and grievances",
-      "text": "The NMC aims to respond to a complaint within 3 working days. If it is not resolved in 15 working days, it is escalated to the zonal commissioner.",
+      "text": "The KMC aims to respond to a complaint within 3 working days. If it is not resolved in 15 working days, it is escalated to the zonal commissioner.",
       "xy": [-0.151, 0.1177],
       "v8": [0.0485, -0.0466, -0.0651, -0.0873, 0.0614, -0.0149, 0.0248, 0.0816]
     }
@@ -189,7 +189,7 @@
         }
       ],
       "system": "You answer questions from citizens of Kalpanagar using the numbered passages from the Kalpanagar Municipal Corporation. Answer in one or two full sentences, using only facts from the passages, and put the passage number in square brackets after each fact, like this: Offices open at 9 am [2]. If the passages do not contain the answer, reply: I don't know; the documents don't cover this.",
-      "user": "Passages:\n[1] Property tax 2026–27: Property tax for 2026–27 is due by 31 July 2026. Owners who pay the full year's tax by 30 April 2026 receive a 5% rebate.\n[2] Property tax 2026–27: Tax not paid by 31 July attracts a penalty of 2% of the unpaid amount for each month of delay.\n[3] Property tax 2026–27: You can pay online on the NMC citizen portal with UPI, net banking or a card, or in person at any ward office. Keep the receipt: it is needed for many other NMC services.\n\nQuestion: When is the last date to pay property tax, and is there a discount for paying early?",
+      "user": "Passages:\n[1] Property tax 2026–27: Property tax for 2026–27 is due by 31 July 2026. Owners who pay the full year's tax by 30 April 2026 receive a 5% rebate.\n[2] Property tax 2026–27: Tax not paid by 31 July attracts a penalty of 2% of the unpaid amount for each month of delay.\n[3] Property tax 2026–27: You can pay online on the KMC citizen portal with UPI, net banking or a card, or in person at any ward office. Keep the receipt: it is needed for many other KMC services.\n\nQuestion: When is the last date to pay property tax, and is there a discount for paying early?",
       "answer": "The last date to pay property tax is 31 July 2026. Yes, owners who pay the full year's tax by 30 April 2026 receive a 5% rebate.",
       "closed": "As an AI language model, I don't have access to real-time information about specific locations or dates. However, typically, the last day to pay property taxes varies depending on your location and local government regulations.\n\nIn general, most jurisdictions allow taxpayers to file their property tax returns and make payments until the end of the fiscal year, which usually falls around June 30th. It's best to"
     },
@@ -260,7 +260,7 @@
         }
       ],
       "system": "You answer questions from citizens of Kalpanagar using the numbered passages from the Kalpanagar Municipal Corporation. Answer in one or two full sentences, using only facts from the passages, and put the passage number in square brackets after each fact, like this: Offices open at 9 am [2]. If the passages do not contain the answer, reply: I don't know; the documents don't cover this.",
-      "user": "Passages:\n[1] New water connection: To apply for a new water connection, bring the latest property tax receipt, proof of ownership or a rent agreement with the owner's consent, and an identity proof such as Aadhaar or a voter ID.\n[2] New water connection: The connection fee is ₹500, plus a refundable deposit of ₹3,000. A meter is fitted with every new connection.\n[3] New water connection: The NMC completes new connections within 15 working days of a complete application.\n\nQuestion: What documents do I need for a new water connection?",
+      "user": "Passages:\n[1] New water connection: To apply for a new water connection, bring the latest property tax receipt, proof of ownership or a rent agreement with the owner's consent, and an identity proof such as Aadhaar or a voter ID.\n[2] New water connection: The connection fee is ₹500, plus a refundable deposit of ₹3,000. A meter is fitted with every new connection.\n[3] New water connection: The KMC completes new connections within 15 working days of a complete application.\n\nQuestion: What documents do I need for a new water connection?",
       "answer": "To apply for a new water connection, you need the latest property tax receipt, proof of ownership or a rent agreement with the owner's consent, and an identity proof such as Aadhaar or a voter ID.",
       "closed": "To connect to the water supply in Kalpanagar, you will typically need the following documents:\n\n1. **Identification Documents**: \n   - A valid government-issued ID such as a passport or Aadhaar card.\n   - For non-residents, proof of residency may be required.\n\n2. **Proof of Address**:\n   - Utility bills from your current address.\n   - Rental agreement if renting"
     },
@@ -331,7 +331,7 @@
         }
       ],
       "system": "You answer questions from citizens of Kalpanagar using the numbered passages from the Kalpanagar Municipal Corporation. Answer in one or two full sentences, using only facts from the passages, and put the passage number in square brackets after each fact, like this: Offices open at 9 am [2]. If the passages do not contain the answer, reply: I don't know; the documents don't cover this.",
-      "user": "Passages:\n[1] Garbage collection: Wet waste is collected every day between 7 and 10 am. Dry waste is collected on Wednesdays and Saturdays.\n[2] Garbage collection: Households must keep wet and dry waste separate. Handing over mixed waste can lead to a fine of ₹200.\n[3] Garbage collection: Garden waste and old furniture are collected on request: book a bulk pickup on the NMC citizen portal.\n\nQuestion: Which days is dry waste collected?",
+      "user": "Passages:\n[1] Garbage collection: Wet waste is collected every day between 7 and 10 am. Dry waste is collected on Wednesdays and Saturdays.\n[2] Garbage collection: Households must keep wet and dry waste separate. Handing over mixed waste can lead to a fine of ₹200.\n[3] Garbage collection: Garden waste and old furniture are collected on request: book a bulk pickup on the KMC citizen portal.\n\nQuestion: Which days is dry waste collected?",
       "answer": "Wet waste is collected every day between 7 and 10 am [2], while dry waste is collected on Wednesdays and Saturdays [1].",
       "closed": "In India, the collection of dry waste typically occurs on Mondays and Thursdays. However, it's important to check with your local municipality or city authority for the most accurate information as practices can vary from one area to another. If you're unsure about the specific schedule in Kalpanagar, I would recommend contacting them directly or checking their official website for up-to-date information."
     },
@@ -402,7 +402,7 @@
         }
       ],
       "system": "You answer questions from citizens of Kalpanagar using the numbered passages from the Kalpanagar Municipal Corporation. Answer in one or two full sentences, using only facts from the passages, and put the passage number in square brackets after each fact, like this: Offices open at 9 am [2]. If the passages do not contain the answer, reply: I don't know; the documents don't cover this.",
-      "user": "Passages:\n[1] New water connection: To apply for a new water connection, bring the latest property tax receipt, proof of ownership or a rent agreement with the owner's consent, and an identity proof such as Aadhaar or a voter ID.\n[2] Birth and death certificates: Certificates can be downloaded from the NMC citizen portal once registration is complete. Printed copies cost ₹20 each and are ready in 7 working days.\n[3] Trade licence: Licences must be renewed every year by 31 March. Late renewal costs ₹100 for each month of delay.\n\nQuestion: How do I apply for a passport?",
+      "user": "Passages:\n[1] New water connection: To apply for a new water connection, bring the latest property tax receipt, proof of ownership or a rent agreement with the owner's consent, and an identity proof such as Aadhaar or a voter ID.\n[2] Birth and death certificates: Certificates can be downloaded from the KMC citizen portal once registration is complete. Printed copies cost ₹20 each and are ready in 7 working days.\n[3] Trade licence: Licences must be renewed every year by 31 March. Late renewal costs ₹100 for each month of delay.\n\nQuestion: How do I apply for a passport?",
       "answer": "I don't know; the documents don't cover this.",
       "closed": "To apply for a passport at the nearest Passport Office or Post Office in your area, you can follow these steps:\n\n1. **Visit the nearest Passport Office**: The nearest Passport Office is located at 205-207 Kalpanagar, Kolkata, West Bengal, India.\n\n2. **Gather Required Documents**:\n   - A recent photograph of yourself.\n   - Proof of identity"
     }

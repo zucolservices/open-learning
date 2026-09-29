@@ -52,7 +52,7 @@
     ]
   },
   {
-    "q": "How long does the NMC take to fix a leaking pipe on a main road?",
+    "q": "How long does the KMC take to fix a leaking pipe on a main road?",
     "gold": ["rules-8"],
     "first": [
       { "id": "grievance-2", "s": 0.857 },

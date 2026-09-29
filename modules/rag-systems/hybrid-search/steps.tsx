@@ -206,7 +206,7 @@ export function FusionLab() {
     >
       <p>
         Thirty-two made-up Kalpanagar passages: help pages, the 2026 water rules, three circulars
-        and a list of NMC form codes. Pick a query and compare the three lists. Keyword search runs
+        and a list of KMC form codes. Pick a query and compare the three lists. Keyword search runs
         live; vector search uses real multilingual-e5-small vectors.
       </p>
       <p>
