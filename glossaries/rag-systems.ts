@@ -350,4 +350,22 @@ export const ragSystems = {
       "A retriever that searches page images directly: it cuts each page into about a thousand patches, gives each a vector, and matches every word of the question against the best patch (Faysse et al., 2024). Accurate on visual documents, but stores many vectors per page.",
     module: "multimodal-rag",
   },
+  "golden-set": {
+    term: "Golden test set",
+    definition:
+      "A fixed list of real questions, each paired with the passages (or answers) known to be right, used to score every change to a RAG system the same way. Labelled by someone who knows the subject.",
+    module: "eval-retrieval",
+  },
+  mrr: {
+    term: "MRR (mean reciprocal rank)",
+    definition:
+      "For each question, 1 divided by the position of the first relevant result (1st = 1, 2nd = ½, none = 0), averaged over questions. Rewards putting a good answer near the top.",
+    module: "eval-retrieval",
+  },
+  ndcg: {
+    term: "nDCG",
+    definition:
+      "Normalised discounted cumulative gain: adds up the relevance grades of the results, discounting lower positions by a logarithm, then divides by the score of the perfect ordering, so 1.0 is best. The usual headline metric of retrieval benchmarks, often at k = 10.",
+    module: "eval-retrieval",
+  },
 } satisfies Record<string, GlossaryEntry>;

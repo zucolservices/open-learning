@@ -130,4 +130,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "rag-systems/graphrag": () => import("./rag-systems/graphrag"),
   "rag-systems/agentic-rag": () => import("./rag-systems/agentic-rag"),
   "rag-systems/multimodal-rag": () => import("./rag-systems/multimodal-rag"),
+  "rag-systems/eval-retrieval": () => import("./rag-systems/eval-retrieval"),
 };

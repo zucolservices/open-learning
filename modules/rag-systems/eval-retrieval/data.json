@@ -1,0 +1,806 @@
+{
+  "passages": [
+    {
+      "id": "property-tax-1",
+      "title": "Property tax 2026–27",
+      "text": "Property tax for 2026–27 is due by 31 July 2026. Owners who pay the full year's tax by 30 April 2026 receive a 5% rebate."
+    },
+    {
+      "id": "property-tax-2",
+      "title": "Property tax 2026–27",
+      "text": "Tax not paid by 31 July attracts a penalty of 2% of the unpaid amount for each month of delay."
+    },
+    {
+      "id": "property-tax-3",
+      "title": "Property tax 2026–27",
+      "text": "You can pay online on the KMC citizen portal with UPI, net banking or a card, or in person at any ward office. Keep the receipt: it is needed for many other KMC services."
+    },
+    {
+      "id": "birth-death-1",
+      "title": "Birth and death certificates",
+      "text": "Births and deaths in Kalpanagar must be registered with the KMC within 21 days. Hospitals register births that happen in them; for a birth at home, a parent registers it at the ward office."
+    },
+    {
+      "id": "birth-death-2",
+      "title": "Birth and death certificates",
+      "text": "Certificates can be downloaded from the KMC citizen portal once registration is complete. Printed copies cost ₹20 each and are ready in 7 working days."
+    },
+    {
+      "id": "water-1",
+      "title": "New water connection",
+      "text": "To apply for a new water connection, bring the latest property tax receipt, proof of ownership or a rent agreement with the owner's consent, and an identity proof such as Aadhaar or a voter ID."
+    },
+    {
+      "id": "water-2",
+      "title": "New water connection",
+      "text": "The connection fee is ₹500, plus a refundable deposit of ₹3,000. A meter is fitted with every new connection."
+    },
+    {
+      "id": "water-3",
+      "title": "New water connection",
+      "text": "The KMC completes new connections within 15 working days of a complete application."
+    },
+    {
+      "id": "waste-1",
+      "title": "Garbage collection",
+      "text": "Wet waste is collected every day between 7 and 10 am. Dry waste is collected on Wednesdays and Saturdays."
+    },
+    {
+      "id": "waste-2",
+      "title": "Garbage collection",
+      "text": "Households must keep wet and dry waste separate. Handing over mixed waste can lead to a fine of ₹200."
+    },
+    {
+      "id": "waste-3",
+      "title": "Garbage collection",
+      "text": "Garden waste and old furniture are collected on request: book a bulk pickup on the KMC citizen portal."
+    },
+    {
+      "id": "trade-1",
+      "title": "Trade licence",
+      "text": "Every shop, restaurant or workshop in Kalpanagar needs a trade licence from the KMC."
+    },
+    {
+      "id": "trade-2",
+      "title": "Trade licence",
+      "text": "Licences must be renewed every year by 31 March. Late renewal costs ₹100 for each month of delay."
+    },
+    {
+      "id": "grievance-1",
+      "title": "Complaints and grievances",
+      "text": "Complaints about roads, streetlights, water or garbage can be filed on the KMC citizen portal or at a ward office. Every complaint gets a tracking number."
+    },
+    {
+      "id": "grievance-2",
+      "title": "Complaints and grievances",
+      "text": "The KMC aims to respond to a complaint within 3 working days. If it is not resolved in 15 working days, it is escalated to the zonal commissioner."
+    },
+    {
+      "id": "rules-1",
+      "title": "Water Supply Rules 2026 · 1. Scope",
+      "text": "These rules apply to every piped water connection supplied by the Kalpanagar Municipal Corporation. They replace the Water Supply Rules of 2019. Words such as 'consumer' mean the person in whose name the connection is registered."
+    },
+    {
+      "id": "rules-2",
+      "title": "Water Supply Rules 2026 · 2. New connections",
+      "text": "A new domestic connection is granted to the owner of a property, or to a tenant with the owner's written consent. The application must include the latest property tax receipt and an identity proof. The connection fee is ₹500, and a refundable deposit of ₹3,000 is collected. The Corporation completes new connections within 15 working days of a complete application."
+    },
+    {
+      "id": "rules-3",
+      "title": "Water Supply Rules 2026 · 3. Free water for low-income households",
+      "text": "Households holding a valid below-poverty-line (BPL) card receive a lifeline allowance. The limit is 20 kilolitres per month, free of charge. Water used above the limit is billed at the normal domestic rate. The card must be renewed with the ward office every two years to keep the allowance."
+    },
+    {
+      "id": "rules-4",
+      "title": "Water Supply Rules 2026 · 4. Meters and billing",
+      "text": "Every connection has a meter, which remains the property of the Corporation. Meters are read every two months, and bills are sent by SMS and post within 10 days of the reading. If a meter is found faulty, the bill is based on the average of the previous three readings until the meter is replaced."
+    },
+    {
+      "id": "rules-5",
+      "title": "Water Supply Rules 2026 · 5. Paying your bill",
+      "text": "Bills must be paid within 21 days of the bill date, online on the KMC citizen portal or at any ward office. A late fee of 2% of the unpaid amount is added for every month of delay. Consumers who pay by auto-debit receive a rebate of 1% on each bill."
+    },
+    {
+      "id": "rules-6",
+      "title": "Water Supply Rules 2026 · 6. Disconnection",
+      "text": "If a bill remains unpaid for 90 days, the Corporation may disconnect the supply after giving 15 days' written notice. Supply to hospitals, schools and homes with a registered dialysis patient is never disconnected for non-payment; arrears are recovered through the courts instead."
+    },
+    {
+      "id": "rules-7",
+      "title": "Water Supply Rules 2026 · 7. Reconnection",
+      "text": "A disconnected supply is restored within 2 working days after all arrears are paid. The reconnection fee is ₹1,000. However, the fee is waived for senior citizens who clear their arrears within 30 days of disconnection."
+    },
+    {
+      "id": "rules-8",
+      "title": "Water Supply Rules 2026 · 8. Complaints",
+      "text": "Complaints about leaks, low pressure or dirty water can be made on the citizen portal, by phone, or at a ward office. Leaks on a main road are attended to within 24 hours. Other complaints are resolved within 5 working days, and the consumer is informed by SMS when the work is complete."
+    },
+    {
+      "id": "circ-09-2025",
+      "title": "Circular 9/2025: Bulk pickups",
+      "text": "Bulk pickups of garden waste and old furniture can be booked by calling your ward office on any working day."
+    },
+    {
+      "id": "circ-14-2026",
+      "title": "Circular 14/2026: Waste segregation",
+      "text": "Households must keep wet and dry waste separate. Handing over mixed waste attracts a fine of ₹200."
+    },
+    {
+      "id": "circ-22-2026",
+      "title": "Circular 22/2026: Revised fines and bulk pickups",
+      "text": "From 1 September 2026, the fine for handing over mixed waste rises to ₹500. Bulk pickups can now be booked only on the KMC citizen portal; ward offices no longer take phone bookings."
+    },
+    {
+      "id": "form-W-7",
+      "title": "KMC forms · W-7",
+      "text": "Form W-7 is the application for a new domestic water connection."
+    },
+    {
+      "id": "form-W-12",
+      "title": "KMC forms · W-12",
+      "text": "Form W-12 is the request to restore a disconnected water supply after arrears are paid."
+    },
+    {
+      "id": "form-W-17",
+      "title": "KMC forms · W-17",
+      "text": "Form W-17 reports a faulty water meter and asks for a replacement."
+    },
+    {
+      "id": "form-T-3",
+      "title": "KMC forms · T-3",
+      "text": "Form T-3 renews a trade licence for the coming financial year."
+    },
+    {
+      "id": "form-T-8",
+      "title": "KMC forms · T-8",
+      "text": "Form T-8 transfers a trade licence to a new owner of the business."
+    },
+    {
+      "id": "form-B-2",
+      "title": "KMC forms · B-2",
+      "text": "Form B-2 registers a birth that took place at home."
+    }
+  ],
+  "questions": [
+    {
+      "q": "What documents do I need for a water connection?",
+      "rel": {
+        "water-1": 2,
+        "rules-2": 2,
+        "form-W-7": 1
+      },
+      "runs": {
+        "keyword": [
+          "water-2",
+          "trade-1",
+          "water-3",
+          "rules-1",
+          "water-1",
+          "form-W-7",
+          "rules-2",
+          "property-tax-3",
+          "rules-4",
+          "rules-3"
+        ],
+        "vector": [
+          "water-1",
+          "rules-2",
+          "water-2",
+          "rules-4",
+          "form-W-7",
+          "rules-1",
+          "rules-6",
+          "water-3",
+          "rules-7",
+          "rules-3"
+        ],
+        "hybrid": [
+          "water-2",
+          "water-1",
+          "rules-2",
+          "rules-1",
+          "water-3",
+          "form-W-7",
+          "rules-4",
+          "rules-3",
+          "trade-1",
+          "rules-6"
+        ],
+        "rerank": [
+          "water-1",
+          "form-W-7",
+          "rules-2",
+          "rules-4",
+          "water-3",
+          "water-2",
+          "rules-1",
+          "rules-3",
+          "rules-6",
+          "trade-1"
+        ]
+      }
+    },
+    {
+      "q": "How much is the fine for not separating my garbage?",
+      "rel": {
+        "circ-22-2026": 2,
+        "waste-2": 1,
+        "circ-14-2026": 1
+      },
+      "runs": {
+        "keyword": ["waste-2", "circ-22-2026", "circ-14-2026", "waste-3", "waste-1", "grievance-1"],
+        "vector": [
+          "waste-2",
+          "circ-14-2026",
+          "circ-22-2026",
+          "rules-7",
+          "rules-2",
+          "water-2",
+          "waste-3",
+          "waste-1",
+          "rules-5",
+          "grievance-1"
+        ],
+        "hybrid": [
+          "waste-2",
+          "circ-22-2026",
+          "circ-14-2026",
+          "waste-3",
+          "waste-1",
+          "grievance-1",
+          "rules-7",
+          "rules-2",
+          "water-2",
+          "rules-5"
+        ],
+        "rerank": [
+          "waste-2",
+          "circ-14-2026",
+          "circ-22-2026",
+          "waste-1",
+          "rules-7",
+          "rules-5",
+          "rules-2",
+          "grievance-1",
+          "water-2",
+          "waste-3"
+        ]
+      }
+    },
+    {
+      "q": "My water meter is broken. What do I do?",
+      "rel": {
+        "form-W-17": 2,
+        "rules-4": 1
+      },
+      "runs": {
+        "keyword": [
+          "rules-4",
+          "form-W-17",
+          "water-2",
+          "rules-1",
+          "water-1",
+          "rules-3",
+          "form-W-7",
+          "water-3",
+          "form-W-12",
+          "rules-8"
+        ],
+        "vector": [
+          "form-W-17",
+          "rules-4",
+          "waste-2",
+          "water-2",
+          "water-1",
+          "rules-8",
+          "circ-14-2026",
+          "grievance-1",
+          "form-W-12",
+          "rules-3"
+        ],
+        "hybrid": [
+          "rules-4",
+          "form-W-17",
+          "water-2",
+          "water-1",
+          "rules-3",
+          "rules-8",
+          "form-W-12",
+          "grievance-1",
+          "water-3",
+          "rules-1"
+        ],
+        "rerank": [
+          "form-W-17",
+          "rules-4",
+          "water-1",
+          "water-2",
+          "rules-8",
+          "form-W-12",
+          "water-3",
+          "rules-3",
+          "grievance-1",
+          "rules-1"
+        ]
+      }
+    },
+    {
+      "q": "When is dry waste picked up?",
+      "rel": {
+        "waste-1": 2
+      },
+      "runs": {
+        "keyword": [
+          "circ-14-2026",
+          "waste-1",
+          "waste-2",
+          "rules-8",
+          "waste-3",
+          "circ-09-2025",
+          "circ-22-2026"
+        ],
+        "vector": [
+          "waste-1",
+          "circ-09-2025",
+          "circ-14-2026",
+          "waste-2",
+          "circ-22-2026",
+          "waste-3",
+          "rules-8",
+          "rules-7",
+          "rules-6",
+          "water-3"
+        ],
+        "hybrid": [
+          "waste-1",
+          "circ-14-2026",
+          "waste-2",
+          "circ-09-2025",
+          "rules-8",
+          "waste-3",
+          "circ-22-2026",
+          "rules-7",
+          "rules-6",
+          "water-3"
+        ],
+        "rerank": [
+          "waste-1",
+          "circ-09-2025",
+          "circ-14-2026",
+          "circ-22-2026",
+          "waste-2",
+          "waste-3",
+          "rules-8",
+          "rules-7",
+          "water-3",
+          "rules-6"
+        ]
+      }
+    },
+    {
+      "q": "How long do I have to register a baby born at home?",
+      "rel": {
+        "birth-death-1": 2,
+        "form-B-2": 1
+      },
+      "runs": {
+        "keyword": ["birth-death-1", "form-B-2", "rules-6", "rules-1"],
+        "vector": [
+          "form-B-2",
+          "birth-death-1",
+          "birth-death-2",
+          "rules-2",
+          "rules-5",
+          "rules-6",
+          "trade-2",
+          "rules-3",
+          "rules-7",
+          "property-tax-3"
+        ],
+        "hybrid": [
+          "birth-death-1",
+          "form-B-2",
+          "rules-6",
+          "rules-1",
+          "birth-death-2",
+          "rules-2",
+          "rules-5",
+          "trade-2",
+          "rules-3",
+          "rules-7"
+        ],
+        "rerank": [
+          "birth-death-1",
+          "form-B-2",
+          "birth-death-2",
+          "rules-2",
+          "rules-6",
+          "rules-5",
+          "trade-2",
+          "rules-3",
+          "rules-7",
+          "rules-1"
+        ]
+      }
+    },
+    {
+      "q": "Is there a discount if I pay property tax early?",
+      "rel": {
+        "property-tax-1": 2
+      },
+      "runs": {
+        "keyword": [
+          "property-tax-1",
+          "property-tax-3",
+          "property-tax-2",
+          "water-1",
+          "rules-2",
+          "rules-5",
+          "rules-4"
+        ],
+        "vector": [
+          "property-tax-1",
+          "property-tax-2",
+          "property-tax-3",
+          "rules-2",
+          "rules-5",
+          "rules-7",
+          "waste-2",
+          "trade-2",
+          "circ-14-2026",
+          "rules-6"
+        ],
+        "hybrid": [
+          "property-tax-1",
+          "property-tax-3",
+          "property-tax-2",
+          "rules-2",
+          "rules-5",
+          "water-1",
+          "rules-4",
+          "rules-7",
+          "waste-2",
+          "trade-2"
+        ],
+        "rerank": [
+          "property-tax-1",
+          "property-tax-2",
+          "property-tax-3",
+          "rules-2",
+          "rules-5",
+          "water-1",
+          "rules-7",
+          "rules-4",
+          "trade-2",
+          "waste-2"
+        ]
+      }
+    },
+    {
+      "q": "Which form renews my shop's licence?",
+      "rel": {
+        "form-T-3": 2,
+        "trade-2": 1
+      },
+      "runs": {
+        "keyword": [
+          "form-T-3",
+          "trade-1",
+          "trade-2",
+          "form-T-8",
+          "form-W-7",
+          "form-B-2",
+          "form-W-17",
+          "form-W-12",
+          "rules-4",
+          "property-tax-1"
+        ],
+        "vector": [
+          "form-T-3",
+          "trade-2",
+          "form-T-8",
+          "trade-1",
+          "form-W-12",
+          "form-W-17",
+          "form-W-7",
+          "form-B-2",
+          "rules-2",
+          "rules-7"
+        ],
+        "hybrid": [
+          "form-T-3",
+          "trade-2",
+          "trade-1",
+          "form-T-8",
+          "form-W-7",
+          "form-W-12",
+          "form-W-17",
+          "form-B-2",
+          "rules-2",
+          "rules-4"
+        ],
+        "rerank": [
+          "form-T-3",
+          "trade-2",
+          "form-T-8",
+          "trade-1",
+          "form-B-2",
+          "form-W-17",
+          "form-W-7",
+          "form-W-12",
+          "rules-2",
+          "rules-4"
+        ]
+      }
+    },
+    {
+      "q": "My complaint hasn't been fixed for three weeks. What happens now?",
+      "rel": {
+        "grievance-2": 2
+      },
+      "runs": {
+        "keyword": [
+          "form-T-3",
+          "form-T-8",
+          "grievance-1",
+          "grievance-2",
+          "birth-death-1",
+          "rules-8",
+          "circ-22-2026",
+          "rules-4"
+        ],
+        "vector": [
+          "grievance-2",
+          "rules-8",
+          "grievance-1",
+          "water-3",
+          "rules-7",
+          "rules-6",
+          "waste-2",
+          "form-T-3",
+          "rules-5",
+          "rules-2"
+        ],
+        "hybrid": [
+          "grievance-2",
+          "grievance-1",
+          "rules-8",
+          "form-T-3",
+          "circ-22-2026",
+          "rules-4",
+          "birth-death-1",
+          "form-T-8",
+          "water-3",
+          "rules-7"
+        ],
+        "rerank": [
+          "grievance-2",
+          "grievance-1",
+          "rules-8",
+          "rules-4",
+          "rules-7",
+          "circ-22-2026",
+          "form-T-3",
+          "water-3",
+          "form-T-8",
+          "birth-death-1"
+        ]
+      }
+    },
+    {
+      "q": "How do I get an old sofa taken away?",
+      "rel": {
+        "circ-22-2026": 2,
+        "waste-3": 2,
+        "circ-09-2025": 1
+      },
+      "runs": {
+        "keyword": ["grievance-1", "waste-3", "circ-09-2025"],
+        "vector": [
+          "waste-2",
+          "waste-3",
+          "circ-09-2025",
+          "rules-7",
+          "circ-14-2026",
+          "waste-1",
+          "rules-2",
+          "water-1",
+          "rules-6",
+          "trade-2"
+        ],
+        "hybrid": [
+          "waste-3",
+          "circ-09-2025",
+          "grievance-1",
+          "waste-2",
+          "rules-7",
+          "circ-14-2026",
+          "waste-1",
+          "rules-2",
+          "water-1",
+          "rules-6"
+        ],
+        "rerank": [
+          "circ-09-2025",
+          "waste-3",
+          "rules-2",
+          "waste-2",
+          "water-1",
+          "circ-14-2026",
+          "waste-1",
+          "rules-7",
+          "grievance-1",
+          "rules-6"
+        ]
+      }
+    },
+    {
+      "q": "Can they cut off water to a school for unpaid bills?",
+      "rel": {
+        "rules-6": 2
+      },
+      "runs": {
+        "keyword": [
+          "rules-6",
+          "rules-5",
+          "rules-4",
+          "property-tax-2",
+          "rules-3",
+          "rules-1",
+          "water-1",
+          "form-W-7",
+          "water-3",
+          "form-W-17"
+        ],
+        "vector": [
+          "rules-6",
+          "waste-2",
+          "rules-5",
+          "rules-3",
+          "circ-14-2026",
+          "rules-7",
+          "form-W-17",
+          "form-W-12",
+          "rules-8",
+          "rules-4"
+        ],
+        "hybrid": [
+          "rules-6",
+          "rules-5",
+          "rules-3",
+          "rules-4",
+          "form-W-17",
+          "form-W-12",
+          "rules-7",
+          "rules-8",
+          "rules-1",
+          "property-tax-2"
+        ],
+        "rerank": [
+          "rules-6",
+          "rules-5",
+          "form-W-12",
+          "rules-7",
+          "rules-3",
+          "rules-4",
+          "rules-8",
+          "rules-1",
+          "property-tax-2",
+          "form-W-17"
+        ]
+      }
+    },
+    {
+      "q": "How much free water do BPL families get?",
+      "rel": {
+        "rules-3": 2
+      },
+      "runs": {
+        "keyword": [
+          "rules-3",
+          "grievance-1",
+          "rules-1",
+          "water-1",
+          "form-W-7",
+          "water-3",
+          "form-W-17",
+          "form-W-12",
+          "water-2",
+          "rules-8"
+        ],
+        "vector": [
+          "rules-3",
+          "waste-2",
+          "water-2",
+          "circ-14-2026",
+          "rules-2",
+          "rules-5",
+          "rules-7",
+          "rules-8",
+          "rules-6",
+          "rules-4"
+        ],
+        "hybrid": [
+          "rules-3",
+          "water-2",
+          "rules-1",
+          "grievance-1",
+          "rules-7",
+          "rules-8",
+          "form-W-7",
+          "rules-2",
+          "rules-5",
+          "form-W-17"
+        ],
+        "rerank": [
+          "rules-3",
+          "rules-7",
+          "water-2",
+          "rules-2",
+          "rules-8",
+          "rules-5",
+          "rules-1",
+          "grievance-1",
+          "form-W-7",
+          "form-W-17"
+        ]
+      }
+    },
+    {
+      "q": "What is the late fee on a water bill?",
+      "rel": {
+        "rules-5": 2
+      },
+      "runs": {
+        "keyword": [
+          "rules-5",
+          "rules-4",
+          "water-2",
+          "rules-7",
+          "trade-2",
+          "rules-3",
+          "rules-6",
+          "rules-2",
+          "rules-1",
+          "water-1"
+        ],
+        "vector": [
+          "rules-5",
+          "rules-3",
+          "water-2",
+          "rules-7",
+          "rules-4",
+          "waste-2",
+          "rules-2",
+          "rules-6",
+          "form-W-17",
+          "rules-8"
+        ],
+        "hybrid": [
+          "rules-5",
+          "water-2",
+          "rules-4",
+          "rules-3",
+          "rules-7",
+          "rules-6",
+          "rules-2",
+          "trade-2",
+          "rules-1",
+          "form-W-17"
+        ],
+        "rerank": [
+          "rules-5",
+          "rules-7",
+          "water-2",
+          "rules-6",
+          "rules-2",
+          "trade-2",
+          "rules-4",
+          "rules-3",
+          "form-W-17",
+          "rules-1"
+        ]
+      }
+    }
+  ]
+}

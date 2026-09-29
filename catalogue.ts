@@ -3257,15 +3257,16 @@ const ragSystems: Track = {
           summary: "Recall, MRR and nDCG against a test set you build.",
           minutes: 30,
           signature:
-            "Label a small test set of questions and correct passages, then score two retrieval setups with recall@k, MRR and nDCG",
+            "Label a small test set of questions and correct passages, then score four retrieval setups with recall@k, MRR and nDCG",
           formats: ["simulation", "checkpoint"],
           concepts: [
             "Golden test sets",
             "Recall@k, precision, MRR and nDCG",
             "Evaluating on your own questions, not only benchmarks",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
+          terms: ["golden-set", "recall-at-k", "mrr", "ndcg"],
           prerequisites: ["reranking"],
           plain:
             "You can't improve what you don't measure. A few dozen real questions with known correct passages are enough to tell whether a change to chunking or search actually helped.",
