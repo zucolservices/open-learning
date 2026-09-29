@@ -2951,11 +2951,12 @@ const ragSystems: Track = {
             "Versions, updates and deletions",
             "Incremental re-indexing",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["chunking"],
           plain:
             "Documents change. If the search index still holds last year's rules, the assistant will quote them confidently. Tags such as date and version, and a way to update the index, keep answers current.",
+          terms: ["index-freshness", "chunk-metadata", "metadata-filter", "chunk", "vector-index"],
         },
       ],
     },

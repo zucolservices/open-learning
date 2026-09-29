@@ -98,4 +98,22 @@ export const ragSystems = {
       "Indexing small chunks for precise search but returning the larger section each came from: 'search small, return big'.",
     module: "chunking",
   },
+  "index-freshness": {
+    term: "Index freshness",
+    definition:
+      "How closely the search index matches the current documents. A stale index keeps retrieving old, replaced or withdrawn text.",
+    module: "metadata-freshness",
+  },
+  "metadata-filter": {
+    term: "Metadata filter",
+    definition:
+      "A condition on chunk metadata (such as status = current, department or language) applied during search, so only matching chunks can be retrieved.",
+    module: "metadata-freshness",
+  },
+  "chunk-metadata": {
+    term: "Chunk metadata",
+    definition:
+      "Fields stored alongside each chunk's text and vector: document ID, title, dates, status, language, access rights. Used for filtering, citations and updates.",
+    module: "metadata-freshness",
+  },
 } satisfies Record<string, GlossaryEntry>;

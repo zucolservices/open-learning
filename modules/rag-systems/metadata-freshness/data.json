@@ -1,0 +1,154 @@
+{
+  "none": [
+    {
+      "top": [
+        {
+          "id": "circ-14-2026",
+          "score": 0.896
+        },
+        {
+          "id": "circ-09-2025",
+          "score": 0.804
+        },
+        {
+          "id": "grievance-1",
+          "score": 0.79
+        }
+      ],
+      "answer": "The fine for handing over mixed waste is ₹200.",
+      "ok": false
+    },
+    {
+      "top": [
+        {
+          "id": "circ-09-2025",
+          "score": 0.908
+        },
+        {
+          "id": "property-tax-3",
+          "score": 0.799
+        },
+        {
+          "id": "birth-death-2",
+          "score": 0.79
+        }
+      ],
+      "answer": "To book a bulk pickup for old furniture, call your ward office on any working day.",
+      "ok": false
+    }
+  ],
+  "sync": [
+    {
+      "top": [
+        {
+          "id": "circ-14-2026",
+          "score": 0.896
+        },
+        {
+          "id": "circ-22-2026",
+          "score": 0.878
+        },
+        {
+          "id": "circ-09-2025",
+          "score": 0.804
+        }
+      ],
+      "answer": "The fine for handing over mixed waste is ₹200.",
+      "ok": false
+    },
+    {
+      "top": [
+        {
+          "id": "circ-09-2025",
+          "score": 0.908
+        },
+        {
+          "id": "circ-22-2026",
+          "score": 0.855
+        },
+        {
+          "id": "property-tax-3",
+          "score": 0.799
+        }
+      ],
+      "answer": "To book a bulk pickup for old furniture, you need to visit the NMC citizen portal, as ward offices no longer take phone bookings for bulk pickups (Circular 22/2026).",
+      "ok": true
+    }
+  ],
+  "syncDelete": [
+    {
+      "top": [
+        {
+          "id": "circ-14-2026",
+          "score": 0.896
+        },
+        {
+          "id": "circ-22-2026",
+          "score": 0.878
+        },
+        {
+          "id": "grievance-1",
+          "score": 0.79
+        }
+      ],
+      "answer": "The fine for handing over mixed waste is ₹500.",
+      "ok": true
+    },
+    {
+      "top": [
+        {
+          "id": "circ-22-2026",
+          "score": 0.855
+        },
+        {
+          "id": "property-tax-3",
+          "score": 0.799
+        },
+        {
+          "id": "birth-death-2",
+          "score": 0.79
+        }
+      ],
+      "answer": "To book a bulk pickup for old furniture, visit the NMC citizen portal on 1 September 2026 or later, as bulk pickups are only available there from that date onward. Ward offices are no longer accepting phone bookings for bulk pickups.",
+      "ok": true
+    }
+  ],
+  "syncFilter": [
+    {
+      "top": [
+        {
+          "id": "circ-22-2026",
+          "score": 0.878
+        },
+        {
+          "id": "grievance-1",
+          "score": 0.79
+        },
+        {
+          "id": "water-2",
+          "score": 0.783
+        }
+      ],
+      "answer": "The fine for handing over mixed waste is ₹500.",
+      "ok": true
+    },
+    {
+      "top": [
+        {
+          "id": "circ-22-2026",
+          "score": 0.855
+        },
+        {
+          "id": "property-tax-3",
+          "score": 0.799
+        },
+        {
+          "id": "birth-death-2",
+          "score": 0.79
+        }
+      ],
+      "answer": "To book a bulk pickup for old furniture, visit the NMC citizen portal on 1 September 2026 or later, as bulk pickups are only available there from that date onward. Ward offices are no longer accepting phone bookings for bulk pickups.",
+      "ok": true
+    }
+  ]
+}
