@@ -4787,11 +4787,18 @@ const kubernetes: Track = {
             "CPU throttling vs out-of-memory kills",
             "Quality-of-service classes",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["pods"],
           plain:
             "Each container says how much CPU and memory it needs (its request) and the most it may use (its limit). Requests decide where pods fit; limits decide what happens when they get greedy.",
+          terms: [
+            "resource-request",
+            "resource-limit",
+            "allocatable",
+            "qos-class",
+            "kube-scheduler",
+          ],
         },
         {
           slug: "scheduler",

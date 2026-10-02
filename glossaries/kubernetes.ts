@@ -308,4 +308,28 @@ export const kubernetes = {
       "A temporary volume created when a pod lands on a node and deleted when the pod leaves it. It survives container restarts and can be shared by the pod's containers or kept in memory.",
     module: "persistent-storage",
   },
+  "resource-request": {
+    term: "Resource request",
+    definition:
+      "The CPU and memory a container reserves. The scheduler places pods by their requests, not their actual usage, and a node is full when its pods' requests reach its allocatable resources.",
+    module: "requests-limits",
+  },
+  "resource-limit": {
+    term: "Resource limit",
+    definition:
+      "The most CPU or memory a container may use. CPU above the limit is throttled (the container slows down); memory above the limit gets the container killed by the kernel (OOMKilled).",
+    module: "requests-limits",
+  },
+  allocatable: {
+    term: "Allocatable",
+    definition:
+      "The part of a node's CPU, memory and disk available to pods: its capacity minus what's reserved for the operating system and Kubernetes components and an eviction threshold.",
+    module: "requests-limits",
+  },
+  "qos-class": {
+    term: "QoS class",
+    definition:
+      "A label Kubernetes gives each pod from its requests and limits: Guaranteed (requests equal limits for every container), Burstable or BestEffort (none set). It predicts which pods are evicted first when a node runs short.",
+    module: "requests-limits",
+  },
 } satisfies Record<string, GlossaryEntry>;
