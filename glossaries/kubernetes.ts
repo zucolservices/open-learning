@@ -440,4 +440,28 @@ export const kubernetes = {
       "An admission controller that checks (and can change) objects against an organisation's own rules, such as Kyverno, OPA Gatekeeper or the built-in ValidatingAdmissionPolicy and MutatingAdmissionPolicy written in CEL.",
     module: "pod-security",
   },
+  helm: {
+    term: "Helm",
+    definition:
+      '"The package manager for Kubernetes": a chart bundles templated manifests, a values file fills them in per environment, and each install is a release you can upgrade or roll back. CNCF graduated; Helm 4 was released in November 2025.',
+    module: "helm-gitops",
+  },
+  kustomize: {
+    term: "Kustomize",
+    definition:
+      "A template-free way to customise plain YAML: a base holds the shared manifests and overlays patch them per environment. Built into kubectl as kubectl apply -k.",
+    module: "helm-gitops",
+  },
+  gitops: {
+    term: "GitOps",
+    definition:
+      "Running deployments from Git: desired state is declared and versioned there, and an agent in the cluster (such as Argo CD or Flux) pulls it and continuously reconciles the cluster to match.",
+    module: "helm-gitops",
+  },
+  "config-drift": {
+    term: "Drift",
+    definition:
+      "When the live cluster no longer matches the desired state in Git, for example after a manual kubectl change. GitOps agents report it (OutOfSync) and can correct it automatically.",
+    module: "helm-gitops",
+  },
 } satisfies Record<string, GlossaryEntry>;

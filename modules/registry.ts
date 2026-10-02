@@ -205,4 +205,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "kubernetes/disruptions-upgrades": () => import("./kubernetes/disruptions-upgrades"),
   "kubernetes/rbac": () => import("./kubernetes/rbac"),
   "kubernetes/pod-security": () => import("./kubernetes/pod-security"),
+  "kubernetes/helm-gitops": () => import("./kubernetes/helm-gitops"),
 };

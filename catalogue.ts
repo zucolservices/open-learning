@@ -4924,11 +4924,12 @@ const kubernetes: Track = {
             "GitOps: Git as the source of truth",
             "Argo CD and Flux",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["deployments"],
           plain:
             "Real apps are dozens of YAML files that differ per environment. Helm and Kustomize package them; GitOps tools then keep the cluster matching what's in Git, so every change is reviewed and reversible.",
+          terms: ["helm", "kustomize", "gitops", "config-drift", "declarative"],
         },
         {
           slug: "debugging",
