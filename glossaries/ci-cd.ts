@@ -146,4 +146,46 @@ export const ciCd = {
       "A build that anyone can repeat from the same source, environment and instructions and get bit-for-bit identical output. It lets others check that a published artifact really came from the claimed source.",
     module: "builds-caching",
   },
+  "unit-test": {
+    term: "Unit test",
+    definition:
+      "A small automated test that checks one function or class on its own, in memory, in milliseconds. Fast and precise, but blind to problems between parts.",
+    module: "test-pyramid",
+  },
+  "integration-test": {
+    term: "Integration test",
+    definition:
+      "An automated test that checks parts working together, such as your code with a real database or another service. Slower than a unit test, and catches wiring mistakes unit tests can't.",
+    module: "test-pyramid",
+  },
+  "e2e-test": {
+    term: "End-to-end test",
+    definition:
+      "An automated test that drives the whole system the way a user would, for example a browser signing in, filling a cart and paying. The only test of a full journey, but slow and the most prone to random failures.",
+    module: "test-pyramid",
+  },
+  "test-pyramid": {
+    term: "Test pyramid",
+    definition:
+      "Mike Cohn's picture of a healthy test suite: many fast unit tests at the bottom, fewer integration tests, and a handful of slow end-to-end tests at the top. Its upside-down opposite is the 'ice-cream cone'.",
+    module: "test-pyramid",
+  },
+  "flaky-test": {
+    term: "Flaky test",
+    definition:
+      "A test that sometimes passes and sometimes fails on exactly the same code, because of timing, shared state or the network. Flaky tests teach people to ignore red builds.",
+    module: "test-pyramid",
+  },
+  "test-quarantine": {
+    term: "Test quarantine",
+    definition:
+      "Moving a known-flaky test aside so it still runs but can't fail the build, with an owner and a deadline to fix it, so the rest of the suite stays trustworthy.",
+    module: "test-pyramid",
+  },
+  "code-coverage": {
+    term: "Code coverage",
+    definition:
+      "The share of code lines or branches that ran during the tests. Useful for spotting untested areas, but a line can run without its result being checked, so high coverage isn't proof of good tests.",
+    module: "test-pyramid",
+  },
 } satisfies Record<string, GlossaryEntry>;

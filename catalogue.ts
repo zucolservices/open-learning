@@ -5179,11 +5179,20 @@ const ciCd: Track = {
             "What each kind of test catches",
             "Flaky tests and why they matter",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["pipeline-anatomy"],
           plain:
             "Automated tests let a machine check the code on every change. Small, fast tests catch most mistakes; a few slow end-to-end tests check that the whole thing works together. Tests that fail at random teach people to ignore red builds.",
+          terms: [
+            "unit-test",
+            "integration-test",
+            "e2e-test",
+            "test-pyramid",
+            "flaky-test",
+            "test-quarantine",
+            "code-coverage",
+          ],
         },
         {
           slug: "pipeline-speed",
