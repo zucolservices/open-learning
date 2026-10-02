@@ -3406,10 +3406,19 @@ const cloudArchitecture: Track = {
             "IaaS, PaaS and SaaS",
             "Paying for what you use, and what that changes",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           plain:
             "The cloud is computers in someone else's data centre that you rent by the minute over the internet. Instead of buying servers years ahead, you ask for them when you need them and give them back when you don't.",
+          terms: [
+            "cloud-computing",
+            "on-premises",
+            "iaas",
+            "paas",
+            "saas",
+            "elasticity",
+            "pay-as-you-go",
+          ],
         },
         {
           slug: "regions-responsibility",
