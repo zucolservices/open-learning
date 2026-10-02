@@ -230,4 +230,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "ci-cd/software-supply-chain": () => import("./ci-cd/software-supply-chain"),
   "ci-cd/dora-metrics": () => import("./ci-cd/dora-metrics"),
   "ci-cd/ci-platforms": () => import("./ci-cd/ci-platforms"),
+  "ci-cd/capstone-cicd": () => import("./ci-cd/capstone-cicd"),
 };
