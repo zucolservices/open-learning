@@ -204,4 +204,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "kubernetes/autoscaling": () => import("./kubernetes/autoscaling"),
   "kubernetes/disruptions-upgrades": () => import("./kubernetes/disruptions-upgrades"),
   "kubernetes/rbac": () => import("./kubernetes/rbac"),
+  "kubernetes/pod-security": () => import("./kubernetes/pod-security"),
 };

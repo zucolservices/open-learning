@@ -422,4 +422,22 @@ export const kubernetes = {
       "Grants a Role or ClusterRole to users, groups or service accounts. A RoleBinding grants it within its namespace; a ClusterRoleBinding grants it across the whole cluster.",
     module: "rbac",
   },
+  "pod-security-standards": {
+    term: "Pod Security Standards",
+    definition:
+      "Three built-in security levels for pods: Privileged (anything goes), Baseline (blocks known privilege escalations) and Restricted (hardened: non-root, no escalation, dropped capabilities, seccomp). Pod Security Admission enforces them per namespace via labels.",
+    module: "pod-security",
+  },
+  "security-context": {
+    term: "securityContext",
+    definition:
+      "The part of a pod or container spec that sets security options: which user it runs as, whether it may gain privileges, its Linux capabilities, seccomp profile, read-only root filesystem and more.",
+    module: "pod-security",
+  },
+  "policy-engine": {
+    term: "Policy engine",
+    definition:
+      "An admission controller that checks (and can change) objects against an organisation's own rules, such as Kyverno, OPA Gatekeeper or the built-in ValidatingAdmissionPolicy and MutatingAdmissionPolicy written in CEL.",
+    module: "pod-security",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -4899,11 +4899,17 @@ const kubernetes: Track = {
             "Non-root, read-only, no privilege",
             "Admission control and policy engines",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["rbac"],
           plain:
             "A container running as root with host access can take over its machine. Kubernetes can check every pod before it starts and refuse risky ones, using built-in security levels or a policy engine.",
+          terms: [
+            "pod-security-standards",
+            "security-context",
+            "admission-control",
+            "policy-engine",
+          ],
         },
         {
           slug: "helm-gitops",
