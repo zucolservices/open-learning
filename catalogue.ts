@@ -5482,11 +5482,12 @@ const ciCd: Track = {
             "OIDC federation and short-lived credentials",
             "Least privilege and untrusted code in CI",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["pipeline-anatomy"],
           plain:
             "A pipeline that deploys to production needs permission to do so, which makes it a favourite target for attackers. Instead of storing long-lived passwords in the pipeline, modern setups let the pipeline prove who it is and get a key that expires in minutes.",
+          terms: ["pipeline-secret", "oidc-federation", "least-privilege", "secret-scanning"],
         },
         {
           slug: "software-supply-chain",

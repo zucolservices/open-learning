@@ -398,4 +398,22 @@ export const ciCd = {
       "One of DORA's measures: how long it takes to recover from a deployment that fails and needs immediate intervention. It replaced the older 'mean time to restore' in 2023.",
     module: "rollbacks",
   },
+  "oidc-federation": {
+    term: "OIDC federation (workload identity)",
+    definition:
+      "Letting a pipeline job prove who it is with a short-lived signed token, which a cloud exchanges for temporary credentials under a trust rule you set. Replaces long-lived keys stored as secrets.",
+    module: "pipeline-secrets",
+  },
+  "pipeline-secret": {
+    term: "Pipeline secret",
+    definition:
+      "A password, token or key a pipeline needs, stored encrypted by the CI service and handed only to the jobs that need it. Best kept few, narrow and short-lived.",
+    module: "pipeline-secrets",
+  },
+  "least-privilege": {
+    term: "Least privilege",
+    definition:
+      "Giving each person, job or service only the permissions it needs for its task, so a compromise can do as little damage as possible.",
+    module: "pipeline-secrets",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -430,7 +430,7 @@ Platform & cloud area, third track (started 2026-10-03). 21 modules in 6 chapter
 | 4f. Cloud Architecture     | Platform & cloud, first track, 22 modules                                               | Live: all 22 modules (2026-10-02)                                       |
 | 4g. Streaming Data Systems | Data engineering, second track, 23 modules                                              | Live: all 23 modules (2026-10-02)                                       |
 | 4h. Kubernetes             | Platform & cloud, second track, 23 modules                                              | Live: all 23 modules (2026-10-03)                                       |
-| 4i. CI/CD                  | Platform & cloud, third track, 21 modules                                               | In progress: 16 of 21 modules                                           |
+| 4i. CI/CD                  | Platform & cloud, third track, 21 modules                                               | In progress: 17 of 21 modules                                           |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
