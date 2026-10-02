@@ -170,4 +170,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "streaming-data/consumer-groups": () => import("./streaming-data/consumer-groups"),
   "streaming-data/replication-durability": () => import("./streaming-data/replication-durability"),
   "streaming-data/retention-compaction": () => import("./streaming-data/retention-compaction"),
+  "streaming-data/platforms-compared": () => import("./streaming-data/platforms-compared"),
 };

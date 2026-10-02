@@ -4077,7 +4077,8 @@ const streamingData: Track = {
             "Cloud streaming services",
             "Managed vs self-run",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["kafka-protocol", "managed-kafka"],
           level: "core",
           prerequisites: ["replication-durability"],
           plain:

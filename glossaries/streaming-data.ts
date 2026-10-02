@@ -151,4 +151,16 @@ export const streamingData = {
       "Keeping recent log segments on broker disks and moving older ones to cheap object storage such as S3, where consumers can still read them. Production-ready in Apache Kafka since 3.9.",
     module: "retention-compaction",
   },
+  "kafka-protocol": {
+    term: "Kafka protocol",
+    definition:
+      "The wire protocol Kafka clients use to talk to brokers. Platforms that speak it (Redpanda, Amazon MSK, Confluent, Azure Event Hubs' Kafka endpoint, WarpStream…) work with existing Kafka client code, though not always with every feature.",
+    module: "platforms-compared",
+  },
+  "managed-kafka": {
+    term: "Managed Kafka",
+    definition:
+      "Apache Kafka run by a provider (Amazon MSK, Confluent Cloud, Google Managed Service for Apache Kafka, Aiven): they handle brokers, patching and failures; you still choose sizes, topics and partitions.",
+    module: "platforms-compared",
+  },
 } satisfies Record<string, GlossaryEntry>;
