@@ -221,4 +221,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "ci-cd/container-builds": () => import("./ci-cd/container-builds"),
   "ci-cd/environments-promotion": () => import("./ci-cd/environments-promotion"),
   "ci-cd/iac-pipelines": () => import("./ci-cd/iac-pipelines"),
+  "ci-cd/delivery-vs-deployment": () => import("./ci-cd/delivery-vs-deployment"),
 };

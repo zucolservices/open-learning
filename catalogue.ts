@@ -5357,11 +5357,18 @@ const ciCd: Track = {
             "The deployment pipeline as the only road to production",
             "Approvals, change windows and change records",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["environments-promotion"],
           plain:
             "Continuous delivery means every change that passes the pipeline could be released at the press of a button. Continuous deployment goes one step further: it releases automatically. Which one fits depends on how much you trust your tests and what a mistake costs.",
+          terms: [
+            "continuous-delivery",
+            "continuous-deployment",
+            "deployment-pipeline",
+            "lead-time",
+            "change-board",
+          ],
         },
         {
           slug: "release-strategies",

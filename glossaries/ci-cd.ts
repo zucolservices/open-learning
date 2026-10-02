@@ -308,4 +308,22 @@ export const ciCd = {
       "A temporary copy of the app created automatically for one pull request, at its own address, so reviewers can try the change before merging. It is deleted when the pull request closes.",
     module: "environments-promotion",
   },
+  "deployment-pipeline": {
+    term: "Deployment pipeline",
+    definition:
+      "The automated route every change takes from version control to users: build, test, deploy to each environment and release. In continuous delivery it is the only way to reach production.",
+    module: "delivery-vs-deployment",
+  },
+  "lead-time": {
+    term: "Change lead time",
+    definition:
+      "How long a change takes to go from being committed to version control to running in production. One of DORA's delivery measures; shorter means faster feedback.",
+    module: "delivery-vs-deployment",
+  },
+  "change-board": {
+    term: "Change advisory board (CAB)",
+    definition:
+      "A committee that reviews and approves changes before they go to production, often meeting weekly. DORA found external approval like this slows delivery without lowering failure rates; peer review plus automation works better.",
+    module: "delivery-vs-deployment",
+  },
 } satisfies Record<string, GlossaryEntry>;
