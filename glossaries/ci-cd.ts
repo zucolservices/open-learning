@@ -242,4 +242,22 @@ export const ciCd = {
       "A file that maps parts of a repository to the people or teams responsible for them, so changes there automatically ask those owners for review, and can require their approval.",
     module: "quality-gates",
   },
+  "artifact-registry": {
+    term: "Artifact registry",
+    definition:
+      "A service that stores versioned build outputs such as container images and packages, for example Amazon ECR, Google Artifact Registry, Azure Container Registry, GitHub Packages, JFrog Artifactory or Nexus.",
+    module: "artifacts-versioning",
+  },
+  semver: {
+    term: "Semantic versioning (SemVer)",
+    definition:
+      "Version numbers in the form MAJOR.MINOR.PATCH: bump PATCH for backward-compatible fixes, MINOR for backward-compatible features, MAJOR for breaking changes. A released version must never change.",
+    module: "artifacts-versioning",
+  },
+  promotion: {
+    term: "Promotion",
+    definition:
+      "Moving the same, already-built artifact from one environment to the next (test, staging, production) instead of rebuilding it, so what you tested is exactly what you ship.",
+    module: "artifacts-versioning",
+  },
 } satisfies Record<string, GlossaryEntry>;

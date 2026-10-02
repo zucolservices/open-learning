@@ -217,4 +217,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "ci-cd/test-pyramid": () => import("./ci-cd/test-pyramid"),
   "ci-cd/pipeline-speed": () => import("./ci-cd/pipeline-speed"),
   "ci-cd/quality-gates": () => import("./ci-cd/quality-gates"),
+  "ci-cd/artifacts-versioning": () => import("./ci-cd/artifacts-versioning"),
 };

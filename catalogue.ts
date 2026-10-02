@@ -5263,11 +5263,12 @@ const ciCd: Track = {
             "Build once, promote the same artifact",
             "Semantic versioning and immutable versions",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["builds-caching"],
           plain:
             "An artifact is the packaged result of a build, such as a container image or a library file. Build it once, give it a version that never changes, and move that exact artifact from testing to production, so what you tested is what you ship.",
+          terms: ["artifact", "artifact-registry", "promotion", "semver"],
         },
         {
           slug: "container-builds",
