@@ -5785,11 +5785,12 @@ const observability: Track = {
             "Full-text indexing vs label indexing",
             "Retention tiers and sampling",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["structured-logging"],
           plain:
             "Logs have to be collected from every machine, cleaned up and stored somewhere searchable. Indexing every word is powerful and expensive; keeping recent logs hot and older ones in cheap storage keeps the bill sane.",
+          terms: ["log-pipeline", "retention", "otel-collector", "log"],
         },
         {
           slug: "distributed-tracing",

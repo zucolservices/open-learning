@@ -182,4 +182,16 @@ export const observability = {
       "How serious a log record is: TRACE, DEBUG, INFO, WARN, ERROR or FATAL. Levels let you filter noise and keep costs down.",
     module: "structured-logging",
   },
+  "log-pipeline": {
+    term: "Log pipeline",
+    definition:
+      "The chain that collects logs from every machine, processes them (parse, filter, sample, redact) and delivers them to storage you can search: for example Fluent Bit or the OpenTelemetry Collector feeding Loki or Elasticsearch.",
+    module: "log-pipelines",
+  },
+  retention: {
+    term: "Retention",
+    definition:
+      "How long telemetry is kept, and how quickly it can be searched. Teams often keep recent data hot and move older data to cheaper tiers or archives.",
+    module: "log-pipelines",
+  },
 } satisfies Record<string, GlossaryEntry>;
