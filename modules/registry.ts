@@ -208,4 +208,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "kubernetes/helm-gitops": () => import("./kubernetes/helm-gitops"),
   "kubernetes/debugging": () => import("./kubernetes/debugging"),
   "kubernetes/operators": () => import("./kubernetes/operators"),
+  "kubernetes/managed-kubernetes": () => import("./kubernetes/managed-kubernetes"),
 };

@@ -4998,11 +4998,18 @@ const kubernetes: Track = {
             "Control plane fees, nodes and serverless modes",
             "When a simpler platform is better",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["autoscaling"],
           plain:
             "Running the control plane yourself is hard, so most teams use a managed service. They differ in what they manage, how they charge and how much they hide. Sometimes a simpler container service is the better choice.",
+          terms: [
+            "managed-kubernetes",
+            "autopilot",
+            "serverless-containers",
+            "control-plane",
+            "node",
+          ],
         },
         {
           slug: "capstone-k8s",

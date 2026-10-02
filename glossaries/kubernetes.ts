@@ -518,4 +518,22 @@ export const kubernetes = {
       "A link from an object to the object that owns it, such as Pods to their ReplicaSet. When the owner is deleted, garbage collection removes what it owns.",
     module: "operators",
   },
+  "managed-kubernetes": {
+    term: "Managed Kubernetes",
+    definition:
+      "A cloud service that runs the Kubernetes control plane for you (EKS, GKE, AKS, OpenShift services), usually for about $0.10 per cluster-hour; you run and pay for the nodes, unless you choose a mode where the provider manages those too.",
+    module: "managed-kubernetes",
+  },
+  autopilot: {
+    term: "Fully managed node modes",
+    definition:
+      "GKE Autopilot, EKS Auto Mode and AKS Automatic: the provider also chooses, patches and scales the nodes. Autopilot bills by what pods request; the others add a fee on top of the nodes. Fewer knobs, less to run.",
+    module: "managed-kubernetes",
+  },
+  "serverless-containers": {
+    term: "Serverless containers",
+    definition:
+      "Services that run a container without a cluster to manage, billed per use: Google Cloud Run, Amazon ECS with Fargate (including ECS Express Mode), Azure Container Apps. Often simpler and cheaper for a few services.",
+    module: "managed-kubernetes",
+  },
 } satisfies Record<string, GlossaryEntry>;
