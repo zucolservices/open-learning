@@ -5737,11 +5737,12 @@ const observability: Track = {
           signature: "Diagnose three sick services from four numbers each",
           formats: ["branching-scenario", "checkpoint"],
           concepts: ["The four golden signals", "RED and USE methods", "Symptoms vs causes"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["percentiles"],
           plain:
             "A few measurements tell you most of what you need about any service: how slow it is, how busy it is, how often it fails and how full it is. Start every dashboard and investigation with these.",
+          terms: ["golden-signals", "saturation", "red-method", "use-method", "latency"],
         },
       ],
     },

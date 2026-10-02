@@ -237,4 +237,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "observability/metric-types": () => import("./observability/metric-types"),
   "observability/percentiles": () => import("./observability/percentiles"),
   "observability/cardinality": () => import("./observability/cardinality"),
+  "observability/golden-signals": () => import("./observability/golden-signals"),
 };

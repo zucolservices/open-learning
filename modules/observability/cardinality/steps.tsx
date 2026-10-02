@@ -76,7 +76,9 @@ export function OneTooMany() {
               danger ? "border-bad/60 bg-bad/10" : "border-line bg-surface",
             )}
           >
-            <p className="text-muted text-[10px]">Time series for this one metric (every possible combination)</p>
+            <p className="text-muted text-[10px]">
+              Time series for this one metric (every possible combination)
+            </p>
             <motion.p
               key={n}
               initial={{ scale: 0.95, opacity: 0.6 }}

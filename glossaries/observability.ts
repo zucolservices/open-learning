@@ -140,4 +140,28 @@ export const observability = {
       "A name–value pair attached to a metric, such as route=/pay, that lets you slice it. Every combination of label values becomes a separate time series.",
     module: "cardinality",
   },
+  "golden-signals": {
+    term: "Golden signals",
+    definition:
+      "The four measurements Google's SRE book recommends for any user-facing service: latency, traffic, errors and saturation.",
+    module: "golden-signals",
+  },
+  saturation: {
+    term: "Saturation",
+    definition:
+      "How full a service or resource is (CPU, memory, connections, disk), especially the most constrained one. Rising latency is often an early sign of it.",
+    module: "golden-signals",
+  },
+  "red-method": {
+    term: "RED method",
+    definition:
+      "Tom Wilkie's checklist for request-driven services: Rate (requests per second), Errors (failed requests per second) and Duration (how long requests take).",
+    module: "golden-signals",
+  },
+  "use-method": {
+    term: "USE method",
+    definition:
+      "Brendan Gregg's checklist for resources such as CPUs, disks and network links: Utilisation, Saturation and Errors.",
+    module: "golden-signals",
+  },
 } satisfies Record<string, GlossaryEntry>;
