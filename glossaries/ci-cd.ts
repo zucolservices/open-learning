@@ -326,4 +326,28 @@ export const ciCd = {
       "A committee that reviews and approves changes before they go to production, often meeting weekly. DORA found external approval like this slows delivery without lowering failure rates; peer review plus automation works better.",
     module: "delivery-vs-deployment",
   },
+  "blue-green": {
+    term: "Blue-green deployment",
+    definition:
+      "Running two complete copies of production: the live one and an idle one with the new version. Traffic switches to the new copy all at once, and switches back just as fast if something goes wrong. Costs double capacity during the switch.",
+    module: "release-strategies",
+  },
+  "canary-release": {
+    term: "Canary release",
+    definition:
+      "Releasing a new version to a small share of users or traffic first, comparing its health with the old version, and widening only if it behaves. Named after the canaries miners carried to detect gas.",
+    module: "release-strategies",
+  },
+  "shadow-traffic": {
+    term: "Shadow traffic (mirroring)",
+    definition:
+      "Copying live requests to a new version and discarding its answers, so it can be tested on real traffic without users seeing it. Unsafe for requests with side effects, such as payments.",
+    module: "release-strategies",
+  },
+  "progressive-delivery": {
+    term: "Progressive delivery",
+    definition:
+      "Releasing changes gradually, to more users at each step, with automatic checks that widen or roll back the rollout: canaries, blue-green switches and feature flags together.",
+    module: "release-strategies",
+  },
 } satisfies Record<string, GlossaryEntry>;

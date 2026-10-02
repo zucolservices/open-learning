@@ -5382,11 +5382,18 @@ const ciCd: Track = {
             "Canary releases measured against the old version",
             "Cost and complexity of each strategy",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["delivery-vs-deployment"],
           plain:
             "There are several ways to swap an old version for a new one. Some replace everything at once; others send a few users to the new version first and watch what happens. The careful ways limit how many people a bad release can hurt.",
+          terms: [
+            "blue-green",
+            "canary-release",
+            "shadow-traffic",
+            "progressive-delivery",
+            "feature-flag",
+          ],
         },
         {
           slug: "feature-flags",
