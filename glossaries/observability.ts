@@ -350,4 +350,16 @@ export const observability = {
       "Sending telemetry into an observability platform so it can be stored and searched. Many platforms charge per gigabyte ingested, so whatever you drop before ingestion costs nothing.",
     module: "observability-cost",
   },
+  "technical-decline": {
+    term: "Technical decline",
+    definition:
+      "In UPI, a payment that fails because of a technical problem, such as systems or networks being unavailable at a bank or NPCI. NPCI publishes each bank's technical decline rate monthly.",
+    module: "capstone-observability",
+  },
+  "business-decline": {
+    term: "Business decline",
+    definition:
+      "In UPI, a payment refused for a reason on the customer's side, such as a wrong PIN or an incorrect beneficiary account. It's not a system failure, so it shouldn't count against a reliability target.",
+    module: "capstone-observability",
+  },
 } satisfies Record<string, GlossaryEntry>;

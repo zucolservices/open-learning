@@ -291,9 +291,9 @@ export function BuildOrBuy() {
         long-term data in object storage, &ldquo;ubiquitous, cost-effective, high-durability&rdquo;.
       </p>
       <p>
-        Many teams mix: about half of the survey&apos;s respondents run mostly or entirely self-managed
-        setups, often with SaaS for some signals. There is no cheapest option in general, only
-        cheapest for your data, your scale and your team.
+        Many teams mix: about half of the survey&apos;s respondents run mostly or entirely
+        self-managed setups, often with SaaS for some signals. There is no cheapest option in
+        general, only cheapest for your data, your scale and your team.
       </p>
     </StepLayout>
   );

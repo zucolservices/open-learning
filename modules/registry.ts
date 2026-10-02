@@ -251,4 +251,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "observability/incident-response": () => import("./observability/incident-response"),
   "observability/postmortems": () => import("./observability/postmortems"),
   "observability/observability-cost": () => import("./observability/observability-cost"),
+  "observability/capstone-observability": () => import("./observability/capstone-observability"),
 };
