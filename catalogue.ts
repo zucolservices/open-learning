@@ -3933,7 +3933,17 @@ const streamingData: Track = {
             "Latency: hours, seconds, milliseconds",
             "When batch is still the right answer",
           ],
-          status: "planned",
+          status: "live",
+          terms: [
+            "batch",
+            "streaming",
+            "bounded-data",
+            "unbounded-data",
+            "latency",
+            "micro-batch",
+            "lambda-architecture",
+            "kappa-architecture",
+          ],
           level: "beginner",
           plain:
             "Most data used to be processed in big nightly batches. Some decisions can't wait that long: a fraud check, a delivery estimate, a stock alert. Stream processing handles each event as it arrives, but costs more care to run.",

@@ -357,7 +357,7 @@ Data engineering area, second track (approved 2026-10-02). 23 modules in 7 chapt
 | 4d. Agile & Scrum          | Delivery management, first track, 23 modules                                            | Live: all 23 modules (2026-09-28)                                       |
 | 4e. RAG Systems            | AI & machine learning, second track, 23 modules                                         | Live: all 23 modules (2026-09-29)                                       |
 | 4f. Cloud Architecture     | Platform & cloud, first track, 22 modules                                               | Live: all 22 modules (2026-10-02)                                       |
-| 4g. Streaming Data Systems | Data engineering, second track, 23 modules                                              | In progress: 0 of 23 modules                                            |
+| 4g. Streaming Data Systems | Data engineering, second track, 23 modules                                              | In progress: 1 of 23 modules                                            |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
