@@ -260,4 +260,22 @@ export const kubernetes = {
       "The network plugin (following the Container Network Interface) that gives pods their IP addresses and connects them, such as Calico, Cilium or a cloud's own plugin. Whether NetworkPolicies are enforced depends on it.",
     module: "network-policies",
   },
+  configmap: {
+    term: "ConfigMap",
+    definition:
+      "An object for non-confidential settings as key-value pairs (up to 1 MiB), given to pods as environment variables, command arguments or files. Mounted files update in running pods; environment variables don't.",
+    module: "config-secrets",
+  },
+  secret: {
+    term: "Secret",
+    definition:
+      "An object for sensitive values such as passwords, tokens and keys. Values are only base64-encoded and, by default, stored unencrypted in etcd, so protect them with encryption at rest, tight RBAC and limits on who can create pods.",
+    module: "config-secrets",
+  },
+  "encryption-at-rest": {
+    term: "Encryption at rest",
+    definition:
+      "Encrypting data where it is stored. For Kubernetes Secrets, the API server can encrypt them before writing to etcd, ideally with a cloud key management service (KMS v2, stable since 1.29); managed services increasingly do this by default.",
+    module: "config-secrets",
+  },
 } satisfies Record<string, GlossaryEntry>;

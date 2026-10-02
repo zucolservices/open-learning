@@ -4740,11 +4740,12 @@ const kubernetes: Track = {
             "Secrets are encoded, not encrypted",
             "Encryption at rest and external secret stores",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["pods"],
           plain:
             "Apps need settings and passwords that differ between environments. Kubernetes stores them as ConfigMaps and Secrets and hands them to pods, but a Secret is only base64-encoded unless you protect it properly.",
+          terms: ["configmap", "secret", "encryption-at-rest", "etcd"],
         },
         {
           slug: "persistent-storage",
