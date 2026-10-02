@@ -464,4 +464,34 @@ export const kubernetes = {
       "When the live cluster no longer matches the desired state in Git, for example after a manual kubectl change. GitOps agents report it (OutOfSync) and can correct it automatically.",
     module: "helm-gitops",
   },
+  "k8s-event": {
+    term: "Event",
+    definition:
+      "A short record Kubernetes components write about something that happened to an object, such as FailedScheduling, Pulling, BackOff or Killing. Shown at the bottom of kubectl describe; kept for an hour by default.",
+    module: "debugging",
+  },
+  crashloopbackoff: {
+    term: "CrashLoopBackOff",
+    definition:
+      "A container status meaning the container keeps starting and exiting, so the kubelet waits longer between restarts (10 s doubling to five minutes). Read the crashed instance's logs with kubectl logs --previous.",
+    module: "debugging",
+  },
+  imagepullbackoff: {
+    term: "ImagePullBackOff",
+    definition:
+      "A container status meaning the image couldn't be pulled (wrong name or tag, missing registry credentials, network) and the kubelet is waiting before retrying, up to five minutes between attempts.",
+    module: "debugging",
+  },
+  oomkilled: {
+    term: "OOMKilled",
+    definition:
+      "The reason shown when the kernel killed a container for exceeding its memory limit; the exit code is 137 (128 + signal 9).",
+    module: "debugging",
+  },
+  "ephemeral-container": {
+    term: "Ephemeral container",
+    definition:
+      "A temporary container added to a running pod for troubleshooting, typically with kubectl debug, useful when the app's image has no shell or tools. Stable since 1.25.",
+    module: "debugging",
+  },
 } satisfies Record<string, GlossaryEntry>;
