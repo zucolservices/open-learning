@@ -247,4 +247,28 @@ export const streamingData = {
       "A stream processor's running estimate of how far event time has progressed: a watermark of X claims all events before X have arrived. Windows are finalised when it passes their end; later events are late.",
     module: "event-time",
   },
+  "stream-window": {
+    term: "Window",
+    definition:
+      "A finite slice of an endless stream, usually by event time, over which a count, sum or other aggregate is computed. Types: tumbling, hopping, sliding and session.",
+    module: "windows",
+  },
+  "tumbling-window": {
+    term: "Tumbling window",
+    definition:
+      "Fixed-size, non-overlapping windows placed back to back, such as every 10 minutes. Each event falls in exactly one.",
+    module: "windows",
+  },
+  "hopping-window": {
+    term: "Hopping window",
+    definition:
+      "Fixed-size windows that start more often than their size, so they overlap: 10-minute windows every 5 minutes put each event in two. Flink, Spark and Beam call these sliding windows.",
+    module: "windows",
+  },
+  "session-window": {
+    term: "Session window",
+    definition:
+      "A window per key that groups events until there's a gap of inactivity longer than a set time, so its length varies. Suits user visits.",
+    module: "windows",
+  },
 } satisfies Record<string, GlossaryEntry>;

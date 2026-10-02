@@ -176,4 +176,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "streaming-data/delivery-guarantees": () => import("./streaming-data/delivery-guarantees"),
   "streaming-data/stateless-processing": () => import("./streaming-data/stateless-processing"),
   "streaming-data/event-time": () => import("./streaming-data/event-time"),
+  "streaming-data/windows": () => import("./streaming-data/windows"),
 };

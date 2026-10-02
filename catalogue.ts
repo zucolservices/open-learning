@@ -4216,7 +4216,14 @@ const streamingData: Track = {
             "Sliding and session windows",
             "Late data and allowed lateness",
           ],
-          status: "planned",
+          status: "live",
+          terms: [
+            "stream-window",
+            "tumbling-window",
+            "hopping-window",
+            "session-window",
+            "watermark",
+          ],
           level: "core",
           prerequisites: ["event-time"],
           plain:

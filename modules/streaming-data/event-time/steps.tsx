@@ -209,7 +209,7 @@ const ENGINES: [string, string][] = [
   ],
   [
     "Kafka Streams",
-    "No explicit watermarks: stream time, the highest record timestamp seen per task, “can be considered a high-watermark”. Windows need an explicit grace period (ofSizeAndGrace); the old 24-hour default was removed in Kafka 4.0.",
+    "No explicit watermarks: stream time, the highest record timestamp seen per task, “can be considered a high-watermark”. Since Kafka 3.0 windows need an explicit grace period (ofSizeAndGrace or ofSizeWithNoGrace); 4.0 removed the old constructors that defaulted to 24 hours.",
   ],
   [
     "Spark Structured Streaming",
