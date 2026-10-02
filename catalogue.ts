@@ -5947,11 +5947,12 @@ const observability: Track = {
             "Slicing by attributes",
             "Hypotheses and evidence",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["golden-signals", "distributed-tracing", "structured-logging"],
           plain:
             "Finding the cause of a problem is a loop: look at a broad signal, form a guess, narrow down with more detailed data, check the guess. Moving smoothly from a graph to the traces and logs behind it is what good telemetry makes possible.",
+          terms: ["core-analysis-loop", "mitigation", "golden-signals", "trace", "structured-log"],
         },
         {
           slug: "incident-response",

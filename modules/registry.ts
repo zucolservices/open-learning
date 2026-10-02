@@ -247,4 +247,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "observability/error-budgets": () => import("./observability/error-budgets"),
   "observability/alerting": () => import("./observability/alerting"),
   "observability/dashboards": () => import("./observability/dashboards"),
+  "observability/investigation": () => import("./observability/investigation"),
 };

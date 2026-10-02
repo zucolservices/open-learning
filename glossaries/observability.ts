@@ -296,4 +296,16 @@ export const observability = {
       "A screen of charts arranged to answer specific questions at a glance, such as 'are users OK right now?', usually starting with the golden signals and drilling down to causes.",
     module: "dashboards",
   },
+  "core-analysis-loop": {
+    term: "Core analysis loop",
+    definition:
+      "Honeycomb's name for the investigation cycle: look at a broad signal, form a hypothesis, check it against more detailed telemetry, and repeat until the cause is clear.",
+    module: "investigation",
+  },
+  mitigation: {
+    term: "Mitigation",
+    definition:
+      "Reducing an incident's harm to users quickly, by rolling back, switching off a feature flag or moving traffic, before the root cause is understood.",
+    module: "investigation",
+  },
 } satisfies Record<string, GlossaryEntry>;
