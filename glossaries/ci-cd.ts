@@ -458,4 +458,16 @@ export const ciCd = {
       "The share of deployments that need immediate intervention afterwards, such as a rollback or hotfix. One of DORA's instability measures.",
     module: "dora-metrics",
   },
+  "hosted-runner": {
+    term: "Hosted runner",
+    definition:
+      "A build machine provided and maintained by the CI service, started fresh for each job and billed by the minute.",
+    module: "ci-platforms",
+  },
+  "self-hosted-runner": {
+    term: "Self-hosted runner",
+    definition:
+      "A build machine you run yourself and connect to the CI service: useful for private networks, special hardware or very large scale, but you patch, secure and scale it.",
+    module: "ci-platforms",
+  },
 } satisfies Record<string, GlossaryEntry>;

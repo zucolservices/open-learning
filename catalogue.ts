@@ -5551,11 +5551,12 @@ const ciCd: Track = {
             "How the platforms differ",
             "What builds really cost",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["pipeline-speed"],
           plain:
             "Many products can run your pipelines. They differ in where the code lives, who runs the machines, how pipelines are written and how you pay. The right choice usually follows where your code already is.",
+          terms: ["hosted-runner", "self-hosted-runner", "runner", "pipeline"],
         },
         {
           slug: "capstone-cicd",
