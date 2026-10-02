@@ -1,0 +1,10 @@
+# Sources (fact-checked 2026-10-02, before building)
+
+Full notes: scratchpad `streaming/m12-facts.md`.
+
+- Tyler Akidau, "Streaming 101" (O'Reilly, 5 Aug 2015): event time vs processing time, skew; "we make no assumptions about clock synchronization"; "most billing applications" as event-time use cases. "Streaming 102" (20 Jan 2016): "A watermark is a notion of input completeness with respect to event times. A watermark with a value of time X makes the statement: 'all input data with event times less than X have been observed.'"; perfect vs heuristic watermarks; too slow / too fast.
+- Flink 2.3: WatermarkStrategy.forBoundedOutOfOrderness, forMonotonousTimestamps, withIdleness; Watermark(t) means no more elements with timestamp ≤ t; BoundedOutOfOrdernessWatermarks emits maxTimestamp − outOfOrderness − 1; per-partition watermarks in the Kafka source; operator event time = minimum of inputs; 200 ms default interval; watermark alignment (FLIP-182); allowed lateness default 0; processing time "does not provide determinism"; TimeCharacteristic/ingestion time removed in 2.0.
+- Kafka Streams 4.3: CreateTime/LogAppendTime; stream-time "can be considered a high-watermark"; implicit 24 h grace deprecated in 3.0 (KIP-633), removed in 4.0 — use ofSizeWithNoGrace / ofSizeAndGrace.
+- Spark 4.2: withWatermark; watermark = max event time − threshold, set at the beginning of every trigger; "Data delayed by more than 2 hours is not guaranteed to be dropped; it may or may not get aggregated"; min across inputs by default (multipleWatermarkPolicy=max since 2.4).
+- Beam: watermark "the system's notion of when all data in a certain window can be expected to have arrived"; withAllowedLateness, default 0; Mobile Gaming example (offline phones, delayed and out-of-order events). Dataflow Pub/Sub: watermark from oldest unacknowledged message (tracking subscription for attribute event times); idle sources hold back the watermark.
+- The hour of payments (seeded synthetic data) and the simplified watermark model (max event time − allowance, results emitted when it passes window end) are illustrative. The bad-clock example is reasoning from these definitions.

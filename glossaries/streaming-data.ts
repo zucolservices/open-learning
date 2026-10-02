@@ -229,4 +229,22 @@ export const streamingData = {
       "Rewriting a stream to an internal topic under a new key so that events with the same new key meet in the same partition before grouping or joining. Triggered by changing the key.",
     module: "stateless-processing",
   },
+  "event-time": {
+    term: "Event time",
+    definition:
+      "When something actually happened, usually a timestamp inside the event. Results computed by event time are correct even when events arrive late or out of order.",
+    module: "event-time",
+  },
+  "processing-time": {
+    term: "Processing time",
+    definition:
+      "When the processing system sees an event, by its own clock. Simple and fast, but results depend on delays and change if the same data is replayed.",
+    module: "event-time",
+  },
+  watermark: {
+    term: "Watermark",
+    definition:
+      "A stream processor's running estimate of how far event time has progressed: a watermark of X claims all events before X have arrived. Windows are finalised when it passes their end; later events are late.",
+    module: "event-time",
+  },
 } satisfies Record<string, GlossaryEntry>;

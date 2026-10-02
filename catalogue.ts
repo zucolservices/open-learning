@@ -4196,7 +4196,8 @@ const streamingData: Track = {
             "Out-of-order and late events",
             "Watermarks",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["event-time", "processing-time", "watermark"],
           level: "core",
           prerequisites: ["stateless-processing"],
           plain:
