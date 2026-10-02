@@ -326,4 +326,22 @@ export const observability = {
       "A rating of how serious an incident is (often SEV-1, the worst, to SEV-5), which decides who is called in, how fast, and who must be told.",
     module: "incident-response",
   },
+  postmortem: {
+    term: "Postmortem",
+    definition:
+      "A written review after an incident: what happened, its impact, the timeline, the contributing factors and the actions that will make a repeat less likely. 'Blameless' means it examines systems and processes, not who to punish.",
+    module: "postmortems",
+  },
+  "contributing-factor": {
+    term: "Contributing factor",
+    definition:
+      "One of the several conditions that combined to make an incident possible, such as a missing check, a silent alert or a confusing tool. Serious failures usually have many, rather than a single root cause.",
+    module: "postmortems",
+  },
+  "hindsight-bias": {
+    term: "Hindsight bias",
+    definition:
+      "The tendency, once you know how things turned out, to see the warning signs as obvious and to judge people for missing them, even though they were not obvious at the time.",
+    module: "postmortems",
+  },
 } satisfies Record<string, GlossaryEntry>;

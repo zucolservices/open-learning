@@ -249,4 +249,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "observability/dashboards": () => import("./observability/dashboards"),
   "observability/investigation": () => import("./observability/investigation"),
   "observability/incident-response": () => import("./observability/incident-response"),
+  "observability/postmortems": () => import("./observability/postmortems"),
 };

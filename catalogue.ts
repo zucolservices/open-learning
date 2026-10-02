@@ -5983,11 +5983,12 @@ const observability: Track = {
             "Timelines and contributing factors",
             "Action items that stick",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["incident-response"],
           plain:
             "After an incident, the team writes down what happened and why, focusing on how the system and processes allowed it rather than who made a mistake. People only share the truth when they won't be punished for it.",
+          terms: ["postmortem", "contributing-factor", "hindsight-bias", "incident"],
         },
         {
           slug: "observability-cost",
