@@ -154,4 +154,6 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "cloud-architecture/guardrails": () => import("./cloud-architecture/guardrails"),
   "cloud-architecture/resource-hierarchy": () => import("./cloud-architecture/resource-hierarchy"),
   "cloud-architecture/landing-zones": () => import("./cloud-architecture/landing-zones"),
+  "cloud-architecture/infrastructure-as-code": () =>
+    import("./cloud-architecture/infrastructure-as-code"),
 };

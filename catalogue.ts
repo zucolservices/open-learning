@@ -3735,7 +3735,8 @@ const cloudArchitecture: Track = {
             "Read a real Terraform plan, predict what it will create, change and destroy, then find the drift someone caused by clicking in the console",
           formats: ["sandbox", "checkpoint"],
           concepts: ["Declarative infrastructure", "Plan, apply and state", "Drift and reviews"],
-          status: "planned",
+          status: "live",
+          terms: ["infrastructure-as-code", "declarative", "iac-plan", "iac-state", "drift"],
           level: "applied",
           prerequisites: ["private-networks"],
           plain:

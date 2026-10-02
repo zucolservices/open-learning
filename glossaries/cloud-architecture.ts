@@ -344,4 +344,34 @@ export const cloudArchitecture = {
       "Creating new accounts, subscriptions or projects automatically from a request, with guardrails, logging, network, access and budget already applied: AWS Account Factory, Azure subscription vending, Google project factory.",
     module: "landing-zones",
   },
+  "infrastructure-as-code": {
+    term: "Infrastructure as code (IaC)",
+    definition:
+      "Describing infrastructure (networks, servers, permissions) in text files that a tool turns into real resources. The files are versioned, reviewed and re-runnable. Tools: Terraform, OpenTofu, CloudFormation, Bicep, Pulumi.",
+    module: "infrastructure-as-code",
+  },
+  "iac-plan": {
+    term: "Plan (preview)",
+    definition:
+      "The list of changes an IaC tool will make before it makes them: create (+), update in place (~), replace (-/+) or destroy (-). Terraform plan, CloudFormation change sets, Azure what-if.",
+    module: "infrastructure-as-code",
+  },
+  declarative: {
+    term: "Declarative",
+    definition:
+      "Describing the result you want rather than the steps to get there; the tool works out the steps. Running it again changes nothing if the result already exists (idempotent).",
+    module: "infrastructure-as-code",
+  },
+  "iac-state": {
+    term: "State file",
+    definition:
+      "An IaC tool's record of which real resources it manages and their last known settings, used to plan changes. Terraform's is stored in plain text, secrets included, so it must be kept shared, locked and protected.",
+    module: "infrastructure-as-code",
+  },
+  drift: {
+    term: "Drift",
+    definition:
+      "When real infrastructure no longer matches its code, usually because someone changed it by hand. Found by running a plan or a drift check.",
+    module: "infrastructure-as-code",
+  },
 } satisfies Record<string, GlossaryEntry>;
