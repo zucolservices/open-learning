@@ -374,4 +374,22 @@ export const cloudArchitecture = {
       "When real infrastructure no longer matches its code, usually because someone changed it by hand. Found by running a plan or a drift check.",
     module: "infrastructure-as-code",
   },
+  "block-storage": {
+    term: "Block storage",
+    definition:
+      "A virtual disk attached to a server, used for its operating system and databases. Fast, but tied to one zone and usually one server: AWS EBS, Azure managed disks, Google Persistent Disk and Hyperdisk.",
+    module: "storage-databases",
+  },
+  "file-storage": {
+    term: "File storage",
+    definition:
+      "A shared file system many servers or desktops can open at once, like a network drive: AWS EFS and FSx, Azure Files, Google Filestore.",
+    module: "storage-databases",
+  },
+  "managed-database": {
+    term: "Managed database",
+    definition:
+      "A database service where the cloud runs the servers, patching, backups and failover, and you handle tables, queries and access: Amazon RDS and Aurora, Azure SQL and Azure Database for PostgreSQL, Google Cloud SQL, AlloyDB and Spanner.",
+    module: "storage-databases",
+  },
 } satisfies Record<string, GlossaryEntry>;

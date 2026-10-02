@@ -3762,7 +3762,15 @@ const cloudArchitecture: Track = {
             "Storage tiers and lifecycle rules",
             "Managed databases vs running your own",
           ],
-          status: "planned",
+          status: "live",
+          terms: [
+            "object-storage",
+            "block-storage",
+            "file-storage",
+            "storage-class",
+            "lifecycle-rule",
+            "managed-database",
+          ],
           level: "core",
           prerequisites: ["what-is-cloud"],
           plain:

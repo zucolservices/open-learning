@@ -156,4 +156,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "cloud-architecture/landing-zones": () => import("./cloud-architecture/landing-zones"),
   "cloud-architecture/infrastructure-as-code": () =>
     import("./cloud-architecture/infrastructure-as-code"),
+  "cloud-architecture/storage-databases": () => import("./cloud-architecture/storage-databases"),
 };

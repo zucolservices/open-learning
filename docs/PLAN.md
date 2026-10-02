@@ -319,7 +319,7 @@ Platform & cloud area, first track (approved 2026-10-02). 22 modules in 7 chapte
 | 4c. LLM Foundations    | Third track (AI & machine learning), 26 modules                                         | Live: all 26 modules (2026-09-25)                                       |
 | 4d. Agile & Scrum      | Delivery management, first track, 23 modules                                            | Live: all 23 modules (2026-09-28)                                       |
 | 4e. RAG Systems        | AI & machine learning, second track, 23 modules                                         | Live: all 23 modules (2026-09-29)                                       |
-| 4f. Cloud Architecture | Platform & cloud, first track, 22 modules                                               | In progress: 15 of 22 modules                                            |
+| 4f. Cloud Architecture | Platform & cloud, first track, 22 modules                                               | In progress: 16 of 22 modules                                            |
 | 5. Team feedback       | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy              | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
