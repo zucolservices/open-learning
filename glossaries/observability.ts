@@ -242,4 +242,22 @@ export const observability = {
       "Running a low-overhead profiler in production all the time and storing the results, so you can look at what the code was doing at any moment, such as during an incident.",
     module: "profiling",
   },
+  sli: {
+    term: "SLI (service level indicator)",
+    definition:
+      "A measurement of how well a service is working for its users, usually a ratio: good events divided by total events, such as the share of payments that succeed within 2 seconds.",
+    module: "slis-slos",
+  },
+  slo: {
+    term: "SLO (service level objective)",
+    definition:
+      "A target for an SLI over a time window, such as 99.9% of payments succeeding within 2 seconds over four weeks. Never 100%.",
+    module: "slis-slos",
+  },
+  sla: {
+    term: "SLA (service level agreement)",
+    definition:
+      "A promise to customers about service levels, with consequences such as refunds or credits if it's missed. Usually looser than the internal SLO.",
+    module: "slis-slos",
+  },
 } satisfies Record<string, GlossaryEntry>;

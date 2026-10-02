@@ -5864,11 +5864,12 @@ const observability: Track = {
             "Objectives and the nines",
             "SLAs are a different thing",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["golden-signals"],
           plain:
             "A service level indicator measures something users care about, like the share of payments that succeed within two seconds. An objective is the target for it, such as 99.9% over 28 days. No system is 100% reliable, and trying costs too much.",
+          terms: ["sli", "slo", "sla", "percentile"],
         },
         {
           slug: "error-budgets",
