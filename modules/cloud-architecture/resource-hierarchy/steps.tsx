@@ -171,7 +171,7 @@ export function BuildTree() {
         The idea is to group by the rules things need, not by the org chart: everything in Prod gets
         production rules, everything in Sandbox gets loose rules and a budget cap. Security and
         shared infrastructure sit apart from the workloads they serve. In India, Kotak Mahindra Bank
-        has described running exactly this kind of multi-account setup on AWS.
+        has said it runs a multi-account setup like this on AWS.
       </p>
     </StepLayout>
   );

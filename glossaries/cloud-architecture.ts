@@ -332,4 +332,16 @@ export const cloudArchitecture = {
       "How much is affected when one thing goes wrong: a leaked password, a bad command, a broken deployment. Separate accounts and environments keep it small.",
     module: "resource-hierarchy",
   },
+  "landing-zone": {
+    term: "Landing zone",
+    definition:
+      "A ready-made cloud foundation every new team lands on: the account tree and guardrails, single sign-on, central logging, security tooling, a shared network and a way to create new accounts. Built from blueprints such as AWS Control Tower, Azure landing zones and Google's enterprise foundations.",
+    module: "landing-zones",
+  },
+  "account-vending": {
+    term: "Account vending",
+    definition:
+      "Creating new accounts, subscriptions or projects automatically from a request, with guardrails, logging, network, access and budget already applied: AWS Account Factory, Azure subscription vending, Google project factory.",
+    module: "landing-zones",
+  },
 } satisfies Record<string, GlossaryEntry>;

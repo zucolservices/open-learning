@@ -3719,7 +3719,8 @@ const cloudArchitecture: Track = {
             "AWS, Azure and Google Cloud blueprints",
             "Vending new accounts safely",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["landing-zone", "account-vending"],
           level: "applied",
           prerequisites: ["resource-hierarchy", "guardrails", "connecting-networks"],
           plain:

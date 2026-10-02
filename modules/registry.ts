@@ -153,4 +153,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "cloud-architecture/encryption-secrets": () => import("./cloud-architecture/encryption-secrets"),
   "cloud-architecture/guardrails": () => import("./cloud-architecture/guardrails"),
   "cloud-architecture/resource-hierarchy": () => import("./cloud-architecture/resource-hierarchy"),
+  "cloud-architecture/landing-zones": () => import("./cloud-architecture/landing-zones"),
 };
