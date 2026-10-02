@@ -416,4 +416,28 @@ export const ciCd = {
       "Giving each person, job or service only the permissions it needs for its task, so a compromise can do as little damage as possible.",
     module: "pipeline-secrets",
   },
+  "supply-chain": {
+    term: "Software supply chain",
+    definition:
+      "Everything between a developer and the user that can affect what gets shipped: source code, third-party dependencies, build tools and machines, and how artifacts are distributed. Each link can be attacked.",
+    module: "software-supply-chain",
+  },
+  sbom: {
+    term: "SBOM (software bill of materials)",
+    definition:
+      "A machine-readable list of every component in a piece of software and its exact version, in a standard format such as SPDX or CycloneDX, so you can tell quickly whether you're affected by a new vulnerability.",
+    module: "software-supply-chain",
+  },
+  provenance: {
+    term: "Provenance (build)",
+    definition:
+      "A signed record of how an artifact was built: from which source, on which build platform, by which steps. It lets you refuse anything your pipeline didn't produce.",
+    module: "software-supply-chain",
+  },
+  slsa: {
+    term: "SLSA",
+    definition:
+      "Supply-chain Levels for Software Artifacts, an OpenSSF framework that grades how well builds (and, since v1.2, source) are protected, from Build L0 (no guarantees) to L3 (hardened builds).",
+    module: "software-supply-chain",
+  },
 } satisfies Record<string, GlossaryEntry>;

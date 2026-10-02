@@ -5503,11 +5503,12 @@ const ciCd: Track = {
             "SBOMs and vulnerability scanning",
             "Signing, provenance and SLSA",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["pipeline-secrets", "artifacts-versioning"],
           plain:
             "Most of the code you ship was written by someone else, and your build tools could be tampered with too. Supply chain security means knowing exactly what went into each artifact, checking it for known problems, and being able to prove it was built by your pipeline and not altered since.",
+          terms: ["supply-chain", "sbom", "provenance", "slsa", "lockfile"],
         },
       ],
     },

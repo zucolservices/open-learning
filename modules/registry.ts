@@ -227,4 +227,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "ci-cd/schema-migrations": () => import("./ci-cd/schema-migrations"),
   "ci-cd/rollbacks": () => import("./ci-cd/rollbacks"),
   "ci-cd/pipeline-secrets": () => import("./ci-cd/pipeline-secrets"),
+  "ci-cd/software-supply-chain": () => import("./ci-cd/software-supply-chain"),
 };
