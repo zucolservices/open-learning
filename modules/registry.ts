@@ -209,4 +209,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "kubernetes/debugging": () => import("./kubernetes/debugging"),
   "kubernetes/operators": () => import("./kubernetes/operators"),
   "kubernetes/managed-kubernetes": () => import("./kubernetes/managed-kubernetes"),
+  "kubernetes/capstone-k8s": () => import("./kubernetes/capstone-k8s"),
 };
