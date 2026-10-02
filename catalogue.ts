@@ -4144,7 +4144,13 @@ const streamingData: Track = {
             "Idempotent producers and transactions",
             "Idempotent consumers",
           ],
-          status: "planned",
+          status: "live",
+          terms: [
+            "exactly-once",
+            "idempotent-producer",
+            "kafka-transaction",
+            "idempotent-consumer",
+          ],
           level: "core",
           prerequisites: ["consumer-groups"],
           plain:

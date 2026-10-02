@@ -193,4 +193,22 @@ export const streamingData = {
       "A schema change where consumers still on the old schema can read data written with the new one, such as adding a field old readers ignore. Upgrade producers first. FULL compatibility means both.",
     module: "schemas-evolution",
   },
+  "idempotent-producer": {
+    term: "Idempotent producer",
+    definition:
+      "A Kafka producer that tags each batch with its producer ID and a sequence number, so the broker can drop retried duplicates. On by default since Kafka 3.0; it only lasts one producer session.",
+    module: "delivery-guarantees",
+  },
+  "kafka-transaction": {
+    term: "Kafka transaction",
+    definition:
+      "Writes to several partitions, plus the consumer offsets they came from, committed or aborted together. Consumers set to read_committed see only committed data. The basis of exactly-once inside Kafka.",
+    module: "delivery-guarantees",
+  },
+  "idempotent-consumer": {
+    term: "Idempotent consumer",
+    definition:
+      "A consumer whose effect is the same if it receives an event twice, usually by recording the IDs it has handled or using upserts. The portable way to cope with at-least-once delivery.",
+    module: "delivery-guarantees",
+  },
 } satisfies Record<string, GlossaryEntry>;
