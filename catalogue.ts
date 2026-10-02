@@ -3433,11 +3433,12 @@ const cloudArchitecture: Track = {
             "Designing for a zone failure",
             "The shared responsibility model",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["what-is-cloud"],
           plain:
             "A cloud region is a city's worth of data centres split into separate zones, each with its own power and cooling. The provider keeps the buildings and hardware secure; you are responsible for how you configure what you build on them.",
+          terms: ["region", "availability-zone", "sla", "shared-responsibility"],
         },
       ],
     },

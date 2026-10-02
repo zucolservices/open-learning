@@ -137,4 +137,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "rag-systems/scheme-assistant": () => import("./rag-systems/scheme-assistant"),
   "rag-systems/wrong-answers": () => import("./rag-systems/wrong-answers"),
   "cloud-architecture/what-is-cloud": () => import("./cloud-architecture/what-is-cloud"),
+  "cloud-architecture/regions-responsibility": () => import("./cloud-architecture/regions-responsibility"),
 };
