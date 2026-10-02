@@ -5096,11 +5096,21 @@ const ciCd: Track = {
             "Long-lived branches vs trunk-based development",
             "Pull requests and code review",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["why-ci-cd"],
           plain:
             "Version control keeps every change ever made to the code. Branches let people work apart, but the longer they stay apart, the harder it is to join the work back together. Most fast teams keep branches small and merge into the main line at least daily.",
+          terms: [
+            "version-control",
+            "git",
+            "commit",
+            "branch",
+            "merge-conflict",
+            "pull-request",
+            "trunk-based-development",
+            "feature-flag",
+          ],
         },
         {
           slug: "pipeline-anatomy",

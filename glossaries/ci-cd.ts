@@ -38,4 +38,46 @@ export const ciCd = {
       "How much change goes out together in one release. Smaller batches mean fewer suspects when something breaks, faster feedback and less finished work waiting to reach users.",
     module: "why-ci-cd",
   },
+  "version-control": {
+    term: "Version control",
+    definition:
+      "A system that records every change to a set of files (who, what, when and why), so a team can work on the same code, see its history and go back to any earlier state. Git is by far the most used.",
+    module: "branching-strategies",
+  },
+  git: {
+    term: "Git",
+    definition:
+      "The most widely used version control system, created by Linus Torvalds in 2005 for the Linux kernel. Every copy of a repository holds its full history. GitHub, GitLab, Bitbucket and Azure Repos all host Git repositories.",
+    module: "branching-strategies",
+  },
+  commit: {
+    term: "Commit",
+    definition:
+      "One recorded change in version control: a snapshot of the files plus who made it, when, and a message saying why. Commits form the history you can inspect or return to.",
+    module: "branching-strategies",
+  },
+  "merge-conflict": {
+    term: "Merge conflict",
+    definition:
+      "What happens when two branches changed the same part of the same file in different ways: Git can't choose, so a person must read both versions and decide. The longer branches live apart, the more conflicts pile up.",
+    module: "branching-strategies",
+  },
+  "pull-request": {
+    term: "Pull request (merge request)",
+    definition:
+      "A proposal to merge a branch into main, where teammates review the change and automated checks run before it is merged. GitLab calls it a merge request.",
+    module: "branching-strategies",
+  },
+  "trunk-based-development": {
+    term: "Trunk-based development",
+    definition:
+      "A branching strategy where everyone merges small changes into one main branch (the trunk) at least daily, using branches that live hours rather than weeks, and hides unfinished work behind feature flags.",
+    module: "branching-strategies",
+  },
+  "feature-flag": {
+    term: "Feature flag",
+    definition:
+      "A switch in the code that turns a feature on or off, for everyone or for chosen users, without deploying new code. It lets unfinished work be merged and deployed switched off, then released gradually.",
+    module: "feature-flags",
+  },
 } satisfies Record<string, GlossaryEntry>;

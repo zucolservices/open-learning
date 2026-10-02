@@ -25,6 +25,7 @@ export const FILES = [
 const WEIGHTS = [6, 4, 5, 3, 2, 2, 3, 3, 1, 1, 2, 2];
 
 export const LIVES = [10, 5, 2, 1] as const;
+export type Life = (typeof LIVES)[number];
 
 function rng(seed: number) {
   let s = seed >>> 0;

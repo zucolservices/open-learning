@@ -211,4 +211,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "kubernetes/managed-kubernetes": () => import("./kubernetes/managed-kubernetes"),
   "kubernetes/capstone-k8s": () => import("./kubernetes/capstone-k8s"),
   "ci-cd/why-ci-cd": () => import("./ci-cd/why-ci-cd"),
+  "ci-cd/branching-strategies": () => import("./ci-cd/branching-strategies"),
 };
