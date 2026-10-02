@@ -85,7 +85,8 @@ export interface Track {
   tagline: string;
   description: string;
   /** Key into the track accent palette in globals.css ([data-track]). */
-  accent: "lakehouse" | "blueprint" | "synapse" | "cadence" | "lumen" | "stratus" | "neutral";
+  accent:
+    "lakehouse" | "blueprint" | "synapse" | "cadence" | "lumen" | "stratus" | "current" | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
   hidden?: boolean;
@@ -3904,6 +3905,485 @@ const cloudArchitecture: Track = {
   ],
 };
 
+const streamingData: Track = {
+  slug: "streaming-data",
+  title: "Streaming Data Systems",
+  area: "Data engineering",
+  category: "data-engineering",
+  tagline: "Data that never stops: events, logs, windows and state.",
+  description:
+    "How data flows in real time: the append-only log, partitions and replication, change data capture and schemas, delivery guarantees, event time, windows, state and checkpoints, streaming SQL, and running pipelines at scale. Vendor-neutral: Apache Kafka, Redpanda and Pulsar, the clouds' own streaming services, and Flink, Spark, Kafka Streams and Beam side by side. By the end you can design a streaming pipeline and predict how it behaves when things go wrong.",
+  accent: "current",
+  chapters: [
+    {
+      slug: "big-picture",
+      title: "The big picture",
+      summary: "Why process data as it happens, and the log at the heart of it.",
+      modules: [
+        {
+          slug: "batch-vs-streams",
+          title: "Batch vs streams",
+          summary: "Bounded data on a schedule, or unbounded data as it arrives.",
+          minutes: 20,
+          signature:
+            "Follow a suspicious payment through tonight's batch and through a live stream, and see which one stops the fraud",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "Bounded and unbounded data",
+            "Latency: hours, seconds, milliseconds",
+            "When batch is still the right answer",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "Most data used to be processed in big nightly batches. Some decisions can't wait that long: a fraud check, a delivery estimate, a stock alert. Stream processing handles each event as it arrives, but costs more care to run.",
+        },
+        {
+          slug: "events-logs-topics",
+          title: "Events, logs and topics",
+          summary: "The append-only log every streaming system is built on.",
+          minutes: 25,
+          signature:
+            "Append events to a log, read it from any offset with several readers, and replay yesterday",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Events and their parts",
+            "The append-only log and offsets",
+            "Producers, topics and consumers",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["batch-vs-streams"],
+          plain:
+            "An event is a record that something happened. Streaming systems keep events in order in an append-only log, like a ledger nobody can rewrite. Any number of readers can follow it, each at its own position, and can go back to replay.",
+        },
+      ],
+    },
+    {
+      slug: "the-log",
+      title: "The log",
+      summary: "How Kafka-style platforms split, share, protect and keep the log.",
+      modules: [
+        {
+          slug: "partitions-ordering",
+          title: "Partitions and ordering",
+          summary: "Spreading a topic across machines without losing the order that matters.",
+          minutes: 25,
+          signature:
+            "Pick a partition key for an order stream, then watch ordering per customer and one partition run hot",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Partitions and keys",
+            "Ordering within a partition",
+            "Hot partitions and key skew",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["events-logs-topics"],
+          plain:
+            "A single log can't hold the whole world, so a topic is split into partitions. Events with the same key always land in the same partition, so their order is kept. Choose the key badly and one partition does all the work.",
+        },
+        {
+          slug: "consumer-groups",
+          title: "Consumer groups and offsets",
+          summary: "Sharing the reading among many workers, and remembering where each got to.",
+          minutes: 25,
+          signature:
+            "Add and remove consumers in a group, watch partitions rebalance and lag rise and fall",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Consumer groups and partition assignment",
+            "Committed offsets",
+            "Rebalances and consumer lag",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["partitions-ordering"],
+          plain:
+            "To read faster, several consumers share a topic as a group, each taking some partitions. Each remembers how far it has read by committing an offset. When a consumer joins or leaves, the partitions are reshuffled.",
+        },
+        {
+          slug: "replication-durability",
+          title: "Durability and replication",
+          summary: "Copies of every partition, and what a write acknowledgement really promises.",
+          minutes: 25,
+          signature:
+            "Lose a broker under different acknowledgement settings and see which writes survive",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Leaders, followers and in-sync replicas",
+            "acks and min.insync.replicas",
+            "Failover and unclean leader election",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["partitions-ordering"],
+          plain:
+            "Every partition is copied to several machines so a crash doesn't lose data. A producer chooses how many copies must confirm a write before it counts. Fewer confirmations are faster; more are safer.",
+        },
+        {
+          slug: "retention-compaction",
+          title: "Retention, compaction and tiered storage",
+          summary: "How long the log keeps events, and how to keep only what matters.",
+          minutes: 20,
+          signature:
+            "Run the same topic under time retention, size retention and compaction, then move old segments to object storage",
+          formats: ["step-through", "checkpoint"],
+          concepts: ["Time and size retention", "Log compaction by key", "Tiered storage"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["events-logs-topics"],
+          plain:
+            "Logs can't grow forever on fast disks. Topics delete old events after a time or size limit, or compact them to keep only the latest value for each key. Tiered storage moves old data to cheap object storage.",
+        },
+        {
+          slug: "platforms-compared",
+          title: "The platforms compared",
+          summary: "Kafka, Redpanda, Pulsar and the clouds' own streaming services.",
+          minutes: 25,
+          signature:
+            "Match workloads to Kafka, Redpanda, Pulsar, Kinesis, Pub/Sub and Event Hubs by their real limits and dated prices",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "Kafka and Kafka-compatible platforms",
+            "Cloud streaming services",
+            "Managed vs self-run",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["replication-durability"],
+          plain:
+            "Kafka started the modern streaming platform, and many others now speak its protocol or offer something similar. The clouds each sell a managed version. They differ in limits, operations and price more than in the core idea.",
+        },
+      ],
+    },
+    {
+      slug: "in-and-out",
+      title: "Getting data in and out",
+      summary: "Turning databases into streams, keeping events readable, and delivering them once.",
+      modules: [
+        {
+          slug: "cdc-outbox",
+          title: "Change data capture and the outbox",
+          summary: "Turning every database change into an event, without dual writes.",
+          minutes: 25,
+          signature:
+            "Watch a dual write lose an event, then fix it with an outbox table and change data capture",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Log-based change data capture",
+            "The dual-write problem",
+            "The transactional outbox",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["events-logs-topics"],
+          plain:
+            "Many events start life as a change in a database. Change data capture reads the database's own log and publishes each change. The outbox pattern makes sure a database update and its event can never disagree.",
+        },
+        {
+          slug: "schemas-evolution",
+          title: "Schemas and evolution",
+          summary: "Agreeing what an event looks like, and changing it without breaking readers.",
+          minutes: 25,
+          signature:
+            "Ship a schema change that breaks a consumer, then fix it with a registry and compatibility rules",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Avro, Protobuf and JSON Schema",
+            "Schema registries",
+            "Backward and forward compatibility",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["events-logs-topics"],
+          plain:
+            "Producers and consumers must agree on the shape of an event, even as it changes over the years. A schema registry stores each version and refuses changes that would break existing readers.",
+        },
+        {
+          slug: "delivery-guarantees",
+          title: "Delivery guarantees",
+          summary: "At most once, at least once, exactly once, and what each really costs.",
+          minutes: 25,
+          signature:
+            "Crash a producer and a consumer at the worst moment and count the duplicates and losses under each guarantee",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "At-most, at-least and exactly-once",
+            "Idempotent producers and transactions",
+            "Idempotent consumers",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["consumer-groups"],
+          plain:
+            "Networks fail mid-message, so a system either risks losing events or risks repeating them. Exactly-once is possible inside a platform with idempotent writes and transactions; at the edges, consumers must cope with repeats.",
+        },
+      ],
+    },
+    {
+      slug: "processing",
+      title: "Processing streams",
+      summary: "Transforming, timing, windowing and joining events as they flow.",
+      modules: [
+        {
+          slug: "stateless-processing",
+          title: "Filter, map, route",
+          summary: "The simple building blocks of a stream pipeline.",
+          minutes: 20,
+          signature:
+            "Wire filters, maps and routers into a small topology and watch events flow through it",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Stream processing topologies",
+            "Stateless operations",
+            "Kafka Streams, Flink and friends",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["events-logs-topics"],
+          plain:
+            "The simplest stream processing looks at one event at a time: drop it, change it, or send it somewhere. Chain these steps into a pipeline and you have most real-time integrations.",
+        },
+        {
+          slug: "event-time",
+          title: "Event time vs processing time",
+          summary: "When something happened, versus when you heard about it.",
+          minutes: 25,
+          signature:
+            "Replay a day of events with network delays and see counts by processing time go wrong; add a watermark",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Event time and processing time",
+            "Out-of-order and late events",
+            "Watermarks",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["stateless-processing"],
+          plain:
+            "An event can arrive minutes after it happened, out of order with others. Counting by arrival time gives wrong answers. Stream processors track event time and use watermarks to decide when they've probably seen everything up to a moment.",
+        },
+        {
+          slug: "windows",
+          title: "Windows",
+          summary: "Grouping an endless stream into finite pieces you can count.",
+          minutes: 25,
+          signature:
+            "Put the same clickstream through tumbling, hopping, sliding and session windows and compare the results",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Tumbling and hopping windows",
+            "Sliding and session windows",
+            "Late data and allowed lateness",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["event-time"],
+          plain:
+            "You can't sum an infinite stream, so you cut it into windows: every five minutes, the last hour, or each user's session. The window type changes the answer.",
+        },
+        {
+          slug: "state-joins",
+          title: "State and joins",
+          summary:
+            "Remembering things between events, and joining streams to tables and to each other.",
+          minutes: 30,
+          signature:
+            "Join a payment stream to a customer table and to a stream of logins, and watch the state grow",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Stateful operators and state stores",
+            "Stream–table duality",
+            "Stream–stream and stream–table joins",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["windows"],
+          plain:
+            "Counting, deduplicating and joining all need memory between events. Stream processors keep this state locally and back it up. A table can be seen as a stream of changes, and a stream as building up a table.",
+        },
+        {
+          slug: "checkpoints",
+          title: "Checkpoints and exactly-once processing",
+          summary: "Crashing mid-stream and carrying on as if nothing happened.",
+          minutes: 25,
+          signature:
+            "Crash a job mid-stream, restore from a checkpoint and replay, and check that no count is doubled",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Distributed snapshots and barriers",
+            "Restoring state and replaying input",
+            "End-to-end exactly-once with transactional sinks",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["state-joins", "delivery-guarantees"],
+          plain:
+            "Long-running jobs will crash. They periodically snapshot their state together with their position in the input. After a crash they restore the snapshot and replay from there, so results come out as if the crash never happened.",
+        },
+        {
+          slug: "streaming-sql",
+          title: "Streaming SQL",
+          summary: "Queries that never finish, and views that keep themselves up to date.",
+          minutes: 25,
+          signature:
+            "Write a continuous query over a live order stream and watch its materialised view update",
+          formats: ["sandbox", "checkpoint"],
+          concepts: [
+            "Continuous queries",
+            "Materialised views",
+            "Flink SQL, ksqlDB, RisingWave and Materialize",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["windows"],
+          plain:
+            "Instead of writing code, you can describe stream processing in SQL. The query never finishes: its result updates as events arrive, like a spreadsheet that recalculates itself.",
+        },
+      ],
+    },
+    {
+      slug: "operating",
+      title: "Operating streams",
+      summary: "Keeping pipelines healthy under load, errors and bills.",
+      modules: [
+        {
+          slug: "backpressure-lag",
+          title: "Backpressure and lag",
+          summary: "What happens when events arrive faster than you can handle them.",
+          minutes: 25,
+          signature:
+            "Send a sale-day spike through a pipeline and keep lag in check by scaling consumers and partitions",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Consumer lag", "Backpressure", "Scaling consumers and partitions"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["consumer-groups"],
+          plain:
+            "When producers outpace consumers, events queue up and the stream falls behind. Lag measures how far behind; backpressure slows the fast part down. The fix is usually more consumers, which needs enough partitions.",
+        },
+        {
+          slug: "errors-dlq",
+          title: "Errors, retries and dead-letter queues",
+          summary: "Handling the one bad message without stopping everything.",
+          minutes: 20,
+          signature:
+            "Watch one malformed event block a partition, then add retries with backoff and a dead-letter topic",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: ["Poison messages", "Retry with backoff", "Dead-letter queues and replay"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["delivery-guarantees"],
+          plain:
+            "One broken event can stop a consumer that keeps retrying it, and everything behind it waits. Good pipelines retry a few times, then park the bad event in a dead-letter queue for a human, and keep going.",
+        },
+        {
+          slug: "sizing-cost",
+          title: "Sizing and cost",
+          summary: "Partitions, throughput and what streaming really costs to run.",
+          minutes: 25,
+          signature:
+            "Size a topic for a target throughput, then price it on managed Kafka, Kinesis, Pub/Sub and Event Hubs with dated list prices",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Throughput and partition counts",
+            "Capacity units and pricing models",
+            "Self-run vs managed cost",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["platforms-compared"],
+          plain:
+            "Streaming bills come from throughput, storage, partitions and data transfer. Each service counts them differently. Sizing a topic well avoids both bottlenecks and paying for capacity you never use.",
+        },
+      ],
+    },
+    {
+      slug: "storage",
+      title: "Streams meet storage",
+      summary: "Landing streams in the lakehouse and serving them live.",
+      modules: [
+        {
+          slug: "streams-to-lakehouse",
+          title: "Streaming into the lakehouse",
+          summary: "Fresh tables from a stream, without drowning in small files.",
+          minutes: 25,
+          signature:
+            "Tune a stream's commit interval into an Iceberg table and trade freshness against small files and compaction",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Streaming writes to table formats",
+            "Small files and compaction",
+            "Kafka-to-table tools",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["checkpoints"],
+          plain:
+            "Streams often end up in lakehouse tables for analysis. Writing often keeps tables fresh but creates many small files that slow queries; writing rarely does the opposite. Compaction tidies up behind the stream.",
+        },
+        {
+          slug: "realtime-analytics",
+          title: "Real-time analytics stores",
+          summary: "Databases built to answer questions about events seconds old.",
+          minutes: 20,
+          signature:
+            "Point a live dashboard at a stream through ClickHouse, Apache Druid and Apache Pinot and compare freshness and query speed",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "Real-time OLAP",
+            "Ingesting directly from streams",
+            "When a lakehouse is fresh enough",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["streams-to-lakehouse"],
+          plain:
+            "Some dashboards must show what happened seconds ago, for thousands of users at once. Real-time analytics databases ingest straight from streams and answer aggregations in milliseconds.",
+        },
+      ],
+    },
+    {
+      slug: "in-practice",
+      title: "In practice",
+      summary: "Event-driven designs and a capstone pipeline.",
+      modules: [
+        {
+          slug: "event-patterns",
+          title: "Event-driven patterns",
+          summary: "Event sourcing, CQRS and sagas, and when they help.",
+          minutes: 25,
+          signature:
+            "Rebuild an account balance from its events, split reads from writes, and run a three-step saga that has to undo itself",
+          formats: ["step-through", "checkpoint"],
+          concepts: ["Event sourcing", "CQRS", "Sagas and compensating actions"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["cdc-outbox"],
+          plain:
+            "Some systems store events as the source of truth and derive everything else from them. Others separate the model for writing from the models for reading, or coordinate a multi-step process with events instead of one big transaction.",
+        },
+        {
+          slug: "capstone-payments",
+          title: "Capstone: a real-time payments monitor",
+          summary: "Design a streaming pipeline for UPI-like payments, then break it.",
+          minutes: 40,
+          signature:
+            "Choose the platform, keys, processing, guarantees and storage for a payments monitor, then fail a broker, a job and a schema and see what holds",
+          formats: ["branching-scenario", "build-connect", "checkpoint"],
+          concepts: ["Designing a streaming pipeline end to end"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["checkpoints", "errors-dlq", "sizing-cost"],
+          plain:
+            "Everything in this track in one design. You'll make each choice for a payments monitoring pipeline, then see how it behaves when things go wrong.",
+        },
+      ],
+    },
+  ],
+};
+
 /** A small end-to-end module that exercises the toolkit and Module SDK. */
 const playground: Track = {
   slug: "playground",
@@ -3947,6 +4427,7 @@ export const tracks: Track[] = [
   agileScrum,
   ragSystems,
   cloudArchitecture,
+  streamingData,
   playground,
 ];
 
@@ -3984,6 +4465,7 @@ export const categories: Category[] = [
       },
       {
         title: "Streaming Data Systems",
+        slug: "streaming-data",
         blurb: "Events, windows, state and exactly-once pipelines.",
       },
       { title: "Spark", blurb: "How distributed dataframes plan, shuffle and scale." },

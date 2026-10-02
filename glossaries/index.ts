@@ -11,6 +11,7 @@ import { llmFoundations } from "./llm-foundations";
 import { agileScrum } from "./agile-scrum";
 import { ragSystems } from "./rag-systems";
 import { cloudArchitecture } from "./cloud-architecture";
+import { streamingData } from "./streaming-data";
 import { shared } from "./shared";
 import type { GlossaryEntry } from "./types";
 
@@ -24,6 +25,7 @@ export const trackGlossaries: Record<string, Record<string, GlossaryEntry>> = {
   "agile-scrum": agileScrum,
   "rag-systems": ragSystems,
   "cloud-architecture": cloudArchitecture,
+  "streaming-data": streamingData,
 };
 
 export type TermId =
@@ -33,7 +35,8 @@ export type TermId =
   | keyof typeof llmFoundations
   | keyof typeof agileScrum
   | keyof typeof ragSystems
-  | keyof typeof cloudArchitecture;
+  | keyof typeof cloudArchitecture
+  | keyof typeof streamingData;
 
 export interface ResolvedTerm {
   id: string;

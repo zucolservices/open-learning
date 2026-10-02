@@ -307,21 +307,59 @@ Platform & cloud area, first track (approved 2026-10-02). 22 modules in 7 chapte
 | 21    | Migration: the 7 Rs                           | Decide ten applications' fate                                        | Branching scenario |
 | 22    | Capstone: a foundation for a state department | Design a landing zone and app platform, then review it               | Branching, build   |
 
+## Streaming Data Systems: curriculum
+
+Data engineering area, second track (approved 2026-10-02). 23 modules in 7 chapters, about 9.5 hours. Accent: "current" pink (`[data-track="current"]`). Glossary: `glossaries/streaming-data.ts`. Vendor-neutral: Apache Kafka, Redpanda and Pulsar, Amazon Kinesis, Google Pub/Sub and Azure Event Hubs, with Flink, Spark Structured Streaming, Kafka Streams and Beam for processing. Goes deeper than System Design's queues, delivery-guarantee and event-driven modules and the Lakehouse ingestion and CDC modules, and links to them rather than repeating them. Built on one branch (`track/streaming-data`), one commit per module, merged once at the end. Each module is fact-checked on its own before it is built.
+
+| #     | Module                                   | Centrepiece                                                            | Key formats      |
+| ----- | ---------------------------------------- | ---------------------------------------------------------------------- | ---------------- |
+| **1** | **The big picture**                      |                                                                        |                  |
+| 1     | Batch vs streams                         | A suspicious payment through tonight's batch and through a live stream | Scroll story     |
+| 2     | Events, logs and topics                  | Append to a log, read from any offset, replay                          | Simulation       |
+| **2** | **The log**                              |                                                                        |                  |
+| 3     | Partitions and ordering                  | Choose a key; ordering per key and hot partitions                      | Simulation       |
+| 4     | Consumer groups and offsets              | Add consumers, watch rebalances and lag                                | Simulation       |
+| 5     | Durability and replication               | Lose a broker under different acks settings                            | Simulation       |
+| 6     | Retention, compaction and tiered storage | Time, size and key-based retention; tiering                            | Step-through     |
+| 7     | The platforms compared                   | Kafka, Redpanda, Pulsar, Kinesis, Pub/Sub, Event Hubs                  | Infographic      |
+| **3** | **Getting data in and out**              |                                                                        |                  |
+| 8     | Change data capture and the outbox       | Dual write loses an event; outbox + CDC                                | Step-through     |
+| 9     | Schemas and evolution                    | Break a consumer, fix it with compatibility rules                      | Fix the problem  |
+| 10    | Delivery guarantees                      | Crash at the worst moment; count duplicates and losses                 | Simulation       |
+| **4** | **Processing streams**                   |                                                                        |                  |
+| 11    | Filter, map, route                       | Wire a small topology                                                  | Build & connect  |
+| 12    | Event time vs processing time            | Delayed events, watermarks                                             | Simulation       |
+| 13    | Windows                                  | Tumbling, hopping, sliding, session on one stream                      | Simulation       |
+| 14    | State and joins                          | Stream–table and stream–stream joins                                   | Step-through     |
+| 15    | Checkpoints and exactly-once processing  | Crash, restore, replay without double counting                         | Step-through     |
+| 16    | Streaming SQL                            | A continuous query and a self-updating view                            | Sandbox          |
+| **5** | **Operating streams**                    |                                                                        |                  |
+| 17    | Backpressure and lag                     | A sale-day spike; scale consumers and partitions                       | Simulation       |
+| 18    | Errors, retries and dead-letter queues   | A poison message blocks a partition                                    | Fix the problem  |
+| 19    | Sizing and cost                          | Size a topic, price it on four services                                | Simulation       |
+| **6** | **Streams meet storage**                 |                                                                        |                  |
+| 20    | Streaming into the lakehouse             | Freshness vs small files in an Iceberg table                           | Simulation       |
+| 21    | Real-time analytics stores               | ClickHouse, Druid and Pinot behind a live dashboard                    | Infographic      |
+| **7** | **In practice**                          |                                                                        |                  |
+| 22    | Event-driven patterns                    | Event sourcing, CQRS, a saga that undoes itself                        | Step-through     |
+| 23    | Capstone: a real-time payments monitor   | Design a UPI-like monitoring pipeline, then break it                   | Branching, build |
+
 ## Roadmap
 
-| Step                   | Scope                                                                                   | Status                                                                  |
-| ---------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| 1. Foundation          | Shell, design language, routing, Module SDK, progress adapter, checkpoints, smoke tests | **Done.** A sample module lives at `/tracks/playground/rows-vs-columns` |
-| 2. Flagship            | Module 6, Delta Lake transaction log: storyboard, then build                            | **Done.** 14 steps, fact-checked (module `SOURCES.md`)                  |
-| 3. Parallel flagship   | Module 7, Iceberg metadata tree. First 3D module; sets the R3F toolkit                  | Next                                                                    |
-| 4. Rest of track       | Chapters 1 → 9, growing the toolkit (charts, builder, sandbox) along the way            | Done: all 29 modules live (2026-09-24)                                  |
-| 4b. System Design      | Second track (Architecture), 27 modules                                                 | Live: all 27 modules                                                    |
-| 4c. LLM Foundations    | Third track (AI & machine learning), 26 modules                                         | Live: all 26 modules (2026-09-25)                                       |
-| 4d. Agile & Scrum      | Delivery management, first track, 23 modules                                            | Live: all 23 modules (2026-09-28)                                       |
-| 4e. RAG Systems        | AI & machine learning, second track, 23 modules                                         | Live: all 23 modules (2026-09-29)                                       |
-| 4f. Cloud Architecture | Platform & cloud, first track, 22 modules                                               | Live: all 22 modules (2026-10-02)                                       |
-| 5. Team feedback       | 3–5 engineers use the track; refine                                                     |                                                                         |
-| 6. Deploy              | Vercel project + preview deploys; decide on access protection                           |                                                                         |
+| Step                       | Scope                                                                                   | Status                                                                  |
+| -------------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| 1. Foundation              | Shell, design language, routing, Module SDK, progress adapter, checkpoints, smoke tests | **Done.** A sample module lives at `/tracks/playground/rows-vs-columns` |
+| 2. Flagship                | Module 6, Delta Lake transaction log: storyboard, then build                            | **Done.** 14 steps, fact-checked (module `SOURCES.md`)                  |
+| 3. Parallel flagship       | Module 7, Iceberg metadata tree. First 3D module; sets the R3F toolkit                  | Next                                                                    |
+| 4. Rest of track           | Chapters 1 → 9, growing the toolkit (charts, builder, sandbox) along the way            | Done: all 29 modules live (2026-09-24)                                  |
+| 4b. System Design          | Second track (Architecture), 27 modules                                                 | Live: all 27 modules                                                    |
+| 4c. LLM Foundations        | Third track (AI & machine learning), 26 modules                                         | Live: all 26 modules (2026-09-25)                                       |
+| 4d. Agile & Scrum          | Delivery management, first track, 23 modules                                            | Live: all 23 modules (2026-09-28)                                       |
+| 4e. RAG Systems            | AI & machine learning, second track, 23 modules                                         | Live: all 23 modules (2026-09-29)                                       |
+| 4f. Cloud Architecture     | Platform & cloud, first track, 22 modules                                               | Live: all 22 modules (2026-10-02)                                       |
+| 4g. Streaming Data Systems | Data engineering, second track, 23 modules                                              | In progress: 0 of 23 modules                                            |
+| 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
+| 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
 ### Per-module workflow
 
