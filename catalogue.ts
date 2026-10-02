@@ -4283,7 +4283,8 @@ const streamingData: Track = {
             "Materialised views",
             "Flink SQL, ksqlDB, RisingWave and Materialize",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["continuous-query", "materialized-view", "stream-table-duality"],
           level: "core",
           prerequisites: ["windows"],
           plain:

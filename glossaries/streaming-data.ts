@@ -313,4 +313,16 @@ export const streamingData = {
       "An output that writes each checkpoint's results in a transaction and commits only when the checkpoint completes, so results are never visible twice after a restore. Flink's Kafka sink in EXACTLY_ONCE mode works this way.",
     module: "checkpoints",
   },
+  "continuous-query": {
+    term: "Continuous query",
+    definition:
+      "A query over a stream that never finishes: its result keeps updating as new events arrive. Flink SQL calls the inputs and outputs dynamic tables.",
+    module: "streaming-sql",
+  },
+  "materialized-view": {
+    term: "Materialised view",
+    definition:
+      "A stored query result. In streaming systems it is maintained incrementally, applying each change instead of recomputing, so it stays close to up to date: ksqlDB tables, RisingWave and Materialize views, Flink materialized tables.",
+    module: "streaming-sql",
+  },
 } satisfies Record<string, GlossaryEntry>;
