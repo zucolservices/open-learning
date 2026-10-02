@@ -121,4 +121,34 @@ export const streamingData = {
       "Letting a replica that has fallen behind become leader when no in-sync replica is left. The partition comes back sooner but loses the data that replica never copied. Off by default in Kafka (on by default in Amazon MSK without tiered storage).",
     module: "replication-durability",
   },
+  "retention-period": {
+    term: "Retention",
+    definition:
+      "How long (retention.ms, 7 days by default) or how much (retention.bytes, per partition, unlimited by default) a topic keeps before deleting its oldest segments, whether or not anyone has read them.",
+    module: "retention-compaction",
+  },
+  "log-segment": {
+    term: "Log segment",
+    definition:
+      "One file of a partition's log. Kafka starts a new segment every 1 GiB or 7 days by default, and deletes or compacts whole closed segments, never the one being written.",
+    module: "retention-compaction",
+  },
+  "log-compaction": {
+    term: "Log compaction",
+    definition:
+      "A cleanup policy that keeps at least the latest record for each key and removes older ones, so a topic behaves like a table of current values. Offsets never change, and order is kept.",
+    module: "retention-compaction",
+  },
+  tombstone: {
+    term: "Tombstone",
+    definition:
+      "A record with a key and a null value, telling a compacted topic to delete that key. The tombstone itself is removed after delete.retention.ms (1 day by default).",
+    module: "retention-compaction",
+  },
+  "tiered-storage": {
+    term: "Tiered storage",
+    definition:
+      "Keeping recent log segments on broker disks and moving older ones to cheap object storage such as S3, where consumers can still read them. Production-ready in Apache Kafka since 3.9.",
+    module: "retention-compaction",
+  },
 } satisfies Record<string, GlossaryEntry>;

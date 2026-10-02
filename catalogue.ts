@@ -4051,7 +4051,14 @@ const streamingData: Track = {
             "Run the same topic under time retention, size retention and compaction, then move old segments to object storage",
           formats: ["step-through", "checkpoint"],
           concepts: ["Time and size retention", "Log compaction by key", "Tiered storage"],
-          status: "planned",
+          status: "live",
+          terms: [
+            "retention-period",
+            "log-segment",
+            "log-compaction",
+            "tombstone",
+            "tiered-storage",
+          ],
           level: "core",
           prerequisites: ["events-logs-topics"],
           plain:

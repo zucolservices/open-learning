@@ -1,0 +1,10 @@
+# Sources (fact-checked 2026-10-02, before building)
+
+Full notes: scratchpad `streaming/m06-facts.md`.
+
+- Kafka 4.3 configs: segment.bytes 1 GiB, segment.ms 7 days, retention.ms 604800000 (7 days), retention.bytes −1 (per partition), log.retention.check.interval.ms 5 min; "Data is deleted one log segment at a time"; time retention judged by the largest timestamp in a segment; the active segment is rolled when everything in it has expired.
+- Design > Log Compaction: "always retain at least the last known value for each message key"; "Ordering of messages is always maintained"; "The offset for a message never changes"; tombstones (null values) removed after delete.retention.ms (1 day). min.cleanable.dirty.ratio 0.5, min.compaction.lag.ms 0. cleanup.policy delete (default), compact, or delete,compact. __consumer_offsets, Kafka Connect topics and Kafka Streams changelogs are compacted.
+- Tiered storage (KIP-405): early access 3.6, production-ready in 3.9 (6 Nov 2024); remote.storage.enable, local.retention.*; needs a RemoteStorageManager plugin (e.g., Aiven: S3, GCS, Azure); not supported for compacted topics in Apache Kafka/MSK; Confluent Platform supports compacted topics in tiered storage since 7.6. KIP-1150 Diskless Topics accepted, not shipped (Kafka 4.3). Confluent acquired WarpStream (9 Sep 2024). AutoMQ.
+- Prices (Mumbai): EBS gp3 $0.0912, S3 Standard $0.025 per GB-month; Amazon MSK broker storage $0.114, tiered $0.0652 per GB-month. Kinesis retention: 24 h default, up to 365 days; us-east-1 on-demand $0.10/GB-month to 7 days, $0.023 beyond. Pub/Sub topic retention 10 min–31 days. Event Hubs retention 1/7/90/90 days; Capture to Blob/ADLS (Avro).
+- New York Times (Confluent blog, Boerge Svingen, 2017): single-partition topic with every asset since 1851, retention "retain all events forever", under 100 GB — not compacted.
+- The price-update topic (3-day segments, 6-day retention, tombstone on day 9) is a scaled-down illustration; tiered cost assumes 3 local replicas and one copy in S3.
