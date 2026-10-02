@@ -3789,7 +3789,8 @@ const cloudArchitecture: Track = {
             "Backup and restore, pilot light, warm standby, active-active",
             "Testing recovery",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["disaster-recovery", "rpo", "rto", "high-availability", "chaos-engineering"],
           level: "applied",
           prerequisites: ["regions-responsibility", "storage-databases"],
           plain:

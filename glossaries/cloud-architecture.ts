@@ -392,4 +392,16 @@ export const cloudArchitecture = {
       "A database service where the cloud runs the servers, patching, backups and failover, and you handle tables, queries and access: Amazon RDS and Aurora, Azure SQL and Azure Database for PostgreSQL, Google Cloud SQL, AlloyDB and Spanner.",
     module: "storage-databases",
   },
+  "high-availability": {
+    term: "High availability",
+    definition:
+      "Designing a system to keep running through everyday failures (a server, a disk, a zone) by running copies in parallel, usually across availability zones. Measured in nines, such as 99.99%.",
+    module: "ha-dr",
+  },
+  "chaos-engineering": {
+    term: "Chaos engineering",
+    definition:
+      "Deliberately injecting failures (killing servers, adding latency, cutting a zone) in a controlled way to check a system copes. Netflix's Chaos Monkey (2010); AWS Fault Injection Service, Azure Chaos Studio.",
+    module: "ha-dr",
+  },
 } satisfies Record<string, GlossaryEntry>;
