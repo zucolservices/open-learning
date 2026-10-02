@@ -3652,7 +3652,8 @@ const cloudArchitecture: Track = {
             "Key management services and envelope encryption",
             "Secret managers",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["envelope-encryption", "kms", "key-rotation", "tls", "secret-manager"],
           level: "core",
           prerequisites: ["iam"],
           plain:

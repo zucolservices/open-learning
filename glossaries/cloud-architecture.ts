@@ -260,4 +260,34 @@ export const cloudArchitecture = {
       "Trusting another identity provider's word about who someone is, instead of keeping separate accounts and passwords: company sign-in for the cloud console, or GitHub's token for a pipeline. Standards: SAML 2.0 and OIDC.",
     module: "workload-identity",
   },
+  "envelope-encryption": {
+    term: "Envelope encryption",
+    definition:
+      "Encrypting data with its own data key, then encrypting (sealing) that data key with a master key kept in a key management service. The sealed data key is stored beside the data.",
+    module: "encryption-secrets",
+  },
+  kms: {
+    term: "Key management service (KMS)",
+    definition:
+      "A cloud service that creates and guards master keys in tamper-resistant hardware, uses them only after a permission check, and logs every use: AWS KMS, Azure Key Vault, Google Cloud KMS.",
+    module: "encryption-secrets",
+  },
+  "key-rotation": {
+    term: "Key rotation",
+    definition:
+      "Replacing a key's material with a new version for future encryption while keeping old versions, so existing data still decrypts. It doesn't re-encrypt old data.",
+    module: "encryption-secrets",
+  },
+  tls: {
+    term: "TLS",
+    definition:
+      "Transport Layer Security: the encryption behind https, protecting data while it moves between systems. Clouds now require version 1.2 or newer.",
+    module: "encryption-secrets",
+  },
+  "secret-manager": {
+    term: "Secret manager",
+    definition:
+      "A service that stores passwords, API keys and certificates encrypted, controls and logs who reads them, keeps versions and can rotate them: AWS Secrets Manager, Azure Key Vault, Google Secret Manager, HashiCorp Vault, OpenBao.",
+    module: "encryption-secrets",
+  },
 } satisfies Record<string, GlossaryEntry>;
