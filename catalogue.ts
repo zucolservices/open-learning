@@ -3961,7 +3961,8 @@ const streamingData: Track = {
             "The append-only log and offsets",
             "Producers, topics and consumers",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["event", "append-only-log", "topic", "producer", "consumer", "offset"],
           level: "beginner",
           prerequisites: ["batch-vs-streams"],
           plain:

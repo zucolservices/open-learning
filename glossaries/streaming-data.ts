@@ -26,4 +26,33 @@ export const streamingData = {
       "One streaming pipeline only; to recompute, replay the retained log through a new version of the job. Proposed by Jay Kreps in 2014.",
     module: "batch-vs-streams",
   },
+  event: {
+    term: "Event (record, message)",
+    definition:
+      "A record that something happened, such as a payment. In Kafka it has a key, a value, a timestamp and optional headers. Events state facts, so they aren't changed once written.",
+    module: "events-logs-topics",
+  },
+  "append-only-log": {
+    term: "Append-only log",
+    definition:
+      "An ordered sequence of records where new ones are only added at the end and old ones are never changed. Readers track their own position in it and can re-read. The core data structure of Kafka and its relatives.",
+    module: "events-logs-topics",
+  },
+  topic: {
+    term: "Topic",
+    definition:
+      "A named log of related events, such as payments, that producers write to and consumers read from. Kafka keeps events for the topic's retention period whether or not they've been read.",
+    module: "events-logs-topics",
+  },
+  producer: {
+    term: "Producer",
+    definition: "A program that writes (appends) events to a topic.",
+    module: "events-logs-topics",
+  },
+  consumer: {
+    term: "Consumer",
+    definition:
+      "A program that reads events from a topic, keeping track of its own position (offset). Many consumers can read the same topic independently.",
+    module: "events-logs-topics",
+  },
 } satisfies Record<string, GlossaryEntry>;
