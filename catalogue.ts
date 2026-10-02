@@ -4517,11 +4517,19 @@ const kubernetes: Track = {
           signature: "Delete a pod or kill a node and watch the cluster put things back",
           formats: ["simulation", "checkpoint"],
           concepts: ["Declarative vs imperative", "Reconciliation loops", "Self-healing"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["why-kubernetes"],
           plain:
             "You don't tell Kubernetes what to do step by step. You tell it what the end result should be, like setting a thermostat, and small programs called controllers keep comparing reality with that and fixing any difference.",
+          terms: [
+            "desired-state",
+            "controller",
+            "reconciliation",
+            "spec-status",
+            "kubectl",
+            "declarative",
+          ],
         },
         {
           slug: "cluster-anatomy",
