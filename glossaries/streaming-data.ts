@@ -331,4 +331,16 @@ export const streamingData = {
       "A slow stage making the stages before it slow down, instead of being overwhelmed. Flink does it with credit-based flow control, so the job's source reads Kafka more slowly and lag appears there.",
     module: "backpressure-lag",
   },
+  "poison-pill": {
+    term: "Poison pill",
+    definition:
+      "An event that fails every time a consumer tries to process it, such as malformed data. If the consumer keeps retrying, its position never moves forward and the whole partition behind it is blocked.",
+    module: "errors-dlq",
+  },
+  "replay-dlq": {
+    term: "Replaying a dead-letter queue",
+    definition:
+      "Sending parked events back into the main topic (or straight to the consumer) once the cause of their failure is fixed, so they are processed after all. Also called redrive.",
+    module: "errors-dlq",
+  },
 } satisfies Record<string, GlossaryEntry>;

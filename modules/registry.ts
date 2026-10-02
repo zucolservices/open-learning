@@ -181,4 +181,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "streaming-data/checkpoints": () => import("./streaming-data/checkpoints"),
   "streaming-data/streaming-sql": () => import("./streaming-data/streaming-sql"),
   "streaming-data/backpressure-lag": () => import("./streaming-data/backpressure-lag"),
+  "streaming-data/errors-dlq": () => import("./streaming-data/errors-dlq"),
 };

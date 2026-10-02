@@ -4322,11 +4322,12 @@ const streamingData: Track = {
             "Watch one malformed event block a partition, then add retries with backoff and a dead-letter topic",
           formats: ["fix-the-problem", "checkpoint"],
           concepts: ["Poison messages", "Retry with backoff", "Dead-letter queues and replay"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["delivery-guarantees"],
           plain:
             "One broken event can stop a consumer that keeps retrying it, and everything behind it waits. Good pipelines retry a few times, then park the bad event in a dead-letter queue for a human, and keep going.",
+          terms: ["poison-pill", "dead-letter-queue", "jitter", "replay-dlq"],
         },
         {
           slug: "sizing-cost",
