@@ -14,6 +14,7 @@ import { cloudArchitecture } from "./cloud-architecture";
 import { streamingData } from "./streaming-data";
 import { kubernetes } from "./kubernetes";
 import { ciCd } from "./ci-cd";
+import { observability } from "./observability";
 import { shared } from "./shared";
 import type { GlossaryEntry } from "./types";
 
@@ -30,6 +31,7 @@ export const trackGlossaries: Record<string, Record<string, GlossaryEntry>> = {
   "streaming-data": streamingData,
   kubernetes,
   "ci-cd": ciCd,
+  observability,
 };
 
 export type TermId =
@@ -42,7 +44,8 @@ export type TermId =
   | keyof typeof cloudArchitecture
   | keyof typeof streamingData
   | keyof typeof kubernetes
-  | keyof typeof ciCd;
+  | keyof typeof ciCd
+  | keyof typeof observability;
 
 export interface ResolvedTerm {
   id: string;

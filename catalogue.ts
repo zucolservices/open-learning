@@ -5588,6 +5588,422 @@ const ciCd: Track = {
   ],
 };
 
+const observability: Track = {
+  slug: "observability",
+  title: "Observability",
+  area: "Platform & cloud",
+  category: "platform-cloud",
+  tagline: "Metrics, logs, traces and SLOs in depth.",
+  description:
+    "How to see what a running system is doing and why: metrics and their types, percentiles and histograms, cardinality, the golden signals, structured logs and log pipelines, distributed tracing and sampling, profiling, OpenTelemetry, service level objectives and error budgets, alerting, dashboards, incident response, postmortems and the cost of it all. Vendor-neutral: OpenTelemetry, Prometheus, Grafana, Loki, Tempo, Jaeger and Elastic alongside Datadog, New Relic, Honeycomb, Splunk and the clouds' own tools. By the end you can instrument a service, set sensible targets and find out why it's slow at 3 a.m.",
+  accent: "signal",
+  chapters: [
+    {
+      slug: "big-picture",
+      title: "The big picture",
+      summary: "Why seeing inside a system matters, and where the data comes from.",
+      modules: [
+        {
+          slug: "why-observability",
+          title: "Why observability",
+          summary: "From 'is it up?' to 'why is it slow for these users?'.",
+          minutes: 20,
+          signature:
+            "Live through a 3 a.m. incident with only a CPU graph, then again with metrics, logs and traces that answer new questions",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "Monitoring vs observability",
+            "Known unknowns and unknown unknowns",
+            "Telemetry is a product decision",
+          ],
+          status: "live",
+          level: "beginner",
+          plain:
+            "Monitoring tells you when something you predicted goes wrong. Observability means collecting enough detail about a running system that you can ask questions you didn't think of in advance, like why checkout is slow only for one bank's customers.",
+          terms: ["observability", "monitoring", "telemetry", "metric", "log", "trace"],
+        },
+        {
+          slug: "signals-overview",
+          title: "Metrics, logs and traces",
+          summary: "Three kinds of telemetry, what each is good for and what each costs.",
+          minutes: 20,
+          signature:
+            "Investigate the same slow request three ways and see what each signal can and can't tell you",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Metrics: cheap numbers over time",
+            "Logs: detailed events",
+            "Traces: one request's journey",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-observability"],
+          plain:
+            "Metrics are numbers counted over time, like requests per second. Logs are written records of individual events. Traces follow one request as it passes through many services. Each answers different questions at a different cost.",
+        },
+        {
+          slug: "opentelemetry",
+          title: "Instrumentation and OpenTelemetry",
+          summary:
+            "Getting telemetry out of code: auto and manual instrumentation, the SDK, the Collector.",
+          minutes: 25,
+          signature:
+            "Instrument a small service, send its telemetry through an OpenTelemetry Collector, and switch backends without touching the code",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Automatic vs manual instrumentation",
+            "API, SDK, OTLP and the Collector",
+            "Vendor-neutral telemetry",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["signals-overview"],
+          plain:
+            "Code has to be instrumented to produce telemetry. OpenTelemetry is the open standard for doing it once, in any language, and sending the data to whichever tool you choose, so changing vendors doesn't mean rewriting code.",
+        },
+      ],
+    },
+    {
+      slug: "metrics",
+      title: "Metrics",
+      summary: "Counting, measuring and summarising, cheaply and correctly.",
+      modules: [
+        {
+          slug: "metric-types",
+          title: "Counters, gauges and histograms",
+          summary: "The metric types, rates, and how Prometheus collects them.",
+          minutes: 25,
+          signature:
+            "Watch a counter, a gauge and a histogram react to the same traffic, then turn a counter into a rate",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Metric types", "Rates from counters", "Pull (scrape) vs push"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["signals-overview"],
+          plain:
+            "A counter only goes up, like total requests; a gauge goes up and down, like memory in use; a histogram sorts measurements into buckets, like how many requests took under 100 ms. Most useful numbers, such as requests per second, are calculated from these.",
+        },
+        {
+          slug: "percentiles",
+          title: "Averages lie: percentiles",
+          summary: "p50, p95, p99, why the tail matters and why you can't average percentiles.",
+          minutes: 25,
+          signature:
+            "Find the slow requests an average hides, then see how bucket choices change the p99 you report",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Why averages mislead",
+            "Percentiles and the long tail",
+            "Histogram buckets and aggregation",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["metric-types"],
+          plain:
+            "An average response time of 200 ms can hide one request in a hundred taking five seconds. Percentiles say what the slowest 5% or 1% of users actually experience, which is usually what matters.",
+        },
+        {
+          slug: "cardinality",
+          title: "Labels and cardinality",
+          summary: "Why one innocent label can multiply your metrics bill a thousand times.",
+          minutes: 20,
+          signature:
+            "Add labels to a metric one at a time and watch the number of time series, and the bill, explode",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Labels and time series", "Cardinality explosions", "Metrics vs events"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["metric-types"],
+          plain:
+            "Each combination of label values creates a separate time series to store. Labelling requests by endpoint is fine; labelling them by user ID creates millions of series and can bring a metrics system down.",
+        },
+        {
+          slug: "golden-signals",
+          title: "The golden signals",
+          summary: "Latency, traffic, errors, saturation; RED for services, USE for resources.",
+          minutes: 20,
+          signature: "Diagnose three sick services from four numbers each",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: ["The four golden signals", "RED and USE methods", "Symptoms vs causes"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["percentiles"],
+          plain:
+            "A few measurements tell you most of what you need about any service: how slow it is, how busy it is, how often it fails and how full it is. Start every dashboard and investigation with these.",
+        },
+      ],
+    },
+    {
+      slug: "logs-traces",
+      title: "Logs and traces",
+      summary: "Detailed records of events, and of requests crossing services.",
+      modules: [
+        {
+          slug: "structured-logging",
+          title: "Structured logs",
+          summary:
+            "Logs a machine can query: fields, levels, correlation IDs, and what never to log.",
+          minutes: 20,
+          signature:
+            "Search a pile of free-text logs for one customer's failed payment, then do it with structured logs",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Structured vs free-text logs",
+            "Levels and correlation IDs",
+            "Personal data and secrets in logs",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["signals-overview"],
+          plain:
+            "A log line written as a sentence is easy for people and hard for machines. Writing each event as named fields (time, level, order ID, error) lets you search and count them, and following one ID ties a request's lines together.",
+        },
+        {
+          slug: "log-pipelines",
+          title: "Log pipelines and storage",
+          summary: "Collecting, parsing, indexing and keeping logs without going broke.",
+          minutes: 25,
+          signature:
+            "Route a day of logs through agents and a pipeline, choose what to index and keep, and see the cost change",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Agents and collectors",
+            "Full-text indexing vs label indexing",
+            "Retention tiers and sampling",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["structured-logging"],
+          plain:
+            "Logs have to be collected from every machine, cleaned up and stored somewhere searchable. Indexing every word is powerful and expensive; keeping recent logs hot and older ones in cheap storage keeps the bill sane.",
+        },
+        {
+          slug: "distributed-tracing",
+          title: "Distributed tracing",
+          summary: "Spans, trace IDs, context propagation and reading a waterfall.",
+          minutes: 25,
+          signature:
+            "Follow one slow checkout across six services in a trace waterfall and find the span to blame",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Traces and spans",
+            "Context propagation (traceparent)",
+            "Reading a waterfall",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["signals-overview"],
+          plain:
+            "When one request passes through many services, a trace records each step as a span with its start and end time. Lined up in a waterfall, they show exactly where the time went.",
+        },
+        {
+          slug: "trace-sampling",
+          title: "Sampling traces",
+          summary:
+            "Head and tail sampling, keeping the interesting traces and linking them to metrics.",
+          minutes: 20,
+          signature:
+            "Keep 1% of traces and lose the one that mattered, then switch to tail sampling and keep every error",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Head vs tail sampling", "Keeping errors and slow requests", "Exemplars"],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["distributed-tracing"],
+          plain:
+            "Recording every trace of a busy system is expensive, so most teams keep a sample. Deciding at the start is cheap but random; deciding at the end lets you keep every slow or failed request.",
+        },
+        {
+          slug: "profiling",
+          title: "Continuous profiling",
+          summary: "Flame graphs: which lines of code burn the CPU and memory.",
+          minutes: 20,
+          signature: "Read a flame graph of a slow service and find the function eating the CPU",
+          formats: ["step-through", "checkpoint"],
+          concepts: ["Profiles and flame graphs", "Always-on profiling", "eBPF"],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["distributed-tracing"],
+          plain:
+            "A profile shows where a program spends its time and memory, function by function. Continuous profiling samples production all the time at low cost, so you can see what the code was doing when it got slow.",
+        },
+      ],
+    },
+    {
+      slug: "reliability-targets",
+      title: "Reliability targets",
+      summary: "Decide how reliable is reliable enough, and act on it.",
+      modules: [
+        {
+          slug: "slis-slos",
+          title: "SLIs and SLOs",
+          summary: "Measure what users feel, and set a target that isn't 100%.",
+          minutes: 25,
+          signature:
+            "Pick the right indicator for a checkout journey and see what 99%, 99.9% and 99.99% really allow",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Service level indicators from user journeys",
+            "Objectives and the nines",
+            "SLAs are a different thing",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["golden-signals"],
+          plain:
+            "A service level indicator measures something users care about, like the share of payments that succeed within two seconds. An objective is the target for it, such as 99.9% over 28 days. No system is 100% reliable, and trying costs too much.",
+        },
+        {
+          slug: "error-budgets",
+          title: "Error budgets",
+          summary: "The unreliability you can afford, and what to do when it runs out.",
+          minutes: 20,
+          signature:
+            "Spend a month's error budget on releases and incidents, then decide what the policy says to do",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Error budgets", "Burn rate", "Error budget policies"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["slis-slos"],
+          plain:
+            "If the target is 99.9%, the other 0.1% is a budget for things going wrong: risky releases, incidents, maintenance. While budget remains, ship freely; when it's spent, slow down and fix reliability.",
+        },
+        {
+          slug: "alerting",
+          title: "Alerting that works",
+          summary: "Page on symptoms, use burn rates, and stop alert fatigue.",
+          minutes: 25,
+          signature:
+            "Tune alerts for a week of traffic: too many pages, too few, then multi-window burn-rate alerts",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Symptom vs cause alerts",
+            "Multi-window, multi-burn-rate alerts",
+            "Alert fatigue and on-call health",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["error-budgets"],
+          plain:
+            "An alert should wake someone only when users are being hurt and a person needs to act. Alerting on how fast the error budget is burning catches real problems quickly without paging for every blip.",
+        },
+        {
+          slug: "dashboards",
+          title: "Dashboards that answer questions",
+          summary: "From walls of graphs to dashboards built for a purpose.",
+          minutes: 20,
+          signature:
+            "Redesign a 40-panel dashboard so an on-call engineer can answer 'are users OK?' in five seconds",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Dashboards for a question",
+            "Layout and drill-down",
+            "Avoiding misleading charts",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["golden-signals"],
+          plain:
+            "A good dashboard answers a specific question for a specific person, top to bottom: are users OK, and if not, where? Forty unlabelled graphs answer nothing at 3 a.m.",
+        },
+      ],
+    },
+    {
+      slug: "operating",
+      title: "Operating",
+      summary: "Incidents, learning from them, and paying for it all.",
+      modules: [
+        {
+          slug: "investigation",
+          title: "Debugging with telemetry",
+          summary: "From an alert to a cause: metrics, then traces, then logs.",
+          minutes: 25,
+          signature:
+            "Work an incident from page to root cause, choosing which signal to look at next",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Start broad, then narrow",
+            "Slicing by attributes",
+            "Hypotheses and evidence",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["golden-signals", "distributed-tracing", "structured-logging"],
+          plain:
+            "Finding the cause of a problem is a loop: look at a broad signal, form a guess, narrow down with more detailed data, check the guess. Moving smoothly from a graph to the traces and logs behind it is what good telemetry makes possible.",
+        },
+        {
+          slug: "incident-response",
+          title: "Incident response",
+          summary: "Roles, communication and calm when production is on fire.",
+          minutes: 20,
+          signature:
+            "Run a payments outage as incident commander: assign roles, update customers, decide when it's over",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: ["Incident roles", "Severity and communication", "Mitigate first"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["alerting"],
+          plain:
+            "When something big breaks, a clear structure helps: one person coordinates, others investigate, someone keeps customers and colleagues informed. The first goal is to stop the harm, not to find the root cause.",
+        },
+        {
+          slug: "postmortems",
+          title: "Blameless postmortems",
+          summary: "Learning from incidents without blaming people.",
+          minutes: 20,
+          signature:
+            "Rewrite a blaming incident report into a blameless one and pick the action items that actually help",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Blameless culture",
+            "Timelines and contributing factors",
+            "Action items that stick",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["incident-response"],
+          plain:
+            "After an incident, the team writes down what happened and why, focusing on how the system and processes allowed it rather than who made a mistake. People only share the truth when they won't be punished for it.",
+        },
+        {
+          slug: "observability-cost",
+          title: "Observability platforms and cost",
+          summary: "Open-source stacks and vendors compared, and how to keep the bill in check.",
+          minutes: 25,
+          signature:
+            "Price the same telemetry on a self-hosted stack and several vendors, then cut the bill without going blind",
+          formats: ["animated-infographic", "simulation", "checkpoint"],
+          concepts: [
+            "Open-source stacks and vendors",
+            "What drives the bill",
+            "Sampling, retention and dropping",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["cardinality", "log-pipelines", "trace-sampling"],
+          plain:
+            "Telemetry can cost as much as the systems it watches. Prices depend on how much data you send, how long you keep it and how many series or hosts you have, so choosing what to collect matters as much as which tool you pick.",
+        },
+        {
+          slug: "capstone-observability",
+          title: "Capstone: observing a payments platform",
+          summary: "Instrument it and set its targets, then see what you'd catch.",
+          minutes: 40,
+          signature:
+            "Make the observability choices for a payments platform, then face a slow bank, a silent failure and a 3 a.m. page storm",
+          formats: ["branching-scenario", "build-connect", "checkpoint"],
+          concepts: ["Designing observability end to end"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["slis-slos", "alerting", "investigation"],
+          plain:
+            "Everything in this track in one design. You'll choose how to observe a payments platform, then see whether you'd notice, understand and fix what goes wrong.",
+        },
+      ],
+    },
+  ],
+};
+
 /** A small end-to-end module that exercises the toolkit and Module SDK. */
 const playground: Track = {
   slug: "playground",
@@ -5634,6 +6050,7 @@ export const tracks: Track[] = [
   streamingData,
   kubernetes,
   ciCd,
+  observability,
   playground,
 ];
 
@@ -5726,7 +6143,11 @@ export const categories: Category[] = [
         slug: "ci-cd",
         blurb: "From commit to production, safely and often.",
       },
-      { title: "Observability", blurb: "Metrics, logs, traces and SLOs in depth." },
+      {
+        title: "Observability",
+        slug: "observability",
+        blurb: "Metrics, logs, traces and SLOs in depth.",
+      },
     ],
   },
   {

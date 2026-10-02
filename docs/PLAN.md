@@ -415,6 +415,39 @@ Platform & cloud area, third track (started 2026-10-03). 21 modules in 6 chapter
 | 20    | CI/CD platforms compared                | A month of builds priced; three teams choose                            | Infographic, sim |
 | 21    | Capstone: a pipeline for a payments app | Design it, then a bad commit, a poisoned dependency, a failed migration | Branching, build |
 
+## Observability: curriculum
+
+Platform & cloud area, fourth track (started 2026-10-03). 21 modules in 5 chapters, about 8.5 hours. Accent: "signal" cyan (`[data-track="signal"]`). Glossary: `glossaries/observability.ts`. Vendor-neutral: OpenTelemetry, Prometheus, Grafana, Loki, Tempo, Jaeger and Elastic alongside Datadog, New Relic, Honeycomb, Splunk and the clouds' own tools. Builds on System Design's observability module and links to it rather than repeating it. Built on one branch (`track/observability`), one commit per module, merged once at the end. Each module is fact-checked on its own before it is built; card illustrations and a showcase follow the last module.
+
+| #     | Module                                  | Centrepiece                                                       | Key formats      |
+| ----- | --------------------------------------- | ----------------------------------------------------------------- | ---------------- |
+| **1** | **The big picture**                     |                                                                   |                  |
+| 1     | Why observability                       | A 3 a.m. incident with only a CPU graph, then with real telemetry | Scroll story     |
+| 2     | Metrics, logs and traces                | One slow request investigated three ways                          | Step-through     |
+| 3     | Instrumentation and OpenTelemetry       | Instrument once, switch backends without code changes             | Step-through     |
+| **2** | **Metrics**                             |                                                                   |                  |
+| 4     | Counters, gauges and histograms         | Three metric types react to the same traffic                      | Simulation       |
+| 5     | Averages lie: percentiles               | The slow requests an average hides                                | Simulation       |
+| 6     | Labels and cardinality                  | One label that multiplies the bill                                | Simulation       |
+| 7     | The golden signals                      | Diagnose three services from four numbers                         | Branching        |
+| **3** | **Logs and traces**                     |                                                                   |                  |
+| 8     | Structured logs                         | Find one failed payment in free text vs structured logs           | Fix the problem  |
+| 9     | Log pipelines and storage               | Index, keep and sample a day of logs                              | Simulation       |
+| 10    | Distributed tracing                     | One slow checkout across six services                             | Step-through     |
+| 11    | Sampling traces                         | Head vs tail sampling: keep the trace that mattered               | Simulation       |
+| 12    | Continuous profiling                    | Read a flame graph                                                | Step-through     |
+| **4** | **Reliability targets**                 |                                                                   |                  |
+| 13    | SLIs and SLOs                           | The right indicator; what the nines allow                         | Build            |
+| 14    | Error budgets                           | Spend a month's budget, apply the policy                          | Simulation       |
+| 15    | Alerting that works                     | Burn-rate alerts vs page storms                                   | Simulation       |
+| 16    | Dashboards that answer questions        | Redesign a 40-panel wall                                          | Build            |
+| **5** | **Operating**                           |                                                                   |                  |
+| 17    | Debugging with telemetry                | From page to root cause, signal by signal                         | Branching        |
+| 18    | Incident response                       | Run an outage as incident commander                               | Branching        |
+| 19    | Blameless postmortems                   | Rewrite a blaming report                                          | Fix the problem  |
+| 20    | Observability platforms and cost        | Price the same telemetry on several platforms                     | Infographic, sim |
+| 21    | Capstone: observing a payments platform | Design it, then a slow bank, a silent failure, a page storm       | Branching, build |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -431,6 +464,7 @@ Platform & cloud area, third track (started 2026-10-03). 21 modules in 6 chapter
 | 4g. Streaming Data Systems | Data engineering, second track, 23 modules                                              | Live: all 23 modules (2026-10-02)                                       |
 | 4h. Kubernetes             | Platform & cloud, second track, 23 modules                                              | Live: all 23 modules (2026-10-03)                                       |
 | 4i. CI/CD                  | Platform & cloud, third track, 21 modules                                               | Live: all 21 modules (2026-10-03)                                       |
+| 4j. Observability          | Platform & cloud, fourth track, 21 modules                                              | In progress: 1 of 21 modules                                            |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
