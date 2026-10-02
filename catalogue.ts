@@ -4263,7 +4263,8 @@ const streamingData: Track = {
             "Restoring state and replaying input",
             "End-to-end exactly-once with transactional sinks",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["checkpoint", "checkpoint-barrier", "transactional-sink", "exactly-once"],
           level: "deep",
           prerequisites: ["state-joins", "delivery-guarantees"],
           plain:

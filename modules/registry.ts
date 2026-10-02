@@ -178,4 +178,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "streaming-data/event-time": () => import("./streaming-data/event-time"),
   "streaming-data/windows": () => import("./streaming-data/windows"),
   "streaming-data/state-joins": () => import("./streaming-data/state-joins"),
+  "streaming-data/checkpoints": () => import("./streaming-data/checkpoints"),
 };

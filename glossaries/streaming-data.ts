@@ -295,4 +295,22 @@ export const streamingData = {
       "Matching events from two streams with the same key that occur within a time window of each other, such as a payment and a login within five minutes. Both sides are kept in state for the window.",
     module: "state-joins",
   },
+  checkpoint: {
+    term: "Checkpoint (stream processing)",
+    definition:
+      "A consistent snapshot of a streaming job's state together with its position in each input, taken automatically while the job runs. After a crash the job restores it and replays input from those positions.",
+    module: "checkpoints",
+  },
+  "checkpoint-barrier": {
+    term: "Checkpoint barrier",
+    definition:
+      "A marker Flink injects into the data streams. It flows in line with the records; each operator snapshots its state when the barrier passes, so all snapshots describe the same point in the input.",
+    module: "checkpoints",
+  },
+  "transactional-sink": {
+    term: "Transactional sink",
+    definition:
+      "An output that writes each checkpoint's results in a transaction and commits only when the checkpoint completes, so results are never visible twice after a restore. Flink's Kafka sink in EXACTLY_ONCE mode works this way.",
+    module: "checkpoints",
+  },
 } satisfies Record<string, GlossaryEntry>;
