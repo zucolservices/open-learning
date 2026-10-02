@@ -350,4 +350,16 @@ export const ciCd = {
       "Releasing changes gradually, to more users at each step, with automatic checks that widen or roll back the rollout: canaries, blue-green switches and feature flags together.",
     module: "release-strategies",
   },
+  "kill-switch": {
+    term: "Kill switch",
+    definition:
+      "A feature flag kept on purpose so a feature can be turned off for everyone in seconds, without a deploy, when it misbehaves or the system is under strain.",
+    module: "feature-flags",
+  },
+  "flag-debt": {
+    term: "Flag debt",
+    definition:
+      "Old feature flags left in the code after they've done their job. Each one doubles the combinations the code can be in and can be switched by mistake; remove release toggles once a feature is fully launched.",
+    module: "feature-flags",
+  },
 } satisfies Record<string, GlossaryEntry>;

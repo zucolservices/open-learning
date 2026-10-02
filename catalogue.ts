@@ -5409,11 +5409,12 @@ const ciCd: Track = {
             "Percentage rollouts, targeting and kill switches",
             "Flag debt and cleaning up",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["release-strategies"],
           plain:
             "A feature flag is a switch in the code that turns a feature on or off without shipping new code. Teams deploy unfinished work switched off, then turn it on for a few users at a time, and can turn it off instantly if it misbehaves.",
+          terms: ["feature-flag", "kill-switch", "flag-debt", "progressive-delivery"],
         },
         {
           slug: "schema-migrations",

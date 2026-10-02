@@ -222,7 +222,7 @@ const STORIES = [
   {
     when: "12 June 2025",
     who: "Google Cloud",
-    text: 'New code had been rolled out region by region, but the faulty path never ran during that rollout, and it was "not feature flag protected". Then a policy-data change replicated worldwide within seconds and triggered it everywhere. The outage lasted about three hours.',
+    text: 'New code had been rolled out region by region, but the faulty path never ran during that rollout, and Google says it was not "feature flag protected". Then a policy-data change replicated worldwide within seconds and triggered it everywhere. The outage lasted about three hours.',
   },
 ];
 
