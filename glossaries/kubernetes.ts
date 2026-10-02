@@ -176,4 +176,28 @@ export const kubernetes = {
       "Holds off liveness and readiness checks until a slow-starting app is up, allowing failureThreshold × periodSeconds to start (for example 30 × 10 s = 300 s). If it never succeeds, the container is killed.",
     module: "health-checks",
   },
+  statefulset: {
+    term: "StatefulSet",
+    definition:
+      "A controller for pods that need a stable identity: each pod gets a fixed name (db-0, db-1…), its own persistent volume and a DNS name through a headless Service, and pods start and stop in order.",
+    module: "workload-controllers",
+  },
+  daemonset: {
+    term: "DaemonSet",
+    definition:
+      "A controller that runs one copy of a pod on every node (or on selected nodes), adding it to new nodes automatically. Used for log collectors, monitoring agents and storage daemons.",
+    module: "workload-controllers",
+  },
+  job: {
+    term: "Job",
+    definition:
+      "A controller that runs pods until a set number complete successfully, retrying failures (six times by default). Used for one-off batch work such as migrations or reports.",
+    module: "workload-controllers",
+  },
+  cronjob: {
+    term: "CronJob",
+    definition:
+      "Creates a Job on a repeating schedule written in cron syntax, with an optional time zone. Scheduling is best effort, so the work should be safe to run twice.",
+    module: "workload-controllers",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -4648,11 +4648,12 @@ const kubernetes: Track = {
             "One pod per node",
             "Run-to-completion and scheduled work",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["deployments"],
           plain:
             "Deployments suit interchangeable web servers. Other workloads need something different: databases need stable names and disks, log collectors need one copy on every machine, and batch jobs need to run once and finish.",
+          terms: ["deployment", "statefulset", "daemonset", "job", "cronjob"],
         },
       ],
     },

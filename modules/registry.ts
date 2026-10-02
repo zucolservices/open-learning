@@ -193,4 +193,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "kubernetes/pods": () => import("./kubernetes/pods"),
   "kubernetes/deployments": () => import("./kubernetes/deployments"),
   "kubernetes/health-checks": () => import("./kubernetes/health-checks"),
+  "kubernetes/workload-controllers": () => import("./kubernetes/workload-controllers"),
 };
