@@ -446,4 +446,10 @@ export const cloudArchitecture = {
       "AWS's term for a finding in a review: an architectural or operational choice that might significantly harm the business. Medium-risk issues do so to a lesser extent. Fix high-risk issues first.",
     module: "well-architected",
   },
+  "meity-empanelment": {
+    term: "MeitY empanelment",
+    definition:
+      "Approval by India's Ministry of Electronics and IT for a cloud provider's specific offerings, deployment models and regions, after an STQC audit, so government bodies can buy them (through GeM). 26 providers were empanelled as of December 2025.",
+    module: "cloud-india",
+  },
 } satisfies Record<string, GlossaryEntry>;

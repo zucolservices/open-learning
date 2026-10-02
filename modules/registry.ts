@@ -160,4 +160,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "cloud-architecture/ha-dr": () => import("./cloud-architecture/ha-dr"),
   "cloud-architecture/cost-finops": () => import("./cloud-architecture/cost-finops"),
   "cloud-architecture/well-architected": () => import("./cloud-architecture/well-architected"),
+  "cloud-architecture/cloud-india": () => import("./cloud-architecture/cloud-india"),
 };

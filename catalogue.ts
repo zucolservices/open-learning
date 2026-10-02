@@ -3856,7 +3856,8 @@ const cloudArchitecture: Track = {
             "MeitY empanelment and government cloud",
             "Data residency and the DPDP Act",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["meity-empanelment", "data-residency", "dpdp"],
           level: "applied",
           prerequisites: ["regions-responsibility", "guardrails"],
           plain:
