@@ -3892,7 +3892,8 @@ const cloudArchitecture: Track = {
             "Make the choices for a state department's cloud foundation (hierarchy, network, identity, guardrails, recovery, cost) and review the result against the pillars and India's rules",
           formats: ["branching-scenario", "build-connect", "checkpoint"],
           concepts: ["Designing a cloud foundation end to end"],
-          status: "planned",
+          status: "live",
+          terms: ["landing-zone", "well-architected-review"],
           level: "applied",
           prerequisites: ["landing-zones", "ha-dr", "cloud-india"],
           plain:

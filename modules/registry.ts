@@ -162,4 +162,6 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "cloud-architecture/well-architected": () => import("./cloud-architecture/well-architected"),
   "cloud-architecture/cloud-india": () => import("./cloud-architecture/cloud-india"),
   "cloud-architecture/migration": () => import("./cloud-architecture/migration"),
+  "cloud-architecture/capstone-landing-zone": () =>
+    import("./cloud-architecture/capstone-landing-zone"),
 };
