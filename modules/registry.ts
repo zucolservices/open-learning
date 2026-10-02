@@ -174,4 +174,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "streaming-data/cdc-outbox": () => import("./streaming-data/cdc-outbox"),
   "streaming-data/schemas-evolution": () => import("./streaming-data/schemas-evolution"),
   "streaming-data/delivery-guarantees": () => import("./streaming-data/delivery-guarantees"),
+  "streaming-data/stateless-processing": () => import("./streaming-data/stateless-processing"),
 };

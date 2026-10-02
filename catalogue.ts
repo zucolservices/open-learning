@@ -4176,7 +4176,8 @@ const streamingData: Track = {
             "Stateless operations",
             "Kafka Streams, Flink and friends",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["stateless-operation", "processor-topology", "repartition"],
           level: "core",
           prerequisites: ["events-logs-topics"],
           plain:

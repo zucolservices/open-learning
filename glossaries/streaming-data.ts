@@ -211,4 +211,22 @@ export const streamingData = {
       "A consumer whose effect is the same if it receives an event twice, usually by recording the IDs it has handled or using upserts. The portable way to cope with at-least-once delivery.",
     module: "delivery-guarantees",
   },
+  "stateless-operation": {
+    term: "Stateless operation",
+    definition:
+      "A stream processing step that handles each event on its own, without remembering earlier ones: filter, map, mask, route. Easy to run in parallel and to restart.",
+    module: "stateless-processing",
+  },
+  "processor-topology": {
+    term: "Topology",
+    definition:
+      "The graph of processing steps a stream application runs: source topics, operators such as filter and map, and sink topics. Kafka Streams calls it a processor topology; Flink a job graph.",
+    module: "stateless-processing",
+  },
+  repartition: {
+    term: "Repartition",
+    definition:
+      "Rewriting a stream to an internal topic under a new key so that events with the same new key meet in the same partition before grouping or joining. Triggered by changing the key.",
+    module: "stateless-processing",
+  },
 } satisfies Record<string, GlossaryEntry>;
