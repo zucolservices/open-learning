@@ -373,4 +373,16 @@ export const streamingData = {
       "How often a streaming writer makes its new files visible in a lakehouse table: each Flink checkpoint, each Spark micro-batch, or a connector setting such as the Iceberg Kafka Connect sink's 5-minute default. It sets the table's freshness and how many small files appear.",
     module: "streams-to-lakehouse",
   },
+  "real-time-olap": {
+    term: "Real-time analytics store",
+    definition:
+      "A columnar database that ingests straight from a stream and answers aggregations within milliseconds to seconds, for many queries at once. Also called real-time OLAP: ClickHouse, Apache Druid, Apache Pinot, StarRocks, Apache Doris.",
+    module: "realtime-analytics",
+  },
+  rollup: {
+    term: "Rollup",
+    definition:
+      "Pre-aggregating rows as they are ingested, for example one row per city per minute with a count and a sum, instead of one row per event. Queries get much faster, but the individual events are no longer stored.",
+    module: "realtime-analytics",
+  },
 } satisfies Record<string, GlossaryEntry>;

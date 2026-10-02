@@ -4395,11 +4395,12 @@ const streamingData: Track = {
             "Ingesting directly from streams",
             "When a lakehouse is fresh enough",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["streams-to-lakehouse"],
           plain:
             "Some dashboards must show what happened seconds ago, for thousands of users at once. Real-time analytics databases ingest straight from streams and answer aggregations in milliseconds.",
+          terms: ["real-time-olap", "columnar", "rollup", "olap"],
         },
       ],
     },

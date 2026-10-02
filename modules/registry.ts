@@ -184,4 +184,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "streaming-data/errors-dlq": () => import("./streaming-data/errors-dlq"),
   "streaming-data/sizing-cost": () => import("./streaming-data/sizing-cost"),
   "streaming-data/streams-to-lakehouse": () => import("./streaming-data/streams-to-lakehouse"),
+  "streaming-data/realtime-analytics": () => import("./streaming-data/realtime-analytics"),
 };
