@@ -332,4 +332,28 @@ export const kubernetes = {
       "A label Kubernetes gives each pod from its requests and limits: Guaranteed (requests equal limits for every container), Burstable or BestEffort (none set). It predicts which pods are evicted first when a node runs short.",
     module: "requests-limits",
   },
+  "node-affinity": {
+    term: "Node affinity",
+    definition:
+      "Rules in a pod spec that attract it to nodes with certain labels, either required (the pod won't run elsewhere) or preferred (a scoring bonus). nodeSelector is the simplest form.",
+    module: "scheduler",
+  },
+  taint: {
+    term: "Taint",
+    definition:
+      "A mark on a node that repels pods, such as gpu=true:NoSchedule. Only pods with a matching toleration may be scheduled there; NoExecute also evicts pods already running.",
+    module: "scheduler",
+  },
+  toleration: {
+    term: "Toleration",
+    definition:
+      "A pod's permission to run on nodes with a matching taint. It allows scheduling there but doesn't attract the pod; combine it with node affinity for dedicated nodes.",
+    module: "scheduler",
+  },
+  "topology-spread": {
+    term: "Topology spread constraint",
+    definition:
+      "A rule that keeps a group of pods evenly spread across a topology such as nodes or zones: maxSkew is the largest allowed difference, and whenUnsatisfiable says whether to block (DoNotSchedule) or just prefer (ScheduleAnyway).",
+    module: "scheduler",
+  },
 } satisfies Record<string, GlossaryEntry>;

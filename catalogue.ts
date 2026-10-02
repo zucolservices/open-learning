@@ -4813,11 +4813,12 @@ const kubernetes: Track = {
             "Taints and tolerations, affinity",
             "Topology spread across zones",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["requests-limits"],
           plain:
             "When a pod needs a home, the scheduler rules out nodes that can't take it, scores the rest and picks the best. You can steer it: keep pods apart, together, on special hardware or spread across zones.",
+          terms: ["kube-scheduler", "node-affinity", "taint", "toleration", "topology-spread"],
         },
         {
           slug: "autoscaling",
