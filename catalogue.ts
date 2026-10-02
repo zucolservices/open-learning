@@ -3598,7 +3598,16 @@ const cloudArchitecture: Track = {
             "How a request is allowed or denied",
             "Least privilege",
           ],
-          status: "planned",
+          status: "live",
+          terms: [
+            "iam",
+            "principal",
+            "iam-role",
+            "iam-policy",
+            "explicit-deny",
+            "permissions-boundary",
+            "least-privilege",
+          ],
           level: "core",
           prerequisites: ["regions-responsibility"],
           plain:

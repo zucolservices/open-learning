@@ -194,4 +194,40 @@ export const cloudArchitecture = {
       "A set of DNS names that only resolve from inside your own cloud networks, such as db.internal.example. Route 53 private hosted zones, Azure Private DNS, Google Cloud DNS private zones.",
     module: "dns-routing",
   },
+  iam: {
+    term: "IAM (identity and access management)",
+    definition:
+      "The cloud service that decides who may do what to which resource. Every API call is checked against it. AWS IAM, Azure role-based access control (with Microsoft Entra ID), Google Cloud IAM.",
+    module: "iam",
+  },
+  "iam-policy": {
+    term: "Access policy",
+    definition:
+      "A document listing permissions: which actions are allowed (or denied) on which resources, sometimes under conditions. In AWS it is JSON; Azure uses role definitions and assignments; Google uses allow and deny policies.",
+    module: "iam",
+  },
+  principal: {
+    term: "Principal",
+    definition:
+      "Whoever is making a request: a person, a group, or a program (a role, service account or managed identity).",
+    module: "iam",
+  },
+  "iam-role": {
+    term: "Role",
+    definition:
+      "A named set of permissions. In AWS, an identity that people or programs take on temporarily, getting short-lived credentials instead of permanent keys. In Azure and Google, a bundle of permissions you grant to principals.",
+    module: "iam",
+  },
+  "explicit-deny": {
+    term: "Explicit deny",
+    definition:
+      "A rule that says no to a request outright. In AWS and Google Cloud it overrides any allow; requests nothing allows are denied anyway (implicit deny).",
+    module: "iam",
+  },
+  "permissions-boundary": {
+    term: "Permissions boundary",
+    definition:
+      "An AWS limit on the most an identity can ever be allowed. It grants nothing itself; a request must be allowed by both the identity's policy and the boundary. Organisation policies (SCPs) work the same way across accounts.",
+    module: "iam",
+  },
 } satisfies Record<string, GlossaryEntry>;
