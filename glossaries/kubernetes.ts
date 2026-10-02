@@ -200,4 +200,28 @@ export const kubernetes = {
       "Creates a Job on a repeating schedule written in cron syntax, with an optional time zone. Scheduling is best effort, so the work should be safe to run twice.",
     module: "workload-controllers",
   },
+  service: {
+    term: "Service",
+    definition:
+      "A stable name and virtual IP in front of a changing set of pods, chosen by a label selector. Traffic goes only to pods that are Ready. Types: ClusterIP (default, inside the cluster), NodePort, LoadBalancer, ExternalName, and headless.",
+    module: "services-dns",
+  },
+  label: {
+    term: "Label",
+    definition:
+      "A key-value tag on a Kubernetes object, such as app=payments or version=v2. Services, Deployments and many tools find objects by their labels rather than by name.",
+    module: "services-dns",
+  },
+  "label-selector": {
+    term: "Label selector",
+    definition:
+      "A rule that picks objects by their labels, such as app=payments. A Service's selector decides which pods receive its traffic; Services support only exact (equality-based) matches.",
+    module: "services-dns",
+  },
+  endpointslice: {
+    term: "EndpointSlice",
+    definition:
+      "The list of ready pod addresses behind a Service, kept up to date by a controller as pods come, go or fail readiness checks (up to 100 endpoints per slice by default). It replaced the older Endpoints API, deprecated in v1.33.",
+    module: "services-dns",
+  },
 } satisfies Record<string, GlossaryEntry>;

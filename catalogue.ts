@@ -4675,11 +4675,12 @@ const kubernetes: Track = {
             "ClusterIP, NodePort, LoadBalancer, headless",
             "Cluster DNS",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["pods"],
           plain:
             "Pods come and go and their IP addresses change. A Service gives a group of pods one stable name and address, and spreads traffic across whichever pods are healthy right now.",
+          terms: ["service", "label", "label-selector", "endpointslice", "readiness-probe"],
         },
         {
           slug: "ingress-gateway",
