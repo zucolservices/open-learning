@@ -4243,7 +4243,8 @@ const streamingData: Track = {
             "Stream–table duality",
             "Stream–stream and stream–table joins",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["state-store", "stream-table-duality", "stream-table-join", "stream-stream-join"],
           level: "deep",
           prerequisites: ["windows"],
           plain:

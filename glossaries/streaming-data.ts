@@ -271,4 +271,28 @@ export const streamingData = {
       "A window per key that groups events until there's a gap of inactivity longer than a set time, so its length varies. Suits user visits.",
     module: "windows",
   },
+  "state-store": {
+    term: "State store",
+    definition:
+      "Where a stream processor keeps memory between events (counts, windows, join tables), usually on local disk or in memory next to the code, backed up so it survives crashes. Kafka Streams uses RocksDB plus a compacted changelog topic.",
+    module: "state-joins",
+  },
+  "stream-table-duality": {
+    term: "Stream–table duality",
+    definition:
+      "A stream of changes can be replayed into a table (the latest value per key), and a table's changes can be read as a stream. Kafka's KStream and KTable are two views of the same data.",
+    module: "state-joins",
+  },
+  "stream-table-join": {
+    term: "Stream–table join",
+    definition:
+      "Enriching each stream event with a lookup in a table, such as adding a customer's tier to a payment. Only stream events trigger output; table updates just change the lookup.",
+    module: "state-joins",
+  },
+  "stream-stream-join": {
+    term: "Stream–stream join",
+    definition:
+      "Matching events from two streams with the same key that occur within a time window of each other, such as a payment and a login within five minutes. Both sides are kept in state for the window.",
+    module: "state-joins",
+  },
 } satisfies Record<string, GlossaryEntry>;
