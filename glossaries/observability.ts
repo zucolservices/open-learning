@@ -122,4 +122,22 @@ export const observability = {
       "The response times of the slowest requests, such as p99 or p99.9. Averages hide it, and systems that fan out to many servers amplify it.",
     module: "percentiles",
   },
+  cardinality: {
+    term: "Cardinality",
+    definition:
+      "The number of distinct values a label can take, and so the number of time series a metric creates (the product across its labels). High-cardinality labels, like user IDs, can overwhelm a metrics system and its bill.",
+    module: "cardinality",
+  },
+  "time-series": {
+    term: "Time series",
+    definition:
+      "One sequence of measurements over time for a metric with one specific set of label values, such as requests for route /pay with status 2xx. Metrics systems store and bill per series.",
+    module: "cardinality",
+  },
+  label: {
+    term: "Label (metric attribute)",
+    definition:
+      "A name–value pair attached to a metric, such as route=/pay, that lets you slice it. Every combination of label values becomes a separate time series.",
+    module: "cardinality",
+  },
 } satisfies Record<string, GlossaryEntry>;

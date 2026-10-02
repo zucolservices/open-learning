@@ -5722,11 +5722,12 @@ const observability: Track = {
             "Add labels to a metric one at a time and watch the number of time series, and the bill, explode",
           formats: ["simulation", "checkpoint"],
           concepts: ["Labels and time series", "Cardinality explosions", "Metrics vs events"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["metric-types"],
           plain:
             "Each combination of label values creates a separate time series to store. Labelling requests by endpoint is fine; labelling them by user ID creates millions of series and can bring a metrics system down.",
+          terms: ["cardinality", "label", "time-series", "metric"],
         },
         {
           slug: "golden-signals",
