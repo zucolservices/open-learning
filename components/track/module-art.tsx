@@ -6,6 +6,8 @@ import { agileScrumArt } from "./art/agile-scrum";
 import { ragSystemsArt } from "./art/rag-systems";
 import { cloudArchitectureArtA } from "./art/cloud-architecture-a";
 import { cloudArchitectureArtB } from "./art/cloud-architecture-b";
+import { streamingDataArtA } from "./art/streaming-data-a";
+import { streamingDataArtB } from "./art/streaming-data-b";
 
 /**
  * One small illustration per module (viewBox 160 × 100), drawn with the
@@ -1031,6 +1033,8 @@ const all: ArtMap = {
   ...ragSystemsArt,
   ...cloudArchitectureArtA,
   ...cloudArchitectureArtB,
+  ...streamingDataArtA,
+  ...streamingDataArtB,
 };
 
 export function ModuleArt({ slug }: { slug: string }) {
