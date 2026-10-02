@@ -159,6 +159,18 @@
   --bg-glow: rgb(244 114 182 / 0.1);
 }
 
+[data-track="helm"] {
+  --accent: #a16207;
+  --accent-soft: rgb(161 98 7 / 0.1);
+  --bg-glow: rgb(202 138 4 / 0.12);
+}
+[data-theme="dark"] [data-track="helm"],
+[data-theme="dark"][data-track="helm"] {
+  --accent: #facc15;
+  --accent-soft: rgb(250 204 21 / 0.14);
+  --bg-glow: rgb(250 204 21 / 0.1);
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);

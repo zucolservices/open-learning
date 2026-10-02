@@ -86,7 +86,15 @@ export interface Track {
   description: string;
   /** Key into the track accent palette in globals.css ([data-track]). */
   accent:
-    "lakehouse" | "blueprint" | "synapse" | "cadence" | "lumen" | "stratus" | "current" | "neutral";
+    | "lakehouse"
+    | "blueprint"
+    | "synapse"
+    | "cadence"
+    | "lumen"
+    | "stratus"
+    | "current"
+    | "helm"
+    | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
   hidden?: boolean;
@@ -4460,6 +4468,500 @@ const streamingData: Track = {
   ],
 };
 
+const kubernetes: Track = {
+  slug: "kubernetes",
+  title: "Kubernetes",
+  area: "Platform & cloud",
+  category: "platform-cloud",
+  tagline: "Pods, controllers and scheduling, taken apart.",
+  description:
+    "How Kubernetes really works: desired state and control loops, the control plane and nodes, pods and Deployments, health checks, Services and Gateway API, network policies, configuration and storage, requests and limits, the scheduler, autoscaling, upgrades, access control, pod security, Helm and GitOps, debugging and operators. Vendor-neutral: upstream Kubernetes alongside EKS, GKE, AKS and OpenShift. By the end you can read a cluster, design a deployment and predict how it behaves when things go wrong.",
+  accent: "helm",
+  chapters: [
+    {
+      slug: "big-picture",
+      title: "The big picture",
+      summary: "Why Kubernetes exists, and the one idea it is built on.",
+      modules: [
+        {
+          slug: "why-kubernetes",
+          title: "Why Kubernetes",
+          summary: "From copying files to twenty servers by hand to declaring what you want.",
+          minutes: 20,
+          signature:
+            "Deploy one app by hand to twenty servers until it breaks at 2 a.m., then let a cluster keep it running",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "What containers solved and what they didn't",
+            "Orchestration: placing, restarting, scaling",
+            "When Kubernetes isn't worth it",
+          ],
+          status: "live",
+          level: "beginner",
+          plain:
+            "Containers package an app so it runs the same everywhere, but someone still has to decide which machine runs each one, restart them when they crash and add more when traffic grows. Kubernetes does that job: you describe what you want running, and it keeps it that way.",
+          terms: [
+            "container",
+            "container-image",
+            "orchestration",
+            "cluster",
+            "node",
+            "desired-state",
+          ],
+        },
+        {
+          slug: "desired-state",
+          title: "Desired state and the control loop",
+          summary: "Say what you want; controllers keep making it true.",
+          minutes: 20,
+          signature: "Delete a pod or kill a node and watch the cluster put things back",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Declarative vs imperative", "Reconciliation loops", "Self-healing"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-kubernetes"],
+          plain:
+            "You don't tell Kubernetes what to do step by step. You tell it what the end result should be, like setting a thermostat, and small programs called controllers keep comparing reality with that and fixing any difference.",
+        },
+        {
+          slug: "cluster-anatomy",
+          title: "The cluster, taken apart",
+          summary: "The control plane, the nodes, and what happens on kubectl apply.",
+          minutes: 25,
+          signature:
+            "Follow one kubectl apply through the API server, etcd, the scheduler, controllers and the kubelet",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Control plane components",
+            "Nodes, kubelet and container runtime",
+            "Everything goes through the API server",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["desired-state"],
+          plain:
+            "A cluster has a control plane that stores what you asked for and decides where things run, and worker machines (nodes) that actually run your containers. Every change goes through one front door, the API server.",
+        },
+      ],
+    },
+    {
+      slug: "workloads",
+      title: "Running workloads",
+      summary: "Pods, Deployments, health checks and the other controllers.",
+      modules: [
+        {
+          slug: "pods",
+          title: "Pods",
+          summary: "The smallest thing Kubernetes runs: one or more containers sharing a home.",
+          minutes: 20,
+          signature:
+            "Put two containers in one pod, share a disk and a network, and follow the pod through its life",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Containers sharing network and storage",
+            "Init containers and sidecars",
+            "Pod phases and restarts",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["cluster-anatomy"],
+          plain:
+            "Kubernetes doesn't run containers directly; it runs pods. A pod is one or more tightly coupled containers that share an IP address and can share files. Pods are disposable: when one dies, a new one replaces it.",
+        },
+        {
+          slug: "deployments",
+          title: "Deployments and rolling updates",
+          summary: "Releasing a new version without downtime, and rolling back a bad one.",
+          minutes: 25,
+          signature:
+            "Roll out v2 across ten pods, tune how fast it goes, then roll back a broken release",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "ReplicaSets and Deployments",
+            "Rolling update settings",
+            "Rollback and revision history",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["pods"],
+          plain:
+            "A Deployment keeps a set number of identical pods running and replaces them gradually when you ship a new version, so users never see an outage. If the new version is broken, you can roll back.",
+        },
+        {
+          slug: "health-checks",
+          title: "Health checks",
+          summary: "Telling Kubernetes when an app is alive, ready, or still starting.",
+          minutes: 20,
+          signature:
+            "A slow-starting app is killed in a restart loop; fix it with the right probes",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Liveness, readiness and startup probes",
+            "Restart loops",
+            "Graceful shutdown",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["deployments"],
+          plain:
+            "Kubernetes can only keep an app healthy if it can tell when it isn't. Probes are small checks it runs: one to see if the app is alive, one to see if it's ready for traffic, and one for slow starters.",
+        },
+        {
+          slug: "workload-controllers",
+          title: "StatefulSets, DaemonSets, Jobs and CronJobs",
+          summary: "Picking the right controller for each kind of workload.",
+          minutes: 20,
+          signature:
+            "Match databases, log agents, nightly reports and web apps to the controller built for them",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "Stable identity for stateful apps",
+            "One pod per node",
+            "Run-to-completion and scheduled work",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["deployments"],
+          plain:
+            "Deployments suit interchangeable web servers. Other workloads need something different: databases need stable names and disks, log collectors need one copy on every machine, and batch jobs need to run once and finish.",
+        },
+      ],
+    },
+    {
+      slug: "networking",
+      title: "Networking",
+      summary: "Finding pods that keep moving, letting traffic in, and keeping it out.",
+      modules: [
+        {
+          slug: "services-dns",
+          title: "Services and DNS",
+          summary: "A stable address in front of pods that keep changing.",
+          minutes: 25,
+          signature:
+            "Label pods, point a Service at them, and watch traffic follow pods as they come and go",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Labels and selectors",
+            "ClusterIP, NodePort, LoadBalancer, headless",
+            "Cluster DNS",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["pods"],
+          plain:
+            "Pods come and go and their IP addresses change. A Service gives a group of pods one stable name and address, and spreads traffic across whichever pods are healthy right now.",
+        },
+        {
+          slug: "ingress-gateway",
+          title: "Ingress and Gateway API",
+          summary: "Routing outside traffic to the right service.",
+          minutes: 20,
+          signature: "Route two websites and an API through one entry point, by host and path",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Ingress and ingress controllers",
+            "Gateway API roles and routes",
+            "TLS at the edge",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["services-dns"],
+          plain:
+            "Services work inside the cluster. To let the internet in, you put a router at the edge that sends each request to the right Service based on its hostname and path. Gateway API is the newer, richer way to describe that.",
+        },
+        {
+          slug: "network-policies",
+          title: "Network policies",
+          summary: "Every pod can reach every other pod, until you say otherwise.",
+          minutes: 20,
+          signature:
+            "Lock down a three-tier app so only the right pods can talk, without breaking it",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Default allow",
+            "Ingress and egress rules",
+            "Default deny and the CNI's role",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["services-dns"],
+          plain:
+            "By default any pod in a cluster can connect to any other, which means one compromised pod can reach your database. Network policies are firewall rules for pods.",
+        },
+      ],
+    },
+    {
+      slug: "config-storage",
+      title: "Configuration and storage",
+      summary: "Settings, secrets and data that outlive a pod.",
+      modules: [
+        {
+          slug: "config-secrets",
+          title: "ConfigMaps and Secrets",
+          summary: "Keeping settings and passwords out of the image.",
+          minutes: 20,
+          signature: "Move settings out of an image, then find out what a Secret really protects",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "ConfigMaps as files and variables",
+            "Secrets are encoded, not encrypted",
+            "Encryption at rest and external secret stores",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["pods"],
+          plain:
+            "Apps need settings and passwords that differ between environments. Kubernetes stores them as ConfigMaps and Secrets and hands them to pods, but a Secret is only base64-encoded unless you protect it properly.",
+        },
+        {
+          slug: "persistent-storage",
+          title: "Persistent storage",
+          summary: "Data that survives when a pod moves or dies.",
+          minutes: 25,
+          signature:
+            "Run a database pod, move it to another node, and see what happens to its data",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Volumes, PersistentVolumes and claims",
+            "StorageClasses and dynamic provisioning",
+            "CSI drivers and access modes",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["config-secrets"],
+          plain:
+            "A container's files vanish when it restarts. For data that must survive, a pod claims a persistent volume, usually a cloud disk, which Kubernetes attaches wherever the pod runs.",
+        },
+      ],
+    },
+    {
+      slug: "scheduling",
+      title: "Scheduling and scaling",
+      summary: "Where pods run, how big they are, and how many.",
+      modules: [
+        {
+          slug: "requests-limits",
+          title: "Requests, limits and QoS",
+          summary: "How big each pod is, and what happens when it wants more.",
+          minutes: 25,
+          signature:
+            "Pack pods onto nodes, then watch one get throttled and another killed for using too much memory",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Requests for scheduling, limits for enforcement",
+            "CPU throttling vs out-of-memory kills",
+            "Quality-of-service classes",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["pods"],
+          plain:
+            "Each container says how much CPU and memory it needs (its request) and the most it may use (its limit). Requests decide where pods fit; limits decide what happens when they get greedy.",
+        },
+        {
+          slug: "scheduler",
+          title: "The scheduler",
+          summary: "How Kubernetes picks a node for every pod.",
+          minutes: 25,
+          signature:
+            "Place pods by hand against filters and scores, then add taints, affinity and spread rules",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Filtering and scoring",
+            "Taints and tolerations, affinity",
+            "Topology spread across zones",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["requests-limits"],
+          plain:
+            "When a pod needs a home, the scheduler rules out nodes that can't take it, scores the rest and picks the best. You can steer it: keep pods apart, together, on special hardware or spread across zones.",
+        },
+        {
+          slug: "autoscaling",
+          title: "Autoscaling",
+          summary: "More pods when busy, more nodes when full, fewer of both when quiet.",
+          minutes: 25,
+          signature: "Survive a traffic spike with pod and node autoscaling, then shrink back",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Horizontal and vertical pod autoscaling",
+            "Cluster Autoscaler and Karpenter",
+            "Event-driven scaling with KEDA",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["requests-limits"],
+          plain:
+            "Traffic rises and falls. Kubernetes can add pods when CPU or queue length grows, and add machines when the pods no longer fit, then remove both when things calm down.",
+        },
+        {
+          slug: "disruptions-upgrades",
+          title: "Disruptions and upgrades",
+          summary: "Taking nodes away safely, and keeping the cluster current.",
+          minutes: 20,
+          signature:
+            "Drain a node during maintenance without taking the app down, then plan a version upgrade",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Voluntary vs involuntary disruptions",
+            "PodDisruptionBudgets and draining",
+            "Version skew and upgrade order",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["autoscaling"],
+          plain:
+            "Machines need patching and Kubernetes itself releases three versions a year. Draining nodes one at a time, with budgets that keep enough pods running, lets you do both without an outage.",
+        },
+      ],
+    },
+    {
+      slug: "security-ops",
+      title: "Security and operations",
+      summary: "Access, policy, delivery and debugging.",
+      modules: [
+        {
+          slug: "rbac",
+          title: "Access control and service accounts",
+          summary: "Who can do what in the cluster, people and pods alike.",
+          minutes: 25,
+          signature:
+            "Find the over-privileged service account in a breach story, then grant only what's needed",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Authentication vs authorisation",
+            "Roles, ClusterRoles and bindings",
+            "Service accounts and cloud workload identity",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["cluster-anatomy"],
+          plain:
+            "Every request to the cluster is checked: who is asking, and are they allowed? Role-based access control grants permissions to people and to pods. Giving too much is one of the most common ways clusters get breached.",
+        },
+        {
+          slug: "pod-security",
+          title: "Pod security and admission",
+          summary: "Stopping risky pods before they start.",
+          minutes: 20,
+          signature:
+            "Sort pod settings from safe to dangerous, then write the policy that blocks the dangerous ones",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Pod Security Standards",
+            "Non-root, read-only, no privilege",
+            "Admission control and policy engines",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["rbac"],
+          plain:
+            "A container running as root with host access can take over its machine. Kubernetes can check every pod before it starts and refuse risky ones, using built-in security levels or a policy engine.",
+        },
+        {
+          slug: "helm-gitops",
+          title: "Packaging and GitOps",
+          summary: "From a Git commit to a running cluster, without kubectl by hand.",
+          minutes: 25,
+          signature:
+            "Package an app with Helm, then let a GitOps agent sync it and undo a manual change",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Helm charts and Kustomize overlays",
+            "GitOps: Git as the source of truth",
+            "Argo CD and Flux",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["deployments"],
+          plain:
+            "Real apps are dozens of YAML files that differ per environment. Helm and Kustomize package them; GitOps tools then keep the cluster matching what's in Git, so every change is reviewed and reversible.",
+        },
+        {
+          slug: "debugging",
+          title: "Debugging a cluster",
+          summary: "Reading the clues when pods won't start or keep dying.",
+          minutes: 25,
+          signature:
+            "Diagnose pods stuck in CrashLoopBackOff, Pending and ImagePullBackOff from events, logs and describe",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Pod status and events",
+            "kubectl describe, logs and get events",
+            "Metrics and the usual suspects",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["health-checks"],
+          plain:
+            "When something breaks, Kubernetes leaves clues: the pod's status, its events and its logs. Most problems fall into a handful of patterns you can learn to recognise.",
+        },
+      ],
+    },
+    {
+      slug: "in-practice",
+      title: "In practice",
+      summary: "Extending Kubernetes, choosing a managed service, and a capstone.",
+      modules: [
+        {
+          slug: "operators",
+          title: "Extending Kubernetes",
+          summary: "Custom resources and operators: teaching the cluster new tricks.",
+          minutes: 20,
+          signature:
+            "Add a 'Database' resource and watch an operator turn it into pods, storage and backups",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Custom resource definitions",
+            "The operator pattern",
+            "Using operators wisely",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["desired-state"],
+          plain:
+            "Kubernetes can learn new kinds of objects. An operator is a controller that knows how to run one specific piece of software, such as a database, and does the work a human operator would.",
+        },
+        {
+          slug: "managed-kubernetes",
+          title: "Managed Kubernetes and cost",
+          summary: "EKS, GKE, AKS and OpenShift, and what a cluster really costs.",
+          minutes: 25,
+          signature:
+            "Price the same cluster on four managed services, then decide whether you need Kubernetes at all",
+          formats: ["animated-infographic", "simulation", "checkpoint"],
+          concepts: [
+            "What managed services take off your hands",
+            "Control plane fees, nodes and serverless modes",
+            "When a simpler platform is better",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["autoscaling"],
+          plain:
+            "Running the control plane yourself is hard, so most teams use a managed service. They differ in what they manage, how they charge and how much they hide. Sometimes a simpler container service is the better choice.",
+        },
+        {
+          slug: "capstone-k8s",
+          title: "Capstone: a payments API on Kubernetes",
+          summary: "Design the cluster, then survive a bad day.",
+          minutes: 40,
+          signature:
+            "Make the choices for a payments API, then face a bad release, a dead node and a traffic surge",
+          formats: ["branching-scenario", "build-connect", "checkpoint"],
+          concepts: ["Designing a production deployment end to end"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["health-checks", "autoscaling", "rbac"],
+          plain:
+            "Everything in this track in one design. You'll choose how to run a payments API on Kubernetes, then see how your choices hold up when things go wrong.",
+        },
+      ],
+    },
+  ],
+};
+
 /** A small end-to-end module that exercises the toolkit and Module SDK. */
 const playground: Track = {
   slug: "playground",
@@ -4504,6 +5006,7 @@ export const tracks: Track[] = [
   ragSystems,
   cloudArchitecture,
   streamingData,
+  kubernetes,
   playground,
 ];
 
@@ -4586,7 +5089,11 @@ export const categories: Category[] = [
         slug: "cloud-architecture",
         blurb: "Networks, identity and landing zones across the big clouds.",
       },
-      { title: "Kubernetes", blurb: "Pods, controllers and scheduling, taken apart." },
+      {
+        title: "Kubernetes",
+        slug: "kubernetes",
+        blurb: "Pods, controllers and scheduling, taken apart.",
+      },
       { title: "CI/CD", blurb: "From commit to production, safely and often." },
       { title: "Observability", blurb: "Metrics, logs, traces and SLOs in depth." },
     ],

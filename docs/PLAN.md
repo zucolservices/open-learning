@@ -344,6 +344,43 @@ Data engineering area, second track (approved 2026-10-02). 23 modules in 7 chapt
 | 22    | Event-driven patterns                    | Event sourcing, CQRS, a saga that undoes itself                        | Step-through     |
 | 23    | Capstone: a real-time payments monitor   | Design a UPI-like monitoring pipeline, then break it                   | Branching, build |
 
+## Kubernetes: curriculum
+
+Platform & cloud area, second track (approved 2026-10-02). 23 modules in 7 chapters, about 9.5 hours. Accent: "helm" amber (`[data-track="helm"]`). Glossary: `glossaries/kubernetes.ts`. Vendor-neutral: upstream Kubernetes with EKS, GKE, AKS and OpenShift, and local clusters (kind, k3s). Builds on Cloud Architecture's containers, load-balancing and workload-identity modules and links to them rather than repeating them. Built on one branch (`track/kubernetes`), one commit per module, merged once at the end. Each module is fact-checked on its own before it is built; card illustrations and a showcase follow the last module.
+
+| #     | Module                                      | Centrepiece                                                             | Key formats       |
+| ----- | ------------------------------------------- | ----------------------------------------------------------------------- | ----------------- |
+| **1** | **The big picture**                         |                                                                         |                   |
+| 1     | Why Kubernetes                              | One app by hand on twenty servers, then a cluster that keeps it running | Scroll story      |
+| 2     | Desired state and the control loop          | Delete a pod or kill a node; the cluster puts it back                   | Simulation        |
+| 3     | The cluster, taken apart                    | Follow one kubectl apply through every component                        | Step-through      |
+| **2** | **Running workloads**                       |                                                                         |                   |
+| 4     | Pods                                        | Two containers sharing a pod; init containers, sidecars, pod lifecycle  | Step-through      |
+| 5     | Deployments and rolling updates             | Roll out v2, tune surge and unavailability, roll back                   | Simulation        |
+| 6     | Health checks                               | A slow starter in a restart loop; fix it with probes                    | Fix the problem   |
+| 7     | StatefulSets, DaemonSets, Jobs and CronJobs | Which controller for which workload                                     | Infographic, sort |
+| **3** | **Networking**                              |                                                                         |                   |
+| 8     | Services and DNS                            | Labels, selectors and Service types; traffic follows moving pods        | Simulation        |
+| 9     | Ingress and Gateway API                     | Route outside traffic by host and path                                  | Step-through      |
+| 10    | Network policies                            | Lock down a three-tier app without breaking it                          | Fix the problem   |
+| **4** | **Configuration and storage**               |                                                                         |                   |
+| 11    | ConfigMaps and Secrets                      | What a Secret really protects                                           | Step-through      |
+| 12    | Persistent storage                          | A database pod moves node; PVCs, StorageClasses, CSI                    | Simulation        |
+| **5** | **Scheduling and scaling**                  |                                                                         |                   |
+| 13    | Requests, limits and QoS                    | Bin-packing, throttling and OOM kills                                   | Simulation        |
+| 14    | The scheduler                               | Filters and scores; taints, affinity, topology spread                   | Simulation        |
+| 15    | Autoscaling                                 | HPA, VPA, Cluster Autoscaler/Karpenter, KEDA through a spike            | Simulation        |
+| 16    | Disruptions and upgrades                    | Drain with PodDisruptionBudgets; version upgrades                       | Step-through      |
+| **6** | **Security and operations**                 |                                                                         |                   |
+| 17    | Access control and service accounts         | An over-privileged service account; least-privilege RBAC                | Fix the problem   |
+| 18    | Pod security and admission                  | Pod Security Standards and policy engines                               | Build, sort       |
+| 19    | Packaging and GitOps                        | Helm, Kustomize, Argo CD and Flux                                       | Step-through      |
+| 20    | Debugging a cluster                         | CrashLoopBackOff, Pending, ImagePullBackOff from the clues              | Branching         |
+| **7** | **In practice**                             |                                                                         |                   |
+| 21    | Extending Kubernetes                        | A custom resource and its operator                                      | Step-through      |
+| 22    | Managed Kubernetes and cost                 | EKS, GKE, AKS, OpenShift priced; when not to use Kubernetes             | Infographic, sim  |
+| 23    | Capstone: a payments API on Kubernetes      | Design it, then a bad release, a dead node and a surge                  | Branching, build  |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -358,6 +395,7 @@ Data engineering area, second track (approved 2026-10-02). 23 modules in 7 chapt
 | 4e. RAG Systems            | AI & machine learning, second track, 23 modules                                         | Live: all 23 modules (2026-09-29)                                       |
 | 4f. Cloud Architecture     | Platform & cloud, first track, 22 modules                                               | Live: all 22 modules (2026-10-02)                                       |
 | 4g. Streaming Data Systems | Data engineering, second track, 23 modules                                              | Live: all 23 modules (2026-10-02)                                       |
+| 4h. Kubernetes             | Platform & cloud, second track, 23 modules                                              | In progress: 1 of 23 modules                                            |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
