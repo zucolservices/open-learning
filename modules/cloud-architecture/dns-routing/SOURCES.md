@@ -1,0 +1,11 @@
+# Sources (fact-checked 2026-10-02, before building)
+
+Full notes: scratchpad `cloud/m08-facts.md`.
+
+- Route 53 routing policies: simple, failover, geolocation (country, and state/province in some countries), geoproximity, latency, IP-based, multivalue answer, weighted. Health checks every 30 s (fast: 10 s), failure threshold 3 by default; an endpoint is healthy if more than 18% of checkers report it healthy. Alias records use the target's TTL (Elastic Load Balancing: 60 s). Route 53 Resolver is now "Route 53 VPC Resolver"; private hosted zones.
+- Azure Traffic Manager: priority, weighted, performance, geographic, multivalue, subnet. Probing every 30 s (fast: 10 s), 3 tolerated failures (unhealthy on the 4th), CLI default TTL 30 s. Geographic routing returns the endpoint even if it is unhealthy. Azure Private DNS zones, Azure DNS Private Resolver.
+- Google Cloud DNS routing policies: weighted round robin, geolocation, geolocation with geofencing, failover. Private zones, forwarding zones. Geolocation uses the resolver's location (EDNS Client Subnet where supported).
+- Failover time ≈ detection (interval × threshold) + TTL; resolvers may cache longer; existing connections stay put. Global L7 balancers (Azure Front Door, Google global external Application Load Balancer, AWS Global Accelerator for anycast IPs) avoid DNS cache delay.
+- Prices (Oct 2026): Route 53 $0.50 per hosted zone/month, $0.40 per million standard queries ($0.60 latency, $0.70 geo), health checks $0.50/$0.75 (AWS/non-AWS endpoints). Azure DNS $0.50 per zone, $0.40/million. Traffic Manager $0.54/million queries, health checks $0.36 (Azure) / $0.54 (external). Cloud DNS $0.20 per zone, $0.40/million ($0.70 with routing policies).
+- CDNs in India: CloudFront edge locations in seven Indian areas (Bengaluru, Chennai, Hyderabad, Kolkata, Mumbai, New Delhi, Pune); Google Cloud CDN edges incl. Chennai, Mumbai, Delhi; Azure Front Door edges incl. Chennai, Hyderabad, Mumbai, New Delhi. Azure CDN from Edgio retired 15 Jan 2025; Azure CDN Standard from Microsoft (classic) retires 30 Sep 2027.
+- Latencies in the routing simulation (Delhi/Chennai/Singapore to Mumbai/Hyderabad/Singapore) are illustrative, labelled as such.

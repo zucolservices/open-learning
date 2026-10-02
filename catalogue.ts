@@ -3570,7 +3570,8 @@ const cloudArchitecture: Track = {
             "Latency, weighted and failover routing",
             "Content delivery networks",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["dns", "routing-policy", "ttl", "private-dns-zone", "cdn"],
           level: "core",
           prerequisites: ["private-networks"],
           plain:

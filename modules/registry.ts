@@ -147,4 +147,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "cloud-architecture/in-and-out": () => import("./cloud-architecture/in-and-out"),
   "cloud-architecture/connecting-networks": () =>
     import("./cloud-architecture/connecting-networks"),
+  "cloud-architecture/dns-routing": () => import("./cloud-architecture/dns-routing"),
 };

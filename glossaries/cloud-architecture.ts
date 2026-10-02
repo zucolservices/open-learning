@@ -176,4 +176,22 @@ export const cloudArchitecture = {
       "A private line from your premises to a cloud provider through a colocation site, not over the internet: AWS Direct Connect, Azure ExpressRoute, Google Cloud Interconnect. Faster and steadier than a VPN, but not encrypted by default.",
     module: "connecting-networks",
   },
+  dns: {
+    term: "DNS",
+    definition:
+      "The Domain Name System: the internet's directory that turns names like example.com into IP addresses. Answers are cached for a set time (the TTL).",
+    module: "dns-routing",
+  },
+  "routing-policy": {
+    term: "DNS routing policy",
+    definition:
+      "A rule that makes DNS give different answers to different queries: by lowest latency, by country (geolocation), by weight (percentages), or to a standby when health checks fail (failover).",
+    module: "dns-routing",
+  },
+  "private-dns-zone": {
+    term: "Private DNS zone",
+    definition:
+      "A set of DNS names that only resolve from inside your own cloud networks, such as db.internal.example. Route 53 private hosted zones, Azure Private DNS, Google Cloud DNS private zones.",
+    module: "dns-routing",
+  },
 } satisfies Record<string, GlossaryEntry>;
