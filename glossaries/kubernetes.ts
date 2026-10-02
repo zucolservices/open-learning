@@ -356,4 +356,28 @@ export const kubernetes = {
       "A rule that keeps a group of pods evenly spread across a topology such as nodes or zones: maxSkew is the largest allowed difference, and whenUnsatisfiable says whether to block (DoNotSchedule) or just prefer (ScheduleAnyway).",
     module: "scheduler",
   },
+  hpa: {
+    term: "Horizontal Pod Autoscaler (HPA)",
+    definition:
+      "Built-in controller that changes a workload's replica count from metrics, by default CPU as a percentage of requests: desired = ceil(current × current value ÷ target), checked every 15 s, with a 5-minute wait before scaling down.",
+    module: "autoscaling",
+  },
+  vpa: {
+    term: "Vertical Pod Autoscaler (VPA)",
+    definition:
+      "An add-on that recommends or sets pods' CPU and memory requests from their observed usage, by recreating pods or resizing them in place. Not to be combined with an HPA on the same metric.",
+    module: "autoscaling",
+  },
+  "node-autoscaler": {
+    term: "Node autoscaler",
+    definition:
+      "Adds nodes when pods are Pending for lack of room and removes underused ones. The Cluster Autoscaler works with node groups; Karpenter launches right-sized nodes directly.",
+    module: "autoscaling",
+  },
+  keda: {
+    term: "KEDA",
+    definition:
+      "Kubernetes Event-driven Autoscaling, a CNCF graduated project that scales workloads from event sources such as queue length, Kafka lag or a schedule, including down to zero.",
+    module: "autoscaling",
+  },
 } satisfies Record<string, GlossaryEntry>;

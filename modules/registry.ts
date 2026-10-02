@@ -201,4 +201,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "kubernetes/persistent-storage": () => import("./kubernetes/persistent-storage"),
   "kubernetes/requests-limits": () => import("./kubernetes/requests-limits"),
   "kubernetes/scheduler": () => import("./kubernetes/scheduler"),
+  "kubernetes/autoscaling": () => import("./kubernetes/autoscaling"),
 };

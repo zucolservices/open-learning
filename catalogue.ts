@@ -4832,11 +4832,12 @@ const kubernetes: Track = {
             "Cluster Autoscaler and Karpenter",
             "Event-driven scaling with KEDA",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["requests-limits"],
           plain:
             "Traffic rises and falls. Kubernetes can add pods when CPU or queue length grows, and add machines when the pods no longer fit, then remove both when things calm down.",
+          terms: ["hpa", "vpa", "node-autoscaler", "keda", "resource-request"],
         },
         {
           slug: "disruptions-upgrades",
