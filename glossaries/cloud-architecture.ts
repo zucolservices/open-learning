@@ -68,4 +68,28 @@ export const cloudArchitecture = {
       "The split of security duties between a cloud provider and its customer. The provider secures the buildings, hardware and its own services; the customer always secures its data, accounts, access and configuration, and more besides with IaaS.",
     module: "regions-responsibility",
   },
+  "virtual-machine": {
+    term: "Virtual machine (VM)",
+    definition:
+      "A whole computer created in software on a physical server by a hypervisor, with its own operating system. In the cloud you rent VMs by the second or minute and patch their operating systems yourself.",
+    module: "vms-containers-functions",
+  },
+  container: {
+    term: "Container",
+    definition:
+      "An application packed with its libraries into an image that runs isolated on a host while sharing the host's operating system kernel. Lighter and quicker to start than a virtual machine.",
+    module: "vms-containers-functions",
+  },
+  "serverless-function": {
+    term: "Function (serverless)",
+    definition:
+      "A small piece of code the provider runs only when an event arrives (a request, an upload, a timer), billed per millisecond of running time, with no servers for you to manage. Examples: AWS Lambda, Azure Functions, Google Cloud Run functions.",
+    module: "vms-containers-functions",
+  },
+  "cold-start": {
+    term: "Cold start",
+    definition:
+      "The extra wait when a function or scale-to-zero container has no ready copy and the provider must start one. AWS says cold starts usually affect under 1% of Lambda calls and last from under 100 ms to over a second.",
+    module: "vms-containers-functions",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -3460,11 +3460,18 @@ const cloudArchitecture: Track = {
             "Containers and managed container services",
             "Functions (serverless): cold starts and per-request billing",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["what-is-cloud"],
           plain:
             "You can rent a whole virtual computer, a lightweight container, or just pay each time a small function runs. Each step hands more work to the provider and gives you less control.",
+          terms: [
+            "virtual-machine",
+            "container",
+            "serverless-function",
+            "cold-start",
+            "pay-as-you-go",
+          ],
         },
         {
           slug: "autoscaling-load-balancing",
