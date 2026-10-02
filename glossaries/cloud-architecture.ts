@@ -134,4 +134,22 @@ export const cloudArchitecture = {
       "A firewall that remembers connections, so the reply to an allowed request is let back in automatically. Security groups, Azure NSGs and Google's firewall rules are stateful; AWS network ACLs are not.",
     module: "private-networks",
   },
+  nat: {
+    term: "NAT (network address translation)",
+    definition:
+      "Rewriting a private address to a public one on the way out and back again for the reply, using a table of connections. It lets private servers reach the internet without being reachable from it. Clouds offer it as a managed NAT gateway.",
+    module: "in-and-out",
+  },
+  "private-endpoint": {
+    term: "Private endpoint",
+    definition:
+      "A private connection from your network to a cloud service (such as object storage) that doesn't go through the internet gateway or NAT. AWS has gateway and interface endpoints, Azure private endpoints, Google Private Service Connect.",
+    module: "in-and-out",
+  },
+  egress: {
+    term: "Egress",
+    definition:
+      "Data leaving a cloud provider's network, usually to the internet, which is charged per gigabyte. Data coming in (ingress) is free.",
+    module: "in-and-out",
+  },
 } satisfies Record<string, GlossaryEntry>;

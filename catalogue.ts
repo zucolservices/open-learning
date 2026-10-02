@@ -3530,11 +3530,12 @@ const cloudArchitecture: Track = {
             "Private endpoints for cloud services",
             "Egress charges",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["private-networks"],
           plain:
             "Servers in a private subnet can reach the internet through a NAT gateway without being reachable from it. Private endpoints let them use cloud services without touching the internet, and data leaving the cloud usually costs money.",
+          terms: ["nat", "private-endpoint", "egress", "internet-gateway"],
         },
         {
           slug: "connecting-networks",
