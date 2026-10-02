@@ -242,4 +242,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "observability/log-pipelines": () => import("./observability/log-pipelines"),
   "observability/distributed-tracing": () => import("./observability/distributed-tracing"),
   "observability/trace-sampling": () => import("./observability/trace-sampling"),
+  "observability/profiling": () => import("./observability/profiling"),
 };

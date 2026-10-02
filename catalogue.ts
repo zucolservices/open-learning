@@ -5837,11 +5837,12 @@ const observability: Track = {
           signature: "Read a flame graph of a slow service and find the function eating the CPU",
           formats: ["step-through", "checkpoint"],
           concepts: ["Profiles and flame graphs", "Always-on profiling", "eBPF"],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["distributed-tracing"],
           plain:
             "A profile shows where a program spends its time and memory, function by function. Continuous profiling samples production all the time at low cost, so you can see what the code was doing when it got slow.",
+          terms: ["profile", "flame-graph", "continuous-profiling"],
         },
       ],
     },

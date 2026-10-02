@@ -224,4 +224,22 @@ export const observability = {
       "Deciding whether to keep a trace after it has finished, so you can keep every error and slow request and only a share of the rest. Needs all of a trace's spans in one place and some memory.",
     module: "trace-sampling",
   },
+  profile: {
+    term: "Profile",
+    definition:
+      "A record of where a program spends its CPU time, memory or waiting, built by sampling its call stack many times a second, so you can see which functions cost the most.",
+    module: "profiling",
+  },
+  "flame-graph": {
+    term: "Flame graph",
+    definition:
+      "Brendan Gregg's picture of a profile: each block is a function sitting on top of its caller, and its width is how often it appeared in the samples. The x-axis is not time.",
+    module: "profiling",
+  },
+  "continuous-profiling": {
+    term: "Continuous profiling",
+    definition:
+      "Running a low-overhead profiler in production all the time and storing the results, so you can look at what the code was doing at any moment, such as during an incident.",
+    module: "profiling",
+  },
 } satisfies Record<string, GlossaryEntry>;
