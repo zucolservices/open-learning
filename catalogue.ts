@@ -4418,11 +4418,19 @@ const streamingData: Track = {
             "Rebuild an account balance from its events, split reads from writes, and run a three-step saga that has to undo itself",
           formats: ["step-through", "checkpoint"],
           concepts: ["Event sourcing", "CQRS", "Sagas and compensating actions"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["cdc-outbox"],
           plain:
             "Some systems store events as the source of truth and derive everything else from them. Others separate the model for writing from the models for reading, or coordinate a multi-step process with events instead of one big transaction.",
+          terms: [
+            "event-sourcing",
+            "cqrs",
+            "read-model",
+            "saga",
+            "compensating-action",
+            "pivot-transaction",
+          ],
         },
         {
           slug: "capstone-payments",

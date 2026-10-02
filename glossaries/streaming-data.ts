@@ -385,4 +385,22 @@ export const streamingData = {
       "Pre-aggregating rows as they are ingested, for example one row per city per minute with a count and a sum, instead of one row per event. Queries get much faster, but the individual events are no longer stored.",
     module: "realtime-analytics",
   },
+  "read-model": {
+    term: "Read model",
+    definition:
+      "A copy of data shaped for one kind of query (a balance lookup, a statement screen, a search index), kept up to date by a projection that consumes events. In CQRS it lags the write side slightly.",
+    module: "event-patterns",
+  },
+  "compensating-action": {
+    term: "Compensating action",
+    definition:
+      "A step that semantically undoes an earlier, already committed step of a saga: refund a charge, release reserved stock. It doesn't erase history; both the action and its undo remain.",
+    module: "event-patterns",
+  },
+  "pivot-transaction": {
+    term: "Pivot transaction",
+    definition:
+      "The point of no return in a saga. Steps before it can be compensated; once it succeeds, the saga must complete, so later steps are retried until they succeed.",
+    module: "event-patterns",
+  },
 } satisfies Record<string, GlossaryEntry>;
