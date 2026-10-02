@@ -290,4 +290,10 @@ export const observability = {
       "An alert that fires when the error budget is being used up much faster than normal, checked over a long and a short window, so it catches real problems quickly without paging for brief blips.",
     module: "alerting",
   },
+  dashboard: {
+    term: "Dashboard",
+    definition:
+      "A screen of charts arranged to answer specific questions at a glance, such as 'are users OK right now?', usually starting with the golden signals and drilling down to causes.",
+    module: "dashboards",
+  },
 } satisfies Record<string, GlossaryEntry>;

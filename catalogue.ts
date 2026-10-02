@@ -5920,11 +5920,12 @@ const observability: Track = {
             "Layout and drill-down",
             "Avoiding misleading charts",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["golden-signals"],
           plain:
             "A good dashboard answers a specific question for a specific person, top to bottom: are users OK, and if not, where? Forty unlabelled graphs answer nothing at 3 a.m.",
+          terms: ["dashboard", "golden-signals", "percentile"],
         },
       ],
     },
