@@ -5330,11 +5330,12 @@ const ciCd: Track = {
             "Plan, apply and state",
             "Drift and policy checks",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["environments-promotion"],
           plain:
             "Servers, networks and databases can be described in code and changed through the same pipeline as the app. The pipeline shows exactly what will change before anything does, so a reviewer can catch a dangerous change in time.",
+          terms: ["iac-plan", "iac-state", "policy-as-code", "drift"],
         },
       ],
     },
