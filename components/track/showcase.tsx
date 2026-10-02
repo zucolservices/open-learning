@@ -14,6 +14,8 @@ import { StreamingScene } from "@/components/home/streaming-scene";
 import { StreamingTaste } from "@/components/home/streaming-taste";
 import { KubernetesScene } from "@/components/home/kubernetes-scene";
 import { KubernetesTaste } from "@/components/home/kubernetes-taste";
+import { CiCdScene } from "@/components/home/ci-cd-scene";
+import { CiCdTaste } from "@/components/home/ci-cd-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -86,5 +88,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: KubernetesTaste,
     tasteCaption:
       "A taste of module 2: delete pods or cut a node's power, and watch the cluster put everything back.",
+  },
+  "ci-cd": {
+    Scene: CiCdScene,
+    sceneCaption:
+      "One change, from a small commit to its first users, with the guard rails along the way. Watch the tour, or click any part.",
+    Taste: CiCdTaste,
+    tasteCaption:
+      "A taste of module 13: release a buggy version five ways and see how many requests fail.",
   },
 };
