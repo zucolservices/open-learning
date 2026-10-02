@@ -188,4 +188,22 @@ export const ciCd = {
       "The share of code lines or branches that ran during the tests. Useful for spotting untested areas, but a line can run without its result being checked, so high coverage isn't proof of good tests.",
     module: "test-pyramid",
   },
+  "test-sharding": {
+    term: "Test sharding",
+    definition:
+      "Splitting a test suite into parts that run at the same time on separate machines. Splitting by how long tests took last time keeps the parts even, so the slowest part doesn't hold everything up.",
+    module: "pipeline-speed",
+  },
+  "change-detection": {
+    term: "Change detection (affected-only)",
+    definition:
+      "Working out which parts of a codebase a change can affect and running only their builds and tests, using path filters or the dependency graph (Nx affected, Turborepo --affected, Bazel).",
+    module: "pipeline-speed",
+  },
+  "critical-path": {
+    term: "Critical path",
+    definition:
+      "The longest chain of pipeline jobs that must wait for one another. It decides how long the whole run takes; speeding up anything off it changes nothing.",
+    module: "pipeline-speed",
+  },
 } satisfies Record<string, GlossaryEntry>;

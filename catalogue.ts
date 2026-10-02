@@ -5207,11 +5207,12 @@ const ciCd: Track = {
             "Parallel jobs and test sharding",
             "Running only what a change affects",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["builds-caching", "test-pyramid"],
           plain:
             "If the pipeline takes an hour, people stop waiting for it and batch up changes, which brings back the problems CI was meant to fix. Running jobs side by side, splitting tests across machines and skipping work a change can't affect keep feedback to minutes.",
+          terms: ["test-sharding", "change-detection", "critical-path", "build-cache", "runner"],
         },
         {
           slug: "quality-gates",
