@@ -4342,11 +4342,12 @@ const streamingData: Track = {
             "Capacity units and pricing models",
             "Self-run vs managed cost",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["platforms-compared"],
           plain:
             "Streaming bills come from throughput, storage, partitions and data transfer. Each service counts them differently. Sizing a topic well avoids both bottlenecks and paying for capacity you never use.",
+          terms: ["capacity-unit", "replication-factor", "cross-az-traffic", "fetch-from-follower"],
         },
       ],
     },

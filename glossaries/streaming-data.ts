@@ -343,4 +343,28 @@ export const streamingData = {
       "Sending parked events back into the main topic (or straight to the consumer) once the cause of their failure is fixed, so they are processed after all. Also called redrive.",
     module: "errors-dlq",
   },
+  "replication-factor": {
+    term: "Replication factor",
+    definition:
+      "How many copies of each partition a Kafka cluster keeps, on different brokers. 3 is the usual choice for production; it triples disk use and the traffic between brokers.",
+    module: "sizing-cost",
+  },
+  "capacity-unit": {
+    term: "Capacity unit",
+    definition:
+      "A fixed slice of throughput you rent by the hour: a Kinesis shard (1 MB/s or 1,000 records/s in), an Event Hubs throughput unit (1 MB/s or 1,000 events/s in), a Confluent eCKU. You pay for it whether you use it or not.",
+    module: "sizing-cost",
+  },
+  "cross-az-traffic": {
+    term: "Cross-zone traffic",
+    definition:
+      "Data sent between availability zones in one region. AWS charges $0.01 per GB in each direction and GCP $0.01 per GiB; Azure stopped charging in 2024. Self-run Kafka replicating across zones generates a lot of it.",
+    module: "sizing-cost",
+  },
+  "fetch-from-follower": {
+    term: "Fetch from follower",
+    definition:
+      "Letting a Kafka consumer read from an in-sync replica in its own zone instead of the partition leader (KIP-392, Kafka 2.4), set with client.rack and a rack-aware replica selector. It cuts cross-zone traffic at the cost of slightly higher latency.",
+    module: "sizing-cost",
+  },
 } satisfies Record<string, GlossaryEntry>;
