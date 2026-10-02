@@ -5963,11 +5963,12 @@ const observability: Track = {
             "Run a payments outage as incident commander: assign roles, update customers, decide when it's over",
           formats: ["branching-scenario", "checkpoint"],
           concepts: ["Incident roles", "Severity and communication", "Mitigate first"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["alerting"],
           plain:
             "When something big breaks, a clear structure helps: one person coordinates, others investigate, someone keeps customers and colleagues informed. The first goal is to stop the harm, not to find the root cause.",
+          terms: ["incident", "incident-commander", "severity", "mitigation"],
         },
         {
           slug: "postmortems",

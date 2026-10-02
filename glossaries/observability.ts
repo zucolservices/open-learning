@@ -308,4 +308,22 @@ export const observability = {
       "Reducing an incident's harm to users quickly, by rolling back, switching off a feature flag or moving traffic, before the root cause is understood.",
     module: "investigation",
   },
+  incident: {
+    term: "Incident",
+    definition:
+      "An unplanned problem that hurts users or puts the service at risk and needs a coordinated response, from a slow checkout to a full outage.",
+    module: "incident-response",
+  },
+  "incident-commander": {
+    term: "Incident commander",
+    definition:
+      "The person in charge of an incident response: they hold the big picture, hand out roles and make decisions, while others investigate, fix and communicate.",
+    module: "incident-response",
+  },
+  severity: {
+    term: "Severity level",
+    definition:
+      "A rating of how serious an incident is (often SEV-1, the worst, to SEV-5), which decides who is called in, how fast, and who must be told.",
+    module: "incident-response",
+  },
 } satisfies Record<string, GlossaryEntry>;
