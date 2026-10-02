@@ -3988,7 +3988,8 @@ const streamingData: Track = {
             "Ordering within a partition",
             "Hot partitions and key skew",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["stream-partition", "partition-key", "hot-partition"],
           level: "core",
           prerequisites: ["events-logs-topics"],
           plain:

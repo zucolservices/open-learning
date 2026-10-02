@@ -55,4 +55,22 @@ export const streamingData = {
       "A program that reads events from a topic, keeping track of its own position (offset). Many consumers can read the same topic independently.",
     module: "events-logs-topics",
   },
+  "stream-partition": {
+    term: "Partition (stream)",
+    definition:
+      "One of the ordered logs a topic is split into, so it can be spread across machines and read in parallel. Order is guaranteed within a partition, not across partitions. Kinesis calls them shards.",
+    module: "partitions-ordering",
+  },
+  "partition-key": {
+    term: "Partition key",
+    definition:
+      "The part of an event used to choose its partition: Kafka hashes it (murmur2) and takes the remainder by the partition count. Events with the same key land in the same partition, in order.",
+    module: "partitions-ordering",
+  },
+  "hot-partition": {
+    term: "Hot partition (hot key)",
+    definition:
+      "A partition that gets far more traffic than the others because one key, such as a huge merchant, is a large share of events. Adding partitions doesn't help, since a key always maps to one partition.",
+    module: "partitions-ordering",
+  },
 } satisfies Record<string, GlossaryEntry>;

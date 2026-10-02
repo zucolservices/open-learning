@@ -166,4 +166,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
     import("./cloud-architecture/capstone-landing-zone"),
   "streaming-data/batch-vs-streams": () => import("./streaming-data/batch-vs-streams"),
   "streaming-data/events-logs-topics": () => import("./streaming-data/events-logs-topics"),
+  "streaming-data/partitions-ordering": () => import("./streaming-data/partitions-ordering"),
 };
