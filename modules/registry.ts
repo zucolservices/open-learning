@@ -189,4 +189,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "streaming-data/capstone-payments": () => import("./streaming-data/capstone-payments"),
   "kubernetes/why-kubernetes": () => import("./kubernetes/why-kubernetes"),
   "kubernetes/desired-state": () => import("./kubernetes/desired-state"),
+  "kubernetes/cluster-anatomy": () => import("./kubernetes/cluster-anatomy"),
 };

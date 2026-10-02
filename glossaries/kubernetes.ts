@@ -56,4 +56,46 @@ export const kubernetes = {
       "The command-line tool for talking to a Kubernetes cluster's API server: kubectl get, describe, logs, and kubectl apply -f to send a file of desired state.",
     module: "desired-state",
   },
+  "control-plane": {
+    term: "Control plane",
+    definition:
+      "The part of a cluster that stores the desired state and makes decisions: the API server, etcd, the scheduler and the controller manager (plus a cloud controller manager on cloud providers). Managed services run it for you.",
+    module: "cluster-anatomy",
+  },
+  "api-server": {
+    term: "API server (kube-apiserver)",
+    definition:
+      "The cluster's front door and hub. Every user and component talks to it: it authenticates, authorises, runs admission control, validates and stores objects in etcd, and lets components watch for changes.",
+    module: "cluster-anatomy",
+  },
+  etcd: {
+    term: "etcd",
+    definition:
+      "The consistent, highly available key-value store that holds all of a cluster's data. It replicates with the Raft protocol across an odd number of members (five recommended in production); ideally only the API server talks to it.",
+    module: "cluster-anatomy",
+  },
+  "kube-scheduler": {
+    term: "Scheduler (kube-scheduler)",
+    definition:
+      "The control-plane component that assigns each new pod to a node: it filters out nodes that can't run it, scores the rest, and records its choice with a binding.",
+    module: "cluster-anatomy",
+  },
+  kubelet: {
+    term: "kubelet",
+    definition:
+      "The agent on every node. It watches for pods assigned to its node, has the container runtime start their containers, runs health checks, restarts crashed containers and reports status to the API server.",
+    module: "cluster-anatomy",
+  },
+  "container-runtime": {
+    term: "Container runtime",
+    definition:
+      "The software that actually pulls images and runs containers on a node, such as containerd or CRI-O. The kubelet drives it through the Container Runtime Interface (CRI).",
+    module: "cluster-anatomy",
+  },
+  "admission-control": {
+    term: "Admission control",
+    definition:
+      "Checks the API server runs on a request after authentication and authorisation, before storing it: mutating steps can change the object (add defaults), validating steps can reject it against policy.",
+    module: "cluster-anatomy",
+  },
 } satisfies Record<string, GlossaryEntry>;
