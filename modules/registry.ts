@@ -202,4 +202,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "kubernetes/requests-limits": () => import("./kubernetes/requests-limits"),
   "kubernetes/scheduler": () => import("./kubernetes/scheduler"),
   "kubernetes/autoscaling": () => import("./kubernetes/autoscaling"),
+  "kubernetes/disruptions-upgrades": () => import("./kubernetes/disruptions-upgrades"),
 };

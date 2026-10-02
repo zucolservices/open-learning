@@ -380,4 +380,22 @@ export const kubernetes = {
       "Kubernetes Event-driven Autoscaling, a CNCF graduated project that scales workloads from event sources such as queue length, Kafka lag or a schedule, including down to zero.",
     module: "autoscaling",
   },
+  pdb: {
+    term: "PodDisruptionBudget (PDB)",
+    definition:
+      "A rule saying how many of an app's pods must stay available (minAvailable) or may be down (maxUnavailable) during voluntary disruptions. Evictions that would break it are refused; failures and direct deletes aren't stopped by it.",
+    module: "disruptions-upgrades",
+  },
+  drain: {
+    term: "Drain",
+    definition:
+      "kubectl drain marks a node unschedulable (cordon) and evicts its pods through the Eviction API, which respects PodDisruptionBudgets, so the node can be patched, upgraded or removed.",
+    module: "disruptions-upgrades",
+  },
+  "version-skew": {
+    term: "Version skew policy",
+    definition:
+      "Which component versions may run together. The control plane is upgraded one minor version at a time; kubelets may be up to three minor versions older than the API server but never newer.",
+    module: "disruptions-upgrades",
+  },
 } satisfies Record<string, GlossaryEntry>;

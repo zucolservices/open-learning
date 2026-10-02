@@ -4852,11 +4852,12 @@ const kubernetes: Track = {
             "PodDisruptionBudgets and draining",
             "Version skew and upgrade order",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["autoscaling"],
           plain:
             "Machines need patching and Kubernetes itself releases three versions a year. Draining nodes one at a time, with budgets that keep enough pods running, lets you do both without an outage.",
+          terms: ["pdb", "drain", "version-skew", "node"],
         },
       ],
     },
