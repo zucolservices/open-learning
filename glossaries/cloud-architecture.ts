@@ -314,4 +314,22 @@ export const cloudArchitecture = {
       "Writing rules as text files kept in version control, reviewed, tested and checked automatically, for example in every pull request. Tools: Open Policy Agent, Kyverno, Checkov, Sentinel.",
     module: "guardrails",
   },
+  "cloud-account": {
+    term: "Account, subscription or project",
+    definition:
+      "The basic container for cloud resources and the main unit of isolation: its own access, resources, quotas and bill line. AWS calls it an account, Azure a subscription, Google a project.",
+    module: "resource-hierarchy",
+  },
+  "resource-hierarchy": {
+    term: "Resource hierarchy",
+    definition:
+      "The tree that groups accounts, subscriptions or projects under an organisation, through organizational units (AWS), management groups (Azure) or folders (Google). Policies and access attached high up flow down to everything below.",
+    module: "resource-hierarchy",
+  },
+  "blast-radius": {
+    term: "Blast radius",
+    definition:
+      "How much is affected when one thing goes wrong: a leaked password, a bad command, a broken deployment. Separate accounts and environments keep it small.",
+    module: "resource-hierarchy",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -1,0 +1,10 @@
+# Sources (fact-checked 2026-10-02, before building)
+
+Full notes: scratchpad `cloud/m13-facts.md`.
+
+- AWS Organizations: root, OUs nested up to 5 levels, member accounts; default 10 accounts per organisation (raisable); management account pays for all, discounts/RIs/Savings Plans shared; SCP allow needed at every level, deny anywhere wins. Whitepaper "Organizing Your AWS Environment Using Multiple Accounts": Security (Log Archive, Security Tooling), Infrastructure, Workloads (Prod, SDLC), Sandbox, Policy Staging, Suspended, Exceptions, Deployments, Transitional, Individual Business Users, Business Continuity. Account closures: 20% or 250 per 30 days; 90-day post-closure period. Free.
+- Azure: Entra tenant, root management group, up to 6 levels, 10,000 management groups, subscriptions, resource groups (980 per subscription); billing hierarchy separate (MCA billing account → profile → invoice section); Azure landing zone groups Platform (Security, Management, Connectivity, Identity), Landing zones (Corp, Online, Local), Sandboxes, Decommissioned; Microsoft advises against per-environment management groups and suggests 3–4 levels.
+- Google Cloud: organisation (Cloud Identity / Workspace), folders up to 10 levels (300 children per parent), projects (IDs 6–30 chars, permanent, never reused); billing accounts linked to projects; 30-day project recovery; blueprint folders bootstrap, common, networking, production, nonproduction, development. Org policies on a child replace the parent's unless inheritFromParent; IAM grants additive.
+- Incidents: Code Spaces (17 June 2014, AWS console access, deletion incl. backups, shut down within ~12 h); UniSuper (May 2024, Google Cloud VMware Engine private cloud deleted; restored from backups incl. another provider).
+- India: Kotak Mahindra Bank multi-account landing zone on AWS Control Tower (AWS Industries blog, 10 Dec 2025); MeitY: 26 empanelled CSPs (PIB, 12 Dec 2025).
+- Organisation tree and costs in the module are illustrative.

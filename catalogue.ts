@@ -3699,7 +3699,8 @@ const cloudArchitecture: Track = {
             "Blast radius and separation",
             "How policies and billing inherit",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["cloud-account", "resource-hierarchy", "blast-radius"],
           level: "core",
           prerequisites: ["iam"],
           plain:
