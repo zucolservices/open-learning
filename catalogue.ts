@@ -4306,7 +4306,8 @@ const streamingData: Track = {
             "Send a sale-day spike through a pipeline and keep lag in check by scaling consumers and partitions",
           formats: ["simulation", "checkpoint"],
           concepts: ["Consumer lag", "Backpressure", "Scaling consumers and partitions"],
-          status: "planned",
+          status: "live",
+          terms: ["consumer-lag", "backpressure", "consumer-group", "stream-partition"],
           level: "applied",
           prerequisites: ["consumer-groups"],
           plain:

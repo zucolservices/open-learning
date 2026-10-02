@@ -180,4 +180,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "streaming-data/state-joins": () => import("./streaming-data/state-joins"),
   "streaming-data/checkpoints": () => import("./streaming-data/checkpoints"),
   "streaming-data/streaming-sql": () => import("./streaming-data/streaming-sql"),
+  "streaming-data/backpressure-lag": () => import("./streaming-data/backpressure-lag"),
 };

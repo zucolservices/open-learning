@@ -325,4 +325,10 @@ export const streamingData = {
       "A stored query result. In streaming systems it is maintained incrementally, applying each change instead of recomputing, so it stays close to up to date: ksqlDB tables, RisingWave and Materialize views, Flink materialized tables.",
     module: "streaming-sql",
   },
+  backpressure: {
+    term: "Backpressure",
+    definition:
+      "A slow stage making the stages before it slow down, instead of being overwhelmed. Flink does it with credit-based flow control, so the job's source reads Kafka more slowly and lag appears there.",
+    module: "backpressure-lag",
+  },
 } satisfies Record<string, GlossaryEntry>;
