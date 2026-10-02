@@ -163,4 +163,16 @@ export const streamingData = {
       "Apache Kafka run by a provider (Amazon MSK, Confluent Cloud, Google Managed Service for Apache Kafka, Aiven): they handle brokers, patching and failures; you still choose sizes, topics and partitions.",
     module: "platforms-compared",
   },
+  "transaction-log": {
+    term: "Transaction log",
+    definition:
+      "The database's own ordered record of every committed change, kept for crash recovery and replication: MySQL's binlog, PostgreSQL's write-ahead log (WAL). Change data capture reads it.",
+    module: "cdc-outbox",
+  },
+  "replication-slot": {
+    term: "Replication slot",
+    definition:
+      "A PostgreSQL bookmark that keeps write-ahead log on disk until a consumer such as Debezium has read it. A stopped consumer makes it keep growing, which can fill the disk unless max_slot_wal_keep_size is set.",
+    module: "cdc-outbox",
+  },
 } satisfies Record<string, GlossaryEntry>;

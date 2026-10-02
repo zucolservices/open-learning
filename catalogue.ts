@@ -4104,7 +4104,8 @@ const streamingData: Track = {
             "The dual-write problem",
             "The transactional outbox",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["cdc", "transaction-log", "dual-write", "outbox", "debezium", "replication-slot"],
           level: "core",
           prerequisites: ["events-logs-topics"],
           plain:
