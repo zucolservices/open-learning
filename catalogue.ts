@@ -5765,11 +5765,12 @@ const observability: Track = {
             "Levels and correlation IDs",
             "Personal data and secrets in logs",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["signals-overview"],
           plain:
             "A log line written as a sentence is easy for people and hard for machines. Writing each event as named fields (time, level, order ID, error) lets you search and count them, and following one ID ties a request's lines together.",
+          terms: ["structured-log", "correlation-id", "log-level", "log", "trace"],
         },
         {
           slug: "log-pipelines",

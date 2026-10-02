@@ -164,4 +164,22 @@ export const observability = {
       "Brendan Gregg's checklist for resources such as CPUs, disks and network links: Utilisation, Saturation and Errors.",
     module: "golden-signals",
   },
+  "structured-log": {
+    term: "Structured log",
+    definition:
+      "A log record written as named fields (usually JSON), such as time, level, message, order_id and trace_id, rather than a free-text sentence, so machines can filter, count and join it.",
+    module: "structured-logging",
+  },
+  "correlation-id": {
+    term: "Correlation ID",
+    definition:
+      "An identifier carried through every service a request touches and written on every log line and span, usually the trace ID, so all the records of one request can be found together.",
+    module: "structured-logging",
+  },
+  "log-level": {
+    term: "Log level (severity)",
+    definition:
+      "How serious a log record is: TRACE, DEBUG, INFO, WARN, ERROR or FATAL. Levels let you filter noise and keep costs down.",
+    module: "structured-logging",
+  },
 } satisfies Record<string, GlossaryEntry>;
