@@ -4714,11 +4714,12 @@ const kubernetes: Track = {
             "Ingress and egress rules",
             "Default deny and the CNI's role",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["services-dns"],
           plain:
             "By default any pod in a cluster can connect to any other, which means one compromised pod can reach your database. Network policies are firewall rules for pods.",
+          terms: ["network-policy", "default-deny", "cni", "label-selector"],
         },
       ],
     },

@@ -242,4 +242,22 @@ export const kubernetes = {
       "The successor to Ingress (generally available since 2023): GatewayClass (which product), Gateway (the shared entry point, owned by the platform team) and routes such as HTTPRoute (owned by app teams), with header matching and weighted traffic splitting built in.",
     module: "ingress-gateway",
   },
+  "network-policy": {
+    term: "NetworkPolicy",
+    definition:
+      "Firewall rules for pods, written with labels: which pods a policy protects, and which pods, namespaces or IP ranges may connect to (ingress) or be reached from (egress) them, on which ports. Policies only allow; they need a network plugin that enforces them.",
+    module: "network-policies",
+  },
+  "default-deny": {
+    term: "Default deny",
+    definition:
+      "A NetworkPolicy that selects every pod in a namespace and allows nothing, so all traffic of that direction is blocked until other policies allow specific connections. A default-deny egress policy also blocks DNS unless you allow it.",
+    module: "network-policies",
+  },
+  cni: {
+    term: "CNI plugin",
+    definition:
+      "The network plugin (following the Container Network Interface) that gives pods their IP addresses and connects them, such as Calico, Cilium or a cloud's own plugin. Whether NetworkPolicies are enforced depends on it.",
+    module: "network-policies",
+  },
 } satisfies Record<string, GlossaryEntry>;
