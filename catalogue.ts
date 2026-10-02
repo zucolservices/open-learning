@@ -94,6 +94,8 @@ export interface Track {
     | "stratus"
     | "current"
     | "helm"
+    | "relay"
+    | "signal"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -5040,6 +5042,466 @@ const kubernetes: Track = {
   ],
 };
 
+const ciCd: Track = {
+  slug: "ci-cd",
+  title: "CI/CD",
+  area: "Platform & cloud",
+  category: "platform-cloud",
+  tagline: "From commit to production, safely and often.",
+  description:
+    "How teams ship many times a day without breaking things: version control and branching, pipelines and runners, builds and caching, automated tests, quality gates, artifacts and container images, environments, infrastructure pipelines, release strategies, feature flags, database migrations, rollbacks, pipeline secrets and supply-chain security, and the DORA measures of delivery. Vendor-neutral: GitHub Actions, GitLab CI/CD, Jenkins, Azure Pipelines, CircleCI, Buildkite, AWS, Google Cloud and Tekton side by side. By the end you can design a pipeline, read one critically and predict what it will let through.",
+  accent: "relay",
+  chapters: [
+    {
+      slug: "big-picture",
+      title: "The big picture",
+      summary: "Why teams integrate and release continuously, and what a pipeline is.",
+      modules: [
+        {
+          slug: "why-ci-cd",
+          title: "Why CI/CD",
+          summary: "From a scary release weekend to small changes shipped every day.",
+          minutes: 20,
+          signature:
+            "Live through a quarterly release weekend with a month of merged changes, then ship the same work in small daily steps",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "Integration pain grows with batch size",
+            "Continuous integration, delivery and deployment",
+            "Small, frequent changes are safer",
+          ],
+          status: "live",
+          level: "beginner",
+          plain:
+            "When a team saves up months of changes and releases them all at once, something always breaks and nobody knows which change did it. CI/CD means joining everyone's work together many times a day, checking it automatically, and releasing in small steps, so problems are small and easy to find.",
+          terms: [
+            "continuous-integration",
+            "continuous-delivery",
+            "continuous-deployment",
+            "batch-size",
+            "pipeline",
+            "branch",
+          ],
+        },
+        {
+          slug: "branching-strategies",
+          title: "Version control and branching",
+          summary: "Long-lived branches, GitFlow and trunk-based development, compared.",
+          minutes: 25,
+          signature:
+            "Run a team on long-lived feature branches, then on short-lived ones, and watch merge conflicts pile up or vanish",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Commits, branches and merges",
+            "Long-lived branches vs trunk-based development",
+            "Pull requests and code review",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-ci-cd"],
+          plain:
+            "Version control keeps every change ever made to the code. Branches let people work apart, but the longer they stay apart, the harder it is to join the work back together. Most fast teams keep branches small and merge into the main line at least daily.",
+        },
+        {
+          slug: "pipeline-anatomy",
+          title: "A pipeline, taken apart",
+          summary: "Triggers, stages, jobs, steps, runners and artifacts.",
+          minutes: 25,
+          signature: "Follow one git push through a pipeline, from webhook to a green tick",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Triggers and events",
+            "Stages, jobs and steps; pipelines as code",
+            "Runners and where jobs execute",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["branching-strategies"],
+          plain:
+            "A pipeline is a recipe, kept in the repository, that a server runs every time code changes: get the code, build it, test it, package it, ship it. Each part runs on a machine called a runner and reports back pass or fail.",
+        },
+      ],
+    },
+    {
+      slug: "continuous-integration",
+      title: "Continuous integration",
+      summary: "Build, test and check every change within minutes.",
+      modules: [
+        {
+          slug: "builds-caching",
+          title: "Reproducible builds and caching",
+          summary: "Lockfiles, pinned versions and caches that make builds fast and repeatable.",
+          minutes: 25,
+          signature:
+            "Run the same build twice a month apart and get different results, then pin and cache until it's fast and identical",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Dependencies, lockfiles and pinning",
+            "Build caches and cache keys",
+            "Hermetic and reproducible builds",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["pipeline-anatomy"],
+          plain:
+            "A build turns source code into something that runs. If it pulls whatever library versions happen to be newest, two builds of the same code can differ. Locking versions makes builds repeatable, and caching what hasn't changed makes them fast.",
+        },
+        {
+          slug: "test-pyramid",
+          title: "Automated tests",
+          summary: "Unit, integration and end-to-end tests, and the flaky ones.",
+          minutes: 25,
+          signature:
+            "Shape a test suite for a checkout service and see how many bugs it catches, how long it takes and how often it lies",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "The test pyramid and its trade-offs",
+            "What each kind of test catches",
+            "Flaky tests and why they matter",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["pipeline-anatomy"],
+          plain:
+            "Automated tests let a machine check the code on every change. Small, fast tests catch most mistakes; a few slow end-to-end tests check that the whole thing works together. Tests that fail at random teach people to ignore red builds.",
+        },
+        {
+          slug: "pipeline-speed",
+          title: "Fast feedback",
+          summary: "Parallel jobs, test splitting and only running what changed.",
+          minutes: 20,
+          signature:
+            "Take a 45-minute pipeline and get it under ten with parallelism, sharding and change detection",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Why pipeline time changes behaviour",
+            "Parallel jobs and test sharding",
+            "Running only what a change affects",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["builds-caching", "test-pyramid"],
+          plain:
+            "If the pipeline takes an hour, people stop waiting for it and batch up changes, which brings back the problems CI was meant to fix. Running jobs side by side, splitting tests across machines and skipping work a change can't affect keep feedback to minutes.",
+        },
+        {
+          slug: "quality-gates",
+          title: "Quality gates and merge rules",
+          summary:
+            "Linters, static analysis, required reviews, branch protection and merge queues.",
+          minutes: 25,
+          signature:
+            "Set the rules for merging into main, then watch which bad changes they stop and how much they slow good ones",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Linters, formatters and static analysis",
+            "Required checks, reviews and branch protection",
+            "Merge queues keep main green",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["test-pyramid"],
+          plain:
+            "A quality gate is a check a change must pass before it can join the main line: tests green, code reviewed, no known security problems. Good gates stop real problems without making every change wait in line for hours.",
+        },
+      ],
+    },
+    {
+      slug: "artifacts-environments",
+      title: "Artifacts and environments",
+      summary: "Build once, then promote the same thing towards production.",
+      modules: [
+        {
+          slug: "artifacts-versioning",
+          title: "Artifacts and versioning",
+          summary: "Build once, deploy many; semantic versions, registries and immutability.",
+          minutes: 20,
+          signature:
+            "Rebuild for every environment and ship something you never tested, then build once and promote",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Artifacts and registries",
+            "Build once, promote the same artifact",
+            "Semantic versioning and immutable versions",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["builds-caching"],
+          plain:
+            "An artifact is the packaged result of a build, such as a container image or a library file. Build it once, give it a version that never changes, and move that exact artifact from testing to production, so what you tested is what you ship.",
+        },
+        {
+          slug: "container-builds",
+          title: "Building container images",
+          summary: "Layers, multi-stage builds, tags and digests.",
+          minutes: 25,
+          signature:
+            "Shrink a 1.2 GB image and its build time by reordering layers and adding a build stage",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Image layers and the build cache",
+            "Multi-stage builds and small base images",
+            "Tags move, digests don't",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["artifacts-versioning"],
+          plain:
+            "A container image is built in layers, one per instruction, and unchanged layers are reused. Putting things that change least at the top, and leaving build tools out of the final image, makes images smaller, faster to build and safer.",
+        },
+        {
+          slug: "environments-promotion",
+          title: "Environments and promotion",
+          summary:
+            "Dev, staging, production and preview environments, and what differs between them.",
+          minutes: 25,
+          signature:
+            "Promote one release through test, staging and production, and catch the bug that only staging's real config reveals",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Why environments exist",
+            "Config per environment, the same artifact everywhere",
+            "Preview environments per pull request",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["artifacts-versioning"],
+          plain:
+            "Environments are separate copies of the system where a change is tried before real users see it. The code stays the same as it moves along; only the settings differ. The closer test environments are to production, the fewer surprises.",
+        },
+        {
+          slug: "iac-pipelines",
+          title: "Infrastructure in the pipeline",
+          summary: "Plan in the pull request, apply on merge, catch drift.",
+          minutes: 25,
+          signature:
+            "Review a Terraform plan in a pull request and spot the line that would delete the production database",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Infrastructure changes go through review too",
+            "Plan, apply and state",
+            "Drift and policy checks",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["environments-promotion"],
+          plain:
+            "Servers, networks and databases can be described in code and changed through the same pipeline as the app. The pipeline shows exactly what will change before anything does, so a reviewer can catch a dangerous change in time.",
+        },
+      ],
+    },
+    {
+      slug: "releasing",
+      title: "Releasing safely",
+      summary: "Get changes to users without taking the system down.",
+      modules: [
+        {
+          slug: "delivery-vs-deployment",
+          title: "Continuous delivery and deployment",
+          summary: "Always releasable, and when to let the pipeline go all the way.",
+          minutes: 20,
+          signature:
+            "Choose where the human approval sits in a pipeline and see what it costs in speed and catches in safety",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Continuous delivery vs continuous deployment",
+            "The deployment pipeline as the only road to production",
+            "Approvals, change windows and change records",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["environments-promotion"],
+          plain:
+            "Continuous delivery means every change that passes the pipeline could be released at the press of a button. Continuous deployment goes one step further: it releases automatically. Which one fits depends on how much you trust your tests and what a mistake costs.",
+        },
+        {
+          slug: "release-strategies",
+          title: "Release strategies",
+          summary: "Recreate, rolling, blue-green, canary and shadow releases.",
+          minutes: 25,
+          signature: "Release a buggy version five ways and compare how many users each one hurts",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Blue-green and instant switch-back",
+            "Canary releases measured against the old version",
+            "Cost and complexity of each strategy",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["delivery-vs-deployment"],
+          plain:
+            "There are several ways to swap an old version for a new one. Some replace everything at once; others send a few users to the new version first and watch what happens. The careful ways limit how many people a bad release can hurt.",
+        },
+        {
+          slug: "feature-flags",
+          title: "Feature flags",
+          summary:
+            "Deploy code switched off, then release it gradually, separately from deploying.",
+          minutes: 25,
+          signature:
+            "Roll a new checkout out to 1%, 10% and 50% of users, hit a bug, and switch it off without a deploy",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Deploying vs releasing",
+            "Percentage rollouts, targeting and kill switches",
+            "Flag debt and cleaning up",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["release-strategies"],
+          plain:
+            "A feature flag is a switch in the code that turns a feature on or off without shipping new code. Teams deploy unfinished work switched off, then turn it on for a few users at a time, and can turn it off instantly if it misbehaves.",
+        },
+        {
+          slug: "schema-migrations",
+          title: "Database changes without downtime",
+          summary: "Expand and contract: changing a schema while old and new code both run.",
+          minutes: 25,
+          signature:
+            "Rename a column in a live database and break the old version mid-rollout, then do it in expand-and-contract steps",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Old and new code run at the same time",
+            "Expand, migrate, contract",
+            "Migrations as versioned, automated steps",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["release-strategies"],
+          plain:
+            "During a release, the old and new versions of an app run side by side against the same database. A schema change that suits only the new version breaks the old one. The fix is to change the database in small steps that both versions can live with.",
+        },
+        {
+          slug: "rollbacks",
+          title: "Rollback and roll forward",
+          summary: "Undo a bad release fast, automatically where you can.",
+          minutes: 20,
+          signature:
+            "A release starts failing at 6 p.m.: roll back, roll forward or flip a flag, and see how long users suffer each way",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Rollback vs roll forward vs flag off",
+            "Automated rollback on health signals",
+            "What can't be rolled back",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["feature-flags", "schema-migrations"],
+          plain:
+            "Every release can go wrong, so the real question is how fast you can undo it. Going back to the last good version is usually quickest; fixing forward is sometimes the only option, for example after a database change. The best pipelines watch the release and undo it on their own.",
+        },
+      ],
+    },
+    {
+      slug: "supply-chain",
+      title: "Securing the pipeline",
+      summary: "The pipeline holds the keys to production; protect it like production.",
+      modules: [
+        {
+          slug: "pipeline-secrets",
+          title: "Secrets and identity in pipelines",
+          summary: "Short-lived credentials through OIDC instead of long-lived keys.",
+          minutes: 25,
+          signature:
+            "A pull request from a stranger tries to read your cloud keys; close every way in",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Why pipelines are a prime target",
+            "OIDC federation and short-lived credentials",
+            "Least privilege and untrusted code in CI",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["pipeline-anatomy"],
+          plain:
+            "A pipeline that deploys to production needs permission to do so, which makes it a favourite target for attackers. Instead of storing long-lived passwords in the pipeline, modern setups let the pipeline prove who it is and get a key that expires in minutes.",
+        },
+        {
+          slug: "software-supply-chain",
+          title: "Software supply chain security",
+          summary:
+            "Dependencies, SBOMs, signing and provenance, and the attacks that made them matter.",
+          minutes: 30,
+          signature:
+            "Trace four real attacks through a build pipeline and place the defence that would have stopped each",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Dependency and build-system attacks",
+            "SBOMs and vulnerability scanning",
+            "Signing, provenance and SLSA",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["pipeline-secrets", "artifacts-versioning"],
+          plain:
+            "Most of the code you ship was written by someone else, and your build tools could be tampered with too. Supply chain security means knowing exactly what went into each artifact, checking it for known problems, and being able to prove it was built by your pipeline and not altered since.",
+        },
+      ],
+    },
+    {
+      slug: "in-practice",
+      title: "In practice",
+      summary: "Measure delivery, choose a platform, put it all together.",
+      modules: [
+        {
+          slug: "dora-metrics",
+          title: "Measuring delivery",
+          summary: "The DORA measures: throughput and stability together.",
+          minutes: 20,
+          signature:
+            "Compare two teams on deployment frequency, lead time, failure rate and recovery time, and see why speed and stability go together",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "The DORA software delivery measures",
+            "Throughput and stability are not a trade-off",
+            "Measuring without gaming the numbers",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["rollbacks"],
+          plain:
+            "Years of research by the DORA programme found a few measures that describe how well a team delivers software: how often it releases, how long a change takes to reach users, how often releases fail and how quickly it recovers. Teams that are fast also tend to be stable.",
+        },
+        {
+          slug: "ci-platforms",
+          title: "CI/CD platforms compared",
+          summary:
+            "GitHub Actions, GitLab, Jenkins, Azure Pipelines, CircleCI, Buildkite and the clouds' own.",
+          minutes: 25,
+          signature:
+            "Price a month of builds on hosted and self-hosted runners, and pick a platform for three different teams",
+          formats: ["animated-infographic", "simulation", "checkpoint"],
+          concepts: [
+            "Hosted vs self-hosted runners",
+            "How the platforms differ",
+            "What builds really cost",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["pipeline-speed"],
+          plain:
+            "Many products can run your pipelines. They differ in where the code lives, who runs the machines, how pipelines are written and how you pay. The right choice usually follows where your code already is.",
+        },
+        {
+          slug: "capstone-cicd",
+          title: "Capstone: a pipeline for a payments app",
+          summary: "Design the pipeline, then see what it lets through.",
+          minutes: 40,
+          signature:
+            "Make the choices for a payments app's delivery pipeline, then face a bad commit, a poisoned dependency and a failed migration",
+          formats: ["branching-scenario", "build-connect", "checkpoint"],
+          concepts: ["Designing a delivery pipeline end to end"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["quality-gates", "rollbacks", "software-supply-chain"],
+          plain:
+            "Everything in this track in one design. You'll choose how a payments app goes from commit to production, then see how your pipeline copes when things go wrong.",
+        },
+      ],
+    },
+  ],
+};
+
 /** A small end-to-end module that exercises the toolkit and Module SDK. */
 const playground: Track = {
   slug: "playground",
@@ -5085,6 +5547,7 @@ export const tracks: Track[] = [
   cloudArchitecture,
   streamingData,
   kubernetes,
+  ciCd,
   playground,
 ];
 
@@ -5172,7 +5635,11 @@ export const categories: Category[] = [
         slug: "kubernetes",
         blurb: "Pods, controllers and scheduling, taken apart.",
       },
-      { title: "CI/CD", blurb: "From commit to production, safely and often." },
+      {
+        title: "CI/CD",
+        slug: "ci-cd",
+        blurb: "From commit to production, safely and often.",
+      },
       { title: "Observability", blurb: "Metrics, logs, traces and SLOs in depth." },
     ],
   },

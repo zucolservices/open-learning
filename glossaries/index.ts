@@ -13,6 +13,7 @@ import { ragSystems } from "./rag-systems";
 import { cloudArchitecture } from "./cloud-architecture";
 import { streamingData } from "./streaming-data";
 import { kubernetes } from "./kubernetes";
+import { ciCd } from "./ci-cd";
 import { shared } from "./shared";
 import type { GlossaryEntry } from "./types";
 
@@ -28,6 +29,7 @@ export const trackGlossaries: Record<string, Record<string, GlossaryEntry>> = {
   "cloud-architecture": cloudArchitecture,
   "streaming-data": streamingData,
   kubernetes,
+  "ci-cd": ciCd,
 };
 
 export type TermId =
@@ -39,7 +41,8 @@ export type TermId =
   | keyof typeof ragSystems
   | keyof typeof cloudArchitecture
   | keyof typeof streamingData
-  | keyof typeof kubernetes;
+  | keyof typeof kubernetes
+  | keyof typeof ciCd;
 
 export interface ResolvedTerm {
   id: string;

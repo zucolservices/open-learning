@@ -210,4 +210,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "kubernetes/operators": () => import("./kubernetes/operators"),
   "kubernetes/managed-kubernetes": () => import("./kubernetes/managed-kubernetes"),
   "kubernetes/capstone-k8s": () => import("./kubernetes/capstone-k8s"),
+  "ci-cd/why-ci-cd": () => import("./ci-cd/why-ci-cd"),
 };

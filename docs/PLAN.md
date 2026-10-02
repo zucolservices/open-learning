@@ -381,6 +381,40 @@ Platform & cloud area, second track (approved 2026-10-02). 23 modules in 7 chapt
 | 22    | Managed Kubernetes and cost                 | EKS, GKE, AKS, OpenShift priced; when not to use Kubernetes             | Infographic, sim  |
 | 23    | Capstone: a payments API on Kubernetes      | Design it, then a bad release, a dead node and a surge                  | Branching, build  |
 
+## CI/CD: curriculum
+
+Platform & cloud area, third track (started 2026-10-03). 21 modules in 6 chapters, about 8.5 hours. Accent: "relay" purple (`[data-track="relay"]`). Glossary: `glossaries/ci-cd.ts`. Vendor-neutral: GitHub Actions, GitLab CI/CD, Jenkins, Azure Pipelines, CircleCI, Buildkite, AWS CodePipeline/CodeBuild, Google Cloud Build and Tekton. Builds on Cloud Architecture's infrastructure-as-code module and Kubernetes' Deployments and GitOps modules and links to them rather than repeating them. Built on one branch (`track/ci-cd`), one commit per module, merged once at the end. Each module is fact-checked on its own before it is built; card illustrations and a showcase follow the last module.
+
+| #     | Module                                  | Centrepiece                                                             | Key formats      |
+| ----- | --------------------------------------- | ----------------------------------------------------------------------- | ---------------- |
+| **1** | **The big picture**                     |                                                                         |                  |
+| 1     | Why CI/CD                               | A quarterly release weekend vs small daily releases                     | Scroll story     |
+| 2     | Version control and branching           | Long-lived vs short-lived branches; conflicts pile up or vanish         | Simulation       |
+| 3     | A pipeline, taken apart                 | One git push from webhook to green tick                                 | Step-through     |
+| **2** | **Continuous integration**              |                                                                         |                  |
+| 4     | Reproducible builds and caching         | Pin and cache until builds are identical and fast                       | Simulation       |
+| 5     | Automated tests                         | Shape a suite: bugs caught, time taken, flakiness                       | Simulation       |
+| 6     | Fast feedback                           | A 45-minute pipeline under ten                                          | Simulation       |
+| 7     | Quality gates and merge rules           | Branch protection, reviews, merge queues                                | Build            |
+| **3** | **Artifacts and environments**          |                                                                         |                  |
+| 8     | Artifacts and versioning                | Build once, promote the same artifact                                   | Step-through     |
+| 9     | Building container images               | Layers, multi-stage builds, tags vs digests                             | Simulation       |
+| 10    | Environments and promotion              | Test, staging, production, previews                                     | Step-through     |
+| 11    | Infrastructure in the pipeline          | A plan in the PR that would delete the database                         | Step-through     |
+| **4** | **Releasing safely**                    |                                                                         |                  |
+| 12    | Continuous delivery and deployment      | Where the human approval sits                                           | Simulation       |
+| 13    | Release strategies                      | A bad release five ways: who gets hurt                                  | Simulation       |
+| 14    | Feature flags                           | 1%, 10%, 50%, then a kill switch                                        | Simulation       |
+| 15    | Database changes without downtime       | Expand and contract                                                     | Step-through     |
+| 16    | Rollback and roll forward               | A 6 p.m. failure, three ways out                                        | Branching        |
+| **5** | **Securing the pipeline**               |                                                                         |                  |
+| 17    | Secrets and identity in pipelines       | A stranger's pull request after your keys; OIDC                         | Fix the problem  |
+| 18    | Software supply chain security          | Four real attacks and the defences that stop them                       | Step-through     |
+| **6** | **In practice**                         |                                                                         |                  |
+| 19    | Measuring delivery                      | The DORA measures for two teams                                         | Simulation       |
+| 20    | CI/CD platforms compared                | A month of builds priced; three teams choose                            | Infographic, sim |
+| 21    | Capstone: a pipeline for a payments app | Design it, then a bad commit, a poisoned dependency, a failed migration | Branching, build |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -396,6 +430,7 @@ Platform & cloud area, second track (approved 2026-10-02). 23 modules in 7 chapt
 | 4f. Cloud Architecture     | Platform & cloud, first track, 22 modules                                               | Live: all 22 modules (2026-10-02)                                       |
 | 4g. Streaming Data Systems | Data engineering, second track, 23 modules                                              | Live: all 23 modules (2026-10-02)                                       |
 | 4h. Kubernetes             | Platform & cloud, second track, 23 modules                                              | Live: all 23 modules (2026-10-03)                                       |
+| 4i. CI/CD                  | Platform & cloud, third track, 21 modules                                               | In progress: 1 of 21 modules                                            |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

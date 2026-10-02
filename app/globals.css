@@ -171,6 +171,30 @@
   --bg-glow: rgb(250 204 21 / 0.1);
 }
 
+[data-track="relay"] {
+  --accent: #7e22ce;
+  --accent-soft: rgb(126 34 206 / 0.1);
+  --bg-glow: rgb(147 51 234 / 0.12);
+}
+[data-theme="dark"] [data-track="relay"],
+[data-theme="dark"][data-track="relay"] {
+  --accent: #c084fc;
+  --accent-soft: rgb(192 132 252 / 0.14);
+  --bg-glow: rgb(192 132 252 / 0.1);
+}
+
+[data-track="signal"] {
+  --accent: #0e7490;
+  --accent-soft: rgb(14 116 144 / 0.1);
+  --bg-glow: rgb(8 145 178 / 0.12);
+}
+[data-theme="dark"] [data-track="signal"],
+[data-theme="dark"][data-track="signal"] {
+  --accent: #22d3ee;
+  --accent-soft: rgb(34 211 238 / 0.14);
+  --bg-glow: rgb(34 211 238 / 0.1);
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);
