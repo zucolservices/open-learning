@@ -5276,18 +5276,25 @@ const ciCd: Track = {
           summary: "Layers, multi-stage builds, tags and digests.",
           minutes: 25,
           signature:
-            "Shrink a 1.2 GB image and its build time by reordering layers and adding a build stage",
+            "Shrink a bloated image and its rebuild time by reordering layers, adding a build stage and choosing a smaller base",
           formats: ["simulation", "checkpoint"],
           concepts: [
             "Image layers and the build cache",
             "Multi-stage builds and small base images",
             "Tags move, digests don't",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["artifacts-versioning"],
           plain:
             "A container image is built in layers, one per instruction, and unchanged layers are reused. Putting things that change least at the top, and leaving build tools out of the final image, makes images smaller, faster to build and safer.",
+          terms: [
+            "container-image",
+            "dockerfile",
+            "image-layer",
+            "multi-stage-build",
+            "image-digest",
+          ],
         },
         {
           slug: "environments-promotion",

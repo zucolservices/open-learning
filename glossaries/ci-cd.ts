@@ -260,4 +260,34 @@ export const ciCd = {
       "Moving the same, already-built artifact from one environment to the next (test, staging, production) instead of rebuilding it, so what you tested is exactly what you ship.",
     module: "artifacts-versioning",
   },
+  "container-image": {
+    term: "Container image",
+    definition:
+      "A packaged, read-only bundle of an app and everything it needs to run, built in layers from a Dockerfile and stored in a registry. Every container started from it behaves the same way.",
+    module: "container-builds",
+  },
+  dockerfile: {
+    term: "Dockerfile",
+    definition:
+      "A text file of instructions (FROM, COPY, RUN, CMD…) that a builder such as BuildKit follows, step by step, to produce a container image.",
+    module: "container-builds",
+  },
+  "image-layer": {
+    term: "Image layer",
+    definition:
+      "A set of file changes added by one Dockerfile instruction (RUN, COPY or ADD). Layers are cached and shared; when one changes, every layer after it must be rebuilt.",
+    module: "container-builds",
+  },
+  "multi-stage-build": {
+    term: "Multi-stage build",
+    definition:
+      "A Dockerfile with several FROM stages: build the app in one stage with all the tools, then copy only the result into a small final stage, leaving compilers and dev dependencies behind.",
+    module: "container-builds",
+  },
+  "image-digest": {
+    term: "Image digest",
+    definition:
+      "A SHA-256 hash that identifies an image by its contents (sha256:…). Unlike a tag, which can be moved to another image, a digest always means exactly the same bytes.",
+    module: "container-builds",
+  },
 } satisfies Record<string, GlossaryEntry>;
