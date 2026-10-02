@@ -428,4 +428,22 @@ export const cloudArchitecture = {
       "A practice where engineering, finance and business share responsibility for technology spend, making costs visible to the teams that cause them. The FinOps Foundation describes three phases: Inform, Optimize, Operate.",
     module: "cost-finops",
   },
+  "well-architected-review": {
+    term: "Well-architected review",
+    definition:
+      "A structured, blame-free walk through a design against a cloud provider's framework of best practices, ending in a prioritised improvement plan. Free tools: AWS Well-Architected Tool, Azure Well-Architected Review, Google Cloud Well-Architected Framework.",
+    module: "well-architected",
+  },
+  "wa-pillar": {
+    term: "Pillar (well-architected)",
+    definition:
+      "One area of good practice in a well-architected framework: security, reliability, cost optimisation, operational excellence, performance and (on AWS and Google) sustainability.",
+    module: "well-architected",
+  },
+  "high-risk-issue": {
+    term: "High-risk issue",
+    definition:
+      "AWS's term for a finding in a review: an architectural or operational choice that might significantly harm the business. Medium-risk issues do so to a lesser extent. Fix high-risk issues first.",
+    module: "well-architected",
+  },
 } satisfies Record<string, GlossaryEntry>;

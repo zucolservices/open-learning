@@ -3829,7 +3829,8 @@ const cloudArchitecture: Track = {
             "Reviewing a design",
             "Trade-offs between pillars",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["well-architected-review", "wa-pillar", "high-risk-issue"],
           level: "applied",
           prerequisites: ["ha-dr", "cost-finops"],
           plain:
