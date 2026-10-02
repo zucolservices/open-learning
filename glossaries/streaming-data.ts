@@ -175,4 +175,22 @@ export const streamingData = {
       "A PostgreSQL bookmark that keeps write-ahead log on disk until a consumer such as Debezium has read it. A stopped consumer makes it keep growing, which can fill the disk unless max_slot_wal_keep_size is set.",
     module: "cdc-outbox",
   },
+  schema: {
+    term: "Schema",
+    definition:
+      "A formal description of an event's shape: its fields, their types and which are optional. Producers write with one and consumers read with one; they needn't be the same version.",
+    module: "schemas-evolution",
+  },
+  "backward-compatible": {
+    term: "Backward compatible",
+    definition:
+      "A schema change where consumers using the new schema can still read data written with the old one, such as adding a field with a default. Upgrade consumers first. Confluent Schema Registry's default.",
+    module: "schemas-evolution",
+  },
+  "forward-compatible": {
+    term: "Forward compatible",
+    definition:
+      "A schema change where consumers still on the old schema can read data written with the new one, such as adding a field old readers ignore. Upgrade producers first. FULL compatibility means both.",
+    module: "schemas-evolution",
+  },
 } satisfies Record<string, GlossaryEntry>;

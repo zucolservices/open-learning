@@ -172,4 +172,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "streaming-data/retention-compaction": () => import("./streaming-data/retention-compaction"),
   "streaming-data/platforms-compared": () => import("./streaming-data/platforms-compared"),
   "streaming-data/cdc-outbox": () => import("./streaming-data/cdc-outbox"),
+  "streaming-data/schemas-evolution": () => import("./streaming-data/schemas-evolution"),
 };

@@ -4124,7 +4124,8 @@ const streamingData: Track = {
             "Schema registries",
             "Backward and forward compatibility",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["schema", "schema-registry", "backward-compatible", "forward-compatible", "avro"],
           level: "core",
           prerequisites: ["events-logs-topics"],
           plain:
