@@ -56,4 +56,34 @@ export const observability = {
       "OpenTelemetry's standard names for common attributes, such as http.request.method or db.system.name, so data from different libraries and tools means the same thing.",
     module: "signals-overview",
   },
+  instrumentation: {
+    term: "Instrumentation",
+    definition:
+      "Code (added by hand or automatically by an agent) that makes a program record telemetry: spans, metrics and logs about what it is doing.",
+    module: "opentelemetry",
+  },
+  opentelemetry: {
+    term: "OpenTelemetry (OTel)",
+    definition:
+      "The open, vendor-neutral standard and toolkit for producing telemetry (traces, metrics, logs and profiles): APIs and SDKs for many languages, the OTLP protocol and the Collector. A CNCF project, graduated in 2026.",
+    module: "opentelemetry",
+  },
+  otlp: {
+    term: "OTLP",
+    definition:
+      "The OpenTelemetry Protocol, used to send traces, metrics and logs from apps to collectors and backends, over gRPC (port 4317) or HTTP (port 4318).",
+    module: "opentelemetry",
+  },
+  "otel-collector": {
+    term: "OpenTelemetry Collector",
+    definition:
+      "A program that receives telemetry, processes it (batching, filtering, removing personal data) and exports it to one or more backends, configured as pipelines of receivers, processors and exporters.",
+    module: "opentelemetry",
+  },
+  "auto-instrumentation": {
+    term: "Zero-code (automatic) instrumentation",
+    definition:
+      "Telemetry added without changing your code, by an agent or launcher that instruments common libraries such as web frameworks, database drivers and HTTP clients.",
+    module: "opentelemetry",
+  },
 } satisfies Record<string, GlossaryEntry>;

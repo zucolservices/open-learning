@@ -233,4 +233,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "ci-cd/capstone-cicd": () => import("./ci-cd/capstone-cicd"),
   "observability/why-observability": () => import("./observability/why-observability"),
   "observability/signals-overview": () => import("./observability/signals-overview"),
+  "observability/opentelemetry": () => import("./observability/opentelemetry"),
 };

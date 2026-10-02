@@ -103,7 +103,10 @@ const VIEWS: Record<Signal, { can: string[]; cant: string[] }> = {
     cant: ["How often this happens overall, cheaply", "Where the time went across services"],
   },
   trace: {
-    can: ["Where the 3 s went: nearly all in the ledger query", "Which services the request passed through"],
+    can: [
+      "Where the 3 s went: nearly all in the ledger query",
+      "Which services the request passed through",
+    ],
     cant: ["Trends over a week (traces are usually sampled)"],
   },
 };
