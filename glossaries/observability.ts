@@ -344,4 +344,10 @@ export const observability = {
       "The tendency, once you know how things turned out, to see the warning signs as obvious and to judge people for missing them, even though they were not obvious at the time.",
     module: "postmortems",
   },
+  ingestion: {
+    term: "Ingestion",
+    definition:
+      "Sending telemetry into an observability platform so it can be stored and searched. Many platforms charge per gigabyte ingested, so whatever you drop before ingestion costs nothing.",
+    module: "observability-cost",
+  },
 } satisfies Record<string, GlossaryEntry>;

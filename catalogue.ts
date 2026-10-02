@@ -6003,11 +6003,19 @@ const observability: Track = {
             "What drives the bill",
             "Sampling, retention and dropping",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["cardinality", "log-pipelines", "trace-sampling"],
           plain:
             "Telemetry can cost as much as the systems it watches. Prices depend on how much data you send, how long you keep it and how many series or hosts you have, so choosing what to collect matters as much as which tool you pick.",
+          terms: [
+            "ingestion",
+            "cardinality",
+            "tail-sampling",
+            "retention",
+            "vendor-lock-in",
+            "object-storage",
+          ],
         },
         {
           slug: "capstone-observability",
