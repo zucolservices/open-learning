@@ -494,4 +494,28 @@ export const kubernetes = {
       "A temporary container added to a running pod for troubleshooting, typically with kubectl debug, useful when the app's image has no shell or tools. Stable since 1.25.",
     module: "debugging",
   },
+  "custom-resource": {
+    term: "Custom resource (CRD)",
+    definition:
+      "A new kind of object added to the Kubernetes API, defined by a CustomResourceDefinition with a schema (and optional CEL validation rules). On its own it's just stored data; a controller gives it behaviour.",
+    module: "operators",
+  },
+  operator: {
+    term: "Operator",
+    definition:
+      "A controller that uses custom resources to manage a specific application, encoding what a human operator would do: deploying, backups, upgrades, and so on. Examples: cert-manager, CloudNativePG, Strimzi.",
+    module: "operators",
+  },
+  finalizer: {
+    term: "Finalizer",
+    definition:
+      "A key on an object that makes Kubernetes wait before fully deleting it, so a controller can clean up first (for example, take a final backup or delete a cloud resource).",
+    module: "operators",
+  },
+  "owner-reference": {
+    term: "Owner reference",
+    definition:
+      "A link from an object to the object that owns it, such as Pods to their ReplicaSet. When the owner is deleted, garbage collection removes what it owns.",
+    module: "operators",
+  },
 } satisfies Record<string, GlossaryEntry>;

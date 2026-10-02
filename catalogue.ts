@@ -4978,11 +4978,12 @@ const kubernetes: Track = {
             "The operator pattern",
             "Using operators wisely",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["desired-state"],
           plain:
             "Kubernetes can learn new kinds of objects. An operator is a controller that knows how to run one specific piece of software, such as a database, and does the work a human operator would.",
+          terms: ["custom-resource", "operator", "controller", "finalizer", "owner-reference"],
         },
         {
           slug: "managed-kubernetes",
