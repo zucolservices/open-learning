@@ -3626,7 +3626,14 @@ const cloudArchitecture: Track = {
             "Roles for services and workloads",
             "Federation and single sign-on (SAML, OIDC)",
           ],
-          status: "planned",
+          status: "live",
+          terms: [
+            "access-key",
+            "short-lived-credentials",
+            "workload-identity",
+            "oidc",
+            "federation",
+          ],
           level: "core",
           prerequisites: ["iam"],
           plain:

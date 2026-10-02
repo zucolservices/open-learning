@@ -230,4 +230,34 @@ export const cloudArchitecture = {
       "An AWS limit on the most an identity can ever be allowed. It grants nothing itself; a request must be allowed by both the identity's policy and the boundary. Organisation policies (SCPs) work the same way across accounts.",
     module: "iam",
   },
+  "access-key": {
+    term: "Long-lived access key",
+    definition:
+      "A permanent credential (an ID and a secret, like a username and password for programs) that lets code call a cloud API. AWS long-term keys start with AKIA. It works until someone deactivates it, so a leaked one stays dangerous.",
+    module: "workload-identity",
+  },
+  "short-lived-credentials": {
+    term: "Short-lived credentials",
+    definition:
+      "Credentials issued on request that expire by themselves, typically after an hour: AWS role sessions (keys starting ASIA), Azure and Google access tokens. A stolen one soon becomes useless.",
+    module: "workload-identity",
+  },
+  "workload-identity": {
+    term: "Workload identity",
+    definition:
+      "An identity given to running code (a VM, pod, function or pipeline) rather than a person, from which the platform issues short-lived credentials: AWS roles, Azure managed identities, Google service accounts.",
+    module: "workload-identity",
+  },
+  oidc: {
+    term: "OpenID Connect (OIDC)",
+    definition:
+      "A standard (2014, built on OAuth 2.0) for one system to vouch for who someone or something is, with a signed token. Used for single sign-on and for CI pipelines proving their identity to clouds.",
+    module: "workload-identity",
+  },
+  federation: {
+    term: "Federation",
+    definition:
+      "Trusting another identity provider's word about who someone is, instead of keeping separate accounts and passwords: company sign-in for the cloud console, or GitHub's token for a pipeline. Standards: SAML 2.0 and OIDC.",
+    module: "workload-identity",
+  },
 } satisfies Record<string, GlossaryEntry>;

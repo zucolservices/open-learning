@@ -149,4 +149,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
     import("./cloud-architecture/connecting-networks"),
   "cloud-architecture/dns-routing": () => import("./cloud-architecture/dns-routing"),
   "cloud-architecture/iam": () => import("./cloud-architecture/iam"),
+  "cloud-architecture/workload-identity": () => import("./cloud-architecture/workload-identity"),
 };
