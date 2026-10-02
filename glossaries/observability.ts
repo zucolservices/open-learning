@@ -86,4 +86,28 @@ export const observability = {
       "Telemetry added without changing your code, by an agent or launcher that instruments common libraries such as web frameworks, database drivers and HTTP clients.",
     module: "opentelemetry",
   },
+  counter: {
+    term: "Counter",
+    definition:
+      "A metric that only goes up (or resets to zero when the process restarts), such as total requests. You almost always look at its rate: how fast it's increasing.",
+    module: "metric-types",
+  },
+  gauge: {
+    term: "Gauge",
+    definition:
+      "A metric that can go up and down, such as memory in use, queue length or requests in flight.",
+    module: "metric-types",
+  },
+  histogram: {
+    term: "Histogram",
+    definition:
+      "A metric that sorts each measurement (say, a request's duration) into buckets and counts them, so you can work out percentiles across many servers.",
+    module: "metric-types",
+  },
+  prometheus: {
+    term: "Prometheus",
+    definition:
+      "The most widely used open-source metrics system: it scrapes metrics from apps, stores them as time series and queries them with PromQL. A CNCF graduated project, started at SoundCloud in 2012.",
+    module: "metric-types",
+  },
 } satisfies Record<string, GlossaryEntry>;

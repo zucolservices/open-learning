@@ -234,4 +234,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "observability/why-observability": () => import("./observability/why-observability"),
   "observability/signals-overview": () => import("./observability/signals-overview"),
   "observability/opentelemetry": () => import("./observability/opentelemetry"),
+  "observability/metric-types": () => import("./observability/metric-types"),
 };

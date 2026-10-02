@@ -5686,11 +5686,12 @@ const observability: Track = {
             "Watch a counter, a gauge and a histogram react to the same traffic, then turn a counter into a rate",
           formats: ["simulation", "checkpoint"],
           concepts: ["Metric types", "Rates from counters", "Pull (scrape) vs push"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["signals-overview"],
           plain:
             "A counter only goes up, like total requests; a gauge goes up and down, like memory in use; a histogram sorts measurements into buckets, like how many requests took under 100 ms. Most useful numbers, such as requests per second, are calculated from these.",
+          terms: ["metric", "counter", "gauge", "histogram", "prometheus"],
         },
         {
           slug: "percentiles",
