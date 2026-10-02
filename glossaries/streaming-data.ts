@@ -73,4 +73,22 @@ export const streamingData = {
       "A partition that gets far more traffic than the others because one key, such as a huge merchant, is a large share of events. Adding partitions doesn't help, since a key always maps to one partition.",
     module: "partitions-ordering",
   },
+  "committed-offset": {
+    term: "Committed offset",
+    definition:
+      "The position a consumer group has saved for a partition: the next record to read. After a crash or rebalance, reading resumes from here. Kafka stores it in the internal __consumer_offsets topic.",
+    module: "consumer-groups",
+  },
+  rebalance: {
+    term: "Rebalance",
+    definition:
+      "Reassigning a topic's partitions among a consumer group's members when one joins, leaves or stops responding. Eager rebalances pause the whole group; cooperative ones move only what changes.",
+    module: "consumer-groups",
+  },
+  "consumer-lag": {
+    term: "Consumer lag",
+    definition:
+      "How far a consumer group is behind on a partition: the newest offset minus the committed offset. Growing lag means events arrive faster than they're processed.",
+    module: "consumer-groups",
+  },
 } satisfies Record<string, GlossaryEntry>;

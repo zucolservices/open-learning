@@ -167,4 +167,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "streaming-data/batch-vs-streams": () => import("./streaming-data/batch-vs-streams"),
   "streaming-data/events-logs-topics": () => import("./streaming-data/events-logs-topics"),
   "streaming-data/partitions-ordering": () => import("./streaming-data/partitions-ordering"),
+  "streaming-data/consumer-groups": () => import("./streaming-data/consumer-groups"),
 };

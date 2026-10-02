@@ -4008,7 +4008,8 @@ const streamingData: Track = {
             "Committed offsets",
             "Rebalances and consumer lag",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["consumer-group", "committed-offset", "rebalance", "consumer-lag"],
           level: "core",
           prerequisites: ["partitions-ordering"],
           plain:
