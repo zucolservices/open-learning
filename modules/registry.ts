@@ -192,4 +192,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "kubernetes/cluster-anatomy": () => import("./kubernetes/cluster-anatomy"),
   "kubernetes/pods": () => import("./kubernetes/pods"),
   "kubernetes/deployments": () => import("./kubernetes/deployments"),
+  "kubernetes/health-checks": () => import("./kubernetes/health-checks"),
 };

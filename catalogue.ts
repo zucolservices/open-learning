@@ -4628,11 +4628,12 @@ const kubernetes: Track = {
             "Restart loops",
             "Graceful shutdown",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["deployments"],
           plain:
             "Kubernetes can only keep an app healthy if it can tell when it isn't. Probes are small checks it runs: one to see if the app is alive, one to see if it's ready for traffic, and one for slow starters.",
+          terms: ["probe", "liveness-probe", "readiness-probe", "startup-probe", "restart-policy"],
         },
         {
           slug: "workload-controllers",

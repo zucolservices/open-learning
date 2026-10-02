@@ -152,4 +152,28 @@ export const kubernetes = {
       "Returning a Deployment to an earlier revision, for example with kubectl rollout undo. The old ReplicaSet is scaled back up using the same rolling rules. Kubernetes never rolls back on its own.",
     module: "deployments",
   },
+  probe: {
+    term: "Probe",
+    definition:
+      "A health check the kubelet runs against a container on a schedule: an HTTP request, a TCP connection, a command or a gRPC health call. By default every 10 seconds, with three failures counting as failed.",
+    module: "health-checks",
+  },
+  "liveness-probe": {
+    term: "Liveness probe",
+    definition:
+      'Answers "is this container still working?". If it fails repeatedly, the kubelet kills the container and applies the restart policy. It should check only the app itself, never its dependencies.',
+    module: "health-checks",
+  },
+  "readiness-probe": {
+    term: "Readiness probe",
+    definition:
+      "Answers \"can this pod take traffic right now?\". If it fails, the pod is taken out of its Services' endpoints until it passes again; the container is not restarted. It runs for the pod's whole life.",
+    module: "health-checks",
+  },
+  "startup-probe": {
+    term: "Startup probe",
+    definition:
+      "Holds off liveness and readiness checks until a slow-starting app is up, allowing failureThreshold × periodSeconds to start (for example 30 × 10 s = 300 s). If it never succeeds, the container is killed.",
+    module: "health-checks",
+  },
 } satisfies Record<string, GlossaryEntry>;
