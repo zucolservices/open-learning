@@ -5880,11 +5880,12 @@ const observability: Track = {
             "Spend a month's error budget on releases and incidents, then decide what the policy says to do",
           formats: ["simulation", "checkpoint"],
           concepts: ["Error budgets", "Burn rate", "Error budget policies"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["slis-slos"],
           plain:
             "If the target is 99.9%, the other 0.1% is a budget for things going wrong: risky releases, incidents, maintenance. While budget remains, ship freely; when it's spent, slow down and fix reliability.",
+          terms: ["error-budget", "burn-rate", "error-budget-policy", "slo"],
         },
         {
           slug: "alerting",

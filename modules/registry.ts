@@ -244,4 +244,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "observability/trace-sampling": () => import("./observability/trace-sampling"),
   "observability/profiling": () => import("./observability/profiling"),
   "observability/slis-slos": () => import("./observability/slis-slos"),
+  "observability/error-budgets": () => import("./observability/error-budgets"),
 };

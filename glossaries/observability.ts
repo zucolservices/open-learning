@@ -260,4 +260,22 @@ export const observability = {
       "A promise to customers about service levels, with consequences such as refunds or credits if it's missed. Usually looser than the internal SLO.",
     module: "slis-slos",
   },
+  "error-budget": {
+    term: "Error budget",
+    definition:
+      "The amount of unreliability an SLO allows (1 − the target): at 99.9% over four weeks with 3 million requests, 3,000 bad requests. Teams spend it on releases and experiments, and slow down when it runs out.",
+    module: "error-budgets",
+  },
+  "burn-rate": {
+    term: "Burn rate",
+    definition:
+      "How fast the error budget is being used compared with the steady rate that would use it up exactly over the SLO window. A burn rate of 14.4 uses 2% of a 30-day budget in an hour.",
+    module: "error-budgets",
+  },
+  "error-budget-policy": {
+    term: "Error budget policy",
+    definition:
+      "An agreement, made in advance, about what a team does when its error budget runs low or out, such as pausing risky releases and prioritising reliability fixes.",
+    module: "error-budgets",
+  },
 } satisfies Record<string, GlossaryEntry>;

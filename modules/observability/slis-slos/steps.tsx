@@ -197,8 +197,8 @@ export function Nines() {
             />
           </div>
           <p className="text-muted text-[10px]">
-            Bar: allowed failure compared with a 99% target (full width). Times assume total outages; in practice the
-            budget is spent on partial failures too.
+            Bar: allowed failure compared with a 99% target (full width). Times assume total
+            outages; in practice the budget is spent on partial failures too.
           </p>
         </div>
       }
