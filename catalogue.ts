@@ -4879,11 +4879,12 @@ const kubernetes: Track = {
             "Roles, ClusterRoles and bindings",
             "Service accounts and cloud workload identity",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["cluster-anatomy"],
           plain:
             "Every request to the cluster is checked: who is asking, and are they allowed? Role-based access control grants permissions to people and to pods. Giving too much is one of the most common ways clusters get breached.",
+          terms: ["rbac", "service-account", "role", "rolebinding", "api-server"],
         },
         {
           slug: "pod-security",

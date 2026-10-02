@@ -398,4 +398,28 @@ export const kubernetes = {
       "Which component versions may run together. The control plane is upgraded one minor version at a time; kubelets may be up to three minor versions older than the API server but never newer.",
     module: "disruptions-upgrades",
   },
+  rbac: {
+    term: "RBAC (role-based access control)",
+    definition:
+      "Kubernetes' main way of deciding what a user or service account may do: Roles and ClusterRoles list allowed verbs on resources, and bindings grant them. Access is denied by default and permissions only add up; there are no deny rules.",
+    module: "rbac",
+  },
+  "service-account": {
+    term: "Service account",
+    definition:
+      "An identity for workloads inside the cluster. Every namespace has a default one; pods get a short-lived token for their service account, refreshed by the kubelet, which they use to call the API server.",
+    module: "rbac",
+  },
+  role: {
+    term: "Role and ClusterRole",
+    definition:
+      "A set of permissions: which verbs (get, list, create…) on which resources, optionally limited to named objects. A Role applies in one namespace; a ClusterRole is cluster-wide or reusable across namespaces.",
+    module: "rbac",
+  },
+  rolebinding: {
+    term: "RoleBinding and ClusterRoleBinding",
+    definition:
+      "Grants a Role or ClusterRole to users, groups or service accounts. A RoleBinding grants it within its namespace; a ClusterRoleBinding grants it across the whole cluster.",
+    module: "rbac",
+  },
 } satisfies Record<string, GlossaryEntry>;
