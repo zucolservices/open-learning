@@ -145,4 +145,6 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
     import("./cloud-architecture/autoscaling-load-balancing"),
   "cloud-architecture/private-networks": () => import("./cloud-architecture/private-networks"),
   "cloud-architecture/in-and-out": () => import("./cloud-architecture/in-and-out"),
+  "cloud-architecture/connecting-networks": () =>
+    import("./cloud-architecture/connecting-networks"),
 };

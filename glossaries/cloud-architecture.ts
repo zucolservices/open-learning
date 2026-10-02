@@ -152,4 +152,28 @@ export const cloudArchitecture = {
       "Data leaving a cloud provider's network, usually to the internet, which is charged per gigabyte. Data coming in (ingress) is free.",
     module: "in-and-out",
   },
+  peering: {
+    term: "Network peering",
+    definition:
+      "A direct private link between two cloud networks so their servers can talk using private addresses. It isn't transitive: if A peers with B and B with C, A still can't reach C.",
+    module: "connecting-networks",
+  },
+  "transit-hub": {
+    term: "Transit hub",
+    definition:
+      "A central router that many networks and offices connect to, so each needs one link instead of one per pair; traffic between them passes through the hub. Examples: AWS Transit Gateway, Azure Virtual WAN, Google Network Connectivity Center.",
+    module: "connecting-networks",
+  },
+  "site-to-site-vpn": {
+    term: "Site-to-site VPN",
+    definition:
+      "An encrypted tunnel over the internet between an office or data centre and a cloud network. Quick and cheap to set up; AWS gives two tunnels per connection for redundancy.",
+    module: "connecting-networks",
+  },
+  "dedicated-connection": {
+    term: "Dedicated connection",
+    definition:
+      "A private line from your premises to a cloud provider through a colocation site, not over the internet: AWS Direct Connect, Azure ExpressRoute, Google Cloud Interconnect. Faster and steadier than a VPN, but not encrypted by default.",
+    module: "connecting-networks",
+  },
 } satisfies Record<string, GlossaryEntry>;

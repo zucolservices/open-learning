@@ -3550,11 +3550,12 @@ const cloudArchitecture: Track = {
             "Hub-and-spoke and transit gateways",
             "VPN and dedicated connections",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["private-networks"],
           plain:
             "Organisations end up with many networks that need to talk to each other and to their offices. Connecting each pair directly gets messy fast, so most use a central hub, with VPNs or private lines back to their own buildings.",
+          terms: ["peering", "transit-hub", "site-to-site-vpn", "dedicated-connection"],
         },
         {
           slug: "dns-routing",
