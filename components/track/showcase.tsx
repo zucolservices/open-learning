@@ -12,6 +12,8 @@ import { CloudScene } from "@/components/home/cloud-scene";
 import { CloudTaste } from "@/components/home/cloud-taste";
 import { StreamingScene } from "@/components/home/streaming-scene";
 import { StreamingTaste } from "@/components/home/streaming-taste";
+import { KubernetesScene } from "@/components/home/kubernetes-scene";
+import { KubernetesTaste } from "@/components/home/kubernetes-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -76,5 +78,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: StreamingTaste,
     tasteCaption:
       "A taste of module 18: one bad payment blocks a partition. Try four ways to handle it.",
+  },
+  kubernetes: {
+    Scene: KubernetesScene,
+    sceneCaption:
+      "A small production cluster, from the YAML in Git to traffic reaching a pod. Watch the tour, or click any part.",
+    Taste: KubernetesTaste,
+    tasteCaption:
+      "A taste of module 2: delete pods or cut a node's power, and watch the cluster put everything back.",
   },
 };

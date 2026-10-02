@@ -188,7 +188,7 @@ function ModuleCard({
           isLive && "bg-accent-soft",
         )}
       >
-        <ModuleArt slug={m.slug} />
+        <ModuleArt slug={m.slug} track={track.slug} />
         <span className="bg-bg/80 text-muted absolute top-3 left-3 rounded-full px-2 py-0.5 font-mono text-[11px] backdrop-blur">
           {String(number).padStart(2, "0")}
         </span>

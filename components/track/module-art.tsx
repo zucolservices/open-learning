@@ -8,6 +8,8 @@ import { cloudArchitectureArtA } from "./art/cloud-architecture-a";
 import { cloudArchitectureArtB } from "./art/cloud-architecture-b";
 import { streamingDataArtA } from "./art/streaming-data-a";
 import { streamingDataArtB } from "./art/streaming-data-b";
+import { kubernetesArtA } from "./art/kubernetes-a";
+import { kubernetesArtB } from "./art/kubernetes-b";
 
 /**
  * One small illustration per module (viewBox 160 × 100), drawn with the
@@ -1035,10 +1037,13 @@ const all: ArtMap = {
   ...cloudArchitectureArtB,
   ...streamingDataArtA,
   ...streamingDataArtB,
+  ...kubernetesArtA,
+  ...kubernetesArtB,
 };
 
-export function ModuleArt({ slug }: { slug: string }) {
-  const draw = all[slug];
+/** Art is keyed by slug; a "track/slug" key wins, for slugs used in more than one track. */
+export function ModuleArt({ slug, track }: { slug: string; track?: string }) {
+  const draw = (track && all[`${track}/${slug}`]) || all[slug];
   return (
     <Frame>
       {draw ? (

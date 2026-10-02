@@ -93,7 +93,7 @@ export function TrackSpotlight({ tracks }: { tracks: Track[] }) {
                     className="border-line bg-surface-2/60 aspect-[16/10] overflow-hidden rounded-lg border p-1"
                     title={m.title}
                   >
-                    <ModuleArt slug={m.slug} />
+                    <ModuleArt slug={m.slug} track={t.slug} />
                   </div>
                 ))}
               </div>
