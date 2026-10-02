@@ -3876,7 +3876,8 @@ const cloudArchitecture: Track = {
             "Assessing an application portfolio",
             "Waves and cut-over",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["migration-strategy", "cutover"],
           level: "applied",
           prerequisites: ["vms-containers-functions", "storage-databases"],
           plain:

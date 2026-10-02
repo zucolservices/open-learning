@@ -476,7 +476,7 @@ const TOOLS: Record<Tool, [string, string][]> = {
   azure: [
     [
       "Bicep",
-      "Azure's concise language (production-ready since 2021) that compiles to ARM JSON templates. `what-if` previews changes with + create, ~ modify, - delete.",
+      "Azure's concise language (production-ready since 2021) that compiles to ARM JSON templates. what-if previews changes with + create, ~ modify, - delete.",
     ],
     [
       "Deployment stacks",

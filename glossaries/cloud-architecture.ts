@@ -452,4 +452,16 @@ export const cloudArchitecture = {
       "Approval by India's Ministry of Electronics and IT for a cloud provider's specific offerings, deployment models and regions, after an STQC audit, so government bodies can buy them (through GeM). 26 providers were empanelled as of December 2025.",
     module: "cloud-india",
   },
+  "migration-strategy": {
+    term: "Migration strategy (the 7 Rs)",
+    definition:
+      "What to do with each application when moving to the cloud: retire, retain, rehost (lift and shift), relocate, repurchase (replace with SaaS), replatform or refactor. AWS lists seven; Azure eight; Google uses similar terms.",
+    module: "migration",
+  },
+  cutover: {
+    term: "Cut-over",
+    definition:
+      "The moment users switch from the old system to the new one. Done safely with continuous data sync, a go/no-go decision, a short freeze and a tested rollback plan.",
+    module: "migration",
+  },
 } satisfies Record<string, GlossaryEntry>;
