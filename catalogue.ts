@@ -5159,11 +5159,12 @@ const ciCd: Track = {
             "Build caches and cache keys",
             "Hermetic and reproducible builds",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["pipeline-anatomy"],
           plain:
             "A build turns source code into something that runs. If it pulls whatever library versions happen to be newest, two builds of the same code can differ. Locking versions makes builds repeatable, and caching what hasn't changed makes them fast.",
+          terms: ["build", "dependency", "lockfile", "build-cache", "reproducible-build"],
         },
         {
           slug: "test-pyramid",

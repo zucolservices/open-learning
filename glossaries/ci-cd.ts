@@ -116,4 +116,34 @@ export const ciCd = {
       "A pass, fail or pending result that a pipeline reports back on a commit or pull request. Branch rules can require certain checks to pass before merging.",
     module: "pipeline-anatomy",
   },
+  build: {
+    term: "Build",
+    definition:
+      "Turning source code into something that can run or be shipped: installing dependencies, compiling or bundling, and packaging the result.",
+    module: "builds-caching",
+  },
+  dependency: {
+    term: "Dependency",
+    definition:
+      "A library your code uses that someone else publishes, pulled in at build time. Dependencies have their own dependencies (transitive ones), so a small app can pull in hundreds.",
+    module: "builds-caching",
+  },
+  lockfile: {
+    term: "Lockfile",
+    definition:
+      "A file, committed with the code, that records the exact version (and usually a checksum) of every dependency, including indirect ones, so every install gets the same set. Examples: package-lock.json, pnpm-lock.yaml, uv.lock, Cargo.lock.",
+    module: "builds-caching",
+  },
+  "build-cache": {
+    term: "Build cache",
+    definition:
+      "Saved results of earlier pipeline work, such as downloaded dependencies or compiled outputs, reused when the inputs haven't changed. A good cache key, like a hash of the lockfile, says exactly when reuse is safe.",
+    module: "builds-caching",
+  },
+  "reproducible-build": {
+    term: "Reproducible build",
+    definition:
+      "A build that anyone can repeat from the same source, environment and instructions and get bit-for-bit identical output. It lets others check that a published artifact really came from the claimed source.",
+    module: "builds-caching",
+  },
 } satisfies Record<string, GlossaryEntry>;

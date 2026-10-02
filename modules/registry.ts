@@ -213,4 +213,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "ci-cd/why-ci-cd": () => import("./ci-cd/why-ci-cd"),
   "ci-cd/branching-strategies": () => import("./ci-cd/branching-strategies"),
   "ci-cd/pipeline-anatomy": () => import("./ci-cd/pipeline-anatomy"),
+  "ci-cd/builds-caching": () => import("./ci-cd/builds-caching"),
 };
