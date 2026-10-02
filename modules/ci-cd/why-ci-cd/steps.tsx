@@ -163,16 +163,18 @@ export function ThreePhrases() {
       title="Three phrases, one idea"
       stage={
         <div className="flex flex-1 flex-col justify-center gap-4">
-          <Segmented<Mode>
-            value={s.mode}
-            onChange={(mode) => set({ mode })}
-            size="sm"
-            options={[
-              ["ci", "Integration"],
-              ["delivery", "Delivery"],
-              ["deployment", "Deployment"],
-            ]}
-          />
+          <div>
+            <Segmented<Mode>
+              value={s.mode}
+              onChange={(mode) => set({ mode })}
+              size="sm"
+              options={[
+                ["ci", "Integration"],
+                ["delivery", "Delivery"],
+                ["deployment", "Deployment"],
+              ]}
+            />
+          </div>
           <div className="grid grid-cols-5 gap-1.5">
             {STAGES.map((st, i) => {
               const isAuto = i < auto;

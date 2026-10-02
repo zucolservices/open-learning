@@ -347,16 +347,18 @@ export function ThreeFlows() {
       title="Three ways to branch"
       stage={
         <div className="flex flex-1 flex-col justify-center gap-3">
-          <Segmented<Flow>
-            size="sm"
-            value={s.flow}
-            onChange={(flow) => set({ flow })}
-            options={[
-              ["gitflow", "GitFlow"],
-              ["github", "GitHub flow"],
-              ["trunk", "Trunk-based"],
-            ]}
-          />
+          <div>
+            <Segmented<Flow>
+              size="sm"
+              value={s.flow}
+              onChange={(flow) => set({ flow })}
+              options={[
+                ["gitflow", "GitFlow"],
+                ["github", "GitHub flow"],
+                ["trunk", "Trunk-based"],
+              ]}
+            />
+          </div>
           <motion.div
             key={s.flow}
             initial={{ opacity: 0, y: 4 }}

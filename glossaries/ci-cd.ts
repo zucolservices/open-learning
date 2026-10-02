@@ -80,4 +80,40 @@ export const ciCd = {
       "A switch in the code that turns a feature on or off, for everyone or for chosen users, without deploying new code. It lets unfinished work be merged and deployed switched off, then released gradually.",
     module: "feature-flags",
   },
+  workflow: {
+    term: "Workflow (GitHub Actions)",
+    definition:
+      "GitHub's name for a pipeline: a YAML file in .github/workflows that says which events start it and which jobs to run.",
+    module: "pipeline-anatomy",
+  },
+  trigger: {
+    term: "Trigger",
+    definition:
+      "The event that starts a pipeline: a push, a pull request, a schedule, a manual button or another pipeline finishing.",
+    module: "pipeline-anatomy",
+  },
+  "ci-job": {
+    term: "Job",
+    definition:
+      "A unit of work in a pipeline that runs on one machine (runner), as a list of steps. Jobs run in parallel unless one is told to wait for another; each starts on a fresh machine.",
+    module: "pipeline-anatomy",
+  },
+  runner: {
+    term: "Runner (agent)",
+    definition:
+      "The machine that executes a pipeline job. Hosted runners are fresh virtual machines provided by the CI service; self-hosted runners are machines you run yourself. Jenkins and Azure call them agents.",
+    module: "pipeline-anatomy",
+  },
+  artifact: {
+    term: "Artifact",
+    definition:
+      "A file produced by a build and kept for later, such as a container image, a package or a zip of the built app. Build it once, version it, and deploy that same artifact everywhere.",
+    module: "artifacts-versioning",
+  },
+  "status-check": {
+    term: "Status check",
+    definition:
+      "A pass, fail or pending result that a pipeline reports back on a commit or pull request. Branch rules can require certain checks to pass before merging.",
+    module: "pipeline-anatomy",
+  },
 } satisfies Record<string, GlossaryEntry>;
