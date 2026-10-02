@@ -5805,11 +5805,12 @@ const observability: Track = {
             "Context propagation (traceparent)",
             "Reading a waterfall",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["signals-overview"],
           plain:
             "When one request passes through many services, a trace records each step as a span with its start and end time. Lined up in a waterfall, they show exactly where the time went.",
+          terms: ["trace", "span", "context-propagation", "traceparent", "critical-path"],
         },
         {
           slug: "trace-sampling",

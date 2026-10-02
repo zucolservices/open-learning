@@ -194,4 +194,22 @@ export const observability = {
       "How long telemetry is kept, and how quickly it can be searched. Teams often keep recent data hot and move older data to cheaper tiers or archives.",
     module: "log-pipelines",
   },
+  "context-propagation": {
+    term: "Context propagation",
+    definition:
+      "Passing the trace ID and current span ID from one service to the next with each call (usually in the W3C traceparent header), so all their spans join the same trace.",
+    module: "distributed-tracing",
+  },
+  traceparent: {
+    term: "traceparent header",
+    definition:
+      "The W3C Trace Context header that carries a trace's ID, the calling span's ID and a sampling flag between services, for example 00-4bf9…4736-00f0…02b7-01.",
+    module: "distributed-tracing",
+  },
+  "critical-path": {
+    term: "Critical path (trace)",
+    definition:
+      "The chain of spans a request actually had to wait for. Shortening a span on it shortens the request; speeding up work that runs in parallel off it doesn't.",
+    module: "distributed-tracing",
+  },
 } satisfies Record<string, GlossaryEntry>;
