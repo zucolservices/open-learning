@@ -186,4 +186,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "streaming-data/streams-to-lakehouse": () => import("./streaming-data/streams-to-lakehouse"),
   "streaming-data/realtime-analytics": () => import("./streaming-data/realtime-analytics"),
   "streaming-data/event-patterns": () => import("./streaming-data/event-patterns"),
+  "streaming-data/capstone-payments": () => import("./streaming-data/capstone-payments"),
 };
