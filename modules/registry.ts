@@ -235,4 +235,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "observability/signals-overview": () => import("./observability/signals-overview"),
   "observability/opentelemetry": () => import("./observability/opentelemetry"),
   "observability/metric-types": () => import("./observability/metric-types"),
+  "observability/percentiles": () => import("./observability/percentiles"),
 };

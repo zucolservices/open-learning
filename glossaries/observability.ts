@@ -110,4 +110,16 @@ export const observability = {
       "The most widely used open-source metrics system: it scrapes metrics from apps, stores them as time series and queries them with PromQL. A CNCF graduated project, started at SoundCloud in 2012.",
     module: "metric-types",
   },
+  percentile: {
+    term: "Percentile (p50, p95, p99)",
+    definition:
+      "The value below which a given share of measurements fall: p99 latency of 800 ms means 99% of requests were at least that fast and 1% slower. p50 is the median, the typical case.",
+    module: "percentiles",
+  },
+  "tail-latency": {
+    term: "Tail latency",
+    definition:
+      "The response times of the slowest requests, such as p99 or p99.9. Averages hide it, and systems that fan out to many servers amplify it.",
+    module: "percentiles",
+  },
 } satisfies Record<string, GlossaryEntry>;

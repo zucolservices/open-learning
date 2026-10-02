@@ -5706,11 +5706,12 @@ const observability: Track = {
             "Percentiles and the long tail",
             "Histogram buckets and aggregation",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["metric-types"],
           plain:
             "An average response time of 200 ms can hide one request in a hundred taking five seconds. Percentiles say what the slowest 5% or 1% of users actually experience, which is usually what matters.",
+          terms: ["percentile", "tail-latency", "histogram"],
         },
         {
           slug: "cardinality",
