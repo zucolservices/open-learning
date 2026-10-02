@@ -4608,11 +4608,12 @@ const kubernetes: Track = {
             "Rolling update settings",
             "Rollback and revision history",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["pods"],
           plain:
             "A Deployment keeps a set number of identical pods running and replaces them gradually when you ship a new version, so users never see an outage. If the new version is broken, you can roll back.",
+          terms: ["deployment", "replicaset", "rolling-update", "rollback", "pod"],
         },
         {
           slug: "health-checks",

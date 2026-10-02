@@ -128,4 +128,28 @@ export const kubernetes = {
       "Whether the kubelet restarts a pod's containers when they exit: Always (the default), OnFailure or Never. Repeated crashes are restarted with a growing delay, from 10 seconds up to five minutes (CrashLoopBackOff).",
     module: "pods",
   },
+  deployment: {
+    term: "Deployment",
+    definition:
+      "A controller object that keeps a set number of identical pods running and changes them safely: each new version of the pod template becomes a new ReplicaSet that is scaled up while the old one is scaled down.",
+    module: "deployments",
+  },
+  replicaset: {
+    term: "ReplicaSet",
+    definition:
+      "Keeps a given number of pods from one pod template running, replacing any that disappear. You rarely create one yourself: Deployments create one per version and keep old ones (scaled to zero) for rollback.",
+    module: "deployments",
+  },
+  "rolling-update": {
+    term: "Rolling update",
+    definition:
+      "Replacing pods a few at a time so the app stays available: maxSurge sets how many extra pods may exist during the change, maxUnavailable how many may be missing. Both default to 25% in a Deployment.",
+    module: "deployments",
+  },
+  rollback: {
+    term: "Rollback",
+    definition:
+      "Returning a Deployment to an earlier revision, for example with kubectl rollout undo. The old ReplicaSet is scaled back up using the same rolling rules. Kubernetes never rolls back on its own.",
+    module: "deployments",
+  },
 } satisfies Record<string, GlossaryEntry>;
