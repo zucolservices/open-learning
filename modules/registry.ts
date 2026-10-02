@@ -143,4 +143,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
     import("./cloud-architecture/vms-containers-functions"),
   "cloud-architecture/autoscaling-load-balancing": () =>
     import("./cloud-architecture/autoscaling-load-balancing"),
+  "cloud-architecture/private-networks": () => import("./cloud-architecture/private-networks"),
 };

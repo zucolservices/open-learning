@@ -3510,11 +3510,12 @@ const cloudArchitecture: Track = {
             "Carve an address range into public and private subnets across two zones, then write the route tables that make them work",
           formats: ["build-connect", "checkpoint"],
           concepts: ["CIDR ranges and subnets", "Route tables", "Public vs private subnets"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["regions-responsibility"],
           plain:
             "Each cloud lets you draw your own private network, called a VPC on AWS and Google Cloud or a VNet on Azure. You split its address range into subnets and decide, with route tables, where traffic is allowed to go.",
+          terms: ["vpc", "cidr", "subnet", "route-table", "internet-gateway", "stateful-firewall"],
         },
         {
           slug: "in-and-out",

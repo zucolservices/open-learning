@@ -98,4 +98,40 @@ export const cloudArchitecture = {
       "A set of identical servers that the cloud keeps between a minimum and a maximum size, adding or removing servers by rules such as a target CPU level. AWS calls it an Auto Scaling group, Azure a virtual machine scale set, Google a managed instance group.",
     module: "autoscaling-load-balancing",
   },
+  vpc: {
+    term: "VPC / VNet (virtual private network in the cloud)",
+    definition:
+      "Your own private network inside a cloud provider, with an address range you choose, divided into subnets. AWS and Google call it a VPC (virtual private cloud); Azure calls it a virtual network (VNet).",
+    module: "private-networks",
+  },
+  cidr: {
+    term: "CIDR notation",
+    definition:
+      "A way to write an address range as a starting address and a prefix length, such as 10.0.0.0/16. The prefix says how many leading bits are fixed: a /24 holds 256 addresses, a /16 holds 65,536.",
+    module: "private-networks",
+  },
+  subnet: {
+    term: "Subnet",
+    definition:
+      "A slice of a network's address range where servers are placed. On AWS each subnet sits in one availability zone; on Azure and Google a subnet spans the zones of its region.",
+    module: "private-networks",
+  },
+  "route-table": {
+    term: "Route table",
+    definition:
+      "A list of rules saying where traffic for each destination range should go, such as 'everything else (0.0.0.0/0) to the internet gateway'. The most specific matching route wins.",
+    module: "private-networks",
+  },
+  "internet-gateway": {
+    term: "Internet gateway",
+    definition:
+      "The connection between a cloud network and the internet. On AWS, a subnet whose route table sends traffic directly to an internet gateway is a public subnet.",
+    module: "private-networks",
+  },
+  "stateful-firewall": {
+    term: "Stateful firewall",
+    definition:
+      "A firewall that remembers connections, so the reply to an allowed request is let back in automatically. Security groups, Azure NSGs and Google's firewall rules are stateful; AWS network ACLs are not.",
+    module: "private-networks",
+  },
 } satisfies Record<string, GlossaryEntry>;
