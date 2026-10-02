@@ -225,4 +225,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "ci-cd/release-strategies": () => import("./ci-cd/release-strategies"),
   "ci-cd/feature-flags": () => import("./ci-cd/feature-flags"),
   "ci-cd/schema-migrations": () => import("./ci-cd/schema-migrations"),
+  "ci-cd/rollbacks": () => import("./ci-cd/rollbacks"),
 };

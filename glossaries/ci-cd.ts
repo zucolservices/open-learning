@@ -380,4 +380,22 @@ export const ciCd = {
       "Filling a new column or table with data for rows that already exist, usually in small batches in the background so the database stays responsive.",
     module: "schema-migrations",
   },
+  rollback: {
+    term: "Rollback",
+    definition:
+      "Restoring the previous, known-good version after a bad release. Usually the fastest fix, because that version is already built and tested; impossible when the new release has changed data in ways the old one can't handle.",
+    module: "rollbacks",
+  },
+  "compensating-action": {
+    term: "Compensating action",
+    definition:
+      "A new action that cancels out the effect of one that can't be undone: a refund for a payment, a correction email for a wrong one.",
+    module: "rollbacks",
+  },
+  "recovery-time": {
+    term: "Failed deployment recovery time",
+    definition:
+      "One of DORA's measures: how long it takes to recover from a deployment that fails and needs immediate intervention. It replaced the older 'mean time to restore' in 2023.",
+    module: "rollbacks",
+  },
 } satisfies Record<string, GlossaryEntry>;
