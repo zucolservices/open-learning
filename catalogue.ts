@@ -5530,11 +5530,12 @@ const ciCd: Track = {
             "Throughput and stability are not a trade-off",
             "Measuring without gaming the numbers",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["rollbacks"],
           plain:
             "Years of research by the DORA programme found a few measures that describe how well a team delivers software: how often it releases, how long a change takes to reach users, how often releases fail and how quickly it recovers. Teams that are fast also tend to be stable.",
+          terms: ["dora", "lead-time", "deployment-frequency", "change-fail-rate", "recovery-time"],
         },
         {
           slug: "ci-platforms",

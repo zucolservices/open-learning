@@ -440,4 +440,22 @@ export const ciCd = {
       "Supply-chain Levels for Software Artifacts, an OpenSSF framework that grades how well builds (and, since v1.2, source) are protected, from Build L0 (no guarantees) to L3 (hardened builds).",
     module: "software-supply-chain",
   },
+  dora: {
+    term: "DORA",
+    definition:
+      "DevOps Research and Assessment, a long-running research programme (now part of Google Cloud) on software delivery. Best known for its delivery measures: change lead time, deployment frequency, failed deployment recovery time, change fail rate and deployment rework rate.",
+    module: "dora-metrics",
+  },
+  "deployment-frequency": {
+    term: "Deployment frequency",
+    definition:
+      "How often a team deploys to production, or the time between deployments. One of DORA's throughput measures.",
+    module: "dora-metrics",
+  },
+  "change-fail-rate": {
+    term: "Change fail rate",
+    definition:
+      "The share of deployments that need immediate intervention afterwards, such as a rollback or hotfix. One of DORA's instability measures.",
+    module: "dora-metrics",
+  },
 } satisfies Record<string, GlossaryEntry>;
