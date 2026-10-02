@@ -8,6 +8,8 @@ import { ScrumScene } from "@/components/home/scrum-scene";
 import { CadenceTaste } from "@/components/home/cadence-taste";
 import { RagScene } from "@/components/home/rag-scene";
 import { RagTaste } from "@/components/home/rag-taste";
+import { CloudScene } from "@/components/home/cloud-scene";
+import { CloudTaste } from "@/components/home/cloud-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -56,5 +58,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: RagTaste,
     tasteCaption:
       "A taste of module 2: the same small model answering from memory, then with the corporation's documents.",
+  },
+  "cloud-architecture": {
+    Scene: CloudScene,
+    sceneCaption:
+      "One well-built cloud foundation, from the user's request to the guardrails around it. Watch the tour, or click any part.",
+    Taste: CloudTaste,
+    tasteCaption:
+      "A taste of module 2: pick a design, then break a building, a zone or a whole region.",
   },
 };
