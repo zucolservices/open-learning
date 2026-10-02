@@ -244,7 +244,10 @@ export function Diminishing() {
           </label>
           <div className="flex h-40 items-end gap-1">
             {curve.map((c) => (
-              <div key={c.n} className="flex h-full flex-1 flex-col items-center justify-end gap-0.5">
+              <div
+                key={c.n}
+                className="flex h-full flex-1 flex-col items-center justify-end gap-0.5"
+              >
                 <motion.div
                   animate={{ height: `${(c.wall / 18) * 100}%` }}
                   className={cn(

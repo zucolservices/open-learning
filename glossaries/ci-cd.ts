@@ -206,4 +206,40 @@ export const ciCd = {
       "The longest chain of pipeline jobs that must wait for one another. It decides how long the whole run takes; speeding up anything off it changes nothing.",
     module: "pipeline-speed",
   },
+  "quality-gate": {
+    term: "Quality gate",
+    definition:
+      "A check a change must pass before it can move on, for example tests passing, a review approved or no known vulnerabilities, before merging into main or before a release.",
+    module: "quality-gates",
+  },
+  "branch-protection": {
+    term: "Branch protection",
+    definition:
+      "Rules on an important branch such as main: required status checks, required reviews, no direct pushes or force-pushes. GitHub also offers the newer rulesets; GitLab calls them protected branches.",
+    module: "quality-gates",
+  },
+  "merge-queue": {
+    term: "Merge queue",
+    definition:
+      "A service that merges approved pull requests one at a time (or in batches), re-running the required checks on top of the latest main first, so two changes that pass alone can't break main together. GitLab calls them merge trains.",
+    module: "quality-gates",
+  },
+  sast: {
+    term: "Static analysis (SAST)",
+    definition:
+      "Tools that read source code without running it to find bugs and security flaws such as injection, for example CodeQL, Semgrep or SonarQube. SAST stands for static application security testing.",
+    module: "quality-gates",
+  },
+  "secret-scanning": {
+    term: "Secret scanning",
+    definition:
+      "Automatically looking for passwords, tokens and keys in code. With push protection, a push that contains one is blocked before it reaches the repository.",
+    module: "quality-gates",
+  },
+  codeowners: {
+    term: "CODEOWNERS",
+    definition:
+      "A file that maps parts of a repository to the people or teams responsible for them, so changes there automatically ask those owners for review, and can require their approval.",
+    module: "quality-gates",
+  },
 } satisfies Record<string, GlossaryEntry>;
