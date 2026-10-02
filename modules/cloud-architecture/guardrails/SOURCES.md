@@ -1,0 +1,10 @@
+# Sources (fact-checked 2026-10-02, before building)
+
+Full notes: scratchpad `cloud/m12-facts.md`.
+
+- AWS SCPs: never grant; don't affect the management account or service-linked roles; apply to member-account root; full IAM language support (19 Sep 2025); since May 2026 up to 10 SCPs per target, 10,240 characters. Official region-deny SCP sample with aws:RequestedRegion and NotAction for global services. RCPs (Nov 2024, ~60 services). Declarative policies (Dec 2024). S3 Block Public Access on by default for new buckets since April 2023; organisation-level S3 policy (26 Nov 2025). Tag policies don't block untagged resources ("aren't evaluated") — use an SCP with aws:RequestTag Null to require tags. AWS Config $0.003 per configuration item, $0.001 per rule evaluation (first 100k). Control Tower: preventive / detective / proactive controls.
+- Azure Policy: 11 effects incl. deny, audit, modify, deployIfNotExists, denyAction, manual, mutate, addToNetworkGroup; new assignment ≈5 min, resource result ≈15 min, full scan every 24 h; built-ins "Allowed locations" (e56962a6-4747-49cd-b67b-bf8b01975c4c), "Require a tag on resources", "Inherit a tag from the resource group"; free for Azure resources. India regions incl. India South Central (Hyderabad, indiasouthcentral, live 6 Aug 2026).
+- Google Cloud Organization Policy: gcp.resourceLocations with in:in-locations (asia-south1 Mumbai, asia-south2 Delhi); storage.publicAccessPrevention (retroactive); custom constraints in CEL; dry-run; secure-by-default policies for organisations created on/after 3 May 2024.
+- Policy as code: OPA (CNCF graduated Jan 2021; creators joined Apple Aug 2025, governance unchanged), Conftest, Gatekeeper, Kyverno (CNCF graduated Mar 2026; Groww adopter), Checkov (Bridgecrew → Palo Alto 2021), tfsec → Trivy, Sentinel (HashiCorp/IBM), CloudFormation Guard, Cloud Custodian (CNCF incubating).
+- Incidents: Dr Lal PathLabs public bucket (TechCrunch, 2020). Gartner (2019): "through 2025, 99% of cloud security failures will be the customer's fault" (via secondary citations).
+- India: RBI payment data localisation circular (6 Apr 2018).

@@ -151,4 +151,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "cloud-architecture/iam": () => import("./cloud-architecture/iam"),
   "cloud-architecture/workload-identity": () => import("./cloud-architecture/workload-identity"),
   "cloud-architecture/encryption-secrets": () => import("./cloud-architecture/encryption-secrets"),
+  "cloud-architecture/guardrails": () => import("./cloud-architecture/guardrails"),
 };

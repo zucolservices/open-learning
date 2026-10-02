@@ -3672,7 +3672,8 @@ const cloudArchitecture: Track = {
             "Organisation policies on each cloud",
             "Policy as code",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["guardrail", "preventive-control", "detective-control", "policy-as-code"],
           level: "core",
           prerequisites: ["iam"],
           plain:

@@ -290,4 +290,28 @@ export const cloudArchitecture = {
       "A service that stores passwords, API keys and certificates encrypted, controls and logs who reads them, keeps versions and can rotate them: AWS Secrets Manager, Azure Key Vault, Google Secret Manager, HashiCorp Vault, OpenBao.",
     module: "encryption-secrets",
   },
+  guardrail: {
+    term: "Guardrail",
+    definition:
+      "An organisation-wide rule set above individual accounts or projects, such as \u201conly India regions\u201d or \u201cno public storage\u201d, that applies to everyone below, administrators included.",
+    module: "guardrails",
+  },
+  "preventive-control": {
+    term: "Preventive control",
+    definition:
+      "A guardrail that refuses a request so the bad thing never exists: AWS service control policies, Azure Policy Deny, Google organization policies.",
+    module: "guardrails",
+  },
+  "detective-control": {
+    term: "Detective control",
+    definition:
+      "A guardrail that finds and reports problems after they exist, including resources created before the rule: AWS Config rules, Azure Policy Audit, Google Security Command Center.",
+    module: "guardrails",
+  },
+  "policy-as-code": {
+    term: "Policy as code",
+    definition:
+      "Writing rules as text files kept in version control, reviewed, tested and checked automatically, for example in every pull request. Tools: Open Policy Agent, Kyverno, Checkov, Sentinel.",
+    module: "guardrails",
+  },
 } satisfies Record<string, GlossaryEntry>;
