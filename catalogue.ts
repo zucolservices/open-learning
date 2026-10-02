@@ -5635,11 +5635,12 @@ const observability: Track = {
             "Logs: detailed events",
             "Traces: one request's journey",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["why-observability"],
           plain:
             "Metrics are numbers counted over time, like requests per second. Logs are written records of individual events. Traces follow one request as it passes through many services. Each answers different questions at a different cost.",
+          terms: ["metric", "log", "trace", "span", "exemplar", "semantic-conventions"],
         },
         {
           slug: "opentelemetry",

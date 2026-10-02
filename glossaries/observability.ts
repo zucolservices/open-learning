@@ -38,4 +38,22 @@ export const observability = {
       "The record of one request's journey through a system, made of spans (one per operation) with their start and end times, so you can see where the time went.",
     module: "distributed-tracing",
   },
+  span: {
+    term: "Span",
+    definition:
+      "One timed operation within a trace, such as a call to another service or a database query, with a start time, an end time, attributes and a link to its parent span.",
+    module: "distributed-tracing",
+  },
+  exemplar: {
+    term: "Exemplar",
+    definition:
+      "A sample trace ID attached to a metric data point, so you can jump from a spike on a graph to an example request that contributed to it.",
+    module: "signals-overview",
+  },
+  "semantic-conventions": {
+    term: "Semantic conventions",
+    definition:
+      "OpenTelemetry's standard names for common attributes, such as http.request.method or db.system.name, so data from different libraries and tools means the same thing.",
+    module: "signals-overview",
+  },
 } satisfies Record<string, GlossaryEntry>;
