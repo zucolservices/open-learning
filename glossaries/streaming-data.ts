@@ -367,4 +367,10 @@ export const streamingData = {
       "Letting a Kafka consumer read from an in-sync replica in its own zone instead of the partition leader (KIP-392, Kafka 2.4), set with client.rack and a rack-aware replica selector. It cuts cross-zone traffic at the cost of slightly higher latency.",
     module: "sizing-cost",
   },
+  "commit-interval": {
+    term: "Commit interval",
+    definition:
+      "How often a streaming writer makes its new files visible in a lakehouse table: each Flink checkpoint, each Spark micro-batch, or a connector setting such as the Iceberg Kafka Connect sink's 5-minute default. It sets the table's freshness and how many small files appear.",
+    module: "streams-to-lakehouse",
+  },
 } satisfies Record<string, GlossaryEntry>;

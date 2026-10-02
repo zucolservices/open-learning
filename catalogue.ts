@@ -4369,11 +4369,18 @@ const streamingData: Track = {
             "Small files and compaction",
             "Kafka-to-table tools",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["checkpoints"],
           plain:
             "Streams often end up in lakehouse tables for analysis. Writing often keeps tables fresh but creates many small files that slow queries; writing rarely does the opposite. Compaction tidies up behind the stream.",
+          terms: [
+            "commit-interval",
+            "small-files",
+            "compaction",
+            "equality-delete",
+            "deletion-vector",
+          ],
         },
         {
           slug: "realtime-analytics",

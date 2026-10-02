@@ -1,0 +1,11 @@
+# Sources (fact-checked 2026-10-02, before building)
+
+Full notes: scratchpad `streaming/m20-facts.md` (raw pages in `m20/`).
+
+- Apache Iceberg 1.12 Flink docs: the sink commits data files after each successful checkpoint; "The Flink Iceberg sink guarantees exactly-once semantics"; upsert mode writes equality deletes; HASH distribution routes a partition to one writer; IcebergSink post-commit maintenance (compaction, snapshot expiry, orphan cleanup) and convertEqualityDeletes() in 1.12 (experimental); Dynamic Iceberg Sink since 1.10.0. https://iceberg.apache.org/docs/latest/flink-writes/
+- Iceberg Spark structured streaming: "Each batch written to a table produces a new snapshot"; trigger interval of at least 1 minute recommended. Iceberg configuration: write.target-file-size-bytes 512 MB; maintenance procedures rewrite_data_files, expire_snapshots (5 days), rewrite_manifests, remove_orphan_files (3 days). https://iceberg.apache.org/docs/latest/spark-structured-streaming/
+- Iceberg spec: v3 deletion vectors (supported from Iceberg 1.8.0); draft v4: "Writing new equality deletes is no longer allowed". https://iceberg.apache.org/spec/
+- Delta Lake: optimized writes and auto compaction in OSS 3.1.0 (128 MB target); OPTIMIZE targets 1 GB; txnAppId/txnVersion for idempotent foreachBatch writes. Hudi: hoodie.parquet.small.file.limit 100 MB, async compaction for MOR by default.
+- Iceberg Kafka Connect sink (from Tabular, coordinator in Iceberg 1.6.0): iceberg.control.commit.interval-ms default 300000, exactly-once. https://iceberg.apache.org/docs/latest/kafka-connect/
+- Confluent Tableflow: Iceberg GA 19 Mar 2025, Delta GA Oct 2025. Redpanda Iceberg Topics GA in 25.1 (Apr 2025), 1-minute default target lag. Amazon Data Firehose to Apache Iceberg tables GA 30 Sep 2024; buffering 1–128 MiB, 0–900 s (default 300 s). Amazon S3 Tables (3 Dec 2024) with automatic maintenance. Azure Event Hubs Capture: Avro, time window 1–15 min (default 5), size 10–500 MB (default 300). Snowpipe Streaming (Iceberg v2/v3). BigQuery "Apache Iceberg managed tables". Databricks Lakeflow pipelines. Apache Fluss top-level project (6 Aug 2026); Apache Paimon.
+- The 10 MB/s stream, writer and partition counts and the files-per-day figures are our own illustrative model.
