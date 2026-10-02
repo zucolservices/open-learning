@@ -5822,11 +5822,12 @@ const observability: Track = {
             "Keep 1% of traces and lose the one that mattered, then switch to tail sampling and keep every error",
           formats: ["simulation", "checkpoint"],
           concepts: ["Head vs tail sampling", "Keeping errors and slow requests", "Exemplars"],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["distributed-tracing"],
           plain:
             "Recording every trace of a busy system is expensive, so most teams keep a sample. Deciding at the start is cheap but random; deciding at the end lets you keep every slow or failed request.",
+          terms: ["head-sampling", "tail-sampling", "exemplar", "trace"],
         },
         {
           slug: "profiling",

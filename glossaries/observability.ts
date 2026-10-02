@@ -212,4 +212,16 @@ export const observability = {
       "The chain of spans a request actually had to wait for. Shortening a span on it shortens the request; speeding up work that runs in parallel off it doesn't.",
     module: "distributed-tracing",
   },
+  "head-sampling": {
+    term: "Head sampling",
+    definition:
+      "Deciding whether to keep a trace when it starts, usually by a random choice based on its trace ID. Cheap and simple, but it can't favour traces that later turn out to fail or be slow.",
+    module: "trace-sampling",
+  },
+  "tail-sampling": {
+    term: "Tail sampling",
+    definition:
+      "Deciding whether to keep a trace after it has finished, so you can keep every error and slow request and only a share of the rest. Needs all of a trace's spans in one place and some memory.",
+    module: "trace-sampling",
+  },
 } satisfies Record<string, GlossaryEntry>;
