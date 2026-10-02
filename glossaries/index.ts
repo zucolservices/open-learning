@@ -10,6 +10,7 @@ import { systemDesign } from "./system-design";
 import { llmFoundations } from "./llm-foundations";
 import { agileScrum } from "./agile-scrum";
 import { ragSystems } from "./rag-systems";
+import { cloudArchitecture } from "./cloud-architecture";
 import { shared } from "./shared";
 import type { GlossaryEntry } from "./types";
 
@@ -22,6 +23,7 @@ export const trackGlossaries: Record<string, Record<string, GlossaryEntry>> = {
   "llm-foundations": llmFoundations,
   "agile-scrum": agileScrum,
   "rag-systems": ragSystems,
+  "cloud-architecture": cloudArchitecture,
 };
 
 export type TermId =
@@ -30,7 +32,8 @@ export type TermId =
   | keyof typeof systemDesign
   | keyof typeof llmFoundations
   | keyof typeof agileScrum
-  | keyof typeof ragSystems;
+  | keyof typeof ragSystems
+  | keyof typeof cloudArchitecture;
 
 export interface ResolvedTerm {
   id: string;

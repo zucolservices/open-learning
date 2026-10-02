@@ -135,6 +135,18 @@
   --bg-glow: rgb(163 230 53 / 0.1);
 }
 
+[data-track="stratus"] {
+  --accent: #0369a1;
+  --accent-soft: rgb(3 105 161 / 0.1);
+  --bg-glow: rgb(2 132 199 / 0.12);
+}
+[data-theme="dark"] [data-track="stratus"],
+[data-theme="dark"][data-track="stratus"] {
+  --accent: #38bdf8;
+  --accent-soft: rgb(56 189 248 / 0.14);
+  --bg-glow: rgb(56 189 248 / 0.1);
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);

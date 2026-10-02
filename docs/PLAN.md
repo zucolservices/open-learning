@@ -271,20 +271,57 @@ AI & machine learning area, second track (approved 2026-09-29). 23 modules in 7 
 | 22    | Capstone: a scheme assistant         | Design a bilingual assistant, then evaluate it                                       | Branching, simulation     |
 | 23    | Capstone: the RAG that answers wrong | Trace wrong answers stage by stage and fix them                                      | Fix the problem           |
 
+## Cloud Architecture: curriculum
+
+Platform & cloud area, first track (approved 2026-10-02). 22 modules in 7 chapters, about 10 hours. Accent: "stratus" sky blue (`[data-track="stratus"]`). Glossary: `glossaries/cloud-architecture.ts`. Vendor-neutral: AWS, Google Cloud and Azure side by side, with open-source tools (Terraform/OpenTofu, Open Policy Agent). Links to System Design for scaling, caching and queues, and to the Lakehouse cloud modules for data platforms, rather than repeating them. Real data where possible: real IAM policy evaluation in the browser, real Terraform plan output, public region and zone lists, dated list prices. Built on one branch (`track/cloud-architecture`), one commit per module, merged once at the end. Each module is fact-checked on its own before it is built.
+
+| #     | Module                                        | Centrepiece                                                          | Key formats        |
+| ----- | --------------------------------------------- | -------------------------------------------------------------------- | ------------------ |
+| **1** | **The big picture**                           |                                                                      |                    |
+| 1     | What the cloud really is                      | From a server cupboard to a hyperscale data centre; IaaS, PaaS, SaaS | Scroll story       |
+| 2     | Regions, zones and shared responsibility      | Fail a data centre, a zone, a region; sort security jobs             | Simulation         |
+| **2** | **Compute**                                   |                                                                      |                    |
+| 3     | Virtual machines, containers and functions    | One app run three ways: start-up, cost, control                      | Simulation         |
+| 4     | Autoscaling and load balancers                | A day of traffic into a scaling group; health checks                 | Simulation         |
+| **3** | **Networking**                                |                                                                      |                    |
+| 5     | Your own private network                      | Carve CIDR ranges into subnets; write route tables                   | Build & connect    |
+| 6     | Getting in and out                            | Trace a packet through NAT; private endpoints; egress                | Step-through       |
+| 7     | Connecting networks                           | Peering every pair vs a hub; VPN and dedicated links                 | Build & connect    |
+| 8     | DNS and traffic routing                       | Latency and failover routing across regions; CDNs                    | Simulation         |
+| **4** | **Identity & security**                       |                                                                      |                    |
+| 9     | Identity and access                           | Evaluate real policies; cut an over-broad one to least privilege     | Fix the problem    |
+| 10    | Workload identity and federation              | A leaked key vs short-lived credentials for workloads and CI         | Step-through       |
+| 11    | Encryption, keys and secrets                  | Envelope encryption, rotation and revocation                         | Step-through       |
+| 12    | Guardrails and policy as code                 | Preventive vs detective controls across the three clouds             | Simulation         |
+| **5** | **Organising the estate**                     |                                                                      |                    |
+| 13    | Accounts, subscriptions and projects          | Build an organisation tree; policies and bills flow down             | Build & connect    |
+| 14    | Landing zones                                 | Assemble log archive, security, shared network, workload accounts    | Build & connect    |
+| 15    | Infrastructure as code                        | Read a real Terraform plan; find drift                               | Sandbox            |
+| **6** | **Data, resilience & cost**                   |                                                                      |                    |
+| 16    | Storage and managed databases                 | Place data on the right storage and tier; see the cost               | Simulation         |
+| 17    | High availability and disaster recovery       | Backup-restore to active-active; fail a region                       | Simulation         |
+| 18    | Cost and FinOps                               | On-demand, committed and spot; find waste in a bill                  | Simulation         |
+| 19    | Well-architected reviews                      | Review a diagram against the shared pillars                          | Fix the problem    |
+| **7** | **In practice**                               |                                                                      |                    |
+| 20    | Cloud in India and government                 | Region, empanelment and residency, service by service                | Fix the problem    |
+| 21    | Migration: the 7 Rs                           | Decide ten applications' fate                                        | Branching scenario |
+| 22    | Capstone: a foundation for a state department | Design a landing zone and app platform, then review it               | Branching, build   |
+
 ## Roadmap
 
-| Step                 | Scope                                                                                   | Status                                                                  |
-| -------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| 1. Foundation        | Shell, design language, routing, Module SDK, progress adapter, checkpoints, smoke tests | **Done.** A sample module lives at `/tracks/playground/rows-vs-columns` |
-| 2. Flagship          | Module 6, Delta Lake transaction log: storyboard, then build                            | **Done.** 14 steps, fact-checked (module `SOURCES.md`)                  |
-| 3. Parallel flagship | Module 7, Iceberg metadata tree. First 3D module; sets the R3F toolkit                  | Next                                                                    |
-| 4. Rest of track     | Chapters 1 → 9, growing the toolkit (charts, builder, sandbox) along the way            | Done: all 29 modules live (2026-09-24)                                  |
-| 4b. System Design    | Second track (Architecture), 27 modules                                                 | Live: all 27 modules                                                    |
-| 4c. LLM Foundations  | Third track (AI & machine learning), 26 modules                                         | Live: all 26 modules (2026-09-25)                                       |
-| 4d. Agile & Scrum    | Delivery management, first track, 23 modules                                            | Live: all 23 modules (2026-09-28)                                       |
-| 4e. RAG Systems      | AI & machine learning, second track, 23 modules                                         | Live: all 23 modules (2026-09-29)                                       |
-| 5. Team feedback     | 3–5 engineers use the track; refine                                                     |                                                                         |
-| 6. Deploy            | Vercel project + preview deploys; decide on access protection                           |                                                                         |
+| Step                   | Scope                                                                                   | Status                                                                  |
+| ---------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| 1. Foundation          | Shell, design language, routing, Module SDK, progress adapter, checkpoints, smoke tests | **Done.** A sample module lives at `/tracks/playground/rows-vs-columns` |
+| 2. Flagship            | Module 6, Delta Lake transaction log: storyboard, then build                            | **Done.** 14 steps, fact-checked (module `SOURCES.md`)                  |
+| 3. Parallel flagship   | Module 7, Iceberg metadata tree. First 3D module; sets the R3F toolkit                  | Next                                                                    |
+| 4. Rest of track       | Chapters 1 → 9, growing the toolkit (charts, builder, sandbox) along the way            | Done: all 29 modules live (2026-09-24)                                  |
+| 4b. System Design      | Second track (Architecture), 27 modules                                                 | Live: all 27 modules                                                    |
+| 4c. LLM Foundations    | Third track (AI & machine learning), 26 modules                                         | Live: all 26 modules (2026-09-25)                                       |
+| 4d. Agile & Scrum      | Delivery management, first track, 23 modules                                            | Live: all 23 modules (2026-09-28)                                       |
+| 4e. RAG Systems        | AI & machine learning, second track, 23 modules                                         | Live: all 23 modules (2026-09-29)                                       |
+| 4f. Cloud Architecture | Platform & cloud, first track, 22 modules                                               | In progress: 0 of 22 modules                                            |
+| 5. Team feedback       | 3–5 engineers use the track; refine                                                     |                                                                         |
+| 6. Deploy              | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
 ### Per-module workflow
 

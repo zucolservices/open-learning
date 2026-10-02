@@ -85,7 +85,7 @@ export interface Track {
   tagline: string;
   description: string;
   /** Key into the track accent palette in globals.css ([data-track]). */
-  accent: "lakehouse" | "blueprint" | "synapse" | "cadence" | "lumen" | "neutral";
+  accent: "lakehouse" | "blueprint" | "synapse" | "cadence" | "lumen" | "stratus" | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
   hidden?: boolean;
@@ -3378,6 +3378,475 @@ const ragSystems: Track = {
   ],
 };
 
+const cloudArchitecture: Track = {
+  slug: "cloud-architecture",
+  title: "Cloud Architecture",
+  area: "Platform & cloud",
+  category: "platform-cloud",
+  tagline: "How cloud platforms are built, and how to design on them.",
+  description:
+    "What the cloud really is, and how to build on it well: compute choices, private networks, identity and encryption, guardrails, landing zones and infrastructure as code, resilience, cost, and running in India. Vendor-neutral: AWS, Google Cloud and Azure side by side, with open-source tools. By the end you can read a cloud architecture diagram, spot what's missing, and design a sound foundation for a real organisation.",
+  accent: "stratus",
+  chapters: [
+    {
+      slug: "big-picture",
+      title: "The big picture",
+      summary: "What the cloud is, where it lives, and who is responsible for what.",
+      modules: [
+        {
+          slug: "what-is-cloud",
+          title: "What the cloud really is",
+          summary: "Someone else's data centres, rented by the minute.",
+          minutes: 20,
+          signature:
+            "Scroll from a server cupboard to a hyperscale data centre, peeling back IaaS, PaaS and SaaS layer by layer",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "On-premises vs cloud",
+            "IaaS, PaaS and SaaS",
+            "Paying for what you use, and what that changes",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "The cloud is computers in someone else's data centre that you rent by the minute over the internet. Instead of buying servers years ahead, you ask for them when you need them and give them back when you don't.",
+        },
+        {
+          slug: "regions-responsibility",
+          title: "Regions, zones and shared responsibility",
+          summary: "Where your cloud actually is, how it fails, and what's yours to secure.",
+          minutes: 25,
+          signature:
+            "Fail a data centre, then a zone, then a region on a map, and see which designs keep running; then sort security jobs between you and the provider",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Regions and availability zones",
+            "Designing for a zone failure",
+            "The shared responsibility model",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["what-is-cloud"],
+          plain:
+            "A cloud region is a city's worth of data centres split into separate zones, each with its own power and cooling. The provider keeps the buildings and hardware secure; you are responsible for how you configure what you build on them.",
+        },
+      ],
+    },
+    {
+      slug: "compute",
+      title: "Compute",
+      summary: "Virtual machines, containers and functions, and scaling them.",
+      modules: [
+        {
+          slug: "vms-containers-functions",
+          title: "Virtual machines, containers and functions",
+          summary: "The same small app run three ways.",
+          minutes: 25,
+          signature:
+            "Run one app as a VM, a container and a function under the same traffic, and compare start-up time, cost and how much you manage",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "What a virtual machine is",
+            "Containers and managed container services",
+            "Functions (serverless): cold starts and per-request billing",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["what-is-cloud"],
+          plain:
+            "You can rent a whole virtual computer, a lightweight container, or just pay each time a small function runs. Each step hands more work to the provider and gives you less control.",
+        },
+        {
+          slug: "autoscaling-load-balancing",
+          title: "Autoscaling and load balancers",
+          summary:
+            "Adding and removing servers as traffic changes, and spreading requests across them.",
+          minutes: 25,
+          signature:
+            "Drive a day of traffic into a scaling group and tune its rules; watch health checks pull a sick server out of the load balancer",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Scaling groups and scaling policies",
+            "Health checks",
+            "Layer 4 vs layer 7 load balancers",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["vms-containers-functions"],
+          plain:
+            "When traffic rises, the cloud can start more servers automatically and stop them when it falls. A load balancer spreads requests across whichever servers are healthy right now.",
+        },
+      ],
+    },
+    {
+      slug: "networking",
+      title: "Networking",
+      summary: "Private networks, the way in and out, connecting networks, and DNS.",
+      modules: [
+        {
+          slug: "private-networks",
+          title: "Your own private network",
+          summary: "Address ranges, subnets and routes: a VPC or VNet, built by hand.",
+          minutes: 30,
+          signature:
+            "Carve an address range into public and private subnets across two zones, then write the route tables that make them work",
+          formats: ["build-connect", "checkpoint"],
+          concepts: ["CIDR ranges and subnets", "Route tables", "Public vs private subnets"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["regions-responsibility"],
+          plain:
+            "Each cloud lets you draw your own private network, called a VPC on AWS and Google Cloud or a VNet on Azure. You split its address range into subnets and decide, with route tables, where traffic is allowed to go.",
+        },
+        {
+          slug: "in-and-out",
+          title: "Getting in and out",
+          summary: "Internet and NAT gateways, private endpoints, and what leaving costs.",
+          minutes: 25,
+          signature:
+            "Trace a packet from a private server to the internet and back, then reach a cloud service privately without the internet at all",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Internet gateways and NAT",
+            "Private endpoints for cloud services",
+            "Egress charges",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["private-networks"],
+          plain:
+            "Servers in a private subnet can reach the internet through a NAT gateway without being reachable from it. Private endpoints let them use cloud services without touching the internet, and data leaving the cloud usually costs money.",
+        },
+        {
+          slug: "connecting-networks",
+          title: "Connecting networks",
+          summary: "Peering, hub-and-spoke, and links to offices and data centres.",
+          minutes: 25,
+          signature:
+            "Connect six networks first by peering every pair, then through a hub, and count the links; then add an office over VPN and a dedicated line",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Network peering and its limits",
+            "Hub-and-spoke and transit gateways",
+            "VPN and dedicated connections",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["private-networks"],
+          plain:
+            "Organisations end up with many networks that need to talk to each other and to their offices. Connecting each pair directly gets messy fast, so most use a central hub, with VPNs or private lines back to their own buildings.",
+        },
+        {
+          slug: "dns-routing",
+          title: "DNS and traffic routing",
+          summary: "Names, private DNS, failover and latency routing, and CDNs.",
+          minutes: 25,
+          signature:
+            "Send users in Delhi, Chennai and Singapore to the nearest healthy region, then take a region down and watch DNS fail over",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "DNS records and private zones",
+            "Latency, weighted and failover routing",
+            "Content delivery networks",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["private-networks"],
+          plain:
+            "DNS turns names like portal.gov.example into addresses. Cloud DNS services can answer differently depending on where the user is or which region is healthy, and a CDN keeps copies of content close to users.",
+        },
+      ],
+    },
+    {
+      slug: "identity-security",
+      title: "Identity & security",
+      summary:
+        "Who can do what, without keys lying around, with data encrypted and rules enforced.",
+      modules: [
+        {
+          slug: "iam",
+          title: "Identity and access",
+          summary: "Users, roles and policies, and why least privilege matters.",
+          minutes: 30,
+          signature:
+            "Evaluate real policy documents against requests, then cut an over-broad policy down until it allows only what the job needs",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Identities, roles and policies",
+            "How a request is allowed or denied",
+            "Least privilege",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["regions-responsibility"],
+          plain:
+            "Every action in the cloud is checked against policies that say who may do what to which resource. Giving each person and program only the access it needs limits the damage when something goes wrong.",
+        },
+        {
+          slug: "workload-identity",
+          title: "Workload identity and federation",
+          summary: "No long-lived keys: roles for services, single sign-on and OIDC.",
+          minutes: 25,
+          signature:
+            "Follow a leaked access key to the damage it does, then replace it with short-lived credentials handed to the workload and to CI",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Why long-lived keys leak",
+            "Roles for services and workloads",
+            "Federation and single sign-on (SAML, OIDC)",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["iam"],
+          plain:
+            "Passwords and access keys stored in code or laptops get leaked. Modern setups give people and programs short-lived credentials automatically, based on who they already are, so there is nothing permanent to steal.",
+        },
+        {
+          slug: "encryption-secrets",
+          title: "Encryption, keys and secrets",
+          summary: "Key management services, envelope encryption and secret stores.",
+          minutes: 25,
+          signature:
+            "Encrypt a file the way cloud storage does, with a data key wrapped by a master key, then rotate and revoke keys and see what still opens",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Encryption at rest and in transit",
+            "Key management services and envelope encryption",
+            "Secret managers",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["iam"],
+          plain:
+            "Cloud data is encrypted with keys kept in a key management service, which never lets the master key leave. Passwords and API keys belong in a secret manager, not in code or configuration files.",
+        },
+        {
+          slug: "guardrails",
+          title: "Guardrails and policy as code",
+          summary: "Organisation-wide rules that stop mistakes before they happen.",
+          minutes: 25,
+          signature:
+            "Try to create a public bucket, a server in the wrong region and an untagged database under different guardrails, and see which are blocked and which only flagged",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Preventive vs detective controls",
+            "Organisation policies on each cloud",
+            "Policy as code",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["iam"],
+          plain:
+            "Guardrails are rules set once for the whole organisation, such as 'nothing outside India' or 'no public storage'. Some block a mistake outright; others raise an alert so someone can fix it.",
+        },
+      ],
+    },
+    {
+      slug: "organising",
+      title: "Organising the estate",
+      summary: "Accounts and projects, landing zones, and infrastructure as code.",
+      modules: [
+        {
+          slug: "resource-hierarchy",
+          title: "Accounts, subscriptions and projects",
+          summary: "The resource hierarchy, and why one big account goes wrong.",
+          minutes: 25,
+          signature:
+            "Sort a department's workloads into an organisation tree of folders and accounts, then see how policies and bills flow down it",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Organisations, folders, accounts, subscriptions and projects",
+            "Blast radius and separation",
+            "How policies and billing inherit",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["iam"],
+          plain:
+            "Clouds let you split your work into separate accounts or projects grouped in a tree. Keeping production apart from testing, and teams apart from each other, limits how far one mistake can spread.",
+        },
+        {
+          slug: "landing-zones",
+          title: "Landing zones",
+          summary: "A ready foundation of shared networking, logging and security.",
+          minutes: 30,
+          signature:
+            "Assemble a landing zone piece by piece (log archive, security tooling, shared network, workload accounts) and check it against what each cloud's blueprint provides",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "What a landing zone contains",
+            "AWS, Azure and Google Cloud blueprints",
+            "Vending new accounts safely",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["resource-hierarchy", "guardrails", "connecting-networks"],
+          plain:
+            "A landing zone is the prepared ground every new project lands on: accounts, networks, logging and security rules already in place. Each cloud publishes a blueprint for one, so teams don't start from scratch.",
+        },
+        {
+          slug: "infrastructure-as-code",
+          title: "Infrastructure as code",
+          summary: "Describe infrastructure in files; plan, apply, and catch drift.",
+          minutes: 30,
+          signature:
+            "Read a real Terraform plan, predict what it will create, change and destroy, then find the drift someone caused by clicking in the console",
+          formats: ["sandbox", "checkpoint"],
+          concepts: ["Declarative infrastructure", "Plan, apply and state", "Drift and reviews"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["private-networks"],
+          plain:
+            "Instead of clicking in a web console, you describe the infrastructure you want in files and let a tool create it. The files can be reviewed, versioned and re-run, and the tool shows exactly what it will change first.",
+        },
+      ],
+    },
+    {
+      slug: "data-resilience-cost",
+      title: "Data, resilience & cost",
+      summary: "Where data lives, surviving failures, paying the bill, and reviewing a design.",
+      modules: [
+        {
+          slug: "storage-databases",
+          title: "Storage and managed databases",
+          summary: "Object, block and file storage, and managed databases.",
+          minutes: 25,
+          signature:
+            "Place a department's data (scanned files, a database, shared documents, backups) on the right kind of storage and tier, and watch the monthly cost change",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Object, block and file storage",
+            "Storage tiers and lifecycle rules",
+            "Managed databases vs running your own",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["what-is-cloud"],
+          plain:
+            "Clouds offer different storage for different jobs: object storage for files at any scale, disks attached to servers, and shared file systems. Managed databases take backups, patching and failover off your hands.",
+        },
+        {
+          slug: "ha-dr",
+          title: "High availability and disaster recovery",
+          summary: "How much downtime and data loss you can afford, and what it costs to avoid.",
+          minutes: 30,
+          signature:
+            "Pick a recovery strategy, from backups to active-active in two regions, then fail a region and see the downtime, data lost and monthly cost",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "RTO and RPO",
+            "Backup and restore, pilot light, warm standby, active-active",
+            "Testing recovery",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["regions-responsibility", "storage-databases"],
+          plain:
+            "Two numbers drive the design: how long you can be down and how much recent data you can lose. Tighter answers mean copies in more places running all the time, which costs more.",
+        },
+        {
+          slug: "cost-finops",
+          title: "Cost and FinOps",
+          summary: "Pricing models, commitments and spot capacity, tags, and bill shock.",
+          minutes: 30,
+          signature:
+            "Price a workload with on-demand, committed and spot capacity using dated list prices, then find the idle and egress costs hiding in a real-shaped bill",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "On-demand, committed-use and spot pricing",
+            "Tagging and showback",
+            "Common sources of waste",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["vms-containers-functions"],
+          plain:
+            "Cloud bills grow quietly: forgotten servers, oversized machines and data moving between places. FinOps is the habit of making costs visible to the teams who cause them, and buying capacity the cheapest sensible way.",
+        },
+        {
+          slug: "well-architected",
+          title: "Well-architected reviews",
+          summary: "The pillars the three clouds share, used to review a design.",
+          minutes: 25,
+          signature:
+            "Review an architecture diagram against the pillars and find what's missing: no backups tested, one zone, admin keys in code, no budget alerts",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "The well-architected pillars",
+            "Reviewing a design",
+            "Trade-offs between pillars",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["ha-dr", "cost-finops"],
+          plain:
+            "AWS, Azure and Google Cloud each publish a framework of good practice grouped into pillars such as security, reliability and cost. Walking a design through them is a quick way to find its weak spots.",
+        },
+      ],
+    },
+    {
+      slug: "in-practice",
+      title: "In practice",
+      summary: "Running in India, moving workloads to the cloud, and a capstone design.",
+      modules: [
+        {
+          slug: "cloud-india",
+          title: "Cloud in India and government",
+          summary: "Data residency, empanelment and the rules public projects work under.",
+          minutes: 25,
+          signature:
+            "Check a government project's design service by service: is the region in India, is the service empanelled, does the data stay here?",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Cloud regions in India",
+            "MeitY empanelment and government cloud",
+            "Data residency and the DPDP Act",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["regions-responsibility", "guardrails"],
+          plain:
+            "Public-sector projects in India often have to keep data in the country and use approved cloud services. Having a region in India isn't enough on its own: every service in the design has to be checked.",
+        },
+        {
+          slug: "migration",
+          title: "Migration: the 7 Rs",
+          summary: "Rehost, replatform, refactor and the rest, for a real-shaped portfolio.",
+          minutes: 25,
+          signature:
+            "Decide the fate of ten applications, from a COTS payroll system to a mainframe batch job, and see the cost, risk and time of each choice",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "The 7 Rs of migration",
+            "Assessing an application portfolio",
+            "Waves and cut-over",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["vms-containers-functions", "storage-databases"],
+          plain:
+            "Not every application should move to the cloud the same way, and some shouldn't move at all. Teams sort each one: move it as is, tweak it, rebuild it, replace it with a service, keep it, or retire it.",
+        },
+        {
+          slug: "capstone-landing-zone",
+          title: "Capstone: a foundation for a state department",
+          summary: "Design a landing zone and app platform, then review it.",
+          minutes: 40,
+          signature:
+            "Make the choices for a state department's cloud foundation (hierarchy, network, identity, guardrails, recovery, cost) and review the result against the pillars and India's rules",
+          formats: ["branching-scenario", "build-connect", "checkpoint"],
+          concepts: ["Designing a cloud foundation end to end"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["landing-zones", "ha-dr", "cloud-india"],
+          plain:
+            "Everything in this track in one design. You'll make each choice for a realistic public-sector organisation, then check your design the way a reviewer would.",
+        },
+      ],
+    },
+  ],
+};
+
 /** A small end-to-end module that exercises the toolkit and Module SDK. */
 const playground: Track = {
   slug: "playground",
@@ -3420,6 +3889,7 @@ export const tracks: Track[] = [
   llmFoundations,
   agileScrum,
   ragSystems,
+  cloudArchitecture,
   playground,
 ];
 
@@ -3494,10 +3964,11 @@ export const categories: Category[] = [
     summary: "Run software reliably on modern infrastructure.",
     description:
       "The infrastructure under every product: cloud building blocks, containers, delivery pipelines and the signals that tell you what's happening.",
-    accent: "neutral",
+    accent: "stratus",
     tracks: [
       {
         title: "Cloud Architecture",
+        slug: "cloud-architecture",
         blurb: "Networks, identity and landing zones across the big clouds.",
       },
       { title: "Kubernetes", blurb: "Pods, controllers and scheduling, taken apart." },
