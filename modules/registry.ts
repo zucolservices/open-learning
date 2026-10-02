@@ -195,4 +195,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "kubernetes/health-checks": () => import("./kubernetes/health-checks"),
   "kubernetes/workload-controllers": () => import("./kubernetes/workload-controllers"),
   "kubernetes/services-dns": () => import("./kubernetes/services-dns"),
+  "kubernetes/ingress-gateway": () => import("./kubernetes/ingress-gateway"),
 };

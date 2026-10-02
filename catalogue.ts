@@ -4694,11 +4694,12 @@ const kubernetes: Track = {
             "Gateway API roles and routes",
             "TLS at the edge",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["services-dns"],
           plain:
             "Services work inside the cluster. To let the internet in, you put a router at the edge that sends each request to the right Service based on its hostname and path. Gateway API is the newer, richer way to describe that.",
+          terms: ["ingress", "ingress-controller", "gateway-api", "service"],
         },
         {
           slug: "network-policies",

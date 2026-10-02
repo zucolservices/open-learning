@@ -224,4 +224,22 @@ export const kubernetes = {
       "The list of ready pod addresses behind a Service, kept up to date by a controller as pods come, go or fail readiness checks (up to 100 endpoints per slice by default). It replaced the older Endpoints API, deprecated in v1.33.",
     module: "services-dns",
   },
+  ingress: {
+    term: "Ingress",
+    definition:
+      "An older Kubernetes API for routing outside HTTP and HTTPS traffic to Services by hostname and path, with TLS. It needs an ingress controller to work, and the API is now frozen: the project recommends Gateway API instead.",
+    module: "ingress-gateway",
+  },
+  "ingress-controller": {
+    term: "Ingress controller",
+    definition:
+      "The software that actually runs the router for Ingress objects, such as an Envoy-, HAProxy- or NGINX-based proxy. The community Ingress NGINX controller was retired in March 2026.",
+    module: "ingress-gateway",
+  },
+  "gateway-api": {
+    term: "Gateway API",
+    definition:
+      "The successor to Ingress (generally available since 2023): GatewayClass (which product), Gateway (the shared entry point, owned by the platform team) and routes such as HTTPRoute (owned by app teams), with header matching and weighted traffic splitting built in.",
+    module: "ingress-gateway",
+  },
 } satisfies Record<string, GlossaryEntry>;
