@@ -16,6 +16,8 @@ import { KubernetesScene } from "@/components/home/kubernetes-scene";
 import { KubernetesTaste } from "@/components/home/kubernetes-taste";
 import { CiCdScene } from "@/components/home/ci-cd-scene";
 import { CiCdTaste } from "@/components/home/ci-cd-taste";
+import { ObservabilityScene } from "@/components/home/observability-scene";
+import { ObservabilityTaste } from "@/components/home/observability-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -96,5 +98,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: CiCdTaste,
     tasteCaption:
       "A taste of module 13: release a buggy version five ways and see how many requests fail.",
+  },
+  observability: {
+    Scene: ObservabilityScene,
+    sceneCaption:
+      "Telemetry from a payments platform, from the services that emit it to the person who gets paged. Watch the tour, or click any part.",
+    Taste: ObservabilityTaste,
+    tasteCaption:
+      "A taste of module 15: three alert rules over the same week. Which one wakes people only for real problems?",
   },
 };

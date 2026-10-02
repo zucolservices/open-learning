@@ -12,6 +12,8 @@ import { kubernetesArtA } from "./art/kubernetes-a";
 import { kubernetesArtB } from "./art/kubernetes-b";
 import { ciCdArtA } from "./art/ci-cd-a";
 import { ciCdArtB } from "./art/ci-cd-b";
+import { observabilityArtA } from "./art/observability-a";
+import { observabilityArtB } from "./art/observability-b";
 
 /**
  * One small illustration per module (viewBox 160 × 100), drawn with the
@@ -1043,6 +1045,8 @@ const all: ArtMap = {
   ...kubernetesArtB,
   ...ciCdArtA,
   ...ciCdArtB,
+  ...observabilityArtA,
+  ...observabilityArtB,
 };
 
 /** Art is keyed by slug; a "track/slug" key wins, for slugs used in more than one track. */
