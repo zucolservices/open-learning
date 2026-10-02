@@ -98,4 +98,34 @@ export const kubernetes = {
       "Checks the API server runs on a request after authentication and authorisation, before storing it: mutating steps can change the object (add defaults), validating steps can reject it against policy.",
     module: "cluster-anatomy",
   },
+  pod: {
+    term: "Pod",
+    definition:
+      "The smallest unit Kubernetes runs: one or more containers that share an IP address and can share volumes, scheduled together onto one node. Pods are disposable; controllers replace them rather than moving them.",
+    module: "pods",
+  },
+  "init-container": {
+    term: "Init container",
+    definition:
+      "A container in a pod that runs to completion before the app containers start, one after another, for setup work such as database migrations or waiting for a dependency.",
+    module: "pods",
+  },
+  "sidecar-container": {
+    term: "Sidecar container",
+    definition:
+      "A helper container that starts before the main app and keeps running alongside it in the same pod, such as a log shipper or a service-mesh proxy. Native sidecars (init containers with restartPolicy: Always) are stable since Kubernetes 1.33.",
+    module: "pods",
+  },
+  "pod-phase": {
+    term: "Pod phase",
+    definition:
+      "A one-word summary of where a pod is in its life: Pending, Running, Succeeded, Failed or Unknown. CrashLoopBackOff is a container status shown by kubectl, not a phase.",
+    module: "pods",
+  },
+  "restart-policy": {
+    term: "Restart policy",
+    definition:
+      "Whether the kubelet restarts a pod's containers when they exit: Always (the default), OnFailure or Never. Repeated crashes are restarted with a growing delay, from 10 seconds up to five minutes (CrashLoopBackOff).",
+    module: "pods",
+  },
 } satisfies Record<string, GlossaryEntry>;

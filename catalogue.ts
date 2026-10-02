@@ -4580,11 +4580,20 @@ const kubernetes: Track = {
             "Init containers and sidecars",
             "Pod phases and restarts",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["cluster-anatomy"],
           plain:
             "Kubernetes doesn't run containers directly; it runs pods. A pod is one or more tightly coupled containers that share an IP address and can share files. Pods are disposable: when one dies, a new one replaces it.",
+          terms: [
+            "pod",
+            "container",
+            "init-container",
+            "sidecar-container",
+            "pod-phase",
+            "restart-policy",
+            "kubelet",
+          ],
         },
         {
           slug: "deployments",
