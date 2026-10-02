@@ -91,4 +91,34 @@ export const streamingData = {
       "How far a consumer group is behind on a partition: the newest offset minus the committed offset. Growing lag means events arrive faster than they're processed.",
     module: "consumer-groups",
   },
+  "partition-leader": {
+    term: "Partition leader",
+    definition:
+      "The broker that handles all writes (and by default reads) for a partition. Follower brokers copy from it; if it fails, an in-sync follower takes over.",
+    module: "replication-durability",
+  },
+  "in-sync-replicas": {
+    term: "In-sync replicas (ISR)",
+    definition:
+      "The leader plus the followers that are keeping up with it (in Kafka, within 30 seconds by default). Only they can be elected leader without losing committed data.",
+    module: "replication-durability",
+  },
+  acks: {
+    term: "acks",
+    definition:
+      "The producer setting for when a write counts as done: 0 (don't wait), 1 (the leader has it) or all (every in-sync replica has it). Kafka's Java producer defaults to all since version 3.0.",
+    module: "replication-durability",
+  },
+  "min-insync-replicas": {
+    term: "min.insync.replicas",
+    definition:
+      "The fewest in-sync replicas a partition must have to accept acks=all writes. Below it, writes are refused with an error instead of being risked. Recommended: 2 with a replication factor of 3.",
+    module: "replication-durability",
+  },
+  "unclean-leader-election": {
+    term: "Unclean leader election",
+    definition:
+      "Letting a replica that has fallen behind become leader when no in-sync replica is left. The partition comes back sooner but loses the data that replica never copied. Off by default in Kafka (on by default in Amazon MSK without tiered storage).",
+    module: "replication-durability",
+  },
 } satisfies Record<string, GlossaryEntry>;

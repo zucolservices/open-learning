@@ -168,4 +168,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "streaming-data/events-logs-topics": () => import("./streaming-data/events-logs-topics"),
   "streaming-data/partitions-ordering": () => import("./streaming-data/partitions-ordering"),
   "streaming-data/consumer-groups": () => import("./streaming-data/consumer-groups"),
+  "streaming-data/replication-durability": () => import("./streaming-data/replication-durability"),
 };

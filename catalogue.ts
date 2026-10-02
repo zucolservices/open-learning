@@ -4028,7 +4028,15 @@ const streamingData: Track = {
             "acks and min.insync.replicas",
             "Failover and unclean leader election",
           ],
-          status: "planned",
+          status: "live",
+          terms: [
+            "replica",
+            "partition-leader",
+            "in-sync-replicas",
+            "acks",
+            "min-insync-replicas",
+            "unclean-leader-election",
+          ],
           level: "core",
           prerequisites: ["partitions-ordering"],
           plain:
