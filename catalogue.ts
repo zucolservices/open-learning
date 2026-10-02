@@ -5310,11 +5310,12 @@ const ciCd: Track = {
             "Config per environment, the same artifact everywhere",
             "Preview environments per pull request",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["artifacts-versioning"],
           plain:
             "Environments are separate copies of the system where a change is tried before real users see it. The code stays the same as it moves along; only the settings differ. The closer test environments are to production, the fewer surprises.",
+          terms: ["environment", "staging", "promotion", "preview-environment"],
         },
         {
           slug: "iac-pipelines",

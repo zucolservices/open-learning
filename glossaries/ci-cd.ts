@@ -290,4 +290,22 @@ export const ciCd = {
       "A SHA-256 hash that identifies an image by its contents (sha256:…). Unlike a tag, which can be moved to another image, a digest always means exactly the same bytes.",
     module: "container-builds",
   },
+  environment: {
+    term: "Environment",
+    definition:
+      "A complete, separate copy of a system (servers, database, settings) where software runs: for example test, staging and production. The same artifact moves between them; only configuration differs.",
+    module: "environments-promotion",
+  },
+  staging: {
+    term: "Staging",
+    definition:
+      "An environment set up as much like production as possible, used for a final check of a release before real users get it.",
+    module: "environments-promotion",
+  },
+  "preview-environment": {
+    term: "Preview environment",
+    definition:
+      "A temporary copy of the app created automatically for one pull request, at its own address, so reviewers can try the change before merging. It is deleted when the pull request closes.",
+    module: "environments-promotion",
+  },
 } satisfies Record<string, GlossaryEntry>;
