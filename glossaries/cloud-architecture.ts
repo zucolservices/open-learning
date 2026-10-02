@@ -404,4 +404,28 @@ export const cloudArchitecture = {
       "Deliberately injecting failures (killing servers, adding latency, cutting a zone) in a controlled way to check a system copes. Netflix's Chaos Monkey (2010); AWS Fault Injection Service, Azure Chaos Studio.",
     module: "ha-dr",
   },
+  "on-demand": {
+    term: "On-demand pricing",
+    definition:
+      "Paying the list price per second or hour for exactly what runs, with no commitment. Flexible, and the most expensive per hour.",
+    module: "cost-finops",
+  },
+  "commitment-discount": {
+    term: "Commitment discount",
+    definition:
+      "A lower hourly rate in return for promising to spend a set amount for 1 or 3 years, billed whether you use it or not: AWS Savings Plans and Reserved Instances, Azure Reservations and savings plan, Google committed use discounts.",
+    module: "cost-finops",
+  },
+  "spot-capacity": {
+    term: "Spot capacity",
+    definition:
+      "The cloud's spare servers sold at a deep discount, which it can take back at short notice (2 minutes on AWS, 30 seconds on Azure and Google). Suits work that can restart.",
+    module: "cost-finops",
+  },
+  finops: {
+    term: "FinOps",
+    definition:
+      "A practice where engineering, finance and business share responsibility for technology spend, making costs visible to the teams that cause them. The FinOps Foundation describes three phases: Inform, Optimize, Operate.",
+    module: "cost-finops",
+  },
 } satisfies Record<string, GlossaryEntry>;

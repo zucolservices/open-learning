@@ -158,4 +158,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
     import("./cloud-architecture/infrastructure-as-code"),
   "cloud-architecture/storage-databases": () => import("./cloud-architecture/storage-databases"),
   "cloud-architecture/ha-dr": () => import("./cloud-architecture/ha-dr"),
+  "cloud-architecture/cost-finops": () => import("./cloud-architecture/cost-finops"),
 };

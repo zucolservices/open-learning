@@ -3809,7 +3809,8 @@ const cloudArchitecture: Track = {
             "Tagging and showback",
             "Common sources of waste",
           ],
-          status: "planned",
+          status: "live",
+          terms: ["on-demand", "commitment-discount", "spot-capacity", "finops"],
           level: "applied",
           prerequisites: ["vms-containers-functions"],
           plain:
