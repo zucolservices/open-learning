@@ -5429,11 +5429,12 @@ const ciCd: Track = {
             "Expand, migrate, contract",
             "Migrations as versioned, automated steps",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["release-strategies"],
           plain:
             "During a release, the old and new versions of an app run side by side against the same database. A schema change that suits only the new version breaks the old one. The fix is to change the database in small steps that both versions can live with.",
+          terms: ["schema-migration", "expand-contract", "backfill", "rollback"],
         },
         {
           slug: "rollbacks",

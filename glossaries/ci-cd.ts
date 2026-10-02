@@ -362,4 +362,22 @@ export const ciCd = {
       "Old feature flags left in the code after they've done their job. Each one doubles the combinations the code can be in and can be switched by mistake; remove release toggles once a feature is fully launched.",
     module: "feature-flags",
   },
+  "schema-migration": {
+    term: "Schema migration",
+    definition:
+      "A versioned script that changes a database's structure (tables, columns, indexes), applied automatically by a tool such as Flyway, Liquibase, Alembic or Rails, which records which scripts have run.",
+    module: "schema-migrations",
+  },
+  "expand-contract": {
+    term: "Expand and contract (parallel change)",
+    definition:
+      "Making a breaking change in safe steps: add the new form alongside the old (expand), move data and code over (migrate), then remove the old form (contract). Old and new code keep working throughout.",
+    module: "schema-migrations",
+  },
+  backfill: {
+    term: "Backfill",
+    definition:
+      "Filling a new column or table with data for rows that already exist, usually in small batches in the background so the database stays responsive.",
+    module: "schema-migrations",
+  },
 } satisfies Record<string, GlossaryEntry>;
