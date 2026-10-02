@@ -198,4 +198,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "kubernetes/ingress-gateway": () => import("./kubernetes/ingress-gateway"),
   "kubernetes/network-policies": () => import("./kubernetes/network-policies"),
   "kubernetes/config-secrets": () => import("./kubernetes/config-secrets"),
+  "kubernetes/persistent-storage": () => import("./kubernetes/persistent-storage"),
 };

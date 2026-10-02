@@ -278,4 +278,34 @@ export const kubernetes = {
       "Encrypting data where it is stored. For Kubernetes Secrets, the API server can encrypt them before writing to etcd, ideally with a cloud key management service (KMS v2, stable since 1.29); managed services increasingly do this by default.",
     module: "config-secrets",
   },
+  "persistent-volume": {
+    term: "PersistentVolume (PV)",
+    definition:
+      "A piece of storage in the cluster, usually a cloud disk or file share, whose life is independent of any pod. It is created by an administrator or, more often, dynamically for a claim.",
+    module: "persistent-storage",
+  },
+  pvc: {
+    term: "PersistentVolumeClaim (PVC)",
+    definition:
+      "A request for storage by size, access mode and StorageClass. Kubernetes binds it one-to-one to a PersistentVolume, provisioning one if needed, and pods mount the claim rather than a specific disk.",
+    module: "persistent-storage",
+  },
+  storageclass: {
+    term: "StorageClass",
+    definition:
+      "Describes a kind of storage and how to create it: which CSI driver provisions it, its parameters, the reclaim policy (Delete by default) and when to bind (WaitForFirstConsumer creates the disk in the zone where the pod lands).",
+    module: "persistent-storage",
+  },
+  csi: {
+    term: "CSI (Container Storage Interface)",
+    definition:
+      "The standard plugin interface storage vendors use to provide volumes to Kubernetes, such as the AWS EBS, Google Persistent Disk and Azure Disk CSI drivers. It replaced the old built-in cloud disk plugins.",
+    module: "persistent-storage",
+  },
+  emptydir: {
+    term: "emptyDir",
+    definition:
+      "A temporary volume created when a pod lands on a node and deleted when the pod leaves it. It survives container restarts and can be shared by the pod's containers or kept in memory.",
+    module: "persistent-storage",
+  },
 } satisfies Record<string, GlossaryEntry>;

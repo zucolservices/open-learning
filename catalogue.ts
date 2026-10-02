@@ -4760,11 +4760,12 @@ const kubernetes: Track = {
             "StorageClasses and dynamic provisioning",
             "CSI drivers and access modes",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["config-secrets"],
           plain:
             "A container's files vanish when it restarts. For data that must survive, a pod claims a persistent volume, usually a cloud disk, which Kubernetes attaches wherever the pod runs.",
+          terms: ["persistent-volume", "pvc", "storageclass", "csi", "emptydir"],
         },
       ],
     },
