@@ -92,4 +92,10 @@ export const cloudArchitecture = {
       "The extra wait when a function or scale-to-zero container has no ready copy and the provider must start one. AWS says cold starts usually affect under 1% of Lambda calls and last from under 100 ms to over a second.",
     module: "vms-containers-functions",
   },
+  "scaling-group": {
+    term: "Scaling group",
+    definition:
+      "A set of identical servers that the cloud keeps between a minimum and a maximum size, adding or removing servers by rules such as a target CPU level. AWS calls it an Auto Scaling group, Azure a virtual machine scale set, Google a managed instance group.",
+    module: "autoscaling-load-balancing",
+  },
 } satisfies Record<string, GlossaryEntry>;

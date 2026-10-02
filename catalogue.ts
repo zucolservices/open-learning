@@ -3487,11 +3487,12 @@ const cloudArchitecture: Track = {
             "Health checks",
             "Layer 4 vs layer 7 load balancers",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["vms-containers-functions"],
           plain:
             "When traffic rises, the cloud can start more servers automatically and stop them when it falls. A load balancer spreads requests across whichever servers are healthy right now.",
+          terms: ["autoscaling", "scaling-group", "load-balancer", "health-check"],
         },
       ],
     },

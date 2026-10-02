@@ -141,4 +141,6 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
     import("./cloud-architecture/regions-responsibility"),
   "cloud-architecture/vms-containers-functions": () =>
     import("./cloud-architecture/vms-containers-functions"),
+  "cloud-architecture/autoscaling-load-balancing": () =>
+    import("./cloud-architecture/autoscaling-load-balancing"),
 };
