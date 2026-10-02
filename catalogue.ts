@@ -5900,11 +5900,12 @@ const observability: Track = {
             "Multi-window, multi-burn-rate alerts",
             "Alert fatigue and on-call health",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["error-budgets"],
           plain:
             "An alert should wake someone only when users are being hurt and a person needs to act. Alerting on how fast the error budget is burning catches real problems quickly without paging for every blip.",
+          terms: ["burn-rate", "burn-rate-alert", "alert-fatigue", "slo", "golden-signals"],
         },
         {
           slug: "dashboards",

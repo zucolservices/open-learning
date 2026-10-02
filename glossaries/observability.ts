@@ -278,4 +278,16 @@ export const observability = {
       "An agreement, made in advance, about what a team does when its error budget runs low or out, such as pausing risky releases and prioritising reliability fixes.",
     module: "error-budgets",
   },
+  "alert-fatigue": {
+    term: "Alert fatigue",
+    definition:
+      "What happens when people get too many alerts, especially false or unactionable ones: they stop reacting quickly, and real problems get missed.",
+    module: "alerting",
+  },
+  "burn-rate-alert": {
+    term: "Burn-rate alert",
+    definition:
+      "An alert that fires when the error budget is being used up much faster than normal, checked over a long and a short window, so it catches real problems quickly without paging for brief blips.",
+    module: "alerting",
+  },
 } satisfies Record<string, GlossaryEntry>;
