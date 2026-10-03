@@ -63,4 +63,28 @@ export const apiDesign = {
       "Having the same effect whether a request is made once or many times. PUT and DELETE are idempotent; POST is not, which is why retrying a POST can create duplicates.",
     module: "idempotency",
   },
+  rest: {
+    term: "REST",
+    definition:
+      "Representational State Transfer: an API style organised around resources, each with its own URL, acted on with standard HTTP methods. Described by Roy Fielding in 2000; in everyday use it means resources, URLs and HTTP methods.",
+    module: "api-styles",
+  },
+  rpc: {
+    term: "RPC",
+    definition:
+      "Remote procedure call: an API style where the client calls a named function on another computer, with arguments, as if it were local. gRPC and JSON-RPC are examples.",
+    module: "api-styles",
+  },
+  graphql: {
+    term: "GraphQL",
+    definition:
+      "A query language for APIs, created at Facebook: the client sends a query naming exactly the fields it wants, usually to a single endpoint, and gets back just those.",
+    module: "graphql",
+  },
+  webhook: {
+    term: "Webhook",
+    definition:
+      "An HTTP request an API sends to a URL the client chose, to tell it something happened, such as a payment succeeding. The client doesn't have to keep asking.",
+    module: "webhooks",
+  },
 } satisfies Record<string, GlossaryEntry>;

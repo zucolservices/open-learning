@@ -6104,11 +6104,12 @@ const apiDesign: Track = {
             "Match six real integrations to REST, gRPC, GraphQL or webhooks and see the trade-offs",
           formats: ["animated-infographic", "build-connect", "checkpoint"],
           concepts: ["Resources vs procedures", "Query languages", "Push vs pull"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["http-basics"],
           plain:
             "There's more than one style of API. REST organises everything as resources with URLs, RPC calls named functions, GraphQL lets the client ask for exactly the fields it wants, and event-driven APIs push messages when something happens.",
+          terms: ["rest", "rpc", "graphql", "webhook", "api"],
         },
       ],
     },
