@@ -208,4 +208,23 @@ export const databaseInternals = {
       "The planner's guess of how many rows a step of a query will produce. When it's far from reality, the planner can choose a plan that is thousands of times slower.",
     module: "cost-optimiser",
   },
+  wal: {
+    term: "Write-ahead log (WAL)",
+    definition:
+      "A sequential log on disk where a database records every change before changing the data files. After a crash, replaying it restores committed work.",
+    analogy: "A shop's day book, written before the ledgers are updated.",
+    module: "wal-recovery",
+  },
+  checkpoint: {
+    term: "Checkpoint",
+    definition:
+      "A moment when a database has written all changed pages up to that point to disk, so crash recovery only needs to replay the log from there.",
+    module: "wal-recovery",
+  },
+  lsn: {
+    term: "Log sequence number (LSN)",
+    definition:
+      "A position in the write-ahead log that only ever increases, used to order changes and to track how far recovery or a replica has got.",
+    module: "wal-recovery",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -6707,11 +6707,12 @@ const databaseInternals: Track = {
             "Pull the power during a transfer with and without a write-ahead log, then replay the log",
           formats: ["simulation", "step-through", "checkpoint"],
           concepts: ["Write-ahead logging", "Checkpoints", "Crash recovery"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["buffer-pool"],
           plain:
             "Databases first write every change to a sequential log on disk, and only later update the data pages. After a crash, they replay the log to restore committed changes and undo unfinished ones.",
+          terms: ["wal", "checkpoint", "lsn", "durability", "dirty-page"],
         },
         {
           slug: "acid",
