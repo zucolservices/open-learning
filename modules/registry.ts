@@ -269,4 +269,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "api-design/realtime": () => import("./api-design/realtime"),
   "api-design/authentication": () => import("./api-design/authentication"),
   "api-design/api-security": () => import("./api-design/api-security"),
+  "api-design/rate-limits": () => import("./api-design/rate-limits"),
 };

@@ -6398,11 +6398,12 @@ const apiDesign: Track = {
             "Send traffic through a token bucket and a fixed window, and tell clients when to come back",
           formats: ["simulation", "checkpoint"],
           concepts: ["Limiting algorithms", "429 and Retry-After", "Quotas and fairness"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["methods-errors"],
           plain:
             "Rate limits stop one client from overwhelming an API or using more than its share. A good limit tells the client clearly that it was limited and when it may try again.",
+          terms: ["rate-limit", "token-bucket", "quota", "status-code"],
         },
         {
           slug: "api-performance",

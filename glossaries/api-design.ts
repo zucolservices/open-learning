@@ -256,4 +256,24 @@ export const apiDesign = {
       "Copying every field a client sends straight onto a stored object, so a caller can set fields they shouldn't, such as role or balance. Prevented by accepting only an allow-list of editable fields.",
     module: "api-security",
   },
+  "rate-limit": {
+    term: "Rate limit",
+    definition:
+      "A cap on how many requests a client may make in a period, such as 5,000 an hour. Requests over the limit are refused, usually with 429 Too Many Requests and a Retry-After header.",
+    module: "rate-limits",
+  },
+  "token-bucket": {
+    term: "Token bucket",
+    definition:
+      "A rate-limiting method: each client has a bucket of tokens that refills at a steady rate; each request spends one, and requests are refused when it's empty. Short bursts are allowed up to the bucket's size.",
+    analogy:
+      "A water tank filling slowly from the mains: you can run a bath fast, but not all day.",
+    module: "rate-limits",
+  },
+  quota: {
+    term: "Quota",
+    definition:
+      "A limit on how much of a service a client may use over a longer period or hold at once, such as calls per day or number of servers, often tied to a pricing plan.",
+    module: "rate-limits",
+  },
 } satisfies Record<string, GlossaryEntry>;
