@@ -147,4 +147,16 @@ export const apiDesign = {
       "A standard, machine-readable format (YAML or JSON) for describing an HTTP API: its paths, operations, parameters, data schemas and errors. Tools turn it into documentation, mock servers, tests and client code. Formerly called Swagger.",
     module: "openapi",
   },
+  "breaking-change": {
+    term: "Breaking change",
+    definition:
+      "A change to an API that makes some existing client stop working, such as renaming or removing a field, changing its type, adding a required input or tightening validation.",
+    module: "versioning",
+  },
+  "api-versioning": {
+    term: "API versioning",
+    definition:
+      "Labelling an API's contract with a version (in the path, a header or a parameter) so a new, incompatible version can run alongside the old one while clients move over.",
+    module: "versioning",
+  },
 } satisfies Record<string, GlossaryEntry>;

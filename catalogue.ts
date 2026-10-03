@@ -6244,11 +6244,12 @@ const apiDesign: Track = {
             "Versioning in the URL, header or date",
             "Tolerant readers",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["openapi"],
           plain:
             "Some changes to an API are harmless (adding a field) and some break every client (renaming one). Versioning lets old and new contracts live side by side while clients move over at their own pace.",
+          terms: ["breaking-change", "api-versioning", "api-contract"],
         },
         {
           slug: "deprecation",
