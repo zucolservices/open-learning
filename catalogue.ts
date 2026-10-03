@@ -6880,11 +6880,19 @@ const databaseInternals: Track = {
             "Compare how popular engines store rows, index data and handle concurrency, side by side",
           formats: ["animated-infographic", "checkpoint"],
           concepts: ["Storage engines", "Concurrency control", "Managed cloud databases"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["mvcc", "btrees"],
           plain:
             "Every database makes different choices about storage, indexing and concurrency. Knowing them explains why PostgreSQL needs vacuum, why SQLite is a single file, and what a managed cloud database changes.",
+          terms: [
+            "heap",
+            "clustered-index",
+            "undo-log",
+            "mvcc",
+            "managed-service",
+            "distributed-sql",
+          ],
         },
         {
           slug: "capstone-db",

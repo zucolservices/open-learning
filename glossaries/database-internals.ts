@@ -458,4 +458,10 @@ export const databaseInternals = {
       "A timestamp made of a physical part (close to wall-clock time) and a logical counter that orders events with the same physical time. Used by CockroachDB.",
     module: "distributed-sql",
   },
+  "clustered-index": {
+    term: "Clustered index",
+    definition:
+      "An index that holds the table's rows themselves, in key order, rather than pointers to them. In MySQL's InnoDB every table is stored as a clustered index on its primary key.",
+    module: "engines-compared",
+  },
 } satisfies Record<string, GlossaryEntry>;
