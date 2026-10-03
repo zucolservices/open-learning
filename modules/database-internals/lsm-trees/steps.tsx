@@ -211,7 +211,9 @@ export function ReadPath() {
               {s.bloom ? "✓ " : ""}Bloom filters
             </button>
           </div>
-          <p className="text-muted text-[10px]">The tree after the first 10 writes: a memtable, two L0 files, nothing in L1 yet.</p>
+          <p className="text-muted text-[10px]">
+            The tree after the first 10 writes: a memtable, two L0 files, nothing in L1 yet.
+          </p>
           <div className="flex flex-col gap-1">
             {r.steps.map((st, i) => (
               <motion.div

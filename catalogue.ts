@@ -6631,11 +6631,12 @@ const databaseInternals: Track = {
           signature: "Match six searches to hash, B-tree, inverted, spatial and vector indexes",
           formats: ["animated-infographic", "build-connect", "checkpoint"],
           concepts: ["Hash indexes", "Inverted indexes for text", "Vector and spatial indexes"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["btrees"],
           plain:
             "B-trees are great for exact values and ranges, but other questions need other structures: hash indexes for exact matches, inverted indexes for words in text, and vector indexes for finding similar items.",
+          terms: ["inverted-index", "vector-index", "btree", "index"],
         },
       ],
     },

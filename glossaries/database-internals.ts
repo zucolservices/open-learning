@@ -160,4 +160,16 @@ export const databaseInternals = {
       "A compact bit array that can say 'definitely not here' or 'maybe here' for a key, with a small rate of false 'maybes'. LSM trees use one per file to skip files that can't contain a key.",
     module: "lsm-trees",
   },
+  "inverted-index": {
+    term: "Inverted index",
+    definition:
+      "An index that lists every word (or element) and, for each, the documents or rows that contain it, like the index at the back of a book. Used for full-text search, arrays and JSON.",
+    module: "other-indexes",
+  },
+  "vector-index": {
+    term: "Vector index",
+    definition:
+      "An index for finding the stored vectors (lists of numbers that capture meaning) closest to a query vector. Approximate ones such as HNSW trade a little accuracy for much faster search.",
+    module: "other-indexes",
+  },
 } satisfies Record<string, GlossaryEntry>;
