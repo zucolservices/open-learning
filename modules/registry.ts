@@ -293,4 +293,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "database-internals/replication-internals": () => import("./database-internals/replication-internals"),
   "database-internals/distributed-sql": () => import("./database-internals/distributed-sql"),
   "database-internals/engines-compared": () => import("./database-internals/engines-compared"),
+  "database-internals/capstone-db": () => import("./database-internals/capstone-db"),
 };

@@ -464,4 +464,10 @@ export const databaseInternals = {
       "An index that holds the table's rows themselves, in key order, rather than pointers to them. In MySQL's InnoDB every table is stored as a clustered index on its primary key.",
     module: "engines-compared",
   },
+  "pg-stat-statements": {
+    term: "pg_stat_statements",
+    definition:
+      "A PostgreSQL extension that tracks planning and execution statistics for every normalised SQL statement, so you can see which queries use the most time. It must be loaded via shared_preload_libraries.",
+    module: "capstone-db",
+  },
 } satisfies Record<string, GlossaryEntry>;

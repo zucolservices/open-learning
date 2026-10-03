@@ -6903,11 +6903,12 @@ const databaseInternals: Track = {
             "A payments database slows down: read plans, statistics, locks and vacuum data to find and fix five problems",
           formats: ["branching-scenario", "fix-the-problem", "checkpoint"],
           concepts: ["Diagnosing database performance"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["cost-optimiser", "mvcc", "locking"],
           plain:
             "Everything in this track in one investigation. A busy database is slow, and you'll use plans, statistics and lock information to find out why and fix it.",
+          terms: ["pg-stat-statements", "xid-wraparound", "deadlock", "vacuum-pg"],
         },
       ],
     },
