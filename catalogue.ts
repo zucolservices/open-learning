@@ -6162,11 +6162,12 @@ const apiDesign: Track = {
             "Fix a payment response full of traps: floating-point money, ambiguous dates and mystery nulls",
           formats: ["fix-the-problem", "checkpoint"],
           concepts: ["Consistent naming", "Dates, money and IDs", "Nulls, enums and envelopes"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["resources-urls"],
           plain:
             "The data an API sends back is part of its contract. Small choices, like how money, dates and missing values are written, decide whether every client gets it right or each one has to guess.",
+          terms: ["json", "enum", "api-contract"],
         },
         {
           slug: "pagination",

@@ -117,4 +117,10 @@ export const apiDesign = {
       "A standard JSON format for HTTP API errors (RFC 9457), with fields such as type (a URL naming the kind of problem), title, status, detail and instance, served as application/problem+json.",
     module: "methods-errors",
   },
+  enum: {
+    term: "Enum",
+    definition:
+      "A field that may only hold one of a fixed list of values, such as a payment status of pending, succeeded or failed. New values may be added later, so clients should handle ones they don't recognise.",
+    module: "payload-design",
+  },
 } satisfies Record<string, GlossaryEntry>;
