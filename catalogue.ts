@@ -6446,11 +6446,12 @@ const apiDesign: Track = {
             "Design a parcel-tracking API, then face a mobile app release, a partner's retry storm, a breaking change and a security report",
           formats: ["branching-scenario", "build-connect", "checkpoint"],
           concepts: ["Designing an API end to end"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["versioning", "idempotency", "api-security"],
           plain:
             "Everything in this track in one design. You'll make the key choices for a parcel-tracking API, then see how they hold up over a year of real use.",
+          terms: ["api", "api-contract", "idempotency-key", "bola", "breaking-change"],
         },
       ],
     },

@@ -272,4 +272,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "api-design/rate-limits": () => import("./api-design/rate-limits"),
   "api-design/api-performance": () => import("./api-design/api-performance"),
   "api-design/gateways-dx": () => import("./api-design/gateways-dx"),
+  "api-design/capstone-api": () => import("./api-design/capstone-api"),
 };
