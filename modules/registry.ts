@@ -262,4 +262,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "api-design/idempotency": () => import("./api-design/idempotency"),
   "api-design/openapi": () => import("./api-design/openapi"),
   "api-design/versioning": () => import("./api-design/versioning"),
+  "api-design/deprecation": () => import("./api-design/deprecation"),
 };

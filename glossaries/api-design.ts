@@ -159,4 +159,16 @@ export const apiDesign = {
       "Labelling an API's contract with a version (in the path, a header or a parameter) so a new, incompatible version can run alongside the old one while clients move over.",
     module: "versioning",
   },
+  deprecation: {
+    term: "Deprecation",
+    definition:
+      "Announcing that part of an API is going away and clients should move off it. A deprecated feature still works; it stops only at the sunset date.",
+    module: "deprecation",
+  },
+  sunset: {
+    term: "Sunset",
+    definition:
+      "The date a deprecated API or version stops working. The Sunset HTTP header (RFC 8594) tells clients when it will happen.",
+    module: "deprecation",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -6260,11 +6260,12 @@ const apiDesign: Track = {
             "Run a twelve-month sunset for an old API version and see which clients you'd strand",
           formats: ["simulation", "checkpoint"],
           concepts: ["Deprecation and Sunset headers", "Usage tracking", "Communicating change"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["versioning"],
           plain:
             "Old versions can't live forever, but switching them off suddenly breaks people's software. A good retirement announces the date early, signals it in the API itself, tracks who still calls it, and helps them move.",
+          terms: ["deprecation", "sunset", "api-versioning", "breaking-change"],
         },
       ],
     },
