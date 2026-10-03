@@ -6525,11 +6525,12 @@ const databaseInternals: Track = {
             "Insert, update and delete rows in a slotted page and watch free space, pointers and dead rows change",
           formats: ["simulation", "checkpoint"],
           concepts: ["Slotted pages", "Row identifiers", "Large values and free space"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["storage-hierarchy"],
           plain:
             "A table is stored as a file of fixed-size pages. Each page holds a small directory of pointers at the front and the rows themselves packed from the back, so rows can move within a page without anything else changing.",
+          terms: ["page", "slotted-page", "ctid", "heap"],
         },
         {
           slug: "row-vs-column",

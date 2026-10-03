@@ -45,4 +45,22 @@ export const databaseInternals = {
       "An operating system call that forces a file's buffered changes out to the storage device and waits until the device confirms, so they survive a crash.",
     module: "storage-hierarchy",
   },
+  "slotted-page": {
+    term: "Slotted page",
+    definition:
+      "The usual layout of a database page: a small array of pointers (slots) at the front and the rows packed from the back, so rows can move within the page while their slot numbers stay the same.",
+    module: "pages-rows",
+  },
+  ctid: {
+    term: "ctid",
+    definition:
+      "PostgreSQL's physical address for a row version: its page number and slot number, such as (12,4). It changes when the row is updated, so it can't be used as a permanent ID.",
+    module: "pages-rows",
+  },
+  heap: {
+    term: "Heap (table storage)",
+    definition:
+      "Storing a table's rows in whichever page has room, in no particular order, as PostgreSQL does. Indexes then point to each row's page and slot.",
+    module: "pages-rows",
+  },
 } satisfies Record<string, GlossaryEntry>;

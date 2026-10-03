@@ -275,4 +275,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "api-design/capstone-api": () => import("./api-design/capstone-api"),
   "database-internals/query-journey": () => import("./database-internals/query-journey"),
   "database-internals/storage-hierarchy": () => import("./database-internals/storage-hierarchy"),
+  "database-internals/pages-rows": () => import("./database-internals/pages-rows"),
 };
