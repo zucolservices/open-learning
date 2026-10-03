@@ -279,4 +279,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "database-internals/row-vs-column": () => import("./database-internals/row-vs-column"),
   "database-internals/buffer-pool": () => import("./database-internals/buffer-pool"),
   "database-internals/btrees": () => import("./database-internals/btrees"),
+  "database-internals/using-indexes": () => import("./database-internals/using-indexes"),
 };

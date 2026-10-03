@@ -6600,11 +6600,12 @@ const databaseInternals: Track = {
             "Composite index column order",
             "Covering indexes and write cost",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["btrees"],
           plain:
             "An index only helps if the database decides it's cheaper than reading the table. Which columns it covers, in which order, and how many rows match all decide whether it's used, and every index slows down writes.",
+          terms: ["composite-index", "covering-index", "selectivity", "index"],
         },
         {
           slug: "lsm-trees",

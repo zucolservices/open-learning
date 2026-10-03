@@ -112,4 +112,22 @@ export const databaseInternals = {
       "What happens when a B-tree page is full and a new key must go in: part of its keys move to a new page and the parent gets a pointer to it. A split of the root adds a level to the tree.",
     module: "btrees",
   },
+  "composite-index": {
+    term: "Composite index",
+    definition:
+      "An index on several columns, sorted by the first column, then the second, and so on. It helps queries that filter on its leading columns, like a phone book sorted by surname then first name.",
+    module: "using-indexes",
+  },
+  "covering-index": {
+    term: "Covering index",
+    definition:
+      "An index that contains every column a query needs, so the database can answer from the index alone (an index-only scan) without reading the table.",
+    module: "using-indexes",
+  },
+  selectivity: {
+    term: "Selectivity",
+    definition:
+      "The share of rows a condition matches. A selective condition matches few rows and suits an index; one matching most of the table is cheaper to answer with a full scan.",
+    module: "using-indexes",
+  },
 } satisfies Record<string, GlossaryEntry>;
