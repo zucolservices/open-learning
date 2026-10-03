@@ -6541,11 +6541,12 @@ const databaseInternals: Track = {
             "Run a checkout and a monthly report against row and column layouts and count the bytes each reads",
           formats: ["simulation", "checkpoint"],
           concepts: ["Row vs column layout", "OLTP vs analytics", "Compression"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["pages-rows"],
           plain:
             "A row store keeps each record together, which is ideal for fetching or updating one order. A column store keeps each column together, which is ideal for adding up one column across millions of rows.",
+          terms: ["row-store", "column-store", "oltp", "page"],
         },
         {
           slug: "buffer-pool",

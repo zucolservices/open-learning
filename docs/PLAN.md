@@ -533,7 +533,7 @@ Architecture area, third track (started 2026-10-04). 21 modules in 6 chapters, a
 | 4i. CI/CD                  | Platform & cloud, third track, 21 modules                                               | Live: all 21 modules (2026-10-03)                                       |
 | 4j. Observability          | Platform & cloud, fourth track, 21 modules                                              | Live: all 21 modules (2026-10-03)                                       |
 | 4k. API Design             | Architecture, second track, 21 modules                                                  | Live: all 21 modules (2026-10-04)                                       |
-| 4l. Database Internals     | Architecture, third track, 21 modules                                                   | In progress: 3 of 21 modules                                            |
+| 4l. Database Internals     | Architecture, third track, 21 modules                                                   | In progress: 4 of 21 modules                                            |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

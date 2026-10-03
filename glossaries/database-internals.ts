@@ -63,4 +63,22 @@ export const databaseInternals = {
       "Storing a table's rows in whichever page has room, in no particular order, as PostgreSQL does. Indexes then point to each row's page and slot.",
     module: "pages-rows",
   },
+  "row-store": {
+    term: "Row store",
+    definition:
+      "A database that stores all the columns of a record together, so reading or writing one whole record touches one place. Suited to transactional work; PostgreSQL and MySQL are row stores.",
+    module: "row-vs-column",
+  },
+  "column-store": {
+    term: "Column store",
+    definition:
+      "A database that stores each column's values together, so a query reading a few columns over many rows reads only those columns, and similar values compress well. Suited to analytics.",
+    module: "row-vs-column",
+  },
+  oltp: {
+    term: "OLTP",
+    definition:
+      "Online transaction processing: workloads of many small, fast reads and writes of individual records, like placing orders or making payments. Analytics (OLAP) is the opposite: big scans and summaries.",
+    module: "row-vs-column",
+  },
 } satisfies Record<string, GlossaryEntry>;
