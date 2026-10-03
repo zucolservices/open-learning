@@ -6088,11 +6088,12 @@ const apiDesign: Track = {
           signature: "Build an HTTP request piece by piece and watch the server's response change",
           formats: ["step-through", "checkpoint"],
           concepts: ["Request and response", "Methods, status codes, headers", "Statelessness"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["what-is-an-api"],
           plain:
             "Most APIs on the web travel over HTTP, the same protocol your browser uses. A request names a method (like GET or POST), a path and some headers; the response comes back with a status code, headers and usually a body.",
+          terms: ["http", "http-method", "http-header", "status-code", "safe-method", "idempotent"],
         },
         {
           slug: "api-styles",

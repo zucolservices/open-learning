@@ -253,4 +253,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "observability/observability-cost": () => import("./observability/observability-cost"),
   "observability/capstone-observability": () => import("./observability/capstone-observability"),
   "api-design/what-is-an-api": () => import("./api-design/what-is-an-api"),
+  "api-design/http-basics": () => import("./api-design/http-basics"),
 };
