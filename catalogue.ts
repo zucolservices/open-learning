@@ -6502,11 +6502,12 @@ const databaseInternals: Track = {
             "Scale the latency ladder to human time, then see why reading a whole page costs the same as reading one row",
           formats: ["animated-infographic", "simulation", "checkpoint"],
           concepts: ["The latency ladder", "Pages and blocks", "Durability needs storage"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["query-journey"],
           plain:
             "Memory is fast but forgets everything when the power goes; SSDs and disks remember but are thousands of times slower. Databases are built around this gap: they read and write whole pages and keep the busy ones in memory.",
+          terms: ["page", "durability", "fsync", "buffer-pool"],
         },
       ],
     },

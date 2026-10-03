@@ -33,4 +33,16 @@ export const databaseInternals = {
       "A separate structure that lets a database find rows by a column's value without reading the whole table, like the index at the back of a book. It speeds up reads but adds work to every write.",
     module: "btrees",
   },
+  durability: {
+    term: "Durability",
+    definition:
+      "The promise that once a database says a change is saved, it survives crashes and power cuts, which means it has reached storage that doesn't forget, not just memory.",
+    module: "storage-hierarchy",
+  },
+  fsync: {
+    term: "fsync",
+    definition:
+      "An operating system call that forces a file's buffered changes out to the storage device and waits until the device confirms, so they survive a crash.",
+    module: "storage-hierarchy",
+  },
 } satisfies Record<string, GlossaryEntry>;
