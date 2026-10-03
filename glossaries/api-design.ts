@@ -244,4 +244,16 @@ export const apiDesign = {
       "JSON Web Token (RFC 7519): a compact token of base64url-encoded JSON claims, such as issuer, subject, audience and expiry, usually signed. Anyone can read a signed JWT; the signature only stops changes.",
     module: "authentication",
   },
+  bola: {
+    term: "Broken object level authorisation",
+    definition:
+      "An API flaw where a signed-in caller can read or change records that aren't theirs, usually just by changing an ID in the request, because the API doesn't check ownership on every request. First on the OWASP API Top 10.",
+    module: "api-security",
+  },
+  "mass-assignment": {
+    term: "Mass assignment",
+    definition:
+      "Copying every field a client sends straight onto a stored object, so a caller can set fields they shouldn't, such as role or balance. Prevented by accepting only an allow-list of editable fields.",
+    module: "api-security",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -6382,11 +6382,12 @@ const apiDesign: Track = {
             "Mass assignment and data exposure",
             "Input validation",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["authentication"],
           plain:
             "Knowing who's calling isn't enough; every request must also check they're allowed to touch that particular record. Most API breaches come from missing checks like that, not from clever cryptography.",
+          terms: ["bola", "mass-assignment", "authentication"],
         },
         {
           slug: "rate-limits",
