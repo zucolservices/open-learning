@@ -6283,11 +6283,12 @@ const apiDesign: Track = {
             "Change a Protocol Buffers message and see which old clients still read it correctly",
           formats: ["step-through", "simulation", "checkpoint"],
           concepts: ["Schemas and field numbers", "Streaming calls", "Compatibility rules"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["api-styles"],
           plain:
             "gRPC lets one service call a function on another as if it were local. Messages are defined in Protocol Buffers, a compact binary format with numbered fields, which is quick to send and stays compatible if you follow a few rules.",
+          terms: ["grpc", "protobuf", "rpc", "breaking-change"],
         },
         {
           slug: "graphql",

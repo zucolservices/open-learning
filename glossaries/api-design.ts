@@ -171,4 +171,16 @@ export const apiDesign = {
       "The date a deprecated API or version stops working. The Sunset HTTP header (RFC 8594) tells clients when it will happen.",
     module: "deprecation",
   },
+  grpc: {
+    term: "gRPC",
+    definition:
+      "An open-source RPC framework, started at Google, in which one service calls functions on another over HTTP/2, usually with messages in Protocol Buffers. It supports streaming in either or both directions.",
+    module: "grpc",
+  },
+  protobuf: {
+    term: "Protocol Buffers",
+    definition:
+      "Google's compact binary format for structured data. Messages are defined in .proto files, each field with a number; only the numbers and values are sent, which makes messages small and fast to parse.",
+    module: "grpc",
+  },
 } satisfies Record<string, GlossaryEntry>;
