@@ -6414,11 +6414,12 @@ const apiDesign: Track = {
             "Fetch the same resource with and without ETags and Cache-Control, and count bytes and round trips",
           formats: ["simulation", "checkpoint"],
           concepts: ["Cache-Control", "ETags and conditional requests", "Compression and batching"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["http-basics"],
           plain:
             "The fastest request is one you don't have to make. HTTP has built-in ways to cache responses and check whether they've changed, which cuts latency and load without changing what the API means.",
+          terms: ["etag", "cache-control", "http-header"],
         },
         {
           slug: "gateways-dx",

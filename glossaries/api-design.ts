@@ -276,4 +276,16 @@ export const apiDesign = {
       "A limit on how much of a service a client may use over a longer period or hold at once, such as calls per day or number of servers, often tied to a pricing plan.",
     module: "rate-limits",
   },
+  etag: {
+    term: "ETag",
+    definition:
+      "A version tag a server attaches to a response. Clients send it back with If-None-Match to ask 'has it changed?' (a 304 means no), or with If-Match to update only if nobody else changed it first.",
+    module: "api-performance",
+  },
+  "cache-control": {
+    term: "Cache-Control",
+    definition:
+      "The HTTP header that tells browsers, apps and CDNs whether and how long they may reuse a response, with directives such as max-age, no-cache, no-store and private.",
+    module: "api-performance",
+  },
 } satisfies Record<string, GlossaryEntry>;
