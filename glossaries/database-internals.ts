@@ -81,4 +81,22 @@ export const databaseInternals = {
       "Online transaction processing: workloads of many small, fast reads and writes of individual records, like placing orders or making payments. Analytics (OLAP) is the opposite: big scans and summaries.",
     module: "row-vs-column",
   },
+  "cache-hit": {
+    term: "Cache hit",
+    definition:
+      "Finding the data you need already in memory, so no trip to storage is needed. A miss means reading it from disk or SSD, thousands of times slower.",
+    module: "buffer-pool",
+  },
+  eviction: {
+    term: "Eviction",
+    definition:
+      "Removing a page from a full cache to make room for another. The eviction policy (such as LRU or clock sweep) decides which page goes.",
+    module: "buffer-pool",
+  },
+  "dirty-page": {
+    term: "Dirty page",
+    definition:
+      "A page in memory that has been changed but not yet written back to storage. It must be flushed before its memory can be reused.",
+    module: "buffer-pool",
+  },
 } satisfies Record<string, GlossaryEntry>;

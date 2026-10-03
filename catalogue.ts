@@ -6557,11 +6557,12 @@ const databaseInternals: Track = {
             "Run a busy workload through a small buffer pool with LRU and clock sweep, then watch one big scan flush it",
           formats: ["simulation", "checkpoint"],
           concepts: ["Cache hits and misses", "Eviction policies", "Dirty pages"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["pages-rows"],
           plain:
             "Databases keep recently used pages in a region of memory called the buffer pool, so most reads never touch the disk. When it's full, something must be evicted, and the choice decides how fast the database feels.",
+          terms: ["buffer-pool", "cache-hit", "eviction", "dirty-page", "page"],
         },
       ],
     },

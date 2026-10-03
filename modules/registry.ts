@@ -277,4 +277,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "database-internals/storage-hierarchy": () => import("./database-internals/storage-hierarchy"),
   "database-internals/pages-rows": () => import("./database-internals/pages-rows"),
   "database-internals/row-vs-column": () => import("./database-internals/row-vs-column"),
+  "database-internals/buffer-pool": () => import("./database-internals/buffer-pool"),
 };
