@@ -378,4 +378,47 @@ export const databaseInternals = {
       "The view of the database a transaction or statement reads from: only changes committed before it was taken are visible, whatever happens afterwards.",
     module: "mvcc",
   },
+  "streaming-replication": {
+    term: "Streaming replication",
+    definition:
+      "PostgreSQL's built-in physical replication: the primary sends write-ahead log records to standbys as they're generated, and each standby replays them to stay a byte-for-byte copy.",
+    analogy: "Chess by post: send each move, and the other board stays identical.",
+    module: "replication-internals",
+  },
+  "hot-standby": {
+    term: "Hot standby",
+    definition:
+      "A replica that accepts read-only queries while it keeps replaying the primary's log, ready to be promoted if the primary fails.",
+    module: "replication-internals",
+  },
+  "logical-replication": {
+    term: "Logical replication",
+    definition:
+      "Replicating row-level changes (inserts, updates, deletes) for chosen tables, decoded from the log, using publish and subscribe. Works across major versions; doesn't copy schema changes.",
+    module: "replication-internals",
+  },
+  "synchronous-commit": {
+    term: "synchronous_commit",
+    definition:
+      "PostgreSQL setting for when a commit is reported as done: off, local (flushed locally), remote_write, on or remote_apply (the standby has written, flushed or applied it). The remote levels need a synchronous standby to be configured.",
+    module: "replication-internals",
+  },
+  binlog: {
+    term: "Binary log (binlog)",
+    definition:
+      "MySQL's log of committed changes, separate from InnoDB's redo log. Replicas read it and replay its events; it's also used for point-in-time recovery and change data capture.",
+    module: "replication-internals",
+  },
+  gtid: {
+    term: "GTID",
+    definition:
+      "Global transaction identifier: a unique ID MySQL gives every committed transaction across a replication topology, so replicas can track what they've applied without log file positions.",
+    module: "replication-internals",
+  },
+  semisync: {
+    term: "Semi-synchronous replication",
+    definition:
+      "MySQL mode where a commit waits until at least one replica has received the change and flushed it to its relay log (not applied it). Falls back to asynchronous if no replica answers in time.",
+    module: "replication-internals",
+  },
 } satisfies Record<string, GlossaryEntry>;
