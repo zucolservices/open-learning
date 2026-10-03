@@ -6323,11 +6323,12 @@ const apiDesign: Track = {
             "Signing and verifying",
             "Retries, duplicates and ordering",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["idempotency"],
           plain:
             "Instead of clients asking 'anything new?' every few seconds, a webhook calls the client's own URL when something happens, like a payment succeeding. That means handling retries, duplicates and checking the message really came from you.",
+          terms: ["webhook", "polling", "hmac", "idempotency-key"],
         },
         {
           slug: "realtime",

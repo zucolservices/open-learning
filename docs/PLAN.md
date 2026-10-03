@@ -498,7 +498,7 @@ Architecture area, second track (started 2026-10-03). 21 modules in 5 chapters, 
 | 4h. Kubernetes             | Platform & cloud, second track, 23 modules                                              | Live: all 23 modules (2026-10-03)                                       |
 | 4i. CI/CD                  | Platform & cloud, third track, 21 modules                                               | Live: all 21 modules (2026-10-03)                                       |
 | 4j. Observability          | Platform & cloud, fourth track, 21 modules                                              | Live: all 21 modules (2026-10-03)                                       |
-| 4k. API Design             | Architecture, second track, 21 modules                                                  | In progress: 13 of 21 modules                                           |
+| 4k. API Design             | Architecture, second track, 21 modules                                                  | In progress: 14 of 21 modules                                           |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

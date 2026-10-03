@@ -189,4 +189,16 @@ export const apiDesign = {
       "In GraphQL, the server function that fetches the data for one field. A query is answered by running the resolvers for every field it asks for, which can add up to many database calls.",
     module: "graphql",
   },
+  polling: {
+    term: "Polling",
+    definition:
+      "A client asking an API again and again, on a schedule, whether anything has changed. Simple, but most requests return nothing new and changes are noticed late.",
+    module: "webhooks",
+  },
+  hmac: {
+    term: "HMAC signature",
+    definition:
+      "A code computed from a message and a shared secret key. The receiver recomputes it to check the message came from someone holding the secret and wasn't altered on the way.",
+    module: "webhooks",
+  },
 } satisfies Record<string, GlossaryEntry>;
