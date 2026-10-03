@@ -141,4 +141,10 @@ export const apiDesign = {
       "A unique value a client generates for one operation, such as a payment, and sends with every retry. The server remembers the result for that key and replays it instead of doing the operation again.",
     module: "idempotency",
   },
+  openapi: {
+    term: "OpenAPI",
+    definition:
+      "A standard, machine-readable format (YAML or JSON) for describing an HTTP API: its paths, operations, parameters, data schemas and errors. Tools turn it into documentation, mock servers, tests and client code. Formerly called Swagger.",
+    module: "openapi",
+  },
 } satisfies Record<string, GlossaryEntry>;

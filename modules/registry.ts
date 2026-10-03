@@ -260,4 +260,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "api-design/payload-design": () => import("./api-design/payload-design"),
   "api-design/pagination": () => import("./api-design/pagination"),
   "api-design/idempotency": () => import("./api-design/idempotency"),
+  "api-design/openapi": () => import("./api-design/openapi"),
 };

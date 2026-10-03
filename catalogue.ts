@@ -6224,11 +6224,12 @@ const apiDesign: Track = {
             "Design first vs code first",
             "Generating docs, mocks and clients",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["payload-design"],
           plain:
             "OpenAPI is a standard way to write down exactly what an API accepts and returns. From one description you can generate documentation, mock servers, tests and client code, and agree the design before anyone builds it.",
+          terms: ["openapi", "api-contract", "api-first"],
         },
         {
           slug: "versioning",
