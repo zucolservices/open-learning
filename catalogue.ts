@@ -6146,11 +6146,12 @@ const apiDesign: Track = {
             "Choosing status codes",
             "Problem Details errors",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["resources-urls"],
           plain:
             "Each HTTP method has a meaning (GET reads, DELETE removes) and each response carries a status code (200 OK, 404 Not Found, 503 unavailable). Good errors also say clearly what went wrong and what to do about it, in a standard machine-readable form.",
+          terms: ["status-code", "problem-details", "idempotent", "http-method"],
         },
         {
           slug: "payload-design",

@@ -111,4 +111,10 @@ export const apiDesign = {
       "Short for 'hypermedia as the engine of application state': responses include links to related resources and to the actions allowed next, so clients can follow them instead of building URLs themselves.",
     module: "resources-urls",
   },
+  "problem-details": {
+    term: "Problem Details",
+    definition:
+      "A standard JSON format for HTTP API errors (RFC 9457), with fields such as type (a URL naming the kind of problem), title, status, detail and instance, served as application/problem+json.",
+    module: "methods-errors",
+  },
 } satisfies Record<string, GlossaryEntry>;
