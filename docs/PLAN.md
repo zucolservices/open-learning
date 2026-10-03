@@ -481,6 +481,40 @@ Architecture area, second track (started 2026-10-03). 21 modules in 5 chapters, 
 | 20    | Gateways and developer experience      | Gateways and developer portals              | Animated infographic, Build connect |
 | 21    | Capstone: an API for a parcel service  | Parcel API through a year of use            | Branching scenario, Build connect   |
 
+## Database Internals: curriculum
+
+Architecture area, third track (started 2026-10-04). 21 modules in 6 chapters, about 9 hours. Accent: "ledger" blue (`[data-track="ledger"]`). Glossary: `glossaries/database-internals.ts`. Vendor-neutral: PostgreSQL, MySQL/InnoDB, SQLite, SQL Server, Oracle and RocksDB alongside managed cloud databases. Builds on the Lakehouse row/column modules and System Design's replication and consistency modules, linking rather than repeating. Built on one branch (`track/database-internals`), one commit per module, merged once at the end. Each module is fact-checked on its own before it is built; card illustrations and a showcase follow the last module.
+
+| #     | Module                            | Centrepiece                       | Key formats                         |
+| ----- | --------------------------------- | --------------------------------- | ----------------------------------- |
+| **1** | **The big picture**               |                                   |                                     |
+| 1     | What happens when you run a query | One SELECT, from parser to disk   | Scroll story                        |
+| 2     | Memory, SSDs and disks            | The latency ladder in human time  | Animated infographic, Simulation    |
+| **2** | **Storing data**                  |                                   |                                     |
+| 3     | Pages and rows                    | Inside a slotted page             | Simulation                          |
+| 4     | Row stores and column stores      | Checkout vs report, row vs column | Simulation                          |
+| 5     | The buffer pool                   | LRU vs clock sweep vs a big scan  | Simulation                          |
+| **3** | **Indexes**                       |                                   |                                     |
+| 6     | B-trees                           | Build a B+tree, split by split    | Simulation, Step through            |
+| 7     | Using indexes well                | Composite and covering indexes    | Simulation                          |
+| 8     | LSM trees                         | Memtable, SSTables, compaction    | Simulation, Step through            |
+| 9     | Hash, inverted and vector indexes | Match searches to index types     | Animated infographic, Build connect |
+| **4** | **Running queries**               |                                   |                                     |
+| 10    | Parsing and planning              | Read an EXPLAIN plan              | Step through                        |
+| 11    | Join algorithms                   | Nested loop vs hash vs merge      | Simulation                          |
+| 12    | Statistics and the optimiser      | Stale statistics, terrible plan   | Simulation, Fix the problem         |
+| **5** | **Transactions and durability**   |                                   |                                     |
+| 13    | Write-ahead logging and recovery  | Pull the plug mid-transfer        | Simulation, Step through            |
+| 14    | Transactions and ACID             | A transfer that fails halfway     | Scroll story                        |
+| 15    | Isolation levels and anomalies    | Catch the anomalies               | Simulation                          |
+| 16    | Locks and deadlocks               | Create and break a deadlock       | Simulation                          |
+| 17    | MVCC                              | Two versions of one row           | Simulation, Step through            |
+| **6** | **Beyond one machine**            |                                   |                                     |
+| 18    | Replication under the hood        | Ship the WAL to a replica         | Simulation                          |
+| 19    | Distributed SQL and consensus     | Raft: elect, lose, commit         | Simulation, Step through            |
+| 20    | Database engines compared         | Engines side by side              | Animated infographic                |
+| 21    | Capstone: the slow database       | Diagnose the slow database        | Branching scenario, Fix the problem |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -499,6 +533,7 @@ Architecture area, second track (started 2026-10-03). 21 modules in 5 chapters, 
 | 4i. CI/CD                  | Platform & cloud, third track, 21 modules                                               | Live: all 21 modules (2026-10-03)                                       |
 | 4j. Observability          | Platform & cloud, fourth track, 21 modules                                              | Live: all 21 modules (2026-10-03)                                       |
 | 4k. API Design             | Architecture, second track, 21 modules                                                  | Live: all 21 modules (2026-10-04)                                       |
+| 4l. Database Internals     | Architecture, third track, 21 modules                                                   | In progress: 1 of 21 modules                                            |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

@@ -16,6 +16,7 @@ import { kubernetes } from "./kubernetes";
 import { ciCd } from "./ci-cd";
 import { observability } from "./observability";
 import { apiDesign } from "./api-design";
+import { databaseInternals } from "./database-internals";
 import { shared } from "./shared";
 import type { GlossaryEntry } from "./types";
 
@@ -34,6 +35,7 @@ export const trackGlossaries: Record<string, Record<string, GlossaryEntry>> = {
   "ci-cd": ciCd,
   observability,
   "api-design": apiDesign,
+  "database-internals": databaseInternals,
 };
 
 export type TermId =
@@ -48,7 +50,8 @@ export type TermId =
   | keyof typeof kubernetes
   | keyof typeof ciCd
   | keyof typeof observability
-  | keyof typeof apiDesign;
+  | keyof typeof apiDesign
+  | keyof typeof databaseInternals;
 
 export interface ResolvedTerm {
   id: string;

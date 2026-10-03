@@ -97,6 +97,7 @@ export interface Track {
     | "relay"
     | "signal"
     | "contract"
+    | "ledger"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -6458,6 +6459,383 @@ const apiDesign: Track = {
   ],
 };
 
+const databaseInternals: Track = {
+  slug: "database-internals",
+  title: "Database Internals",
+  area: "Architecture",
+  category: "architecture",
+  tagline: "Pages, indexes, logs and transactions underneath SQL.",
+  description:
+    "What happens inside a database: storage hardware, pages and rows, row and column stores, the buffer pool, B-trees, LSM trees and other indexes, query planning, join algorithms and the optimiser, write-ahead logging and crash recovery, transactions, isolation levels, locking, MVCC, replication and distributed SQL. Vendor-neutral: PostgreSQL, MySQL/InnoDB, SQLite, SQL Server, Oracle, RocksDB and the managed cloud databases. By the end you can read a query plan, choose indexes, reason about concurrency bugs and diagnose a slow database.",
+  accent: "ledger",
+  chapters: [
+    {
+      slug: "big-picture",
+      title: "The big picture",
+      summary: "What a database does with your query, and the hardware it works with.",
+      modules: [
+        {
+          slug: "query-journey",
+          title: "What happens when you run a query",
+          summary: "From a line of SQL to rows on your screen.",
+          minutes: 20,
+          signature:
+            "Follow one SELECT through the parser, planner, executor, buffer pool and disk",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "Parser, planner, executor",
+            "Pages and the buffer pool",
+            "Why internals matter",
+          ],
+          status: "live",
+          level: "beginner",
+          plain:
+            "When you send SQL to a database, it doesn't just look things up. It checks the query, works out the cheapest way to answer it, then reads data in fixed-size blocks called pages, keeping recently used ones in memory.",
+          terms: ["parser", "query-planner", "page", "buffer-pool", "index"],
+        },
+        {
+          slug: "storage-hierarchy",
+          title: "Memory, SSDs and disks",
+          summary: "Why databases are designed around slow storage.",
+          minutes: 20,
+          signature:
+            "Scale the latency ladder to human time, then see why reading a whole page costs the same as reading one row",
+          formats: ["animated-infographic", "simulation", "checkpoint"],
+          concepts: ["The latency ladder", "Pages and blocks", "Durability needs storage"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["query-journey"],
+          plain:
+            "Memory is fast but forgets everything when the power goes; SSDs and disks remember but are thousands of times slower. Databases are built around this gap: they read and write whole pages and keep the busy ones in memory.",
+        },
+      ],
+    },
+    {
+      slug: "storage",
+      title: "Storing data",
+      summary: "How rows sit inside pages and files, and how memory caches them.",
+      modules: [
+        {
+          slug: "pages-rows",
+          title: "Pages and rows",
+          summary: "Inside an 8 kB page.",
+          minutes: 25,
+          signature:
+            "Insert, update and delete rows in a slotted page and watch free space, pointers and dead rows change",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Slotted pages", "Row identifiers", "Large values and free space"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["storage-hierarchy"],
+          plain:
+            "A table is stored as a file of fixed-size pages. Each page holds a small directory of pointers at the front and the rows themselves packed from the back, so rows can move within a page without anything else changing.",
+        },
+        {
+          slug: "row-vs-column",
+          title: "Row stores and column stores",
+          summary: "Storing data the way it's read.",
+          minutes: 20,
+          signature:
+            "Run a checkout and a monthly report against row and column layouts and count the bytes each reads",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Row vs column layout", "OLTP vs analytics", "Compression"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["pages-rows"],
+          plain:
+            "A row store keeps each record together, which is ideal for fetching or updating one order. A column store keeps each column together, which is ideal for adding up one column across millions of rows.",
+        },
+        {
+          slug: "buffer-pool",
+          title: "The buffer pool",
+          summary: "Keeping the right pages in memory.",
+          minutes: 25,
+          signature:
+            "Run a busy workload through a small buffer pool with LRU and clock sweep, then watch one big scan flush it",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Cache hits and misses", "Eviction policies", "Dirty pages"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["pages-rows"],
+          plain:
+            "Databases keep recently used pages in a region of memory called the buffer pool, so most reads never touch the disk. When it's full, something must be evicted, and the choice decides how fast the database feels.",
+        },
+      ],
+    },
+    {
+      slug: "indexes",
+      title: "Indexes",
+      summary: "Finding rows without reading everything.",
+      modules: [
+        {
+          slug: "btrees",
+          title: "B-trees",
+          summary: "The structure behind almost every index.",
+          minutes: 30,
+          signature:
+            "Insert keys into a B+tree, watch pages split and the tree grow upwards, then find one row in three page reads",
+          formats: ["simulation", "step-through", "checkpoint"],
+          concepts: ["Balanced trees of pages", "Splits and fan-out", "Range scans"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["pages-rows"],
+          plain:
+            "A B-tree index is like a book's index arranged in levels: a few top pages point to many lower pages, which point to rows. Even a billion rows can be found in a handful of page reads.",
+        },
+        {
+          slug: "using-indexes",
+          title: "Using indexes well",
+          summary: "When an index helps, and when it doesn't.",
+          minutes: 25,
+          signature:
+            "Try queries against single, composite and covering indexes and watch the plan switch between index and table scans",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Selectivity",
+            "Composite index column order",
+            "Covering indexes and write cost",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["btrees"],
+          plain:
+            "An index only helps if the database decides it's cheaper than reading the table. Which columns it covers, in which order, and how many rows match all decide whether it's used, and every index slows down writes.",
+        },
+        {
+          slug: "lsm-trees",
+          title: "LSM trees",
+          summary: "Built for fast writes.",
+          minutes: 25,
+          signature:
+            "Write keys into a memtable, flush sorted files, then compact them, and see where a read has to look",
+          formats: ["simulation", "step-through", "checkpoint"],
+          concepts: ["Memtables and SSTables", "Compaction", "Bloom filters"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["btrees"],
+          plain:
+            "Some databases never update data in place. They collect writes in memory, write them out as sorted files, and merge those files in the background. Writes become very fast; reads may have to check several files.",
+        },
+        {
+          slug: "other-indexes",
+          title: "Hash, inverted and vector indexes",
+          summary: "Different questions need different indexes.",
+          minutes: 20,
+          signature: "Match six searches to hash, B-tree, inverted, spatial and vector indexes",
+          formats: ["animated-infographic", "build-connect", "checkpoint"],
+          concepts: ["Hash indexes", "Inverted indexes for text", "Vector and spatial indexes"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["btrees"],
+          plain:
+            "B-trees are great for exact values and ranges, but other questions need other structures: hash indexes for exact matches, inverted indexes for words in text, and vector indexes for finding similar items.",
+        },
+      ],
+    },
+    {
+      slug: "queries",
+      title: "Running queries",
+      summary: "Turning SQL into a plan, and a plan into rows.",
+      modules: [
+        {
+          slug: "query-planning",
+          title: "Parsing and planning",
+          summary: "How a database chooses a plan.",
+          minutes: 25,
+          signature: "Read an EXPLAIN plan node by node, then compare two plans for the same query",
+          formats: ["step-through", "checkpoint"],
+          concepts: ["Parse trees and plans", "EXPLAIN", "Scans and operators"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["using-indexes"],
+          plain:
+            "SQL says what you want, not how to get it. The planner considers different ways to answer a query, such as which index to use and in what order to join tables, and picks the one it estimates is cheapest.",
+        },
+        {
+          slug: "joins",
+          title: "Join algorithms",
+          summary: "Nested loops, hash joins and merge joins.",
+          minutes: 25,
+          signature: "Join orders to customers three ways and count the work as the tables grow",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Nested loop", "Hash join", "Merge join"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["query-planning"],
+          plain:
+            "Combining two tables can be done in very different ways: for each row look up its match, build a hash table of one side, or walk two sorted lists together. The right choice depends on table sizes and indexes.",
+        },
+        {
+          slug: "cost-optimiser",
+          title: "Statistics and the optimiser",
+          summary: "Why a query suddenly gets slow.",
+          minutes: 25,
+          signature:
+            "Load a million rows without refreshing statistics and watch the optimiser pick a terrible plan",
+          formats: ["simulation", "fix-the-problem", "checkpoint"],
+          concepts: ["Statistics and histograms", "Cardinality estimates", "Stale statistics"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["joins"],
+          plain:
+            "The planner relies on statistics about the data, such as how many rows a table has and how values are spread. When those numbers are out of date, its estimates go wrong and it can choose a plan thousands of times slower.",
+        },
+      ],
+    },
+    {
+      slug: "transactions",
+      title: "Transactions and durability",
+      summary: "Keeping data correct when things fail and users collide.",
+      modules: [
+        {
+          slug: "wal-recovery",
+          title: "Write-ahead logging and recovery",
+          summary: "Surviving a crash mid-write.",
+          minutes: 25,
+          signature:
+            "Pull the power during a transfer with and without a write-ahead log, then replay the log",
+          formats: ["simulation", "step-through", "checkpoint"],
+          concepts: ["Write-ahead logging", "Checkpoints", "Crash recovery"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["buffer-pool"],
+          plain:
+            "Databases first write every change to a sequential log on disk, and only later update the data pages. After a crash, they replay the log to restore committed changes and undo unfinished ones.",
+        },
+        {
+          slug: "acid",
+          title: "Transactions and ACID",
+          summary: "All or nothing.",
+          minutes: 20,
+          signature: "Run a money transfer that fails halfway, with and without a transaction",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "Atomicity and consistency",
+            "Isolation and durability",
+            "Commit and rollback",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["wal-recovery"],
+          plain:
+            "A transaction groups several changes so they all happen or none do. ACID names the guarantees: atomic, consistent, isolated and durable.",
+        },
+        {
+          slug: "isolation",
+          title: "Isolation levels and anomalies",
+          summary: "What happens when users collide.",
+          minutes: 30,
+          signature:
+            "Interleave two transactions at each isolation level and catch dirty reads, lost updates and write skew",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Read committed to serializable", "Anomalies", "Choosing a level"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["acid"],
+          plain:
+            "When many transactions run at once, they can see each other's half-finished work or overwrite each other's changes. Isolation levels choose how much of that is allowed, trading safety for speed.",
+        },
+        {
+          slug: "locking",
+          title: "Locks and deadlocks",
+          summary: "Waiting your turn, and what happens when nobody can.",
+          minutes: 25,
+          signature: "Grab row locks in two transactions and create, detect and resolve a deadlock",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Shared and exclusive locks", "Two-phase locking", "Deadlock detection"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["isolation"],
+          plain:
+            "One way to keep transactions apart is locking: a transaction must hold a lock on a row before changing it. Locks make others wait, and sometimes two transactions each wait for the other forever: a deadlock.",
+        },
+        {
+          slug: "mvcc",
+          title: "MVCC",
+          summary: "Readers that never wait for writers.",
+          minutes: 25,
+          signature:
+            "Update a row while another transaction reads it, see both versions, then watch vacuum clean up",
+          formats: ["simulation", "step-through", "checkpoint"],
+          concepts: ["Row versions and snapshots", "Visibility rules", "Vacuum and bloat"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["isolation"],
+          plain:
+            "Instead of making readers wait, many databases keep old versions of rows. Each transaction sees a consistent snapshot, and old versions are cleaned up later.",
+        },
+      ],
+    },
+    {
+      slug: "beyond",
+      title: "Beyond one machine",
+      summary: "Copies, consensus and choosing an engine.",
+      modules: [
+        {
+          slug: "replication-internals",
+          title: "Replication under the hood",
+          summary: "Shipping the log to another server.",
+          minutes: 25,
+          signature:
+            "Stream a primary's write-ahead log to a replica, then compare physical and logical replication",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Log shipping", "Physical vs logical replication", "Synchronous commit"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["wal-recovery"],
+          plain:
+            "Replicas stay up to date by receiving the primary's log of changes and replaying it. Whether the primary waits for a replica before confirming a commit decides how much data a failure can lose.",
+        },
+        {
+          slug: "distributed-sql",
+          title: "Distributed SQL and consensus",
+          summary: "One database across many machines.",
+          minutes: 30,
+          signature:
+            "Elect a leader with Raft, lose a node, and see a write commit only when a majority agrees",
+          formats: ["simulation", "step-through", "checkpoint"],
+          concepts: ["Sharding with transactions", "Raft consensus", "Clocks and ordering"],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["replication-internals"],
+          plain:
+            "Distributed SQL databases split data across many machines but still offer transactions. Each piece of data is copied to several machines that agree on every change through a consensus protocol such as Raft.",
+        },
+        {
+          slug: "engines-compared",
+          title: "Database engines compared",
+          summary: "PostgreSQL, MySQL, SQLite and the rest.",
+          minutes: 25,
+          signature:
+            "Compare how popular engines store rows, index data and handle concurrency, side by side",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: ["Storage engines", "Concurrency control", "Managed cloud databases"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["mvcc", "btrees"],
+          plain:
+            "Every database makes different choices about storage, indexing and concurrency. Knowing them explains why PostgreSQL needs vacuum, why SQLite is a single file, and what a managed cloud database changes.",
+        },
+        {
+          slug: "capstone-db",
+          title: "Capstone: the slow database",
+          summary: "Diagnose a struggling database from the evidence.",
+          minutes: 40,
+          signature:
+            "A payments database slows down: read plans, statistics, locks and vacuum data to find and fix five problems",
+          formats: ["branching-scenario", "fix-the-problem", "checkpoint"],
+          concepts: ["Diagnosing database performance"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["cost-optimiser", "mvcc", "locking"],
+          plain:
+            "Everything in this track in one investigation. A busy database is slow, and you'll use plans, statistics and lock information to find out why and fix it.",
+        },
+      ],
+    },
+  ],
+};
+
 /** A small end-to-end module that exercises the toolkit and Module SDK. */
 const playground: Track = {
   slug: "playground",
@@ -6506,6 +6884,7 @@ export const tracks: Track[] = [
   ciCd,
   observability,
   apiDesign,
+  databaseInternals,
   playground,
 ];
 
@@ -6625,6 +7004,7 @@ export const categories: Category[] = [
       },
       {
         title: "Database Internals",
+        slug: "database-internals",
         blurb: "Pages, indexes, logs and transactions underneath SQL.",
       },
       {

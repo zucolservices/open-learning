@@ -273,4 +273,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "api-design/api-performance": () => import("./api-design/api-performance"),
   "api-design/gateways-dx": () => import("./api-design/gateways-dx"),
   "api-design/capstone-api": () => import("./api-design/capstone-api"),
+  "database-internals/query-journey": () => import("./database-internals/query-journey"),
 };
