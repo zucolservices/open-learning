@@ -96,6 +96,7 @@ export interface Track {
     | "helm"
     | "relay"
     | "signal"
+    | "contract"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -6045,6 +6046,398 @@ const observability: Track = {
   ],
 };
 
+const apiDesign: Track = {
+  slug: "api-design",
+  title: "API Design",
+  area: "Architecture",
+  category: "architecture",
+  tagline: "Resources, versions, pagination and contracts.",
+  description:
+    "How to design APIs other people can rely on: HTTP from the ground up, REST resources, status codes and errors, payload design, pagination, idempotency, OpenAPI contracts, versioning and deprecation, gRPC, GraphQL, webhooks, real-time APIs, authentication with OAuth and tokens, API security, rate limits, caching, gateways and developer experience. Vendor-neutral: open standards (HTTP RFCs, OpenAPI, AsyncAPI, OAuth) alongside gateways from AWS, Google Cloud, Azure, Kong and others. By the end you can design, document and evolve an API without breaking the people who depend on it.",
+  accent: "contract",
+  chapters: [
+    {
+      slug: "big-picture",
+      title: "The big picture",
+      summary: "What an API is, the HTTP underneath, and the main styles.",
+      modules: [
+        {
+          slug: "what-is-an-api",
+          title: "What an API is",
+          summary: "A promise between programs, and why breaking it hurts.",
+          minutes: 20,
+          signature:
+            "Follow one tap in a food-delivery app through the APIs it calls, then see what happens when one of them quietly changes",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "An API is a contract",
+            "Clients you don't control",
+            "Design for the consumer",
+          ],
+          status: "live",
+          level: "beginner",
+          plain:
+            "An API (application programming interface) is how one program asks another for something: a menu of requests it accepts and the answers it promises to give. Once other people's code depends on it, changing it carelessly breaks their software.",
+          terms: ["api", "api-contract", "api-consumer", "api-first"],
+        },
+        {
+          slug: "http-basics",
+          title: "HTTP from the ground up",
+          summary: "Requests, responses, methods, status codes and headers.",
+          minutes: 25,
+          signature: "Build an HTTP request piece by piece and watch the server's response change",
+          formats: ["step-through", "checkpoint"],
+          concepts: ["Request and response", "Methods, status codes, headers", "Statelessness"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["what-is-an-api"],
+          plain:
+            "Most APIs on the web travel over HTTP, the same protocol your browser uses. A request names a method (like GET or POST), a path and some headers; the response comes back with a status code, headers and usually a body.",
+        },
+        {
+          slug: "api-styles",
+          title: "REST, RPC, GraphQL and events",
+          summary: "Four ways to shape an API, and when each fits.",
+          minutes: 25,
+          signature:
+            "Match six real integrations to REST, gRPC, GraphQL or webhooks and see the trade-offs",
+          formats: ["animated-infographic", "build-connect", "checkpoint"],
+          concepts: ["Resources vs procedures", "Query languages", "Push vs pull"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["http-basics"],
+          plain:
+            "There's more than one style of API. REST organises everything as resources with URLs, RPC calls named functions, GraphQL lets the client ask for exactly the fields it wants, and event-driven APIs push messages when something happens.",
+        },
+      ],
+    },
+    {
+      slug: "resources",
+      title: "Designing REST APIs",
+      summary: "Resources, methods, errors and the shape of the data.",
+      modules: [
+        {
+          slug: "resources-urls",
+          title: "Resources and URLs",
+          summary: "Nouns, collections and sensible paths.",
+          minutes: 25,
+          signature: "Redesign a messy set of endpoints for a library into clean resources",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: ["Resources and collections", "Nesting and identifiers", "Naming conventions"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["api-styles"],
+          plain:
+            "A REST API is organised around things (books, members, loans) rather than actions. Each thing gets a URL, collections hold many of them, and the HTTP method says what you want to do.",
+        },
+        {
+          slug: "methods-errors",
+          title: "Methods, status codes and errors",
+          summary: "Saying what happened, in a way programs understand.",
+          minutes: 25,
+          signature:
+            "Answer twelve requests with the right status code, then turn vague errors into useful ones",
+          formats: ["simulation", "fix-the-problem", "checkpoint"],
+          concepts: [
+            "Safe and idempotent methods",
+            "Choosing status codes",
+            "Problem Details errors",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["resources-urls"],
+          plain:
+            "Each HTTP method has a meaning (GET reads, DELETE removes) and each response carries a status code (200 OK, 404 Not Found, 503 unavailable). Good errors also say clearly what went wrong and what to do about it, in a standard machine-readable form.",
+        },
+        {
+          slug: "payload-design",
+          title: "Request and response design",
+          summary: "JSON shapes that are easy to use and hard to misuse.",
+          minutes: 20,
+          signature:
+            "Fix a payment response full of traps: floating-point money, ambiguous dates and mystery nulls",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: ["Consistent naming", "Dates, money and IDs", "Nulls, enums and envelopes"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["resources-urls"],
+          plain:
+            "The data an API sends back is part of its contract. Small choices, like how money, dates and missing values are written, decide whether every client gets it right or each one has to guess.",
+        },
+        {
+          slug: "pagination",
+          title: "Pagination, filtering and sorting",
+          summary: "Handing over a million rows, a page at a time.",
+          minutes: 25,
+          signature:
+            "Page through a changing list with offsets and with cursors, and watch rows go missing or repeat",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Offset vs cursor pagination",
+            "Filtering and sorting",
+            "Consistency while paging",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["resources-urls"],
+          plain:
+            "No API returns a million records at once. Pagination splits results into pages; how you mark your place (a page number or a cursor) decides whether items get skipped or duplicated when the data changes underneath you.",
+        },
+        {
+          slug: "idempotency",
+          title: "Idempotency and safe retries",
+          summary: "Making it safe to press 'pay' twice.",
+          minutes: 25,
+          signature: "Retry a payment through a flaky network with and without an idempotency key",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Why retries happen", "Idempotent methods", "Idempotency keys"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["methods-errors"],
+          plain:
+            "Networks fail mid-request, so clients retry, and a retried payment must not charge twice. An idempotent operation gives the same result however many times it runs; idempotency keys make that possible even for actions like payments.",
+        },
+      ],
+    },
+    {
+      slug: "contracts",
+      title: "Contracts and change",
+      summary: "Describing an API precisely, and changing it without breaking anyone.",
+      modules: [
+        {
+          slug: "openapi",
+          title: "OpenAPI and contract-first design",
+          summary: "One description for docs, mocks, tests and code.",
+          minutes: 25,
+          signature:
+            "Write a small OpenAPI description and watch docs, a mock server and a client appear from it",
+          formats: ["step-through", "build-connect", "checkpoint"],
+          concepts: [
+            "Machine-readable contracts",
+            "Design first vs code first",
+            "Generating docs, mocks and clients",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["payload-design"],
+          plain:
+            "OpenAPI is a standard way to write down exactly what an API accepts and returns. From one description you can generate documentation, mock servers, tests and client code, and agree the design before anyone builds it.",
+        },
+        {
+          slug: "versioning",
+          title: "Versioning and breaking changes",
+          summary: "Which changes break clients, and what to do about it.",
+          minutes: 25,
+          signature:
+            "Sort twelve proposed changes into safe and breaking, then ship them without a single client failing",
+          formats: ["build-connect", "simulation", "checkpoint"],
+          concepts: [
+            "Breaking vs additive changes",
+            "Versioning in the URL, header or date",
+            "Tolerant readers",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["openapi"],
+          plain:
+            "Some changes to an API are harmless (adding a field) and some break every client (renaming one). Versioning lets old and new contracts live side by side while clients move over at their own pace.",
+        },
+        {
+          slug: "deprecation",
+          title: "Deprecation and lifecycle",
+          summary: "Retiring an API version without surprising anyone.",
+          minutes: 20,
+          signature:
+            "Run a twelve-month sunset for an old API version and see which clients you'd strand",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Deprecation and Sunset headers", "Usage tracking", "Communicating change"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["versioning"],
+          plain:
+            "Old versions can't live forever, but switching them off suddenly breaks people's software. A good retirement announces the date early, signals it in the API itself, tracks who still calls it, and helps them move.",
+        },
+      ],
+    },
+    {
+      slug: "beyond-rest",
+      title: "Beyond REST",
+      summary: "Binary RPC, flexible queries, push and real time.",
+      modules: [
+        {
+          slug: "grpc",
+          title: "gRPC and Protocol Buffers",
+          summary: "Fast, typed calls between services.",
+          minutes: 25,
+          signature:
+            "Change a Protocol Buffers message and see which old clients still read it correctly",
+          formats: ["step-through", "simulation", "checkpoint"],
+          concepts: ["Schemas and field numbers", "Streaming calls", "Compatibility rules"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["api-styles"],
+          plain:
+            "gRPC lets one service call a function on another as if it were local. Messages are defined in Protocol Buffers, a compact binary format with numbered fields, which is quick to send and stays compatible if you follow a few rules.",
+        },
+        {
+          slug: "graphql",
+          title: "GraphQL",
+          summary: "Ask for exactly what you need, and the costs that come with it.",
+          minutes: 25,
+          signature:
+            "Build a GraphQL query for a screen, then watch an innocent query explode into thousands of database calls",
+          formats: ["build-connect", "simulation", "checkpoint"],
+          concepts: [
+            "Schemas and queries",
+            "Over- and under-fetching",
+            "N+1 and query cost limits",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["api-styles"],
+          plain:
+            "With GraphQL the client sends a query describing the exact fields it wants and gets back just those, in one round trip. The flexibility moves work to the server, which then has to guard against slow or very expensive queries.",
+        },
+        {
+          slug: "webhooks",
+          title: "Webhooks and async APIs",
+          summary: "Telling clients when something happens.",
+          minutes: 25,
+          signature:
+            "Deliver payment webhooks through failures: retries, duplicates, out-of-order events and a forged request",
+          formats: ["simulation", "fix-the-problem", "checkpoint"],
+          concepts: [
+            "Polling vs webhooks",
+            "Signing and verifying",
+            "Retries, duplicates and ordering",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["idempotency"],
+          plain:
+            "Instead of clients asking 'anything new?' every few seconds, a webhook calls the client's own URL when something happens, like a payment succeeding. That means handling retries, duplicates and checking the message really came from you.",
+        },
+        {
+          slug: "realtime",
+          title: "Real-time APIs",
+          summary: "Polling, server-sent events and WebSockets.",
+          minutes: 20,
+          signature:
+            "Stream live match scores with polling, long polling, server-sent events and WebSockets and compare the cost",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Polling and long polling", "Server-sent events", "WebSockets"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["http-basics"],
+          plain:
+            "Some apps need updates the moment they happen: chat, live scores, ride tracking. Polling asks repeatedly, server-sent events keep one response open for the server to stream into, and WebSockets open a two-way channel.",
+        },
+      ],
+    },
+    {
+      slug: "security-ops",
+      title: "Security and operations",
+      summary: "Who may call, how often, how fast, and how people find out.",
+      modules: [
+        {
+          slug: "authentication",
+          title: "Authentication: keys, OAuth and tokens",
+          summary: "Proving who is calling.",
+          minutes: 30,
+          signature:
+            "Step through an OAuth 2.0 sign-in with PKCE, then decode a token and spot what's wrong with it",
+          formats: ["step-through", "checkpoint"],
+          concepts: ["API keys", "OAuth 2.0 and OpenID Connect", "Access tokens and JWTs"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["http-basics"],
+          plain:
+            "APIs need to know who is calling. Simple ones use an API key; when a user lets an app act on their behalf, OAuth 2.0 issues the app a short-lived access token instead of handing over the user's password.",
+        },
+        {
+          slug: "api-security",
+          title: "Authorisation and API security",
+          summary: "The ways APIs really get breached.",
+          minutes: 25,
+          signature:
+            "Attack a sample API the way the OWASP API Top 10 describes, then fix each hole",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Object-level authorisation",
+            "Mass assignment and data exposure",
+            "Input validation",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["authentication"],
+          plain:
+            "Knowing who's calling isn't enough; every request must also check they're allowed to touch that particular record. Most API breaches come from missing checks like that, not from clever cryptography.",
+        },
+        {
+          slug: "rate-limits",
+          title: "Rate limits and quotas",
+          summary: "Protecting the API, fairly.",
+          minutes: 20,
+          signature:
+            "Send traffic through a token bucket and a fixed window, and tell clients when to come back",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Limiting algorithms", "429 and Retry-After", "Quotas and fairness"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["methods-errors"],
+          plain:
+            "Rate limits stop one client from overwhelming an API or using more than its share. A good limit tells the client clearly that it was limited and when it may try again.",
+        },
+        {
+          slug: "api-performance",
+          title: "Caching and performance",
+          summary: "Faster responses, fewer bytes, less work.",
+          minutes: 25,
+          signature:
+            "Fetch the same resource with and without ETags and Cache-Control, and count bytes and round trips",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Cache-Control", "ETags and conditional requests", "Compression and batching"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["http-basics"],
+          plain:
+            "The fastest request is one you don't have to make. HTTP has built-in ways to cache responses and check whether they've changed, which cuts latency and load without changing what the API means.",
+        },
+        {
+          slug: "gateways-dx",
+          title: "Gateways and developer experience",
+          summary: "Running APIs at scale, and making them pleasant to use.",
+          minutes: 25,
+          signature:
+            "Put an API behind a gateway, then judge three developer portals by how fast a newcomer makes a first call",
+          formats: ["animated-infographic", "build-connect", "checkpoint"],
+          concepts: ["API gateways", "Documentation, SDKs and sandboxes", "Time to first call"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["rate-limits"],
+          plain:
+            "An API gateway sits in front of your services to handle sign-in, limits and routing in one place. But an API succeeds only if developers can understand it quickly: clear documentation, examples and a sandbox matter as much as the code.",
+        },
+        {
+          slug: "capstone-api",
+          title: "Capstone: an API for a parcel service",
+          summary: "Design it, publish it, then live with it for a year.",
+          minutes: 40,
+          signature:
+            "Design a parcel-tracking API, then face a mobile app release, a partner's retry storm, a breaking change and a security report",
+          formats: ["branching-scenario", "build-connect", "checkpoint"],
+          concepts: ["Designing an API end to end"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["versioning", "idempotency", "api-security"],
+          plain:
+            "Everything in this track in one design. You'll make the key choices for a parcel-tracking API, then see how they hold up over a year of real use.",
+        },
+      ],
+    },
+  ],
+};
+
 /** A small end-to-end module that exercises the toolkit and Module SDK. */
 const playground: Track = {
   slug: "playground",
@@ -6092,6 +6485,7 @@ export const tracks: Track[] = [
   kubernetes,
   ciCd,
   observability,
+  apiDesign,
   playground,
 ];
 
@@ -6204,7 +6598,11 @@ export const categories: Category[] = [
         slug: "system-design",
         blurb: "From one server to multi-region systems, with capstones.",
       },
-      { title: "API Design", blurb: "Resources, versions, pagination and contracts." },
+      {
+        title: "API Design",
+        slug: "api-design",
+        blurb: "Resources, versions, pagination and contracts.",
+      },
       {
         title: "Database Internals",
         blurb: "Pages, indexes, logs and transactions underneath SQL.",

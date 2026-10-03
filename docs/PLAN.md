@@ -448,6 +448,39 @@ Platform & cloud area, fourth track (started 2026-10-03). 21 modules in 5 chapte
 | 20    | Observability platforms and cost        | Price the same telemetry on several platforms                     | Infographic, sim |
 | 21    | Capstone: observing a payments platform | Design it, then a slow bank, a silent failure, a page storm       | Branching, build |
 
+## API Design: curriculum
+
+Architecture area, second track (started 2026-10-03). 21 modules in 5 chapters, about 8.5 hours. Accent: "contract" green (`[data-track="contract"]`). Glossary: `glossaries/api-design.ts`. Vendor-neutral: open standards (HTTP RFCs, OpenAPI, AsyncAPI, OAuth, Protocol Buffers, GraphQL) alongside gateways from AWS, Google Cloud, Azure, Kong, Apigee and others. Links to System Design for rate limiting and idempotency at scale rather than repeating it. Built on one branch (`track/api-design`), one commit per module, merged once at the end. Each module is fact-checked on its own before it is built; card illustrations and a showcase follow the last module.
+
+| #     | Module                                 | Centrepiece                                 | Key formats                         |
+| ----- | -------------------------------------- | ------------------------------------------- | ----------------------------------- |
+| **1** | **The big picture**                    |                                             |                                     |
+| 1     | What an API is                         | One tap in a delivery app, through its APIs | Scroll story                        |
+| 2     | HTTP from the ground up                | Build a request, watch the response         | Step through                        |
+| 3     | REST, RPC, GraphQL and events          | Match integrations to API styles            | Animated infographic, Build connect |
+| **2** | **Designing REST APIs**                |                                             |                                     |
+| 4     | Resources and URLs                     | Redesign a library's endpoints              | Fix the problem                     |
+| 5     | Methods, status codes and errors       | Status codes and Problem Details            | Simulation, Fix the problem         |
+| 6     | Request and response design            | Fix a payment response's traps              | Fix the problem                     |
+| 7     | Pagination, filtering and sorting      | Offset vs cursor on a changing list         | Simulation                          |
+| 8     | Idempotency and safe retries           | Retry a payment with and without a key      | Simulation                          |
+| **3** | **Contracts and change**               |                                             |                                     |
+| 9     | OpenAPI and contract-first design      | One OpenAPI file: docs, mock, client        | Step through, Build connect         |
+| 10    | Versioning and breaking changes        | Safe or breaking? Ship without failures     | Build connect, Simulation           |
+| 11    | Deprecation and lifecycle              | A twelve-month sunset                       | Simulation                          |
+| **4** | **Beyond REST**                        |                                             |                                     |
+| 12    | gRPC and Protocol Buffers              | Evolve a Protobuf message                   | Step through, Simulation            |
+| 13    | GraphQL                                | A query that explodes into N+1              | Build connect, Simulation           |
+| 14    | Webhooks and async APIs                | Webhooks through failures and forgery       | Simulation, Fix the problem         |
+| 15    | Real-time APIs                         | Live scores four ways                       | Simulation                          |
+| **5** | **Security and operations**            |                                             |                                     |
+| 16    | Authentication: keys, OAuth and tokens | OAuth with PKCE, step by step               | Step through                        |
+| 17    | Authorisation and API security         | Attack and fix the OWASP API Top 10         | Fix the problem                     |
+| 18    | Rate limits and quotas                 | Token bucket vs fixed window                | Simulation                          |
+| 19    | Caching and performance                | ETags and Cache-Control                     | Simulation                          |
+| 20    | Gateways and developer experience      | Gateways and developer portals              | Animated infographic, Build connect |
+| 21    | Capstone: an API for a parcel service  | Parcel API through a year of use            | Branching scenario, Build connect   |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -465,6 +498,7 @@ Platform & cloud area, fourth track (started 2026-10-03). 21 modules in 5 chapte
 | 4h. Kubernetes             | Platform & cloud, second track, 23 modules                                              | Live: all 23 modules (2026-10-03)                                       |
 | 4i. CI/CD                  | Platform & cloud, third track, 21 modules                                               | Live: all 21 modules (2026-10-03)                                       |
 | 4j. Observability          | Platform & cloud, fourth track, 21 modules                                              | Live: all 21 modules (2026-10-03)                                       |
+| 4k. API Design             | Architecture, second track, 21 modules                                                  | In progress: 1 of 21 modules                                            |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

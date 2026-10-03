@@ -195,6 +195,18 @@
   --bg-glow: rgb(34 211 238 / 0.1);
 }
 
+[data-track="contract"] {
+  --accent: #15803d;
+  --accent-soft: rgb(21 128 61 / 0.1);
+  --bg-glow: rgb(22 163 74 / 0.12);
+}
+[data-theme="dark"] [data-track="contract"],
+[data-theme="dark"][data-track="contract"] {
+  --accent: #4ade80;
+  --accent-soft: rgb(74 222 128 / 0.14);
+  --bg-glow: rgb(74 222 128 / 0.1);
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);
