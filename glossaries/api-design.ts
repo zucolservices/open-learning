@@ -183,4 +183,10 @@ export const apiDesign = {
       "Google's compact binary format for structured data. Messages are defined in .proto files, each field with a number; only the numbers and values are sent, which makes messages small and fast to parse.",
     module: "grpc",
   },
+  resolver: {
+    term: "Resolver",
+    definition:
+      "In GraphQL, the server function that fetches the data for one field. A query is answered by running the resolvers for every field it asks for, which can add up to many database calls.",
+    module: "graphql",
+  },
 } satisfies Record<string, GlossaryEntry>;

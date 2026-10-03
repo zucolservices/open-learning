@@ -264,4 +264,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "api-design/versioning": () => import("./api-design/versioning"),
   "api-design/deprecation": () => import("./api-design/deprecation"),
   "api-design/grpc": () => import("./api-design/grpc"),
+  "api-design/graphql": () => import("./api-design/graphql"),
 };

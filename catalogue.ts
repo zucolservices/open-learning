@@ -6303,11 +6303,12 @@ const apiDesign: Track = {
             "Over- and under-fetching",
             "N+1 and query cost limits",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["api-styles"],
           plain:
             "With GraphQL the client sends a query describing the exact fields it wants and gets back just those, in one round trip. The flexibility moves work to the server, which then has to guard against slow or very expensive queries.",
+          terms: ["graphql", "resolver", "rest"],
         },
         {
           slug: "webhooks",
