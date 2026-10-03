@@ -328,4 +328,54 @@ export const databaseInternals = {
       "Replacing many fine-grained locks (rows or pages) with one coarse lock (a table) to save memory, at the cost of blocking more of other transactions' work. SQL Server does this automatically.",
     module: "locking",
   },
+  mvcc: {
+    term: "MVCC (multi-version concurrency control)",
+    definition:
+      "Keeping several versions of each row so that every transaction reads a consistent snapshot. Readers don't block writers and writers don't block readers; old versions are cleaned up later.",
+    analogy:
+      "Pinning the new timetable beside the old one instead of taking the old one down mid-read.",
+    module: "mvcc",
+  },
+  xmin: {
+    term: "xmin and xmax",
+    definition:
+      "Hidden columns on every PostgreSQL row version: xmin is the ID of the transaction that created it, xmax the ID of the transaction that deleted or replaced it (0 if none). Together with a snapshot they decide which version a transaction sees.",
+    module: "mvcc",
+  },
+  "vacuum-pg": {
+    term: "VACUUM (PostgreSQL)",
+    definition:
+      "The PostgreSQL command that removes dead row versions no transaction can still see, marks their space reusable and freezes old rows against transaction ID wraparound. It doesn't normally shrink the table file.",
+    module: "mvcc",
+  },
+  autovacuum: {
+    term: "Autovacuum",
+    definition:
+      "PostgreSQL's background process that runs VACUUM and ANALYZE automatically as tables change.",
+    module: "mvcc",
+  },
+  "xid-wraparound": {
+    term: "Transaction ID wraparound",
+    definition:
+      "PostgreSQL transaction IDs are 32-bit and compared on a circle, so a row left unfrozen for more than about 2 billion transactions would appear to be in the future and vanish. VACUUM's freezing prevents it.",
+    module: "mvcc",
+  },
+  "hot-update": {
+    term: "HOT update",
+    definition:
+      "A heap-only tuple update in PostgreSQL: when no indexed column changes and the page has free space, the new row version stays on the same page and no new index entries are written.",
+    module: "mvcc",
+  },
+  "undo-log": {
+    term: "Undo log",
+    definition:
+      "A record of the old values of changed rows, kept so a transaction can be rolled back and so readers can rebuild earlier versions for their snapshot. Used by InnoDB and Oracle for MVCC.",
+    module: "mvcc",
+  },
+  snapshot: {
+    term: "Snapshot",
+    definition:
+      "The view of the database a transaction or statement reads from: only changes committed before it was taken are visible, whatever happens afterwards.",
+    module: "mvcc",
+  },
 } satisfies Record<string, GlossaryEntry>;

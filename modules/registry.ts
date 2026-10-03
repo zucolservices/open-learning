@@ -289,4 +289,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "database-internals/acid": () => import("./database-internals/acid"),
   "database-internals/isolation": () => import("./database-internals/isolation"),
   "database-internals/locking": () => import("./database-internals/locking"),
+  "database-internals/mvcc": () => import("./database-internals/mvcc"),
 };
