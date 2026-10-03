@@ -288,4 +288,16 @@ export const apiDesign = {
       "The HTTP header that tells browsers, apps and CDNs whether and how long they may reuse a response, with directives such as max-age, no-cache, no-store and private.",
     module: "api-performance",
   },
+  "api-gateway": {
+    term: "API gateway",
+    definition:
+      "A server that sits in front of your APIs and handles shared concerns in one place, such as HTTPS, checking keys and tokens, rate limits, routing and logging, before passing requests to the right service.",
+    module: "gateways-dx",
+  },
+  "developer-experience": {
+    term: "Developer experience",
+    definition:
+      "How easy and pleasant an API is for developers to learn and use: documentation, examples, sandboxes, SDKs, clear errors and how quickly a newcomer can make a first successful call.",
+    module: "gateways-dx",
+  },
 } satisfies Record<string, GlossaryEntry>;

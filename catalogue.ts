@@ -6430,11 +6430,12 @@ const apiDesign: Track = {
             "Put an API behind a gateway, then judge three developer portals by how fast a newcomer makes a first call",
           formats: ["animated-infographic", "build-connect", "checkpoint"],
           concepts: ["API gateways", "Documentation, SDKs and sandboxes", "Time to first call"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["rate-limits"],
           plain:
             "An API gateway sits in front of your services to handle sign-in, limits and routing in one place. But an API succeeds only if developers can understand it quickly: clear documentation, examples and a sandbox matter as much as the code.",
+          terms: ["api-gateway", "developer-experience", "rate-limit", "openapi"],
         },
         {
           slug: "capstone-api",
