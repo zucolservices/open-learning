@@ -135,4 +135,10 @@ export const apiDesign = {
       "In pagination, a token that marks where the last page ended, like a bookmark. The client passes it back to get the next page, which stays correct even if items are added or removed.",
     module: "pagination",
   },
+  "idempotency-key": {
+    term: "Idempotency key",
+    definition:
+      "A unique value a client generates for one operation, such as a payment, and sends with every retry. The server remembers the result for that key and replays it instead of doing the operation again.",
+    module: "idempotency",
+  },
 } satisfies Record<string, GlossaryEntry>;

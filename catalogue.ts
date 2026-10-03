@@ -6197,11 +6197,12 @@ const apiDesign: Track = {
           signature: "Retry a payment through a flaky network with and without an idempotency key",
           formats: ["simulation", "checkpoint"],
           concepts: ["Why retries happen", "Idempotent methods", "Idempotency keys"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["methods-errors"],
           plain:
             "Networks fail mid-request, so clients retry, and a retried payment must not charge twice. An idempotent operation gives the same result however many times it runs; idempotency keys make that possible even for actions like payments.",
+          terms: ["idempotent", "idempotency-key", "http-method"],
         },
       ],
     },
