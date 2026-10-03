@@ -6668,11 +6668,12 @@ const databaseInternals: Track = {
           signature: "Join orders to customers three ways and count the work as the tables grow",
           formats: ["simulation", "checkpoint"],
           concepts: ["Nested loop", "Hash join", "Merge join"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["query-planning"],
           plain:
             "Combining two tables can be done in very different ways: for each row look up its match, build a hash table of one side, or walk two sorted lists together. The right choice depends on table sizes and indexes.",
+          terms: ["join", "hash-join", "query-plan", "index"],
         },
         {
           slug: "cost-optimiser",

@@ -184,4 +184,16 @@ export const databaseInternals = {
       "A SQL command that shows the plan the database would use for a query, with estimated costs and row counts. EXPLAIN ANALYZE also runs the query and shows what actually happened.",
     module: "query-planning",
   },
+  join: {
+    term: "Join",
+    definition:
+      "Combining rows from two tables that match on a condition, such as each order with its customer. Databases do it with nested loops, hash joins or merge joins.",
+    module: "joins",
+  },
+  "hash-join": {
+    term: "Hash join",
+    definition:
+      "A join method that builds an in-memory lookup table from one input, then streams the other input through it to find matches. Fast for large equality joins; slows down if the table spills to disk.",
+    module: "joins",
+  },
 } satisfies Record<string, GlossaryEntry>;
