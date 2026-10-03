@@ -20,6 +20,8 @@ import { ObservabilityScene } from "@/components/home/observability-scene";
 import { ObservabilityTaste } from "@/components/home/observability-taste";
 import { ApiDesignScene } from "@/components/home/api-design-scene";
 import { ApiDesignTaste } from "@/components/home/api-design-taste";
+import { DatabaseInternalsScene } from "@/components/home/database-internals-scene";
+import { DatabaseInternalsTaste } from "@/components/home/database-internals-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -116,5 +118,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: ApiDesignTaste,
     tasteCaption:
       "A taste of module 7: page through a list while orders arrive or are cancelled. Offsets repeat or skip; cursors don't.",
+  },
+  "database-internals": {
+    Scene: DatabaseInternalsScene,
+    sceneCaption:
+      "One query's journey through a database engine, from SQL text to pages on disk, with the log and the copies that keep it safe. Watch the tour, or click any part.",
+    Taste: DatabaseInternalsTaste,
+    tasteCaption:
+      "A taste of module 15: two transactions collide at each isolation level. Find the lowest level that stops each glitch.",
   },
 };
