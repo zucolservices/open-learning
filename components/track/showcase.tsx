@@ -18,6 +18,8 @@ import { CiCdScene } from "@/components/home/ci-cd-scene";
 import { CiCdTaste } from "@/components/home/ci-cd-taste";
 import { ObservabilityScene } from "@/components/home/observability-scene";
 import { ObservabilityTaste } from "@/components/home/observability-taste";
+import { ApiDesignScene } from "@/components/home/api-design-scene";
+import { ApiDesignTaste } from "@/components/home/api-design-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -106,5 +108,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: ObservabilityTaste,
     tasteCaption:
       "A taste of module 15: three alert rules over the same week. Which one wakes people only for real problems?",
+  },
+  "api-design": {
+    Scene: ApiDesignScene,
+    sceneCaption:
+      "One request to a parcel API, from a partner's app through the gateway and back, with the promises around it. Watch the tour, or click any part.",
+    Taste: ApiDesignTaste,
+    tasteCaption:
+      "A taste of module 7: page through a list while orders arrive or are cancelled. Offsets repeat or skip; cursors don't.",
   },
 };
