@@ -6580,11 +6580,12 @@ const databaseInternals: Track = {
             "Insert keys into a B+tree, watch pages split and the tree grow upwards, then find one row in three page reads",
           formats: ["simulation", "step-through", "checkpoint"],
           concepts: ["Balanced trees of pages", "Splits and fan-out", "Range scans"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["pages-rows"],
           plain:
             "A B-tree index is like a book's index arranged in levels: a few top pages point to many lower pages, which point to rows. Even a billion rows can be found in a handful of page reads.",
+          terms: ["btree", "page-split", "index", "page"],
         },
         {
           slug: "using-indexes",

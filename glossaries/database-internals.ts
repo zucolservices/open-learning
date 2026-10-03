@@ -99,4 +99,17 @@ export const databaseInternals = {
       "A page in memory that has been changed but not yet written back to storage. It must be flushed before its memory can be reused.",
     module: "buffer-pool",
   },
+  btree: {
+    term: "B-tree",
+    definition:
+      "A balanced tree of pages used for most database indexes: upper pages hold guide keys pointing to lower pages, and the leaves hold every key in sorted order, so any key is found in a few page reads.",
+    analogy: "A multi-volume dictionary with guide words at the top of every page.",
+    module: "btrees",
+  },
+  "page-split": {
+    term: "Page split",
+    definition:
+      "What happens when a B-tree page is full and a new key must go in: part of its keys move to a new page and the parent gets a pointer to it. A split of the root adds a level to the tree.",
+    module: "btrees",
+  },
 } satisfies Record<string, GlossaryEntry>;
