@@ -287,4 +287,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "database-internals/cost-optimiser": () => import("./database-internals/cost-optimiser"),
   "database-internals/wal-recovery": () => import("./database-internals/wal-recovery"),
   "database-internals/acid": () => import("./database-internals/acid"),
+  "database-internals/isolation": () => import("./database-internals/isolation"),
 };

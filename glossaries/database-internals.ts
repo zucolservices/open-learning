@@ -246,4 +246,47 @@ export const databaseInternals = {
       "The default mode in which each SQL statement runs as its own transaction and commits immediately, unless you start a transaction explicitly with BEGIN.",
     module: "acid",
   },
+  "isolation-level": {
+    term: "Isolation level",
+    definition:
+      "A setting that decides how much concurrent transactions may see of each other's work, and so which anomalies can happen: read uncommitted, read committed, repeatable read or serializable.",
+    analogy: "How many bank counters share one ledger at once.",
+    module: "isolation",
+  },
+  "dirty-read": {
+    term: "Dirty read",
+    definition:
+      "Reading data written by another transaction that hasn't committed yet, and might still roll back.",
+    module: "isolation",
+  },
+  "non-repeatable-read": {
+    term: "Non-repeatable read",
+    definition:
+      "Reading the same row twice in one transaction and getting different values, because another transaction changed it and committed in between.",
+    module: "isolation",
+  },
+  "phantom-read": {
+    term: "Phantom read",
+    definition:
+      "Running the same search twice in one transaction and getting a different set of rows, because another transaction inserted or deleted matching rows and committed.",
+    module: "isolation",
+  },
+  "write-skew": {
+    term: "Write skew",
+    definition:
+      "Two concurrent transactions read overlapping data, then each updates a different row based on what it read, together breaking a rule neither would break alone (for example, both on-call doctors going off call).",
+    module: "isolation",
+  },
+  "snapshot-isolation": {
+    term: "Snapshot isolation",
+    definition:
+      "Each transaction reads from a consistent snapshot of the database taken when it starts, and a write fails if another transaction already changed the same row. Prevents dirty reads, non-repeatable reads and lost updates, but allows write skew.",
+    module: "isolation",
+  },
+  ssi: {
+    term: "Serializable snapshot isolation (SSI)",
+    definition:
+      "Snapshot isolation plus tracking of which transactions read what others wrote; when a pattern could produce a non-serializable result, one transaction is aborted to be retried. PostgreSQL's serializable level since 9.1.",
+    module: "isolation",
+  },
 } satisfies Record<string, GlossaryEntry>;
