@@ -291,4 +291,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "database-internals/locking": () => import("./database-internals/locking"),
   "database-internals/mvcc": () => import("./database-internals/mvcc"),
   "database-internals/replication-internals": () => import("./database-internals/replication-internals"),
+  "database-internals/distributed-sql": () => import("./database-internals/distributed-sql"),
 };

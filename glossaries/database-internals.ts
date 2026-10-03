@@ -421,4 +421,41 @@ export const databaseInternals = {
       "MySQL mode where a commit waits until at least one replica has received the change and flushed it to its relay log (not applied it). Falls back to asynchronous if no replica answers in time.",
     module: "replication-internals",
   },
+  "distributed-sql": {
+    term: "Distributed SQL",
+    definition:
+      "A relational database that spreads its data across many machines, replicates each piece with a consensus protocol, and still offers SQL and ACID transactions. Examples: Spanner, CockroachDB, TiDB, YugabyteDB.",
+    module: "distributed-sql",
+  },
+  consensus: {
+    term: "Consensus",
+    definition:
+      "Getting a group of machines to agree on a sequence of values (such as log entries) even when some crash or messages are lost. Raft and Paxos are consensus protocols.",
+    analogy: "Five friends booking a restaurant: it's decided once three say yes.",
+    module: "distributed-sql",
+  },
+  raft: {
+    term: "Raft",
+    definition:
+      "A consensus protocol (Ongaro and Ousterhout, 2014) designed to be understandable: an elected leader copies log entries to followers, and an entry commits once a majority has it.",
+    module: "distributed-sql",
+  },
+  paxos: {
+    term: "Paxos",
+    definition:
+      "Leslie Lamport's consensus protocol (published 1998), the foundation of many replicated systems, including Google's Spanner.",
+    module: "distributed-sql",
+  },
+  truetime: {
+    term: "TrueTime",
+    definition:
+      "Google Spanner's clock API: it returns the current time as an interval guaranteed to contain the true time, using GPS and atomic clocks. Spanner waits out the uncertainty before making a commit visible.",
+    module: "distributed-sql",
+  },
+  hlc: {
+    term: "Hybrid logical clock (HLC)",
+    definition:
+      "A timestamp made of a physical part (close to wall-clock time) and a logical counter that orders events with the same physical time. Used by CockroachDB.",
+    module: "distributed-sql",
+  },
 } satisfies Record<string, GlossaryEntry>;

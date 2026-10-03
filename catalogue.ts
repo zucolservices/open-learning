@@ -6854,11 +6854,22 @@ const databaseInternals: Track = {
             "Elect a leader with Raft, lose a node, and see a write commit only when a majority agrees",
           formats: ["simulation", "step-through", "checkpoint"],
           concepts: ["Sharding with transactions", "Raft consensus", "Clocks and ordering"],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["replication-internals"],
           plain:
             "Distributed SQL databases split data across many machines but still offer transactions. Each piece of data is copied to several machines that agree on every change through a consensus protocol such as Raft.",
+          terms: [
+            "distributed-sql",
+            "shard",
+            "consensus",
+            "raft",
+            "paxos",
+            "truetime",
+            "hlc",
+            "two-phase-commit",
+            "replica",
+          ],
         },
         {
           slug: "engines-compared",
