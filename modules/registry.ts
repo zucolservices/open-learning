@@ -284,4 +284,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "database-internals/other-indexes": () => import("./database-internals/other-indexes"),
   "database-internals/query-planning": () => import("./database-internals/query-planning"),
   "database-internals/joins": () => import("./database-internals/joins"),
+  "database-internals/cost-optimiser": () => import("./database-internals/cost-optimiser"),
 };

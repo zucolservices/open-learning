@@ -6684,11 +6684,12 @@ const databaseInternals: Track = {
             "Load a million rows without refreshing statistics and watch the optimiser pick a terrible plan",
           formats: ["simulation", "fix-the-problem", "checkpoint"],
           concepts: ["Statistics and histograms", "Cardinality estimates", "Stale statistics"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["joins"],
           plain:
             "The planner relies on statistics about the data, such as how many rows a table has and how values are spread. When those numbers are out of date, its estimates go wrong and it can choose a plan thousands of times slower.",
+          terms: ["table-statistics", "cardinality-estimate", "query-planner", "explain"],
         },
       ],
     },

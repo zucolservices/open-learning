@@ -196,4 +196,16 @@ export const databaseInternals = {
       "A join method that builds an in-memory lookup table from one input, then streams the other input through it to find matches. Fast for large equality joins; slows down if the table spills to disk.",
     module: "joins",
   },
+  "table-statistics": {
+    term: "Table statistics",
+    definition:
+      "Summaries a database keeps about its data, such as row counts, distinct values and common values with their frequencies, which the planner uses to estimate how many rows each step will produce.",
+    module: "cost-optimiser",
+  },
+  "cardinality-estimate": {
+    term: "Cardinality estimate",
+    definition:
+      "The planner's guess of how many rows a step of a query will produce. When it's far from reality, the planner can choose a plan that is thousands of times slower.",
+    module: "cost-optimiser",
+  },
 } satisfies Record<string, GlossaryEntry>;
