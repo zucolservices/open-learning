@@ -6616,11 +6616,12 @@ const databaseInternals: Track = {
             "Write keys into a memtable, flush sorted files, then compact them, and see where a read has to look",
           formats: ["simulation", "step-through", "checkpoint"],
           concepts: ["Memtables and SSTables", "Compaction", "Bloom filters"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["btrees"],
           plain:
             "Some databases never update data in place. They collect writes in memory, write them out as sorted files, and merge those files in the background. Writes become very fast; reads may have to check several files.",
+          terms: ["lsm-tree", "memtable", "sstable", "compaction", "bloom-filter"],
         },
         {
           slug: "other-indexes",

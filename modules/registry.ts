@@ -280,4 +280,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "database-internals/buffer-pool": () => import("./database-internals/buffer-pool"),
   "database-internals/btrees": () => import("./database-internals/btrees"),
   "database-internals/using-indexes": () => import("./database-internals/using-indexes"),
+  "database-internals/lsm-trees": () => import("./database-internals/lsm-trees"),
 };

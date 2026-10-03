@@ -130,4 +130,34 @@ export const databaseInternals = {
       "The share of rows a condition matches. A selective condition matches few rows and suits an index; one matching most of the table is cheaper to answer with a full scan.",
     module: "using-indexes",
   },
+  "lsm-tree": {
+    term: "LSM tree",
+    definition:
+      "Log-structured merge-tree: a storage design that collects writes in memory, writes them out as sorted immutable files, and merges those files in the background. Very fast writes; reads may check several files.",
+    module: "lsm-trees",
+  },
+  memtable: {
+    term: "Memtable",
+    definition:
+      "The sorted in-memory table where an LSM tree collects new writes before flushing them to disk as a file.",
+    module: "lsm-trees",
+  },
+  sstable: {
+    term: "SSTable",
+    definition:
+      "Sorted string table: an immutable file of key-value pairs sorted by key, written when an LSM tree's memtable is flushed.",
+    module: "lsm-trees",
+  },
+  compaction: {
+    term: "Compaction",
+    definition:
+      "Merging data files in the background, keeping only the newest version of each key and removing deleted entries, so reads check fewer files and old data stops using disk space.",
+    module: "lsm-trees",
+  },
+  "bloom-filter": {
+    term: "Bloom filter",
+    definition:
+      "A compact bit array that can say 'definitely not here' or 'maybe here' for a key, with a small rate of false 'maybes'. LSM trees use one per file to skip files that can't contain a key.",
+    module: "lsm-trees",
+  },
 } satisfies Record<string, GlossaryEntry>;
