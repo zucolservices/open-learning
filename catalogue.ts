@@ -6653,11 +6653,12 @@ const databaseInternals: Track = {
           signature: "Read an EXPLAIN plan node by node, then compare two plans for the same query",
           formats: ["step-through", "checkpoint"],
           concepts: ["Parse trees and plans", "EXPLAIN", "Scans and operators"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["using-indexes"],
           plain:
             "SQL says what you want, not how to get it. The planner considers different ways to answer a query, such as which index to use and in what order to join tables, and picks the one it estimates is cheapest.",
+          terms: ["query-plan", "explain", "query-planner", "index"],
         },
         {
           slug: "joins",

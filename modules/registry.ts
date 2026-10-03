@@ -282,4 +282,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "database-internals/using-indexes": () => import("./database-internals/using-indexes"),
   "database-internals/lsm-trees": () => import("./database-internals/lsm-trees"),
   "database-internals/other-indexes": () => import("./database-internals/other-indexes"),
+  "database-internals/query-planning": () => import("./database-internals/query-planning"),
 };

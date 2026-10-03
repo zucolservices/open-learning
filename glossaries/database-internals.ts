@@ -172,4 +172,16 @@ export const databaseInternals = {
       "An index for finding the stored vectors (lists of numbers that capture meaning) closest to a query vector. Approximate ones such as HNSW trade a little accuracy for much faster search.",
     module: "other-indexes",
   },
+  "query-plan": {
+    term: "Query plan",
+    definition:
+      "The tree of steps a database chooses to run a query, such as which tables to scan, which indexes to use and how to join them. The same query can have many possible plans with very different costs.",
+    module: "query-planning",
+  },
+  explain: {
+    term: "EXPLAIN",
+    definition:
+      "A SQL command that shows the plan the database would use for a query, with estimated costs and row counts. EXPLAIN ANALYZE also runs the query and shows what actually happened.",
+    module: "query-planning",
+  },
 } satisfies Record<string, GlossaryEntry>;
