@@ -6362,11 +6362,12 @@ const apiDesign: Track = {
             "Step through an OAuth 2.0 sign-in with PKCE, then decode a token and spot what's wrong with it",
           formats: ["step-through", "checkpoint"],
           concepts: ["API keys", "OAuth 2.0 and OpenID Connect", "Access tokens and JWTs"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["http-basics"],
           plain:
             "APIs need to know who is calling. Simple ones use an API key; when a user lets an app act on their behalf, OAuth 2.0 issues the app a short-lived access token instead of handing over the user's password.",
+          terms: ["authentication", "oauth", "access-token", "pkce", "jwt"],
         },
         {
           slug: "api-security",

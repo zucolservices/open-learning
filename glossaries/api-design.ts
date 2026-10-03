@@ -213,4 +213,35 @@ export const apiDesign = {
       "A protocol that upgrades an HTTP connection into a long-lived, two-way channel, so client and server can each send messages at any time. Used for chat, games and live collaboration.",
     module: "realtime",
   },
+  authentication: {
+    term: "Authentication",
+    definition:
+      "Proving who is making a request, with something like an API key, a token or a certificate. Authorisation is the separate question of what that caller is allowed to do.",
+    module: "authentication",
+  },
+  oauth: {
+    term: "OAuth 2.0",
+    definition:
+      "A standard (RFC 6749) that lets a user give an app limited, revocable access to their data on another service, via access tokens, without sharing their password.",
+    analogy: "A valet key: enough to park the car, not to open the boot.",
+    module: "authentication",
+  },
+  "access-token": {
+    term: "Access token",
+    definition:
+      "A short-lived credential an app sends with each API request (often as 'Authorization: Bearer …') showing what it has been allowed to do, and for whom.",
+    module: "authentication",
+  },
+  pkce: {
+    term: "PKCE",
+    definition:
+      "Proof Key for Code Exchange (RFC 7636): the app creates a secret, sends only its hash when the user signs in, and reveals the secret when swapping the code for a token, so an intercepted code is useless.",
+    module: "authentication",
+  },
+  jwt: {
+    term: "JWT",
+    definition:
+      "JSON Web Token (RFC 7519): a compact token of base64url-encoded JSON claims, such as issuer, subject, audience and expiry, usually signed. Anyone can read a signed JWT; the signature only stops changes.",
+    module: "authentication",
+  },
 } satisfies Record<string, GlossaryEntry>;
