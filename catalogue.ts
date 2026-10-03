@@ -6726,11 +6726,12 @@ const databaseInternals: Track = {
             "Isolation and durability",
             "Commit and rollback",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["wal-recovery"],
           plain:
             "A transaction groups several changes so they all happen or none do. ACID names the guarantees: atomic, consistent, isolated and durable.",
+          terms: ["transaction", "acid", "autocommit", "wal", "durability"],
         },
         {
           slug: "isolation",

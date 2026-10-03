@@ -227,4 +227,23 @@ export const databaseInternals = {
       "A position in the write-ahead log that only ever increases, used to order changes and to track how far recovery or a replica has got.",
     module: "wal-recovery",
   },
+  transaction: {
+    term: "Transaction",
+    definition:
+      "A group of database changes treated as one unit: either all of them take effect (COMMIT) or none do (ROLLBACK), even if something fails halfway.",
+    analogy: "A contract: either everyone is bound by it or no one is.",
+    module: "acid",
+  },
+  acid: {
+    term: "ACID",
+    definition:
+      "The four guarantees of a transaction: Atomic (all or nothing), Consistent (rules hold), Isolated (concurrent transactions don't see each other's unfinished work) and Durable (committed changes survive crashes). Named by Härder and Reuter in 1983.",
+    module: "acid",
+  },
+  autocommit: {
+    term: "Autocommit",
+    definition:
+      "The default mode in which each SQL statement runs as its own transaction and commits immediately, unless you start a transaction explicitly with BEGIN.",
+    module: "acid",
+  },
 } satisfies Record<string, GlossaryEntry>;
