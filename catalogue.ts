@@ -6768,11 +6768,21 @@ const databaseInternals: Track = {
           signature: "Grab row locks in two transactions and create, detect and resolve a deadlock",
           formats: ["simulation", "checkpoint"],
           concepts: ["Shared and exclusive locks", "Two-phase locking", "Deadlock detection"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["isolation"],
           plain:
             "One way to keep transactions apart is locking: a transaction must hold a lock on a row before changing it. Locks make others wait, and sometimes two transactions each wait for the other forever: a deadlock.",
+          terms: [
+            "lock",
+            "deadlock",
+            "deadlock-timeout",
+            "two-phase-locking",
+            "gap-lock",
+            "lock-escalation",
+            "isolation",
+            "transaction",
+          ],
         },
         {
           slug: "mvcc",

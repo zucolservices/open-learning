@@ -289,4 +289,43 @@ export const databaseInternals = {
       "Snapshot isolation plus tracking of which transactions read what others wrote; when a pattern could produce a non-serializable result, one transaction is aborted to be retried. PostgreSQL's serializable level since 9.1.",
     module: "isolation",
   },
+  lock: {
+    term: "Lock",
+    definition:
+      "A claim a transaction holds on a row, table or other object so that conflicting transactions must wait until it's released, usually at COMMIT or ROLLBACK.",
+    analogy: "Holding the only knife in a kitchen.",
+    module: "locking",
+  },
+  deadlock: {
+    term: "Deadlock",
+    definition:
+      "Two or more transactions each waiting for a lock another of them holds, so none can proceed. Databases detect the cycle and abort one of them.",
+    analogy:
+      "Two cooks: one holds the knife and wants the board, the other holds the board and wants the knife.",
+    module: "locking",
+  },
+  "deadlock-timeout": {
+    term: "deadlock_timeout",
+    definition:
+      "PostgreSQL setting: how long a transaction waits for a lock before the server checks whether it is part of a deadlock. Default 1 second. It doesn't abort anything by itself.",
+    module: "locking",
+  },
+  "two-phase-locking": {
+    term: "Two-phase locking (2PL)",
+    definition:
+      "A rule for locking: a transaction takes all its locks (growing phase) before releasing any (shrinking phase). It guarantees a serializable result. Strict 2PL holds write locks until commit.",
+    module: "locking",
+  },
+  "gap-lock": {
+    term: "Gap lock",
+    definition:
+      "In MySQL InnoDB, a lock on the space between index entries that stops other transactions inserting there. Combined with a lock on the entry itself it's a next-key lock, used to prevent phantom rows.",
+    module: "locking",
+  },
+  "lock-escalation": {
+    term: "Lock escalation",
+    definition:
+      "Replacing many fine-grained locks (rows or pages) with one coarse lock (a table) to save memory, at the cost of blocking more of other transactions' work. SQL Server does this automatically.",
+    module: "locking",
+  },
 } satisfies Record<string, GlossaryEntry>;
