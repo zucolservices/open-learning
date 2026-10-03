@@ -266,4 +266,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "api-design/grpc": () => import("./api-design/grpc"),
   "api-design/graphql": () => import("./api-design/graphql"),
   "api-design/webhooks": () => import("./api-design/webhooks"),
+  "api-design/realtime": () => import("./api-design/realtime"),
 };

@@ -6339,11 +6339,12 @@ const apiDesign: Track = {
             "Stream live match scores with polling, long polling, server-sent events and WebSockets and compare the cost",
           formats: ["simulation", "checkpoint"],
           concepts: ["Polling and long polling", "Server-sent events", "WebSockets"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["http-basics"],
           plain:
             "Some apps need updates the moment they happen: chat, live scores, ride tracking. Polling asks repeatedly, server-sent events keep one response open for the server to stream into, and WebSockets open a two-way channel.",
+          terms: ["sse", "websocket", "polling", "http"],
         },
       ],
     },

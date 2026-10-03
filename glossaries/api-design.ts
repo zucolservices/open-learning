@@ -201,4 +201,16 @@ export const apiDesign = {
       "A code computed from a message and a shared secret key. The receiver recomputes it to check the message came from someone holding the secret and wasn't altered on the way.",
     module: "webhooks",
   },
+  sse: {
+    term: "Server-sent events",
+    definition:
+      "A way for a server to push a stream of events to a client over one long-lived HTTP response (content type text/event-stream). One-way, with automatic reconnection in browsers.",
+    module: "realtime",
+  },
+  websocket: {
+    term: "WebSocket",
+    definition:
+      "A protocol that upgrades an HTTP connection into a long-lived, two-way channel, so client and server can each send messages at any time. Used for chat, games and live collaboration.",
+    module: "realtime",
+  },
 } satisfies Record<string, GlossaryEntry>;
