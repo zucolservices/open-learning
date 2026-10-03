@@ -123,4 +123,16 @@ export const apiDesign = {
       "A field that may only hold one of a fixed list of values, such as a payment status of pending, succeeded or failed. New values may be added later, so clients should handle ones they don't recognise.",
     module: "payload-design",
   },
+  pagination: {
+    term: "Pagination",
+    definition:
+      "Splitting a long list of results into pages, so a client fetches a manageable number at a time and asks for the next page when it needs it.",
+    module: "pagination",
+  },
+  cursor: {
+    term: "Cursor",
+    definition:
+      "In pagination, a token that marks where the last page ended, like a bookmark. The client passes it back to get the next page, which stays correct even if items are added or removed.",
+    module: "pagination",
+  },
 } satisfies Record<string, GlossaryEntry>;

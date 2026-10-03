@@ -6182,11 +6182,12 @@ const apiDesign: Track = {
             "Filtering and sorting",
             "Consistency while paging",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["resources-urls"],
           plain:
             "No API returns a million records at once. Pagination splits results into pages; how you mark your place (a page number or a cursor) decides whether items get skipped or duplicated when the data changes underneath you.",
+          terms: ["pagination", "cursor", "collection"],
         },
         {
           slug: "idempotency",
