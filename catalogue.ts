@@ -6126,11 +6126,12 @@ const apiDesign: Track = {
           signature: "Redesign a messy set of endpoints for a library into clean resources",
           formats: ["fix-the-problem", "checkpoint"],
           concepts: ["Resources and collections", "Nesting and identifiers", "Naming conventions"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["api-styles"],
           plain:
             "A REST API is organised around things (books, members, loans) rather than actions. Each thing gets a URL, collections hold many of them, and the HTTP method says what you want to do.",
+          terms: ["resource", "url", "collection", "hateoas", "rest"],
         },
         {
           slug: "methods-errors",

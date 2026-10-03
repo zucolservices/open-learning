@@ -87,4 +87,28 @@ export const apiDesign = {
       "An HTTP request an API sends to a URL the client chose, to tell it something happened, such as a payment succeeding. The client doesn't have to keep asking.",
     module: "webhooks",
   },
+  resource: {
+    term: "Resource",
+    definition:
+      "In REST, any thing the API lets you work with that can be named, such as a book, a member or a loan. Each resource has its own URL.",
+    module: "resources-urls",
+  },
+  url: {
+    term: "URL",
+    definition:
+      "Uniform Resource Locator: the address of a resource, such as https://api.library.example/books/42. Its parts are the scheme, the host, the path, an optional query (after ?) and fragment (after #).",
+    module: "resources-urls",
+  },
+  collection: {
+    term: "Collection",
+    definition:
+      "A resource that holds many resources of one kind, named with a plural noun, such as /books. GET lists them; POST adds one.",
+    module: "resources-urls",
+  },
+  hateoas: {
+    term: "Hypermedia (HATEOAS)",
+    definition:
+      "Short for 'hypermedia as the engine of application state': responses include links to related resources and to the actions allowed next, so clients can follow them instead of building URLs themselves.",
+    module: "resources-urls",
+  },
 } satisfies Record<string, GlossaryEntry>;

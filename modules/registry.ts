@@ -255,4 +255,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "api-design/what-is-an-api": () => import("./api-design/what-is-an-api"),
   "api-design/http-basics": () => import("./api-design/http-basics"),
   "api-design/api-styles": () => import("./api-design/api-styles"),
+  "api-design/resources-urls": () => import("./api-design/resources-urls"),
 };
