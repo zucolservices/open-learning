@@ -367,4 +367,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-quality/data-contracts": () => import("./data-quality/data-contracts"),
   "data-quality/schema-evolution": () => import("./data-quality/schema-evolution"),
   "data-quality/ownership": () => import("./data-quality/ownership"),
+  "data-quality/data-slas": () => import("./data-quality/data-slas"),
 };

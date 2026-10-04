@@ -8638,11 +8638,12 @@ const dataQuality: Track = {
             "Set a freshness objective for a dashboard and watch the error budget over a bad month",
           formats: ["simulation", "checkpoint"],
           concepts: ["Freshness and timeliness", "Service levels for data", "Error budgets"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["ownership"],
           plain:
             "Users care whether data is there and up to date when they need it. Service level objectives turn 'the dashboard should be fresh' into a measurable target, with a budget for how often it may miss.",
+          terms: ["data-freshness", "slo", "sla", "error-budget"],
         },
       ],
     },

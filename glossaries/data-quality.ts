@@ -194,4 +194,10 @@ export const dataQuality = {
       "Someone who looks after data day to day: definitions, quality rules and fixing issues. Exact titles vary between frameworks.",
     module: "ownership",
   },
+  "data-freshness": {
+    term: "Freshness",
+    definition:
+      "How up to date data is when someone uses it, often measured as the time since the newest record arrived or since the table last updated.",
+    module: "data-slas",
+  },
 } satisfies Record<string, GlossaryEntry>;
