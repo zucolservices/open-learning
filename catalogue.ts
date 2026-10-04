@@ -9876,11 +9876,12 @@ const llmEvaluation: Track = {
             "Compare two prompts on the same cases with paired tests and win rates, and avoid fooling yourself",
           formats: ["simulation", "checkpoint"],
           concepts: ["Paired comparisons", "Win rates", "Many comparisons, false wins"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["eval-statistics"],
           plain:
             "To compare two versions, run both on the same cases and look at where they differ. Paired comparisons need far fewer cases than separate ones, and testing many variants raises the odds that one 'wins' by luck.",
+          terms: ["paired-comparison", "p-value", "win-rate"],
         },
         {
           slug: "variance",

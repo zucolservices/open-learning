@@ -151,4 +151,22 @@ export const llmEvaluation = {
       "Estimating uncertainty by resampling your own data with replacement many times and looking at how much the result varies.",
     module: "eval-statistics",
   },
+  "paired-comparison": {
+    term: "Paired comparison",
+    definition:
+      "Comparing two versions on exactly the same cases, case by case, so differences between cases cancel out and fewer cases are needed.",
+    module: "comparing-versions",
+  },
+  "p-value": {
+    term: "p-value",
+    definition:
+      "How often a difference at least this big would appear by luck alone if there were no real difference. Small values suggest the difference is real.",
+    module: "comparing-versions",
+  },
+  "win-rate": {
+    term: "Win rate",
+    definition:
+      "The share of side-by-side comparisons one version wins. Only meaningful if you say how ties were counted.",
+    module: "comparing-versions",
+  },
 } satisfies Record<string, GlossaryEntry>;
