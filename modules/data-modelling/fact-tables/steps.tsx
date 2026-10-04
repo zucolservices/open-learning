@@ -98,7 +98,7 @@ export function ThreeTables() {
               max={DAYS}
               value={s.day}
               onChange={(e) => set({ day: Number(e.target.value) })}
-              className="flex-1 accent-accent"
+              className="accent-accent flex-1"
               aria-label="Day"
             />
             <span className="w-10 font-mono font-semibold">{s.day}</span>
@@ -288,7 +288,7 @@ export function Additivity() {
             )}
             {s.add === "balance" && (
               <>
-                <p className="text-sm font-semibold text-accent">Semi-additive</p>
+                <p className="text-accent text-sm font-semibold">Semi-additive</p>
                 <p className="mt-1 font-mono">
                   {BALANCES.map(([m, v]) => `${m} ₹${v.toLocaleString("en-IN")}`).join(" · ")}
                 </p>

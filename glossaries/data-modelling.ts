@@ -251,4 +251,22 @@ export const dataModelling = {
       "A fact table whose rows record only that dimensions met, such as a student attending a class, with no numeric measures.",
     module: "fact-tables",
   },
+  "conformed-dimension": {
+    term: "Conformed dimension",
+    definition:
+      "A dimension shared by several fact tables with identical column names and values, so their results can be combined on one report.",
+    module: "conformed-dimensions",
+  },
+  "bus-matrix": {
+    term: "Bus matrix",
+    definition:
+      "A grid with business processes as rows and dimensions as columns, marking which dimensions each process uses. Used to plan a warehouse one process at a time.",
+    module: "conformed-dimensions",
+  },
+  "drill-across": {
+    term: "Drill across",
+    definition:
+      "Combining fact tables by querying each one separately, grouped by the same conformed attributes, then merging the answers.",
+    module: "conformed-dimensions",
+  },
 } satisfies Record<string, GlossaryEntry>;

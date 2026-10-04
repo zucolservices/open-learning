@@ -8173,11 +8173,12 @@ const dataModelling: Track = {
           signature: "Fill in a bus matrix for a retailer and see which reports can be combined",
           formats: ["build-connect", "checkpoint"],
           concepts: ["Conformed dimensions", "The bus matrix", "Drilling across"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["star-schema"],
           plain:
             "When sales and returns use the same customer and product dimensions, their numbers can be compared side by side. Conformed dimensions are the glue that makes many stars one warehouse.",
+          terms: ["conformed-dimension", "bus-matrix", "drill-across"],
         },
         {
           slug: "dimension-patterns",

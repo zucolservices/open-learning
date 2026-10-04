@@ -344,4 +344,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-modelling/star-schema": () => import("./data-modelling/star-schema"),
   "data-modelling/grain": () => import("./data-modelling/grain"),
   "data-modelling/fact-tables": () => import("./data-modelling/fact-tables"),
+  "data-modelling/conformed-dimensions": () => import("./data-modelling/conformed-dimensions"),
 };
