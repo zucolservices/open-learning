@@ -7618,11 +7618,12 @@ const spark: Track = {
             "Change the number of partitions and cores and watch tasks run in waves, idle or overloaded",
           formats: ["simulation", "checkpoint"],
           concepts: ["Partitions and tasks", "Parallelism and cores", "Repartition vs coalesce"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["lazy-evaluation"],
           plain:
             "Spark splits data into partitions, and each partition becomes one task. Too few partitions leave cores idle; too many create overhead. Getting the count roughly right is one of the most useful tuning skills.",
+          terms: ["partition", "parallelism", "task", "coalesce", "repartition"],
         },
         {
           slug: "spark-sql",

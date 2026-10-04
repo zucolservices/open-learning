@@ -131,4 +131,29 @@ export const spark = {
       "A transformation where an output partition needs data from many input partitions, like groupBy or most joins. It requires a shuffle and starts a new stage.",
     module: "lazy-evaluation",
   },
+  partition: {
+    term: "Partition",
+    definition:
+      "One chunk of a distributed dataset. Spark processes each partition with one task, so the number of partitions limits how much work runs at once.",
+    analogy: "A bundle of exam papers handed to one marker.",
+    module: "partitions",
+  },
+  parallelism: {
+    term: "Parallelism",
+    definition:
+      "How many tasks run at the same time; limited by both the number of partitions and the number of free task slots (cores).",
+    module: "partitions",
+  },
+  coalesce: {
+    term: "coalesce",
+    definition:
+      "A DataFrame operation that reduces the number of partitions by merging neighbouring ones, without a full shuffle. It cannot increase the count.",
+    module: "partitions",
+  },
+  repartition: {
+    term: "repartition",
+    definition:
+      "A DataFrame operation that reshuffles all rows into a new number of evenly balanced partitions, optionally by key. It can increase or decrease the count, at the cost of a shuffle.",
+    module: "partitions",
+  },
 } satisfies Record<string, GlossaryEntry>;

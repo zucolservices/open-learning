@@ -319,4 +319,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "spark/cluster-anatomy": () => import("./spark/cluster-anatomy"),
   "spark/rdds-dataframes": () => import("./spark/rdds-dataframes"),
   "spark/lazy-evaluation": () => import("./spark/lazy-evaluation"),
+  "spark/partitions": () => import("./spark/partitions"),
 };
