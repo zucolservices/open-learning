@@ -8115,11 +8115,12 @@ const dataModelling: Track = {
             "Dimensions and attributes",
             "Why stars are fast and easy",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["oltp-olap"],
           plain:
             "In a star schema, a central fact table records business events with numbers you can add up, and surrounding dimension tables describe them: who, what, where, when. Questions become 'total this, by that'.",
+          terms: ["fact", "fact-table", "dimension-table", "star-schema"],
         },
         {
           slug: "grain",

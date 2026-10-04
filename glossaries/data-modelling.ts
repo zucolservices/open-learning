@@ -168,4 +168,28 @@ export const dataModelling = {
       "Extract, transform, load: copying data out of source systems, reshaping it and loading it into an analytical store. ELT loads first and transforms inside the warehouse.",
     module: "oltp-olap",
   },
+  fact: {
+    term: "Fact",
+    definition:
+      "A number measured by a business event, such as quantity sold or sale amount. Facts are usually added up.",
+    module: "star-schema",
+  },
+  "fact-table": {
+    term: "Fact table",
+    definition:
+      "The central table of a dimensional model: one row per measured event, holding numeric facts and a foreign key to each dimension.",
+    module: "star-schema",
+  },
+  "dimension-table": {
+    term: "Dimension table",
+    definition:
+      "A table describing the context of events (who, what, where, when), usually wide and flat with descriptive text used to filter and group.",
+    module: "star-schema",
+  },
+  "star-schema": {
+    term: "Star schema",
+    definition:
+      "A dimensional model in a relational database: a fact table in the centre joined by keys to the dimension tables around it.",
+    module: "star-schema",
+  },
 } satisfies Record<string, GlossaryEntry>;

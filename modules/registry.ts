@@ -341,4 +341,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-modelling/keys-relationships": () => import("./data-modelling/keys-relationships"),
   "data-modelling/normalisation": () => import("./data-modelling/normalisation"),
   "data-modelling/oltp-olap": () => import("./data-modelling/oltp-olap"),
+  "data-modelling/star-schema": () => import("./data-modelling/star-schema"),
 };
