@@ -175,4 +175,16 @@ export const llmEvaluation = {
       "Making a model server give the same output for a request however many other requests it is processed alongside, which removes a major cause of run-to-run differences.",
     module: "variance",
   },
+  benchmark: {
+    term: "Benchmark",
+    definition:
+      "A shared, public test set that many models are scored on, so their results can be compared.",
+    module: "benchmarks",
+  },
+  "benchmark-saturation": {
+    term: "Benchmark saturation",
+    definition:
+      "When top models all score near the maximum on a benchmark, so it can no longer tell them apart.",
+    module: "benchmarks",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -9919,11 +9919,12 @@ const llmEvaluation: Track = {
             "Saturation",
             "Benchmarks versus your use case",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["eval-statistics"],
           plain:
             "Model makers report scores on public benchmarks covering knowledge, reasoning, coding and more. They're useful for broad comparison, but many are nearly maxed out and none measures how well a model does your particular job.",
+          terms: ["benchmark", "benchmark-saturation"],
         },
         {
           slug: "contamination",
