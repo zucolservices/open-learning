@@ -9505,11 +9505,12 @@ const voiceAi: Track = {
             "What's gained: speed and tone",
             "What's lost: control and visibility",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["latency-budget"],
           plain:
             "Speech-to-speech models take audio in and produce audio out, without a text step in between. They respond faster and keep tone and emotion, but are harder to inspect, control and pair with any model you like.",
+          terms: ["speech-to-speech", "full-duplex", "voice-pipeline"],
         },
         {
           slug: "interruptions",

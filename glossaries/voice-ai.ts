@@ -181,4 +181,10 @@ export const voiceAi = {
       "How long a language model takes to produce the first piece of its reply; often the biggest slice of a voice agent's delay.",
     module: "latency-budget",
   },
+  "full-duplex": {
+    term: "Full duplex",
+    definition:
+      "Able to listen and speak at the same time, like a phone call rather than a walkie-talkie; full-duplex voice models can overlap, backchannel and be interrupted naturally.",
+    module: "speech-to-speech",
+  },
 } satisfies Record<string, GlossaryEntry>;

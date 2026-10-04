@@ -419,4 +419,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "voice-ai/writing-for-voice": () => import("./voice-ai/writing-for-voice"),
   "voice-ai/voice-cloning": () => import("./voice-ai/voice-cloning"),
   "voice-ai/latency-budget": () => import("./voice-ai/latency-budget"),
+  "voice-ai/speech-to-speech": () => import("./voice-ai/speech-to-speech"),
 };
