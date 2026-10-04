@@ -438,4 +438,41 @@ export const enterprisePatterns = {
     analogy: "A reversal line in a bank passbook.",
     module: "cqrs-event-sourcing",
   },
+  "integration-database": {
+    term: "Integration database (shared database)",
+    definition:
+      "One database used as the data store by several applications, which read and write each other's tables directly. Simple at first, but it couples every application to the shared schema.",
+    analogy: "One spreadsheet every department edits.",
+    module: "data-ownership",
+  },
+  "database-per-service": {
+    term: "Database per service",
+    definition:
+      "Keeping each service's data private to it, reachable by others only through its API or events. Private tables or a schema can be enough; it needn't be a separate server.",
+    module: "data-ownership",
+  },
+  "master-data-management": {
+    term: "Master data management (MDM)",
+    definition:
+      "A discipline, with supporting tools, for keeping an organisation's core shared entities (customers, products, suppliers) consistent and accurate across all its systems.",
+    module: "data-ownership",
+  },
+  "golden-record": {
+    term: "Golden record",
+    definition:
+      "The single best version of a core entity, such as a customer, assembled from all the systems that hold it according to agreed rules.",
+    module: "data-ownership",
+  },
+  "data-mesh": {
+    term: "Data mesh",
+    definition:
+      "Zhamak Dehghani's approach to analytical data: domain teams own and publish data products, on a self-serve platform, under federated governance.",
+    module: "data-ownership",
+  },
+  "data-product": {
+    term: "Data product",
+    definition:
+      "In data mesh, a dataset published by a domain team for others to use, with an owner, documentation and quality guarantees.",
+    module: "data-ownership",
+  },
 } satisfies Record<string, GlossaryEntry>;
