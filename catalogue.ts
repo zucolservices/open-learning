@@ -8376,11 +8376,12 @@ const dataModelling: Track = {
             "Correct a price that was wrong last month and answer what you knew then versus what was true then",
           formats: ["simulation", "checkpoint"],
           concepts: ["Effective dating", "Bitemporal models", "Snapshots and event tables"],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["scd"],
           plain:
             "Data changes, and sometimes past data turns out to be wrong. Tracking both when something was true and when you recorded it lets you answer 'what did the report say last month?' as well as 'what was actually true?'.",
+          terms: ["valid-time", "transaction-time", "bitemporal"],
         },
         {
           slug: "evolving-models",

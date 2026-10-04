@@ -466,4 +466,22 @@ export const dataModelling = {
       "Resource Description Framework: a W3C standard that represents data as subject–predicate–object triples using web identifiers.",
     module: "graph-modelling",
   },
+  "valid-time": {
+    term: "Valid time",
+    definition:
+      "When a fact was true in the real world, such as the date a price actually changed. Also called effective or application time.",
+    module: "modelling-time",
+  },
+  "transaction-time": {
+    term: "Transaction time",
+    definition:
+      "When the database recorded a fact, such as the day a price change was entered. Also called recorded or system time.",
+    module: "modelling-time",
+  },
+  bitemporal: {
+    term: "Bitemporal",
+    definition:
+      "Keeping both valid time and transaction time, so you can ask what was true at a date and what the system believed at a date.",
+    module: "modelling-time",
+  },
 } satisfies Record<string, GlossaryEntry>;
