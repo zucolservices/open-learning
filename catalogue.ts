@@ -7075,11 +7075,19 @@ const enterprisePatterns: Track = {
             "Conformist, shared kernel, open host",
             "Anticorruption layer",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["bounded-contexts"],
           plain:
             "Once you have boundaries, you need to know how each pair of contexts depends on the other and who adapts to whom. A context map records it, and warns where trouble will come from.",
+          terms: [
+            "context-map",
+            "upstream-downstream",
+            "anticorruption-layer",
+            "open-host-service",
+            "published-language",
+            "bounded-context",
+          ],
         },
         {
           slug: "aggregates",

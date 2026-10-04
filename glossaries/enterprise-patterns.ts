@@ -112,4 +112,35 @@ export const enterprisePatterns = {
       "A part specific to the business but not where it competes; build it simply or outsource it. The term comes from Vaughn Vernon's three-way split.",
     module: "bounded-contexts",
   },
+  "context-map": {
+    term: "Context map",
+    definition:
+      "A picture of all the bounded contexts in a system and how each pair relates: who depends on whom, and how models are shared or translated between them.",
+    module: "context-mapping",
+  },
+  "upstream-downstream": {
+    term: "Upstream and downstream",
+    definition:
+      "A relationship where one team's changes (upstream) affect another (downstream), but not the other way round.",
+    analogy: "Cities on a river: what the upstream city puts in, the downstream city drinks.",
+    module: "context-mapping",
+  },
+  "anticorruption-layer": {
+    term: "Anticorruption layer",
+    definition:
+      "A translating layer a downstream context builds around an upstream system, so it can use that system's functions in its own terms without the other model leaking in.",
+    module: "context-mapping",
+  },
+  "open-host-service": {
+    term: "Open-host service",
+    definition:
+      "An upstream context offering one documented protocol that every consumer can use, instead of a custom integration for each.",
+    module: "context-mapping",
+  },
+  "published-language": {
+    term: "Published language",
+    definition:
+      "A well-documented shared format for exchanging domain information between contexts, often an industry data standard.",
+    module: "context-mapping",
+  },
 } satisfies Record<string, GlossaryEntry>;
