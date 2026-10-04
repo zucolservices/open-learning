@@ -7267,11 +7267,18 @@ const enterprisePatterns: Track = {
           signature: "Swap a database and a UI under the same business core without touching it",
           formats: ["simulation", "checkpoint"],
           concepts: ["Layered architecture", "Ports and adapters", "Dependency rule"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["aggregates"],
           plain:
             "Put the business rules in the middle and everything technical (databases, web frameworks, message brokers) at the edges, plugged in through interfaces. Then the core can be tested and kept while the edges change.",
+          terms: [
+            "hexagonal-architecture",
+            "port",
+            "adapter",
+            "dependency-rule",
+            "anticorruption-layer",
+          ],
         },
         {
           slug: "monolith-microservices",

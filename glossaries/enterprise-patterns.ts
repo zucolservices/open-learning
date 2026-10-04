@@ -357,4 +357,29 @@ export const enterprisePatterns = {
       "A network of interconnected event brokers that lets events flow between applications wherever they run: data centres, clouds or the edge.",
     module: "esb-to-api-led",
   },
+  "hexagonal-architecture": {
+    term: "Ports and adapters (hexagonal architecture)",
+    definition:
+      "Alistair Cockburn's 2005 pattern: put the application's business logic in the middle, define ports (interfaces) for everything it talks to, and plug technology-specific adapters into them.",
+    analogy: "A laptop with one port and a travel adapter for each country.",
+    module: "hexagonal",
+  },
+  port: {
+    term: "Port",
+    definition:
+      'In ports and adapters, an interface owned by the application core that describes something it needs or offers, such as "load a policy" or "notify a customer".',
+    module: "hexagonal",
+  },
+  adapter: {
+    term: "Adapter",
+    definition:
+      "In ports and adapters, code that connects a port to a particular technology: a web controller, a PostgreSQL repository, an SMS client.",
+    module: "hexagonal",
+  },
+  "dependency-rule": {
+    term: "Dependency Rule",
+    definition:
+      "Robert C. Martin's rule for clean architecture: source code dependencies can only point inwards, so business rules never depend on frameworks, databases or user interfaces.",
+    module: "hexagonal",
+  },
 } satisfies Record<string, GlossaryEntry>;
