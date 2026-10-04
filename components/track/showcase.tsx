@@ -34,6 +34,8 @@ import { AiAgentsScene } from "@/components/home/ai-agents-scene";
 import { AiAgentsTaste } from "@/components/home/ai-agents-taste";
 import { VoiceAiScene } from "@/components/home/voice-ai-scene";
 import { VoiceAiTaste } from "@/components/home/voice-ai-taste";
+import { LlmEvaluationScene } from "@/components/home/llm-evaluation-scene";
+import { LlmEvaluationTaste } from "@/components/home/llm-evaluation-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -186,5 +188,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: VoiceAiTaste,
     tasteCaption:
       "A taste of module 12: cut the assistant off mid-sentence and compare what the caller heard with what the agent thinks it said.",
+  },
+  "llm-evaluation": {
+    Scene: LlmEvaluationScene,
+    sceneCaption:
+      "The evaluation loop: define good, build the set, grade, check with people, add error bars, test for harm, ship carefully and keep watching. Watch the tour, or click any part.",
+    Taste: LlmEvaluationTaste,
+    tasteCaption:
+      "A taste of module 6: switch on fixes and watch a biased LLM judge go from coin-flip to agreeing with experts.",
   },
 };
