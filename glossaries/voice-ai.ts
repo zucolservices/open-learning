@@ -91,4 +91,16 @@ export const voiceAi = {
       "Speech recognition that transcribes while you talk, sending interim guesses that may change and then a final transcript.",
     module: "speech-to-text",
   },
+  endpointing: {
+    term: "Endpointing",
+    definition:
+      "Deciding when a speaker has finished their turn, so a voice system can stop listening and reply.",
+    module: "turn-taking",
+  },
+  "semantic-turn-detection": {
+    term: "Semantic turn detection",
+    definition:
+      "Judging whether a speaker has finished from what they said (or how they said it), rather than from silence alone.",
+    module: "turn-taking",
+  },
 } satisfies Record<string, GlossaryEntry>;

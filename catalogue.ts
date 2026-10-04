@@ -9387,11 +9387,12 @@ const voiceAi: Track = {
             "Tune silence thresholds and a turn-detection model, and count interruptions and awkward pauses",
           formats: ["simulation", "checkpoint"],
           concepts: ["Voice activity detection", "Endpointing", "Semantic turn detection"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["speech-to-text"],
           plain:
             "A pause doesn't always mean someone has finished: they may be thinking mid-sentence. Waiting too long feels slow; replying too soon cuts people off. Good systems combine silence timing with models that judge whether a sentence is complete.",
+          terms: ["endpointing", "semantic-turn-detection", "vad", "turn-taking"],
         },
         {
           slug: "real-audio",

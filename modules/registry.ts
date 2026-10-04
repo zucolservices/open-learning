@@ -413,4 +413,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "voice-ai/sound-basics": () => import("./voice-ai/sound-basics"),
   "voice-ai/voice-pipeline": () => import("./voice-ai/voice-pipeline"),
   "voice-ai/speech-to-text": () => import("./voice-ai/speech-to-text"),
+  "voice-ai/turn-taking": () => import("./voice-ai/turn-taking"),
 };
