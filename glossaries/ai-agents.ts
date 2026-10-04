@@ -74,4 +74,28 @@ export const aiAgents = {
       "The description of a tool sent to a model: a name, a plain-language description and a JSON Schema for its inputs.",
     module: "tool-design",
   },
+  mcp: {
+    term: "Model Context Protocol (MCP)",
+    definition:
+      "An open standard, launched by Anthropic in 2024 and now under the Linux Foundation, for connecting AI apps to tools and data: a provider writes one MCP server and any compatible app can use it.",
+    module: "mcp",
+  },
+  "mcp-host": {
+    term: "MCP host",
+    definition:
+      "The AI application a person uses, such as a chat app or coding assistant, which runs MCP clients to reach servers.",
+    module: "mcp",
+  },
+  "mcp-client": {
+    term: "MCP client",
+    definition:
+      "The part of a host that holds one connection to one MCP server and sends it requests.",
+    module: "mcp",
+  },
+  "mcp-server": {
+    term: "MCP server",
+    definition:
+      "A program that offers tools, resources and prompts for one service, such as a calendar or code repository, to any MCP client.",
+    module: "mcp",
+  },
 } satisfies Record<string, GlossaryEntry>;

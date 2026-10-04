@@ -8950,11 +8950,12 @@ const aiAgents: Track = {
             "Tools, resources and prompts",
             "Local and remote servers",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["tool-design"],
           plain:
             "Every app used to wire up its own tool integrations. The Model Context Protocol is an open standard, like a universal plug: a tool provider writes one MCP server, and any compatible assistant can use it.",
+          terms: ["mcp", "mcp-host", "mcp-client", "mcp-server"],
         },
         {
           slug: "computer-use",
