@@ -9371,11 +9371,12 @@ const voiceAi: Track = {
             "Transcribe clips with batch and streaming recognition and score them with word error rate",
           formats: ["simulation", "checkpoint"],
           concepts: ["How recognisers work", "Streaming and partial results", "Word error rate"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["voice-pipeline"],
           plain:
             "Speech recognition turns audio into text. Live systems stream partial guesses as you speak and correct them as more audio arrives. Accuracy is measured by counting wrong, missing and extra words.",
+          terms: ["speech-to-text", "wer", "streaming-asr"],
         },
         {
           slug: "turn-taking",

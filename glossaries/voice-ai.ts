@@ -79,4 +79,16 @@ export const voiceAi = {
       "A single model that takes audio in and produces audio out, without a separate text step in between.",
     module: "voice-pipeline",
   },
+  wer: {
+    term: "Word error rate (WER)",
+    definition:
+      "The standard accuracy measure for speech recognition: substitutions plus deletions plus insertions, divided by the number of words actually said. Lower is better.",
+    module: "speech-to-text",
+  },
+  "streaming-asr": {
+    term: "Streaming recognition",
+    definition:
+      "Speech recognition that transcribes while you talk, sending interim guesses that may change and then a final transcript.",
+    module: "speech-to-text",
+  },
 } satisfies Record<string, GlossaryEntry>;
