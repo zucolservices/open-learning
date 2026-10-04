@@ -316,4 +316,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "enterprise-patterns/enterprise-architecture": () => import("./enterprise-patterns/enterprise-architecture"),
   "enterprise-patterns/capstone-enterprise": () => import("./enterprise-patterns/capstone-enterprise"),
   "spark/why-spark": () => import("./spark/why-spark"),
+  "spark/cluster-anatomy": () => import("./spark/cluster-anatomy"),
 };
