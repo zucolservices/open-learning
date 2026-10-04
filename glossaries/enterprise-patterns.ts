@@ -266,4 +266,45 @@ export const enterprisePatterns = {
       "In messaging, an identifier in a reply that matches the ID of the request it answers, so the sender knows which request the reply belongs to.",
     module: "messaging-patterns",
   },
+  "content-based-router": {
+    term: "Content-based router",
+    definition:
+      "An integration step that reads each message and sends it to a different destination depending on what it contains.",
+    module: "routing-transformation",
+  },
+  splitter: {
+    term: "Splitter",
+    definition:
+      "An integration step that breaks a message containing several items into one message per item.",
+    module: "routing-transformation",
+  },
+  aggregator: {
+    term: "Aggregator",
+    definition:
+      "An integration step that collects related messages until a set is complete, then publishes one combined message.",
+    module: "routing-transformation",
+  },
+  "content-enricher": {
+    term: "Content enricher",
+    definition:
+      "An integration step that adds missing data to a message by looking it up elsewhere, such as a customer's delivery slot from CRM.",
+    module: "routing-transformation",
+  },
+  normalizer: {
+    term: "Normalizer",
+    definition:
+      "An integration step that recognises messages arriving in different formats and translates each into one common format.",
+    module: "routing-transformation",
+  },
+  "message-translator": {
+    term: "Message translator",
+    definition: "An integration step that converts a message from one data format into another.",
+    module: "routing-transformation",
+  },
+  "canonical-data-model": {
+    term: "Canonical data model",
+    definition:
+      "A common message format independent of any one application; each application translates only to and from it, instead of to every other format.",
+    module: "routing-transformation",
+  },
 } satisfies Record<string, GlossaryEntry>;

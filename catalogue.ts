@@ -7197,11 +7197,20 @@ const enterprisePatterns: Track = {
             "Splitter and aggregator",
             "Translator and canonical data model",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["messaging-patterns"],
           plain:
             "Between sender and receiver, messages often need directing, splitting, combining or reshaping. A handful of named patterns covers almost every integration flow.",
+          terms: [
+            "content-based-router",
+            "splitter",
+            "aggregator",
+            "content-enricher",
+            "normalizer",
+            "message-translator",
+            "canonical-data-model",
+          ],
         },
         {
           slug: "orchestration-choreography",
