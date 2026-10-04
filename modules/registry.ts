@@ -410,4 +410,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "ai-agents/agent-ops": () => import("./ai-agents/agent-ops"),
   "ai-agents/capstone-agent": () => import("./ai-agents/capstone-agent"),
   "voice-ai/why-voice": () => import("./voice-ai/why-voice"),
+  "voice-ai/sound-basics": () => import("./voice-ai/sound-basics"),
 };

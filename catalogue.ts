@@ -9328,11 +9328,12 @@ const voiceAi: Track = {
             "Record a word, change the sample rate and bit depth, and watch the waveform and spectrogram change",
           formats: ["simulation", "checkpoint"],
           concepts: ["Waveforms and sampling", "Sample rate and bit depth", "Spectrograms"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["why-voice"],
           plain:
             "A microphone turns air pressure into a wave, and a computer stores it as thousands of numbers per second. Speech models usually look at a spectrogram, a picture of which pitches are loud at each moment.",
+          terms: ["audio-sample", "sample-rate", "bit-depth", "spectrogram", "mel-scale"],
         },
         {
           slug: "voice-pipeline",
