@@ -311,4 +311,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "enterprise-patterns/cqrs-event-sourcing": () => import("./enterprise-patterns/cqrs-event-sourcing"),
   "enterprise-patterns/data-ownership": () => import("./enterprise-patterns/data-ownership"),
   "enterprise-patterns/strangler-fig": () => import("./enterprise-patterns/strangler-fig"),
+  "enterprise-patterns/legacy-integration": () => import("./enterprise-patterns/legacy-integration"),
 };

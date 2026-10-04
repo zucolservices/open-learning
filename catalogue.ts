@@ -7407,11 +7407,19 @@ const enterprisePatterns: Track = {
             "Wrappers and change data capture",
             "Mainframes and batch",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["context-mapping", "strangler-fig"],
           plain:
             "Many core systems are decades old and still run the business. New systems have to talk to them without inheriting their model, by wrapping them, copying their changes, and translating at the boundary.",
+          terms: [
+            "mainframe",
+            "anticorruption-layer",
+            "cdc",
+            "bubble-context",
+            "autonomous-bubble",
+            "legacy-system",
+          ],
         },
         {
           slug: "decisions",

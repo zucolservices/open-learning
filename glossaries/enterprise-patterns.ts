@@ -500,4 +500,22 @@ export const enterprisePatterns = {
       "Making a large change gradually inside a codebase: put an abstraction in front of the old component, build the new one behind it, switch over, then remove the old one, releasing all along.",
     module: "strangler-fig",
   },
+  mainframe: {
+    term: "Mainframe",
+    definition:
+      "A large, highly reliable computer designed for very high volumes of transactions, still the core platform of many banks, insurers and governments, often running decades-old COBOL programs.",
+    module: "legacy-integration",
+  },
+  "bubble-context": {
+    term: "Bubble context",
+    definition:
+      "Eric Evans's term for a small, clean bounded context created for one piece of new work, getting all its data from a legacy system through an anticorruption layer.",
+    module: "legacy-integration",
+  },
+  "autonomous-bubble": {
+    term: "Autonomous bubble",
+    definition:
+      "A bubble context with its own data store, kept in step with legacy by a synchronising anticorruption layer, so it can keep running for a while when legacy is unavailable.",
+    module: "legacy-integration",
+  },
 } satisfies Record<string, GlossaryEntry>;
