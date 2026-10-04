@@ -415,4 +415,27 @@ export const spark = {
       "A folder where a streaming query records the offsets it has processed and its state, so it can restart exactly where it stopped.",
     module: "structured-streaming",
   },
+  udf: {
+    term: "UDF (user-defined function)",
+    definition:
+      "Your own function applied to DataFrame columns. In PySpark, a Python UDF runs in a separate Python process, so data has to be passed to it and back.",
+    module: "pyspark-udfs",
+  },
+  "pandas-udf": {
+    term: "pandas UDF",
+    definition:
+      "A Python UDF that receives whole columns as pandas Series, shipped in batches with Apache Arrow, so the work is vectorised. Introduced in Spark 2.3.",
+    module: "pyspark-udfs",
+  },
+  "apache-arrow": {
+    term: "Apache Arrow",
+    definition:
+      "A standard in-memory columnar data format. Spark uses it to move data between the JVM and Python in batches instead of row by row.",
+    module: "pyspark-udfs",
+  },
+  py4j: {
+    term: "Py4J",
+    definition: "The library PySpark uses to let your Python program call into Spark's JVM driver.",
+    module: "pyspark-udfs",
+  },
 } satisfies Record<string, GlossaryEntry>;

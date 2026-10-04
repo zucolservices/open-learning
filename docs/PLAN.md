@@ -603,7 +603,7 @@ Data engineering area, third track (started 2026-10-04). 21 modules in 6 chapter
 | 4k. API Design             | Architecture, second track, 21 modules                                                  | Live: all 21 modules (2026-10-04)                                       |
 | 4l. Database Internals     | Architecture, third track, 21 modules                                                   | Live: all 21 modules (2026-10-04)                                       |
 | 4m. Enterprise Patterns    | Architecture, fourth track, 21 modules                                                  | Live: all 21 modules (2026-10-04)                                       |
-| 4n. Apache Spark           | Data engineering, third track, 21 modules                                               | In progress: 17 of 21 modules                                           |
+| 4n. Apache Spark           | Data engineering, third track, 21 modules                                               | In progress: 18 of 21 modules                                           |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

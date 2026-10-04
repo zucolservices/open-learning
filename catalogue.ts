@@ -7890,11 +7890,12 @@ const spark: Track = {
             "Python UDFs and their cost",
             "Arrow and pandas UDFs",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["spark-sql"],
           plain:
             "Most Spark users write Python, but the engine runs on the Java virtual machine. Built-in functions stay inside the engine; custom Python functions have to ship data back and forth, which can be slow unless it's done in batches.",
+          terms: ["udf", "pandas-udf", "apache-arrow", "py4j"],
         },
         {
           slug: "spark-platforms",
