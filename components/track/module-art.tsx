@@ -28,6 +28,8 @@ import { dataQualityArtA } from "./art/data-quality-a";
 import { dataQualityArtB } from "./art/data-quality-b";
 import { aiAgentsArtA } from "./art/ai-agents-a";
 import { aiAgentsArtB } from "./art/ai-agents-b";
+import { voiceAiArtA } from "./art/voice-ai-a";
+import { voiceAiArtB } from "./art/voice-ai-b";
 
 /**
  * One small illustration per module (viewBox 160 × 100), drawn with the
@@ -1075,6 +1077,8 @@ const all: ArtMap = {
   ...dataQualityArtB,
   ...aiAgentsArtA,
   ...aiAgentsArtB,
+  ...voiceAiArtA,
+  ...voiceAiArtB,
 };
 
 /** Art is keyed by slug; a "track/slug" key wins, for slugs used in more than one track. */

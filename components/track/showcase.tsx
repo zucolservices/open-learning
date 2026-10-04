@@ -32,6 +32,8 @@ import { DataQualityScene } from "@/components/home/data-quality-scene";
 import { DataQualityTaste } from "@/components/home/data-quality-taste";
 import { AiAgentsScene } from "@/components/home/ai-agents-scene";
 import { AiAgentsTaste } from "@/components/home/ai-agents-taste";
+import { VoiceAiScene } from "@/components/home/voice-ai-scene";
+import { VoiceAiTaste } from "@/components/home/voice-ai-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -176,5 +178,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: AiAgentsTaste,
     tasteCaption:
       "A taste of module 17: switch the three legs of the lethal trifecta and see whether a poisoned web page can steal data.",
+  },
+  "voice-ai": {
+    Scene: VoiceAiScene,
+    sceneCaption:
+      "One call's round trip: from the caller's voice through turn-taking, speech-to-text, the model and a voice, and back. Watch the tour, or click any part.",
+    Taste: VoiceAiTaste,
+    tasteCaption:
+      "A taste of module 12: cut the assistant off mid-sentence and compare what the caller heard with what the agent thinks it said.",
   },
 };
