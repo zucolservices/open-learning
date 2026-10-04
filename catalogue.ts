@@ -7292,11 +7292,19 @@ const enterprisePatterns: Track = {
             "Granularity trade-offs",
             "Real case studies",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["bounded-contexts", "conways-law"],
           plain:
             "Microservices let teams deploy independently but add networks, failures and operations. A well-structured monolith keeps the boundaries without the distribution. The right size follows the teams and the domain.",
+          terms: [
+            "monolith",
+            "modular-monolith",
+            "microservices",
+            "independent-deployability",
+            "microservice-premium",
+            "bounded-context",
+          ],
         },
         {
           slug: "cqrs-event-sourcing",

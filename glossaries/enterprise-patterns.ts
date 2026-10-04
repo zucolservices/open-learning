@@ -382,4 +382,35 @@ export const enterprisePatterns = {
       "Robert C. Martin's rule for clean architecture: source code dependencies can only point inwards, so business rules never depend on frameworks, databases or user interfaces.",
     module: "hexagonal",
   },
+  monolith: {
+    term: "Monolith",
+    definition:
+      "An application built and deployed as a single unit, however many features it contains.",
+    module: "monolith-microservices",
+  },
+  "modular-monolith": {
+    term: "Modular monolith",
+    definition:
+      "A single deployable application divided into modules with enforced boundaries, often one per bounded context, so it keeps clear structure without the costs of distribution.",
+    analogy: "One house with locked rooms.",
+    module: "monolith-microservices",
+  },
+  microservices: {
+    term: "Microservices",
+    definition:
+      "An architecture of small services, each running in its own process, built around a business capability and deployable independently of the others.",
+    module: "monolith-microservices",
+  },
+  "independent-deployability": {
+    term: "Independent deployability",
+    definition:
+      "Being able to change and release one service without changing or coordinating releases of any other. The defining property of microservices.",
+    module: "monolith-microservices",
+  },
+  "microservice-premium": {
+    term: "Microservice premium",
+    definition:
+      "Martin Fowler's term for the extra cost of running microservices (networks, partial failures, monitoring, automation), worth paying only for sufficiently complex systems.",
+    module: "monolith-microservices",
+  },
 } satisfies Record<string, GlossaryEntry>;
