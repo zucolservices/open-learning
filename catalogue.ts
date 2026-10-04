@@ -9688,10 +9688,11 @@ const llmEvaluation: Track = {
             "Evals as tests for AI",
             "Evaluation throughout the life of a product",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           plain:
             "Language models give different answers to similar questions, so trying a few examples tells you little. An evaluation, or eval, runs a model over many prepared cases and scores the results, so you can tell whether a change made things better or worse.",
+          terms: ["vibe-check", "eval", "sycophancy", "regression"],
         },
         {
           slug: "success-criteria",
