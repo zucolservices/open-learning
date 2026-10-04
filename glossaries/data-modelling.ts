@@ -359,4 +359,22 @@ export const dataModelling = {
       "A Data Vault table holding descriptive attributes of a hub or link, with a new row for every change.",
     module: "data-vault",
   },
+  "one-big-table": {
+    term: "One big table (OBT)",
+    definition:
+      "A single wide, denormalised table holding the facts plus every dimension attribute on each row, so queries need no joins.",
+    module: "wide-tables",
+  },
+  "columnar-storage": {
+    term: "Columnar storage",
+    definition:
+      "Storing each column's values together rather than each row's, so a query reads only the columns it uses and repeated values compress well.",
+    module: "wide-tables",
+  },
+  "nested-fields": {
+    term: "Nested and repeated fields",
+    definition:
+      "Columns that hold structures (STRUCT) or lists (ARRAY), letting a row carry its children, such as an order with its lines.",
+    module: "wide-tables",
+  },
 } satisfies Record<string, GlossaryEntry>;

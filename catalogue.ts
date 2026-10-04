@@ -8282,11 +8282,12 @@ const dataModelling: Track = {
             "Columnar storage changes the trade-offs",
             "Nested and repeated fields",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["star-schema"],
           plain:
             "Columnar engines read only the columns a query needs and compress repeated values well, so a single very wide table can be practical. It's simple to query but harder to keep consistent.",
+          terms: ["one-big-table", "columnar-storage", "nested-fields", "denormalisation"],
         },
         {
           slug: "semantic-layer",

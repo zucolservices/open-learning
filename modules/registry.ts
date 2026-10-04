@@ -349,4 +349,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-modelling/scd": () => import("./data-modelling/scd"),
   "data-modelling/inmon-kimball": () => import("./data-modelling/inmon-kimball"),
   "data-modelling/data-vault": () => import("./data-modelling/data-vault"),
+  "data-modelling/wide-tables": () => import("./data-modelling/wide-tables"),
 };
