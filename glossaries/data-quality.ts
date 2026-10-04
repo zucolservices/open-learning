@@ -314,4 +314,10 @@ export const dataQuality = {
       "Data quality checks written explicitly in files (SQL, YAML or a library's API), versioned and reviewed like any other code.",
     module: "dq-platforms",
   },
+  "defence-in-depth": {
+    term: "Defence in depth",
+    definition:
+      "Layering several independent safeguards (prevent, detect, respond) so a fault that slips past one is caught by another.",
+    module: "capstone-quality",
+  },
 } satisfies Record<string, GlossaryEntry>;

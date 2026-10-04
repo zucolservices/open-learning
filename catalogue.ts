@@ -8816,11 +8816,12 @@ const dataQuality: Track = {
             "A board report shows revenue 18% too high: find the cause, fix the data and put the right defences in place",
           formats: ["branching-scenario", "fix-the-problem", "checkpoint"],
           concepts: ["Applying data quality"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["data-incidents", "data-contracts", "reconciliation"],
           plain:
             "Everything in this track in one incident: trace a wrong number to its source, repair it, and choose the tests, contracts and monitors that would have caught it.",
+          terms: ["defence-in-depth", "data-incident"],
         },
       ],
     },
