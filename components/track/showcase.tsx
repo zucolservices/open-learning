@@ -22,6 +22,8 @@ import { ApiDesignScene } from "@/components/home/api-design-scene";
 import { ApiDesignTaste } from "@/components/home/api-design-taste";
 import { DatabaseInternalsScene } from "@/components/home/database-internals-scene";
 import { DatabaseInternalsTaste } from "@/components/home/database-internals-taste";
+import { EnterprisePatternsScene } from "@/components/home/enterprise-patterns-scene";
+import { EnterprisePatternsTaste } from "@/components/home/enterprise-patterns-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -126,5 +128,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: DatabaseInternalsTaste,
     tasteCaption:
       "A taste of module 15: two transactions collide at each isolation level. Find the lowest level that stops each glitch.",
+  },
+  "enterprise-patterns": {
+    Scene: EnterprisePatternsScene,
+    sceneCaption:
+      "A modernised estate, from the teams down to the legacy system still running underneath. Watch the tour, or click any part.",
+    Taste: EnterprisePatternsTaste,
+    tasteCaption:
+      "A taste of module 8: connect two systems four ways and put each through the same four situations.",
   },
 };

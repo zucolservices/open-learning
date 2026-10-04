@@ -18,6 +18,8 @@ import { apiDesignArtA } from "./art/api-design-a";
 import { apiDesignArtB } from "./art/api-design-b";
 import { databaseInternalsArtA } from "./art/database-internals-a";
 import { databaseInternalsArtB } from "./art/database-internals-b";
+import { enterprisePatternsArtA } from "./art/enterprise-patterns-a";
+import { enterprisePatternsArtB } from "./art/enterprise-patterns-b";
 
 /**
  * One small illustration per module (viewBox 160 × 100), drawn with the
@@ -1055,6 +1057,8 @@ const all: ArtMap = {
   ...apiDesignArtB,
   ...databaseInternalsArtA,
   ...databaseInternalsArtB,
+  ...enterprisePatternsArtA,
+  ...enterprisePatternsArtB,
 };
 
 /** Art is keyed by slug; a "track/slug" key wins, for slugs used in more than one track. */
