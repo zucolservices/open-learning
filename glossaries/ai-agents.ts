@@ -128,4 +128,10 @@ export const aiAgents = {
       "An agent design where a planner writes the list of steps first and an executor carries them out, re-planning if something unexpected happens.",
     module: "planning",
   },
+  "agent-reflection": {
+    term: "Reflection",
+    definition:
+      "An agent checking its own work, through tests, tools or a critic, and revising it before continuing. Works best when the check rests on outside evidence.",
+    module: "reflection",
+  },
 } satisfies Record<string, GlossaryEntry>;

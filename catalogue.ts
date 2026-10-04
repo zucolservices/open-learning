@@ -9005,11 +9005,12 @@ const aiAgents: Track = {
             "Add a critic to an agent's loop and watch its draft improve, or go round in circles",
           formats: ["simulation", "checkpoint"],
           concepts: ["Evaluator and optimiser", "Feedback from tools", "Knowing when to stop"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["planning"],
           plain:
             "Agents get better results when they check their own work: running the tests, re-reading the question or asking a second model to critique. Feedback from the real world, like a failing test, is worth more than the model's own opinion.",
+          terms: ["agent-reflection", "evaluator-optimizer"],
         },
         {
           slug: "errors-recovery",
