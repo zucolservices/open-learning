@@ -9647,11 +9647,12 @@ const voiceAi: Track = {
             "Design a clinic's appointment line, then fix the five complaints from its first week",
           formats: ["branching-scenario", "fix-the-problem", "checkpoint"],
           concepts: ["Applying voice AI"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["latency-budget", "conversation-design", "voice-quality"],
           plain:
             "Everything in this track in one project: choose an architecture, hit the latency budget, design the conversation, handle interruptions and tools, and prove the line works for real callers.",
+          terms: ["ambient-scribe", "hipaa", "baa"],
         },
       ],
     },

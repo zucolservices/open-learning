@@ -307,4 +307,22 @@ export const voiceAi = {
       "The share of calls handled without a person taking over. Misleading on its own, because callers who hang up in frustration also count as “contained”.",
     module: "voice-quality",
   },
+  "ambient-scribe": {
+    term: "Ambient scribe",
+    definition:
+      "An AI tool that listens to a consultation, with the patient's consent, and drafts the clinical note for the clinician to check.",
+    module: "capstone-voice",
+  },
+  hipaa: {
+    term: "HIPAA",
+    definition:
+      "The US law that protects patients' health information and sets rules for clinics, insurers and the vendors who handle that information for them.",
+    module: "capstone-voice",
+  },
+  baa: {
+    term: "Business associate agreement",
+    definition:
+      "Under HIPAA, a signed contract with any vendor that handles patient information for a clinic, committing it to protect that information.",
+    module: "capstone-voice",
+  },
 } satisfies Record<string, GlossaryEntry>;
