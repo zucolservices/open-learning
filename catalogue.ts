@@ -9837,11 +9837,12 @@ const llmEvaluation: Track = {
             "Rater agreement",
             "Pairwise preferences and leaderboards",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["judge-agreement"],
           plain:
             "Some qualities only people can judge well. Human evaluation needs clear guidelines and several raters, and checks how often they agree. Public leaderboards rank models from millions of people's side-by-side votes.",
+          terms: ["inter-rater-agreement", "krippendorffs-alpha", "bradley-terry"],
         },
       ],
     },

@@ -115,4 +115,22 @@ export const llmEvaluation = {
       "People refining what they count as good while grading outputs, so a rubric can't be fully written in advance.",
     module: "judge-agreement",
   },
+  "inter-rater-agreement": {
+    term: "Inter-rater agreement",
+    definition:
+      "How consistently different people give the same label to the same item, usually reported with a chance-corrected statistic such as kappa.",
+    module: "human-eval",
+  },
+  "krippendorffs-alpha": {
+    term: "Krippendorff's alpha",
+    definition:
+      "An agreement statistic that works for any number of raters, missing ratings and ordered scales; 1 is perfect, 0 is chance.",
+    module: "human-eval",
+  },
+  "bradley-terry": {
+    term: "Bradley–Terry model",
+    definition:
+      "A statistical model that turns many head-to-head comparisons into a rating for each contestant, with uncertainty ranges. Used by Arena leaderboards.",
+    module: "human-eval",
+  },
 } satisfies Record<string, GlossaryEntry>;
