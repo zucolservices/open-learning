@@ -269,4 +269,28 @@ export const dataModelling = {
       "Combining fact tables by querying each one separately, grouped by the same conformed attributes, then merging the answers.",
     module: "conformed-dimensions",
   },
+  "role-playing-dimension": {
+    term: "Role-playing dimension",
+    definition:
+      "One dimension used several times by a fact table in different roles, such as order date and ship date, each through its own view.",
+    module: "dimension-patterns",
+  },
+  "junk-dimension": {
+    term: "Junk dimension",
+    definition:
+      "A single dimension that bundles miscellaneous low-cardinality flags and indicators, holding only the combinations that occur.",
+    module: "dimension-patterns",
+  },
+  snowflake: {
+    term: "Snowflake schema",
+    definition:
+      "A star schema whose dimension hierarchies are normalised into chains of smaller tables. Kimball advises flattening them instead.",
+    module: "dimension-patterns",
+  },
+  outrigger: {
+    term: "Outrigger",
+    definition:
+      "A dimension that references another dimension, such as a customer pointing to the date they joined. Allowed but used sparingly.",
+    module: "dimension-patterns",
+  },
 } satisfies Record<string, GlossaryEntry>;

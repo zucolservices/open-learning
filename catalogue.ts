@@ -8192,11 +8192,18 @@ const dataModelling: Track = {
             "Junk and degenerate dimensions",
             "Snowflakes and outriggers",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["star-schema"],
           plain:
             "Real dimensions are messy: one date table used three ways, a pile of yes/no flags, an order number with nowhere to live. A handful of named patterns handles them.",
+          terms: [
+            "role-playing-dimension",
+            "junk-dimension",
+            "degenerate-dimension",
+            "snowflake",
+            "outrigger",
+          ],
         },
         {
           slug: "scd",

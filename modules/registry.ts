@@ -345,4 +345,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-modelling/grain": () => import("./data-modelling/grain"),
   "data-modelling/fact-tables": () => import("./data-modelling/fact-tables"),
   "data-modelling/conformed-dimensions": () => import("./data-modelling/conformed-dimensions"),
+  "data-modelling/dimension-patterns": () => import("./data-modelling/dimension-patterns"),
 };
