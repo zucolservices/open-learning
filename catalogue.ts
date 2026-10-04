@@ -9564,11 +9564,12 @@ const voiceAi: Track = {
             "Recovering from misunderstanding",
             "Handing over to a person",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["writing-for-voice"],
           plain:
             "On a call there's nothing to scroll back to. Good voice design keeps turns short, confirms important details, recovers gracefully when it mishears and knows when to pass the caller to a person.",
+          terms: ["ivr", "implicit-confirmation", "explicit-confirmation", "warm-transfer"],
         },
         {
           slug: "voice-tools",

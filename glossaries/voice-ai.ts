@@ -229,4 +229,34 @@ export const voiceAi = {
       "A short holding area that collects audio packets arriving at uneven times so playback stays smooth. Bigger is smoother but adds delay.",
     module: "voice-transport",
   },
+  ivr: {
+    term: "IVR",
+    definition:
+      "Interactive voice response: the automated phone menu (“press 1 for billing”) that answers many business lines.",
+    module: "conversation-design",
+  },
+  "common-ground": {
+    term: "Common ground",
+    definition:
+      "What both sides of a conversation agree has been said and understood. Confirmations exist to build it.",
+    module: "conversation-design",
+  },
+  "implicit-confirmation": {
+    term: "Implicit confirmation",
+    definition:
+      "Repeating a detail back while moving on (“OK, two people. What time?”), so the caller can correct it without being asked.",
+    module: "conversation-design",
+  },
+  "explicit-confirmation": {
+    term: "Explicit confirmation",
+    definition:
+      "Stopping to ask “did I get that right?” and waiting for a yes or no. Best kept for actions that are costly or hard to undo.",
+    module: "conversation-design",
+  },
+  "warm-transfer": {
+    term: "Warm transfer",
+    definition:
+      "Handing a call to a person along with its context, so the caller doesn't have to repeat themselves. A cold transfer just passes the call on.",
+    module: "conversation-design",
+  },
 } satisfies Record<string, GlossaryEntry>;
