@@ -169,4 +169,16 @@ export const voiceAi = {
       "An inaudible signal embedded in generated audio so tools can later recognise it as synthetic; it can be weakened and only marks cooperating tools' output.",
     module: "voice-cloning",
   },
+  "latency-budget": {
+    term: "Latency budget",
+    definition:
+      "The total delay you can afford for a voice turn, split into the time each stage (network, endpointing, recognition, model, synthesis) is allowed to take.",
+    module: "latency-budget",
+  },
+  ttft: {
+    term: "Time to first token",
+    definition:
+      "How long a language model takes to produce the first piece of its reply; often the biggest slice of a voice agent's delay.",
+    module: "latency-budget",
+  },
 } satisfies Record<string, GlossaryEntry>;

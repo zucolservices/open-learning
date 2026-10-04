@@ -9485,11 +9485,12 @@ const voiceAi: Track = {
             "Build a voice turn's latency stage by stage and stream, cache and relocate until it feels natural",
           formats: ["simulation", "checkpoint"],
           concepts: ["Time to first audio", "Streaming every stage", "Network and placement"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["turn-taking", "text-to-speech"],
           plain:
             "From the moment you stop speaking, each stage adds delay: deciding you've finished, recognising, thinking, starting to speak and the network in between. Streaming every stage and running them close together keeps the total under a second.",
+          terms: ["latency-budget", "ttft", "voice-latency", "endpointing"],
         },
         {
           slug: "speech-to-speech",
