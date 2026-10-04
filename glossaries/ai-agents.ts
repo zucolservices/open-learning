@@ -284,4 +284,16 @@ export const aiAgents = {
       "The chance that all k separate attempts at the same task succeed, a measure of reliability; compare pass@k, the chance that at least one succeeds.",
     module: "agent-evals",
   },
+  "agent-span": {
+    term: "Span",
+    definition:
+      "One step recorded inside a trace, such as a single model call or tool call, with its start time, duration and details like tokens used.",
+    module: "agent-ops",
+  },
+  "batch-api": {
+    term: "Batch API",
+    definition:
+      "A way to send many model requests to be processed within hours rather than seconds, usually at about half the price; suited to offline work.",
+    module: "agent-ops",
+  },
 } satisfies Record<string, GlossaryEntry>;

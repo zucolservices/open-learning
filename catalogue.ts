@@ -9249,11 +9249,12 @@ const aiAgents: Track = {
             "Trace a slow, expensive agent run step by step and cut its cost without hurting results",
           formats: ["fix-the-problem", "checkpoint"],
           concepts: ["Tokens per task", "Tracing agent runs", "Caching and model choice"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["agent-evals"],
           plain:
             "Agents make many model calls per task, so cost and delay add up quickly. Tracing every step shows where time and tokens go, and techniques like caching, smaller models for easy steps and fewer loops bring them down.",
+          terms: ["llm-trace", "agent-span", "prompt-caching", "batch-api"],
         },
       ],
     },

@@ -407,4 +407,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "ai-agents/agent-security": () => import("./ai-agents/agent-security"),
   "ai-agents/human-in-the-loop": () => import("./ai-agents/human-in-the-loop"),
   "ai-agents/agent-evals": () => import("./ai-agents/agent-evals"),
+  "ai-agents/agent-ops": () => import("./ai-agents/agent-ops"),
 };
