@@ -8360,11 +8360,12 @@ const dataModelling: Track = {
             "Property graphs and RDF",
             "When to use a graph",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["keys-relationships"],
           plain:
             "When the important questions are about connections, like who knows whom or which accounts share a phone, a graph model stores relationships directly and makes multi-hop questions natural.",
+          terms: ["property-graph", "graph-node", "graph-edge", "rdf"],
         },
         {
           slug: "modelling-time",

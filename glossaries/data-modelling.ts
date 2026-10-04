@@ -443,4 +443,27 @@ export const dataModelling = {
       "A DynamoDB pattern that stores several entity types in one table, with partition and sort keys chosen so each access pattern is one request.",
     module: "nosql-modelling",
   },
+  "property-graph": {
+    term: "Property graph",
+    definition:
+      "A graph model where nodes and relationships both carry labels or types and key-value properties. Used by Neo4j and the ISO GQL standard.",
+    module: "graph-modelling",
+  },
+  "graph-node": {
+    term: "Node",
+    definition: "A thing in a graph, such as a person or account, with labels and properties.",
+    module: "graph-modelling",
+  },
+  "graph-edge": {
+    term: "Relationship (edge)",
+    definition:
+      "A directed, typed connection between two nodes in a graph, which can carry its own properties.",
+    module: "graph-modelling",
+  },
+  rdf: {
+    term: "RDF",
+    definition:
+      "Resource Description Framework: a W3C standard that represents data as subject–predicate–object triples using web identifiers.",
+    module: "graph-modelling",
+  },
 } satisfies Record<string, GlossaryEntry>;

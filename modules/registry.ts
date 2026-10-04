@@ -353,4 +353,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-modelling/semantic-layer": () => import("./data-modelling/semantic-layer"),
   "data-modelling/dbt-layers": () => import("./data-modelling/dbt-layers"),
   "data-modelling/nosql-modelling": () => import("./data-modelling/nosql-modelling"),
+  "data-modelling/graph-modelling": () => import("./data-modelling/graph-modelling"),
 };
