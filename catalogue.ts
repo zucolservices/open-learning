@@ -9817,11 +9817,12 @@ const llmEvaluation: Track = {
             "Cohen's kappa",
             "Calibrating against experts",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["llm-judge"],
           plain:
             "An automated judge is only useful if it agrees with the people whose judgement you care about. Comparing its verdicts with expert labels shows where it's wrong, and agreement statistics say whether it beats chance.",
+          terms: ["confusion-matrix", "cohens-kappa", "criteria-drift"],
         },
         {
           slug: "human-eval",

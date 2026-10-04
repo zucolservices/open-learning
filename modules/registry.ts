@@ -433,4 +433,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "llm-evaluation/code-checks": () => import("./llm-evaluation/code-checks"),
   "llm-evaluation/similarity-metrics": () => import("./llm-evaluation/similarity-metrics"),
   "llm-evaluation/llm-judge": () => import("./llm-evaluation/llm-judge"),
+  "llm-evaluation/judge-agreement": () => import("./llm-evaluation/judge-agreement"),
 };

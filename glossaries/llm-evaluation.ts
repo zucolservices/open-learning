@@ -97,4 +97,22 @@ export const llmEvaluation = {
       "A judge's tendency to prefer longer answers, even when a shorter one is just as good or better.",
     module: "llm-judge",
   },
+  "confusion-matrix": {
+    term: "Confusion matrix",
+    definition:
+      "A table counting how a grader's verdicts line up with the true labels: both fail, both pass, and the two kinds of disagreement.",
+    module: "judge-agreement",
+  },
+  "cohens-kappa": {
+    term: "Cohen's kappa",
+    definition:
+      "A measure of how much two raters agree beyond what chance alone would give: 1 is perfect, 0 is chance level.",
+    module: "judge-agreement",
+  },
+  "criteria-drift": {
+    term: "Criteria drift",
+    definition:
+      "People refining what they count as good while grading outputs, so a rubric can't be fully written in advance.",
+    module: "judge-agreement",
+  },
 } satisfies Record<string, GlossaryEntry>;
