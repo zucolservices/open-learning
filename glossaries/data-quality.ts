@@ -158,4 +158,22 @@ export const dataQuality = {
       "An open, YAML-based standard for data contracts, maintained by Bitol under the Linux Foundation; version 3.2.0 was released in September 2026.",
     module: "data-contracts",
   },
+  "schema-evolution": {
+    term: "Schema evolution",
+    definition:
+      "Changing a dataset's or message's schema over time in ways that existing readers and writers can survive.",
+    module: "schema-evolution",
+  },
+  "schema-registry": {
+    term: "Schema registry",
+    definition:
+      "A service that stores every version of a message schema and rejects new versions that break the agreed compatibility rule.",
+    module: "schema-evolution",
+  },
+  "backward-compatibility": {
+    term: "Backward compatibility",
+    definition:
+      "A schema change is backward compatible if readers using the new schema can still read data written with the old one; forward compatibility is the reverse.",
+    module: "schema-evolution",
+  },
 } satisfies Record<string, GlossaryEntry>;

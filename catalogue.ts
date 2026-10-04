@@ -8606,11 +8606,12 @@ const dataQuality: Track = {
             "Evolve an event schema under backward, forward and full compatibility and see which consumers break",
           formats: ["simulation", "checkpoint"],
           concepts: ["Breaking and compatible changes", "Compatibility modes", "Schema registries"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["data-contracts"],
           plain:
             "Data shapes change: fields are added, renamed, retyped. Some changes are safe for existing readers and some are not. Compatibility rules, enforced by a schema registry, keep producers from breaking consumers.",
+          terms: ["schema-evolution", "schema-registry", "backward-compatibility"],
         },
         {
           slug: "ownership",

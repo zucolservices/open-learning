@@ -29,8 +29,8 @@ export function Tenancy() {
           <div className="border-accent bg-accent-soft rounded-xl border px-4 py-3 text-xs">
             <p className="text-sm font-semibold">A written agreement</p>
             <p className="text-muted mt-1">
-              What&apos;s provided, what can change, how much notice is given, and who to call when the
-              boiler breaks.
+              What&apos;s provided, what can change, how much notice is given, and who to call when
+              the boiler breaks.
             </p>
           </div>
         </div>

@@ -365,4 +365,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-quality/where-to-test": () => import("./data-quality/where-to-test"),
   "data-quality/severity": () => import("./data-quality/severity"),
   "data-quality/data-contracts": () => import("./data-quality/data-contracts"),
+  "data-quality/schema-evolution": () => import("./data-quality/schema-evolution"),
 };
