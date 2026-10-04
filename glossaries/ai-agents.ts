@@ -116,4 +116,16 @@ export const aiAgents = {
       "An isolated environment, such as a container or small virtual machine, where agent actions or code run without access to real files, accounts or networks unless allowed.",
     module: "computer-use",
   },
+  "task-decomposition": {
+    term: "Task decomposition",
+    definition:
+      "Breaking a large goal into smaller steps or sub-tasks that an agent, or several agents, can carry out one at a time.",
+    module: "planning",
+  },
+  "plan-and-execute": {
+    term: "Plan-and-execute",
+    definition:
+      "An agent design where a planner writes the list of steps first and an executor carries them out, re-planning if something unexpected happens.",
+    module: "planning",
+  },
 } satisfies Record<string, GlossaryEntry>;

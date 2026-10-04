@@ -8989,11 +8989,12 @@ const aiAgents: Track = {
             "Run the same research task with step-by-step reasoning and with a plan-then-execute agent, and compare",
           formats: ["simulation", "checkpoint"],
           concepts: ["Decomposing a goal", "Plan and execute", "Re-planning"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["agent-loop"],
           plain:
             "Big goals need breaking into steps. Some agents decide one step at a time; others write a plan first and then carry it out, revising it when something unexpected happens.",
+          terms: ["task-decomposition", "plan-and-execute", "react-pattern"],
         },
         {
           slug: "reflection",
