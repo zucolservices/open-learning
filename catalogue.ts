@@ -7740,11 +7740,12 @@ const spark: Track = {
             "Coalescing partitions",
             "Skew joins and join switching",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["spark-joins"],
           plain:
             "Spark's first plan is based on guesses. Adaptive Query Execution looks at real sizes after each shuffle and adjusts the rest of the plan: merging tiny partitions, splitting huge ones, and picking a better join.",
+          terms: ["aqe", "query-stage"],
         },
         {
           slug: "tungsten-vectorised",

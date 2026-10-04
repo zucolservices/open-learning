@@ -277,4 +277,16 @@ export const spark = {
       "An instruction in a query (BROADCAST, MERGE, SHUFFLE_HASH or SHUFFLE_REPLICATE_NL) suggesting which join strategy Spark should use. Not guaranteed.",
     module: "spark-joins",
   },
+  aqe: {
+    term: "Adaptive Query Execution (AQE)",
+    definition:
+      "A Spark SQL feature that re-optimises the rest of a query while it runs, using the real sizes of data written at each shuffle. On by default since Spark 3.2.",
+    module: "aqe",
+  },
+  "query-stage": {
+    term: "Query stage",
+    definition:
+      "In AQE, a part of the plan that ends at a shuffle or broadcast. When it finishes, Spark has real statistics and can re-plan what comes next.",
+    module: "aqe",
+  },
 } satisfies Record<string, GlossaryEntry>;
