@@ -9797,11 +9797,12 @@ const llmEvaluation: Track = {
             "Known judge biases",
             "Making judges more reliable",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["similarity-metrics"],
           plain:
             "A language model can grade open-ended answers against a rubric, much faster than people. But judges have biases, such as preferring longer or first-shown answers, so they need clear rubrics and checking.",
+          terms: ["llm-judge", "position-bias", "verbosity-bias"],
         },
         {
           slug: "judge-agreement",

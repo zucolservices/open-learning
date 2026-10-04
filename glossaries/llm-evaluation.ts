@@ -79,4 +79,22 @@ export const llmEvaluation = {
       "A 2004 summarisation metric family that measures how much of a reference's wording appears in an output.",
     module: "similarity-metrics",
   },
+  "llm-judge": {
+    term: "LLM judge",
+    definition:
+      "A language model used to grade other models' answers against a rubric, a reference or each other. Fast and cheap, but biased in known ways.",
+    module: "llm-judge",
+  },
+  "position-bias": {
+    term: "Position bias",
+    definition:
+      "A judge's tendency to prefer an answer because of where it appears (first or second) rather than what it says.",
+    module: "llm-judge",
+  },
+  "verbosity-bias": {
+    term: "Verbosity bias",
+    definition:
+      "A judge's tendency to prefer longer answers, even when a shorter one is just as good or better.",
+    module: "llm-judge",
+  },
 } satisfies Record<string, GlossaryEntry>;
