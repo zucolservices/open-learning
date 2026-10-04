@@ -335,4 +335,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "spark/pyspark-udfs": () => import("./spark/pyspark-udfs"),
   "spark/spark-platforms": () => import("./spark/spark-platforms"),
   "spark/cost-scaling": () => import("./spark/cost-scaling"),
+  "spark/capstone-spark": () => import("./spark/capstone-spark"),
 };

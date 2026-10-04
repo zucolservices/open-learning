@@ -7949,11 +7949,12 @@ const spark: Track = {
             "A nightly sales job runs four hours over: read the plan and the Spark UI to find and fix five problems",
           formats: ["branching-scenario", "fix-the-problem", "checkpoint"],
           concepts: ["Diagnosing Spark performance"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["skew", "files-io", "memory-spill"],
           plain:
             "Everything in this track in one investigation: a nightly job is too slow, and you'll use plans, stages and metrics to find out why and fix it.",
+          terms: ["shuffle", "data-skew", "spill", "aqe", "spark-ui"],
         },
       ],
     },
