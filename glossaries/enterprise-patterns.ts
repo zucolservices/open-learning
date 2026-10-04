@@ -235,4 +235,35 @@ export const enterprisePatterns = {
       "How much one system depends on another: tightly coupled systems break or must change together; loosely coupled ones can change independently.",
     module: "integration-styles",
   },
+  "message-channel": {
+    term: "Message channel",
+    definition:
+      "A named pipe in a messaging system: one application writes messages to it and another reads them, without the two connecting directly.",
+    analogy: "A pigeonhole in a post room.",
+    module: "messaging-patterns",
+  },
+  "point-to-point-channel": {
+    term: "Point-to-point channel",
+    definition:
+      "A channel (usually a queue) where each message is received by exactly one receiver, even if several are listening.",
+    module: "messaging-patterns",
+  },
+  "competing-consumers": {
+    term: "Competing consumers",
+    definition:
+      "Several receivers reading from one point-to-point channel, so messages are shared out between them and processed in parallel.",
+    module: "messaging-patterns",
+  },
+  "idempotent-receiver": {
+    term: "Idempotent receiver",
+    definition:
+      "A receiver that can safely process the same message more than once, for example by remembering message IDs it has already handled.",
+    module: "messaging-patterns",
+  },
+  "correlation-id": {
+    term: "Correlation ID",
+    definition:
+      "In messaging, an identifier in a reply that matches the ID of the request it answers, so the sender knows which request the reply belongs to.",
+    module: "messaging-patterns",
+  },
 } satisfies Record<string, GlossaryEntry>;

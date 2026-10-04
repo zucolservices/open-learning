@@ -302,4 +302,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "enterprise-patterns/aggregates": () => import("./enterprise-patterns/aggregates"),
   "enterprise-patterns/event-storming": () => import("./enterprise-patterns/event-storming"),
   "enterprise-patterns/integration-styles": () => import("./enterprise-patterns/integration-styles"),
+  "enterprise-patterns/messaging-patterns": () => import("./enterprise-patterns/messaging-patterns"),
 };

@@ -7169,11 +7169,21 @@ const enterprisePatterns: Track = {
             "Command, event and document messages",
             "Correlation and dead letters",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["integration-styles"],
           plain:
             "Messaging has a small vocabulary that hasn't changed in twenty years: channels carry messages between endpoints, and a message is a command, an event or a document. Learn it once and every broker makes sense.",
+          terms: [
+            "message-channel",
+            "point-to-point-channel",
+            "competing-consumers",
+            "pub-sub",
+            "dead-letter-queue",
+            "idempotent-receiver",
+            "correlation-id",
+            "consumer-group",
+          ],
         },
         {
           slug: "routing-transformation",
