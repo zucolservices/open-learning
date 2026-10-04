@@ -290,4 +290,22 @@ export const dataQuality = {
       "Records that arrive after the period they belong to has already been processed, so that period must be reprocessed to include them.",
     module: "late-data",
   },
+  "data-drift": {
+    term: "Data drift",
+    definition:
+      "A change over time in the inputs a model sees in production compared with its training data, such as a new mix of customers.",
+    module: "ml-data-quality",
+  },
+  "concept-drift": {
+    term: "Concept drift",
+    definition:
+      "A change in the relationship between inputs and the right answer, so the same inputs now deserve a different prediction.",
+    module: "ml-data-quality",
+  },
+  "training-serving-skew": {
+    term: "Training-serving skew",
+    definition:
+      "A mismatch between the data a model was trained on and the data it receives in production, often from computing features in two different ways.",
+    module: "ml-data-quality",
+  },
 } satisfies Record<string, GlossaryEntry>;

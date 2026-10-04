@@ -8778,11 +8778,12 @@ const dataQuality: Track = {
           signature: "Train on clean and dirty data, then watch a model drift as inputs change",
           formats: ["simulation", "checkpoint"],
           concepts: ["Training data quality", "Drift and skew", "Data for AI applications"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["data-observability"],
           plain:
             "Models learn whatever is in their data, including its mistakes. Label errors, skewed samples and inputs that drift after launch quietly degrade predictions and AI answers.",
+          terms: ["data-drift", "concept-drift", "training-serving-skew"],
         },
         {
           slug: "dq-platforms",
