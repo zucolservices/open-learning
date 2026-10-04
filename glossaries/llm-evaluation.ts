@@ -229,4 +229,10 @@ export const llmEvaluation = {
       "An input crafted to trick a model into ignoring its safety training and producing content it would normally refuse.",
     module: "safety-evals",
   },
+  "counterfactual-testing": {
+    term: "Counterfactual testing",
+    definition:
+      "Changing one detail of an input, such as a name, while keeping everything else the same, to see whether that detail changes the output.",
+    module: "fairness-evals",
+  },
 } satisfies Record<string, GlossaryEntry>;

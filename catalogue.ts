@@ -9998,11 +9998,12 @@ const llmEvaluation: Track = {
             "Swap names and details in otherwise identical prompts and measure whether answers change",
           formats: ["simulation", "checkpoint"],
           concepts: ["Counterfactual testing", "Bias benchmarks", "Choosing what fair means"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["eval-statistics"],
           plain:
             "Models can treat people differently based on names, gender, dialect or other traits. Fairness evals test this directly, for example by changing only a name and checking whether the answer changes.",
+          terms: ["counterfactual-testing", "algorithmic-bias"],
         },
       ],
     },
