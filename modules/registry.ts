@@ -376,4 +376,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-quality/reconciliation": () => import("./data-quality/reconciliation"),
   "data-quality/late-data": () => import("./data-quality/late-data"),
   "data-quality/ml-data-quality": () => import("./data-quality/ml-data-quality"),
+  "data-quality/dq-platforms": () => import("./data-quality/dq-platforms"),
 };

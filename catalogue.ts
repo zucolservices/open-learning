@@ -8793,11 +8793,12 @@ const dataQuality: Track = {
           signature: "Map the data quality tools on the market to the jobs in this track",
           formats: ["animated-infographic", "checkpoint"],
           concepts: ["Open-source frameworks", "Observability platforms", "Cloud-native options"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["expectations", "data-observability"],
           plain:
             "There are open-source validation libraries, commercial observability platforms and quality features built into cloud data platforms. They cover different jobs, and most teams combine a few.",
+          terms: ["rules-as-code", "data-catalog"],
         },
       ],
     },

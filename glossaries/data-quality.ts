@@ -308,4 +308,10 @@ export const dataQuality = {
       "A mismatch between the data a model was trained on and the data it receives in production, often from computing features in two different ways.",
     module: "ml-data-quality",
   },
+  "rules-as-code": {
+    term: "Rules as code",
+    definition:
+      "Data quality checks written explicitly in files (SQL, YAML or a library's API), versioned and reviewed like any other code.",
+    module: "dq-platforms",
+  },
 } satisfies Record<string, GlossaryEntry>;
