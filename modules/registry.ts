@@ -336,4 +336,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "spark/spark-platforms": () => import("./spark/spark-platforms"),
   "spark/cost-scaling": () => import("./spark/cost-scaling"),
   "spark/capstone-spark": () => import("./spark/capstone-spark"),
+  "data-modelling/why-model": () => import("./data-modelling/why-model"),
 };

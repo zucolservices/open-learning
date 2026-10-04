@@ -243,6 +243,18 @@
   --bg-glow: rgb(248 113 113 / 0.1);
 }
 
+[data-track="timber"] {
+  --accent: #8a5a2b;
+  --accent-soft: rgb(138 90 43 / 0.1);
+  --bg-glow: rgb(161 98 7 / 0.12);
+}
+[data-theme="dark"] [data-track="timber"],
+[data-theme="dark"][data-track="timber"] {
+  --accent: #e0b07a;
+  --accent-soft: rgb(224 176 122 / 0.14);
+  --bg-glow: rgb(224 176 122 / 0.1);
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);

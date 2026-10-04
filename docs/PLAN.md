@@ -583,6 +583,40 @@ Data engineering area, third track (started 2026-10-04). 21 modules in 6 chapter
 | **6** | **Capstone**                          |                               |                                     |
 | 21    | Capstone: the slow nightly job        | The slow nightly job          | Branching scenario, Fix the problem |
 
+## Data Modelling: curriculum
+
+Data engineering area, fourth track (started 2026-10-04). 21 modules in 6 chapters, about 8 hours. Accent: "timber" brown (`[data-track="timber"]`). Glossary: `glossaries/data-modelling.ts`. Vendor-neutral: PostgreSQL, the major cloud warehouses and lakehouses, dbt and NoSQL databases. Built on one branch (`track/data-modelling`), one commit per module, merged once at the end. Each module is fact-checked on its own before it is built; card illustrations and a showcase follow the last module.
+
+| #     | Module                                      | Centrepiece                    | Key formats          |
+| ----- | ------------------------------------------- | ------------------------------ | -------------------- |
+| **1** | **The big picture**                         |                                |                      |
+| 1     | Why model data?                             | Messy sheet vs modelled table  | Scroll story         |
+| 2     | Conceptual, logical and physical            | A library, three ways          | Step through         |
+| **2** | **Relational foundations**                  |                                |                      |
+| 3     | Keys and relationships                      | Keys and crow's feet           | Build connect        |
+| 4     | Normalisation                               | Normalise a spreadsheet        | Step through         |
+| 5     | Transactions vs analytics                   | Same data, two shapes          | Simulation           |
+| **3** | **Dimensional modelling**                   |                                |                      |
+| 6     | Facts, dimensions and the star schema       | Build a star                   | Build connect        |
+| 7     | The four-step design process                | Pick the grain                 | Step through         |
+| 8     | Types of fact table                         | Three fact tables              | Simulation           |
+| 9     | Conformed dimensions and the bus matrix     | Build a bus matrix             | Build connect        |
+| 10    | Dimension patterns                          | Dimension patterns             | Fix the problem      |
+| 11    | Slowly changing dimensions                  | SCD types side by side         | Simulation           |
+| **4** | **Other approaches**                        |                                |                      |
+| 12    | Inmon, Kimball and the enterprise warehouse | Two warehouse philosophies     | Animated infographic |
+| 13    | Data Vault                                  | Hubs, links and satellites     | Build connect        |
+| 14    | One big table                               | Star or one big table          | Simulation           |
+| 15    | Metrics and semantic layers                 | One metric, defined once       | Simulation           |
+| **5** | **Modern practice**                         |                                |                      |
+| 16    | Layered modelling with dbt                  | Staging to marts               | Build connect        |
+| 17    | Modelling for NoSQL                         | Design from access patterns    | Simulation           |
+| 18    | Graph models                                | Nodes and edges                | Simulation           |
+| 19    | Modelling time                              | Valid time and record time     | Simulation           |
+| 20    | Naming, documentation and change            | Change without breaking        | Fix the problem      |
+| **6** | **Capstone**                                |                                |                      |
+| 21    | Capstone: model a food-delivery business    | Model a food-delivery business | Branching scenario   |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -604,6 +638,7 @@ Data engineering area, third track (started 2026-10-04). 21 modules in 6 chapter
 | 4l. Database Internals     | Architecture, third track, 21 modules                                                   | Live: all 21 modules (2026-10-04)                                       |
 | 4m. Enterprise Patterns    | Architecture, fourth track, 21 modules                                                  | Live: all 21 modules (2026-10-04)                                       |
 | 4n. Apache Spark           | Data engineering, third track, 21 modules                                               | Live: all 21 modules (2026-10-04)                                       |
+| 4o. Data Modelling         | Data engineering, fourth track, 21 modules                                              | In progress: 1 of 21 modules                                            |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

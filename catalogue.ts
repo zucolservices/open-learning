@@ -100,6 +100,7 @@ export interface Track {
     | "ledger"
     | "keystone"
     | "ember"
+    | "timber"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -7961,6 +7962,417 @@ const spark: Track = {
   ],
 };
 
+const dataModelling: Track = {
+  slug: "data-modelling",
+  title: "Data Modelling",
+  area: "Data engineering",
+  category: "data-engineering",
+  tagline: "Stars, snowflakes, vaults and when to use each.",
+  description:
+    "How to shape data so it answers questions correctly and stays usable: conceptual, logical and physical models, keys and relationships, normalisation, transactions versus analytics, dimensional modelling (star schemas, grain, fact types, conformed dimensions, dimension patterns, slowly changing dimensions), Inmon and Kimball, Data Vault, wide tables, semantic layers, layered modelling with dbt, NoSQL and graph models, modelling time, and changing models safely. Vendor-neutral, with examples on PostgreSQL, the major cloud warehouses and lakehouses, dbt and NoSQL databases. By the end you can design a model from a set of business questions and defend each choice.",
+  accent: "timber",
+  chapters: [
+    {
+      slug: "big-picture",
+      title: "The big picture",
+      summary: "Why the shape of data matters.",
+      modules: [
+        {
+          slug: "why-model",
+          title: "Why model data?",
+          summary: "Same data, different questions.",
+          minutes: 20,
+          signature:
+            "Answer the same business question against a messy spreadsheet and a modelled table",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: ["What a data model is", "Questions drive design", "Operational vs analytical"],
+          status: "live",
+          level: "beginner",
+          plain:
+            "A data model decides how facts are arranged: what goes in which table and how tables connect. A good model makes the common questions easy and the wrong answers hard; a poor one makes every report a puzzle.",
+          terms: ["data-model", "entity", "attribute", "operational-data", "analytical-data"],
+        },
+        {
+          slug: "model-levels",
+          title: "Conceptual, logical and physical",
+          summary: "Three levels of detail.",
+          minutes: 20,
+          signature:
+            "Turn a conversation about a library into a conceptual sketch, a logical model and real tables",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Entities and relationships",
+            "Entity-relationship diagrams",
+            "From logical to physical",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-model"],
+          plain:
+            "Modelling usually goes from rough to exact: first the things the business talks about and how they relate, then precise attributes and keys, and finally the actual tables and types in a specific database.",
+        },
+      ],
+    },
+    {
+      slug: "relational",
+      title: "Relational foundations",
+      summary: "Keys, relationships and normal forms.",
+      modules: [
+        {
+          slug: "keys-relationships",
+          title: "Keys and relationships",
+          summary: "How rows find each other.",
+          minutes: 25,
+          signature:
+            "Link customers, orders and products with keys, then try one-to-many and many-to-many",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Primary and foreign keys",
+            "Natural and surrogate keys",
+            "Cardinality and bridge tables",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["model-levels"],
+          plain:
+            "Every table needs a way to identify each row, and a way to point at rows in other tables. Keys do both, and the kind of relationship (one-to-many, many-to-many) decides how tables connect.",
+        },
+        {
+          slug: "normalisation",
+          title: "Normalisation",
+          summary: "Each fact in one place.",
+          minutes: 25,
+          signature:
+            "Take a messy orders sheet through first, second and third normal form and watch update anomalies disappear",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Update, insert and delete anomalies",
+            "First to third normal form",
+            "When to stop",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["keys-relationships"],
+          plain:
+            "If the same fact is stored in several places, those copies drift apart. Normalisation splits tables so each fact lives in exactly one place, which keeps data consistent when it changes.",
+        },
+        {
+          slug: "oltp-olap",
+          title: "Transactions vs analytics",
+          summary: "Why reporting models look different.",
+          minutes: 20,
+          signature:
+            "Run a checkout and a yearly sales report against a normalised model and a denormalised one",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "OLTP and OLAP workloads",
+            "Denormalisation",
+            "Separate models for separate jobs",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["normalisation"],
+          plain:
+            "Systems that take orders need small, fast, consistent updates, so they're normalised. Systems that answer questions over millions of rows prefer fewer joins, so they're often denormalised. Most organisations need both.",
+        },
+      ],
+    },
+    {
+      slug: "dimensional",
+      title: "Dimensional modelling",
+      summary: "Stars, facts and dimensions.",
+      modules: [
+        {
+          slug: "star-schema",
+          title: "Facts, dimensions and the star schema",
+          summary: "The shape most analytics uses.",
+          minutes: 25,
+          signature:
+            "Build a star schema for shop sales and answer questions by slicing measures by dimensions",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Facts and measures",
+            "Dimensions and attributes",
+            "Why stars are fast and easy",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["oltp-olap"],
+          plain:
+            "In a star schema, a central fact table records business events with numbers you can add up, and surrounding dimension tables describe them: who, what, where, when. Questions become 'total this, by that'.",
+        },
+        {
+          slug: "grain",
+          title: "The four-step design process",
+          summary: "Start by declaring the grain.",
+          minutes: 25,
+          signature:
+            "Design a fact table for supermarket sales: pick the process, declare the grain, choose dimensions and facts",
+          formats: ["step-through", "checkpoint"],
+          concepts: ["Business processes", "Declaring the grain", "Choosing dimensions and facts"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["star-schema"],
+          plain:
+            "Kimball's method has four steps, and the second is the one teams get wrong: say exactly what one row of the fact table means. Every other decision follows from that.",
+        },
+        {
+          slug: "fact-tables",
+          title: "Types of fact table",
+          summary: "Transactions, snapshots and accumulating snapshots.",
+          minutes: 25,
+          signature:
+            "Model the same order process as a transaction fact, a periodic snapshot and an accumulating snapshot",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Transaction facts",
+            "Periodic and accumulating snapshots",
+            "Additive and semi-additive measures",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["grain"],
+          plain:
+            "Not every fact table records single events. Some take a regular snapshot, like daily stock levels; others follow a process from start to finish, like an order moving through stages. Each answers different questions.",
+        },
+        {
+          slug: "conformed-dimensions",
+          title: "Conformed dimensions and the bus matrix",
+          summary: "Making separate stars add up.",
+          minutes: 20,
+          signature: "Fill in a bus matrix for a retailer and see which reports can be combined",
+          formats: ["build-connect", "checkpoint"],
+          concepts: ["Conformed dimensions", "The bus matrix", "Drilling across"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["star-schema"],
+          plain:
+            "When sales and returns use the same customer and product dimensions, their numbers can be compared side by side. Conformed dimensions are the glue that makes many stars one warehouse.",
+        },
+        {
+          slug: "dimension-patterns",
+          title: "Dimension patterns",
+          summary: "Role-playing, junk, degenerate and snowflaked dimensions.",
+          minutes: 25,
+          signature: "Fix five awkward dimension designs with the right pattern",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Role-playing dimensions",
+            "Junk and degenerate dimensions",
+            "Snowflakes and outriggers",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["star-schema"],
+          plain:
+            "Real dimensions are messy: one date table used three ways, a pile of yes/no flags, an order number with nowhere to live. A handful of named patterns handles them.",
+        },
+        {
+          slug: "scd",
+          title: "Slowly changing dimensions",
+          summary: "Keeping history when descriptions change.",
+          minutes: 25,
+          signature:
+            "A customer moves city: apply SCD types 0, 1, 2 and 3 and see what last year's report says",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Type 1: overwrite", "Type 2: new row with dates", "Types 0, 3 and hybrids"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["dimension-patterns"],
+          plain:
+            "Customers move, products get renamed. Should old sales show the old city or the new one? Slowly changing dimension techniques let you choose, per attribute, whether to keep history.",
+        },
+      ],
+    },
+    {
+      slug: "approaches",
+      title: "Other approaches",
+      summary: "Beyond the classic star.",
+      modules: [
+        {
+          slug: "inmon-kimball",
+          title: "Inmon, Kimball and the enterprise warehouse",
+          summary: "Two schools, and how they converged.",
+          minutes: 20,
+          signature:
+            "Build the same warehouse top-down and bottom-up and compare time to first report",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: ["Inmon's normalised warehouse", "Kimball's dimensional bus", "Hybrids today"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["conformed-dimensions"],
+          plain:
+            "In the 1990s two approaches competed: build one normalised enterprise warehouse first, then marts; or build dimensional marts that share dimensions. Most modern platforms mix both.",
+        },
+        {
+          slug: "data-vault",
+          title: "Data Vault",
+          summary: "Hubs, links and satellites.",
+          minutes: 25,
+          signature:
+            "Load customer data from two source systems into hubs, links and satellites, then add a third source",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Hubs, links and satellites",
+            "Auditability and history",
+            "When Data Vault fits",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["inmon-kimball"],
+          plain:
+            "Data Vault separates the stable business keys, the relationships between them, and the changing descriptive details into different tables. It makes adding new sources and keeping full history easier, at the cost of more tables and joins.",
+        },
+        {
+          slug: "wide-tables",
+          title: "One big table",
+          summary: "Denormalising for columnar engines.",
+          minutes: 20,
+          signature:
+            "Query a star and a single wide table on a columnar engine and compare joins, storage and flexibility",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Wide denormalised tables",
+            "Columnar storage changes the trade-offs",
+            "Nested and repeated fields",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["star-schema"],
+          plain:
+            "Columnar engines read only the columns a query needs and compress repeated values well, so a single very wide table can be practical. It's simple to query but harder to keep consistent.",
+        },
+        {
+          slug: "semantic-layer",
+          title: "Metrics and semantic layers",
+          summary: "Define revenue once.",
+          minutes: 20,
+          signature:
+            "Three dashboards compute 'active customers' three ways; define it once in a semantic layer",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Metric definitions", "Semantic layers", "Consistency across tools"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["star-schema"],
+          plain:
+            "Even with good tables, different teams calculate the same metric differently. A semantic layer defines metrics and how tables join once, and every tool asks it instead of writing its own SQL.",
+        },
+      ],
+    },
+    {
+      slug: "practice",
+      title: "Modern practice",
+      summary: "Modelling in today's tools and data stores.",
+      modules: [
+        {
+          slug: "dbt-layers",
+          title: "Layered modelling with dbt",
+          summary: "Staging, intermediate and marts.",
+          minutes: 25,
+          signature:
+            "Organise a project into staging, intermediate and mart models and trace one metric back to its sources",
+          formats: ["build-connect", "checkpoint"],
+          concepts: ["Staging, intermediate, marts", "Models as code", "Lineage and tests"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["star-schema"],
+          plain:
+            "Modern teams build models as code in layers: clean each source, combine and reshape, then publish business-ready tables. Tools like dbt make each step a versioned, tested query with visible lineage.",
+        },
+        {
+          slug: "nosql-modelling",
+          title: "Modelling for NoSQL",
+          summary: "Start from the access patterns.",
+          minutes: 25,
+          signature:
+            "Model the same orders data for a relational database, a document store and a key-value store",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Access-pattern-first design",
+            "Embedding vs referencing",
+            "Single-table design",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["normalisation"],
+          plain:
+            "Document and key-value databases don't do joins well, so you design around the questions the application asks, often duplicating data deliberately so each read is a single lookup.",
+        },
+        {
+          slug: "graph-modelling",
+          title: "Graph models",
+          summary: "When relationships are the point.",
+          minutes: 20,
+          signature: "Find friends-of-friends and fraud rings in a table model and a graph model",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Nodes, edges and properties",
+            "Property graphs and RDF",
+            "When to use a graph",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["keys-relationships"],
+          plain:
+            "When the important questions are about connections, like who knows whom or which accounts share a phone, a graph model stores relationships directly and makes multi-hop questions natural.",
+        },
+        {
+          slug: "modelling-time",
+          title: "Modelling time",
+          summary: "Valid time, system time and snapshots.",
+          minutes: 25,
+          signature:
+            "Correct a price that was wrong last month and answer what you knew then versus what was true then",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Effective dating", "Bitemporal models", "Snapshots and event tables"],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["scd"],
+          plain:
+            "Data changes, and sometimes past data turns out to be wrong. Tracking both when something was true and when you recorded it lets you answer 'what did the report say last month?' as well as 'what was actually true?'.",
+        },
+        {
+          slug: "evolving-models",
+          title: "Naming, documentation and change",
+          summary: "Keeping a model usable for years.",
+          minutes: 20,
+          signature:
+            "Rename a column used by twelve reports, safely, with conventions, docs and deprecation",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: ["Naming conventions", "Documentation and catalogs", "Changing models safely"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["dbt-layers"],
+          plain:
+            "A model is used by many people for years. Consistent names, written definitions and a careful way to change things keep it understandable and stop changes from silently breaking reports.",
+        },
+      ],
+    },
+    {
+      slug: "capstone",
+      title: "Capstone",
+      summary: "Everything together.",
+      modules: [
+        {
+          slug: "capstone-model",
+          title: "Capstone: model a food-delivery business",
+          summary: "From questions to a warehouse design.",
+          minutes: 40,
+          signature:
+            "Interview the business, design facts and dimensions, handle history, and test your model against ten real questions",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: ["Applying data modelling"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["scd", "conformed-dimensions", "fact-tables"],
+          plain:
+            "Everything in this track in one design: turn a food-delivery company's questions into a warehouse model, and check it answers them correctly.",
+        },
+      ],
+    },
+  ],
+};
+
 export const tracks: Track[] = [
   lakehouse,
   systemDesign,
@@ -7976,6 +8388,7 @@ export const tracks: Track[] = [
   databaseInternals,
   enterprisePatterns,
   spark,
+  dataModelling,
   playground,
 ];
 
@@ -8021,7 +8434,11 @@ export const categories: Category[] = [
         slug: "spark",
         blurb: "How distributed dataframes plan, shuffle and scale.",
       },
-      { title: "Data Modelling", blurb: "Stars, snowflakes, vaults and when to use each." },
+      {
+        title: "Data Modelling",
+        slug: "data-modelling",
+        blurb: "Stars, snowflakes, vaults and when to use each.",
+      },
       { title: "Data Quality", blurb: "Tests, contracts and observability for data." },
     ],
   },
