@@ -518,4 +518,16 @@ export const enterprisePatterns = {
       "A bubble context with its own data store, kept in step with legacy by a synchronising anticorruption layer, so it can keep running for a while when legacy is unavailable.",
     module: "legacy-integration",
   },
+  adr: {
+    term: "Architecture decision record (ADR)",
+    definition:
+      "A short document, kept with the code, recording one significant architectural decision: its context, the decision, its status and its consequences. Michael Nygard proposed the format in 2011.",
+    module: "decisions",
+  },
+  "fitness-function": {
+    term: "Fitness function",
+    definition:
+      "An automated, objective check that a system still has an architectural characteristic you care about, such as no forbidden dependencies or a page under a time budget, run on every build.",
+    module: "decisions",
+  },
 } satisfies Record<string, GlossaryEntry>;

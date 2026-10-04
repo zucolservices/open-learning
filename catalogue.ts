@@ -7434,11 +7434,12 @@ const enterprisePatterns: Track = {
             "Fitness functions",
             "Evolutionary architecture",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["hexagonal"],
           plain:
             "Architecture is a series of decisions. Writing each one down, with its context and consequences, stops teams relitigating them; automated checks catch the code drifting away from them.",
+          terms: ["adr", "fitness-function", "dependency-rule"],
         },
         {
           slug: "enterprise-architecture",
