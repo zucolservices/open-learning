@@ -283,4 +283,16 @@ export const voiceAi = {
       "The tones a phone keypad makes. Payment lines can mask them so neither agents nor recordings capture the digits.",
     module: "voice-tools",
   },
+  "voice-framework": {
+    term: "Voice agent framework",
+    definition:
+      "Open-source code, such as Pipecat or LiveKit Agents, that wires speech-to-text, a language model and text-to-speech into a real-time agent, handling streaming, turns and interruptions.",
+    module: "voice-platforms",
+  },
+  "hosted-voice-platform": {
+    term: "Hosted voice platform",
+    definition:
+      "A service that rents you a ready-made voice agent, with phone numbers, transfers and dashboards, configured rather than coded.",
+    module: "voice-platforms",
+  },
 } satisfies Record<string, GlossaryEntry>;

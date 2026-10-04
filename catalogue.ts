@@ -9604,11 +9604,12 @@ const voiceAi: Track = {
             "Voice agent frameworks",
             "Cloud speech services",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["voice-transport"],
           plain:
             "There are open-source speech models, specialist voice APIs, cloud speech services and frameworks that wire them into a working agent. Most teams combine several and swap parts as models improve.",
+          terms: ["voice-framework", "hosted-voice-platform", "open-weights", "vendor-lock-in"],
         },
         {
           slug: "voice-quality",
