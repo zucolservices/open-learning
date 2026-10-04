@@ -9070,11 +9070,12 @@ const aiAgents: Track = {
             "Run a 200-step task and choose when to summarise, take notes or hand work to a sub-agent",
           formats: ["simulation", "checkpoint"],
           concepts: ["Context fills up", "Compaction and notes", "Sub-agents for isolation"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["agent-memory"],
           plain:
             "Long tasks produce more text than fits in a model's context, and quality drops as it fills. Agents keep going by summarising old turns, writing notes to files and giving self-contained jobs to helper agents with fresh contexts.",
+          terms: ["compaction", "context-rot", "sub-agent", "context-engineering"],
         },
         {
           slug: "durable-agents",

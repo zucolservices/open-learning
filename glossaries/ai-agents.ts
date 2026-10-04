@@ -170,4 +170,22 @@ export const aiAgents = {
       "Long-term memory of facts, such as a user's preferences or details about their organisation.",
     module: "agent-memory",
   },
+  compaction: {
+    term: "Compaction",
+    definition:
+      "Summarising an agent's conversation so far and continuing in a fresh context window with the summary, so a long task can keep going.",
+    module: "context-management",
+  },
+  "context-rot": {
+    term: "Context rot",
+    definition:
+      "The tendency of models to become less reliable as their input grows longer, even within the context window's limit.",
+    module: "context-management",
+  },
+  "sub-agent": {
+    term: "Sub-agent",
+    definition:
+      "A helper agent given a self-contained job with its own fresh context window, which reports back a short result to the agent that called it.",
+    module: "context-management",
+  },
 } satisfies Record<string, GlossaryEntry>;
