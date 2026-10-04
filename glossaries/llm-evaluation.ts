@@ -169,4 +169,10 @@ export const llmEvaluation = {
       "The share of side-by-side comparisons one version wins. Only meaningful if you say how ties were counted.",
     module: "comparing-versions",
   },
+  "batch-invariance": {
+    term: "Batch invariance",
+    definition:
+      "Making a model server give the same output for a request however many other requests it is processed alongside, which removes a major cause of run-to-run differences.",
+    module: "variance",
+  },
 } satisfies Record<string, GlossaryEntry>;

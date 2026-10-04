@@ -437,4 +437,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "llm-evaluation/human-eval": () => import("./llm-evaluation/human-eval"),
   "llm-evaluation/eval-statistics": () => import("./llm-evaluation/eval-statistics"),
   "llm-evaluation/comparing-versions": () => import("./llm-evaluation/comparing-versions"),
+  "llm-evaluation/variance": () => import("./llm-evaluation/variance"),
 };

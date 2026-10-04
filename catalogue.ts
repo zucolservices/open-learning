@@ -9892,11 +9892,12 @@ const llmEvaluation: Track = {
             "Run each case several times and see how pass rates change when you need it right every time",
           formats: ["simulation", "checkpoint"],
           concepts: ["Sampling randomness", "Several runs per case", "Pass@k versus pass^k"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["eval-statistics"],
           plain:
             "Models can answer the same question differently each time. Running cases several times shows how consistent a system is, and getting it right once in five tries is very different from getting it right five times out of five.",
+          terms: ["pass-hat-k", "temperature", "sampling", "batch-invariance"],
         },
       ],
     },
