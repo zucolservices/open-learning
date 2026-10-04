@@ -235,4 +235,22 @@ export const llmEvaluation = {
       "Changing one detail of an input, such as a name, while keeping everything else the same, to see whether that detail changes the output.",
     module: "fairness-evals",
   },
+  "eval-driven-development": {
+    term: "Eval-driven development",
+    definition:
+      "Writing the evals that define good behaviour first, then changing prompts, models or code and re-running them, much like test-driven development.",
+    module: "eval-driven-dev",
+  },
+  "capability-eval": {
+    term: "Capability eval",
+    definition:
+      "An eval of things a system can't yet do reliably, tracked to show progress; the counterpart of a regression eval that protects what already works.",
+    module: "eval-driven-dev",
+  },
+  "error-analysis": {
+    term: "Error analysis",
+    definition:
+      "Reading real outputs, noting each problem, grouping the notes into failure types and counting them, to decide what to fix and test first.",
+    module: "eval-driven-dev",
+  },
 } satisfies Record<string, GlossaryEntry>;

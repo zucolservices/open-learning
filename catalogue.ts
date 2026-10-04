@@ -10021,11 +10021,12 @@ const llmEvaluation: Track = {
             "Wire an eval suite into a pull request and catch a prompt change that fixes one thing and breaks three",
           formats: ["simulation", "checkpoint"],
           concepts: ["Eval-driven development", "Regression suites in CI", "Error analysis"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["comparing-versions"],
           plain:
             "Teams treat evals like automated tests: every prompt, model or code change runs the suite, and regressions block the release. Reading failures by hand, not just scores, shows what to fix next.",
+          terms: ["eval-driven-development", "capability-eval", "error-analysis"],
         },
         {
           slug: "online-evals",
