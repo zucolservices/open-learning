@@ -293,4 +293,28 @@ export const dataModelling = {
       "A dimension that references another dimension, such as a customer pointing to the date they joined. Allowed but used sparingly.",
     module: "dimension-patterns",
   },
+  scd: {
+    term: "Slowly changing dimension (SCD)",
+    definition:
+      "Kimball's numbered techniques (type 0 to type 7) for handling dimension attributes that change over time, such as a customer's city.",
+    module: "scd",
+  },
+  "scd-type-1": {
+    term: "SCD type 1",
+    definition:
+      "Handling a change by overwriting the old value. Always current, but history is lost.",
+    module: "scd",
+  },
+  "scd-type-2": {
+    term: "SCD type 2",
+    definition:
+      "Handling a change by adding a new dimension row with its own surrogate key and validity dates, so facts keep the version in effect when they happened.",
+    module: "scd",
+  },
+  "mini-dimension": {
+    term: "Mini-dimension (SCD type 4)",
+    definition:
+      "A small separate dimension for attributes that change often, such as age or credit band, so the main dimension doesn't grow a new row each time.",
+    module: "scd",
+  },
 } satisfies Record<string, GlossaryEntry>;

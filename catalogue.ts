@@ -8214,11 +8214,12 @@ const dataModelling: Track = {
             "A customer moves city: apply SCD types 0, 1, 2 and 3 and see what last year's report says",
           formats: ["simulation", "checkpoint"],
           concepts: ["Type 1: overwrite", "Type 2: new row with dates", "Types 0, 3 and hybrids"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["dimension-patterns"],
           plain:
             "Customers move, products get renamed. Should old sales show the old city or the new one? Slowly changing dimension techniques let you choose, per attribute, whether to keep history.",
+          terms: ["scd", "scd-type-1", "scd-type-2", "mini-dimension", "surrogate-key"],
         },
       ],
     },
