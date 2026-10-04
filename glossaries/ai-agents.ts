@@ -188,4 +188,22 @@ export const aiAgents = {
       "A helper agent given a self-contained job with its own fresh context window, which reports back a short result to the agent that called it.",
     module: "context-management",
   },
+  "agent-checkpoint": {
+    term: "Checkpoint (agent state)",
+    definition:
+      "A saved snapshot of an agent run's state after a step, so it can resume after a crash or a pause instead of starting again.",
+    module: "durable-agents",
+  },
+  "agent-thread": {
+    term: "Thread",
+    definition:
+      "An id that groups one agent run's saved checkpoints, so a later call can resume exactly that conversation or task.",
+    module: "durable-agents",
+  },
+  "durable-execution": {
+    term: "Durable execution",
+    definition:
+      "Running a program so that each finished step is recorded; after a failure it resumes by reusing saved results rather than redoing completed work.",
+    module: "durable-agents",
+  },
 } satisfies Record<string, GlossaryEntry>;

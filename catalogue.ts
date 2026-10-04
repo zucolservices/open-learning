@@ -9086,11 +9086,12 @@ const aiAgents: Track = {
             "Crash an agent halfway through a refund and resume it from a checkpoint without paying twice",
           formats: ["simulation", "checkpoint"],
           concepts: ["Saving state", "Checkpoints and replay", "Pausing for approval"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["context-management"],
           plain:
             "Real tasks can take minutes or days and must survive crashes, deploys and waiting for a person. Saving the agent's state after each step lets it pause, resume and avoid repeating actions that already happened.",
+          terms: ["agent-checkpoint", "agent-thread", "durable-execution", "idempotency-key"],
         },
       ],
     },
