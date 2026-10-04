@@ -86,4 +86,16 @@ export const dataQuality = {
       "Proposing data quality rules automatically from a profile. Suggestions must be reviewed, because they assume the data they came from was correct.",
     module: "profiling",
   },
+  "validation-framework": {
+    term: "Validation framework",
+    definition:
+      "A tool where you declare rules about data and it runs the checks and reports results, such as Great Expectations, Soda, Deequ or pandera.",
+    module: "expectations",
+  },
+  expectation: {
+    term: "Expectation",
+    definition:
+      "A declared rule about data, such as 'amount is never negative'. Great Expectations' name for a single check.",
+    module: "expectations",
+  },
 } satisfies Record<string, GlossaryEntry>;

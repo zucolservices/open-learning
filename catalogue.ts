@@ -8531,11 +8531,12 @@ const dataQuality: Track = {
             "Express the same five rules in three validation tools and compare what each reports",
           formats: ["simulation", "checkpoint"],
           concepts: ["Declarative checks", "Validation results and docs", "Choosing a framework"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["data-tests"],
           plain:
             "Rather than hand-writing SQL checks, teams use frameworks where you declare expectations ('values between 0 and 100') and the tool runs them and reports results. Several open-source options exist.",
+          terms: ["validation-framework", "expectation"],
         },
         {
           slug: "where-to-test",

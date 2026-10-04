@@ -361,4 +361,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-quality/quality-dimensions": () => import("./data-quality/quality-dimensions"),
   "data-quality/data-tests": () => import("./data-quality/data-tests"),
   "data-quality/profiling": () => import("./data-quality/profiling"),
+  "data-quality/expectations": () => import("./data-quality/expectations"),
 };
