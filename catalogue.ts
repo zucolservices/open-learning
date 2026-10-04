@@ -9048,11 +9048,18 @@ const aiAgents: Track = {
             "Long-term memory stores",
             "What to remember and forget",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["agent-loop"],
           plain:
             "A model remembers nothing between calls; everything it knows about the task must be in its context. Agents add memory by saving notes, facts and past episodes somewhere and loading the useful ones back in.",
+          terms: [
+            "agent-memory",
+            "working-memory",
+            "episodic-memory",
+            "semantic-memory",
+            "context-window",
+          ],
         },
         {
           slug: "context-management",

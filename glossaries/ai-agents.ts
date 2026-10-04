@@ -146,4 +146,28 @@ export const aiAgents = {
       "A unique id sent with an action, such as a payment, so that if the request is retried the service performs it only once.",
     module: "errors-recovery",
   },
+  "agent-memory": {
+    term: "Agent memory",
+    definition:
+      "Information an agent saves outside the model, such as facts, past events and learned rules, and loads back into its context when relevant.",
+    module: "agent-memory",
+  },
+  "working-memory": {
+    term: "Working memory",
+    definition:
+      "What an agent has in its context window right now: the current conversation, tool results and any memories loaded for this step.",
+    module: "agent-memory",
+  },
+  "episodic-memory": {
+    term: "Episodic memory",
+    definition:
+      "Long-term memory of past events, such as what happened in an earlier task or conversation.",
+    module: "agent-memory",
+  },
+  "semantic-memory": {
+    term: "Semantic memory",
+    definition:
+      "Long-term memory of facts, such as a user's preferences or details about their organisation.",
+    module: "agent-memory",
+  },
 } satisfies Record<string, GlossaryEntry>;
