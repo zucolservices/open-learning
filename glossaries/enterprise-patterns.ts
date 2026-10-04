@@ -32,4 +32,34 @@ export const enterprisePatterns = {
       "An older system that is still essential to the business but hard to change, often because of outdated technology, missing documentation or scarce skills.",
     module: "why-enterprise",
   },
+  "conways-law": {
+    term: "Conway's law",
+    definition:
+      "Melvin Conway's 1968 observation that organisations design systems which copy their own communication structures: the parts of a system tend to match the teams that build them.",
+    module: "conways-law",
+  },
+  "inverse-conway": {
+    term: "Inverse Conway manoeuvre",
+    definition:
+      "Deliberately shaping teams and how they communicate in order to get the software architecture you want.",
+    module: "conways-law",
+  },
+  "team-topologies": {
+    term: "Team Topologies",
+    definition:
+      "Skelton and Pais's model for organising technology teams: four team types (stream-aligned, platform, enabling, complicated-subsystem) and three interaction modes (collaboration, X-as-a-Service, facilitating).",
+    module: "conways-law",
+  },
+  "stream-aligned-team": {
+    term: "Stream-aligned team",
+    definition:
+      "A team aligned to a flow of work from one part of the business, owning it end to end: building, running and changing it.",
+    module: "conways-law",
+  },
+  "cognitive-load": {
+    term: "Cognitive load",
+    definition:
+      "How much a team has to keep in its head: tools, domains and responsibilities. Overloaded teams slow down and make poor decisions.",
+    module: "conways-law",
+  },
 } satisfies Record<string, GlossaryEntry>;

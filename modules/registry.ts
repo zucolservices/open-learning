@@ -295,4 +295,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "database-internals/engines-compared": () => import("./database-internals/engines-compared"),
   "database-internals/capstone-db": () => import("./database-internals/capstone-db"),
   "enterprise-patterns/why-enterprise": () => import("./enterprise-patterns/why-enterprise"),
+  "enterprise-patterns/conways-law": () => import("./enterprise-patterns/conways-law"),
 };
