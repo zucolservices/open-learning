@@ -200,4 +200,16 @@ export const dataQuality = {
       "How up to date data is when someone uses it, often measured as the time since the newest record arrived or since the table last updated.",
     module: "data-slas",
   },
+  "data-observability": {
+    term: "Data observability",
+    definition:
+      "Watching the data itself (freshness, volume, schema, value distributions and lineage) so problems nobody wrote a test for still surface.",
+    module: "data-observability",
+  },
+  "data-downtime": {
+    term: "Data downtime",
+    definition:
+      "Monte Carlo's term for periods when data is partial, wrong or missing; roughly incidents × (time to detect + time to resolve).",
+    module: "data-observability",
+  },
 } satisfies Record<string, GlossaryEntry>;

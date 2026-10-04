@@ -8661,11 +8661,12 @@ const dataQuality: Track = {
             "Watch a table through freshness, volume, schema, distribution and lineage signals and spot the silent failure",
           formats: ["simulation", "checkpoint"],
           concepts: ["Signals to monitor", "Tests vs monitoring", "Data downtime"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["data-slas"],
           plain:
             "A job can succeed while delivering half the rows or a column full of nulls. Data observability watches the data itself, how fresh, how much, what shape, so unknown problems surface too.",
+          terms: ["data-observability", "data-downtime"],
         },
         {
           slug: "anomaly-detection",
