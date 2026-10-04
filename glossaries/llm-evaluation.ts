@@ -199,4 +199,16 @@ export const llmEvaluation = {
       "A benchmark that keeps adding fresh, dated questions so models can be tested on material that didn't exist when they were trained.",
     module: "contamination",
   },
+  "rag-triad": {
+    term: "RAG triad",
+    definition:
+      "Three checks for a retrieval-augmented answer: were the retrieved passages relevant, is the answer supported by them, and does it address the question?",
+    module: "eval-systems",
+  },
+  "trajectory-eval": {
+    term: "Trajectory evaluation",
+    definition:
+      "Grading the path an agent took (which tools it called, with what inputs, in what order) rather than only its final result.",
+    module: "eval-systems",
+  },
 } satisfies Record<string, GlossaryEntry>;

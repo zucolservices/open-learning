@@ -9966,11 +9966,12 @@ const llmEvaluation: Track = {
             "Retrieval and faithfulness",
             "Agent trajectories",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["llm-judge"],
           plain:
             "Real applications chain retrieval, generation and tools. Evaluating each part shows where failures come from, while end-to-end evals show whether users get the right result. The RAG and AI Agents tracks go deeper.",
+          terms: ["rag-triad", "faithfulness", "trajectory-eval", "pass-hat-k"],
         },
         {
           slug: "safety-evals",

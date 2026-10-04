@@ -440,4 +440,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "llm-evaluation/variance": () => import("./llm-evaluation/variance"),
   "llm-evaluation/benchmarks": () => import("./llm-evaluation/benchmarks"),
   "llm-evaluation/contamination": () => import("./llm-evaluation/contamination"),
+  "llm-evaluation/eval-systems": () => import("./llm-evaluation/eval-systems"),
 };
