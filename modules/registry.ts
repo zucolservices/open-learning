@@ -372,4 +372,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-quality/anomaly-detection": () => import("./data-quality/anomaly-detection"),
   "data-quality/lineage": () => import("./data-quality/lineage"),
   "data-quality/data-incidents": () => import("./data-quality/data-incidents"),
+  "data-quality/deduplication": () => import("./data-quality/deduplication"),
 };

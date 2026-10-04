@@ -260,4 +260,16 @@ export const dataQuality = {
       "Re-running a pipeline for past periods to repair or fill them in; safe only when the job is idempotent.",
     module: "data-incidents",
   },
+  "entity-resolution": {
+    term: "Entity resolution",
+    definition:
+      "Deciding which records, within or across systems, describe the same real-world person or thing; also called record linkage or deduplication.",
+    module: "deduplication",
+  },
+  survivorship: {
+    term: "Survivorship",
+    definition:
+      "Rules that decide, field by field, which value is kept when matched records are merged, such as most recent or from the most trusted source.",
+    module: "deduplication",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -8731,11 +8731,12 @@ const dataQuality: Track = {
             "Match customer records from two systems with exact and fuzzy rules and pick the surviving values",
           formats: ["simulation", "checkpoint"],
           concepts: ["Exact and fuzzy matching", "Survivorship", "Master data"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["quality-dimensions"],
           plain:
             "The same person appears as 'Asha Rao' in one system and 'A. Rao' in another. Entity resolution decides which records are the same thing and which values to keep, without merging strangers.",
+          terms: ["entity-resolution", "survivorship", "master-data-management"],
         },
         {
           slug: "reconciliation",
