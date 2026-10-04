@@ -272,4 +272,16 @@ export const aiAgents = {
       "When people are asked to approve so many actions that they stop reading and approve automatically, defeating the point of the check.",
     module: "human-in-the-loop",
   },
+  "agent-trajectory": {
+    term: "Trajectory",
+    definition:
+      "The sequence of steps an agent took on a task: its tool calls, their inputs and results, and its messages.",
+    module: "agent-evals",
+  },
+  "pass-hat-k": {
+    term: "pass^k",
+    definition:
+      "The chance that all k separate attempts at the same task succeed, a measure of reliability; compare pass@k, the chance that at least one succeeds.",
+    module: "agent-evals",
+  },
 } satisfies Record<string, GlossaryEntry>;

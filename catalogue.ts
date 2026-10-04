@@ -9233,11 +9233,12 @@ const aiAgents: Track = {
             "Benchmarks for agents",
             "Reliability over many runs",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["errors-recovery"],
           plain:
             "An agent can reach the right answer by a wasteful or dangerous route, or succeed once and fail the next time. Evaluating agents means checking outcomes, the steps taken, cost and consistency across many runs.",
+          terms: ["agent-trajectory", "pass-hat-k", "eval"],
         },
         {
           slug: "agent-ops",
