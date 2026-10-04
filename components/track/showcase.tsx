@@ -26,6 +26,8 @@ import { EnterprisePatternsScene } from "@/components/home/enterprise-patterns-s
 import { EnterprisePatternsTaste } from "@/components/home/enterprise-patterns-taste";
 import { SparkScene } from "@/components/home/spark-scene";
 import { SparkTaste } from "@/components/home/spark-taste";
+import { DataModellingScene } from "@/components/home/data-modelling-scene";
+import { DataModellingTaste } from "@/components/home/data-modelling-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -146,5 +148,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: SparkTaste,
     tasteCaption:
       "A taste of module 10: change one table's size and the join condition, and see which strategy Spark picks and how much data moves.",
+  },
+  "data-modelling": {
+    Scene: DataModellingScene,
+    sceneCaption:
+      "A modelled warehouse for a food-delivery company, from source systems to one set of numbers. Watch the tour, or click any part.",
+    Taste: DataModellingTaste,
+    tasteCaption:
+      "A taste of module 11: a customer moves city. See what each slowly-changing-dimension type does to last year's report.",
   },
 };

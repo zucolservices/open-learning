@@ -22,6 +22,8 @@ import { enterprisePatternsArtA } from "./art/enterprise-patterns-a";
 import { enterprisePatternsArtB } from "./art/enterprise-patterns-b";
 import { sparkArtA } from "./art/spark-a";
 import { sparkArtB } from "./art/spark-b";
+import { dataModellingArtA } from "./art/data-modelling-a";
+import { dataModellingArtB } from "./art/data-modelling-b";
 
 /**
  * One small illustration per module (viewBox 160 × 100), drawn with the
@@ -1063,6 +1065,8 @@ const all: ArtMap = {
   ...enterprisePatternsArtB,
   ...sparkArtA,
   ...sparkArtB,
+  ...dataModellingArtA,
+  ...dataModellingArtB,
 };
 
 /** Art is keyed by slug; a "track/slug" key wins, for slugs used in more than one track. */
