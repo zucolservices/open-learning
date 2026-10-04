@@ -7579,11 +7579,12 @@ const spark: Track = {
             "DataFrames and schemas",
             "Why structure helps the engine",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["cluster-anatomy"],
           plain:
             "Spark started with RDDs, collections of records spread across machines. DataFrames added columns and types, like a table. Because Spark then knows what your data looks like, it can optimise your job far better.",
+          terms: ["rdd", "dataframe", "dataset-spark", "schema-spark", "lineage"],
         },
         {
           slug: "lazy-evaluation",

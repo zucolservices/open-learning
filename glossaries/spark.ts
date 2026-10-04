@@ -62,4 +62,36 @@ export const spark = {
       "A client-server option, since Spark 3.4, in which a lightweight client sends DataFrame plans to a remote Spark cluster and receives results back.",
     module: "cluster-anatomy",
   },
+  rdd: {
+    term: "RDD (resilient distributed dataset)",
+    definition:
+      "Spark's original data abstraction: an immutable collection of objects split into partitions across a cluster, processed by your functions, and rebuilt from its lineage if a partition is lost.",
+    module: "rdds-dataframes",
+  },
+  dataframe: {
+    term: "DataFrame",
+    definition:
+      "A distributed table of rows with named, typed columns. Because Spark knows the schema and the operations, it can optimise DataFrame code heavily.",
+    analogy: "A labelled spreadsheet rather than a box of papers.",
+    module: "rdds-dataframes",
+  },
+  "dataset-spark": {
+    term: "Dataset (Spark)",
+    definition:
+      "A typed version of a DataFrame for Scala and Java, combining compile-time types with Spark's optimiser. In those languages a DataFrame is a Dataset of rows.",
+    module: "rdds-dataframes",
+  },
+  "schema-spark": {
+    term: "Schema",
+    definition:
+      "The names and types of a DataFrame's columns, which Spark uses to plan and optimise work.",
+    module: "rdds-dataframes",
+  },
+  lineage: {
+    term: "Lineage",
+    definition:
+      "The recorded chain of transformations that produced a dataset. Spark uses it to recompute lost partitions instead of keeping copies.",
+    analogy: "Keeping the recipe, so you can cook the dish again.",
+    module: "rdds-dataframes",
+  },
 } satisfies Record<string, GlossaryEntry>;
