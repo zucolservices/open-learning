@@ -24,6 +24,8 @@ import { DatabaseInternalsScene } from "@/components/home/database-internals-sce
 import { DatabaseInternalsTaste } from "@/components/home/database-internals-taste";
 import { EnterprisePatternsScene } from "@/components/home/enterprise-patterns-scene";
 import { EnterprisePatternsTaste } from "@/components/home/enterprise-patterns-taste";
+import { SparkScene } from "@/components/home/spark-scene";
+import { SparkTaste } from "@/components/home/spark-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -136,5 +138,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: EnterprisePatternsTaste,
     tasteCaption:
       "A taste of module 8: connect two systems four ways and put each through the same four situations.",
+  },
+  spark: {
+    Scene: SparkScene,
+    sceneCaption:
+      "One query's journey through Spark, from your code on the driver to files on storage. Watch the tour, or click any part.",
+    Taste: SparkTaste,
+    tasteCaption:
+      "A taste of module 10: change one table's size and the join condition, and see which strategy Spark picks and how much data moves.",
   },
 };
