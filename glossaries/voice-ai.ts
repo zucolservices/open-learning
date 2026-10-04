@@ -151,4 +151,22 @@ export const voiceAi = {
       "Converting written forms such as numbers, dates, symbols and abbreviations into the words a voice should say.",
     module: "writing-for-voice",
   },
+  "voice-cloning": {
+    term: "Voice cloning",
+    definition:
+      "Creating a synthetic voice that sounds like a particular real person, now possible from seconds of their audio.",
+    module: "voice-cloning",
+  },
+  "voice-consent": {
+    term: "Voice consent",
+    definition:
+      "A person's informed, freely given agreement to have their voice cloned or used, ideally verified and revocable.",
+    module: "voice-cloning",
+  },
+  "audio-watermark": {
+    term: "Audio watermark",
+    definition:
+      "An inaudible signal embedded in generated audio so tools can later recognise it as synthetic; it can be weakened and only marks cooperating tools' output.",
+    module: "voice-cloning",
+  },
 } satisfies Record<string, GlossaryEntry>;

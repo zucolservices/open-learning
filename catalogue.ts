@@ -9462,11 +9462,12 @@ const voiceAi: Track = {
             "Decide which of six voice-cloning requests to accept, and see the safeguards each one needs",
           formats: ["branching-scenario", "checkpoint"],
           concepts: ["How cloning works", "Consent and impersonation", "Watermarks and the law"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["text-to-speech"],
           plain:
             "A few seconds of audio can now clone a voice. That enables accessibility and dubbing, and also scams and deepfakes. Responsible use needs consent, disclosure and safeguards, and laws increasingly require them.",
+          terms: ["voice-cloning", "voice-consent", "audio-watermark"],
         },
       ],
     },
