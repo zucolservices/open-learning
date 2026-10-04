@@ -7926,11 +7926,12 @@ const spark: Track = {
             "Size a cluster for a nightly job, add dynamic allocation and spot capacity, and watch cost and runtime change",
           formats: ["simulation", "checkpoint"],
           concepts: ["Executor sizing", "Dynamic allocation and autoscaling", "Spot capacity"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["memory-spill"],
           plain:
             "A cluster costs money for every minute it runs. Choosing executor sizes, letting the cluster grow and shrink with the work, and using cheaper interruptible machines can cut costs sharply.",
+          terms: ["dynamic-allocation", "spot-instance", "decommissioning"],
         },
       ],
     },

@@ -334,4 +334,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "spark/structured-streaming": () => import("./spark/structured-streaming"),
   "spark/pyspark-udfs": () => import("./spark/pyspark-udfs"),
   "spark/spark-platforms": () => import("./spark/spark-platforms"),
+  "spark/cost-scaling": () => import("./spark/cost-scaling"),
 };

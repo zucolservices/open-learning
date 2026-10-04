@@ -450,4 +450,22 @@ export const spark = {
       "Running Spark jobs without creating or sizing a cluster: the service provides and scales compute per job or session, such as EMR Serverless or AWS Glue.",
     module: "spark-platforms",
   },
+  "dynamic-allocation": {
+    term: "Dynamic allocation",
+    definition:
+      "A Spark setting that adds executors when tasks are waiting and removes ones that have been idle (60 s by default), so you pay for what the job is using.",
+    module: "cost-scaling",
+  },
+  "spot-instance": {
+    term: "Spot capacity",
+    definition:
+      "Spare cloud machines sold at a discount that the provider can take back at short notice, such as AWS Spot Instances or Google spot VMs.",
+    module: "cost-scaling",
+  },
+  decommissioning: {
+    term: "Decommissioning",
+    definition:
+      "Shutting an executor down gracefully, trying to move its shuffle and cached blocks elsewhere first, for example when a spot machine is reclaimed.",
+    module: "cost-scaling",
+  },
 } satisfies Record<string, GlossaryEntry>;
