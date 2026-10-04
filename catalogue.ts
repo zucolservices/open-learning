@@ -10057,11 +10057,12 @@ const llmEvaluation: Track = {
             "Tracing and eval platforms",
             "Cloud evaluation services",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["online-evals"],
           plain:
             "Open-source frameworks run eval suites, platforms combine tracing with evaluation and dashboards, and every major cloud offers evaluation services. They save work, but the cases and criteria still have to come from you.",
+          terms: ["eval-framework", "source-available"],
         },
       ],
     },

@@ -259,4 +259,16 @@ export const llmEvaluation = {
       "Scoring a live system's real traffic, usually with judges, rules and user feedback because real requests have no known right answer.",
     module: "online-evals",
   },
+  "eval-framework": {
+    term: "Eval framework",
+    definition:
+      "A library for defining test cases, running them against a model or app, and grading the results, often wired into CI.",
+    module: "eval-tools",
+  },
+  "source-available": {
+    term: "Source-available",
+    definition:
+      "Software whose code you can read and often self-host, under a licence with restrictions that stop it counting as open source.",
+    module: "eval-tools",
+  },
 } satisfies Record<string, GlossaryEntry>;

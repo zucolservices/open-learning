@@ -445,4 +445,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "llm-evaluation/fairness-evals": () => import("./llm-evaluation/fairness-evals"),
   "llm-evaluation/eval-driven-dev": () => import("./llm-evaluation/eval-driven-dev"),
   "llm-evaluation/online-evals": () => import("./llm-evaluation/online-evals"),
+  "llm-evaluation/eval-tools": () => import("./llm-evaluation/eval-tools"),
 };
