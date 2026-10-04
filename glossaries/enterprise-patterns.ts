@@ -143,4 +143,53 @@ export const enterprisePatterns = {
       "A well-documented shared format for exchanging domain information between contexts, often an industry data standard.",
     module: "context-mapping",
   },
+  entity: {
+    term: "Entity",
+    definition:
+      "An object defined by a lasting identity rather than its attributes: a customer stays the same customer even if their name, address and phone all change.",
+    module: "aggregates",
+  },
+  "value-object": {
+    term: "Value object",
+    definition:
+      "An object described only by its attributes, such as an amount of money or a date range. Two with the same attributes are interchangeable; treat them as immutable.",
+    analogy: "Any ₹500 note is as good as another.",
+    module: "aggregates",
+  },
+  aggregate: {
+    term: "Aggregate",
+    definition:
+      "A cluster of entities and value objects that must stay consistent together, loaded and saved as one unit, with a single root that outside code talks to.",
+    module: "aggregates",
+  },
+  "aggregate-root": {
+    term: "Aggregate root",
+    definition:
+      "The one entity in an aggregate that outside code may hold a reference to; it enforces the aggregate's rules.",
+    module: "aggregates",
+  },
+  invariant: {
+    term: "Invariant",
+    definition:
+      "A business rule that must always be true, such as \"an order's total never exceeds the customer's limit\".",
+    module: "aggregates",
+  },
+  "optimistic-concurrency": {
+    term: "Optimistic concurrency",
+    definition:
+      "Letting several people edit without locks, then rejecting a save if the data changed since it was read, usually by checking a version number.",
+    module: "aggregates",
+  },
+  repository: {
+    term: "Repository",
+    definition:
+      "In DDD, an object that loads and saves whole aggregates, giving code the feel of an in-memory collection.",
+    module: "aggregates",
+  },
+  "domain-event": {
+    term: "Domain event",
+    definition:
+      'A record of something that happened that domain experts care about, named in the past tense ("Order placed") and never changed afterwards.',
+    module: "aggregates",
+  },
 } satisfies Record<string, GlossaryEntry>;

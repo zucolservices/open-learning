@@ -299,4 +299,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "enterprise-patterns/domain-language": () => import("./enterprise-patterns/domain-language"),
   "enterprise-patterns/bounded-contexts": () => import("./enterprise-patterns/bounded-contexts"),
   "enterprise-patterns/context-mapping": () => import("./enterprise-patterns/context-mapping"),
+  "enterprise-patterns/aggregates": () => import("./enterprise-patterns/aggregates"),
 };

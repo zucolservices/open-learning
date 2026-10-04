@@ -7102,11 +7102,21 @@ const enterprisePatterns: Track = {
             "Aggregates and invariants",
             "Small aggregates, references by ID",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["bounded-contexts"],
           plain:
             "Inside a context, some objects must change together to stay valid, like an order and its lines. An aggregate groups them so one transaction keeps the rules; everything else is linked by ID and updated separately.",
+          terms: [
+            "entity",
+            "value-object",
+            "aggregate",
+            "aggregate-root",
+            "invariant",
+            "optimistic-concurrency",
+            "repository",
+            "domain-event",
+          ],
         },
         {
           slug: "event-storming",
