@@ -385,4 +385,34 @@ export const spark = {
       "When a table is stored as huge numbers of tiny files, so listing, opening and closing them takes longer than reading the data.",
     module: "files-io",
   },
+  "structured-streaming": {
+    term: "Structured Streaming",
+    definition:
+      "Spark's stream processing engine: you write a DataFrame query as if over a table, and Spark runs it incrementally as new rows arrive.",
+    module: "structured-streaming",
+  },
+  "micro-batch": {
+    term: "Micro-batch",
+    definition:
+      "A small batch job covering the data that arrived since the last one. Structured Streaming runs streams as a series of micro-batches by default.",
+    module: "structured-streaming",
+  },
+  watermark: {
+    term: "Watermark",
+    definition:
+      "A moving threshold (latest event time seen minus an allowed delay) that tells a streaming query how late data may be. Older data is dropped and old state freed.",
+    module: "structured-streaming",
+  },
+  trigger: {
+    term: "Trigger",
+    definition:
+      "The setting that decides when a streaming query processes its next batch: back to back, on an interval, or once everything available is done.",
+    module: "structured-streaming",
+  },
+  "streaming-checkpoint": {
+    term: "Checkpoint location",
+    definition:
+      "A folder where a streaming query records the offsets it has processed and its state, so it can restart exactly where it stopped.",
+    module: "structured-streaming",
+  },
 } satisfies Record<string, GlossaryEntry>;

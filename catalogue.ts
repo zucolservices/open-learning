@@ -7864,11 +7864,18 @@ const spark: Track = {
             "Run a streaming count in micro-batches, add a watermark, and restart from a checkpoint",
           formats: ["simulation", "checkpoint"],
           concepts: ["Micro-batches", "Triggers, watermarks and state", "Checkpoints"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["lazy-evaluation"],
           plain:
             "Structured Streaming treats a stream as a table that keeps growing. You write the same DataFrame code, and Spark runs it repeatedly on the new data, remembering where it got to.",
+          terms: [
+            "structured-streaming",
+            "micro-batch",
+            "watermark",
+            "trigger",
+            "streaming-checkpoint",
+          ],
         },
         {
           slug: "pyspark-udfs",

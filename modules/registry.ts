@@ -331,4 +331,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "spark/memory-spill": () => import("./spark/memory-spill"),
   "spark/caching": () => import("./spark/caching"),
   "spark/files-io": () => import("./spark/files-io"),
+  "spark/structured-streaming": () => import("./spark/structured-streaming"),
 };
