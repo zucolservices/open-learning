@@ -342,4 +342,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-modelling/normalisation": () => import("./data-modelling/normalisation"),
   "data-modelling/oltp-olap": () => import("./data-modelling/oltp-olap"),
   "data-modelling/star-schema": () => import("./data-modelling/star-schema"),
+  "data-modelling/grain": () => import("./data-modelling/grain"),
 };

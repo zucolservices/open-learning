@@ -8131,11 +8131,12 @@ const dataModelling: Track = {
             "Design a fact table for supermarket sales: pick the process, declare the grain, choose dimensions and facts",
           formats: ["step-through", "checkpoint"],
           concepts: ["Business processes", "Declaring the grain", "Choosing dimensions and facts"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["star-schema"],
           plain:
             "Kimball's method has four steps, and the second is the one teams get wrong: say exactly what one row of the fact table means. Every other decision follows from that.",
+          terms: ["grain", "atomic-grain", "degenerate-dimension", "business-process"],
         },
         {
           slug: "fact-tables",

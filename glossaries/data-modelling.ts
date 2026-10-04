@@ -192,4 +192,28 @@ export const dataModelling = {
       "A dimensional model in a relational database: a fact table in the centre joined by keys to the dimension tables around it.",
     module: "star-schema",
   },
+  grain: {
+    term: "Grain",
+    definition:
+      "Exactly what one row of a fact table represents, such as one item scanned on a receipt. Declared before choosing dimensions or facts.",
+    module: "grain",
+  },
+  "atomic-grain": {
+    term: "Atomic grain",
+    definition:
+      "The lowest level of detail a business process captures. Starting there lets any later question be answered.",
+    module: "grain",
+  },
+  "degenerate-dimension": {
+    term: "Degenerate dimension",
+    definition:
+      "A dimension key with no table of its own, such as a receipt or order number stored directly on the fact row.",
+    module: "grain",
+  },
+  "business-process": {
+    term: "Business process",
+    definition:
+      "An operational activity that produces measurements, such as taking an order or processing a claim. Each fact table usually models one.",
+    module: "grain",
+  },
 } satisfies Record<string, GlossaryEntry>;
