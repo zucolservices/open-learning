@@ -8477,11 +8477,12 @@ const dataQuality: Track = {
             "Accuracy, consistency, timeliness",
             "Measuring each dimension",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["why-quality"],
           plain:
             "'Bad data' is too vague to fix. Breaking it into dimensions, such as missing values, duplicates, wrong formats, out-of-date records, makes each problem measurable and gives you a checklist.",
+          terms: ["dq-dimension", "completeness", "validity", "accuracy", "timeliness"],
         },
       ],
     },
