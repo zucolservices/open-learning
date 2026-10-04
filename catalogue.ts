@@ -9348,11 +9348,12 @@ const voiceAi: Track = {
             "Speech to text, model, text to speech",
             "Cascaded versus speech-to-speech",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["sound-basics"],
           plain:
             "Most voice assistants chain separate parts: one notices you're talking, one turns speech into text, a language model writes a reply and another voices it. Newer models handle speech directly, end to end.",
+          terms: ["voice-pipeline", "vad", "speech-to-text", "text-to-speech", "speech-to-speech"],
         },
       ],
     },

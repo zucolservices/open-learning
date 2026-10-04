@@ -50,4 +50,33 @@ export const voiceAi = {
       "A pitch scale spaced the way people hear, with fine steps for low pitches and wider ones for high pitches; used to build the spectrograms speech models read.",
     module: "sound-basics",
   },
+  "voice-pipeline": {
+    term: "Voice pipeline (cascaded)",
+    definition:
+      "A voice assistant built from separate stages chained together: voice activity detection, speech-to-text, a language model and text-to-speech.",
+    module: "voice-pipeline",
+  },
+  vad: {
+    term: "Voice activity detection (VAD)",
+    definition:
+      "A small model that decides, many times a second, whether someone is speaking, used to know when speech starts and stops.",
+    module: "voice-pipeline",
+  },
+  "speech-to-text": {
+    term: "Speech-to-text (STT)",
+    definition:
+      "Turning spoken audio into written text; also called automatic speech recognition (ASR).",
+    module: "voice-pipeline",
+  },
+  "text-to-speech": {
+    term: "Text-to-speech (TTS)",
+    definition: "Turning written text into spoken audio; also called speech synthesis.",
+    module: "voice-pipeline",
+  },
+  "speech-to-speech": {
+    term: "Speech-to-speech model",
+    definition:
+      "A single model that takes audio in and produces audio out, without a separate text step in between.",
+    module: "voice-pipeline",
+  },
 } satisfies Record<string, GlossaryEntry>;
