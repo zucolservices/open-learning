@@ -7595,11 +7595,19 @@ const spark: Track = {
             "Chain transformations, watch Spark build a plan without running anything, then trigger it with an action",
           formats: ["step-through", "checkpoint"],
           concepts: ["Transformations vs actions", "The DAG", "Why laziness enables optimisation"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["rdds-dataframes"],
           plain:
             "Most Spark operations, like filter and select, don't run immediately; they add a step to a plan. Only an action, such as count or write, makes Spark execute. Waiting lets it see the whole job and find the fastest way to do it.",
+          terms: [
+            "transformation",
+            "action",
+            "lazy-evaluation",
+            "dag",
+            "narrow-transformation",
+            "wide-transformation",
+          ],
         },
         {
           slug: "partitions",

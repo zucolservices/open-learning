@@ -94,4 +94,41 @@ export const spark = {
     analogy: "Keeping the recipe, so you can cook the dish again.",
     module: "rdds-dataframes",
   },
+  transformation: {
+    term: "Transformation",
+    definition:
+      "An operation that defines a new DataFrame or RDD from an existing one, such as filter or select. It is added to Spark's plan but not run until an action needs the result.",
+    module: "lazy-evaluation",
+  },
+  action: {
+    term: "Action",
+    definition:
+      "An operation that needs a real result, such as count, show, collect or write. It makes Spark run the plan as a job.",
+    module: "lazy-evaluation",
+  },
+  "lazy-evaluation": {
+    term: "Lazy evaluation",
+    definition:
+      "Delaying work until a result is actually needed. Spark records transformations and only runs them when an action is called, so it can optimise the whole plan first.",
+    analogy: "A personal shopper who writes the list and only sets off when you say go.",
+    module: "lazy-evaluation",
+  },
+  dag: {
+    term: "DAG",
+    definition:
+      "Directed acyclic graph: the network of steps Spark builds from your transformations, with arrows from each step to the ones that use its output and no loops.",
+    module: "lazy-evaluation",
+  },
+  "narrow-transformation": {
+    term: "Narrow transformation",
+    definition:
+      "A transformation where each output partition needs data from only one input partition, like filter or select. Spark can chain these together without moving data.",
+    module: "lazy-evaluation",
+  },
+  "wide-transformation": {
+    term: "Wide transformation",
+    definition:
+      "A transformation where an output partition needs data from many input partitions, like groupBy or most joins. It requires a shuffle and starts a new stage.",
+    module: "lazy-evaluation",
+  },
 } satisfies Record<string, GlossaryEntry>;
