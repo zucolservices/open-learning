@@ -8515,11 +8515,12 @@ const dataQuality: Track = {
           signature: "Profile a new supplier file and turn what you find into rules",
           formats: ["simulation", "checkpoint"],
           concepts: ["Column statistics", "Distributions and outliers", "From profile to rules"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["data-tests"],
           plain:
             "Before writing rules you need to know what normal looks like. Profiling counts nulls, distinct values, ranges and patterns in each column, and often reveals problems nobody suspected.",
+          terms: ["data-profiling", "constraint-suggestion"],
         },
         {
           slug: "expectations",

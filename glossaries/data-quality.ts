@@ -74,4 +74,16 @@ export const dataQuality = {
       "A reusable, parameterised data test attached to columns, such as dbt's unique, not_null, accepted_values and relationships.",
     module: "data-tests",
   },
+  "data-profiling": {
+    term: "Data profiling",
+    definition:
+      "Computing facts about a dataset (nulls, distinct values, ranges, patterns, relationships) to learn what it really contains before trusting or testing it.",
+    module: "profiling",
+  },
+  "constraint-suggestion": {
+    term: "Constraint suggestion",
+    definition:
+      "Proposing data quality rules automatically from a profile. Suggestions must be reviewed, because they assume the data they came from was correct.",
+    module: "profiling",
+  },
 } satisfies Record<string, GlossaryEntry>;
