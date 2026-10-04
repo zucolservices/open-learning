@@ -104,6 +104,7 @@ export interface Track {
     | "assay"
     | "orbit"
     | "timbre"
+    | "gauge"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -9659,6 +9660,411 @@ const voiceAi: Track = {
   ],
 };
 
+const llmEvaluation: Track = {
+  slug: "llm-evaluation",
+  title: "LLM Evaluation",
+  area: "AI & machine learning",
+  category: "ai-ml",
+  tagline: "Measuring quality, safety and regressions.",
+  description:
+    "How to measure whether language-model applications actually work: success criteria, eval datasets, code-based checks, similarity metrics, LLM-as-judge and its biases, judge agreement, human evaluation, error bars, comparing versions, non-determinism, public benchmarks, contamination, evaluating RAG and agents, safety and red-teaming, bias and fairness, evals in development and production, and the tool landscape. Vendor-neutral, covering open-source frameworks, evaluation platforms and the evaluation services of OpenAI, Anthropic, Google, AWS and Microsoft. By the end you can design an evaluation you trust and use it to make release decisions.",
+  accent: "gauge",
+  chapters: [
+    {
+      slug: "big-picture",
+      title: "The big picture",
+      summary: "Why 'it looks good' isn't enough.",
+      modules: [
+        {
+          slug: "why-evals",
+          title: "Why evaluate",
+          summary: "From vibes to evidence.",
+          minutes: 20,
+          signature:
+            "Ship a prompt change after eyeballing five answers, then see what a hundred-case eval would have caught",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "Vibe checks fail",
+            "Evals as tests for AI",
+            "Evaluation throughout the life of a product",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "Language models give different answers to similar questions, so trying a few examples tells you little. An evaluation, or eval, runs a model over many prepared cases and scores the results, so you can tell whether a change made things better or worse.",
+        },
+        {
+          slug: "success-criteria",
+          title: "Deciding what good means",
+          summary: "Criteria before metrics.",
+          minutes: 20,
+          signature:
+            "Turn a vague goal for a support assistant into measurable criteria for accuracy, tone, safety, speed and cost",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Specific, measurable criteria",
+            "Quality, safety, latency and cost",
+            "Trade-offs between them",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-evals"],
+          plain:
+            "Before measuring, decide what success looks like: correct facts, the right tone, no harmful content, fast enough and affordable. Vague goals like 'helpful' must become things you can check.",
+        },
+        {
+          slug: "eval-datasets",
+          title: "Building an eval set",
+          summary: "The cases you test against.",
+          minutes: 25,
+          signature:
+            "Assemble an eval set from real logs, edge cases and adversarial examples, and see which failures each part catches",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Golden datasets", "Coverage and edge cases", "Keeping test data separate"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["success-criteria"],
+          plain:
+            "An eval is only as good as its test cases. Good sets mix typical real questions, tricky edge cases and deliberately hard examples, each with what a good answer should contain, and grow every time a new failure is found.",
+        },
+      ],
+    },
+    {
+      slug: "scoring",
+      title: "Scoring answers",
+      summary: "Code, metrics, models and people.",
+      modules: [
+        {
+          slug: "code-checks",
+          title: "Code-based checks",
+          summary: "When a program can grade it.",
+          minutes: 20,
+          signature:
+            "Grade answers with exact match, patterns, schema validation and unit tests, and find where each breaks",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Exact and fuzzy match",
+            "Format and schema checks",
+            "Running the code: pass@k",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["eval-datasets"],
+          plain:
+            "Whenever a program can check an answer, use one: is the number right, is the output valid JSON, does the generated code pass its tests? Code checks are fast, cheap and consistent, but only work when 'correct' is precise.",
+        },
+        {
+          slug: "similarity-metrics",
+          title: "Similarity metrics",
+          summary: "BLEU, ROUGE and embeddings.",
+          minutes: 20,
+          signature:
+            "Score paraphrases and wrong answers with word-overlap and embedding metrics and see which fool them",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Word-overlap metrics",
+            "Embedding similarity",
+            "Why similarity isn't correctness",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["code-checks"],
+          plain:
+            "Older metrics compare an answer with a reference by counting shared words; newer ones compare meanings with embeddings. Both are cheap, but a correct answer worded differently can score low and a fluent wrong one high.",
+        },
+        {
+          slug: "llm-judge",
+          title: "LLM as a judge",
+          summary: "Models grading models.",
+          minutes: 25,
+          signature:
+            "Write a judging prompt, then catch the judge preferring longer answers, the first answer and its own style",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Rubrics and pairwise comparison",
+            "Known judge biases",
+            "Making judges more reliable",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["similarity-metrics"],
+          plain:
+            "A language model can grade open-ended answers against a rubric, much faster than people. But judges have biases, such as preferring longer or first-shown answers, so they need clear rubrics and checking.",
+        },
+        {
+          slug: "judge-agreement",
+          title: "Trusting your judge",
+          summary: "Agreement with people.",
+          minutes: 20,
+          signature:
+            "Compare a judge's verdicts with expert labels and improve its rubric until they agree",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Agreement and confusion matrices",
+            "Cohen's kappa",
+            "Calibrating against experts",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["llm-judge"],
+          plain:
+            "An automated judge is only useful if it agrees with the people whose judgement you care about. Comparing its verdicts with expert labels shows where it's wrong, and agreement statistics say whether it beats chance.",
+        },
+        {
+          slug: "human-eval",
+          title: "Human evaluation",
+          summary: "When people must decide.",
+          minutes: 20,
+          signature:
+            "Run a small rating study, measure how much raters agree, and see how preference leaderboards rank models",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Rating guidelines",
+            "Rater agreement",
+            "Pairwise preferences and leaderboards",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["judge-agreement"],
+          plain:
+            "Some qualities only people can judge well. Human evaluation needs clear guidelines and several raters, and checks how often they agree. Public leaderboards rank models from millions of people's side-by-side votes.",
+        },
+      ],
+    },
+    {
+      slug: "statistics",
+      title: "How sure are you?",
+      summary: "Noise, samples and comparisons.",
+      modules: [
+        {
+          slug: "eval-statistics",
+          title: "Error bars for evals",
+          summary: "A score is an estimate.",
+          minutes: 25,
+          signature:
+            "Rerun an eval on different samples and watch the score wobble, then add confidence intervals",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Sampling error", "Confidence intervals", "How many cases you need"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["eval-datasets"],
+          plain:
+            "An eval score of 82% from 100 cases could easily be 75% or 89% on another 100. Confidence intervals show that uncertainty, and tell you how many cases you need before a difference means anything.",
+        },
+        {
+          slug: "comparing-versions",
+          title: "Comparing two versions",
+          summary: "Is B really better than A?",
+          minutes: 25,
+          signature:
+            "Compare two prompts on the same cases with paired tests and win rates, and avoid fooling yourself",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Paired comparisons", "Win rates", "Many comparisons, false wins"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["eval-statistics"],
+          plain:
+            "To compare two versions, run both on the same cases and look at where they differ. Paired comparisons need far fewer cases than separate ones, and testing many variants raises the odds that one 'wins' by luck.",
+        },
+        {
+          slug: "variance",
+          title: "Non-determinism and reliability",
+          summary: "Same question, different answers.",
+          minutes: 20,
+          signature:
+            "Run each case several times and see how pass rates change when you need it right every time",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Sampling randomness", "Several runs per case", "Pass@k versus pass^k"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["eval-statistics"],
+          plain:
+            "Models can answer the same question differently each time. Running cases several times shows how consistent a system is, and getting it right once in five tries is very different from getting it right five times out of five.",
+        },
+      ],
+    },
+    {
+      slug: "benchmarks",
+      title: "Benchmarks",
+      summary: "Public tests and their limits.",
+      modules: [
+        {
+          slug: "benchmarks",
+          title: "Public benchmarks",
+          summary: "What leaderboard numbers mean.",
+          minutes: 20,
+          signature:
+            "Read a model announcement's benchmark table and work out what each number does and doesn't tell you",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "Knowledge, reasoning and coding benchmarks",
+            "Saturation",
+            "Benchmarks versus your use case",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["eval-statistics"],
+          plain:
+            "Model makers report scores on public benchmarks covering knowledge, reasoning, coding and more. They're useful for broad comparison, but many are nearly maxed out and none measures how well a model does your particular job.",
+        },
+        {
+          slug: "contamination",
+          title: "Contamination and gaming",
+          summary: "When the test leaks.",
+          minutes: 20,
+          signature:
+            "Find which benchmark questions leaked into training data and see how much the score was inflated",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Training on the test",
+            "Detecting contamination",
+            "Fresh and private test sets",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["benchmarks"],
+          plain:
+            "If benchmark questions appear in a model's training data, its score measures memory, not skill. Contamination and over-tuning to leaderboards are common, which is why private and regularly refreshed test sets matter.",
+        },
+      ],
+    },
+    {
+      slug: "applied",
+      title: "Evaluating real systems",
+      summary: "RAG, agents, safety and fairness.",
+      modules: [
+        {
+          slug: "eval-systems",
+          title: "Evaluating RAG and agents",
+          summary: "Score the parts and the whole.",
+          minutes: 25,
+          signature:
+            "Trace a wrong answer through retrieval, generation and tool steps and choose an eval for each",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Component and end-to-end evals",
+            "Retrieval and faithfulness",
+            "Agent trajectories",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["llm-judge"],
+          plain:
+            "Real applications chain retrieval, generation and tools. Evaluating each part shows where failures come from, while end-to-end evals show whether users get the right result. The RAG and AI Agents tracks go deeper.",
+        },
+        {
+          slug: "safety-evals",
+          title: "Safety evals and red-teaming",
+          summary: "Trying to make it fail.",
+          minutes: 25,
+          signature:
+            "Red-team an assistant with jailbreaks and harmful requests, then balance harmful answers against needless refusals",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Red-teaming", "Harmful output and jailbreaks", "Over-refusal"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["llm-judge"],
+          plain:
+            "Safety evaluation deliberately tries to make a system misbehave: harmful advice, leaked data, broken rules. It must also check the opposite failure, refusing harmless requests, because both hurt users.",
+        },
+        {
+          slug: "fairness-evals",
+          title: "Bias and fairness evals",
+          summary: "Does it treat people equally?",
+          minutes: 20,
+          signature:
+            "Swap names and details in otherwise identical prompts and measure whether answers change",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Counterfactual testing", "Bias benchmarks", "Choosing what fair means"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["eval-statistics"],
+          plain:
+            "Models can treat people differently based on names, gender, dialect or other traits. Fairness evals test this directly, for example by changing only a name and checking whether the answer changes.",
+        },
+      ],
+    },
+    {
+      slug: "production",
+      title: "Evals in practice",
+      summary: "From development to production.",
+      modules: [
+        {
+          slug: "eval-driven-dev",
+          title: "Evals in development",
+          summary: "Test every change.",
+          minutes: 20,
+          signature:
+            "Wire an eval suite into a pull request and catch a prompt change that fixes one thing and breaks three",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Eval-driven development", "Regression suites in CI", "Error analysis"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["comparing-versions"],
+          plain:
+            "Teams treat evals like automated tests: every prompt, model or code change runs the suite, and regressions block the release. Reading failures by hand, not just scores, shows what to fix next.",
+        },
+        {
+          slug: "online-evals",
+          title: "Evaluation in production",
+          summary: "Watching real traffic.",
+          minutes: 20,
+          signature:
+            "Monitor a live assistant with feedback, judges on sampled traffic and an A/B test, and spot a silent regression",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["User feedback and implicit signals", "Judging sampled traffic", "A/B tests"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["eval-driven-dev"],
+          plain:
+            "Offline evals can't cover everything users will ask. In production, teams collect feedback, run automated judges on samples of real conversations, trace failures and run A/B tests before full rollouts.",
+        },
+        {
+          slug: "eval-tools",
+          title: "Evaluation tools",
+          summary: "Frameworks, platforms and clouds.",
+          minutes: 20,
+          signature:
+            "Map open-source eval frameworks, observability platforms and cloud services to the jobs in this track",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "Open-source frameworks",
+            "Tracing and eval platforms",
+            "Cloud evaluation services",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["online-evals"],
+          plain:
+            "Open-source frameworks run eval suites, platforms combine tracing with evaluation and dashboards, and every major cloud offers evaluation services. They save work, but the cases and criteria still have to come from you.",
+        },
+      ],
+    },
+    {
+      slug: "capstone",
+      title: "Capstone",
+      summary: "Everything together.",
+      modules: [
+        {
+          slug: "capstone-evals",
+          title: "Capstone: should we ship the new model?",
+          summary: "An evidence-based launch decision.",
+          minutes: 40,
+          signature:
+            "A cheaper model looks as good on the leaderboard: build the evals that decide whether to switch",
+          formats: ["branching-scenario", "fix-the-problem", "checkpoint"],
+          concepts: ["Applying evaluation"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["comparing-versions", "llm-judge", "online-evals"],
+          plain:
+            "Everything in this track in one decision: define success, build the eval set, choose graders, check the judge, compare with error bars, test safety and plan a careful rollout.",
+        },
+      ],
+    },
+  ],
+};
+
 export const tracks: Track[] = [
   lakehouse,
   systemDesign,
@@ -9678,6 +10084,7 @@ export const tracks: Track[] = [
   dataQuality,
   aiAgents,
   voiceAi,
+  llmEvaluation,
   playground,
 ];
 
@@ -9755,7 +10162,11 @@ export const categories: Category[] = [
       },
       { title: "AI Agents", slug: "ai-agents", blurb: "Tools, planning, memory and guardrails." },
       { title: "Voice AI", slug: "voice-ai", blurb: "Speech in, speech out, in real time." },
-      { title: "LLM Evaluation", blurb: "Measuring quality, safety and regressions." },
+      {
+        title: "LLM Evaluation",
+        slug: "llm-evaluation",
+        blurb: "Measuring quality, safety and regressions.",
+      },
       { title: "Applied ML", blurb: "Classic machine learning, from features to deployment." },
     ],
   },

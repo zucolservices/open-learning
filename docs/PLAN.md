@@ -717,6 +717,40 @@ AI & machine learning area, fourth track (started 2026-10-05). 18 modules in 6 c
 | **6** | **Capstone**                     |                             |                                     |
 | 18    | Capstone: the clinic phone line  | The clinic phone line       | Branching scenario, Fix the problem |
 
+## LLM Evaluation: curriculum
+
+AI & machine learning area, fifth track (started 2026-10-05). 20 modules in 7 chapters, about 7 hours. Accent: "gauge" sky (`[data-track="gauge"]`). Glossary: `glossaries/llm-evaluation.ts`. Vendor-neutral: open-source frameworks (Inspect, DeepEval, Ragas, lm-evaluation-harness, OpenAI Evals), evaluation and observability platforms, and the evaluation services of OpenAI, Anthropic, Google, AWS and Microsoft. Builds on LLM Foundations (sampling, prompting), RAG Systems and AI Agents rather than repeating them. Built on one branch (`track/llm-evaluation`), one commit per module, merged once at the end. Each module is fact-checked on its own before it is built; card illustrations and a showcase follow the last module.
+
+| #     | Module                                  | Centrepiece                            | Key formats                         |
+| ----- | --------------------------------------- | -------------------------------------- | ----------------------------------- |
+| **1** | **The big picture**                     |                                        |                                     |
+| 1     | Why evaluate                            | Five answers versus a hundred cases    | Scroll story                        |
+| 2     | Deciding what good means                | From "helpful" to measurable           | Build connect                       |
+| 3     | Building an eval set                    | Grow an eval set                       | Simulation                          |
+| **2** | **Scoring answers**                     |                                        |                                     |
+| 4     | Code-based checks                       | Graders a program can run              | Simulation                          |
+| 5     | Similarity metrics                      | When overlap lies                      | Simulation                          |
+| 6     | LLM as a judge                          | Catch the biased judge                 | Fix the problem                     |
+| 7     | Trusting your judge                     | Judge versus experts                   | Simulation                          |
+| 8     | Human evaluation                        | Run a rating study                     | Simulation                          |
+| **3** | **How sure are you?**                   |                                        |                                     |
+| 9     | Error bars for evals                    | Watch the score wobble                 | Simulation                          |
+| 10    | Comparing two versions                  | A versus B, honestly                   | Simulation                          |
+| 11    | Non-determinism and reliability         | Right every time?                      | Simulation                          |
+| **4** | **Benchmarks**                          |                                        |                                     |
+| 12    | Public benchmarks                       | Read a benchmark table                 | Animated infographic                |
+| 13    | Contamination and gaming                | Find the leaked questions              | Fix the problem                     |
+| **5** | **Evaluating real systems**             |                                        |                                     |
+| 14    | Evaluating RAG and agents               | Evaluate a RAG answer and an agent run | Build connect                       |
+| 15    | Safety evals and red-teaming            | Red-team a chatbot                     | Simulation                          |
+| 16    | Bias and fairness evals                 | Swap the name, change the answer?      | Simulation                          |
+| **6** | **Evals in practice**                   |                                        |                                     |
+| 17    | Evals in development                    | Evals as tests in CI                   | Simulation                          |
+| 18    | Evaluation in production                | Watch production                       | Simulation                          |
+| 19    | Evaluation tools                        | The eval tool map                      | Animated infographic                |
+| **7** | **Capstone**                            |                                        |                                     |
+| 20    | Capstone: should we ship the new model? | Should we ship it?                     | Branching scenario, Fix the problem |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -742,6 +776,7 @@ AI & machine learning area, fourth track (started 2026-10-05). 18 modules in 6 c
 | 4p. Data Quality           | Data engineering, fifth track, 21 modules                                               | Live: all 21 modules (2026-10-04)                                       |
 | 4q. AI Agents              | AI & machine learning, third track, 21 modules                                          | Live: all 21 modules (2026-10-04)                                       |
 | 4r. Voice AI               | AI & machine learning, fourth track, 18 modules                                         | Live: all 18 modules (2026-10-05)                                       |
+| 4s. LLM Evaluation         | AI & machine learning, fifth track, 20 modules                                          | In progress: 0 of 20 modules                                            |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
