@@ -9109,11 +9109,12 @@ const aiAgents: Track = {
             "Split a research job between an orchestrator and three workers, and compare speed, cost and quality with one agent",
           formats: ["simulation", "checkpoint"],
           concepts: ["Orchestrator and sub-agents", "Handoffs", "The cost of coordination"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["context-management"],
           plain:
             "Several agents can work in parallel or specialise, with one coordinating. That can be faster and better for broad tasks, but it multiplies cost and adds new ways to fail, so one agent is often the right answer.",
+          terms: ["multi-agent-system", "agent-handoff", "orchestrator-workers", "sub-agent"],
         },
         {
           slug: "agent-protocols",

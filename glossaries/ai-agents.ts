@@ -206,4 +206,16 @@ export const aiAgents = {
       "Running a program so that each finished step is recorded; after a failure it resumes by reusing saved results rather than redoing completed work.",
     module: "durable-agents",
   },
+  "multi-agent-system": {
+    term: "Multi-agent system",
+    definition:
+      "Several agents working on one job, usually with a lead agent splitting the work and combining results, sometimes with specialists or reviewers.",
+    module: "multi-agent",
+  },
+  "agent-handoff": {
+    term: "Handoff",
+    definition:
+      "Passing a conversation from one agent to another, which then takes over, like being transferred to a different desk.",
+    module: "multi-agent",
+  },
 } satisfies Record<string, GlossaryEntry>;
