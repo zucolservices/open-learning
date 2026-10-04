@@ -7029,11 +7029,12 @@ const enterprisePatterns: Track = {
             "Find the five meanings of 'customer' across sales, billing, support and delivery",
           formats: ["simulation", "checkpoint"],
           concepts: ["Domain-driven design", "Ubiquitous language", "Domain experts"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["why-enterprise"],
           plain:
             "Bugs often start with words: 'account' or 'policy' means one thing to sales and another to finance. Domain-driven design asks teams to agree a precise language with the business, and use it in the code.",
+          terms: ["domain-driven-design", "domain", "ubiquitous-language", "domain-expert"],
         },
         {
           slug: "bounded-contexts",

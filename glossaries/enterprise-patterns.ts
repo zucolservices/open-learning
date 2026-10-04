@@ -62,4 +62,28 @@ export const enterprisePatterns = {
       "How much a team has to keep in its head: tools, domains and responsibilities. Overloaded teams slow down and make poor decisions.",
     module: "conways-law",
   },
+  "domain-driven-design": {
+    term: "Domain-driven design (DDD)",
+    definition:
+      "An approach to software, from Eric Evans's 2003 book, that models the code closely on the business: a language shared with domain experts, explicit boundaries between models, and focus on the core domain.",
+    module: "domain-language",
+  },
+  domain: {
+    term: "Domain",
+    definition:
+      'The subject area a piece of software serves, such as insurance claims or parcel delivery. Evans: "a sphere of knowledge, influence, or activity".',
+    module: "domain-language",
+  },
+  "ubiquitous-language": {
+    term: "Ubiquitous language",
+    definition:
+      "A vocabulary agreed between developers and domain experts and used everywhere within one bounded context: in conversation, documents and the code itself.",
+    module: "domain-language",
+  },
+  "domain-expert": {
+    term: "Domain expert",
+    definition:
+      "Someone who knows a business area deeply, such as an underwriter, a nurse or a dispatcher, and helps the team understand and name things correctly.",
+    module: "domain-language",
+  },
 } satisfies Record<string, GlossaryEntry>;
