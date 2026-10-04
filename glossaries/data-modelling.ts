@@ -317,4 +317,22 @@ export const dataModelling = {
       "A small separate dimension for attributes that change often, such as age or credit band, so the main dimension doesn't grow a new row each time.",
     module: "scd",
   },
+  "enterprise-data-warehouse": {
+    term: "Enterprise data warehouse (EDW)",
+    definition:
+      "A warehouse that integrates data from across a whole organisation, with history, for reporting and analysis.",
+    module: "inmon-kimball",
+  },
+  "data-mart": {
+    term: "Data mart",
+    definition:
+      "A smaller set of analytical tables for one department or subject area, often dimensional.",
+    module: "inmon-kimball",
+  },
+  "corporate-information-factory": {
+    term: "Corporate Information Factory (CIF)",
+    definition:
+      "Bill Inmon's architecture: a normalised, atomic enterprise warehouse loaded first, which then feeds departmental data marts.",
+    module: "inmon-kimball",
+  },
 } satisfies Record<string, GlossaryEntry>;

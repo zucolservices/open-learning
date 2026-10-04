@@ -8237,11 +8237,17 @@ const dataModelling: Track = {
             "Build the same warehouse top-down and bottom-up and compare time to first report",
           formats: ["animated-infographic", "checkpoint"],
           concepts: ["Inmon's normalised warehouse", "Kimball's dimensional bus", "Hybrids today"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["conformed-dimensions"],
           plain:
             "In the 1990s two approaches competed: build one normalised enterprise warehouse first, then marts; or build dimensional marts that share dimensions. Most modern platforms mix both.",
+          terms: [
+            "enterprise-data-warehouse",
+            "data-mart",
+            "corporate-information-factory",
+            "bus-matrix",
+          ],
         },
         {
           slug: "data-vault",
