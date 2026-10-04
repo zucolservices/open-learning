@@ -121,4 +121,16 @@ export const voiceAi = {
       "Working out who spoke when in a recording, labelling each stretch of speech with a speaker.",
     module: "real-audio",
   },
+  ttfa: {
+    term: "Time to first audio",
+    definition:
+      "How long until the listener hears the first sound of a spoken reply; the latency that matters most in conversation.",
+    module: "text-to-speech",
+  },
+  mos: {
+    term: "Mean opinion score (MOS)",
+    definition:
+      "A quality rating made by averaging listeners' scores from 1 (bad) to 5 (excellent); scores from different tests aren't directly comparable.",
+    module: "text-to-speech",
+  },
 } satisfies Record<string, GlossaryEntry>;

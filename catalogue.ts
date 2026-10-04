@@ -9426,11 +9426,12 @@ const voiceAi: Track = {
             "Compare synthesis approaches on naturalness and time to first sound, and stream a reply as it's generated",
           formats: ["simulation", "checkpoint"],
           concepts: ["How neural voices work", "Streaming synthesis", "Measuring naturalness"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["voice-pipeline"],
           plain:
             "Text-to-speech used to sound robotic; neural models now produce voices that are hard to tell from people. For conversation, what matters is also how quickly the first sound comes out.",
+          terms: ["text-to-speech", "ttfa", "mos"],
         },
         {
           slug: "writing-for-voice",
