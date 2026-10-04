@@ -259,4 +259,28 @@ export const voiceAi = {
       "Handing a call to a person along with its context, so the caller doesn't have to repeat themselves. A cold transfer just passes the call on.",
     module: "conversation-design",
   },
+  "spoken-preamble": {
+    term: "Spoken preamble",
+    definition:
+      "A short line such as “let me check that” that a voice agent says at the moment it starts a tool call, so the caller isn't left in silence.",
+    module: "voice-tools",
+  },
+  "non-blocking-call": {
+    term: "Non-blocking call",
+    definition:
+      "A tool call that runs in the background while the conversation carries on; its result is slotted in when it arrives.",
+    module: "voice-tools",
+  },
+  "pci-dss": {
+    term: "PCI DSS",
+    definition:
+      "The card industry's security standard for anyone handling payment cards. Among other things, it forbids keeping security codes after a payment is authorised.",
+    module: "voice-tools",
+  },
+  dtmf: {
+    term: "DTMF",
+    definition:
+      "The tones a phone keypad makes. Payment lines can mask them so neither agents nor recordings capture the digits.",
+    module: "voice-tools",
+  },
 } satisfies Record<string, GlossaryEntry>;

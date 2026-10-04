@@ -741,7 +741,7 @@ AI & machine learning area, fourth track (started 2026-10-05). 18 modules in 6 c
 | 4o. Data Modelling         | Data engineering, fourth track, 21 modules                                              | Live: all 21 modules (2026-10-04)                                       |
 | 4p. Data Quality           | Data engineering, fifth track, 21 modules                                               | Live: all 21 modules (2026-10-04)                                       |
 | 4q. AI Agents              | AI & machine learning, third track, 21 modules                                          | Live: all 21 modules (2026-10-04)                                       |
-| 4r. Voice AI               | AI & machine learning, fourth track, 18 modules                                         | In progress: 14 of 18 modules                                           |
+| 4r. Voice AI               | AI & machine learning, fourth track, 18 modules                                         | In progress: 15 of 18 modules                                           |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

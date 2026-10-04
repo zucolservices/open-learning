@@ -9584,11 +9584,12 @@ const voiceAi: Track = {
             "Filling silence honestly",
             "Reading back what will change",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["conversation-design"],
           plain:
             "Voice agents call tools just like text agents, but the caller is waiting on the line. They need to say what they're doing, handle slow lookups without dead air and read back changes before making them.",
+          terms: ["tool-calling", "spoken-preamble", "non-blocking-call", "pci-dss", "dtmf"],
         },
         {
           slug: "voice-platforms",

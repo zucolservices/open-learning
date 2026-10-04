@@ -423,4 +423,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "voice-ai/interruptions": () => import("./voice-ai/interruptions"),
   "voice-ai/voice-transport": () => import("./voice-ai/voice-transport"),
   "voice-ai/conversation-design": () => import("./voice-ai/conversation-design"),
+  "voice-ai/voice-tools": () => import("./voice-ai/voice-tools"),
 };
