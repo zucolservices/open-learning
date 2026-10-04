@@ -8590,11 +8590,12 @@ const dataQuality: Track = {
             "Producer and consumer",
             "Open contract standards",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["data-tests"],
           plain:
             "Most data breaks because someone upstream changed something without knowing who depended on it. A data contract writes down what a dataset promises, its fields, meanings and freshness, and checks the promise automatically.",
+          terms: ["data-contract", "data-producer", "odcs"],
         },
         {
           slug: "schema-evolution",

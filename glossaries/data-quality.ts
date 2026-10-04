@@ -140,4 +140,22 @@ export const dataQuality = {
       "A pattern that stops data flowing downstream when key checks fail, so consumers see a delay rather than wrong data, and resumes once fixed.",
     module: "severity",
   },
+  "data-contract": {
+    term: "Data contract",
+    definition:
+      "A written, machine-checkable agreement between a data producer and its consumers covering schema, meaning, quality rules, freshness and ownership.",
+    module: "data-contracts",
+  },
+  "data-producer": {
+    term: "Data producer",
+    definition:
+      "The team or system that creates a dataset, such as the service whose database feeds analytics.",
+    module: "data-contracts",
+  },
+  odcs: {
+    term: "Open Data Contract Standard (ODCS)",
+    definition:
+      "An open, YAML-based standard for data contracts, maintained by Bitol under the Linux Foundation; version 3.2.0 was released in September 2026.",
+    module: "data-contracts",
+  },
 } satisfies Record<string, GlossaryEntry>;
