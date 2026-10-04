@@ -99,6 +99,7 @@ export interface Track {
     | "contract"
     | "ledger"
     | "keystone"
+    | "ember"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -7500,6 +7501,412 @@ const enterprisePatterns: Track = {
   ],
 };
 
+const spark: Track = {
+  slug: "spark",
+  title: "Apache Spark",
+  area: "Data engineering",
+  category: "data-engineering",
+  tagline: "How distributed dataframes plan, shuffle and scale.",
+  description:
+    "How Apache Spark runs data processing across many machines: drivers and executors, RDDs and DataFrames, lazy evaluation, partitions, Spark SQL, the Catalyst optimiser, jobs, stages and tasks, the shuffle, join strategies, Adaptive Query Execution and vectorised engines; then performance (skew, memory, caching, file layout), Structured Streaming, PySpark and UDFs, and running and right-sizing Spark. Vendor-neutral: open-source Spark alongside Databricks, Amazon EMR, Google Dataproc, Azure and Fabric, and Kubernetes. By the end you can read a Spark plan and UI and make a slow job fast.",
+  accent: "ember",
+  chapters: [
+    {
+      slug: "big-picture",
+      title: "The big picture",
+      summary: "Why Spark exists and what a Spark cluster looks like.",
+      modules: [
+        {
+          slug: "why-spark",
+          title: "Why Spark exists",
+          summary: "From MapReduce to in-memory dataflow.",
+          minutes: 20,
+          signature:
+            "Run the same three-step job as MapReduce and as Spark and watch where the data goes to disk",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "Splitting work across machines",
+            "MapReduce and its disk trips",
+            "Keeping data in memory",
+          ],
+          status: "live",
+          level: "beginner",
+          plain:
+            "When data is too big for one computer, you split the work across many. Spark is the most widely used engine for doing that: it plans the work, sends pieces to many machines, and keeps data in memory between steps instead of writing it to disk each time.",
+          terms: ["cluster", "mapreduce", "in-memory-processing", "iterative-job"],
+        },
+        {
+          slug: "cluster-anatomy",
+          title: "Driver, executors and the cluster",
+          summary: "Who does what when a Spark job runs.",
+          minutes: 20,
+          signature:
+            "Submit a job and follow it from the driver to executors on a cluster, then lose an executor",
+          formats: ["animated-infographic", "simulation", "checkpoint"],
+          concepts: ["Driver and executors", "Cluster managers", "Cores, tasks and slots"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-spark"],
+          plain:
+            "A Spark application has one coordinator, the driver, and many workers, the executors. The driver turns your code into small tasks; the executors run them in parallel and report back. A cluster manager such as Kubernetes or YARN finds the machines.",
+        },
+      ],
+    },
+    {
+      slug: "apis",
+      title: "Data and APIs",
+      summary: "How you describe work in Spark.",
+      modules: [
+        {
+          slug: "rdds-dataframes",
+          title: "RDDs, DataFrames and Datasets",
+          summary: "Three ways to hold distributed data.",
+          minutes: 25,
+          signature:
+            "Write the same word count with an RDD and a DataFrame and compare what Spark can optimise",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "RDDs and lineage",
+            "DataFrames and schemas",
+            "Why structure helps the engine",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["cluster-anatomy"],
+          plain:
+            "Spark started with RDDs, collections of records spread across machines. DataFrames added columns and types, like a table. Because Spark then knows what your data looks like, it can optimise your job far better.",
+        },
+        {
+          slug: "lazy-evaluation",
+          title: "Transformations, actions and laziness",
+          summary: "Nothing happens until you ask for a result.",
+          minutes: 20,
+          signature:
+            "Chain transformations, watch Spark build a plan without running anything, then trigger it with an action",
+          formats: ["step-through", "checkpoint"],
+          concepts: ["Transformations vs actions", "The DAG", "Why laziness enables optimisation"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["rdds-dataframes"],
+          plain:
+            "Most Spark operations, like filter and select, don't run immediately; they add a step to a plan. Only an action, such as count or write, makes Spark execute. Waiting lets it see the whole job and find the fastest way to do it.",
+        },
+        {
+          slug: "partitions",
+          title: "Partitions and parallelism",
+          summary: "How data is split into pieces of work.",
+          minutes: 25,
+          signature:
+            "Change the number of partitions and cores and watch tasks run in waves, idle or overloaded",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Partitions and tasks", "Parallelism and cores", "Repartition vs coalesce"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["lazy-evaluation"],
+          plain:
+            "Spark splits data into partitions, and each partition becomes one task. Too few partitions leave cores idle; too many create overhead. Getting the count roughly right is one of the most useful tuning skills.",
+        },
+        {
+          slug: "spark-sql",
+          title: "Spark SQL and the DataFrame API",
+          summary: "Two front doors to one engine.",
+          minutes: 20,
+          signature:
+            "Write a query in SQL and as DataFrame code and see that both produce the same plan",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["SQL and DataFrames", "Tables, views and catalogs", "Same engine underneath"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["rdds-dataframes"],
+          plain:
+            "You can talk to Spark in SQL or in Python, Scala or R DataFrame code. Both end up as the same plan, run by the same engine, so choose whichever is clearer for the task.",
+        },
+      ],
+    },
+    {
+      slug: "execution",
+      title: "How a query runs",
+      summary: "From your code to tasks on executors.",
+      modules: [
+        {
+          slug: "catalyst",
+          title: "The Catalyst optimiser",
+          summary: "How Spark rewrites your query to run faster.",
+          minutes: 25,
+          signature:
+            "Step a query through parsing, analysis, optimisation and physical planning, and see filters pushed down",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Logical and physical plans",
+            "Rule-based rewrites",
+            "Predicate and column pruning",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["spark-sql"],
+          plain:
+            "Before running anything, Spark's optimiser, Catalyst, rewrites your query: it removes columns you don't need, moves filters as early as possible, and picks how to perform each step. Reading its plan explains most surprises.",
+        },
+        {
+          slug: "jobs-stages-tasks",
+          title: "Jobs, stages and tasks",
+          summary: "Reading the Spark UI.",
+          minutes: 25,
+          signature:
+            "Run a job and read it in a simulated Spark UI: jobs split into stages at shuffles, stages into tasks",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Jobs, stages and tasks", "Stage boundaries", "The Spark UI"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["partitions", "catalyst"],
+          plain:
+            "Each action becomes a job. Spark cuts the job into stages wherever data must be reshuffled between machines, and each stage into one task per partition. The Spark UI shows all of this, and it's where tuning starts.",
+        },
+        {
+          slug: "shuffle",
+          title: "The shuffle",
+          summary: "The expensive step that moves data between machines.",
+          minutes: 25,
+          signature:
+            "Group sales by city and watch every executor send data to every other across the network",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Narrow vs wide transformations",
+            "Shuffle write and read",
+            "Why shuffles are expensive",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["jobs-stages-tasks"],
+          plain:
+            "Some operations, like grouping or joining, need all the rows with the same key on the same machine. Getting them there means writing data out, sending it over the network and reading it back: a shuffle. It's usually the slowest part of a job.",
+        },
+        {
+          slug: "spark-joins",
+          title: "Join strategies",
+          summary: "Broadcast, sort-merge and shuffle hash joins.",
+          minutes: 25,
+          signature:
+            "Join a big table to small and large ones and see Spark choose broadcast or sort-merge, and why",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Broadcast hash join", "Sort-merge join", "Join hints and thresholds"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["shuffle"],
+          plain:
+            "Joining two big tables means shuffling both. If one table is small, Spark can instead copy it to every machine and skip the shuffle entirely. Knowing which strategy Spark picks, and why, is key to fast joins.",
+        },
+        {
+          slug: "aqe",
+          title: "Adaptive Query Execution",
+          summary: "Re-planning a query while it runs.",
+          minutes: 20,
+          signature:
+            "Run a query with and without AQE and watch it merge tiny partitions, split a skewed one and switch a join",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Runtime statistics",
+            "Coalescing partitions",
+            "Skew joins and join switching",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["spark-joins"],
+          plain:
+            "Spark's first plan is based on guesses. Adaptive Query Execution looks at real sizes after each shuffle and adjusts the rest of the plan: merging tiny partitions, splitting huge ones, and picking a better join.",
+        },
+        {
+          slug: "tungsten-vectorised",
+          title: "Tungsten and vectorised engines",
+          summary: "How Spark uses the CPU efficiently.",
+          minutes: 20,
+          signature:
+            "Compare row-at-a-time, whole-stage code generation and vectorised execution on the same query",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "Off-heap memory and binary rows",
+            "Whole-stage code generation",
+            "Vectorised native engines",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["catalyst"],
+          plain:
+            "Once the plan is chosen, how fast each machine runs it depends on using the CPU well. Spark generates compact code for whole stages, and newer native engines process columns of values at once.",
+        },
+      ],
+    },
+    {
+      slug: "performance",
+      title: "Performance",
+      summary: "Making slow jobs fast.",
+      modules: [
+        {
+          slug: "skew",
+          title: "Data skew",
+          summary: "When one task does all the work.",
+          minutes: 25,
+          signature:
+            "Group orders where one customer has half the rows, watch one task straggle, then fix it with salting and AQE",
+          formats: ["simulation", "fix-the-problem", "checkpoint"],
+          concepts: ["Spotting skew in the UI", "Salting keys", "AQE skew handling"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["aqe"],
+          plain:
+            "If one key has far more rows than the others, the task that handles it runs far longer than the rest, and the whole stage waits. Spreading that key across several tasks fixes it.",
+        },
+        {
+          slug: "memory-spill",
+          title: "Memory, spill and out-of-memory",
+          summary: "Where executor memory goes.",
+          minutes: 25,
+          signature:
+            "Size an executor's memory regions and watch a big sort spill to disk, then fail",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Execution and storage memory",
+            "Spill to disk",
+            "Common out-of-memory causes",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["shuffle"],
+          plain:
+            "Each executor has a fixed amount of memory shared between running work and cached data. When work doesn't fit, Spark writes it to disk, which is slow but survivable; when even that fails, the job dies with an out-of-memory error.",
+        },
+        {
+          slug: "caching",
+          title: "Caching and persistence",
+          summary: "Keeping results for reuse.",
+          minutes: 20,
+          signature:
+            "Reuse an expensive DataFrame three times with and without caching and compare the work done",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["cache and persist", "Storage levels", "When caching hurts"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["memory-spill"],
+          plain:
+            "If you use the same intermediate result several times, Spark recomputes it each time unless you cache it. Caching saves time when reused and wastes memory when not.",
+        },
+        {
+          slug: "files-io",
+          title: "Reading and writing files",
+          summary: "Partitions on disk, small files and pushdown.",
+          minutes: 25,
+          signature:
+            "Write a table with too many partitions, find thousands of tiny files, then fix the layout",
+          formats: ["simulation", "fix-the-problem", "checkpoint"],
+          concepts: ["Splits and file sizes", "Partitioned writes", "Small-file problems"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["partitions"],
+          plain:
+            "How data sits in files decides how fast Spark can read it. Too many tiny files, or a partition layout that doesn't match your queries, can make a job slow before it does any real work.",
+        },
+      ],
+    },
+    {
+      slug: "beyond",
+      title: "Beyond batch",
+      summary: "Streaming, Python and running Spark for real.",
+      modules: [
+        {
+          slug: "structured-streaming",
+          title: "Structured Streaming",
+          summary: "The same DataFrames, on data that never ends.",
+          minutes: 25,
+          signature:
+            "Run a streaming count in micro-batches, add a watermark, and restart from a checkpoint",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Micro-batches", "Triggers, watermarks and state", "Checkpoints"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["lazy-evaluation"],
+          plain:
+            "Structured Streaming treats a stream as a table that keeps growing. You write the same DataFrame code, and Spark runs it repeatedly on the new data, remembering where it got to.",
+        },
+        {
+          slug: "pyspark-udfs",
+          title: "PySpark, Arrow and UDFs",
+          summary: "Python on a JVM engine.",
+          minutes: 25,
+          signature:
+            "Apply a Python function row by row, then as a vectorised pandas UDF, then as a built-in, and compare speed",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "How PySpark talks to the JVM",
+            "Python UDFs and their cost",
+            "Arrow and pandas UDFs",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["spark-sql"],
+          plain:
+            "Most Spark users write Python, but the engine runs on the Java virtual machine. Built-in functions stay inside the engine; custom Python functions have to ship data back and forth, which can be slow unless it's done in batches.",
+        },
+        {
+          slug: "spark-platforms",
+          title: "Running Spark",
+          summary: "Managed platforms, Kubernetes and Spark Connect.",
+          minutes: 20,
+          signature:
+            "Compare running the same job on a managed platform, on Kubernetes and through Spark Connect",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "Managed services on AWS, Google Cloud and Azure",
+            "Spark on Kubernetes",
+            "Spark Connect",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["cluster-anatomy"],
+          plain:
+            "You can run Spark yourself or use a managed service from Databricks or a cloud provider. Each handles clusters, upgrades and scaling differently, and newer client-server options let small apps talk to a remote Spark.",
+        },
+        {
+          slug: "cost-scaling",
+          title: "Cost and right-sizing",
+          summary: "Paying for what the job needs.",
+          minutes: 20,
+          signature:
+            "Size a cluster for a nightly job, add dynamic allocation and spot capacity, and watch cost and runtime change",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Executor sizing", "Dynamic allocation and autoscaling", "Spot capacity"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["memory-spill"],
+          plain:
+            "A cluster costs money for every minute it runs. Choosing executor sizes, letting the cluster grow and shrink with the work, and using cheaper interruptible machines can cut costs sharply.",
+        },
+      ],
+    },
+    {
+      slug: "capstone",
+      title: "Capstone",
+      summary: "Everything together.",
+      modules: [
+        {
+          slug: "capstone-spark",
+          title: "Capstone: the slow nightly job",
+          summary: "Diagnose a job that misses its deadline.",
+          minutes: 40,
+          signature:
+            "A nightly sales job runs four hours over: read the plan and the Spark UI to find and fix five problems",
+          formats: ["branching-scenario", "fix-the-problem", "checkpoint"],
+          concepts: ["Diagnosing Spark performance"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["skew", "files-io", "memory-spill"],
+          plain:
+            "Everything in this track in one investigation: a nightly job is too slow, and you'll use plans, stages and metrics to find out why and fix it.",
+        },
+      ],
+    },
+  ],
+};
+
 export const tracks: Track[] = [
   lakehouse,
   systemDesign,
@@ -7514,6 +7921,7 @@ export const tracks: Track[] = [
   apiDesign,
   databaseInternals,
   enterprisePatterns,
+  spark,
   playground,
 ];
 
@@ -7554,7 +7962,11 @@ export const categories: Category[] = [
         slug: "streaming-data",
         blurb: "Events, windows, state and exactly-once pipelines.",
       },
-      { title: "Spark", blurb: "How distributed dataframes plan, shuffle and scale." },
+      {
+        title: "Apache Spark",
+        slug: "spark",
+        blurb: "How distributed dataframes plan, shuffle and scale.",
+      },
       { title: "Data Modelling", blurb: "Stars, snowflakes, vaults and when to use each." },
       { title: "Data Quality", blurb: "Tests, contracts and observability for data." },
     ],

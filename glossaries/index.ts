@@ -18,6 +18,7 @@ import { observability } from "./observability";
 import { apiDesign } from "./api-design";
 import { databaseInternals } from "./database-internals";
 import { enterprisePatterns } from "./enterprise-patterns";
+import { spark } from "./spark";
 import { shared } from "./shared";
 import type { GlossaryEntry } from "./types";
 
@@ -38,6 +39,7 @@ export const trackGlossaries: Record<string, Record<string, GlossaryEntry>> = {
   "api-design": apiDesign,
   "database-internals": databaseInternals,
   "enterprise-patterns": enterprisePatterns,
+  spark,
 };
 
 export type TermId =
@@ -54,7 +56,8 @@ export type TermId =
   | keyof typeof observability
   | keyof typeof apiDesign
   | keyof typeof databaseInternals
-  | keyof typeof enterprisePatterns;
+  | keyof typeof enterprisePatterns
+  | keyof typeof spark;
 
 export interface ResolvedTerm {
   id: string;

@@ -549,6 +549,40 @@ Architecture area, fourth track (started 2026-10-04). 21 modules in 6 chapters, 
 | **6** | **Capstone**                                 |                                            |                           |
 | 21    | Capstone: modernising a benefits system      | Modernise a benefits platform              | Branching scenario        |
 
+## Apache Spark: curriculum
+
+Data engineering area, third track (started 2026-10-04). 21 modules in 6 chapters, about 8 hours. Accent: "ember" red (`[data-track="ember"]`). Glossary: `glossaries/spark.ts`. Vendor-neutral: open-source Spark alongside Databricks, Amazon EMR and Glue, Google Dataproc, Azure and Fabric, and Kubernetes. Links to the Lakehouse track (file formats, table layout) and Streaming track rather than repeating them. Built on one branch (`track/spark`), one commit per module, merged once at the end. Each module is fact-checked on its own before it is built; card illustrations and a showcase follow the last module.
+
+| #     | Module                                | Centrepiece                   | Key formats                         |
+| ----- | ------------------------------------- | ----------------------------- | ----------------------------------- |
+| **1** | **The big picture**                   |                               |                                     |
+| 1     | Why Spark exists                      | MapReduce vs Spark data trips | Scroll story                        |
+| 2     | Driver, executors and the cluster     | Follow a job to executors     | Animated infographic, Simulation    |
+| **2** | **Data and APIs**                     |                               |                                     |
+| 3     | RDDs, DataFrames and Datasets         | Word count three ways         | Simulation                          |
+| 4     | Transformations, actions and laziness | Build a plan lazily           | Step through                        |
+| 5     | Partitions and parallelism            | Tasks in waves                | Simulation                          |
+| 6     | Spark SQL and the DataFrame API       | SQL and DataFrame, one plan   | Simulation                          |
+| **3** | **How a query runs**                  |                               |                                     |
+| 7     | The Catalyst optimiser                | Step through Catalyst         | Step through                        |
+| 8     | Jobs, stages and tasks                | A simulated Spark UI          | Simulation                          |
+| 9     | The shuffle                           | Every executor to every other | Simulation                          |
+| 10    | Join strategies                       | Broadcast or sort-merge       | Simulation                          |
+| 11    | Adaptive Query Execution              | Re-plan at runtime            | Simulation                          |
+| 12    | Tungsten and vectorised engines       | Row, codegen, vectorised      | Animated infographic                |
+| **4** | **Performance**                       |                               |                                     |
+| 13    | Data skew                             | One task straggles            | Simulation, Fix the problem         |
+| 14    | Memory, spill and out-of-memory       | Memory regions and spill      | Simulation                          |
+| 15    | Caching and persistence               | Cache or recompute            | Simulation                          |
+| 16    | Reading and writing files             | Thousands of tiny files       | Simulation, Fix the problem         |
+| **5** | **Beyond batch**                      |                               |                                     |
+| 17    | Structured Streaming                  | Micro-batches and watermarks  | Simulation                          |
+| 18    | PySpark, Arrow and UDFs               | Python UDF three ways         | Simulation                          |
+| 19    | Running Spark                         | Where Spark runs              | Animated infographic                |
+| 20    | Cost and right-sizing                 | Size the cluster              | Simulation                          |
+| **6** | **Capstone**                          |                               |                                     |
+| 21    | Capstone: the slow nightly job        | The slow nightly job          | Branching scenario, Fix the problem |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -569,6 +603,7 @@ Architecture area, fourth track (started 2026-10-04). 21 modules in 6 chapters, 
 | 4k. API Design             | Architecture, second track, 21 modules                                                  | Live: all 21 modules (2026-10-04)                                       |
 | 4l. Database Internals     | Architecture, third track, 21 modules                                                   | Live: all 21 modules (2026-10-04)                                       |
 | 4m. Enterprise Patterns    | Architecture, fourth track, 21 modules                                                  | Live: all 21 modules (2026-10-04)                                       |
+| 4n. Apache Spark           | Data engineering, third track, 21 modules                                               | In progress: 1 of 21 modules                                            |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

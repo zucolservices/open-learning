@@ -231,6 +231,18 @@
   --bg-glow: rgb(203 213 225 / 0.1);
 }
 
+[data-track="ember"] {
+  --accent: #b91c1c;
+  --accent-soft: rgb(185 28 28 / 0.1);
+  --bg-glow: rgb(220 38 38 / 0.12);
+}
+[data-theme="dark"] [data-track="ember"],
+[data-theme="dark"][data-track="ember"] {
+  --accent: #f87171;
+  --accent-soft: rgb(248 113 113 / 0.14);
+  --bg-glow: rgb(248 113 113 / 0.1);
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);
