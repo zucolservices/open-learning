@@ -9272,11 +9272,12 @@ const aiAgents: Track = {
             "Design a customer-support agent, watch it fail in five realistic ways and fix each with what you've learned",
           formats: ["branching-scenario", "fix-the-problem", "checkpoint"],
           concepts: ["Applying agent design"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["guardrails", "agent-evals", "human-in-the-loop"],
           plain:
             "Everything in this track in one project: choose workflow or agent, design the tools, add memory and guardrails, keep a person in the loop and prove it works.",
+          terms: ["ai-agent", "agent-handover", "agent-guardrail", "lethal-trifecta"],
         },
       ],
     },

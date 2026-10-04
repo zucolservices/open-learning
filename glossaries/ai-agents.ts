@@ -296,4 +296,10 @@ export const aiAgents = {
       "A way to send many model requests to be processed within hours rather than seconds, usually at about half the price; suited to offline work.",
     module: "agent-ops",
   },
+  "agent-handover": {
+    term: "Handover to a person",
+    definition:
+      "Passing a conversation or task from an agent to a human, with a summary of what has happened so far, when the agent is stuck or the stakes are high.",
+    module: "capstone-agent",
+  },
 } satisfies Record<string, GlossaryEntry>;
