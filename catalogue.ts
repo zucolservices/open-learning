@@ -8677,11 +8677,12 @@ const dataQuality: Track = {
             "Tune a row-count monitor with fixed limits and with a seasonal baseline, and count false alarms",
           formats: ["simulation", "checkpoint"],
           concepts: ["Thresholds", "Baselines and seasonality", "Alert fatigue"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["data-observability"],
           plain:
             "Writing a rule for every metric is impossible, so monitors learn what normal looks like and flag what isn't. The hard part is catching real problems without crying wolf every Monday.",
+          terms: ["anomaly-detection", "seasonality", "z-score", "alert-fatigue"],
         },
         {
           slug: "lineage",

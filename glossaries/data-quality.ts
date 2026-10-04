@@ -212,4 +212,22 @@ export const dataQuality = {
       "Monte Carlo's term for periods when data is partial, wrong or missing; roughly incidents × (time to detect + time to resolve).",
     module: "data-observability",
   },
+  "anomaly-detection": {
+    term: "Anomaly detection",
+    definition:
+      "Learning what normal looks like from a metric's history and flagging values that fall outside the expected range.",
+    module: "anomaly-detection",
+  },
+  seasonality: {
+    term: "Seasonality",
+    definition:
+      "A pattern that repeats on a calendar rhythm, such as quiet weekends or a Monday peak, which a baseline must allow for.",
+    module: "anomaly-detection",
+  },
+  "z-score": {
+    term: "Z-score",
+    definition:
+      "How many standard deviations a value is from the average; monitors often flag values beyond about 3.",
+    module: "anomaly-detection",
+  },
 } satisfies Record<string, GlossaryEntry>;
