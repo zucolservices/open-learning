@@ -361,4 +361,16 @@ export const spark = {
       "Memory an executor's container gets on top of the Java heap, for native and other non-heap use. By default 10% of executor memory, at least 384 MB.",
     module: "memory-spill",
   },
+  "cache-spark": {
+    term: "Cache (Spark)",
+    definition:
+      "Keeping a computed DataFrame or RDD in executor memory or on local disk after its first use, so later actions reuse it instead of recomputing it.",
+    module: "caching",
+  },
+  "storage-level": {
+    term: "Storage level",
+    definition:
+      "How Spark keeps cached data: in memory, on disk or both; as objects or serialised bytes; with one copy or two. Chosen with persist().",
+    module: "caching",
+  },
 } satisfies Record<string, GlossaryEntry>;

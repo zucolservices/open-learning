@@ -7825,11 +7825,12 @@ const spark: Track = {
             "Reuse an expensive DataFrame three times with and without caching and compare the work done",
           formats: ["simulation", "checkpoint"],
           concepts: ["cache and persist", "Storage levels", "When caching hurts"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["memory-spill"],
           plain:
             "If you use the same intermediate result several times, Spark recomputes it each time unless you cache it. Caching saves time when reused and wastes memory when not.",
+          terms: ["cache-spark", "storage-level"],
         },
         {
           slug: "files-io",

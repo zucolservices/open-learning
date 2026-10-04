@@ -329,4 +329,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "spark/tungsten-vectorised": () => import("./spark/tungsten-vectorised"),
   "spark/skew": () => import("./spark/skew"),
   "spark/memory-spill": () => import("./spark/memory-spill"),
+  "spark/caching": () => import("./spark/caching"),
 };
