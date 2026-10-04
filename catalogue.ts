@@ -8563,11 +8563,12 @@ const dataQuality: Track = {
             "Decide what each failed check should do, then run a bad night's load and see the consequences",
           formats: ["simulation", "checkpoint"],
           concepts: ["Severity levels", "Quarantine and dead letters", "Circuit breakers"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["where-to-test"],
           plain:
             "Not every failure should stop the pipeline. Some checks should only warn, some should block publishing, and some should set bad rows aside so the rest can flow. Choosing well avoids both bad data and needless outages.",
+          terms: ["test-severity", "quarantine", "dead-letter-queue", "circuit-breaker"],
         },
       ],
     },

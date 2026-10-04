@@ -116,4 +116,28 @@ export const dataQuality = {
       "A git-like branch of a table or lake, such as in Apache Iceberg or lakeFS, where changes can be made and checked before merging.",
     module: "where-to-test",
   },
+  "test-severity": {
+    term: "Severity",
+    definition:
+      "What a failed check should do: warn and carry on, or error and stop what depends on it. Often set with thresholds.",
+    module: "severity",
+  },
+  quarantine: {
+    term: "Quarantine",
+    definition:
+      "Setting rows that fail checks aside in a separate table, so the good rows keep flowing and the bad ones can be fixed and replayed.",
+    module: "severity",
+  },
+  "dead-letter-queue": {
+    term: "Dead letter queue",
+    definition:
+      "A separate place, often a topic or table, where records that couldn't be processed are sent for later inspection.",
+    module: "severity",
+  },
+  "circuit-breaker": {
+    term: "Circuit breaker",
+    definition:
+      "A pattern that stops data flowing downstream when key checks fail, so consumers see a delay rather than wrong data, and resumes once fixed.",
+    module: "severity",
+  },
 } satisfies Record<string, GlossaryEntry>;
