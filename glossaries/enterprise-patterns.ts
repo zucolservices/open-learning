@@ -475,4 +475,29 @@ export const enterprisePatterns = {
       "In data mesh, a dataset published by a domain team for others to use, with an owner, documentation and quality guarantees.",
     module: "data-ownership",
   },
+  "strangler-fig": {
+    term: "Strangler fig",
+    definition:
+      "Replacing a legacy system gradually: put a façade in front of it, move functionality to a new system piece by piece, and switch the old one off when nothing uses it.",
+    analogy: "A fig vine that grows around its host tree until it stands on its own.",
+    module: "strangler-fig",
+  },
+  facade: {
+    term: "Façade (routing)",
+    definition:
+      "A proxy in front of a system that intercepts every request and sends it to either the old or the new implementation, so users don't notice a migration.",
+    module: "strangler-fig",
+  },
+  "parallel-run": {
+    term: "Parallel run",
+    definition:
+      "Running the old and new implementations side by side on real requests, using the old result while recording any differences, until the new one can be trusted.",
+    module: "strangler-fig",
+  },
+  "branch-by-abstraction": {
+    term: "Branch by abstraction",
+    definition:
+      "Making a large change gradually inside a codebase: put an abstraction in front of the old component, build the new one behind it, switch over, then remove the old one, releasing all along.",
+    module: "strangler-fig",
+  },
 } satisfies Record<string, GlossaryEntry>;

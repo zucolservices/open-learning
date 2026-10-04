@@ -7381,11 +7381,18 @@ const enterprisePatterns: Track = {
             "Routing façades",
             "Branch by abstraction and parallel runs",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["integration-styles"],
           plain:
             "Big-bang rewrites of large systems often fail. Instead, put a façade in front of the old system and move one piece at a time to the new one, until the old system can be switched off.",
+          terms: [
+            "strangler-fig",
+            "facade",
+            "parallel-run",
+            "branch-by-abstraction",
+            "legacy-system",
+          ],
         },
         {
           slug: "legacy-integration",
