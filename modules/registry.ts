@@ -357,4 +357,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-modelling/modelling-time": () => import("./data-modelling/modelling-time"),
   "data-modelling/evolving-models": () => import("./data-modelling/evolving-models"),
   "data-modelling/capstone-model": () => import("./data-modelling/capstone-model"),
+  "data-quality/why-quality": () => import("./data-quality/why-quality"),
 };

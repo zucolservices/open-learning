@@ -20,6 +20,7 @@ import { databaseInternals } from "./database-internals";
 import { enterprisePatterns } from "./enterprise-patterns";
 import { spark } from "./spark";
 import { dataModelling } from "./data-modelling";
+import { dataQuality } from "./data-quality";
 import { shared } from "./shared";
 import type { GlossaryEntry } from "./types";
 
@@ -42,6 +43,7 @@ export const trackGlossaries: Record<string, Record<string, GlossaryEntry>> = {
   "enterprise-patterns": enterprisePatterns,
   spark,
   "data-modelling": dataModelling,
+  "data-quality": dataQuality,
 };
 
 export type TermId =
@@ -60,7 +62,8 @@ export type TermId =
   | keyof typeof databaseInternals
   | keyof typeof enterprisePatterns
   | keyof typeof spark
-  | keyof typeof dataModelling;
+  | keyof typeof dataModelling
+  | keyof typeof dataQuality;
 
 export interface ResolvedTerm {
   id: string;

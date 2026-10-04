@@ -101,6 +101,7 @@ export interface Track {
     | "keystone"
     | "ember"
     | "timber"
+    | "assay"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -8434,6 +8435,379 @@ const dataModelling: Track = {
   ],
 };
 
+const dataQuality: Track = {
+  slug: "data-quality",
+  title: "Data Quality",
+  area: "Data engineering",
+  category: "data-engineering",
+  tagline: "Tests, contracts and observability for data.",
+  description:
+    "How to make data trustworthy and keep it that way: what quality means and its dimensions, testing data like code, profiling, validation frameworks, where to test in a pipeline, failing well, data contracts, schema evolution, ownership, freshness objectives, data observability, anomaly detection, lineage, data incidents, duplicates and entity resolution, reconciliation, late data, quality for machine learning and AI, and the tool landscape. Vendor-neutral, covering open-source frameworks, commercial observability platforms and the quality features of AWS, Google Cloud, Azure and Databricks. By the end you can design the checks, contracts and monitors a pipeline needs, and handle the day something gets through.",
+  accent: "assay",
+  chapters: [
+    {
+      slug: "big-picture",
+      title: "The big picture",
+      summary: "Why bad data costs so much.",
+      modules: [
+        {
+          slug: "why-quality",
+          title: "Why data quality matters",
+          summary: "When numbers lie.",
+          minutes: 20,
+          signature:
+            "Follow one bad value from a form field to a board report and count who it fooled",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: ["What data quality means", "The cost of bad data", "Fit for purpose"],
+          status: "live",
+          level: "beginner",
+          plain:
+            "Data is good enough when it is fit for the job people use it for. Bad data rarely announces itself: a wrong number flows quietly into reports, models and decisions until someone notices the damage.",
+          terms: ["data-quality", "fitness-for-use", "data-consumer", "hidden-data-factory"],
+        },
+        {
+          slug: "quality-dimensions",
+          title: "Dimensions of data quality",
+          summary: "Six ways data goes wrong.",
+          minutes: 20,
+          signature: "Inspect a customer table, find each defect and name the dimension it breaks",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Completeness, uniqueness, validity",
+            "Accuracy, consistency, timeliness",
+            "Measuring each dimension",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-quality"],
+          plain:
+            "'Bad data' is too vague to fix. Breaking it into dimensions, such as missing values, duplicates, wrong formats, out-of-date records, makes each problem measurable and gives you a checklist.",
+        },
+      ],
+    },
+    {
+      slug: "testing",
+      title: "Testing data",
+      summary: "Checks that run every time data moves.",
+      modules: [
+        {
+          slug: "data-tests",
+          title: "Testing data like code",
+          summary: "Assertions about every load.",
+          minutes: 25,
+          signature:
+            "Write not-null, unique, accepted-value and relationship tests and watch a bad load fail them",
+          formats: ["build-connect", "checkpoint"],
+          concepts: ["Assertions on data", "Generic tests", "Tests in version control"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["quality-dimensions"],
+          plain:
+            "Software teams test code before it ships. Data teams can test data the same way: small, automatic assertions such as 'every order has a customer' that run on every load and fail loudly.",
+        },
+        {
+          slug: "profiling",
+          title: "Profiling a dataset",
+          summary: "Know your data before you judge it.",
+          minutes: 20,
+          signature: "Profile a new supplier file and turn what you find into rules",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Column statistics", "Distributions and outliers", "From profile to rules"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["data-tests"],
+          plain:
+            "Before writing rules you need to know what normal looks like. Profiling counts nulls, distinct values, ranges and patterns in each column, and often reveals problems nobody suspected.",
+        },
+        {
+          slug: "expectations",
+          title: "Validation frameworks",
+          summary: "Great Expectations, Soda, dbt and Deequ.",
+          minutes: 25,
+          signature:
+            "Express the same five rules in three validation tools and compare what each reports",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Declarative checks", "Validation results and docs", "Choosing a framework"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["data-tests"],
+          plain:
+            "Rather than hand-writing SQL checks, teams use frameworks where you declare expectations ('values between 0 and 100') and the tool runs them and reports results. Several open-source options exist.",
+        },
+        {
+          slug: "where-to-test",
+          title: "Where to test in a pipeline",
+          summary: "Catch it early, check it often.",
+          minutes: 25,
+          signature:
+            "Place checks along a pipeline and see where each kind of bad data gets caught, or slips through",
+          formats: ["build-connect", "checkpoint"],
+          concepts: ["Testing at each layer", "Write-audit-publish", "Branches for data"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["expectations"],
+          plain:
+            "A check at the end catches problems after the damage; a check only at the start misses what transformations break. Good pipelines test at every stage, and some stage new data out of sight until it passes.",
+        },
+        {
+          slug: "severity",
+          title: "Failing well",
+          summary: "Warn, block or quarantine.",
+          minutes: 20,
+          signature:
+            "Decide what each failed check should do, then run a bad night's load and see the consequences",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Severity levels", "Quarantine and dead letters", "Circuit breakers"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["where-to-test"],
+          plain:
+            "Not every failure should stop the pipeline. Some checks should only warn, some should block publishing, and some should set bad rows aside so the rest can flow. Choosing well avoids both bad data and needless outages.",
+        },
+      ],
+    },
+    {
+      slug: "contracts",
+      title: "Contracts and ownership",
+      summary: "Agreements between producers and consumers.",
+      modules: [
+        {
+          slug: "data-contracts",
+          title: "Data contracts",
+          summary: "A promise from producer to consumer.",
+          minutes: 25,
+          signature:
+            "Write a contract for an orders feed, then see which upstream change it catches",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Schema, semantics and guarantees",
+            "Producer and consumer",
+            "Open contract standards",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["data-tests"],
+          plain:
+            "Most data breaks because someone upstream changed something without knowing who depended on it. A data contract writes down what a dataset promises, its fields, meanings and freshness, and checks the promise automatically.",
+        },
+        {
+          slug: "schema-evolution",
+          title: "Schema changes",
+          summary: "Change without breaking readers.",
+          minutes: 25,
+          signature:
+            "Evolve an event schema under backward, forward and full compatibility and see which consumers break",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Breaking and compatible changes", "Compatibility modes", "Schema registries"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["data-contracts"],
+          plain:
+            "Data shapes change: fields are added, renamed, retyped. Some changes are safe for existing readers and some are not. Compatibility rules, enforced by a schema registry, keep producers from breaking consumers.",
+        },
+        {
+          slug: "ownership",
+          title: "Ownership and stewardship",
+          summary: "Every dataset needs a name next to it.",
+          minutes: 20,
+          signature:
+            "Assign owners, stewards and consumers for six datasets and route four incidents to the right person",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Owners and stewards", "Governance that helps", "Domain ownership"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["data-contracts"],
+          plain:
+            "When nobody owns a dataset, nobody fixes it. Clear ownership says who answers questions, who approves changes and who gets woken when it breaks.",
+        },
+        {
+          slug: "data-slas",
+          title: "Freshness, SLAs and SLOs",
+          summary: "How late is too late?",
+          minutes: 20,
+          signature:
+            "Set a freshness objective for a dashboard and watch the error budget over a bad month",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Freshness and timeliness", "Service levels for data", "Error budgets"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["ownership"],
+          plain:
+            "Users care whether data is there and up to date when they need it. Service level objectives turn 'the dashboard should be fresh' into a measurable target, with a budget for how often it may miss.",
+        },
+      ],
+    },
+    {
+      slug: "observability",
+      title: "Data observability",
+      summary: "Seeing problems you didn't write tests for.",
+      modules: [
+        {
+          slug: "data-observability",
+          title: "Data observability",
+          summary: "Monitoring the data, not just the jobs.",
+          minutes: 25,
+          signature:
+            "Watch a table through freshness, volume, schema, distribution and lineage signals and spot the silent failure",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Signals to monitor", "Tests vs monitoring", "Data downtime"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["data-slas"],
+          plain:
+            "A job can succeed while delivering half the rows or a column full of nulls. Data observability watches the data itself, how fresh, how much, what shape, so unknown problems surface too.",
+        },
+        {
+          slug: "anomaly-detection",
+          title: "Anomaly detection",
+          summary: "Fixed thresholds versus learned baselines.",
+          minutes: 25,
+          signature:
+            "Tune a row-count monitor with fixed limits and with a seasonal baseline, and count false alarms",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Thresholds", "Baselines and seasonality", "Alert fatigue"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["data-observability"],
+          plain:
+            "Writing a rule for every metric is impossible, so monitors learn what normal looks like and flag what isn't. The hard part is catching real problems without crying wolf every Monday.",
+        },
+        {
+          slug: "lineage",
+          title: "Lineage and impact",
+          summary: "Upstream causes, downstream damage.",
+          minutes: 20,
+          signature:
+            "Trace a broken dashboard back to its source, then see everything else the same fault touched",
+          formats: ["build-connect", "checkpoint"],
+          concepts: ["Table and column lineage", "Root cause analysis", "Impact analysis"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["data-observability"],
+          plain:
+            "Lineage is the map of which data feeds which. It answers two urgent questions in an incident: where did this break, and who else is affected?",
+        },
+        {
+          slug: "data-incidents",
+          title: "Handling data incidents",
+          summary: "Detect, triage, fix, learn.",
+          minutes: 25,
+          signature: "Run a data incident from first alert to post-incident review",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: ["Triage and severity", "Communicating impact", "Backfills and reviews"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["lineage"],
+          plain:
+            "When bad data reaches users, speed and honesty matter: confirm the problem, tell the people affected, stop the spread, repair the data and learn why it happened.",
+        },
+      ],
+    },
+    {
+      slug: "hard-problems",
+      title: "Hard problems",
+      summary: "Duplicates, reconciliation, lateness and ML.",
+      modules: [
+        {
+          slug: "deduplication",
+          title: "Duplicates and entity resolution",
+          summary: "Is this the same customer?",
+          minutes: 25,
+          signature:
+            "Match customer records from two systems with exact and fuzzy rules and pick the surviving values",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Exact and fuzzy matching", "Survivorship", "Master data"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["quality-dimensions"],
+          plain:
+            "The same person appears as 'Asha Rao' in one system and 'A. Rao' in another. Entity resolution decides which records are the same thing and which values to keep, without merging strangers.",
+        },
+        {
+          slug: "reconciliation",
+          title: "Reconciliation",
+          summary: "Do the numbers add up?",
+          minutes: 20,
+          signature:
+            "Reconcile a warehouse table against its source by counts, sums and row-level diffs",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Counts and control totals", "Row-level diffs", "Tolerances"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["data-tests"],
+          plain:
+            "After data moves, you need proof nothing was lost or changed on the way. Reconciliation compares source and target, from simple totals to row-by-row differences.",
+        },
+        {
+          slug: "late-data",
+          title: "Late and missing data",
+          summary: "When data arrives out of order.",
+          minutes: 20,
+          signature:
+            "Handle late-arriving events with reprocessing windows and idempotent backfills",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Late and out-of-order data", "Idempotent loads", "Backfills"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["data-slas"],
+          plain:
+            "Data doesn't always arrive on time or in order. Pipelines that can safely re-run a period, and know how long to wait, avoid both gaps and double counting.",
+        },
+        {
+          slug: "ml-data-quality",
+          title: "Data quality for ML and AI",
+          summary: "Garbage in, confident garbage out.",
+          minutes: 25,
+          signature: "Train on clean and dirty data, then watch a model drift as inputs change",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Training data quality", "Drift and skew", "Data for AI applications"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["data-observability"],
+          plain:
+            "Models learn whatever is in their data, including its mistakes. Label errors, skewed samples and inputs that drift after launch quietly degrade predictions and AI answers.",
+        },
+        {
+          slug: "dq-platforms",
+          title: "Tools and platforms",
+          summary: "Open source, vendors and cloud services.",
+          minutes: 20,
+          signature: "Map the data quality tools on the market to the jobs in this track",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: ["Open-source frameworks", "Observability platforms", "Cloud-native options"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["expectations", "data-observability"],
+          plain:
+            "There are open-source validation libraries, commercial observability platforms and quality features built into cloud data platforms. They cover different jobs, and most teams combine a few.",
+        },
+      ],
+    },
+    {
+      slug: "capstone",
+      title: "Capstone",
+      summary: "Everything together.",
+      modules: [
+        {
+          slug: "capstone-quality",
+          title: "Capstone: the wrong revenue number",
+          summary: "From incident to prevention.",
+          minutes: 40,
+          signature:
+            "A board report shows revenue 18% too high: find the cause, fix the data and put the right defences in place",
+          formats: ["branching-scenario", "fix-the-problem", "checkpoint"],
+          concepts: ["Applying data quality"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["data-incidents", "data-contracts", "reconciliation"],
+          plain:
+            "Everything in this track in one incident: trace a wrong number to its source, repair it, and choose the tests, contracts and monitors that would have caught it.",
+        },
+      ],
+    },
+  ],
+};
+
 export const tracks: Track[] = [
   lakehouse,
   systemDesign,
@@ -8450,6 +8824,7 @@ export const tracks: Track[] = [
   enterprisePatterns,
   spark,
   dataModelling,
+  dataQuality,
   playground,
 ];
 
@@ -8500,7 +8875,11 @@ export const categories: Category[] = [
         slug: "data-modelling",
         blurb: "Stars, snowflakes, vaults and when to use each.",
       },
-      { title: "Data Quality", blurb: "Tests, contracts and observability for data." },
+      {
+        title: "Data Quality",
+        slug: "data-quality",
+        blurb: "Tests, contracts and observability for data.",
+      },
     ],
   },
   {

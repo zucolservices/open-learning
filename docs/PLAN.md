@@ -617,6 +617,40 @@ Data engineering area, fourth track (started 2026-10-04). 21 modules in 6 chapte
 | **6** | **Capstone**                                |                                |                      |
 | 21    | Capstone: model a food-delivery business    | Model a food-delivery business | Branching scenario   |
 
+## Data Quality: curriculum
+
+Data engineering area, fifth track (started 2026-10-04). 21 modules in 6 chapters, about 8 hours. Accent: "assay" jade (`[data-track="assay"]`). Glossary: `glossaries/data-quality.ts`. Vendor-neutral: open-source frameworks (Great Expectations, Soda, dbt, Deequ), commercial observability platforms, and the quality features of AWS, Google Cloud, Azure, Databricks and Snowflake. Links to the Observability track (SLOs, incidents) and Data Modelling track (contracts, change) rather than repeating them. Built on one branch (`track/data-quality`), one commit per module, merged once at the end. Each module is fact-checked on its own before it is built; card illustrations and a showcase follow the last module.
+
+| #     | Module                             | Centrepiece                         | Key formats                         |
+| ----- | ---------------------------------- | ----------------------------------- | ----------------------------------- |
+| **1** | **The big picture**                |                                     |                                     |
+| 1     | Why data quality matters           | One bad value's journey             | Scroll story                        |
+| 2     | Dimensions of data quality         | Find the defect, name the dimension | Fix the problem                     |
+| **2** | **Testing data**                   |                                     |                                     |
+| 3     | Testing data like code             | A bad load meets its tests          | Build connect                       |
+| 4     | Profiling a dataset                | Profile a supplier file             | Simulation                          |
+| 5     | Validation frameworks              | One rule, three tools               | Simulation                          |
+| 6     | Where to test in a pipeline        | Checks along a pipeline             | Build connect                       |
+| 7     | Failing well                       | Warn, block or quarantine           | Simulation                          |
+| **3** | **Contracts and ownership**        |                                     |                                     |
+| 8     | Data contracts                     | Write a contract                    | Build connect                       |
+| 9     | Schema changes                     | Compatibility modes                 | Simulation                          |
+| 10    | Ownership and stewardship          | Who owns what                       | Simulation                          |
+| 11    | Freshness, SLAs and SLOs           | Freshness and error budgets         | Simulation                          |
+| **4** | **Data observability**             |                                     |                                     |
+| 12    | Data observability                 | Five signals, one silent failure    | Simulation                          |
+| 13    | Anomaly detection                  | Thresholds vs baselines             | Simulation                          |
+| 14    | Lineage and impact                 | Trace the broken dashboard          | Build connect                       |
+| 15    | Handling data incidents            | Run a data incident                 | Branching scenario                  |
+| **5** | **Hard problems**                  |                                     |                                     |
+| 16    | Duplicates and entity resolution   | Match two customer lists            | Simulation                          |
+| 17    | Reconciliation                     | Reconcile source and target         | Simulation                          |
+| 18    | Late and missing data              | Late events and backfills           | Simulation                          |
+| 19    | Data quality for ML and AI         | Dirty data, drifting model          | Simulation                          |
+| 20    | Tools and platforms                | The tool landscape                  | Animated infographic                |
+| **6** | **Capstone**                       |                                     |                                     |
+| 21    | Capstone: the wrong revenue number | The wrong revenue number            | Branching scenario, Fix the problem |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -639,6 +673,7 @@ Data engineering area, fourth track (started 2026-10-04). 21 modules in 6 chapte
 | 4m. Enterprise Patterns    | Architecture, fourth track, 21 modules                                                  | Live: all 21 modules (2026-10-04)                                       |
 | 4n. Apache Spark           | Data engineering, third track, 21 modules                                               | Live: all 21 modules (2026-10-04)                                       |
 | 4o. Data Modelling         | Data engineering, fourth track, 21 modules                                              | Live: all 21 modules (2026-10-04)                                       |
+| 4p. Data Quality           | Data engineering, fifth track, 21 modules                                               | In progress: 1 of 21 modules                                            |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
