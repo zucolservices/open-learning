@@ -7661,11 +7661,19 @@ const spark: Track = {
             "Rule-based rewrites",
             "Predicate and column pruning",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["spark-sql"],
           plain:
             "Before running anything, Spark's optimiser, Catalyst, rewrites your query: it removes columns you don't need, moves filters as early as possible, and picks how to perform each step. Reading its plan explains most surprises.",
+          terms: [
+            "catalyst",
+            "logical-plan",
+            "physical-plan",
+            "predicate-pushdown",
+            "column-pruning",
+            "lazy-evaluation",
+          ],
         },
         {
           slug: "jobs-stages-tasks",

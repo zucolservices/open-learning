@@ -321,4 +321,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "spark/lazy-evaluation": () => import("./spark/lazy-evaluation"),
   "spark/partitions": () => import("./spark/partitions"),
   "spark/spark-sql": () => import("./spark/spark-sql"),
+  "spark/catalyst": () => import("./spark/catalyst"),
 };

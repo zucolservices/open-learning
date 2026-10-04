@@ -174,4 +174,35 @@ export const spark = {
       "Spark SQL's standards-following behaviour, on by default since Spark 4.0: invalid input such as a bad cast or integer overflow raises an error instead of silently returning NULL or a wrong number.",
     module: "spark-sql",
   },
+  catalyst: {
+    term: "Catalyst",
+    definition:
+      "Spark SQL's query optimiser. It turns SQL or DataFrame code into a logical plan, rewrites it with rules, chooses a physical plan and generates code to run it.",
+    analogy: "A route planner: you give the destination, it picks the route.",
+    module: "catalyst",
+  },
+  "logical-plan": {
+    term: "Logical plan",
+    definition:
+      "A tree describing what a query computes (filters, joins, aggregations) without saying how each step will run.",
+    module: "catalyst",
+  },
+  "physical-plan": {
+    term: "Physical plan",
+    definition:
+      "A tree describing exactly how a query will run: which scan, which join algorithm, where data is exchanged between machines.",
+    module: "catalyst",
+  },
+  "predicate-pushdown": {
+    term: "Predicate pushdown",
+    definition:
+      "Moving a filter as early as possible in a plan, ideally into the data source itself, so less data is read and processed.",
+    module: "catalyst",
+  },
+  "column-pruning": {
+    term: "Column pruning",
+    definition:
+      "Dropping columns a query never uses, so they are never read; especially effective with columnar files like Parquet.",
+    module: "catalyst",
+  },
 } satisfies Record<string, GlossaryEntry>;
