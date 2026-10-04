@@ -10080,11 +10080,12 @@ const llmEvaluation: Track = {
             "A cheaper model looks as good on the leaderboard: build the evals that decide whether to switch",
           formats: ["branching-scenario", "fix-the-problem", "checkpoint"],
           concepts: ["Applying evaluation"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["comparing-versions", "llm-judge", "online-evals"],
           plain:
             "Everything in this track in one decision: define success, build the eval set, choose graders, check the judge, compare with error bars, test safety and plan a careful rollout.",
+          terms: ["eval"],
         },
       ],
     },
