@@ -326,4 +326,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "spark/shuffle": () => import("./spark/shuffle"),
   "spark/spark-joins": () => import("./spark/spark-joins"),
   "spark/aqe": () => import("./spark/aqe"),
+  "spark/tungsten-vectorised": () => import("./spark/tungsten-vectorised"),
 };

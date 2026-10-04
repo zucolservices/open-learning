@@ -289,4 +289,34 @@ export const spark = {
       "In AQE, a part of the plan that ends at a shuffle or broadcast. When it finishes, Spark has real statistics and can re-plan what comes next.",
     module: "aqe",
   },
+  tungsten: {
+    term: "Project Tungsten",
+    definition:
+      "A Spark effort begun in 2015 to use memory and CPU more efficiently: Spark-managed binary memory instead of Java objects, cache-aware algorithms and code generation.",
+    module: "tungsten-vectorised",
+  },
+  "volcano-model": {
+    term: "Volcano model",
+    definition:
+      "The classic way to run a query plan: each operator returns one row at a time when the operator above calls its next() method.",
+    module: "tungsten-vectorised",
+  },
+  "whole-stage-codegen": {
+    term: "Whole-stage code generation",
+    definition:
+      "Spark's technique (since 2.0) of fusing a chain of operators into one generated, compiled function, marked *(n) in explain() output.",
+    module: "tungsten-vectorised",
+  },
+  "vectorised-execution": {
+    term: "Vectorised execution",
+    definition:
+      "Processing data in batches of rows stored column by column, so each call handles thousands of values in a tight loop.",
+    module: "tungsten-vectorised",
+  },
+  "native-engine": {
+    term: "Native engine",
+    definition:
+      "An execution engine written in C++ or Rust that runs Spark's query plans outside the JVM, such as Photon, Apache Gluten's backends or DataFusion Comet.",
+    module: "tungsten-vectorised",
+  },
 } satisfies Record<string, GlossaryEntry>;
