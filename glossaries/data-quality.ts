@@ -176,4 +176,22 @@ export const dataQuality = {
       "A schema change is backward compatible if readers using the new schema can still read data written with the old one; forward compatibility is the reverse.",
     module: "schema-evolution",
   },
+  "data-governance": {
+    term: "Data governance",
+    definition:
+      "Deciding who makes decisions about data, and making sure those decisions are followed: authority, control and shared decision-making over data assets.",
+    module: "ownership",
+  },
+  "data-owner": {
+    term: "Data owner",
+    definition:
+      "The person or, better, team that is accountable for a dataset and approves decisions about it, such as access and breaking changes.",
+    module: "ownership",
+  },
+  "data-steward": {
+    term: "Data steward",
+    definition:
+      "Someone who looks after data day to day: definitions, quality rules and fixing issues. Exact titles vary between frameworks.",
+    module: "ownership",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -8622,11 +8622,12 @@ const dataQuality: Track = {
             "Assign owners, stewards and consumers for six datasets and route four incidents to the right person",
           formats: ["simulation", "checkpoint"],
           concepts: ["Owners and stewards", "Governance that helps", "Domain ownership"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["data-contracts"],
           plain:
             "When nobody owns a dataset, nobody fixes it. Clear ownership says who answers questions, who approves changes and who gets woken when it breaks.",
+          terms: ["data-governance", "data-owner", "data-steward", "data-mesh"],
         },
         {
           slug: "data-slas",
