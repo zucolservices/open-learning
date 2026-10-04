@@ -330,4 +330,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "spark/skew": () => import("./spark/skew"),
   "spark/memory-spill": () => import("./spark/memory-spill"),
   "spark/caching": () => import("./spark/caching"),
+  "spark/files-io": () => import("./spark/files-io"),
 };

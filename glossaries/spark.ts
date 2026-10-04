@@ -373,4 +373,16 @@ export const spark = {
       "How Spark keeps cached data: in memory, on disk or both; as objects or serialised bytes; with one copy or two. Chosen with persist().",
     module: "caching",
   },
+  "partition-pruning": {
+    term: "Partition pruning",
+    definition:
+      "Skipping whole folders of a partitioned table because a filter on the partition column shows they can't contain matching rows.",
+    module: "files-io",
+  },
+  "small-files": {
+    term: "Small files problem",
+    definition:
+      "When a table is stored as huge numbers of tiny files, so listing, opening and closing them takes longer than reading the data.",
+    module: "files-io",
+  },
 } satisfies Record<string, GlossaryEntry>;

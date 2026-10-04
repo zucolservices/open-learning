@@ -7841,11 +7841,12 @@ const spark: Track = {
             "Write a table with too many partitions, find thousands of tiny files, then fix the layout",
           formats: ["simulation", "fix-the-problem", "checkpoint"],
           concepts: ["Splits and file sizes", "Partitioned writes", "Small-file problems"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["partitions"],
           plain:
             "How data sits in files decides how fast Spark can read it. Too many tiny files, or a partition layout that doesn't match your queries, can make a job slow before it does any real work.",
+          terms: ["partition-pruning", "small-files"],
         },
       ],
     },
