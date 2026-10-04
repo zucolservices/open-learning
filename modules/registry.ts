@@ -396,4 +396,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "ai-agents/computer-use": () => import("./ai-agents/computer-use"),
   "ai-agents/planning": () => import("./ai-agents/planning"),
   "ai-agents/reflection": () => import("./ai-agents/reflection"),
+  "ai-agents/errors-recovery": () => import("./ai-agents/errors-recovery"),
 };

@@ -9021,11 +9021,12 @@ const aiAgents: Track = {
             "Inject timeouts, bad inputs and dead ends into an agent's run and choose how it should recover",
           formats: ["fix-the-problem", "checkpoint"],
           concepts: ["Errors as information", "Retries and fallbacks", "Step and budget limits"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["reflection"],
           plain:
             "Tools fail, websites change and models misread results. Robust agents treat errors as information, retry sensibly, try another route, and stop when a step or spending limit is reached instead of looping forever.",
+          terms: ["exponential-backoff", "idempotency-key", "stopping-condition"],
         },
       ],
     },

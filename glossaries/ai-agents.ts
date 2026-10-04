@@ -134,4 +134,16 @@ export const aiAgents = {
       "An agent checking its own work, through tests, tools or a critic, and revising it before continuing. Works best when the check rests on outside evidence.",
     module: "reflection",
   },
+  "exponential-backoff": {
+    term: "Exponential backoff",
+    definition:
+      "Retrying a failed request after waits that double each time (1 s, 2 s, 4 s…), usually with random jitter, so a struggling service can recover.",
+    module: "errors-recovery",
+  },
+  "idempotency-key": {
+    term: "Idempotency key",
+    definition:
+      "A unique id sent with an action, such as a payment, so that if the request is retried the service performs it only once.",
+    module: "errors-recovery",
+  },
 } satisfies Record<string, GlossaryEntry>;
