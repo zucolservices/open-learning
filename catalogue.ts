@@ -8747,11 +8747,12 @@ const dataQuality: Track = {
             "Reconcile a warehouse table against its source by counts, sums and row-level diffs",
           formats: ["simulation", "checkpoint"],
           concepts: ["Counts and control totals", "Row-level diffs", "Tolerances"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["data-tests"],
           plain:
             "After data moves, you need proof nothing was lost or changed on the way. Reconciliation compares source and target, from simple totals to row-by-row differences.",
+          terms: ["reconciliation", "control-total"],
         },
         {
           slug: "late-data",

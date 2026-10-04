@@ -272,4 +272,16 @@ export const dataQuality = {
       "Rules that decide, field by field, which value is kept when matched records are merged, such as most recent or from the most trusted source.",
     module: "deduplication",
   },
+  reconciliation: {
+    term: "Reconciliation",
+    definition:
+      "Proving that a copy of data matches its source, from counts and totals down to row-by-row comparison.",
+    module: "reconciliation",
+  },
+  "control-total": {
+    term: "Control total",
+    definition:
+      "A summary number computed on both sides of a transfer, such as a row count or the sum of an amount column, to check nothing was lost or changed.",
+    module: "reconciliation",
+  },
 } satisfies Record<string, GlossaryEntry>;
