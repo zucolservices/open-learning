@@ -8872,11 +8872,18 @@ const aiAgents: Track = {
             "Step through an agent solving a task one turn at a time and read every tool call and result",
           formats: ["step-through", "checkpoint"],
           concepts: ["Reason and act", "Tool results as observations", "Stopping conditions"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["what-is-an-agent"],
           plain:
             "Every agent runs the same loop: the model looks at the goal and what it knows, picks an action, your code carries it out, and the result goes back to the model. The loop ends when the model says it's finished, or a limit is hit.",
+          terms: [
+            "agent-loop",
+            "observation",
+            "react-pattern",
+            "stopping-condition",
+            "tool-calling",
+          ],
         },
         {
           slug: "workflows-vs-agents",

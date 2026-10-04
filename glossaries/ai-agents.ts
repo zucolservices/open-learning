@@ -20,4 +20,28 @@ export const aiAgents = {
       "How much of a program's next step a model controls, from none (a single call) through routing and tool calling to choosing every step in a loop.",
     module: "what-is-an-agent",
   },
+  "agent-loop": {
+    term: "Agent loop",
+    definition:
+      "The cycle every agent repeats: the model chooses an action, the application carries it out, and the result goes back to the model, until it gives a final answer or a limit is reached.",
+    module: "agent-loop",
+  },
+  observation: {
+    term: "Observation",
+    definition:
+      "The result of an agent's action, such as a tool's output or an error, fed back to the model so it can decide the next step.",
+    module: "agent-loop",
+  },
+  "react-pattern": {
+    term: "ReAct",
+    definition:
+      "Reason + Act: a 2022 approach in which a model alternates written reasoning with actions such as searches, reading each result before continuing. The basis of most agent loops.",
+    module: "agent-loop",
+  },
+  "stopping-condition": {
+    term: "Stopping condition",
+    definition:
+      "A rule that ends an agent's loop: normally the model's final answer, plus safety limits such as a maximum number of turns, time or spend.",
+    module: "agent-loop",
+  },
 } satisfies Record<string, GlossaryEntry>;
