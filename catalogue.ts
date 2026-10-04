@@ -8708,11 +8708,12 @@ const dataQuality: Track = {
           signature: "Run a data incident from first alert to post-incident review",
           formats: ["branching-scenario", "checkpoint"],
           concepts: ["Triage and severity", "Communicating impact", "Backfills and reviews"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["lineage"],
           plain:
             "When bad data reaches users, speed and honesty matter: confirm the problem, tell the people affected, stop the spread, repair the data and learn why it happened.",
+          terms: ["data-incident", "incident-commander", "backfill", "postmortem"],
         },
       ],
     },

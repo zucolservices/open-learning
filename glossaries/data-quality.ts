@@ -248,4 +248,16 @@ export const dataQuality = {
       "An open standard, under the Linux Foundation's LF AI & Data, for reporting lineage as run events that name a job's inputs and outputs.",
     module: "lineage",
   },
+  "data-incident": {
+    term: "Data incident",
+    definition:
+      "Wrong, missing or late data reaching the people or systems that rely on it, handled with the same discipline as an outage.",
+    module: "data-incidents",
+  },
+  backfill: {
+    term: "Backfill",
+    definition:
+      "Re-running a pipeline for past periods to repair or fill them in; safe only when the job is idempotent.",
+    module: "data-incidents",
+  },
 } satisfies Record<string, GlossaryEntry>;
