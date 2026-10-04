@@ -8693,11 +8693,12 @@ const dataQuality: Track = {
             "Trace a broken dashboard back to its source, then see everything else the same fault touched",
           formats: ["build-connect", "checkpoint"],
           concepts: ["Table and column lineage", "Root cause analysis", "Impact analysis"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["data-observability"],
           plain:
             "Lineage is the map of which data feeds which. It answers two urgent questions in an incident: where did this break, and who else is affected?",
+          terms: ["data-lineage", "impact-analysis", "openlineage"],
         },
         {
           slug: "data-incidents",

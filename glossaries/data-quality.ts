@@ -230,4 +230,22 @@ export const dataQuality = {
       "How many standard deviations a value is from the average; monitors often flag values beyond about 3.",
     module: "anomaly-detection",
   },
+  "data-lineage": {
+    term: "Data lineage",
+    definition:
+      "A map of where data comes from and where it goes: which jobs read which datasets and write which others, at table or column level.",
+    module: "lineage",
+  },
+  "impact-analysis": {
+    term: "Impact analysis",
+    definition:
+      "Walking lineage downstream from a change or fault to find every dataset, report and team it affects.",
+    module: "lineage",
+  },
+  openlineage: {
+    term: "OpenLineage",
+    definition:
+      "An open standard, under the Linux Foundation's LF AI & Data, for reporting lineage as run events that name a job's inputs and outputs.",
+    module: "lineage",
+  },
 } satisfies Record<string, GlossaryEntry>;
