@@ -391,4 +391,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "ai-agents/what-is-an-agent": () => import("./ai-agents/what-is-an-agent"),
   "ai-agents/agent-loop": () => import("./ai-agents/agent-loop"),
   "ai-agents/workflows-vs-agents": () => import("./ai-agents/workflows-vs-agents"),
+  "ai-agents/tool-design": () => import("./ai-agents/tool-design"),
 };

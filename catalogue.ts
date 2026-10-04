@@ -8930,11 +8930,12 @@ const aiAgents: Track = {
             "Inputs, outputs and errors",
             "Fewer, better tools",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["agent-loop"],
           plain:
             "A model only knows a tool from its name, description and inputs. Vague descriptions, confusing parameters and unhelpful error messages cause most agent mistakes, so tools deserve the same care as an interface for people.",
+          terms: ["aci", "tool-definition", "json-schema", "tool-calling"],
         },
         {
           slug: "mcp",

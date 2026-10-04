@@ -62,4 +62,16 @@ export const aiAgents = {
       "A loop in which one model call produces work and another critiques it against criteria, repeating until the work passes.",
     module: "workflows-vs-agents",
   },
+  aci: {
+    term: "Agent-computer interface (ACI)",
+    definition:
+      "Everything an agent sees of its tools: names, descriptions, inputs, outputs and error messages. Like a user interface, but designed for a model.",
+    module: "tool-design",
+  },
+  "tool-definition": {
+    term: "Tool definition",
+    definition:
+      "The description of a tool sent to a model: a name, a plain-language description and a JSON Schema for its inputs.",
+    module: "tool-design",
+  },
 } satisfies Record<string, GlossaryEntry>;
