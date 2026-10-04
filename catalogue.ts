@@ -7149,11 +7149,12 @@ const enterprisePatterns: Track = {
           signature: "Connect a billing system four ways and break each with the same change",
           formats: ["simulation", "checkpoint"],
           concepts: ["File transfer", "Shared database", "Remote calls", "Messaging"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["why-enterprise"],
           plain:
             "Systems can share data by exchanging files, reading the same database, calling each other, or sending messages. Each trades simplicity against how tightly the systems are tied together.",
+          terms: ["eip", "integration-style", "messaging", "coupling", "point-to-point"],
         },
         {
           slug: "messaging-patterns",

@@ -210,4 +210,29 @@ export const enterprisePatterns = {
       'An automatic reaction written as "whenever this happens, do that": an event triggers a command somewhere else.',
     module: "event-storming",
   },
+  eip: {
+    term: "Enterprise Integration Patterns",
+    definition:
+      "Gregor Hohpe and Bobby Woolf's 2003 book cataloguing 65 patterns for connecting systems, mostly through messaging. Its names are still the standard vocabulary for integration.",
+    module: "integration-styles",
+  },
+  "integration-style": {
+    term: "Integration style",
+    definition:
+      "One of four basic ways for systems to share data or behaviour: file transfer, shared database, remote procedure invocation (calls) or messaging.",
+    module: "integration-styles",
+  },
+  messaging: {
+    term: "Messaging",
+    definition:
+      "Systems exchanging small packets of data (messages) through a messaging system that stores and delivers them, so sender and receiver needn't be available at the same time.",
+    analogy: "Dropping a note in someone's letterbox rather than phoning them.",
+    module: "integration-styles",
+  },
+  coupling: {
+    term: "Coupling",
+    definition:
+      "How much one system depends on another: tightly coupled systems break or must change together; loosely coupled ones can change independently.",
+    module: "integration-styles",
+  },
 } satisfies Record<string, GlossaryEntry>;
