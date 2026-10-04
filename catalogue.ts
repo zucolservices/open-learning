@@ -9770,11 +9770,19 @@ const llmEvaluation: Track = {
             "Embedding similarity",
             "Why similarity isn't correctness",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["code-checks"],
           plain:
             "Older metrics compare an answer with a reference by counting shared words; newer ones compare meanings with embeddings. Both are cheap, but a correct answer worded differently can score low and a fluent wrong one high.",
+          terms: [
+            "similarity-metric",
+            "reference-answer",
+            "bleu",
+            "rouge",
+            "embedding",
+            "cosine-similarity",
+          ],
         },
         {
           slug: "llm-judge",

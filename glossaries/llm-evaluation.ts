@@ -56,4 +56,27 @@ export const llmEvaluation = {
       "The chance that at least one of k attempts passes the tests, used for generated code. pass@1 is the chance a single attempt passes.",
     module: "code-checks",
   },
+  "similarity-metric": {
+    term: "Similarity metric",
+    definition:
+      "A score for how closely an answer resembles a reference answer, by shared words or by meaning. It measures resemblance, not correctness.",
+    module: "similarity-metrics",
+  },
+  "reference-answer": {
+    term: "Reference answer",
+    definition: "A known good answer that outputs are compared against.",
+    module: "similarity-metrics",
+  },
+  bleu: {
+    term: "BLEU",
+    definition:
+      "A 2002 machine-translation metric that counts word sequences an output shares with a reference, penalising outputs that are too short.",
+    module: "similarity-metrics",
+  },
+  rouge: {
+    term: "ROUGE",
+    definition:
+      "A 2004 summarisation metric family that measures how much of a reference's wording appears in an output.",
+    module: "similarity-metrics",
+  },
 } satisfies Record<string, GlossaryEntry>;
