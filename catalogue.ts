@@ -102,6 +102,7 @@ export interface Track {
     | "ember"
     | "timber"
     | "assay"
+    | "orbit"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -8828,6 +8829,417 @@ const dataQuality: Track = {
   ],
 };
 
+const aiAgents: Track = {
+  slug: "ai-agents",
+  title: "AI Agents",
+  area: "AI & machine learning",
+  category: "ai-ml",
+  tagline: "Tools, planning, memory and guardrails.",
+  description:
+    "How AI agents work and how to build ones you can trust: the agent loop, workflows versus agents, tool design, the Model Context Protocol, code and computer use, planning, reflection, error recovery, memory, long-running context, durable state, multi-agent systems, agent-to-agent protocols, frameworks and managed platforms, guardrails, prompt injection, humans in the loop, evaluation, and cost and tracing. Vendor-neutral, covering open-source frameworks and the agent services of OpenAI, Anthropic, Google, AWS and Microsoft. By the end you can decide when an agent is the right tool, design one, and keep it safe and affordable in production.",
+  accent: "orbit",
+  chapters: [
+    {
+      slug: "big-picture",
+      title: "The big picture",
+      summary: "What makes a program an agent.",
+      modules: [
+        {
+          slug: "what-is-an-agent",
+          title: "What an agent is",
+          summary: "A model in a loop, with tools.",
+          minutes: 20,
+          signature:
+            "Follow one request as a chatbot, a workflow and an agent, and see who decides each step",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "A model, tools and a loop",
+            "Autonomy is a dial",
+            "When an agent is worth it",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "A chatbot answers once. An agent is given a goal and works towards it on its own: it decides what to do next, uses tools such as search or a calendar, looks at the result and keeps going until it's done.",
+        },
+        {
+          slug: "agent-loop",
+          title: "The agent loop",
+          summary: "Think, act, observe, repeat.",
+          minutes: 20,
+          signature:
+            "Step through an agent solving a task one turn at a time and read every tool call and result",
+          formats: ["step-through", "checkpoint"],
+          concepts: ["Reason and act", "Tool results as observations", "Stopping conditions"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["what-is-an-agent"],
+          plain:
+            "Every agent runs the same loop: the model looks at the goal and what it knows, picks an action, your code carries it out, and the result goes back to the model. The loop ends when the model says it's finished, or a limit is hit.",
+        },
+        {
+          slug: "workflows-vs-agents",
+          title: "Workflows or agents?",
+          summary: "Fixed steps or free choice.",
+          minutes: 25,
+          signature:
+            "Match six business tasks to chaining, routing, parallel, orchestrator and evaluator patterns, or a full agent",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Prompt chaining and routing",
+            "Parallel and orchestrator-workers",
+            "Start simple",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["agent-loop"],
+          plain:
+            "Many 'agents' are better built as workflows, where your code fixes the steps and the model fills each one in. Workflows are cheaper and more predictable; agents are for tasks where nobody can know the steps in advance.",
+        },
+      ],
+    },
+    {
+      slug: "tools",
+      title: "Tools",
+      summary: "How agents act on the world.",
+      modules: [
+        {
+          slug: "tool-design",
+          title: "Designing tools",
+          summary: "Names, descriptions and errors the model can use.",
+          minutes: 25,
+          signature: "Rewrite three badly designed tools and watch the agent's success rate change",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Clear names and descriptions",
+            "Inputs, outputs and errors",
+            "Fewer, better tools",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["agent-loop"],
+          plain:
+            "A model only knows a tool from its name, description and inputs. Vague descriptions, confusing parameters and unhelpful error messages cause most agent mistakes, so tools deserve the same care as an interface for people.",
+        },
+        {
+          slug: "mcp",
+          title: "Model Context Protocol",
+          summary: "One plug for many tools.",
+          minutes: 25,
+          signature:
+            "Connect one assistant to three MCP servers and trace a request through host, client and server",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "Hosts, clients and servers",
+            "Tools, resources and prompts",
+            "Local and remote servers",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["tool-design"],
+          plain:
+            "Every app used to wire up its own tool integrations. The Model Context Protocol is an open standard, like a universal plug: a tool provider writes one MCP server, and any compatible assistant can use it.",
+        },
+        {
+          slug: "computer-use",
+          title: "Code, browsers and computers",
+          summary: "Agents that type, click and run code.",
+          minutes: 25,
+          signature:
+            "Give an agent a code sandbox, a browser and a desktop, and compare speed, reliability and risk on one task",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Code execution", "Browser and computer use", "Sandboxes"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["tool-design"],
+          plain:
+            "Some agents act through general-purpose tools: they write and run code, browse websites or look at a screen and move the mouse. These tools are very flexible but slower and riskier, so they run in isolated sandboxes.",
+        },
+      ],
+    },
+    {
+      slug: "planning",
+      title: "Planning and reasoning",
+      summary: "Breaking goals into steps.",
+      modules: [
+        {
+          slug: "planning",
+          title: "Planning and decomposition",
+          summary: "Plan first, or decide as you go.",
+          minutes: 25,
+          signature:
+            "Run the same research task with step-by-step reasoning and with a plan-then-execute agent, and compare",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Decomposing a goal", "Plan and execute", "Re-planning"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["agent-loop"],
+          plain:
+            "Big goals need breaking into steps. Some agents decide one step at a time; others write a plan first and then carry it out, revising it when something unexpected happens.",
+        },
+        {
+          slug: "reflection",
+          title: "Reflection and self-correction",
+          summary: "Check the work, then improve it.",
+          minutes: 20,
+          signature:
+            "Add a critic to an agent's loop and watch its draft improve, or go round in circles",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Evaluator and optimiser", "Feedback from tools", "Knowing when to stop"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["planning"],
+          plain:
+            "Agents get better results when they check their own work: running the tests, re-reading the question or asking a second model to critique. Feedback from the real world, like a failing test, is worth more than the model's own opinion.",
+        },
+        {
+          slug: "errors-recovery",
+          title: "Errors, retries and limits",
+          summary: "When a step goes wrong.",
+          minutes: 20,
+          signature:
+            "Inject timeouts, bad inputs and dead ends into an agent's run and choose how it should recover",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: ["Errors as information", "Retries and fallbacks", "Step and budget limits"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["reflection"],
+          plain:
+            "Tools fail, websites change and models misread results. Robust agents treat errors as information, retry sensibly, try another route, and stop when a step or spending limit is reached instead of looping forever.",
+        },
+      ],
+    },
+    {
+      slug: "memory",
+      title: "Memory and context",
+      summary: "What an agent remembers.",
+      modules: [
+        {
+          slug: "agent-memory",
+          title: "Memory",
+          summary: "Short-term, long-term and shared.",
+          minutes: 25,
+          signature:
+            "Give an assistant working, episodic and semantic memory and see what it remembers a week later",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "The context window as working memory",
+            "Long-term memory stores",
+            "What to remember and forget",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["agent-loop"],
+          plain:
+            "A model remembers nothing between calls; everything it knows about the task must be in its context. Agents add memory by saving notes, facts and past episodes somewhere and loading the useful ones back in.",
+        },
+        {
+          slug: "context-management",
+          title: "Managing long tasks",
+          summary: "Keeping the context window useful.",
+          minutes: 25,
+          signature:
+            "Run a 200-step task and choose when to summarise, take notes or hand work to a sub-agent",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Context fills up", "Compaction and notes", "Sub-agents for isolation"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["agent-memory"],
+          plain:
+            "Long tasks produce more text than fits in a model's context, and quality drops as it fills. Agents keep going by summarising old turns, writing notes to files and giving self-contained jobs to helper agents with fresh contexts.",
+        },
+        {
+          slug: "durable-agents",
+          title: "State, pauses and resumption",
+          summary: "Agents that survive restarts.",
+          minutes: 20,
+          signature:
+            "Crash an agent halfway through a refund and resume it from a checkpoint without paying twice",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Saving state", "Checkpoints and replay", "Pausing for approval"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["context-management"],
+          plain:
+            "Real tasks can take minutes or days and must survive crashes, deploys and waiting for a person. Saving the agent's state after each step lets it pause, resume and avoid repeating actions that already happened.",
+        },
+      ],
+    },
+    {
+      slug: "multi-agent",
+      title: "Many agents",
+      summary: "Teams, protocols and frameworks.",
+      modules: [
+        {
+          slug: "multi-agent",
+          title: "Multi-agent systems",
+          summary: "When one agent isn't enough.",
+          minutes: 25,
+          signature:
+            "Split a research job between an orchestrator and three workers, and compare speed, cost and quality with one agent",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Orchestrator and sub-agents", "Handoffs", "The cost of coordination"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["context-management"],
+          plain:
+            "Several agents can work in parallel or specialise, with one coordinating. That can be faster and better for broad tasks, but it multiplies cost and adds new ways to fail, so one agent is often the right answer.",
+        },
+        {
+          slug: "agent-protocols",
+          title: "Agents talking to agents",
+          summary: "Standards for cooperation.",
+          minutes: 20,
+          signature:
+            "Have a travel agent discover and delegate to a hotel agent from another company",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "Agent cards and discovery",
+            "Tasks between agents",
+            "MCP versus agent-to-agent",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["mcp", "multi-agent"],
+          plain:
+            "When agents from different companies need to cooperate, they need a shared language. Agent-to-agent protocols let one agent find another, learn what it can do and hand it a task, much as MCP standardises tools.",
+        },
+        {
+          slug: "agent-frameworks",
+          title: "Frameworks and platforms",
+          summary: "Build it, or use a kit.",
+          minutes: 20,
+          signature:
+            "Map agent frameworks and cloud agent services to the jobs they handle for you",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "Agent SDKs and graph frameworks",
+            "Managed agent platforms",
+            "Choosing and staying portable",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["multi-agent"],
+          plain:
+            "You can write an agent loop in a few dozen lines, or use a framework that adds tools, memory, tracing and multi-agent support. Cloud providers also run agents for you. Each saves work and adds dependence.",
+        },
+      ],
+    },
+    {
+      slug: "production",
+      title: "Safety and production",
+      summary: "Trustworthy agents in the real world.",
+      modules: [
+        {
+          slug: "guardrails",
+          title: "Guardrails and permissions",
+          summary: "Limit what can go wrong.",
+          minutes: 25,
+          signature:
+            "Set permissions for an email agent and see which of five risky actions it can still take",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Least privilege", "Approvals for risky actions", "Input and output checks"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["computer-use"],
+          plain:
+            "An agent can only do damage with the access you give it. Good designs grant the fewest permissions needed, ask a person before irreversible actions, and check inputs and outputs automatically.",
+        },
+        {
+          slug: "agent-security",
+          title: "Prompt injection and agents",
+          summary: "When the data gives orders.",
+          minutes: 25,
+          signature:
+            "Send an agent to read a web page with hidden instructions and find the combination that leaks data",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Indirect prompt injection",
+            "Private data, untrusted content, a way out",
+            "Defences that work",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["guardrails"],
+          plain:
+            "Agents read emails, web pages and documents written by strangers, and a model can't reliably tell data from instructions. Hidden text can hijack an agent, so the defence is limiting what a hijacked agent could do.",
+        },
+        {
+          slug: "human-in-the-loop",
+          title: "Humans in the loop",
+          summary: "Who decides, and when.",
+          minutes: 20,
+          signature:
+            "Choose where an expense agent asks a person, and balance speed against mistakes over a month",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Approval and escalation", "Levels of autonomy", "Designing the handover"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["guardrails"],
+          plain:
+            "Most useful agents work with people, not instead of them. Deciding which steps need approval, when to escalate and how to show the person what the agent did is central to trusting it.",
+        },
+        {
+          slug: "agent-evals",
+          title: "Evaluating agents",
+          summary: "Did it work, and how?",
+          minutes: 25,
+          signature:
+            "Score five agent runs on outcome, path and cost, and see why one success rate isn't enough",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Outcome versus trajectory",
+            "Benchmarks for agents",
+            "Reliability over many runs",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["errors-recovery"],
+          plain:
+            "An agent can reach the right answer by a wasteful or dangerous route, or succeed once and fail the next time. Evaluating agents means checking outcomes, the steps taken, cost and consistency across many runs.",
+        },
+        {
+          slug: "agent-ops",
+          title: "Cost, latency and tracing",
+          summary: "Running agents day to day.",
+          minutes: 20,
+          signature:
+            "Trace a slow, expensive agent run step by step and cut its cost without hurting results",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: ["Tokens per task", "Tracing agent runs", "Caching and model choice"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["agent-evals"],
+          plain:
+            "Agents make many model calls per task, so cost and delay add up quickly. Tracing every step shows where time and tokens go, and techniques like caching, smaller models for easy steps and fewer loops bring them down.",
+        },
+      ],
+    },
+    {
+      slug: "capstone",
+      title: "Capstone",
+      summary: "Everything together.",
+      modules: [
+        {
+          slug: "capstone-agent",
+          title: "Capstone: the support agent",
+          summary: "Design, break and fix a real agent.",
+          minutes: 40,
+          signature:
+            "Design a customer-support agent, watch it fail in five realistic ways and fix each with what you've learned",
+          formats: ["branching-scenario", "fix-the-problem", "checkpoint"],
+          concepts: ["Applying agent design"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["guardrails", "agent-evals", "human-in-the-loop"],
+          plain:
+            "Everything in this track in one project: choose workflow or agent, design the tools, add memory and guardrails, keep a person in the loop and prove it works.",
+        },
+      ],
+    },
+  ],
+};
+
 export const tracks: Track[] = [
   lakehouse,
   systemDesign,
@@ -8845,6 +9257,7 @@ export const tracks: Track[] = [
   spark,
   dataModelling,
   dataQuality,
+  aiAgents,
   playground,
 ];
 
@@ -8920,7 +9333,7 @@ export const categories: Category[] = [
         slug: "rag-systems",
         blurb: "Grounding models in your documents: retrieval, chunking and ranking.",
       },
-      { title: "AI Agents", blurb: "Tools, planning, memory and guardrails." },
+      { title: "AI Agents", slug: "ai-agents", blurb: "Tools, planning, memory and guardrails." },
       { title: "Voice AI", blurb: "Speech in, speech out, in real time." },
       { title: "LLM Evaluation", blurb: "Measuring quality, safety and regressions." },
       { title: "Applied ML", blurb: "Classic machine learning, from features to deployment." },

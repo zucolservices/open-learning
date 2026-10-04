@@ -267,6 +267,18 @@
   --bg-glow: rgb(52 211 153 / 0.1);
 }
 
+[data-track="orbit"] {
+  --accent: #6d28d9;
+  --accent-soft: rgb(109 40 217 / 0.1);
+  --bg-glow: rgb(109 40 217 / 0.12);
+}
+[data-theme="dark"] [data-track="orbit"],
+[data-theme="dark"][data-track="orbit"] {
+  --accent: #a78bfa;
+  --accent-soft: rgb(167 139 250 / 0.14);
+  --bg-glow: rgb(167 139 250 / 0.1);
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);

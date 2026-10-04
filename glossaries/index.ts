@@ -21,6 +21,7 @@ import { enterprisePatterns } from "./enterprise-patterns";
 import { spark } from "./spark";
 import { dataModelling } from "./data-modelling";
 import { dataQuality } from "./data-quality";
+import { aiAgents } from "./ai-agents";
 import { shared } from "./shared";
 import type { GlossaryEntry } from "./types";
 
@@ -44,6 +45,7 @@ export const trackGlossaries: Record<string, Record<string, GlossaryEntry>> = {
   spark,
   "data-modelling": dataModelling,
   "data-quality": dataQuality,
+  "ai-agents": aiAgents,
 };
 
 export type TermId =
@@ -63,7 +65,8 @@ export type TermId =
   | keyof typeof enterprisePatterns
   | keyof typeof spark
   | keyof typeof dataModelling
-  | keyof typeof dataQuality;
+  | keyof typeof dataQuality
+  | keyof typeof aiAgents;
 
 export interface ResolvedTerm {
   id: string;

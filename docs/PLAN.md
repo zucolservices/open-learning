@@ -651,6 +651,41 @@ Data engineering area, fifth track (started 2026-10-04). 21 modules in 6 chapter
 | **6** | **Capstone**                       |                                     |                                     |
 | 21    | Capstone: the wrong revenue number | The wrong revenue number            | Branching scenario, Fix the problem |
 
+## AI Agents: curriculum
+
+AI & machine learning area, third track (started 2026-10-04). 21 modules in 7 chapters, about 8 hours. Accent: "orbit" violet (`[data-track="orbit"]`). Glossary: `glossaries/ai-agents.ts`. Vendor-neutral: open-source frameworks (LangGraph, OpenAI Agents SDK, Claude Agent SDK, Google ADK, Microsoft Agent Framework, CrewAI and others), open protocols (MCP, A2A) and the managed agent services of AWS, Google Cloud and Microsoft. Builds on LLM Foundations (tool calling, prompt injection) and RAG Systems (agentic RAG) rather than repeating them. Built on one branch (`track/ai-agents`), one commit per module, merged once at the end. Each module is fact-checked on its own before it is built; card illustrations and a showcase follow the last module.
+
+| #     | Module                         | Centrepiece                        | Key formats                         |
+| ----- | ------------------------------ | ---------------------------------- | ----------------------------------- |
+| **1** | **The big picture**            |                                    |                                     |
+| 1     | What an agent is               | Chatbot, workflow or agent         | Scroll story                        |
+| 2     | The agent loop                 | One task, turn by turn             | Step through                        |
+| 3     | Workflows or agents?           | Match tasks to patterns            | Build connect                       |
+| **2** | **Tools**                      |                                    |                                     |
+| 4     | Designing tools                | Fix three bad tools                | Fix the problem                     |
+| 5     | Model Context Protocol         | Host, client and server            | Animated infographic                |
+| 6     | Code, browsers and computers   | Sandbox, browser or desktop        | Simulation                          |
+| **3** | **Planning and reasoning**     |                                    |                                     |
+| 7     | Planning and decomposition     | Plan first or as you go            | Simulation                          |
+| 8     | Reflection and self-correction | Add a critic                       | Simulation                          |
+| 9     | Errors, retries and limits     | Inject failures, choose recoveries | Fix the problem                     |
+| **4** | **Memory and context**         |                                    |                                     |
+| 10    | Memory                         | Three kinds of memory              | Simulation                          |
+| 11    | Managing long tasks            | A 200-step task                    | Simulation                          |
+| 12    | State, pauses and resumption   | Crash and resume                   | Simulation                          |
+| **5** | **Many agents**                |                                    |                                     |
+| 13    | Multi-agent systems            | Orchestrator and workers           | Simulation                          |
+| 14    | Agents talking to agents       | Agent cards and delegation         | Animated infographic                |
+| 15    | Frameworks and platforms       | The framework map                  | Animated infographic                |
+| **6** | **Safety and production**      |                                    |                                     |
+| 16    | Guardrails and permissions     | Permissions for an email agent     | Simulation                          |
+| 17    | Prompt injection and agents    | The poisoned web page              | Fix the problem                     |
+| 18    | Humans in the loop             | Where to ask a person              | Simulation                          |
+| 19    | Evaluating agents              | Outcome, path and cost             | Simulation                          |
+| 20    | Cost, latency and tracing      | Trace and trim a run               | Fix the problem                     |
+| **7** | **Capstone**                   |                                    |                                     |
+| 21    | Capstone: the support agent    | Five failures, five fixes          | Branching scenario, Fix the problem |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -674,6 +709,7 @@ Data engineering area, fifth track (started 2026-10-04). 21 modules in 6 chapter
 | 4n. Apache Spark           | Data engineering, third track, 21 modules                                               | Live: all 21 modules (2026-10-04)                                       |
 | 4o. Data Modelling         | Data engineering, fourth track, 21 modules                                              | Live: all 21 modules (2026-10-04)                                       |
 | 4p. Data Quality           | Data engineering, fifth track, 21 modules                                               | Live: all 21 modules (2026-10-04)                                       |
+| 4q. AI Agents              | AI & machine learning, third track, 21 modules                                          | In progress: 0 of 21 modules                                            |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
