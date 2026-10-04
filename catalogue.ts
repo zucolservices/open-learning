@@ -7634,11 +7634,12 @@ const spark: Track = {
             "Write a query in SQL and as DataFrame code and see that both produce the same plan",
           formats: ["simulation", "checkpoint"],
           concepts: ["SQL and DataFrames", "Tables, views and catalogs", "Same engine underneath"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["rdds-dataframes"],
           plain:
             "You can talk to Spark in SQL or in Python, Scala or R DataFrame code. Both end up as the same plan, run by the same engine, so choose whichever is clearer for the task.",
+          terms: ["spark-sql", "dataframe", "temp-view", "catalog", "ansi-mode"],
         },
       ],
     },

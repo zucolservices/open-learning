@@ -320,4 +320,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "spark/rdds-dataframes": () => import("./spark/rdds-dataframes"),
   "spark/lazy-evaluation": () => import("./spark/lazy-evaluation"),
   "spark/partitions": () => import("./spark/partitions"),
+  "spark/spark-sql": () => import("./spark/spark-sql"),
 };

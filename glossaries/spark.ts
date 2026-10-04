@@ -156,4 +156,22 @@ export const spark = {
       "A DataFrame operation that reshuffles all rows into a new number of evenly balanced partitions, optionally by key. It can increase or decrease the count, at the cost of a shuffle.",
     module: "partitions",
   },
+  "spark-sql": {
+    term: "Spark SQL",
+    definition:
+      "Spark's module for structured data. It runs both SQL queries and DataFrame code through the same optimiser and execution engine.",
+    module: "spark-sql",
+  },
+  "temp-view": {
+    term: "Temporary view",
+    definition:
+      "A name given to a DataFrame so it can be queried with SQL. It lasts only for the current Spark session and stores no data.",
+    module: "spark-sql",
+  },
+  "ansi-mode": {
+    term: "ANSI mode",
+    definition:
+      "Spark SQL's standards-following behaviour, on by default since Spark 4.0: invalid input such as a bad cast or integer overflow raises an error instead of silently returning NULL or a wrong number.",
+    module: "spark-sql",
+  },
 } satisfies Record<string, GlossaryEntry>;
