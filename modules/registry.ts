@@ -430,4 +430,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "llm-evaluation/why-evals": () => import("./llm-evaluation/why-evals"),
   "llm-evaluation/success-criteria": () => import("./llm-evaluation/success-criteria"),
   "llm-evaluation/eval-datasets": () => import("./llm-evaluation/eval-datasets"),
+  "llm-evaluation/code-checks": () => import("./llm-evaluation/code-checks"),
 };

@@ -44,4 +44,16 @@ export const llmEvaluation = {
       "Test cases kept back and never used while tuning prompts or models, so the score on them reflects how the system does on new questions.",
     module: "eval-datasets",
   },
+  "exact-match": {
+    term: "Exact match",
+    definition:
+      "A grader that passes an answer only if it equals the reference answer, usually after normalising case, punctuation and spacing.",
+    module: "code-checks",
+  },
+  "pass-at-k": {
+    term: "pass@k",
+    definition:
+      "The chance that at least one of k attempts passes the tests, used for generated code. pass@1 is the chance a single attempt passes.",
+    module: "code-checks",
+  },
 } satisfies Record<string, GlossaryEntry>;

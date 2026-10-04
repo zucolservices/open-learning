@@ -9750,11 +9750,12 @@ const llmEvaluation: Track = {
             "Format and schema checks",
             "Running the code: pass@k",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["eval-datasets"],
           plain:
             "Whenever a program can check an answer, use one: is the number right, is the output valid JSON, does the generated code pass its tests? Code checks are fast, cheap and consistent, but only work when 'correct' is precise.",
+          terms: ["exact-match", "pass-at-k", "json-schema", "unit-test"],
         },
         {
           slug: "similarity-metrics",
