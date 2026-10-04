@@ -7809,11 +7809,12 @@ const spark: Track = {
             "Spill to disk",
             "Common out-of-memory causes",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["shuffle"],
           plain:
             "Each executor has a fixed amount of memory shared between running work and cached data. When work doesn't fit, Spark writes it to disk, which is slow but survivable; when even that fails, the job dies with an out-of-memory error.",
+          terms: ["execution-memory", "storage-memory", "spill", "memory-overhead"],
         },
         {
           slug: "caching",

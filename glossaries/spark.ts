@@ -337,4 +337,28 @@ export const spark = {
       "Adding a random number to a skewed key so its rows spread over several partitions, then combining the pieces afterwards.",
     module: "skew",
   },
+  "execution-memory": {
+    term: "Execution memory",
+    definition:
+      "The part of an executor's memory used for the work in hand: shuffles, joins, sorts and aggregations. Shared with storage memory in one pool.",
+    module: "memory-spill",
+  },
+  "storage-memory": {
+    term: "Storage memory",
+    definition:
+      "The part of an executor's memory used for cached data and broadcast variables. Execution can evict it, but only down to a protected floor.",
+    module: "memory-spill",
+  },
+  spill: {
+    term: "Spill",
+    definition:
+      "When a task runs short of execution memory and writes part of its working data to local disk, to read back later. Slower, but the task finishes.",
+    module: "memory-spill",
+  },
+  "memory-overhead": {
+    term: "Memory overhead",
+    definition:
+      "Memory an executor's container gets on top of the Java heap, for native and other non-heap use. By default 10% of executor memory, at least 384 MB.",
+    module: "memory-spill",
+  },
 } satisfies Record<string, GlossaryEntry>;
