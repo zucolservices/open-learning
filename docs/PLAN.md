@@ -638,7 +638,7 @@ Data engineering area, fourth track (started 2026-10-04). 21 modules in 6 chapte
 | 4l. Database Internals     | Architecture, third track, 21 modules                                                   | Live: all 21 modules (2026-10-04)                                       |
 | 4m. Enterprise Patterns    | Architecture, fourth track, 21 modules                                                  | Live: all 21 modules (2026-10-04)                                       |
 | 4n. Apache Spark           | Data engineering, third track, 21 modules                                               | Live: all 21 modules (2026-10-04)                                       |
-| 4o. Data Modelling         | Data engineering, fourth track, 21 modules                                              | In progress: 2 of 21 modules                                            |
+| 4o. Data Modelling         | Data engineering, fourth track, 21 modules                                              | In progress: 3 of 21 modules                                            |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

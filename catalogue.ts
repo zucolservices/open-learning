@@ -8039,11 +8039,21 @@ const dataModelling: Track = {
             "Natural and surrogate keys",
             "Cardinality and bridge tables",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["model-levels"],
           plain:
             "Every table needs a way to identify each row, and a way to point at rows in other tables. Keys do both, and the kind of relationship (one-to-many, many-to-many) decides how tables connect.",
+          terms: [
+            "primary-key",
+            "foreign-key",
+            "referential-integrity",
+            "candidate-key",
+            "natural-key",
+            "surrogate-key",
+            "junction-table",
+            "composite-key",
+          ],
         },
         {
           slug: "normalisation",

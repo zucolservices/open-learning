@@ -338,4 +338,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "spark/capstone-spark": () => import("./spark/capstone-spark"),
   "data-modelling/why-model": () => import("./data-modelling/why-model"),
   "data-modelling/model-levels": () => import("./data-modelling/model-levels"),
+  "data-modelling/keys-relationships": () => import("./data-modelling/keys-relationships"),
 };
