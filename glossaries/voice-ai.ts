@@ -187,4 +187,16 @@ export const voiceAi = {
       "Able to listen and speak at the same time, like a phone call rather than a walkie-talkie; full-duplex voice models can overlap, backchannel and be interrupted naturally.",
     module: "speech-to-speech",
   },
+  "barge-in": {
+    term: "Barge-in",
+    definition:
+      "A caller speaking while the system is talking, to interrupt it; good voice systems stop quickly and listen.",
+    module: "interruptions",
+  },
+  backchannel: {
+    term: "Backchannel",
+    definition:
+      "A short listener sound such as “mm-hm” or “yeah” that signals “I'm following, carry on” rather than an attempt to take a turn.",
+    module: "interruptions",
+  },
 } satisfies Record<string, GlossaryEntry>;

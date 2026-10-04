@@ -9521,11 +9521,12 @@ const voiceAi: Track = {
             "Interrupt a talking assistant and see what it heard, what it said and what it thinks it said",
           formats: ["simulation", "checkpoint"],
           concepts: ["Detecting barge-in", "Stopping speech fast", "Keeping the transcript true"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["turn-taking"],
           plain:
             "People interrupt: to correct, to hurry along or to say 'yes, got it'. A voice agent must stop speaking quickly, tell real interruptions from background noise and remember only the part of its reply that was actually heard.",
+          terms: ["barge-in", "backchannel", "vad"],
         },
         {
           slug: "voice-transport",
