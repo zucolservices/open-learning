@@ -355,4 +355,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-modelling/nosql-modelling": () => import("./data-modelling/nosql-modelling"),
   "data-modelling/graph-modelling": () => import("./data-modelling/graph-modelling"),
   "data-modelling/modelling-time": () => import("./data-modelling/modelling-time"),
+  "data-modelling/evolving-models": () => import("./data-modelling/evolving-models"),
 };

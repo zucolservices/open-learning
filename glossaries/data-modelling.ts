@@ -484,4 +484,28 @@ export const dataModelling = {
       "Keeping both valid time and transaction time, so you can ask what was true at a date and what the system believed at a date.",
     module: "modelling-time",
   },
+  "model-contract": {
+    term: "Model contract",
+    definition:
+      "A declared promise about a model's shape (column names and data types) that the build checks, failing if the model no longer matches.",
+    module: "evolving-models",
+  },
+  "model-version": {
+    term: "Model version",
+    definition:
+      "A new version of a model that can run alongside the old one, so breaking changes can be adopted gradually.",
+    module: "evolving-models",
+  },
+  deprecation: {
+    term: "Deprecation",
+    definition:
+      "Announcing that something will be removed by a given date, so its users have time to move.",
+    module: "evolving-models",
+  },
+  "data-catalog": {
+    term: "Data catalog",
+    definition:
+      "A searchable inventory of datasets with their descriptions, owners and lineage, such as Unity Catalog, DataHub or OpenMetadata.",
+    module: "evolving-models",
+  },
 } satisfies Record<string, GlossaryEntry>;

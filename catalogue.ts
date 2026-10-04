@@ -8392,11 +8392,12 @@ const dataModelling: Track = {
             "Rename a column used by twelve reports, safely, with conventions, docs and deprecation",
           formats: ["fix-the-problem", "checkpoint"],
           concepts: ["Naming conventions", "Documentation and catalogs", "Changing models safely"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["dbt-layers"],
           plain:
             "A model is used by many people for years. Consistent names, written definitions and a careful way to change things keep it understandable and stop changes from silently breaking reports.",
+          terms: ["model-contract", "model-version", "deprecation", "data-catalog"],
         },
       ],
     },
