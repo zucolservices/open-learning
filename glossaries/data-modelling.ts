@@ -115,4 +115,33 @@ export const dataModelling = {
     definition: "A key made of more than one column, such as (order_id, product_no).",
     module: "keys-relationships",
   },
+  normalisation: {
+    term: "Normalisation",
+    definition:
+      "Arranging tables so each fact is stored in one place, following a series of normal forms, to stop repeated data drifting out of step.",
+    module: "normalisation",
+  },
+  "normal-form": {
+    term: "Normal form",
+    definition:
+      "One of a series of rules a table can satisfy (first, second, third, Boyce–Codd…), each removing a kind of redundancy.",
+    module: "normalisation",
+  },
+  "data-anomaly": {
+    term: "Anomaly (update, insert, delete)",
+    definition:
+      "A problem caused by redundant data: a repeated fact updated in only some places, a fact that can't be stored on its own, or one lost when another is deleted.",
+    module: "normalisation",
+  },
+  "functional-dependency": {
+    term: "Functional dependency",
+    definition: "When knowing one value fixes another: knowing the product tells you its price.",
+    module: "normalisation",
+  },
+  bcnf: {
+    term: "Boyce–Codd normal form (BCNF)",
+    definition:
+      "A slightly stricter third normal form (1974): every column that determines another must be a candidate key.",
+    module: "normalisation",
+  },
 } satisfies Record<string, GlossaryEntry>;

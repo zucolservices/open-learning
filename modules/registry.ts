@@ -339,4 +339,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-modelling/why-model": () => import("./data-modelling/why-model"),
   "data-modelling/model-levels": () => import("./data-modelling/model-levels"),
   "data-modelling/keys-relationships": () => import("./data-modelling/keys-relationships"),
+  "data-modelling/normalisation": () => import("./data-modelling/normalisation"),
 };

@@ -8068,11 +8068,12 @@ const dataModelling: Track = {
             "First to third normal form",
             "When to stop",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["keys-relationships"],
           plain:
             "If the same fact is stored in several places, those copies drift apart. Normalisation splits tables so each fact lives in exactly one place, which keeps data consistent when it changes.",
+          terms: ["normalisation", "normal-form", "data-anomaly", "functional-dependency", "bcnf"],
         },
         {
           slug: "oltp-olap",
