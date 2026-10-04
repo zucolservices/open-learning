@@ -324,4 +324,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "spark/catalyst": () => import("./spark/catalyst"),
   "spark/jobs-stages-tasks": () => import("./spark/jobs-stages-tasks"),
   "spark/shuffle": () => import("./spark/shuffle"),
+  "spark/spark-joins": () => import("./spark/spark-joins"),
 };

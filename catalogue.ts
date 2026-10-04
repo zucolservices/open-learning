@@ -7720,11 +7720,12 @@ const spark: Track = {
             "Join a big table to small and large ones and see Spark choose broadcast or sort-merge, and why",
           formats: ["simulation", "checkpoint"],
           concepts: ["Broadcast hash join", "Sort-merge join", "Join hints and thresholds"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["shuffle"],
           plain:
             "Joining two big tables means shuffling both. If one table is small, Spark can instead copy it to every machine and skip the shuffle entirely. Knowing which strategy Spark picks, and why, is key to fast joins.",
+          terms: ["broadcast-join", "sort-merge-join", "shuffled-hash-join", "join-hint"],
         },
         {
           slug: "aqe",

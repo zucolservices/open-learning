@@ -253,4 +253,28 @@ export const spark = {
       "A long-running process on each node that serves shuffle files on behalf of executors, so they stay available after an executor is removed. Off by default; not available on Kubernetes.",
     module: "shuffle",
   },
+  "broadcast-join": {
+    term: "Broadcast join",
+    definition:
+      "A join where Spark copies the small table to every executor, so the large table can be joined where it sits without a shuffle.",
+    module: "spark-joins",
+  },
+  "sort-merge-join": {
+    term: "Sort-merge join",
+    definition:
+      "A join that shuffles both tables by the join key, sorts each partition, then matches rows by walking the two sorted lists together. Spark's usual choice for two large tables.",
+    module: "spark-joins",
+  },
+  "shuffled-hash-join": {
+    term: "Shuffled hash join",
+    definition:
+      "A join that shuffles both tables by key, then builds an in-memory hash table from the smaller side in each partition. Skips sorting but uses more memory.",
+    module: "spark-joins",
+  },
+  "join-hint": {
+    term: "Join hint",
+    definition:
+      "An instruction in a query (BROADCAST, MERGE, SHUFFLE_HASH or SHUFFLE_REPLICATE_NL) suggesting which join strategy Spark should use. Not guaranteed.",
+    module: "spark-joins",
+  },
 } satisfies Record<string, GlossaryEntry>;
