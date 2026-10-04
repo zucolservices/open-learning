@@ -7319,11 +7319,20 @@ const enterprisePatterns: Track = {
             "Event stores and projections",
             "When not to use them",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["aggregates"],
           plain:
             "Instead of storing only the current state, store every change as an event and derive state from them. Separate models for writing and reading let each be shaped for its job. Powerful, and often overused.",
+          terms: [
+            "event-sourcing",
+            "event-store",
+            "compensating-event",
+            "cqs",
+            "cqrs",
+            "projection",
+            "read-model",
+          ],
         },
         {
           slug: "data-ownership",

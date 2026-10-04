@@ -308,4 +308,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "enterprise-patterns/esb-to-api-led": () => import("./enterprise-patterns/esb-to-api-led"),
   "enterprise-patterns/hexagonal": () => import("./enterprise-patterns/hexagonal"),
   "enterprise-patterns/monolith-microservices": () => import("./enterprise-patterns/monolith-microservices"),
+  "enterprise-patterns/cqrs-event-sourcing": () => import("./enterprise-patterns/cqrs-event-sourcing"),
 };

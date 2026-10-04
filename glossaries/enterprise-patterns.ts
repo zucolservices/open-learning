@@ -413,4 +413,29 @@ export const enterprisePatterns = {
       "Martin Fowler's term for the extra cost of running microservices (networks, partial failures, monitoring, automation), worth paying only for sufficiently complex systems.",
     module: "monolith-microservices",
   },
+  cqs: {
+    term: "Command-query separation (CQS)",
+    definition:
+      "Bertrand Meyer's principle that a method should either change state (a command) or return information (a query), never both.",
+    module: "cqrs-event-sourcing",
+  },
+  "event-store": {
+    term: "Event store",
+    definition:
+      "An append-only database of events, used as the system of record in event sourcing. Current state is derived by replaying the events.",
+    module: "cqrs-event-sourcing",
+  },
+  projection: {
+    term: "Projection",
+    definition:
+      "Code that reads a stream of events and keeps a read model up to date, such as a table of current balances.",
+    module: "cqrs-event-sourcing",
+  },
+  "compensating-event": {
+    term: "Compensating event",
+    definition:
+      "A new event that reverses or corrects an earlier one, since events in an event store are never edited or deleted.",
+    analogy: "A reversal line in a bank passbook.",
+    module: "cqrs-event-sourcing",
+  },
 } satisfies Record<string, GlossaryEntry>;
