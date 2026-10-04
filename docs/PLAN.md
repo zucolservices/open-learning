@@ -686,6 +686,37 @@ AI & machine learning area, third track (started 2026-10-04). 21 modules in 7 ch
 | **7** | **Capstone**                   |                                    |                                     |
 | 21    | Capstone: the support agent    | Five failures, five fixes          | Branching scenario, Fix the problem |
 
+## Voice AI: curriculum
+
+AI & machine learning area, fourth track (started 2026-10-05). 18 modules in 6 chapters, about 7 hours. Accent: "timbre" rose (`[data-track="timbre"]`). Glossary: `glossaries/voice-ai.ts`. Vendor-neutral: open-source speech models and frameworks (Whisper, NVIDIA Parakeet, Kokoro, Kyutai, Pipecat, LiveKit Agents), specialist voice APIs, and the speech services of Google, Microsoft, AWS and OpenAI. Builds on AI Agents (tools, guardrails) and LLM Foundations (latency, streaming) rather than repeating them. Built on one branch (`track/voice-ai`), one commit per module, merged once at the end. Each module is fact-checked on its own before it is built; card illustrations and a showcase follow the last module.
+
+| #     | Module                           | Centrepiece                 | Key formats                         |
+| ----- | -------------------------------- | --------------------------- | ----------------------------------- |
+| **1** | **The big picture**              |                             |                                     |
+| 1     | Why voice is hard                | A human call vs a slow bot  | Scroll story                        |
+| 2     | Sound as data                    | Record, resample, see       | Simulation                          |
+| 3     | The voice pipeline               | One question, five stages   | Animated infographic                |
+| **2** | **Listening**                    |                             |                                     |
+| 4     | Speech recognition               | Score a transcript          | Simulation                          |
+| 5     | Voice activity and turn-taking   | Tune the endpoint           | Simulation                          |
+| 6     | Noise, accents and speakers      | Noise, echo, accents        | Simulation                          |
+| **3** | **Speaking**                     |                             |                                     |
+| 7     | Speech synthesis                 | Neural voices, streamed     | Simulation                          |
+| 8     | Writing for the ear              | Fix a reply for the ear     | Fix the problem                     |
+| 9     | Voice cloning and consent        | Six cloning requests        | Branching scenario                  |
+| **4** | **Real time**                    |                             |                                     |
+| 10    | The latency budget               | Build the latency budget    | Simulation                          |
+| 11    | Speech-to-speech models          | Cascade vs speech-to-speech | Simulation                          |
+| 12    | Barge-in and interruptions       | Interrupt the assistant     | Simulation                          |
+| 13    | WebRTC, WebSockets and phones    | Three ways to carry audio   | Animated infographic                |
+| **5** | **Voice agents**                 |                             |                                     |
+| 14    | Designing voice conversations    | Rescue a phone menu         | Fix the problem                     |
+| 15    | Taking action mid-call           | Change a booking mid-call   | Simulation                          |
+| 16    | Voice platforms and models       | The voice stack map         | Animated infographic                |
+| 17    | Testing and running voice agents | Simulated callers           | Simulation                          |
+| **6** | **Capstone**                     |                             |                                     |
+| 18    | Capstone: the clinic phone line  | The clinic phone line       | Branching scenario, Fix the problem |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -710,6 +741,7 @@ AI & machine learning area, third track (started 2026-10-04). 21 modules in 7 ch
 | 4o. Data Modelling         | Data engineering, fourth track, 21 modules                                              | Live: all 21 modules (2026-10-04)                                       |
 | 4p. Data Quality           | Data engineering, fifth track, 21 modules                                               | Live: all 21 modules (2026-10-04)                                       |
 | 4q. AI Agents              | AI & machine learning, third track, 21 modules                                          | Live: all 21 modules (2026-10-04)                                       |
+| 4r. Voice AI               | AI & machine learning, fourth track, 18 modules                                         | In progress: 0 of 18 modules                                            |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

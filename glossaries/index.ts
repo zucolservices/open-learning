@@ -22,6 +22,7 @@ import { spark } from "./spark";
 import { dataModelling } from "./data-modelling";
 import { dataQuality } from "./data-quality";
 import { aiAgents } from "./ai-agents";
+import { voiceAi } from "./voice-ai";
 import { shared } from "./shared";
 import type { GlossaryEntry } from "./types";
 
@@ -46,6 +47,7 @@ export const trackGlossaries: Record<string, Record<string, GlossaryEntry>> = {
   "data-modelling": dataModelling,
   "data-quality": dataQuality,
   "ai-agents": aiAgents,
+  "voice-ai": voiceAi,
 };
 
 export type TermId =
@@ -66,7 +68,8 @@ export type TermId =
   | keyof typeof spark
   | keyof typeof dataModelling
   | keyof typeof dataQuality
-  | keyof typeof aiAgents;
+  | keyof typeof aiAgents
+  | keyof typeof voiceAi;
 
 export interface ResolvedTerm {
   id: string;

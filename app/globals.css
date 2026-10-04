@@ -279,6 +279,18 @@
   --bg-glow: rgb(167 139 250 / 0.1);
 }
 
+[data-track="timbre"] {
+  --accent: #e11d48;
+  --accent-soft: rgb(225 29 72 / 0.1);
+  --bg-glow: rgb(225 29 72 / 0.12);
+}
+[data-theme="dark"] [data-track="timbre"],
+[data-theme="dark"][data-track="timbre"] {
+  --accent: #fb7185;
+  --accent-soft: rgb(251 113 133 / 0.14);
+  --bg-glow: rgb(251 113 133 / 0.1);
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);

@@ -103,6 +103,7 @@ export interface Track {
     | "timber"
     | "assay"
     | "orbit"
+    | "timbre"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -9284,6 +9285,362 @@ const aiAgents: Track = {
   ],
 };
 
+const voiceAi: Track = {
+  slug: "voice-ai",
+  title: "Voice AI",
+  area: "AI & machine learning",
+  category: "ai-ml",
+  tagline: "Speech in, speech out, in real time.",
+  description:
+    "How voice AI works and how to build voice agents people enjoy talking to: turn-taking, sound as data, the voice pipeline, speech recognition, voice activity and turn detection, noisy real-world audio, speech synthesis, writing for the ear, voice cloning and consent, the latency budget, speech-to-speech models, interruptions, WebRTC and telephony, conversation design, tools mid-call, platforms, and testing and operations. Vendor-neutral, covering open-source speech models, specialist voice APIs and the speech services of Google, Microsoft, AWS and OpenAI. By the end you can design a real-time voice agent, hit its latency budget and run it responsibly.",
+  accent: "timbre",
+  chapters: [
+    {
+      slug: "big-picture",
+      title: "The big picture",
+      summary: "Why talking to software is hard.",
+      modules: [
+        {
+          slug: "why-voice",
+          title: "Why voice is hard",
+          summary: "Conversation runs on milliseconds.",
+          minutes: 20,
+          signature:
+            "Listen in on a human phone call and a slow voice bot, and measure the gaps that make one feel natural",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "Turn-taking in conversation",
+            "Why delay feels rude",
+            "What voice AI is used for",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "People take turns in conversation with tiny gaps, often a fraction of a second. A voice assistant has to hear you, understand you, think and speak back fast enough to keep that rhythm, which is far harder than replying in a chat window.",
+        },
+        {
+          slug: "sound-basics",
+          title: "Sound as data",
+          summary: "Waves, samples and spectrograms.",
+          minutes: 20,
+          signature:
+            "Record a word, change the sample rate and bit depth, and watch the waveform and spectrogram change",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Waveforms and sampling", "Sample rate and bit depth", "Spectrograms"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-voice"],
+          plain:
+            "A microphone turns air pressure into a wave, and a computer stores it as thousands of numbers per second. Speech models usually look at a spectrogram, a picture of which pitches are loud at each moment.",
+        },
+        {
+          slug: "voice-pipeline",
+          title: "The voice pipeline",
+          summary: "Listen, think, speak.",
+          minutes: 20,
+          signature:
+            "Send one spoken question through detection, recognition, a language model and synthesis, stage by stage",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "Voice activity detection",
+            "Speech to text, model, text to speech",
+            "Cascaded versus speech-to-speech",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["sound-basics"],
+          plain:
+            "Most voice assistants chain separate parts: one notices you're talking, one turns speech into text, a language model writes a reply and another voices it. Newer models handle speech directly, end to end.",
+        },
+      ],
+    },
+    {
+      slug: "listening",
+      title: "Listening",
+      summary: "Turning speech into words.",
+      modules: [
+        {
+          slug: "speech-to-text",
+          title: "Speech recognition",
+          summary: "From sound to text.",
+          minutes: 25,
+          signature:
+            "Transcribe clips with batch and streaming recognition and score them with word error rate",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["How recognisers work", "Streaming and partial results", "Word error rate"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["voice-pipeline"],
+          plain:
+            "Speech recognition turns audio into text. Live systems stream partial guesses as you speak and correct them as more audio arrives. Accuracy is measured by counting wrong, missing and extra words.",
+        },
+        {
+          slug: "turn-taking",
+          title: "Voice activity and turn-taking",
+          summary: "Knowing when you've finished.",
+          minutes: 25,
+          signature:
+            "Tune silence thresholds and a turn-detection model, and count interruptions and awkward pauses",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Voice activity detection", "Endpointing", "Semantic turn detection"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["speech-to-text"],
+          plain:
+            "A pause doesn't always mean someone has finished: they may be thinking mid-sentence. Waiting too long feels slow; replying too soon cuts people off. Good systems combine silence timing with models that judge whether a sentence is complete.",
+        },
+        {
+          slug: "real-audio",
+          title: "Noise, accents and speakers",
+          summary: "Real audio is messy.",
+          minutes: 20,
+          signature:
+            "Add background noise, echo, a second speaker and different accents, and see which fixes help",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Noise and echo", "Speaker diarisation", "Accuracy gaps between speakers"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["speech-to-text"],
+          plain:
+            "Real calls have traffic noise, echoes, people talking over each other and many accents. Recognition accuracy can differ a lot between groups of speakers, so testing on the people you'll actually serve matters.",
+        },
+      ],
+    },
+    {
+      slug: "speaking",
+      title: "Speaking",
+      summary: "Turning words into a voice.",
+      modules: [
+        {
+          slug: "text-to-speech",
+          title: "Speech synthesis",
+          summary: "From text to a voice.",
+          minutes: 25,
+          signature:
+            "Compare synthesis approaches on naturalness and time to first sound, and stream a reply as it's generated",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["How neural voices work", "Streaming synthesis", "Measuring naturalness"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["voice-pipeline"],
+          plain:
+            "Text-to-speech used to sound robotic; neural models now produce voices that are hard to tell from people. For conversation, what matters is also how quickly the first sound comes out.",
+        },
+        {
+          slug: "writing-for-voice",
+          title: "Writing for the ear",
+          summary: "Prosody, pronunciation and style.",
+          minutes: 20,
+          signature:
+            "Fix a reply that reads well but sounds terrible: numbers, abbreviations, lists and emphasis",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Prosody and emphasis",
+            "Pronouncing numbers and names",
+            "Short, spoken-style replies",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["text-to-speech"],
+          plain:
+            "Text written for screens often sounds wrong spoken aloud: long sentences, bullet lists, '12/03' and 'Dr.' all trip a voice up. Voice replies need short sentences, spelled-out numbers and controls for pronunciation and emphasis.",
+        },
+        {
+          slug: "voice-cloning",
+          title: "Voice cloning and consent",
+          summary: "A voice is personal.",
+          minutes: 20,
+          signature:
+            "Decide which of six voice-cloning requests to accept, and see the safeguards each one needs",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: ["How cloning works", "Consent and impersonation", "Watermarks and the law"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["text-to-speech"],
+          plain:
+            "A few seconds of audio can now clone a voice. That enables accessibility and dubbing, and also scams and deepfakes. Responsible use needs consent, disclosure and safeguards, and laws increasingly require them.",
+        },
+      ],
+    },
+    {
+      slug: "real-time",
+      title: "Real time",
+      summary: "Fast enough to feel like conversation.",
+      modules: [
+        {
+          slug: "latency-budget",
+          title: "The latency budget",
+          summary: "Where every millisecond goes.",
+          minutes: 25,
+          signature:
+            "Build a voice turn's latency stage by stage and stream, cache and relocate until it feels natural",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Time to first audio", "Streaming every stage", "Network and placement"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["turn-taking", "text-to-speech"],
+          plain:
+            "From the moment you stop speaking, each stage adds delay: deciding you've finished, recognising, thinking, starting to speak and the network in between. Streaming every stage and running them close together keeps the total under a second.",
+        },
+        {
+          slug: "speech-to-speech",
+          title: "Speech-to-speech models",
+          summary: "One model that listens and talks.",
+          minutes: 25,
+          signature:
+            "Run the same call through a cascaded pipeline and a speech-to-speech model, and compare speed, tone and control",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Native audio models",
+            "What's gained: speed and tone",
+            "What's lost: control and visibility",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["latency-budget"],
+          plain:
+            "Speech-to-speech models take audio in and produce audio out, without a text step in between. They respond faster and keep tone and emotion, but are harder to inspect, control and pair with any model you like.",
+        },
+        {
+          slug: "interruptions",
+          title: "Barge-in and interruptions",
+          summary: "Letting people cut in.",
+          minutes: 20,
+          signature:
+            "Interrupt a talking assistant and see what it heard, what it said and what it thinks it said",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Detecting barge-in", "Stopping speech fast", "Keeping the transcript true"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["turn-taking"],
+          plain:
+            "People interrupt: to correct, to hurry along or to say 'yes, got it'. A voice agent must stop speaking quickly, tell real interruptions from background noise and remember only the part of its reply that was actually heard.",
+        },
+        {
+          slug: "voice-transport",
+          title: "WebRTC, WebSockets and phones",
+          summary: "Getting audio there and back.",
+          minutes: 20,
+          signature:
+            "Route a call over WebRTC, a WebSocket and the phone network, and compare delay, quality and setup",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: ["WebRTC and WebSockets", "Phone calls and SIP", "Codecs and audio quality"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["latency-budget"],
+          plain:
+            "Audio has to travel between the user and your servers. Browsers and apps use WebRTC or WebSockets; phone calls arrive through telephone networks at lower quality. The choice affects delay, sound quality and cost.",
+        },
+      ],
+    },
+    {
+      slug: "voice-agents",
+      title: "Voice agents",
+      summary: "Assistants that talk and act.",
+      modules: [
+        {
+          slug: "conversation-design",
+          title: "Designing voice conversations",
+          summary: "No screen to fall back on.",
+          minutes: 25,
+          signature:
+            "Redesign a frustrating phone menu as a voice agent that confirms, recovers and hands over well",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Confirming what was heard",
+            "Recovering from misunderstanding",
+            "Handing over to a person",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["writing-for-voice"],
+          plain:
+            "On a call there's nothing to scroll back to. Good voice design keeps turns short, confirms important details, recovers gracefully when it mishears and knows when to pass the caller to a person.",
+        },
+        {
+          slug: "voice-tools",
+          title: "Taking action mid-call",
+          summary: "Tools while talking.",
+          minutes: 20,
+          signature:
+            "Have a voice agent look up and change a booking while keeping the caller informed",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Tool calls in a live call",
+            "Filling silence honestly",
+            "Reading back what will change",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["conversation-design"],
+          plain:
+            "Voice agents call tools just like text agents, but the caller is waiting on the line. They need to say what they're doing, handle slow lookups without dead air and read back changes before making them.",
+        },
+        {
+          slug: "voice-platforms",
+          title: "Voice platforms and models",
+          summary: "Open source, APIs and clouds.",
+          minutes: 20,
+          signature:
+            "Map speech models, voice APIs and agent frameworks to the parts of a voice pipeline",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "Speech and voice model providers",
+            "Voice agent frameworks",
+            "Cloud speech services",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["voice-transport"],
+          plain:
+            "There are open-source speech models, specialist voice APIs, cloud speech services and frameworks that wire them into a working agent. Most teams combine several and swap parts as models improve.",
+        },
+        {
+          slug: "voice-quality",
+          title: "Testing and running voice agents",
+          summary: "Measuring what callers feel.",
+          minutes: 25,
+          signature:
+            "Run simulated callers through a voice agent and read its latency, accuracy and success dashboard",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Simulated callers",
+            "Latency, accuracy and task success",
+            "Recording, privacy and disclosure",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["voice-tools"],
+          plain:
+            "Voice agents need testing like any software, plus checks on speed, recognition accuracy and whether callers got what they needed. Recording calls for review brings duties: consent, privacy and telling people they're talking to AI.",
+        },
+      ],
+    },
+    {
+      slug: "capstone",
+      title: "Capstone",
+      summary: "Everything together.",
+      modules: [
+        {
+          slug: "capstone-voice",
+          title: "Capstone: the clinic phone line",
+          summary: "Build a voice agent people don't hang up on.",
+          minutes: 40,
+          signature:
+            "Design a clinic's appointment line, then fix the five complaints from its first week",
+          formats: ["branching-scenario", "fix-the-problem", "checkpoint"],
+          concepts: ["Applying voice AI"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["latency-budget", "conversation-design", "voice-quality"],
+          plain:
+            "Everything in this track in one project: choose an architecture, hit the latency budget, design the conversation, handle interruptions and tools, and prove the line works for real callers.",
+        },
+      ],
+    },
+  ],
+};
+
 export const tracks: Track[] = [
   lakehouse,
   systemDesign,
@@ -9302,6 +9659,7 @@ export const tracks: Track[] = [
   dataModelling,
   dataQuality,
   aiAgents,
+  voiceAi,
   playground,
 ];
 
@@ -9378,7 +9736,7 @@ export const categories: Category[] = [
         blurb: "Grounding models in your documents: retrieval, chunking and ranking.",
       },
       { title: "AI Agents", slug: "ai-agents", blurb: "Tools, planning, memory and guardrails." },
-      { title: "Voice AI", blurb: "Speech in, speech out, in real time." },
+      { title: "Voice AI", slug: "voice-ai", blurb: "Speech in, speech out, in real time." },
       { title: "LLM Evaluation", blurb: "Measuring quality, safety and regressions." },
       { title: "Applied ML", blurb: "Classic machine learning, from features to deployment." },
     ],
