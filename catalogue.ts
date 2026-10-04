@@ -9172,11 +9172,12 @@ const aiAgents: Track = {
             "Set permissions for an email agent and see which of five risky actions it can still take",
           formats: ["simulation", "checkpoint"],
           concepts: ["Least privilege", "Approvals for risky actions", "Input and output checks"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["computer-use"],
           plain:
             "An agent can only do damage with the access you give it. Good designs grant the fewest permissions needed, ask a person before irreversible actions, and check inputs and outputs automatically.",
+          terms: ["agent-guardrail", "excessive-agency", "least-privilege"],
         },
         {
           slug: "agent-security",

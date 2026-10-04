@@ -242,4 +242,16 @@ export const aiAgents = {
       "A managed cloud service that hosts agents for you, handling running, scaling, identity and security as well as agent building blocks.",
     module: "agent-frameworks",
   },
+  "agent-guardrail": {
+    term: "Guardrail",
+    definition:
+      "An automatic check that runs before, after or around a model or tool call, such as screening input, blocking sensitive output or limiting an action, and can stop the run.",
+    module: "guardrails",
+  },
+  "excessive-agency": {
+    term: "Excessive agency",
+    definition:
+      "OWASP's name for the risk of giving an AI system too many tools, too many permissions or too much freedom to act without checks.",
+    module: "guardrails",
+  },
 } satisfies Record<string, GlossaryEntry>;
