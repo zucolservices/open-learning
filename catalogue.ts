@@ -9149,11 +9149,12 @@ const aiAgents: Track = {
             "Managed agent platforms",
             "Choosing and staying portable",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["multi-agent"],
           plain:
             "You can write an agent loop in a few dozen lines, or use a framework that adds tools, memory, tracing and multi-agent support. Cloud providers also run agents for you. Each saves work and adds dependence.",
+          terms: ["agent-framework", "agent-platform", "mcp"],
         },
       ],
     },

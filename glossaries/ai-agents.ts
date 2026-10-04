@@ -230,4 +230,16 @@ export const aiAgents = {
       "A JSON file an A2A agent publishes at a well-known web address, describing its skills, where to send requests and how to authenticate.",
     module: "agent-protocols",
   },
+  "agent-framework": {
+    term: "Agent framework",
+    definition:
+      "A code library you run yourself that provides building blocks for agents, such as the loop, tool calling, memory, multi-agent handoffs and tracing.",
+    module: "agent-frameworks",
+  },
+  "agent-platform": {
+    term: "Agent platform",
+    definition:
+      "A managed cloud service that hosts agents for you, handling running, scaling, identity and security as well as agent building blocks.",
+    module: "agent-frameworks",
+  },
 } satisfies Record<string, GlossaryEntry>;
