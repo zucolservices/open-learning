@@ -439,4 +439,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "llm-evaluation/comparing-versions": () => import("./llm-evaluation/comparing-versions"),
   "llm-evaluation/variance": () => import("./llm-evaluation/variance"),
   "llm-evaluation/benchmarks": () => import("./llm-evaluation/benchmarks"),
+  "llm-evaluation/contamination": () => import("./llm-evaluation/contamination"),
 };

@@ -9939,11 +9939,12 @@ const llmEvaluation: Track = {
             "Detecting contamination",
             "Fresh and private test sets",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["benchmarks"],
           plain:
             "If benchmark questions appear in a model's training data, its score measures memory, not skill. Contamination and over-tuning to leaderboards are common, which is why private and regularly refreshed test sets matter.",
+          terms: ["data-contamination", "live-benchmark"],
         },
       ],
     },

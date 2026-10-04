@@ -187,4 +187,16 @@ export const llmEvaluation = {
       "When top models all score near the maximum on a benchmark, so it can no longer tell them apart.",
     module: "benchmarks",
   },
+  "data-contamination": {
+    term: "Data contamination",
+    definition:
+      "Test questions ending up in a model's training data, so its score reflects memory rather than ability.",
+    module: "contamination",
+  },
+  "live-benchmark": {
+    term: "Live benchmark",
+    definition:
+      "A benchmark that keeps adding fresh, dated questions so models can be tested on material that didn't exist when they were trained.",
+    module: "contamination",
+  },
 } satisfies Record<string, GlossaryEntry>;
