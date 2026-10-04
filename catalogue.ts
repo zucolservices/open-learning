@@ -9403,11 +9403,12 @@ const voiceAi: Track = {
             "Add background noise, echo, a second speaker and different accents, and see which fixes help",
           formats: ["simulation", "checkpoint"],
           concepts: ["Noise and echo", "Speaker diarisation", "Accuracy gaps between speakers"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["speech-to-text"],
           plain:
             "Real calls have traffic noise, echoes, people talking over each other and many accents. Recognition accuracy can differ a lot between groups of speakers, so testing on the people you'll actually serve matters.",
+          terms: ["echo-cancellation", "noise-suppression", "diarisation", "wer"],
         },
       ],
     },

@@ -103,4 +103,22 @@ export const voiceAi = {
       "Judging whether a speaker has finished from what they said (or how they said it), rather than from silence alone.",
     module: "turn-taking",
   },
+  "echo-cancellation": {
+    term: "Echo cancellation",
+    definition:
+      "Removing a device's own speaker output from what its microphone picks up, so a voice system doesn't hear and react to itself.",
+    module: "real-audio",
+  },
+  "noise-suppression": {
+    term: "Noise suppression",
+    definition:
+      "Filtering background sounds such as traffic or chatter out of audio while keeping the speaker's voice.",
+    module: "real-audio",
+  },
+  diarisation: {
+    term: "Speaker diarisation",
+    definition:
+      "Working out who spoke when in a recording, labelling each stretch of speech with a speaker.",
+    module: "real-audio",
+  },
 } satisfies Record<string, GlossaryEntry>;
