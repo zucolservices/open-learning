@@ -205,4 +205,28 @@ export const spark = {
       "Dropping columns a query never uses, so they are never read; especially effective with columnar files like Parquet.",
     module: "catalyst",
   },
+  job: {
+    term: "Job",
+    definition:
+      "All the work Spark does in response to one action, such as count or write. One action can start more than one job.",
+    module: "jobs-stages-tasks",
+  },
+  stage: {
+    term: "Stage",
+    definition:
+      "A part of a job that can run without exchanging data between machines. Stages are separated by shuffles, and each runs one task per partition.",
+    module: "jobs-stages-tasks",
+  },
+  "spark-ui": {
+    term: "Spark UI",
+    definition:
+      "The web interface every Spark driver serves (by default on port 4040), showing jobs, stages, tasks, SQL plans, storage and executors.",
+    module: "jobs-stages-tasks",
+  },
+  "history-server": {
+    term: "History Server",
+    definition:
+      "A Spark service that rebuilds the UI of finished applications from their event logs.",
+    module: "jobs-stages-tasks",
+  },
 } satisfies Record<string, GlossaryEntry>;

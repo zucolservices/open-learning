@@ -7684,11 +7684,12 @@ const spark: Track = {
             "Run a job and read it in a simulated Spark UI: jobs split into stages at shuffles, stages into tasks",
           formats: ["simulation", "checkpoint"],
           concepts: ["Jobs, stages and tasks", "Stage boundaries", "The Spark UI"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["partitions", "catalyst"],
           plain:
             "Each action becomes a job. Spark cuts the job into stages wherever data must be reshuffled between machines, and each stage into one task per partition. The Spark UI shows all of this, and it's where tuning starts.",
+          terms: ["job", "stage", "task", "spark-ui", "history-server"],
         },
         {
           slug: "shuffle",
