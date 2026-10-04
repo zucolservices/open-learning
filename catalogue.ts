@@ -8500,11 +8500,12 @@ const dataQuality: Track = {
             "Write not-null, unique, accepted-value and relationship tests and watch a bad load fail them",
           formats: ["build-connect", "checkpoint"],
           concepts: ["Assertions on data", "Generic tests", "Tests in version control"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["quality-dimensions"],
           plain:
             "Software teams test code before it ships. Data teams can test data the same way: small, automatic assertions such as 'every order has a customer' that run on every load and fail loudly.",
+          terms: ["data-test", "assertion", "generic-test"],
         },
         {
           slug: "profiling",

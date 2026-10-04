@@ -56,4 +56,22 @@ export const dataQuality = {
       "Whether data is up to date enough for when it's needed, measured as the delay between an event and the data showing it.",
     module: "quality-dimensions",
   },
+  "data-test": {
+    term: "Data test",
+    definition:
+      "An automatic check on real data, such as 'every order has a customer', that runs after data loads and fails when the rule is broken.",
+    module: "data-tests",
+  },
+  assertion: {
+    term: "Assertion",
+    definition:
+      "A statement that must be true, checked automatically. A data test asserts something about rows in a table.",
+    module: "data-tests",
+  },
+  "generic-test": {
+    term: "Generic test",
+    definition:
+      "A reusable, parameterised data test attached to columns, such as dbt's unique, not_null, accepted_values and relationships.",
+    module: "data-tests",
+  },
 } satisfies Record<string, GlossaryEntry>;
