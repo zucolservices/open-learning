@@ -389,4 +389,34 @@ export const dataModelling = {
       "A named, agreed calculation such as revenue or active customers, including its aggregation and filters.",
     module: "semantic-layer",
   },
+  dbt: {
+    term: "dbt",
+    definition:
+      "A tool for transforming data inside a warehouse: each model is a SQL select statement, and dbt builds them in dependency order with tests, documentation and version control.",
+    module: "dbt-layers",
+  },
+  "staging-model": {
+    term: "Staging model",
+    definition:
+      "A dbt model that cleans one source table: renaming columns and casting types, one-to-one with the source.",
+    module: "dbt-layers",
+  },
+  "mart-model": {
+    term: "Mart",
+    definition:
+      "A finished model representing a business entity at a clear grain, such as orders or customers, ready for people and tools to query.",
+    module: "dbt-layers",
+  },
+  "lineage-graph": {
+    term: "Lineage",
+    definition:
+      "The graph of which models and sources each table is built from, so you can trace any number back to where it came from.",
+    module: "dbt-layers",
+  },
+  "data-test": {
+    term: "Data test",
+    definition:
+      "An assertion checked against a model's data on every run, such as a column being unique, never null, or pointing at existing rows.",
+    module: "dbt-layers",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -351,4 +351,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-modelling/data-vault": () => import("./data-modelling/data-vault"),
   "data-modelling/wide-tables": () => import("./data-modelling/wide-tables"),
   "data-modelling/semantic-layer": () => import("./data-modelling/semantic-layer"),
+  "data-modelling/dbt-layers": () => import("./data-modelling/dbt-layers"),
 };

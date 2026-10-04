@@ -8321,11 +8321,12 @@ const dataModelling: Track = {
             "Organise a project into staging, intermediate and mart models and trace one metric back to its sources",
           formats: ["build-connect", "checkpoint"],
           concepts: ["Staging, intermediate, marts", "Models as code", "Lineage and tests"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["star-schema"],
           plain:
             "Modern teams build models as code in layers: clean each source, combine and reshape, then publish business-ready tables. Tools like dbt make each step a versioned, tested query with visible lineage.",
+          terms: ["dbt", "staging-model", "mart-model", "lineage-graph", "data-test"],
         },
         {
           slug: "nosql-modelling",
