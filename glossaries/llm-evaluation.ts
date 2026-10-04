@@ -253,4 +253,10 @@ export const llmEvaluation = {
       "Reading real outputs, noting each problem, grouping the notes into failure types and counting them, to decide what to fix and test first.",
     module: "eval-driven-dev",
   },
+  "online-eval": {
+    term: "Online eval",
+    definition:
+      "Scoring a live system's real traffic, usually with judges, rules and user feedback because real requests have no known right answer.",
+    module: "online-evals",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -776,7 +776,7 @@ AI & machine learning area, fifth track (started 2026-10-05). 20 modules in 7 ch
 | 4p. Data Quality           | Data engineering, fifth track, 21 modules                                               | Live: all 21 modules (2026-10-04)                                       |
 | 4q. AI Agents              | AI & machine learning, third track, 21 modules                                          | Live: all 21 modules (2026-10-04)                                       |
 | 4r. Voice AI               | AI & machine learning, fourth track, 18 modules                                         | Live: all 18 modules (2026-10-05)                                       |
-| 4s. LLM Evaluation         | AI & machine learning, fifth track, 20 modules                                          | In progress: 17 of 20 modules                                           |
+| 4s. LLM Evaluation         | AI & machine learning, fifth track, 20 modules                                          | In progress: 18 of 20 modules                                           |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

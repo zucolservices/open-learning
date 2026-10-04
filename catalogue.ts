@@ -10037,11 +10037,12 @@ const llmEvaluation: Track = {
             "Monitor a live assistant with feedback, judges on sampled traffic and an A/B test, and spot a silent regression",
           formats: ["simulation", "checkpoint"],
           concepts: ["User feedback and implicit signals", "Judging sampled traffic", "A/B tests"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["eval-driven-dev"],
           plain:
             "Offline evals can't cover everything users will ask. In production, teams collect feedback, run automated judges on samples of real conversations, trace failures and run A/B tests before full rollouts.",
+          terms: ["online-eval", "canary-release"],
         },
         {
           slug: "eval-tools",
