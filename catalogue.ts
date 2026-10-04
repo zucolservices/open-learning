@@ -8262,11 +8262,12 @@ const dataModelling: Track = {
             "Auditability and history",
             "When Data Vault fits",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["inmon-kimball"],
           plain:
             "Data Vault separates the stable business keys, the relationships between them, and the changing descriptive details into different tables. It makes adding new sources and keeping full history easier, at the cost of more tables and joins.",
+          terms: ["data-vault", "hub", "link-table", "satellite"],
         },
         {
           slug: "wide-tables",

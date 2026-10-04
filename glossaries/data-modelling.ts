@@ -335,4 +335,28 @@ export const dataModelling = {
       "Bill Inmon's architecture: a normalised, atomic enterprise warehouse loaded first, which then feeds departmental data marts.",
     module: "inmon-kimball",
   },
+  "data-vault": {
+    term: "Data Vault",
+    definition:
+      "A warehouse modelling method by Dan Linstedt that splits data into hubs (business keys), links (relationships) and satellites (descriptive history), loaded append-only with full audit details.",
+    module: "data-vault",
+  },
+  hub: {
+    term: "Hub",
+    definition:
+      "A Data Vault table holding one row per unique business key, such as a customer number, with its load date and source.",
+    module: "data-vault",
+  },
+  "link-table": {
+    term: "Link",
+    definition:
+      "A Data Vault table recording a relationship or transaction between hubs, such as which customer placed which order.",
+    module: "data-vault",
+  },
+  satellite: {
+    term: "Satellite",
+    definition:
+      "A Data Vault table holding descriptive attributes of a hub or link, with a new row for every change.",
+    module: "data-vault",
+  },
 } satisfies Record<string, GlossaryEntry>;

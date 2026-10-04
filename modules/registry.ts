@@ -348,4 +348,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-modelling/dimension-patterns": () => import("./data-modelling/dimension-patterns"),
   "data-modelling/scd": () => import("./data-modelling/scd"),
   "data-modelling/inmon-kimball": () => import("./data-modelling/inmon-kimball"),
+  "data-modelling/data-vault": () => import("./data-modelling/data-vault"),
 };
