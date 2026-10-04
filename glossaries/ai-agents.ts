@@ -44,4 +44,22 @@ export const aiAgents = {
       "A rule that ends an agent's loop: normally the model's final answer, plus safety limits such as a maximum number of turns, time or spend.",
     module: "agent-loop",
   },
+  "prompt-chaining": {
+    term: "Prompt chaining",
+    definition:
+      "A workflow that splits a task into fixed steps, each model call taking the previous one's output, often with checks in between.",
+    module: "workflows-vs-agents",
+  },
+  "orchestrator-workers": {
+    term: "Orchestrator-workers",
+    definition:
+      "A pattern in which a lead model breaks a task into subtasks at run time, hands them to worker models and combines the results.",
+    module: "workflows-vs-agents",
+  },
+  "evaluator-optimizer": {
+    term: "Evaluator-optimiser",
+    definition:
+      "A loop in which one model call produces work and another critiques it against criteria, repeating until the work passes.",
+    module: "workflows-vs-agents",
+  },
 } satisfies Record<string, GlossaryEntry>;

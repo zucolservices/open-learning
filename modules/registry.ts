@@ -390,4 +390,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-quality/capstone-quality": () => import("./data-quality/capstone-quality"),
   "ai-agents/what-is-an-agent": () => import("./ai-agents/what-is-an-agent"),
   "ai-agents/agent-loop": () => import("./ai-agents/agent-loop"),
+  "ai-agents/workflows-vs-agents": () => import("./ai-agents/workflows-vs-agents"),
 };
