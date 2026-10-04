@@ -86,4 +86,30 @@ export const enterprisePatterns = {
       "Someone who knows a business area deeply, such as an underwriter, a nurse or a dispatcher, and helps the team understand and name things correctly.",
     module: "domain-language",
   },
+  "bounded-context": {
+    term: "Bounded context",
+    definition:
+      "A boundary, usually a subsystem or one team's work, inside which a single model and its language apply consistently. Different contexts can model the same thing, such as a customer, differently.",
+    analogy:
+      '"Meter" means one thing to the billing office and another to the engineer who fits it.',
+    module: "bounded-contexts",
+  },
+  "core-domain": {
+    term: "Core domain",
+    definition:
+      "The part of the business that makes it valuable and different, where the best people and most design effort should go.",
+    module: "bounded-contexts",
+  },
+  "generic-subdomain": {
+    term: "Generic subdomain",
+    definition:
+      "A part of the business every organisation needs, such as accounting or sending email, best bought or used as a service rather than built.",
+    module: "bounded-contexts",
+  },
+  "supporting-subdomain": {
+    term: "Supporting subdomain",
+    definition:
+      "A part specific to the business but not where it competes; build it simply or outsource it. The term comes from Vaughn Vernon's three-way split.",
+    module: "bounded-contexts",
+  },
 } satisfies Record<string, GlossaryEntry>;

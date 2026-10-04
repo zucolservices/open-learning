@@ -297,4 +297,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "enterprise-patterns/why-enterprise": () => import("./enterprise-patterns/why-enterprise"),
   "enterprise-patterns/conways-law": () => import("./enterprise-patterns/conways-law"),
   "enterprise-patterns/domain-language": () => import("./enterprise-patterns/domain-language"),
+  "enterprise-patterns/bounded-contexts": () => import("./enterprise-patterns/bounded-contexts"),
 };

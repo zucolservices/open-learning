@@ -7049,11 +7049,18 @@ const enterprisePatterns: Track = {
             "One model per context",
             "Subdomains: core, supporting, generic",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["domain-language"],
           plain:
             "Instead of one giant model of the whole business, draw boundaries. Inside each, words have one meaning and one team owns the model; between them, you translate.",
+          terms: [
+            "bounded-context",
+            "core-domain",
+            "generic-subdomain",
+            "supporting-subdomain",
+            "ubiquitous-language",
+          ],
         },
         {
           slug: "context-mapping",
