@@ -377,4 +377,16 @@ export const dataModelling = {
       "Columns that hold structures (STRUCT) or lists (ARRAY), letting a row carry its children, such as an order with its lines.",
     module: "wide-tables",
   },
+  "semantic-layer": {
+    term: "Semantic layer",
+    definition:
+      "A shared place where business metrics, dimensions and joins are defined once, so every tool that asks for, say, revenue by month gets SQL from the same definition.",
+    module: "semantic-layer",
+  },
+  "metric-definition": {
+    term: "Metric",
+    definition:
+      "A named, agreed calculation such as revenue or active customers, including its aggregation and filters.",
+    module: "semantic-layer",
+  },
 } satisfies Record<string, GlossaryEntry>;

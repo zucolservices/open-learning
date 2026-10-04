@@ -8298,11 +8298,12 @@ const dataModelling: Track = {
             "Three dashboards compute 'active customers' three ways; define it once in a semantic layer",
           formats: ["simulation", "checkpoint"],
           concepts: ["Metric definitions", "Semantic layers", "Consistency across tools"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["star-schema"],
           plain:
             "Even with good tables, different teams calculate the same metric differently. A semantic layer defines metrics and how tables join once, and every tool asks it instead of writing its own SQL.",
+          terms: ["semantic-layer", "metric-definition"],
         },
       ],
     },
