@@ -7245,11 +7245,12 @@ const enterprisePatterns: Track = {
             "Smart endpoints, dumb pipes",
             "iPaaS and API-led connectivity",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["routing-transformation"],
           plain:
             "Enterprises once put all integration logic in a central bus. Microservices pushed logic back into services; today integration platforms, API gateways and event brokers share the work.",
+          terms: ["esb", "api-led", "ipaas", "event-mesh", "system-of-record"],
         },
       ],
     },

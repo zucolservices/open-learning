@@ -305,4 +305,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "enterprise-patterns/messaging-patterns": () => import("./enterprise-patterns/messaging-patterns"),
   "enterprise-patterns/routing-transformation": () => import("./enterprise-patterns/routing-transformation"),
   "enterprise-patterns/orchestration-choreography": () => import("./enterprise-patterns/orchestration-choreography"),
+  "enterprise-patterns/esb-to-api-led": () => import("./enterprise-patterns/esb-to-api-led"),
 };

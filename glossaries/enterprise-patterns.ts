@@ -333,4 +333,28 @@ export const enterprisePatterns = {
       "Software that runs long-running processes reliably, storing their state and handling retries, timers and recovery. Examples: Temporal, Camunda, AWS Step Functions.",
     module: "orchestration-choreography",
   },
+  esb: {
+    term: "Enterprise service bus (ESB)",
+    definition:
+      "A central integration product, popular in the 2000s, that connects many systems and handles routing, transformation and often business rules for all of them.",
+    module: "esb-to-api-led",
+  },
+  "api-led": {
+    term: "API-led connectivity",
+    definition:
+      "MuleSoft's method of organising APIs in three layers: system APIs that unlock systems of record, process APIs that combine them, and experience APIs for each channel.",
+    module: "esb-to-api-led",
+  },
+  ipaas: {
+    term: "iPaaS",
+    definition:
+      "Integration platform as a service: a cloud service for building, running and governing integration flows between cloud and on-premises applications and data.",
+    module: "esb-to-api-led",
+  },
+  "event-mesh": {
+    term: "Event mesh",
+    definition:
+      "A network of interconnected event brokers that lets events flow between applications wherever they run: data centres, clouds or the edge.",
+    module: "esb-to-api-led",
+  },
 } satisfies Record<string, GlossaryEntry>;
