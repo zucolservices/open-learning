@@ -284,4 +284,10 @@ export const dataQuality = {
       "A summary number computed on both sides of a transfer, such as a row count or the sum of an amount column, to check nothing was lost or changed.",
     module: "reconciliation",
   },
+  "late-data": {
+    term: "Late data",
+    definition:
+      "Records that arrive after the period they belong to has already been processed, so that period must be reprocessed to include them.",
+    module: "late-data",
+  },
 } satisfies Record<string, GlossaryEntry>;

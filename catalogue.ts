@@ -8763,11 +8763,12 @@ const dataQuality: Track = {
             "Handle late-arriving events with reprocessing windows and idempotent backfills",
           formats: ["simulation", "checkpoint"],
           concepts: ["Late and out-of-order data", "Idempotent loads", "Backfills"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["data-slas"],
           plain:
             "Data doesn't always arrive on time or in order. Pipelines that can safely re-run a period, and know how long to wait, avoid both gaps and double counting.",
+          terms: ["late-data", "idempotent", "event-time"],
         },
         {
           slug: "ml-data-quality",

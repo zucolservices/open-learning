@@ -374,4 +374,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-quality/data-incidents": () => import("./data-quality/data-incidents"),
   "data-quality/deduplication": () => import("./data-quality/deduplication"),
   "data-quality/reconciliation": () => import("./data-quality/reconciliation"),
+  "data-quality/late-data": () => import("./data-quality/late-data"),
 };
