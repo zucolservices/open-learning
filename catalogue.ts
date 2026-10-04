@@ -7910,11 +7910,12 @@ const spark: Track = {
             "Spark on Kubernetes",
             "Spark Connect",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["cluster-anatomy"],
           plain:
             "You can run Spark yourself or use a managed service from Databricks or a cloud provider. Each handles clusters, upgrades and scaling differently, and newer client-server options let small apps talk to a remote Spark.",
+          terms: ["managed-spark", "serverless-spark", "spark-connect", "cluster-manager"],
         },
         {
           slug: "cost-scaling",

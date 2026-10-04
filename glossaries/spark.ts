@@ -438,4 +438,16 @@ export const spark = {
     definition: "The library PySpark uses to let your Python program call into Spark's JVM driver.",
     module: "pyspark-udfs",
   },
+  "managed-spark": {
+    term: "Managed Spark service",
+    definition:
+      "A cloud service that installs, patches and runs Spark clusters for you, such as Amazon EMR, Databricks or Google's Managed Service for Apache Spark.",
+    module: "spark-platforms",
+  },
+  "serverless-spark": {
+    term: "Serverless Spark",
+    definition:
+      "Running Spark jobs without creating or sizing a cluster: the service provides and scales compute per job or session, such as EMR Serverless or AWS Glue.",
+    module: "spark-platforms",
+  },
 } satisfies Record<string, GlossaryEntry>;
