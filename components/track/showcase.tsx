@@ -28,6 +28,8 @@ import { SparkScene } from "@/components/home/spark-scene";
 import { SparkTaste } from "@/components/home/spark-taste";
 import { DataModellingScene } from "@/components/home/data-modelling-scene";
 import { DataModellingTaste } from "@/components/home/data-modelling-taste";
+import { DataQualityScene } from "@/components/home/data-quality-scene";
+import { DataQualityTaste } from "@/components/home/data-quality-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -156,5 +158,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: DataModellingTaste,
     tasteCaption:
       "A taste of module 11: a customer moves city. See what each slowly-changing-dimension type does to last year's report.",
+  },
+  "data-quality": {
+    Scene: DataQualityScene,
+    sceneCaption:
+      "A data pipeline with a defence at every stage, from the producer's contract to the board report. Watch the tour, or click any part.",
+    Taste: DataQualityTaste,
+    tasteCaption:
+      "A taste of module 13: judge eight weeks of row counts three ways and count the real problems caught and the false alarms.",
   },
 };
