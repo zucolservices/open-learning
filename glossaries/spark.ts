@@ -319,4 +319,22 @@ export const spark = {
       "An execution engine written in C++ or Rust that runs Spark's query plans outside the JVM, such as Photon, Apache Gluten's backends or DataFusion Comet.",
     module: "tungsten-vectorised",
   },
+  "data-skew": {
+    term: "Data skew",
+    definition:
+      "When a few keys hold most of the rows, so after a shuffle a few tasks do most of the work while the rest sit idle.",
+    module: "skew",
+  },
+  straggler: {
+    term: "Straggler",
+    definition:
+      "A task that runs far longer than the others in its stage, holding up the whole stage.",
+    module: "skew",
+  },
+  salting: {
+    term: "Salting",
+    definition:
+      "Adding a random number to a skewed key so its rows spread over several partitions, then combining the pieces afterwards.",
+    module: "skew",
+  },
 } satisfies Record<string, GlossaryEntry>;

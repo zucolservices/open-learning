@@ -7789,11 +7789,12 @@ const spark: Track = {
             "Group orders where one customer has half the rows, watch one task straggle, then fix it with salting and AQE",
           formats: ["simulation", "fix-the-problem", "checkpoint"],
           concepts: ["Spotting skew in the UI", "Salting keys", "AQE skew handling"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["aqe"],
           plain:
             "If one key has far more rows than the others, the task that handles it runs far longer than the rest, and the whole stage waits. Spreading that key across several tasks fixes it.",
+          terms: ["data-skew", "straggler", "salting"],
         },
         {
           slug: "memory-spill",
