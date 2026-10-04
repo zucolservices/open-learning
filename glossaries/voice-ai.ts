@@ -199,4 +199,34 @@ export const voiceAi = {
       "A short listener sound such as “mm-hm” or “yeah” that signals “I'm following, carry on” rather than an attempt to take a turn.",
     module: "interruptions",
   },
+  webrtc: {
+    term: "WebRTC",
+    definition:
+      "An open web standard for live audio and video between browsers, apps and servers. It sends encrypted packets, usually over UDP, and skips lost ones rather than waiting.",
+    module: "voice-transport",
+  },
+  sip: {
+    term: "SIP",
+    definition:
+      "Session Initiation Protocol: the messages internet phone systems use to set up, change and end calls. The sound itself travels separately.",
+    module: "voice-transport",
+  },
+  "sip-trunk": {
+    term: "SIP trunk",
+    definition:
+      "A connection from a phone carrier that delivers ordinary phone calls into your system as SIP calls.",
+    module: "voice-transport",
+  },
+  "audio-codec": {
+    term: "Audio codec",
+    definition:
+      "A method for squeezing sound into fewer bits and unpacking it again, such as Opus or the phone network's G.711.",
+    module: "voice-transport",
+  },
+  "jitter-buffer": {
+    term: "Jitter buffer",
+    definition:
+      "A short holding area that collects audio packets arriving at uneven times so playback stays smooth. Bigger is smoother but adds delay.",
+    module: "voice-transport",
+  },
 } satisfies Record<string, GlossaryEntry>;

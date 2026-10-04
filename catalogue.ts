@@ -9537,11 +9537,12 @@ const voiceAi: Track = {
             "Route a call over WebRTC, a WebSocket and the phone network, and compare delay, quality and setup",
           formats: ["animated-infographic", "checkpoint"],
           concepts: ["WebRTC and WebSockets", "Phone calls and SIP", "Codecs and audio quality"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["latency-budget"],
           plain:
             "Audio has to travel between the user and your servers. Browsers and apps use WebRTC or WebSockets; phone calls arrive through telephone networks at lower quality. The choice affects delay, sound quality and cost.",
+          terms: ["webrtc", "websocket", "sip", "audio-codec", "jitter-buffer"],
         },
       ],
     },
