@@ -304,4 +304,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "enterprise-patterns/integration-styles": () => import("./enterprise-patterns/integration-styles"),
   "enterprise-patterns/messaging-patterns": () => import("./enterprise-patterns/messaging-patterns"),
   "enterprise-patterns/routing-transformation": () => import("./enterprise-patterns/routing-transformation"),
+  "enterprise-patterns/orchestration-choreography": () => import("./enterprise-patterns/orchestration-choreography"),
 };

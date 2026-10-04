@@ -307,4 +307,30 @@ export const enterprisePatterns = {
       "A common message format independent of any one application; each application translates only to and from it, instead of to every other format.",
     module: "routing-transformation",
   },
+  "orchestration-ep": {
+    term: "Orchestration (of a process)",
+    definition:
+      "Running a business process with a central coordinator that tells each system what to do next and keeps track of where every case has got to.",
+    analogy: "A conductor cueing each section of an orchestra.",
+    module: "orchestration-choreography",
+  },
+  choreography: {
+    term: "Choreography",
+    definition:
+      "Running a business process without a central coordinator: each system publishes events and reacts to other systems' events.",
+    analogy: "Dancers responding to each other with no conductor.",
+    module: "orchestration-choreography",
+  },
+  "process-manager": {
+    term: "Process manager",
+    definition:
+      "Hohpe and Woolf's name for a central component that keeps the state of a multi-step process and decides the next step from intermediate results.",
+    module: "orchestration-choreography",
+  },
+  "workflow-engine": {
+    term: "Workflow engine",
+    definition:
+      "Software that runs long-running processes reliably, storing their state and handling retries, timers and recovery. Examples: Temporal, Camunda, AWS Step Functions.",
+    module: "orchestration-choreography",
+  },
 } satisfies Record<string, GlossaryEntry>;

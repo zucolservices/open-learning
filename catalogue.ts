@@ -7225,11 +7225,12 @@ const enterprisePatterns: Track = {
             "Choreography with events",
             "Workflow engines",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["messaging-patterns"],
           plain:
             "A process that spans systems can be run by a conductor that tells each one what to do, or by systems reacting to each other's events. One is easier to follow; the other is less coupled.",
+          terms: ["orchestration-ep", "choreography", "process-manager", "workflow-engine", "saga"],
         },
         {
           slug: "esb-to-api-led",
