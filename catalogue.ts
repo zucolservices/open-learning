@@ -9313,10 +9313,11 @@ const voiceAi: Track = {
             "Why delay feels rude",
             "What voice AI is used for",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           plain:
             "People take turns in conversation with tiny gaps, often a fraction of a second. A voice assistant has to hear you, understand you, think and speak back fast enough to keep that rhythm, which is far harder than replying in a chat window.",
+          terms: ["turn-taking", "voice-agent", "voice-latency"],
         },
         {
           slug: "sound-basics",
