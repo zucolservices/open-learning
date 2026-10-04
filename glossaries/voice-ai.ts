@@ -133,4 +133,22 @@ export const voiceAi = {
       "A quality rating made by averaging listeners' scores from 1 (bad) to 5 (excellent); scores from different tests aren't directly comparable.",
     module: "text-to-speech",
   },
+  prosody: {
+    term: "Prosody",
+    definition:
+      "The rhythm, stress, pitch and pace of speech, which carry meaning beyond the words themselves.",
+    module: "writing-for-voice",
+  },
+  ssml: {
+    term: "SSML",
+    definition:
+      "Speech Synthesis Markup Language: a W3C standard for marking up text with pauses, emphasis, speed, pitch and pronunciation for a text-to-speech voice.",
+    module: "writing-for-voice",
+  },
+  "text-normalisation": {
+    term: "Text normalisation",
+    definition:
+      "Converting written forms such as numbers, dates, symbols and abbreviations into the words a voice should say.",
+    module: "writing-for-voice",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -9446,11 +9446,12 @@ const voiceAi: Track = {
             "Pronouncing numbers and names",
             "Short, spoken-style replies",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["text-to-speech"],
           plain:
             "Text written for screens often sounds wrong spoken aloud: long sentences, bullet lists, '12/03' and 'Dr.' all trip a voice up. Voice replies need short sentences, spelled-out numbers and controls for pronunciation and emphasis.",
+          terms: ["prosody", "ssml", "text-normalisation"],
         },
         {
           slug: "voice-cloning",
