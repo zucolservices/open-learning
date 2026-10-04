@@ -8966,11 +8966,12 @@ const aiAgents: Track = {
             "Give an agent a code sandbox, a browser and a desktop, and compare speed, reliability and risk on one task",
           formats: ["simulation", "checkpoint"],
           concepts: ["Code execution", "Browser and computer use", "Sandboxes"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["tool-design"],
           plain:
             "Some agents act through general-purpose tools: they write and run code, browse websites or look at a screen and move the mouse. These tools are very flexible but slower and riskier, so they run in isolated sandboxes.",
+          terms: ["computer-use", "code-execution", "sandbox"],
         },
       ],
     },

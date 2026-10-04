@@ -98,4 +98,22 @@ export const aiAgents = {
       "A program that offers tools, resources and prompts for one service, such as a calendar or code repository, to any MCP client.",
     module: "mcp",
   },
+  "computer-use": {
+    term: "Computer use",
+    definition:
+      "Letting a model operate a computer like a person: it looks at screenshots and asks for mouse clicks and key presses, which software carries out.",
+    module: "computer-use",
+  },
+  "code-execution": {
+    term: "Code execution tool",
+    definition:
+      "A tool that lets a model write code and run it in an isolated environment, then read the output, for calculations, data analysis or calling other tools.",
+    module: "computer-use",
+  },
+  sandbox: {
+    term: "Sandbox",
+    definition:
+      "An isolated environment, such as a container or small virtual machine, where agent actions or code run without access to real files, accounts or networks unless allowed.",
+    module: "computer-use",
+  },
 } satisfies Record<string, GlossaryEntry>;
