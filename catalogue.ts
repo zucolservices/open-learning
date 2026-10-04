@@ -9723,11 +9723,12 @@ const llmEvaluation: Track = {
             "Assemble an eval set from real logs, edge cases and adversarial examples, and see which failures each part catches",
           formats: ["simulation", "checkpoint"],
           concepts: ["Golden datasets", "Coverage and edge cases", "Keeping test data separate"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["success-criteria"],
           plain:
             "An eval is only as good as its test cases. Good sets mix typical real questions, tricky edge cases and deliberately hard examples, each with what a good answer should contain, and grow every time a new failure is found.",
+          terms: ["eval-set", "edge-case", "held-out-set", "llm-trace"],
         },
       ],
     },
