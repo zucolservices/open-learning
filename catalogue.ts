@@ -7704,11 +7704,12 @@ const spark: Track = {
             "Shuffle write and read",
             "Why shuffles are expensive",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["jobs-stages-tasks"],
           plain:
             "Some operations, like grouping or joining, need all the rows with the same key on the same machine. Getting them there means writing data out, sending it over the network and reading it back: a shuffle. It's usually the slowest part of a job.",
+          terms: ["shuffle", "shuffle-file", "exchange", "external-shuffle-service"],
         },
         {
           slug: "spark-joins",

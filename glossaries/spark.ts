@@ -229,4 +229,28 @@ export const spark = {
       "A Spark service that rebuilds the UI of finished applications from their event logs.",
     module: "jobs-stages-tasks",
   },
+  shuffle: {
+    term: "Shuffle",
+    definition:
+      "Spark's way of regrouping data across partitions, for example so all rows with the same key end up together. It costs disk, serialisation and network time, and marks a stage boundary.",
+    module: "shuffle",
+  },
+  "shuffle-file": {
+    term: "Shuffle file",
+    definition:
+      "The file a map-side task writes to its node's local disk during a shuffle, holding one block for each task in the next stage.",
+    module: "shuffle",
+  },
+  exchange: {
+    term: "Exchange",
+    definition:
+      "The operator in a Spark physical plan that marks a shuffle (or a broadcast) of data between stages.",
+    module: "shuffle",
+  },
+  "external-shuffle-service": {
+    term: "External shuffle service",
+    definition:
+      "A long-running process on each node that serves shuffle files on behalf of executors, so they stay available after an executor is removed. Off by default; not available on Kubernetes.",
+    module: "shuffle",
+  },
 } satisfies Record<string, GlossaryEntry>;
