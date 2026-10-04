@@ -295,4 +295,16 @@ export const voiceAi = {
       "A service that rents you a ready-made voice agent, with phone numbers, transfers and dashboards, configured rather than coded.",
     module: "voice-platforms",
   },
+  "simulated-caller": {
+    term: "Simulated caller",
+    definition:
+      "An AI that plays a caller with a goal and a personality, rings a voice agent as a test, and reports whether the goal was met.",
+    module: "voice-quality",
+  },
+  "containment-rate": {
+    term: "Containment rate",
+    definition:
+      "The share of calls handled without a person taking over. Misleading on its own, because callers who hang up in frustration also count as “contained”.",
+    module: "voice-quality",
+  },
 } satisfies Record<string, GlossaryEntry>;

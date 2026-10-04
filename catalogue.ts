@@ -9624,11 +9624,12 @@ const voiceAi: Track = {
             "Latency, accuracy and task success",
             "Recording, privacy and disclosure",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["voice-tools"],
           plain:
             "Voice agents need testing like any software, plus checks on speed, recognition accuracy and whether callers got what they needed. Recording calls for review brings duties: consent, privacy and telling people they're talking to AI.",
+          terms: ["simulated-caller", "containment-rate", "percentile", "wer"],
         },
       ],
     },
