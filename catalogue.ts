@@ -9213,11 +9213,12 @@ const aiAgents: Track = {
             "Choose where an expense agent asks a person, and balance speed against mistakes over a month",
           formats: ["simulation", "checkpoint"],
           concepts: ["Approval and escalation", "Levels of autonomy", "Designing the handover"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["guardrails"],
           plain:
             "Most useful agents work with people, not instead of them. Deciding which steps need approval, when to escalate and how to show the person what the agent did is central to trusting it.",
+          terms: ["human-in-the-loop", "automation-bias", "approval-fatigue", "agent-autonomy"],
         },
         {
           slug: "agent-evals",

@@ -266,4 +266,10 @@ export const aiAgents = {
       "Getting stolen data out of a system, for example by making an agent load a link or image whose web address contains the data.",
     module: "agent-security",
   },
+  "approval-fatigue": {
+    term: "Approval fatigue",
+    definition:
+      "When people are asked to approve so many actions that they stop reading and approve automatically, defeating the point of the check.",
+    module: "human-in-the-loop",
+  },
 } satisfies Record<string, GlossaryEntry>;
