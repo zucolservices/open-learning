@@ -9707,11 +9707,12 @@ const llmEvaluation: Track = {
             "Quality, safety, latency and cost",
             "Trade-offs between them",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["why-evals"],
           plain:
             "Before measuring, decide what success looks like: correct facts, the right tone, no harmful content, fast enough and affordable. Vague goals like 'helpful' must become things you can check.",
+          terms: ["success-criteria", "goodharts-law"],
         },
         {
           slug: "eval-datasets",

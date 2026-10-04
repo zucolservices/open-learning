@@ -428,4 +428,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "voice-ai/voice-quality": () => import("./voice-ai/voice-quality"),
   "voice-ai/capstone-voice": () => import("./voice-ai/capstone-voice"),
   "llm-evaluation/why-evals": () => import("./llm-evaluation/why-evals"),
+  "llm-evaluation/success-criteria": () => import("./llm-evaluation/success-criteria"),
 };
