@@ -98,4 +98,22 @@ export const dataQuality = {
       "A declared rule about data, such as 'amount is never negative'. Great Expectations' name for a single check.",
     module: "expectations",
   },
+  "write-audit-publish": {
+    term: "Write-Audit-Publish (WAP)",
+    definition:
+      "Writing new data where consumers can't see it, checking it, and only then making it visible. Popularised by Netflix in 2017.",
+    module: "where-to-test",
+  },
+  "shift-left": {
+    term: "Shift left",
+    definition:
+      "Moving checks earlier in a process, where problems are cheaper to fix and haven't yet reached users.",
+    module: "where-to-test",
+  },
+  "data-branch": {
+    term: "Data branch",
+    definition:
+      "A git-like branch of a table or lake, such as in Apache Iceberg or lakeFS, where changes can be made and checked before merging.",
+    module: "where-to-test",
+  },
 } satisfies Record<string, GlossaryEntry>;

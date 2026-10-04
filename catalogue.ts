@@ -8547,11 +8547,12 @@ const dataQuality: Track = {
             "Place checks along a pipeline and see where each kind of bad data gets caught, or slips through",
           formats: ["build-connect", "checkpoint"],
           concepts: ["Testing at each layer", "Write-audit-publish", "Branches for data"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["expectations"],
           plain:
             "A check at the end catches problems after the damage; a check only at the start misses what transformations break. Good pipelines test at every stage, and some stage new data out of sight until it passes.",
+          terms: ["write-audit-publish", "shift-left", "data-branch"],
         },
         {
           slug: "severity",
