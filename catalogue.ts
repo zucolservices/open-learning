@@ -8151,11 +8151,19 @@ const dataModelling: Track = {
             "Periodic and accumulating snapshots",
             "Additive and semi-additive measures",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["grain"],
           plain:
             "Not every fact table records single events. Some take a regular snapshot, like daily stock levels; others follow a process from start to finish, like an order moving through stages. Each answers different questions.",
+          terms: [
+            "transaction-fact",
+            "periodic-snapshot",
+            "accumulating-snapshot",
+            "additive-fact",
+            "semi-additive-fact",
+            "factless-fact",
+          ],
         },
         {
           slug: "conformed-dimensions",

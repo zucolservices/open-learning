@@ -343,4 +343,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-modelling/oltp-olap": () => import("./data-modelling/oltp-olap"),
   "data-modelling/star-schema": () => import("./data-modelling/star-schema"),
   "data-modelling/grain": () => import("./data-modelling/grain"),
+  "data-modelling/fact-tables": () => import("./data-modelling/fact-tables"),
 };

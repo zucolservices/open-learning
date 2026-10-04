@@ -216,4 +216,39 @@ export const dataModelling = {
       "An operational activity that produces measurements, such as taking an order or processing a claim. Each fact table usually models one.",
     module: "grain",
   },
+  "transaction-fact": {
+    term: "Transaction fact table",
+    definition:
+      "A fact table with one row per measurement event, added when it happens and never changed.",
+    module: "fact-tables",
+  },
+  "periodic-snapshot": {
+    term: "Periodic snapshot",
+    definition:
+      "A fact table with one row per thing per period (day, week, month), such as a balance or stock level, even when nothing happened.",
+    module: "fact-tables",
+  },
+  "accumulating-snapshot": {
+    term: "Accumulating snapshot",
+    definition:
+      "A fact table with one row per instance of a process (an order, a claim), holding a date for each milestone and updated as it progresses.",
+    module: "fact-tables",
+  },
+  "additive-fact": {
+    term: "Additive fact",
+    definition: "A fact that can be summed across every dimension, such as sales amount.",
+    module: "fact-tables",
+  },
+  "semi-additive-fact": {
+    term: "Semi-additive fact",
+    definition:
+      "A fact that can be summed across some dimensions but not others; balances add across accounts but not across time.",
+    module: "fact-tables",
+  },
+  "factless-fact": {
+    term: "Factless fact table",
+    definition:
+      "A fact table whose rows record only that dimensions met, such as a student attending a class, with no numeric measures.",
+    module: "fact-tables",
+  },
 } satisfies Record<string, GlossaryEntry>;
