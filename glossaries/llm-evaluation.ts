@@ -133,4 +133,22 @@ export const llmEvaluation = {
       "A statistical model that turns many head-to-head comparisons into a rating for each contestant, with uncertainty ranges. Used by Arena leaderboards.",
     module: "human-eval",
   },
+  "confidence-interval": {
+    term: "Confidence interval",
+    definition:
+      "A range around an estimate, built so that ranges made this way contain the true value a stated share of the time (often 95%).",
+    module: "eval-statistics",
+  },
+  "standard-error": {
+    term: "Standard error",
+    definition:
+      "How much an estimate such as an eval score would vary from sample to sample. For a pass rate p on n questions it is √(p(1−p)/n).",
+    module: "eval-statistics",
+  },
+  bootstrap: {
+    term: "Bootstrap",
+    definition:
+      "Estimating uncertainty by resampling your own data with replacement many times and looking at how much the result varies.",
+    module: "eval-statistics",
+  },
 } satisfies Record<string, GlossaryEntry>;

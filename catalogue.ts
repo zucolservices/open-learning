@@ -9860,11 +9860,12 @@ const llmEvaluation: Track = {
             "Rerun an eval on different samples and watch the score wobble, then add confidence intervals",
           formats: ["simulation", "checkpoint"],
           concepts: ["Sampling error", "Confidence intervals", "How many cases you need"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["eval-datasets"],
           plain:
             "An eval score of 82% from 100 cases could easily be 75% or 89% on another 100. Confidence intervals show that uncertainty, and tell you how many cases you need before a difference means anything.",
+          terms: ["confidence-interval", "standard-error", "bootstrap"],
         },
         {
           slug: "comparing-versions",
