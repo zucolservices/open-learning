@@ -530,4 +530,35 @@ export const enterprisePatterns = {
       "An automated, objective check that a system still has an architectural characteristic you care about, such as no forbidden dependencies or a page under a time budget, run on every build.",
     module: "decisions",
   },
+  "enterprise-architecture": {
+    term: "Enterprise architecture",
+    definition:
+      "The practice of understanding and guiding all of an organisation's systems together: what exists, what overlaps, and where to invest, so they support the business as it changes.",
+    analogy: "A city planner, who keeps maps and builds roads rather than designing every house.",
+    module: "enterprise-architecture",
+  },
+  "c4-model": {
+    term: "C4 model",
+    definition:
+      "Simon Brown's way of drawing software architecture at four zoom levels: system context, containers (running applications and data stores), components and code.",
+    module: "enterprise-architecture",
+  },
+  "technology-radar": {
+    term: "Technology radar",
+    definition:
+      "A chart placing technologies in rings (Thoughtworks uses Adopt, Trial, Assess and Caution) to guide teams on what's proven, being tried, worth exploring or best avoided.",
+    module: "enterprise-architecture",
+  },
+  "capability-map": {
+    term: "Business capability map",
+    definition:
+      "A picture of what a business does to generate value (sales, claims, payments), independent of how it's done or which systems do it.",
+    module: "enterprise-architecture",
+  },
+  "paved-road": {
+    term: "Paved road (golden path)",
+    definition:
+      "A supported, recommended set of tools and practices that is made easier to use than the alternatives, so teams choose it without being forced to.",
+    module: "enterprise-architecture",
+  },
 } satisfies Record<string, GlossaryEntry>;

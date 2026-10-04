@@ -313,4 +313,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "enterprise-patterns/strangler-fig": () => import("./enterprise-patterns/strangler-fig"),
   "enterprise-patterns/legacy-integration": () => import("./enterprise-patterns/legacy-integration"),
   "enterprise-patterns/decisions": () => import("./enterprise-patterns/decisions"),
+  "enterprise-patterns/enterprise-architecture": () => import("./enterprise-patterns/enterprise-architecture"),
 };
