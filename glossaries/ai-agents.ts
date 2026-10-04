@@ -218,4 +218,16 @@ export const aiAgents = {
       "Passing a conversation from one agent to another, which then takes over, like being transferred to a different desk.",
     module: "multi-agent",
   },
+  a2a: {
+    term: "Agent2Agent protocol (A2A)",
+    definition:
+      "An open protocol, started by Google in 2025 and now under the Linux Foundation, that lets agents built by different organisations discover each other, delegate tasks and return results.",
+    module: "agent-protocols",
+  },
+  "agent-card": {
+    term: "Agent Card",
+    definition:
+      "A JSON file an A2A agent publishes at a well-known web address, describing its skills, where to send requests and how to authenticate.",
+    module: "agent-protocols",
+  },
 } satisfies Record<string, GlossaryEntry>;

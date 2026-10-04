@@ -9129,11 +9129,12 @@ const aiAgents: Track = {
             "Tasks between agents",
             "MCP versus agent-to-agent",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["mcp", "multi-agent"],
           plain:
             "When agents from different companies need to cooperate, they need a shared language. Agent-to-agent protocols let one agent find another, learn what it can do and hand it a task, much as MCP standardises tools.",
+          terms: ["a2a", "agent-card", "mcp"],
         },
         {
           slug: "agent-frameworks",

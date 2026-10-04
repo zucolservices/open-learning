@@ -401,4 +401,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "ai-agents/context-management": () => import("./ai-agents/context-management"),
   "ai-agents/durable-agents": () => import("./ai-agents/durable-agents"),
   "ai-agents/multi-agent": () => import("./ai-agents/multi-agent"),
+  "ai-agents/agent-protocols": () => import("./ai-agents/agent-protocols"),
 };
