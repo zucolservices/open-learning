@@ -30,6 +30,8 @@ import { DataModellingScene } from "@/components/home/data-modelling-scene";
 import { DataModellingTaste } from "@/components/home/data-modelling-taste";
 import { DataQualityScene } from "@/components/home/data-quality-scene";
 import { DataQualityTaste } from "@/components/home/data-quality-taste";
+import { AiAgentsScene } from "@/components/home/ai-agents-scene";
+import { AiAgentsTaste } from "@/components/home/ai-agents-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -166,5 +168,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: DataQualityTaste,
     tasteCaption:
       "A taste of module 13: judge eight weeks of row counts three ways and count the real problems caught and the false alarms.",
+  },
+  "ai-agents": {
+    Scene: AiAgentsScene,
+    sceneCaption:
+      "An agent system: a model in a loop with tools, memory, other agents, guardrails, a person and evals. Watch the tour, or click any part.",
+    Taste: AiAgentsTaste,
+    tasteCaption:
+      "A taste of module 17: switch the three legs of the lethal trifecta and see whether a poisoned web page can steal data.",
   },
 };
