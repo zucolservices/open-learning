@@ -9192,11 +9192,17 @@ const aiAgents: Track = {
             "Private data, untrusted content, a way out",
             "Defences that work",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["guardrails"],
           plain:
             "Agents read emails, web pages and documents written by strangers, and a model can't reliably tell data from instructions. Hidden text can hijack an agent, so the defence is limiting what a hijacked agent could do.",
+          terms: [
+            "indirect-prompt-injection",
+            "lethal-trifecta",
+            "exfiltration",
+            "prompt-injection",
+          ],
         },
         {
           slug: "human-in-the-loop",

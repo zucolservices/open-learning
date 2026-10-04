@@ -254,4 +254,16 @@ export const aiAgents = {
       "OWASP's name for the risk of giving an AI system too many tools, too many permissions or too much freedom to act without checks.",
     module: "guardrails",
   },
+  "indirect-prompt-injection": {
+    term: "Indirect prompt injection",
+    definition:
+      "Instructions hidden in content an agent reads, such as a web page, email or ticket, which can hijack it because models can't reliably tell instructions from data.",
+    module: "agent-security",
+  },
+  exfiltration: {
+    term: "Exfiltration",
+    definition:
+      "Getting stolen data out of a system, for example by making an agent load a link or image whose web address contains the data.",
+    module: "agent-security",
+  },
 } satisfies Record<string, GlossaryEntry>;
