@@ -419,4 +419,28 @@ export const dataModelling = {
       "An assertion checked against a model's data on every run, such as a column being unique, never null, or pointing at existing rows.",
     module: "dbt-layers",
   },
+  "access-pattern": {
+    term: "Access pattern",
+    definition:
+      "A specific question an application asks of its data, such as 'a customer's orders, newest first'. NoSQL designs are built around them.",
+    module: "nosql-modelling",
+  },
+  embedding: {
+    term: "Embedding",
+    definition:
+      "Storing related data inside one document, such as an order's items inside the order, so it is read in a single operation.",
+    module: "nosql-modelling",
+  },
+  referencing: {
+    term: "Referencing",
+    definition:
+      "Storing only an id that points to data kept in another collection, as with a foreign key.",
+    module: "nosql-modelling",
+  },
+  "single-table-design": {
+    term: "Single-table design",
+    definition:
+      "A DynamoDB pattern that stores several entity types in one table, with partition and sort keys chosen so each access pattern is one request.",
+    module: "nosql-modelling",
+  },
 } satisfies Record<string, GlossaryEntry>;

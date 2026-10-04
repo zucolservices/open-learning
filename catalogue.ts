@@ -8341,11 +8341,12 @@ const dataModelling: Track = {
             "Embedding vs referencing",
             "Single-table design",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["normalisation"],
           plain:
             "Document and key-value databases don't do joins well, so you design around the questions the application asks, often duplicating data deliberately so each read is a single lookup.",
+          terms: ["access-pattern", "embedding", "referencing", "single-table-design"],
         },
         {
           slug: "graph-modelling",
