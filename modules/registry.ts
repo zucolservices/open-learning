@@ -441,4 +441,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "llm-evaluation/benchmarks": () => import("./llm-evaluation/benchmarks"),
   "llm-evaluation/contamination": () => import("./llm-evaluation/contamination"),
   "llm-evaluation/eval-systems": () => import("./llm-evaluation/eval-systems"),
+  "llm-evaluation/safety-evals": () => import("./llm-evaluation/safety-evals"),
 };

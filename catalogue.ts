@@ -9982,11 +9982,12 @@ const llmEvaluation: Track = {
             "Red-team an assistant with jailbreaks and harmful requests, then balance harmful answers against needless refusals",
           formats: ["simulation", "checkpoint"],
           concepts: ["Red-teaming", "Harmful output and jailbreaks", "Over-refusal"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["llm-judge"],
           plain:
             "Safety evaluation deliberately tries to make a system misbehave: harmful advice, leaked data, broken rules. It must also check the opposite failure, refusing harmless requests, because both hurt users.",
+          terms: ["red-teaming", "over-refusal", "jailbreak"],
         },
         {
           slug: "fairness-evals",

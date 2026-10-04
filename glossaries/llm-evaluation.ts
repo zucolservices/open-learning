@@ -211,4 +211,22 @@ export const llmEvaluation = {
       "Grading the path an agent took (which tools it called, with what inputs, in what order) rather than only its final result.",
     module: "eval-systems",
   },
+  "red-teaming": {
+    term: "Red-teaming",
+    definition:
+      "Deliberately attacking your own AI system to find harmful or wrong behaviour before real users or attackers do.",
+    module: "safety-evals",
+  },
+  "over-refusal": {
+    term: "Over-refusal",
+    definition:
+      "A model declining harmless requests because they sound alarming, such as “how do I kill a Python process?”.",
+    module: "safety-evals",
+  },
+  jailbreak: {
+    term: "Jailbreak",
+    definition:
+      "An input crafted to trick a model into ignoring its safety training and producing content it would normally refuse.",
+    module: "safety-evals",
+  },
 } satisfies Record<string, GlossaryEntry>;
