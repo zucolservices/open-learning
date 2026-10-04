@@ -144,4 +144,28 @@ export const dataModelling = {
       "A slightly stricter third normal form (1974): every column that determines another must be a candidate key.",
     module: "normalisation",
   },
+  oltp: {
+    term: "OLTP",
+    definition:
+      "Online transaction processing: systems that record and update individual transactions, such as orders and payments, quickly and reliably.",
+    module: "oltp-olap",
+  },
+  olap: {
+    term: "OLAP",
+    definition:
+      "Online analytical processing: systems built to group and summarise large amounts of data from many angles. The term was coined by E. F. Codd and colleagues in 1993.",
+    module: "oltp-olap",
+  },
+  denormalisation: {
+    term: "Denormalisation",
+    definition:
+      "Deliberately repeating data, such as copying a product's category onto every sale, so reads need fewer joins. Writes then have more copies to keep in step.",
+    module: "oltp-olap",
+  },
+  etl: {
+    term: "ETL / ELT",
+    definition:
+      "Extract, transform, load: copying data out of source systems, reshaping it and loading it into an analytical store. ELT loads first and transforms inside the warehouse.",
+    module: "oltp-olap",
+  },
 } satisfies Record<string, GlossaryEntry>;

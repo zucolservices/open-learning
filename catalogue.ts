@@ -8088,11 +8088,12 @@ const dataModelling: Track = {
             "Denormalisation",
             "Separate models for separate jobs",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["normalisation"],
           plain:
             "Systems that take orders need small, fast, consistent updates, so they're normalised. Systems that answer questions over millions of rows prefer fewer joins, so they're often denormalised. Most organisations need both.",
+          terms: ["oltp", "olap", "denormalisation", "etl"],
         },
       ],
     },
