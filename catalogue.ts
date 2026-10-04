@@ -7127,11 +7127,12 @@ const enterprisePatterns: Track = {
             "Arrange domain events for a loan application on a timeline, then add commands, actors and hot spots",
           formats: ["simulation", "checkpoint"],
           concepts: ["Domain events", "Commands, actors and policies", "Finding boundaries"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["domain-language"],
           plain:
             "Get the people who know the business in a room with a long wall and orange sticky notes. Writing down everything that happens, in the past tense and in order, quickly shows how the business works and where the boundaries are.",
+          terms: ["event-storming", "domain-event", "hot-spot", "es-policy", "domain-expert"],
         },
       ],
     },

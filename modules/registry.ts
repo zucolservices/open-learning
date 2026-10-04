@@ -300,4 +300,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "enterprise-patterns/bounded-contexts": () => import("./enterprise-patterns/bounded-contexts"),
   "enterprise-patterns/context-mapping": () => import("./enterprise-patterns/context-mapping"),
   "enterprise-patterns/aggregates": () => import("./enterprise-patterns/aggregates"),
+  "enterprise-patterns/event-storming": () => import("./enterprise-patterns/event-storming"),
 };

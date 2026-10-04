@@ -192,4 +192,22 @@ export const enterprisePatterns = {
       'A record of something that happened that domain experts care about, named in the past tense ("Order placed") and never changed afterwards.',
     module: "aggregates",
   },
+  "event-storming": {
+    term: "EventStorming",
+    definition:
+      "Alberto Brandolini's workshop format for exploring a business domain: developers and domain experts write past-tense events on sticky notes along a timeline, then add their causes, problems and boundaries.",
+    module: "event-storming",
+  },
+  "hot-spot": {
+    term: "Hot spot",
+    definition:
+      "In EventStorming, a sticky note marking a question, disagreement or problem on the wall, to come back to later.",
+    module: "event-storming",
+  },
+  "es-policy": {
+    term: "Policy (EventStorming)",
+    definition:
+      'An automatic reaction written as "whenever this happens, do that": an event triggers a command somewhere else.',
+    module: "event-storming",
+  },
 } satisfies Record<string, GlossaryEntry>;
