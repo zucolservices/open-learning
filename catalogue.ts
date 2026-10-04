@@ -8857,10 +8857,11 @@ const aiAgents: Track = {
             "Autonomy is a dial",
             "When an agent is worth it",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           plain:
             "A chatbot answers once. An agent is given a goal and works towards it on its own: it decides what to do next, uses tools such as search or a calendar, looks at the result and keeps going until it's done.",
+          terms: ["ai-agent", "agent-workflow", "agent-autonomy", "tool-calling"],
         },
         {
           slug: "agent-loop",

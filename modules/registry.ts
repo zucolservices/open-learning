@@ -290,7 +290,8 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "database-internals/isolation": () => import("./database-internals/isolation"),
   "database-internals/locking": () => import("./database-internals/locking"),
   "database-internals/mvcc": () => import("./database-internals/mvcc"),
-  "database-internals/replication-internals": () => import("./database-internals/replication-internals"),
+  "database-internals/replication-internals": () =>
+    import("./database-internals/replication-internals"),
   "database-internals/distributed-sql": () => import("./database-internals/distributed-sql"),
   "database-internals/engines-compared": () => import("./database-internals/engines-compared"),
   "database-internals/capstone-db": () => import("./database-internals/capstone-db"),
@@ -301,20 +302,29 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "enterprise-patterns/context-mapping": () => import("./enterprise-patterns/context-mapping"),
   "enterprise-patterns/aggregates": () => import("./enterprise-patterns/aggregates"),
   "enterprise-patterns/event-storming": () => import("./enterprise-patterns/event-storming"),
-  "enterprise-patterns/integration-styles": () => import("./enterprise-patterns/integration-styles"),
-  "enterprise-patterns/messaging-patterns": () => import("./enterprise-patterns/messaging-patterns"),
-  "enterprise-patterns/routing-transformation": () => import("./enterprise-patterns/routing-transformation"),
-  "enterprise-patterns/orchestration-choreography": () => import("./enterprise-patterns/orchestration-choreography"),
+  "enterprise-patterns/integration-styles": () =>
+    import("./enterprise-patterns/integration-styles"),
+  "enterprise-patterns/messaging-patterns": () =>
+    import("./enterprise-patterns/messaging-patterns"),
+  "enterprise-patterns/routing-transformation": () =>
+    import("./enterprise-patterns/routing-transformation"),
+  "enterprise-patterns/orchestration-choreography": () =>
+    import("./enterprise-patterns/orchestration-choreography"),
   "enterprise-patterns/esb-to-api-led": () => import("./enterprise-patterns/esb-to-api-led"),
   "enterprise-patterns/hexagonal": () => import("./enterprise-patterns/hexagonal"),
-  "enterprise-patterns/monolith-microservices": () => import("./enterprise-patterns/monolith-microservices"),
-  "enterprise-patterns/cqrs-event-sourcing": () => import("./enterprise-patterns/cqrs-event-sourcing"),
+  "enterprise-patterns/monolith-microservices": () =>
+    import("./enterprise-patterns/monolith-microservices"),
+  "enterprise-patterns/cqrs-event-sourcing": () =>
+    import("./enterprise-patterns/cqrs-event-sourcing"),
   "enterprise-patterns/data-ownership": () => import("./enterprise-patterns/data-ownership"),
   "enterprise-patterns/strangler-fig": () => import("./enterprise-patterns/strangler-fig"),
-  "enterprise-patterns/legacy-integration": () => import("./enterprise-patterns/legacy-integration"),
+  "enterprise-patterns/legacy-integration": () =>
+    import("./enterprise-patterns/legacy-integration"),
   "enterprise-patterns/decisions": () => import("./enterprise-patterns/decisions"),
-  "enterprise-patterns/enterprise-architecture": () => import("./enterprise-patterns/enterprise-architecture"),
-  "enterprise-patterns/capstone-enterprise": () => import("./enterprise-patterns/capstone-enterprise"),
+  "enterprise-patterns/enterprise-architecture": () =>
+    import("./enterprise-patterns/enterprise-architecture"),
+  "enterprise-patterns/capstone-enterprise": () =>
+    import("./enterprise-patterns/capstone-enterprise"),
   "spark/why-spark": () => import("./spark/why-spark"),
   "spark/cluster-anatomy": () => import("./spark/cluster-anatomy"),
   "spark/rdds-dataframes": () => import("./spark/rdds-dataframes"),
@@ -378,4 +388,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "data-quality/ml-data-quality": () => import("./data-quality/ml-data-quality"),
   "data-quality/dq-platforms": () => import("./data-quality/dq-platforms"),
   "data-quality/capstone-quality": () => import("./data-quality/capstone-quality"),
+  "ai-agents/what-is-an-agent": () => import("./ai-agents/what-is-an-agent"),
 };
