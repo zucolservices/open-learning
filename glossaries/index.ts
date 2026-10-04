@@ -17,6 +17,7 @@ import { ciCd } from "./ci-cd";
 import { observability } from "./observability";
 import { apiDesign } from "./api-design";
 import { databaseInternals } from "./database-internals";
+import { enterprisePatterns } from "./enterprise-patterns";
 import { shared } from "./shared";
 import type { GlossaryEntry } from "./types";
 
@@ -36,6 +37,7 @@ export const trackGlossaries: Record<string, Record<string, GlossaryEntry>> = {
   observability,
   "api-design": apiDesign,
   "database-internals": databaseInternals,
+  "enterprise-patterns": enterprisePatterns,
 };
 
 export type TermId =
@@ -51,7 +53,8 @@ export type TermId =
   | keyof typeof ciCd
   | keyof typeof observability
   | keyof typeof apiDesign
-  | keyof typeof databaseInternals;
+  | keyof typeof databaseInternals
+  | keyof typeof enterprisePatterns;
 
 export interface ResolvedTerm {
   id: string;

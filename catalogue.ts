@@ -98,6 +98,7 @@ export interface Track {
     | "signal"
     | "contract"
     | "ledger"
+    | "keystone"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -6951,6 +6952,436 @@ const playground: Track = {
   ],
 };
 
+const enterprisePatterns: Track = {
+  slug: "enterprise-patterns",
+  title: "Enterprise Patterns",
+  area: "Architecture",
+  category: "architecture",
+  tagline: "Integration, domains and boundaries in large organisations.",
+  description:
+    "How large organisations structure and connect their systems: Conway's law and team design, domain-driven design (ubiquitous language, bounded contexts, context maps, aggregates, event storming), the enterprise integration patterns (integration styles, messaging, routing, orchestration and choreography, from ESBs to API-led integration), architecture styles (hexagonal, modular monoliths and microservices, CQRS and event sourcing, data ownership and data mesh), and changing legacy estates (strangler fig, anticorruption layers, decision records, enterprise architecture). Vendor-neutral, with examples on open-source tools and AWS, Azure and Google Cloud integration services. By the end you can draw sensible boundaries, choose how systems should talk, and plan a migration you can actually finish.",
+  accent: "keystone",
+  chapters: [
+    {
+      slug: "big-picture",
+      title: "The big picture",
+      summary: "Why systems in large organisations are hard, and why it's mostly about people.",
+      modules: [
+        {
+          slug: "why-enterprise",
+          title: "What makes enterprise systems hard",
+          summary: "Many teams, old systems, one business.",
+          minutes: 20,
+          signature:
+            "Follow one customer address change through a dozen systems that each keep their own copy",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: ["Systems of record", "Integration sprawl", "Change across teams"],
+          status: "live",
+          level: "beginner",
+          plain:
+            "A large organisation runs hundreds of systems built at different times by different teams. The hard part isn't any one system; it's keeping them in step as the business changes.",
+          terms: [
+            "system-of-record",
+            "big-ball-of-mud",
+            "point-to-point",
+            "pace-layers",
+            "legacy-system",
+          ],
+        },
+        {
+          slug: "conways-law",
+          title: "Conway's law and team topologies",
+          summary: "Systems mirror the teams that build them.",
+          minutes: 25,
+          signature: "Reorganise teams around a product and watch the architecture redraw itself",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Conway's law",
+            "The inverse Conway manoeuvre",
+            "Team types and interaction modes",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-enterprise"],
+          plain:
+            "Software tends to take the shape of the organisation that builds it: three teams make three components. So designing teams is part of designing systems.",
+        },
+      ],
+    },
+    {
+      slug: "domains",
+      title: "Domains and boundaries",
+      summary: "Modelling the business so the code makes sense to the people who use it.",
+      modules: [
+        {
+          slug: "domain-language",
+          title: "A shared language",
+          summary: "Same word, different meanings.",
+          minutes: 20,
+          signature:
+            "Find the five meanings of 'customer' across sales, billing, support and delivery",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Domain-driven design", "Ubiquitous language", "Domain experts"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-enterprise"],
+          plain:
+            "Bugs often start with words: 'account' or 'policy' means one thing to sales and another to finance. Domain-driven design asks teams to agree a precise language with the business, and use it in the code.",
+        },
+        {
+          slug: "bounded-contexts",
+          title: "Bounded contexts",
+          summary: "Where one model ends and another begins.",
+          minutes: 25,
+          signature:
+            "Split one bloated Customer model into contexts and draw the lines between them",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Bounded contexts",
+            "One model per context",
+            "Subdomains: core, supporting, generic",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["domain-language"],
+          plain:
+            "Instead of one giant model of the whole business, draw boundaries. Inside each, words have one meaning and one team owns the model; between them, you translate.",
+        },
+        {
+          slug: "context-mapping",
+          title: "Context maps",
+          summary: "How bounded contexts relate to each other.",
+          minutes: 25,
+          signature:
+            "Map six relationships between contexts, from partnership to anticorruption layer",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "Upstream and downstream",
+            "Conformist, shared kernel, open host",
+            "Anticorruption layer",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["bounded-contexts"],
+          plain:
+            "Once you have boundaries, you need to know how each pair of contexts depends on the other and who adapts to whom. A context map records it, and warns where trouble will come from.",
+        },
+        {
+          slug: "aggregates",
+          title: "Entities, value objects and aggregates",
+          summary: "Drawing consistency boundaries.",
+          minutes: 25,
+          signature:
+            "Design an order aggregate, then break its rules and watch concurrent updates collide",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Entities and value objects",
+            "Aggregates and invariants",
+            "Small aggregates, references by ID",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["bounded-contexts"],
+          plain:
+            "Inside a context, some objects must change together to stay valid, like an order and its lines. An aggregate groups them so one transaction keeps the rules; everything else is linked by ID and updated separately.",
+        },
+        {
+          slug: "event-storming",
+          title: "Event storming",
+          summary: "Discovering a domain with sticky notes.",
+          minutes: 20,
+          signature:
+            "Arrange domain events for a loan application on a timeline, then add commands, actors and hot spots",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Domain events", "Commands, actors and policies", "Finding boundaries"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["domain-language"],
+          plain:
+            "Get the people who know the business in a room with a long wall and orange sticky notes. Writing down everything that happens, in the past tense and in order, quickly shows how the business works and where the boundaries are.",
+        },
+      ],
+    },
+    {
+      slug: "integration",
+      title: "Integrating systems",
+      summary: "Getting separate systems to work together.",
+      modules: [
+        {
+          slug: "integration-styles",
+          title: "Four ways to integrate",
+          summary: "Files, shared databases, calls and messages.",
+          minutes: 25,
+          signature: "Connect a billing system four ways and break each with the same change",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["File transfer", "Shared database", "Remote calls", "Messaging"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["why-enterprise"],
+          plain:
+            "Systems can share data by exchanging files, reading the same database, calling each other, or sending messages. Each trades simplicity against how tightly the systems are tied together.",
+        },
+        {
+          slug: "messaging-patterns",
+          title: "Messaging building blocks",
+          summary: "Channels, messages and endpoints.",
+          minutes: 25,
+          signature:
+            "Send commands, events and documents through point-to-point and publish-subscribe channels",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Point-to-point vs publish-subscribe",
+            "Command, event and document messages",
+            "Correlation and dead letters",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["integration-styles"],
+          plain:
+            "Messaging has a small vocabulary that hasn't changed in twenty years: channels carry messages between endpoints, and a message is a command, an event or a document. Learn it once and every broker makes sense.",
+        },
+        {
+          slug: "routing-transformation",
+          title: "Routing and transformation",
+          summary: "Getting the right message to the right place in the right shape.",
+          minutes: 25,
+          signature: "Build an order pipeline with a router, splitter, translator and aggregator",
+          formats: ["build-connect", "simulation", "checkpoint"],
+          concepts: [
+            "Content-based router",
+            "Splitter and aggregator",
+            "Translator and canonical data model",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["messaging-patterns"],
+          plain:
+            "Between sender and receiver, messages often need directing, splitting, combining or reshaping. A handful of named patterns covers almost every integration flow.",
+        },
+        {
+          slug: "orchestration-choreography",
+          title: "Orchestration and choreography",
+          summary: "Who's in charge of a business process?",
+          minutes: 25,
+          signature:
+            "Run a loan approval as a central workflow and as reacting services, then fail a step",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Orchestration and process managers",
+            "Choreography with events",
+            "Workflow engines",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["messaging-patterns"],
+          plain:
+            "A process that spans systems can be run by a conductor that tells each one what to do, or by systems reacting to each other's events. One is easier to follow; the other is less coupled.",
+        },
+        {
+          slug: "esb-to-api-led",
+          title: "From ESB to API-led integration",
+          summary: "How enterprise integration platforms evolved.",
+          minutes: 20,
+          signature:
+            "Trace one integration through an ESB, point-to-point code, an API layer and an event mesh",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "Enterprise service bus",
+            "Smart endpoints, dumb pipes",
+            "iPaaS and API-led connectivity",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["routing-transformation"],
+          plain:
+            "Enterprises once put all integration logic in a central bus. Microservices pushed logic back into services; today integration platforms, API gateways and event brokers share the work.",
+        },
+      ],
+    },
+    {
+      slug: "styles",
+      title: "Architecture styles",
+      summary: "Structuring code and services for change.",
+      modules: [
+        {
+          slug: "hexagonal",
+          title: "Layers, hexagons and clean architecture",
+          summary: "Keeping business logic independent of technology.",
+          minutes: 25,
+          signature: "Swap a database and a UI under the same business core without touching it",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Layered architecture", "Ports and adapters", "Dependency rule"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["aggregates"],
+          plain:
+            "Put the business rules in the middle and everything technical (databases, web frameworks, message brokers) at the edges, plugged in through interfaces. Then the core can be tested and kept while the edges change.",
+        },
+        {
+          slug: "monolith-microservices",
+          title: "Modular monoliths and microservices",
+          summary: "How big should a service be?",
+          minutes: 30,
+          signature: "Split a system into one, five and fifty deployables and compare the costs",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Monolith, modular monolith, microservices",
+            "Granularity trade-offs",
+            "Real case studies",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["bounded-contexts", "conways-law"],
+          plain:
+            "Microservices let teams deploy independently but add networks, failures and operations. A well-structured monolith keeps the boundaries without the distribution. The right size follows the teams and the domain.",
+        },
+        {
+          slug: "cqrs-event-sourcing",
+          title: "CQRS and event sourcing",
+          summary: "Separate reads from writes; store what happened.",
+          minutes: 30,
+          signature:
+            "Rebuild an account balance from its events, then add a new read model without touching the write side",
+          formats: ["simulation", "step-through", "checkpoint"],
+          concepts: [
+            "Command-query separation",
+            "Event stores and projections",
+            "When not to use them",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["aggregates"],
+          plain:
+            "Instead of storing only the current state, store every change as an event and derive state from them. Separate models for writing and reading let each be shaped for its job. Powerful, and often overused.",
+        },
+        {
+          slug: "data-ownership",
+          title: "Who owns the data?",
+          summary: "Database per service, master data and data mesh.",
+          minutes: 25,
+          signature:
+            "Untangle five services sharing one database, then decide where the golden customer record lives",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Shared database anti-pattern",
+            "Master data management",
+            "Data mesh and data products",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["bounded-contexts"],
+          plain:
+            "When many systems need the same data, someone must own it. Each service owning its data keeps teams independent; master data management and data mesh are ways to share it across the organisation without chaos.",
+        },
+      ],
+    },
+    {
+      slug: "change",
+      title: "Change and legacy",
+      summary: "Evolving systems you can't switch off.",
+      modules: [
+        {
+          slug: "strangler-fig",
+          title: "The strangler fig",
+          summary: "Replacing a legacy system piece by piece.",
+          minutes: 25,
+          signature:
+            "Migrate a legacy system route by route behind a façade, with a parallel run before each cut-over",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Incremental replacement",
+            "Routing façades",
+            "Branch by abstraction and parallel runs",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["integration-styles"],
+          plain:
+            "Big-bang rewrites of large systems often fail. Instead, put a façade in front of the old system and move one piece at a time to the new one, until the old system can be switched off.",
+        },
+        {
+          slug: "legacy-integration",
+          title: "Living with legacy",
+          summary: "Wrapping, mirroring and protecting yourself from old systems.",
+          minutes: 25,
+          signature:
+            "Connect a new service to a mainframe through an API wrapper, change data capture and an anticorruption layer",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Anticorruption layers in practice",
+            "Wrappers and change data capture",
+            "Mainframes and batch",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["context-mapping", "strangler-fig"],
+          plain:
+            "Many core systems are decades old and still run the business. New systems have to talk to them without inheriting their model, by wrapping them, copying their changes, and translating at the boundary.",
+        },
+        {
+          slug: "decisions",
+          title: "Architecture decisions and fitness functions",
+          summary: "Recording why, and checking it stays true.",
+          minutes: 20,
+          signature:
+            "Write an architecture decision record, then turn its rule into an automated fitness function",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Architecture decision records",
+            "Fitness functions",
+            "Evolutionary architecture",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["hexagonal"],
+          plain:
+            "Architecture is a series of decisions. Writing each one down, with its context and consequences, stops teams relitigating them; automated checks catch the code drifting away from them.",
+        },
+        {
+          slug: "enterprise-architecture",
+          title: "Enterprise architecture and governance",
+          summary: "Seeing the whole estate.",
+          minutes: 25,
+          signature: "Draw a system at four C4 levels, then place technologies on a radar",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "C4 diagrams",
+            "Capability maps and frameworks",
+            "Governance without a bottleneck",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["decisions"],
+          plain:
+            "Someone has to see across hundreds of systems: what exists, what's duplicated, where to invest. Diagrams, capability maps, technology radars and paved roads help, as long as governance guides rather than blocks.",
+        },
+      ],
+    },
+    {
+      slug: "capstone",
+      title: "Capstone",
+      summary: "Everything together, on a real-shaped problem.",
+      modules: [
+        {
+          slug: "capstone-enterprise",
+          title: "Capstone: modernising a benefits system",
+          summary: "Plan the modernisation of a state welfare platform.",
+          minutes: 40,
+          signature:
+            "Split a legacy benefits platform into contexts, choose integration styles and plan a strangler migration, then live with the results",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: ["Applying enterprise patterns"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["strangler-fig", "context-mapping", "orchestration-choreography"],
+          plain:
+            "Everything in this track in one decision-filled project: a state department's twenty-year-old benefits system must be modernised without stopping payments.",
+        },
+      ],
+    },
+  ],
+};
+
 export const tracks: Track[] = [
   lakehouse,
   systemDesign,
@@ -6964,6 +7395,7 @@ export const tracks: Track[] = [
   observability,
   apiDesign,
   databaseInternals,
+  enterprisePatterns,
   playground,
 ];
 
@@ -7088,6 +7520,7 @@ export const categories: Category[] = [
       },
       {
         title: "Enterprise Patterns",
+        slug: "enterprise-patterns",
         blurb: "Integration, domains and boundaries in large organisations.",
       },
     ],

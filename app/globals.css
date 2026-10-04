@@ -219,6 +219,18 @@
   --bg-glow: rgb(147 197 253 / 0.1);
 }
 
+[data-track="keystone"] {
+  --accent: #475569;
+  --accent-soft: rgb(71 85 105 / 0.1);
+  --bg-glow: rgb(100 116 139 / 0.12);
+}
+[data-theme="dark"] [data-track="keystone"],
+[data-theme="dark"][data-track="keystone"] {
+  --accent: #cbd5e1;
+  --accent-soft: rgb(203 213 225 / 0.14);
+  --bg-glow: rgb(203 213 225 / 0.1);
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);

@@ -515,6 +515,40 @@ Architecture area, third track (started 2026-10-04). 21 modules in 6 chapters, a
 | 20    | Database engines compared         | Engines side by side              | Animated infographic                |
 | 21    | Capstone: the slow database       | Diagnose the slow database        | Branching scenario, Fix the problem |
 
+## Enterprise Patterns: curriculum
+
+Architecture area, fourth track (started 2026-10-04). 21 modules in 6 chapters, about 8.5 hours. Accent: "keystone" slate (`[data-track="keystone"]`). Glossary: `glossaries/enterprise-patterns.ts`. Covers team design, domain-driven design, the enterprise integration patterns, architecture styles and legacy modernisation. Vendor-neutral: open-source tools alongside AWS, Azure and Google Cloud integration services. Links to System Design (sagas, event-driven architecture), Streaming (CDC and outbox) and API Design rather than repeating them. Built on one branch (`track/enterprise-patterns`), one commit per module, merged once at the end. Each module is fact-checked on its own before it is built; card illustrations and a showcase follow the last module.
+
+| #     | Module                                       | Centrepiece                                | Key formats               |
+| ----- | -------------------------------------------- | ------------------------------------------ | ------------------------- |
+| **1** | **The big picture**                          |                                            |                           |
+| 1     | What makes enterprise systems hard           | One address change, a dozen copies         | Scroll story              |
+| 2     | Conway's law and team topologies             | Reorganise teams, redraw the system        | Simulation                |
+| **2** | **Domains and boundaries**                   |                                            |                           |
+| 3     | A shared language                            | Five meanings of 'customer'                | Simulation                |
+| 4     | Bounded contexts                             | Split the bloated Customer model           | Build connect             |
+| 5     | Context maps                                 | Six relationships on a context map         | Animated infographic      |
+| 6     | Entities, value objects and aggregates       | Design an order aggregate                  | Simulation                |
+| 7     | Event storming                               | Sticky-note timeline for a loan            | Simulation                |
+| **3** | **Integrating systems**                      |                                            |                           |
+| 8     | Four ways to integrate                       | Four integration styles, one change        | Simulation                |
+| 9     | Messaging building blocks                    | Commands, events and documents on channels | Simulation                |
+| 10    | Routing and transformation                   | Build an order pipeline                    | Build connect, Simulation |
+| 11    | Orchestration and choreography               | Conductor vs reacting services             | Simulation                |
+| 12    | From ESB to API-led integration              | ESB to API-led to event mesh               | Animated infographic      |
+| **4** | **Architecture styles**                      |                                            |                           |
+| 13    | Layers, hexagons and clean architecture      | Swap the edges, keep the core              | Simulation                |
+| 14    | Modular monoliths and microservices          | One, five or fifty deployables             | Simulation                |
+| 15    | CQRS and event sourcing                      | Rebuild a balance from events              | Simulation, Step through  |
+| 16    | Who owns the data?                           | Untangle a shared database                 | Simulation                |
+| **5** | **Change and legacy**                        |                                            |                           |
+| 17    | The strangler fig                            | Strangle a legacy system route by route    | Simulation                |
+| 18    | Living with legacy                           | Wrap a mainframe                           | Build connect             |
+| 19    | Architecture decisions and fitness functions | ADR to fitness function                    | Simulation                |
+| 20    | Enterprise architecture and governance       | C4 levels and a technology radar           | Animated infographic      |
+| **6** | **Capstone**                                 |                                            |                           |
+| 21    | Capstone: modernising a benefits system      | Modernise a benefits platform              | Branching scenario        |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -534,6 +568,7 @@ Architecture area, third track (started 2026-10-04). 21 modules in 6 chapters, a
 | 4j. Observability          | Platform & cloud, fourth track, 21 modules                                              | Live: all 21 modules (2026-10-03)                                       |
 | 4k. API Design             | Architecture, second track, 21 modules                                                  | Live: all 21 modules (2026-10-04)                                       |
 | 4l. Database Internals     | Architecture, third track, 21 modules                                                   | Live: all 21 modules (2026-10-04)                                       |
+| 4m. Enterprise Patterns    | Architecture, fourth track, 21 modules                                                  | In progress: 1 of 21 modules                                            |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
