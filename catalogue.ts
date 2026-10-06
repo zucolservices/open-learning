@@ -10253,11 +10253,18 @@ const appliedMl: Track = {
             "Fit a line to house prices by hand, then let gradient descent do it, and read what each weight means",
           formats: ["simulation", "checkpoint"],
           concepts: ["Fitting a line", "Gradient descent", "Logistic regression for yes/no"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["data-splits"],
           plain:
             "The simplest models add up features, each multiplied by a weight. Training finds weights that minimise errors, usually by gradient descent. Logistic regression squeezes the sum into a probability for yes/no questions. They are fast and easy to explain.",
+          terms: [
+            "linear-model",
+            "gradient-descent",
+            "learning-rate",
+            "logistic-regression",
+            "loss-function",
+          ],
         },
         {
           slug: "decision-trees",

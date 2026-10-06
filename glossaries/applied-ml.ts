@@ -146,4 +146,40 @@ export const appliedMl = {
       "Test data influencing training, for example by fitting a scaler, encoder or feature selector on all the data before splitting.",
     module: "data-leakage",
   },
+  "linear-model": {
+    term: "Linear model",
+    definition:
+      "A model whose prediction is a starting amount plus each feature multiplied by a learned weight.",
+    module: "linear-models",
+  },
+  "loss-function": {
+    term: "Loss function",
+    definition:
+      "A formula that scores how wrong a model's predictions are, such as the mean of squared errors. Training tries to make it as small as possible.",
+    module: "linear-models",
+  },
+  "gradient-descent": {
+    term: "Gradient descent",
+    definition:
+      "Training by repeatedly nudging the weights a small step in the direction that reduces the loss fastest.",
+    module: "linear-models",
+  },
+  "learning-rate": {
+    term: "Learning rate",
+    definition:
+      "How big each gradient-descent step is. Too small and training crawls; too big and it overshoots or diverges.",
+    module: "linear-models",
+  },
+  "logistic-regression": {
+    term: "Logistic regression",
+    definition:
+      "A linear model for yes/no outcomes: the weighted sum goes through an S-shaped sigmoid curve to give a probability.",
+    module: "linear-models",
+  },
+  "odds-ratio": {
+    term: "Odds ratio",
+    definition:
+      "How many times the odds of an outcome multiply when a feature goes up by one unit. In logistic regression it is e raised to the weight.",
+    module: "linear-models",
+  },
 } satisfies Record<string, GlossaryEntry>;
