@@ -200,4 +200,33 @@ export const appliedMl = {
       "A score for how mixed a group is: 0 when every example has the same outcome, highest for an even mix. Trees choose splits that reduce it.",
     module: "decision-trees",
   },
+  ensemble: {
+    term: "Ensemble",
+    definition: "A model made by combining many models, whose errors partly cancel out.",
+    module: "ensembles",
+  },
+  bagging: {
+    term: "Bagging",
+    definition:
+      "Training many models on random resamples of the data and averaging their predictions, which smooths out jumpy models.",
+    module: "ensembles",
+  },
+  "random-forest": {
+    term: "Random forest",
+    definition:
+      "An ensemble of decision trees, each trained on a random resample of the data and limited to random features at each split, that vote on the answer.",
+    module: "ensembles",
+  },
+  boosting: {
+    term: "Boosting",
+    definition:
+      "Building an ensemble one model at a time, with each new model focusing on the examples the previous ones got wrong.",
+    module: "ensembles",
+  },
+  "gradient-boosting": {
+    term: "Gradient boosting",
+    definition:
+      "Boosting where each new tree is fitted to the ensemble's remaining errors, scaled by a learning rate. XGBoost, LightGBM and CatBoost implement it.",
+    module: "ensembles",
+  },
 } satisfies Record<string, GlossaryEntry>;

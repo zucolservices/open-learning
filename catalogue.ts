@@ -10299,11 +10299,12 @@ const appliedMl: Track = {
             "Gradient boosting",
             "XGBoost, LightGBM and CatBoost",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["decision-trees"],
           plain:
             "Ensembles combine many trees. Random forests average trees trained on random samples; gradient boosting adds trees one at a time, each fixing the previous errors. Boosted trees are often the strongest choice for tables of business data.",
+          terms: ["ensemble", "random-forest", "boosting", "gradient-boosting", "bagging"],
         },
         {
           slug: "overfitting",
