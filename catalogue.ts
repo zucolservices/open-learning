@@ -10279,11 +10279,12 @@ const appliedMl: Track = {
             "Impurity and information gain",
             "Depth and overfitting",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["linear-models"],
           plain:
             "A decision tree asks a series of yes/no questions about the features, choosing at each step the question that best separates the outcomes. Trees are easy to read but memorise noise if allowed to grow too deep.",
+          terms: ["decision-tree", "gini-impurity", "overfitting"],
         },
         {
           slug: "ensembles",

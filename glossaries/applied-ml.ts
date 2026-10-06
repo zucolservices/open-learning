@@ -182,4 +182,22 @@ export const appliedMl = {
       "How many times the odds of an outcome multiply when a feature goes up by one unit. In logistic regression it is e raised to the weight.",
     module: "linear-models",
   },
+  "decision-tree": {
+    term: "Decision tree",
+    definition:
+      "A model that makes predictions by asking a series of yes/no questions about the features, like a flowchart ending in leaves.",
+    module: "decision-trees",
+  },
+  overfitting: {
+    term: "Overfitting",
+    definition:
+      "When a model learns the quirks and noise of its training data so closely that it does worse on new data.",
+    module: "decision-trees",
+  },
+  "gini-impurity": {
+    term: "Gini impurity",
+    definition:
+      "A score for how mixed a group is: 0 when every example has the same outcome, highest for an even mix. Trees choose splits that reduce it.",
+    module: "decision-trees",
+  },
 } satisfies Record<string, GlossaryEntry>;
