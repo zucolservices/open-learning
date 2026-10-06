@@ -10579,14 +10579,21 @@ const appliedMl: Track = {
           summary: "From question to production.",
           minutes: 40,
           signature:
-            "Build a churn model for a subscription service end to end, then fix the five problems from its first month",
+            "Build a churn model for a subscription service end to end, then fix the five problems that follow",
           formats: ["branching-scenario", "fix-the-problem", "checkpoint"],
           concepts: ["Applying machine learning"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["classification-metrics", "data-leakage", "model-monitoring"],
           plain:
             "Everything in this track in one project: frame the problem, split the data honestly, engineer features without leaks, choose and tune a model, pick a threshold from business costs, explain it, deploy it and keep it healthy.",
+          terms: [
+            "machine-learning",
+            "data-leakage",
+            "precision",
+            "training-serving-skew",
+            "concept-drift",
+          ],
         },
       ],
     },
