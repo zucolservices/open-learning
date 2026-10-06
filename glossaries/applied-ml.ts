@@ -54,4 +54,33 @@ export const appliedMl = {
       "Engineering practices that automate training, testing, deploying and monitoring ML models, applying DevOps ideas to data and models.",
     module: "ml-lifecycle",
   },
+  classification: {
+    term: "Classification",
+    definition:
+      "Predicting which category something belongs to, such as spam or not spam, or which of several teams should handle a ticket.",
+    module: "problem-framing",
+  },
+  regression: {
+    term: "Regression",
+    definition: "In machine learning, predicting a number, such as a price or a delivery time.",
+    module: "problem-framing",
+  },
+  ranking: {
+    term: "Ranking",
+    definition:
+      "Predicting an order for a list of items, such as which customers to call first or which products to show first.",
+    module: "problem-framing",
+  },
+  baseline: {
+    term: "Baseline",
+    definition:
+      "A simple reference answer, such as always guessing the most common outcome or a rule of thumb, that a model must clearly beat to be worth using.",
+    module: "problem-framing",
+  },
+  "proxy-label": {
+    term: "Proxy label",
+    definition:
+      "A measurable stand-in for what you really want to predict, such as clicks for enjoyment or cost for health need. Proxies can introduce bias.",
+    module: "problem-framing",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -10167,11 +10167,12 @@ const appliedMl: Track = {
             "Targets and labels",
             "Baselines and business value",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["ml-lifecycle"],
           plain:
             "Before modelling, decide exactly what to predict, for whom, and what action follows. Is it a yes/no (classification), a number (regression) or an ordering (ranking)? Always start with a simple baseline to beat.",
+          terms: ["classification", "regression", "ranking", "baseline", "proxy-label"],
         },
       ],
     },
