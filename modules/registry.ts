@@ -450,4 +450,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "applied-ml/what-is-ml": () => import("./applied-ml/what-is-ml"),
   "applied-ml/ml-lifecycle": () => import("./applied-ml/ml-lifecycle"),
   "applied-ml/problem-framing": () => import("./applied-ml/problem-framing"),
+  "applied-ml/data-splits": () => import("./applied-ml/data-splits"),
 };

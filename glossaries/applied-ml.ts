@@ -83,4 +83,26 @@ export const appliedMl = {
       "A measurable stand-in for what you really want to predict, such as clicks for enjoyment or cost for health need. Proxies can introduce bias.",
     module: "problem-framing",
   },
+  "training-set": {
+    term: "Training set",
+    definition: "The examples a model learns from.",
+    module: "data-splits",
+  },
+  "validation-set": {
+    term: "Validation set",
+    definition: "Examples held back from training and used to compare models and choose settings.",
+    module: "data-splits",
+  },
+  "test-set": {
+    term: "Test set",
+    definition:
+      "Examples kept sealed until the end and used once to estimate how the final model will do on new data.",
+    module: "data-splits",
+  },
+  "cross-validation": {
+    term: "Cross-validation",
+    definition:
+      "Splitting the training data into k chunks, training k times with a different chunk held out each time, and averaging the scores.",
+    module: "data-splits",
+  },
 } satisfies Record<string, GlossaryEntry>;

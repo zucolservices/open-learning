@@ -10194,11 +10194,12 @@ const appliedMl: Track = {
             "Cross-validation",
             "Splitting by time and by group",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["problem-framing"],
           plain:
             "Models are judged on data they didn't learn from. Data is split into training, validation and test sets, or rotated with cross-validation. For time-based or customer-based data, a random split can give a falsely good score.",
+          terms: ["training-set", "validation-set", "test-set", "cross-validation"],
         },
         {
           slug: "feature-engineering",
