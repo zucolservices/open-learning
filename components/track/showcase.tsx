@@ -36,6 +36,8 @@ import { VoiceAiScene } from "@/components/home/voice-ai-scene";
 import { VoiceAiTaste } from "@/components/home/voice-ai-taste";
 import { LlmEvaluationScene } from "@/components/home/llm-evaluation-scene";
 import { LlmEvaluationTaste } from "@/components/home/llm-evaluation-taste";
+import { AppliedMlScene } from "@/components/home/applied-ml-scene";
+import { AppliedMlTaste } from "@/components/home/applied-ml-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -196,5 +198,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: LlmEvaluationTaste,
     tasteCaption:
       "A taste of module 6: switch on fixes and watch a biased LLM judge go from coin-flip to agreeing with experts.",
+  },
+  "applied-ml": {
+    Scene: AppliedMlScene,
+    sceneCaption:
+      "The ML lifecycle: frame the question, prepare honest data, model, evaluate, tune and explain, serve and monitor. Watch the tour, or click any part.",
+    Taste: AppliedMlTaste,
+    tasteCaption:
+      "A taste of module 19: break the live feature pipeline and watch the same loan model give different answers.",
   },
 };
