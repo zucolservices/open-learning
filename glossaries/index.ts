@@ -24,6 +24,7 @@ import { dataQuality } from "./data-quality";
 import { aiAgents } from "./ai-agents";
 import { voiceAi } from "./voice-ai";
 import { llmEvaluation } from "./llm-evaluation";
+import { appliedMl } from "./applied-ml";
 import { shared } from "./shared";
 import type { GlossaryEntry } from "./types";
 
@@ -50,6 +51,7 @@ export const trackGlossaries: Record<string, Record<string, GlossaryEntry>> = {
   "ai-agents": aiAgents,
   "voice-ai": voiceAi,
   "llm-evaluation": llmEvaluation,
+  "applied-ml": appliedMl,
 };
 
 export type TermId =
@@ -72,7 +74,8 @@ export type TermId =
   | keyof typeof dataQuality
   | keyof typeof aiAgents
   | keyof typeof voiceAi
-  | keyof typeof llmEvaluation;
+  | keyof typeof llmEvaluation
+  | keyof typeof appliedMl;
 
 export interface ResolvedTerm {
   id: string;

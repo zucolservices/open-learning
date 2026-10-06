@@ -751,6 +751,42 @@ AI & machine learning area, fifth track (started 2026-10-05). 20 modules in 7 ch
 | **7** | **Capstone**                            |                                        |                                     |
 | 20    | Capstone: should we ship the new model? | Should we ship it?                     | Branching scenario, Fix the problem |
 
+## Applied ML: curriculum
+
+AI & machine learning area, sixth track (started 2026-10-06). 22 modules in 7 chapters, about 8 hours. Accent: "gradient" amber (`[data-track="gradient"]`). Glossary: `glossaries/applied-ml.ts`. Vendor-neutral: open-source libraries (scikit-learn, XGBoost, LightGBM, CatBoost, MLflow, statsmodels), and the ML platforms of AWS (SageMaker), Google (Gemini Enterprise Agent Platform, formerly Vertex AI), Microsoft (Azure Machine Learning) and Databricks. Focuses on classic ML on tabular data; builds on Data Quality (drift, training–serving skew) and LLM Evaluation (metrics, statistics) rather than repeating them. Built on one branch (`track/applied-ml`), one commit per module, merged once at the end. Each module is fact-checked on its own before it is built; card illustrations and a showcase follow the last module.
+
+| #     | Module                                  | Centrepiece                                     | Key formats                         |
+| ----- | --------------------------------------- | ----------------------------------------------- | ----------------------------------- |
+| **1** | **The big picture**                     |                                                 |                                     |
+| 1     | What machine learning is                | Hand-written rules versus a learned spam filter | Scroll story                        |
+| 2     | The ML project lifecycle                | A churn project, start to finish                | Animated infographic                |
+| 3     | Framing the problem                     | From “reduce churn” to a prediction target      | Build connect                       |
+| **2** | **Data and features**                   |                                                 |                                     |
+| 4     | Training, validation and test sets      | Random, time and group splits                   | Simulation                          |
+| 5     | Feature engineering                     | Build features, watch the score                 | Build connect                       |
+| 6     | Data leakage                            | Find the leak                                   | Fix the problem                     |
+| **3** | **Models**                              |                                                 |                                     |
+| 7     | Linear and logistic regression          | Fit a line, then let gradient descent           | Simulation                          |
+| 8     | Decision trees                          | Grow a loan-approval tree                       | Simulation                          |
+| 9     | Random forests and gradient boosting    | Vote and boost                                  | Simulation                          |
+| 10    | Overfitting and regularisation          | Train versus validation error                   | Simulation                          |
+| 11    | Clustering and dimensionality reduction | Segment customers with k-means                  | Simulation                          |
+| **4** | **Evaluating models**                   |                                                 |                                     |
+| 12    | Accuracy, precision and recall          | Move the fraud threshold                        | Simulation                          |
+| 13    | Measuring regression errors             | One huge miss, three metrics                    | Simulation                          |
+| 14    | Rare events and imbalanced data         | 1 in 500 is fraud                               | Fix the problem                     |
+| 15    | Probabilities you can trust             | Does 70% mean 70%?                              | Simulation                          |
+| **5** | **Improving and explaining**            |                                                 |                                     |
+| 16    | Hyperparameter tuning                   | Search the knobs on a budget                    | Simulation                          |
+| 17    | Explaining predictions                  | Why was this loan declined?                     | Simulation                          |
+| 18    | Forecasting time series                 | Backtest a demand forecast                      | Simulation                          |
+| **6** | **ML in production**                    |                                                 |                                     |
+| 19    | Serving models                          | Batch, real time or on device                   | Simulation                          |
+| 20    | Drift and monitoring                    | Watch a model decay                             | Simulation                          |
+| 21    | The ML tool landscape                   | The ML tool map                                 | Animated infographic                |
+| **7** | **Capstone**                            |                                                 |                                     |
+| 22    | Capstone: predicting customer churn     | The churn model, end to end                     | Branching scenario, Fix the problem |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -777,6 +813,7 @@ AI & machine learning area, fifth track (started 2026-10-05). 20 modules in 7 ch
 | 4q. AI Agents              | AI & machine learning, third track, 21 modules                                          | Live: all 21 modules (2026-10-04)                                       |
 | 4r. Voice AI               | AI & machine learning, fourth track, 18 modules                                         | Live: all 18 modules (2026-10-05)                                       |
 | 4s. LLM Evaluation         | AI & machine learning, fifth track, 20 modules                                          | Live: all 20 modules (2026-10-05)                                       |
+| 4t. Applied ML             | AI & machine learning, sixth track, 22 modules                                          | In progress: 0 of 22 modules                                            |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

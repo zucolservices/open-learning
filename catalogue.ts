@@ -105,6 +105,7 @@ export interface Track {
     | "orbit"
     | "timbre"
     | "gauge"
+    | "gradient"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -10092,6 +10093,465 @@ const llmEvaluation: Track = {
   ],
 };
 
+const appliedMl: Track = {
+  slug: "applied-ml",
+  title: "Applied ML",
+  area: "AI & machine learning",
+  category: "ai-ml",
+  tagline: "Classic machine learning, from features to deployment.",
+  description:
+    "Classic machine learning on tables of data, from framing a problem to running a model in production: training and test sets, feature engineering, data leakage, linear models, decision trees, random forests and gradient boosting, overfitting, clustering, classification and regression metrics, imbalanced data, calibration, tuning, explainability, forecasting, serving and monitoring. Vendor-neutral, covering open-source libraries such as scikit-learn, XGBoost and LightGBM, MLOps tools and the ML platforms of AWS, Google, Microsoft and Databricks. By the end you can build, evaluate and run a model responsibly.",
+  accent: "gradient",
+  chapters: [
+    {
+      slug: "big-picture",
+      title: "The big picture",
+      summary: "Learning from examples.",
+      modules: [
+        {
+          slug: "what-is-ml",
+          title: "What machine learning is",
+          summary: "Rules you don't write yourself.",
+          minutes: 20,
+          signature:
+            "Write spam rules by hand, then watch a model learn better ones from labelled examples",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "Rules versus learned patterns",
+            "Supervised and unsupervised learning",
+            "Where classic ML still wins",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "Instead of writing rules by hand, machine learning finds patterns in examples. Show it thousands of emails marked spam or not, and it learns which signals matter. Classic machine learning on tables of data still powers fraud checks, pricing, forecasting and recommendations.",
+        },
+        {
+          slug: "ml-lifecycle",
+          title: "The ML project lifecycle",
+          summary: "From question to production.",
+          minutes: 20,
+          signature:
+            "Walk a churn project from business question to monitoring, and see where most of the time really goes",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "Framing, data, modelling, deployment",
+            "Iteration, not a straight line",
+            "Where projects fail",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["what-is-ml"],
+          plain:
+            "An ML project moves from a business question to data, features, a model, evaluation, deployment and monitoring, looping back often. Much of the effort goes into data and framing rather than choosing an algorithm.",
+        },
+        {
+          slug: "problem-framing",
+          title: "Framing the problem",
+          summary: "The right question first.",
+          minutes: 20,
+          signature:
+            "Turn “reduce churn” into a prediction target, a baseline and a decision the business will act on",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Classification, regression and ranking",
+            "Targets and labels",
+            "Baselines and business value",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["ml-lifecycle"],
+          plain:
+            "Before modelling, decide exactly what to predict, for whom, and what action follows. Is it a yes/no (classification), a number (regression) or an ordering (ranking)? Always start with a simple baseline to beat.",
+        },
+      ],
+    },
+    {
+      slug: "data",
+      title: "Data and features",
+      summary: "What the model learns from.",
+      modules: [
+        {
+          slug: "data-splits",
+          title: "Training, validation and test sets",
+          summary: "Keep an exam the model hasn't seen.",
+          minutes: 20,
+          signature:
+            "Split data randomly, by time and by customer, and watch which split gives an honest score",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Train, validation and test",
+            "Cross-validation",
+            "Splitting by time and by group",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["problem-framing"],
+          plain:
+            "Models are judged on data they didn't learn from. Data is split into training, validation and test sets, or rotated with cross-validation. For time-based or customer-based data, a random split can give a falsely good score.",
+        },
+        {
+          slug: "feature-engineering",
+          title: "Feature engineering",
+          summary: "Turning raw data into signals.",
+          minutes: 25,
+          signature:
+            "Build features from dates, categories and purchase histories, and see which ones improve the model",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Encoding categories",
+            "Scaling and transforming numbers",
+            "Features from time and history",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["data-splits"],
+          plain:
+            "Models need numbers. Feature engineering turns raw columns into useful signals: encoding categories, scaling numbers, extracting day of week, counting recent purchases. Good features often matter more than the choice of algorithm.",
+        },
+        {
+          slug: "data-leakage",
+          title: "Data leakage",
+          summary: "When the answer sneaks in.",
+          minutes: 20,
+          signature:
+            "Find the feature that makes a model look perfect in testing and useless in production",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: ["Target leakage", "Train–test contamination", "Catching leaks"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["feature-engineering"],
+          plain:
+            "Leakage happens when training data contains information that won't be available at prediction time, or test data seeps into training. The model looks brilliant in testing and fails in real use.",
+        },
+      ],
+    },
+    {
+      slug: "models",
+      title: "Models",
+      summary: "The main families.",
+      modules: [
+        {
+          slug: "linear-models",
+          title: "Linear and logistic regression",
+          summary: "Weighted sums.",
+          minutes: 25,
+          signature:
+            "Fit a line to house prices by hand, then let gradient descent do it, and read what each weight means",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Fitting a line", "Gradient descent", "Logistic regression for yes/no"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["data-splits"],
+          plain:
+            "The simplest models add up features, each multiplied by a weight. Training finds weights that minimise errors, usually by gradient descent. Logistic regression squeezes the sum into a probability for yes/no questions. They are fast and easy to explain.",
+        },
+        {
+          slug: "decision-trees",
+          title: "Decision trees",
+          summary: "Twenty questions.",
+          minutes: 20,
+          signature:
+            "Grow a tree that decides loan approvals one question at a time, and see it overfit as it gets deeper",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Splitting on questions",
+            "Impurity and information gain",
+            "Depth and overfitting",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["linear-models"],
+          plain:
+            "A decision tree asks a series of yes/no questions about the features, choosing at each step the question that best separates the outcomes. Trees are easy to read but memorise noise if allowed to grow too deep.",
+        },
+        {
+          slug: "ensembles",
+          title: "Random forests and gradient boosting",
+          summary: "Many trees beat one.",
+          minutes: 25,
+          signature:
+            "Combine hundreds of weak trees by voting and by boosting, and see why they dominate tabular data",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Bagging and random forests",
+            "Gradient boosting",
+            "XGBoost, LightGBM and CatBoost",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["decision-trees"],
+          plain:
+            "Ensembles combine many trees. Random forests average trees trained on random samples; gradient boosting adds trees one at a time, each fixing the previous errors. Boosted trees are often the strongest choice for tables of business data.",
+        },
+        {
+          slug: "overfitting",
+          title: "Overfitting and regularisation",
+          summary: "Memorising versus learning.",
+          minutes: 20,
+          signature:
+            "Increase model complexity and watch training error fall while validation error rises, then rein it in",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Bias and variance", "Learning curves", "Regularisation and early stopping"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["ensembles"],
+          plain:
+            "A model that fits its training data too closely learns noise and does worse on new data. Comparing training and validation error shows when this happens, and techniques like regularisation, pruning and early stopping keep models general.",
+        },
+        {
+          slug: "unsupervised",
+          title: "Clustering and dimensionality reduction",
+          summary: "Finding structure without labels.",
+          minutes: 20,
+          signature:
+            "Group customers with k-means, choose the number of clusters, and squash many columns into two with PCA",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "k-means and other clustering",
+            "Choosing the number of clusters",
+            "PCA and visualising high dimensions",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["linear-models"],
+          plain:
+            "Without labels, algorithms can still find structure: clustering groups similar items, such as customer segments, and dimensionality reduction compresses many features into a few that capture most of the variation.",
+        },
+      ],
+    },
+    {
+      slug: "evaluation",
+      title: "Evaluating models",
+      summary: "Is it any good?",
+      modules: [
+        {
+          slug: "classification-metrics",
+          title: "Accuracy, precision and recall",
+          summary: "Counting the right mistakes.",
+          minutes: 25,
+          signature:
+            "Move a fraud model's threshold and trade missed fraud against angry customers, with the confusion matrix live",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "The confusion matrix",
+            "Precision, recall and F1",
+            "Thresholds, ROC and PR curves",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["linear-models"],
+          plain:
+            "Accuracy alone misleads. The confusion matrix counts each kind of mistake; precision and recall measure the ones that matter; and moving the decision threshold trades one for the other. ROC and precision–recall curves show the whole trade-off.",
+        },
+        {
+          slug: "regression-metrics",
+          title: "Measuring regression errors",
+          summary: "How far off, on average?",
+          minutes: 20,
+          signature:
+            "Score a delivery-time model with MAE, RMSE and MAPE and see which one a single huge miss distorts",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["MAE and RMSE", "Percentage errors and R²", "Reading residuals"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["linear-models"],
+          plain:
+            "For numeric predictions, errors are measured in different ways: average absolute error, root mean squared error, which punishes big misses, and percentage error. Plotting the leftover errors shows where a model is systematically wrong.",
+        },
+        {
+          slug: "imbalanced-data",
+          title: "Rare events and imbalanced data",
+          summary: "When 99% accurate is useless.",
+          minutes: 20,
+          signature:
+            "Train a fraud model where 1 in 500 transactions is fraud, and fix it with class weights, resampling and the right metric",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Why accuracy fails on rare events",
+            "Class weights and resampling",
+            "PR curves and cost-based thresholds",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["classification-metrics"],
+          plain:
+            "When the interesting class is rare, like fraud or failures, a model can score 99.8% accuracy by always saying no. Rare events need different metrics, class weights or resampling, and thresholds chosen from the real costs of each mistake.",
+        },
+        {
+          slug: "calibration",
+          title: "Probabilities you can trust",
+          summary: "Does 70% mean 70%?",
+          minutes: 20,
+          signature:
+            "Check whether a model's “70% likely” cases happen 70% of the time, and fix it with calibration",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Reliability diagrams",
+            "Platt scaling and isotonic regression",
+            "When calibration matters",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["classification-metrics"],
+          plain:
+            "Many models output scores that look like probabilities but aren't reliable ones. A calibrated model's 70% predictions come true about 70% of the time, which matters whenever decisions use the probability itself, like pricing risk.",
+        },
+      ],
+    },
+    {
+      slug: "improving",
+      title: "Improving and explaining",
+      summary: "Tuning, explaining, forecasting.",
+      modules: [
+        {
+          slug: "hyperparameter-tuning",
+          title: "Hyperparameter tuning",
+          summary: "Turning the knobs well.",
+          minutes: 20,
+          signature:
+            "Tune a gradient-boosting model with grid search, random search and Bayesian optimisation, on a budget",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Hyperparameters versus parameters",
+            "Grid, random and Bayesian search",
+            "Tuning without fooling yourself",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["overfitting"],
+          plain:
+            "Settings like tree depth and learning rate aren't learned from data; they're chosen. Random and Bayesian search find good settings faster than trying every combination, and tuning must use validation data, never the test set.",
+        },
+        {
+          slug: "interpretability",
+          title: "Explaining predictions",
+          summary: "Why did it say that?",
+          minutes: 25,
+          signature:
+            "Explain a loan model globally with feature importance and per applicant with SHAP values",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Global feature importance",
+            "SHAP and local explanations",
+            "Partial dependence and pitfalls",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["ensembles"],
+          plain:
+            "People affected by a model's decision, and the teams responsible, need to know why. Feature importance shows what matters overall; SHAP values show how each feature pushed one prediction up or down. Explanations have pitfalls of their own.",
+        },
+        {
+          slug: "forecasting",
+          title: "Forecasting time series",
+          summary: "Predicting what comes next.",
+          minutes: 25,
+          signature:
+            "Forecast daily orders with seasonality and lag features, and backtest honestly through time",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Trend and seasonality",
+            "Lag features and baselines",
+            "Backtesting through time",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["regression-metrics"],
+          plain:
+            "Forecasts predict future values from past ones: demand, sales, load. Time series have trend and seasonality, simple baselines are hard to beat, and models must be tested by rolling forward through time, never by random splits.",
+        },
+      ],
+    },
+    {
+      slug: "production",
+      title: "ML in production",
+      summary: "Shipping and running models.",
+      modules: [
+        {
+          slug: "model-serving",
+          title: "Serving models",
+          summary: "Batch or real time.",
+          minutes: 20,
+          signature:
+            "Choose batch scoring, a real-time API or on-device inference for three products, and meet their latency budgets",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Batch versus online prediction",
+            "Feature stores and training–serving skew",
+            "Packaging and model registries",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["data-leakage"],
+          plain:
+            "A trained model must be packaged and run: in nightly batches, behind a real-time API, or on a device. Features must be computed the same way in training and serving, which is why teams use feature stores and model registries.",
+        },
+        {
+          slug: "model-monitoring",
+          title: "Drift and monitoring",
+          summary: "Models decay.",
+          minutes: 20,
+          signature:
+            "Watch a demand model degrade as customer behaviour shifts, detect the drift and decide when to retrain",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Data drift and concept drift",
+            "Monitoring without labels",
+            "Retraining strategies",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["model-serving"],
+          plain:
+            "The world changes after deployment. Input data shifts (data drift) and the relationship between inputs and outcomes changes (concept drift). Monitoring catches decay, often before true outcomes are known, and triggers retraining.",
+        },
+        {
+          slug: "ml-tools",
+          title: "The ML tool landscape",
+          summary: "Libraries, platforms and clouds.",
+          minutes: 20,
+          signature:
+            "Map scikit-learn, boosting libraries, experiment trackers and cloud ML platforms to the steps of an ML project",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "Open-source libraries",
+            "Experiment tracking and MLOps",
+            "Cloud ML platforms",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["model-serving"],
+          plain:
+            "Open-source libraries such as scikit-learn, XGBoost and LightGBM build models; tools like MLflow track experiments and models; and every major cloud offers a managed ML platform. Most teams mix open source with one platform.",
+        },
+      ],
+    },
+    {
+      slug: "capstone",
+      title: "Capstone",
+      summary: "Everything together.",
+      modules: [
+        {
+          slug: "capstone-ml",
+          title: "Capstone: predicting customer churn",
+          summary: "From question to production.",
+          minutes: 40,
+          signature:
+            "Build a churn model for a subscription service end to end, then fix the five problems from its first month",
+          formats: ["branching-scenario", "fix-the-problem", "checkpoint"],
+          concepts: ["Applying machine learning"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["classification-metrics", "data-leakage", "model-monitoring"],
+          plain:
+            "Everything in this track in one project: frame the problem, split the data honestly, engineer features without leaks, choose and tune a model, pick a threshold from business costs, explain it, deploy it and keep it healthy.",
+        },
+      ],
+    },
+  ],
+};
+
 export const tracks: Track[] = [
   lakehouse,
   systemDesign,
@@ -10112,6 +10572,7 @@ export const tracks: Track[] = [
   aiAgents,
   voiceAi,
   llmEvaluation,
+  appliedMl,
   playground,
 ];
 
@@ -10194,7 +10655,11 @@ export const categories: Category[] = [
         slug: "llm-evaluation",
         blurb: "Measuring quality, safety and regressions.",
       },
-      { title: "Applied ML", blurb: "Classic machine learning, from features to deployment." },
+      {
+        title: "Applied ML",
+        slug: "applied-ml",
+        blurb: "Classic machine learning, from features to deployment.",
+      },
     ],
   },
   {
