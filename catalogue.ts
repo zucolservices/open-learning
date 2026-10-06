@@ -10335,11 +10335,12 @@ const appliedMl: Track = {
             "Choosing the number of clusters",
             "PCA and visualising high dimensions",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["linear-models"],
           plain:
             "Without labels, algorithms can still find structure: clustering groups similar items, such as customer segments, and dimensionality reduction compresses many features into a few that capture most of the variation.",
+          terms: ["clustering", "k-means", "pca", "unsupervised-learning"],
         },
       ],
     },

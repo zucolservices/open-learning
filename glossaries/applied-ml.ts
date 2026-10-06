@@ -253,4 +253,22 @@ export const appliedMl = {
       "A chart of training and validation error as the amount of training data grows, used to diagnose overfitting or underfitting.",
     module: "overfitting",
   },
+  clustering: {
+    term: "Clustering",
+    definition:
+      "Grouping similar items together without labels, for example splitting customers into segments.",
+    module: "unsupervised",
+  },
+  "k-means": {
+    term: "k-means",
+    definition:
+      "A clustering method that repeatedly assigns each point to the nearest of k centres and moves each centre to the average of its points.",
+    module: "unsupervised",
+  },
+  pca: {
+    term: "PCA",
+    definition:
+      "Principal component analysis: finds the directions in which data varies most, so many columns can be summarised by a few.",
+    module: "unsupervised",
+  },
 } satisfies Record<string, GlossaryEntry>;
