@@ -10405,11 +10405,12 @@ const appliedMl: Track = {
             "Class weights and resampling",
             "PR curves and cost-based thresholds",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["classification-metrics"],
           plain:
             "When the interesting class is rare, like fraud or failures, a model can score 99.8% accuracy by always saying no. Rare events need different metrics, class weights or resampling, and thresholds chosen from the real costs of each mistake.",
+          terms: ["class-imbalance", "smote", "precision", "recall"],
         },
         {
           slug: "calibration",

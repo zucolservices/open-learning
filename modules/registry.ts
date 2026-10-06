@@ -460,4 +460,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "applied-ml/unsupervised": () => import("./applied-ml/unsupervised"),
   "applied-ml/classification-metrics": () => import("./applied-ml/classification-metrics"),
   "applied-ml/regression-metrics": () => import("./applied-ml/regression-metrics"),
+  "applied-ml/imbalanced-data": () => import("./applied-ml/imbalanced-data"),
 };

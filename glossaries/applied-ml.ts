@@ -329,4 +329,16 @@ export const appliedMl = {
       "Mean absolute percentage error: misses as a percentage of the true value. Breaks when true values are zero and favours under-forecasting.",
     module: "regression-metrics",
   },
+  "class-imbalance": {
+    term: "Class imbalance",
+    definition:
+      "When one outcome is much rarer than the others, such as fraud among card payments, so accuracy becomes misleading.",
+    module: "imbalanced-data",
+  },
+  smote: {
+    term: "SMOTE",
+    definition:
+      "Synthetic Minority Over-sampling Technique (2002): creates extra rare-class examples by interpolating between real ones. Often unnecessary for strong models.",
+    module: "imbalanced-data",
+  },
 } satisfies Record<string, GlossaryEntry>;
