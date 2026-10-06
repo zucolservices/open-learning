@@ -443,4 +443,28 @@ export const appliedMl = {
       "A catalogue of model versions with their data, code, metrics and labels such as which version is in production.",
     module: "model-serving",
   },
+  "model-monitoring": {
+    term: "Model monitoring",
+    definition:
+      "Watching a deployed model's inputs, predictions, data quality, business results and (once known) accuracy, to notice when it stops working well.",
+    module: "model-monitoring",
+  },
+  "data-drift": {
+    term: "Data drift",
+    definition:
+      "A change in the inputs a model sees compared with its training data, such as a new kind of customer; industry shorthand, also called covariate shift.",
+    module: "model-monitoring",
+  },
+  "concept-drift": {
+    term: "Concept drift",
+    definition:
+      "A change in the relationship between inputs and the right answer, so the same inputs now lead to different outcomes.",
+    module: "model-monitoring",
+  },
+  psi: {
+    term: "Population Stability Index (PSI)",
+    definition:
+      "A score from credit scoring for how much a feature's distribution has moved between two periods; under 0.1 is usually read as little change and over 0.25 as significant.",
+    module: "model-monitoring",
+  },
 } satisfies Record<string, GlossaryEntry>;

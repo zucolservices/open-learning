@@ -10539,11 +10539,12 @@ const appliedMl: Track = {
             "Monitoring without labels",
             "Retraining strategies",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["model-serving"],
           plain:
             "The world changes after deployment. Input data shifts (data drift) and the relationship between inputs and outcomes changes (concept drift). Monitoring catches decay, often before true outcomes are known, and triggers retraining.",
+          terms: ["model-monitoring", "data-drift", "concept-drift", "psi"],
         },
         {
           slug: "ml-tools",
