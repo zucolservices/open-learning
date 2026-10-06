@@ -467,4 +467,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "applied-ml/forecasting": () => import("./applied-ml/forecasting"),
   "applied-ml/model-serving": () => import("./applied-ml/model-serving"),
   "applied-ml/model-monitoring": () => import("./applied-ml/model-monitoring"),
+  "applied-ml/ml-tools": () => import("./applied-ml/ml-tools"),
 };

@@ -467,4 +467,16 @@ export const appliedMl = {
       "A score from credit scoring for how much a feature's distribution has moved between two periods; under 0.1 is usually read as little change and over 0.25 as significant.",
     module: "model-monitoring",
   },
+  "experiment-tracking": {
+    term: "Experiment tracking",
+    definition:
+      "Recording each training run's settings, data version, code and scores so results can be compared and reproduced.",
+    module: "ml-tools",
+  },
+  automl: {
+    term: "AutoML",
+    definition:
+      "Tools that automatically try many models and settings and pick the best on validation data; a strong baseline, not a replacement for framing the problem.",
+    module: "ml-tools",
+  },
 } satisfies Record<string, GlossaryEntry>;

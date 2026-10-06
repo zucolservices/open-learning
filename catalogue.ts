@@ -10559,11 +10559,12 @@ const appliedMl: Track = {
             "Experiment tracking and MLOps",
             "Cloud ML platforms",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["model-serving"],
           plain:
             "Open-source libraries such as scikit-learn, XGBoost and LightGBM build models; tools like MLflow track experiments and models; and every major cloud offers a managed ML platform. Most teams mix open source with one platform.",
+          terms: ["experiment-tracking", "automl"],
         },
       ],
     },
