@@ -419,4 +419,28 @@ export const appliedMl = {
       "Testing a forecaster by training up to a date, forecasting the next stretch, then sliding the date forward and repeating; also called backtesting.",
     module: "forecasting",
   },
+  "model-serving": {
+    term: "Model serving",
+    definition:
+      "Making a trained model answer real questions: in batches ahead of time, on demand per request, on a stream of events, or on a device.",
+    module: "model-serving",
+  },
+  "training-serving-skew": {
+    term: "Training-serving skew",
+    definition:
+      "A gap between how a model performed in training and how it performs live, often because live inputs are prepared differently from training data.",
+    module: "model-serving",
+  },
+  "feature-store": {
+    term: "Feature store",
+    definition:
+      "A shared system where features are defined once and served with the same values for training and for live predictions.",
+    module: "model-serving",
+  },
+  "model-registry": {
+    term: "Model registry",
+    definition:
+      "A catalogue of model versions with their data, code, metrics and labels such as which version is in production.",
+    module: "model-serving",
+  },
 } satisfies Record<string, GlossaryEntry>;

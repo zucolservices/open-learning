@@ -10519,11 +10519,12 @@ const appliedMl: Track = {
             "Feature stores and training–serving skew",
             "Packaging and model registries",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["data-leakage"],
           plain:
             "A trained model must be packaged and run: in nightly batches, behind a real-time API, or on a device. Features must be computed the same way in training and serving, which is why teams use feature stores and model registries.",
+          terms: ["model-serving", "training-serving-skew", "feature-store", "model-registry"],
         },
         {
           slug: "model-monitoring",
