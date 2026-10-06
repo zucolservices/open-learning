@@ -456,4 +456,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "applied-ml/linear-models": () => import("./applied-ml/linear-models"),
   "applied-ml/decision-trees": () => import("./applied-ml/decision-trees"),
   "applied-ml/ensembles": () => import("./applied-ml/ensembles"),
+  "applied-ml/overfitting": () => import("./applied-ml/overfitting"),
 };

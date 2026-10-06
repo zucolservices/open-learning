@@ -10315,11 +10315,12 @@ const appliedMl: Track = {
             "Increase model complexity and watch training error fall while validation error rises, then rein it in",
           formats: ["simulation", "checkpoint"],
           concepts: ["Bias and variance", "Learning curves", "Regularisation and early stopping"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["ensembles"],
           plain:
             "A model that fits its training data too closely learns noise and does worse on new data. Comparing training and validation error shows when this happens, and techniques like regularisation, pruning and early stopping keep models general.",
+          terms: ["overfitting", "underfitting", "bias-variance-tradeoff", "regularisation"],
         },
         {
           slug: "unsupervised",

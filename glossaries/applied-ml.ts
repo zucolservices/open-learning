@@ -229,4 +229,28 @@ export const appliedMl = {
       "Boosting where each new tree is fitted to the ensemble's remaining errors, scaled by a learning rate. XGBoost, LightGBM and CatBoost implement it.",
     module: "ensembles",
   },
+  underfitting: {
+    term: "Underfitting",
+    definition:
+      "When a model is too simple to capture the real pattern, so it does poorly even on its training data.",
+    module: "overfitting",
+  },
+  "bias-variance-tradeoff": {
+    term: "Bias–variance trade-off",
+    definition:
+      "The tension between models that are too simple and consistently wrong (bias) and models so flexible they change with every sample (variance).",
+    module: "overfitting",
+  },
+  regularisation: {
+    term: "Regularisation",
+    definition:
+      "Adding a penalty for complexity, such as large weights, so a model can't bend too far to fit noise. Ridge (L2) and lasso (L1) are common forms.",
+    module: "overfitting",
+  },
+  "learning-curve": {
+    term: "Learning curve",
+    definition:
+      "A chart of training and validation error as the amount of training data grows, used to diagnose overfitting or underfitting.",
+    module: "overfitting",
+  },
 } satisfies Record<string, GlossaryEntry>;
