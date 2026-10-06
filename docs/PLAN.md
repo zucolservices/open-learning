@@ -813,7 +813,7 @@ AI & machine learning area, sixth track (started 2026-10-06). 22 modules in 7 ch
 | 4q. AI Agents              | AI & machine learning, third track, 21 modules                                          | Live: all 21 modules (2026-10-04)                                       |
 | 4r. Voice AI               | AI & machine learning, fourth track, 18 modules                                         | Live: all 18 modules (2026-10-05)                                       |
 | 4s. LLM Evaluation         | AI & machine learning, fifth track, 20 modules                                          | Live: all 20 modules (2026-10-05)                                       |
-| 4t. Applied ML             | AI & machine learning, sixth track, 22 modules                                          | In progress: 14 of 22 modules                                           |
+| 4t. Applied ML             | AI & machine learning, sixth track, 22 modules                                          | In progress: 15 of 22 modules                                           |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

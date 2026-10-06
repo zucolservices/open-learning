@@ -10425,11 +10425,12 @@ const appliedMl: Track = {
             "Platt scaling and isotonic regression",
             "When calibration matters",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["classification-metrics"],
           plain:
             "Many models output scores that look like probabilities but aren't reliable ones. A calibrated model's 70% predictions come true about 70% of the time, which matters whenever decisions use the probability itself, like pricing risk.",
+          terms: ["calibration", "reliability-diagram", "brier-score"],
         },
       ],
     },

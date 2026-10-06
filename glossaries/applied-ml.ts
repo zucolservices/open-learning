@@ -341,4 +341,22 @@ export const appliedMl = {
       "Synthetic Minority Over-sampling Technique (2002): creates extra rare-class examples by interpolating between real ones. Often unnecessary for strong models.",
     module: "imbalanced-data",
   },
+  calibration: {
+    term: "Calibration",
+    definition:
+      "How well a model's predicted probabilities match reality: of the cases it gives 70%, about 70% should happen.",
+    module: "calibration",
+  },
+  "reliability-diagram": {
+    term: "Reliability diagram",
+    definition:
+      "A chart of predicted probability against how often the outcome actually happened, in bins. Perfect calibration lies on the diagonal.",
+    module: "calibration",
+  },
+  "brier-score": {
+    term: "Brier score",
+    definition:
+      "The average squared gap between predicted probabilities and actual 0/1 outcomes. Lower is better.",
+    module: "calibration",
+  },
 } satisfies Record<string, GlossaryEntry>;
