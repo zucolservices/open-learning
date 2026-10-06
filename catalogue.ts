@@ -10214,11 +10214,12 @@ const appliedMl: Track = {
             "Scaling and transforming numbers",
             "Features from time and history",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["data-splits"],
           plain:
             "Models need numbers. Feature engineering turns raw columns into useful signals: encoding categories, scaling numbers, extracting day of week, counting recent purchases. Good features often matter more than the choice of algorithm.",
+          terms: ["feature-engineering", "one-hot-encoding", "target-encoding", "feature-scaling"],
         },
         {
           slug: "data-leakage",

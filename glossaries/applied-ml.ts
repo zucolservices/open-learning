@@ -105,4 +105,27 @@ export const appliedMl = {
       "Splitting the training data into k chunks, training k times with a different chunk held out each time, and averaging the scores.",
     module: "data-splits",
   },
+  "feature-engineering": {
+    term: "Feature engineering",
+    definition:
+      "Turning raw data such as dates, categories and event logs into numeric features that help a model learn.",
+    module: "feature-engineering",
+  },
+  "one-hot-encoding": {
+    term: "One-hot encoding",
+    definition: "Turning one category column into several yes/no columns, one per possible value.",
+    module: "feature-engineering",
+  },
+  "target-encoding": {
+    term: "Target encoding",
+    definition:
+      "Replacing each category with the average outcome for that category. Must be computed out-of-fold, or it leaks the answer.",
+    module: "feature-engineering",
+  },
+  "feature-scaling": {
+    term: "Feature scaling",
+    definition:
+      "Putting numeric features on comparable ranges, for example mean 0 and spread 1, so no feature dominates just because of its units.",
+    module: "feature-engineering",
+  },
 } satisfies Record<string, GlossaryEntry>;
