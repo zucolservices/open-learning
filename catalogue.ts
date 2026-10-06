@@ -10121,10 +10121,18 @@ const appliedMl: Track = {
             "Supervised and unsupervised learning",
             "Where classic ML still wins",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           plain:
             "Instead of writing rules by hand, machine learning finds patterns in examples. Show it thousands of emails marked spam or not, and it learns which signals matter. Classic machine learning on tables of data still powers fraud checks, pricing, forecasting and recommendations.",
+          terms: [
+            "machine-learning",
+            "supervised-learning",
+            "unsupervised-learning",
+            "feature",
+            "label",
+            "tabular-data",
+          ],
         },
         {
           slug: "ml-lifecycle",
