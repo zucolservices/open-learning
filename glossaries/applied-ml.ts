@@ -359,4 +359,22 @@ export const appliedMl = {
       "The average squared gap between predicted probabilities and actual 0/1 outcomes. Lower is better.",
     module: "calibration",
   },
+  hyperparameter: {
+    term: "Hyperparameter",
+    definition:
+      "A setting chosen before training, such as tree depth or learning rate, as opposed to the parameters a model learns from data.",
+    module: "hyperparameter-tuning",
+  },
+  "bayesian-optimisation": {
+    term: "Bayesian optimisation",
+    definition:
+      "A tuning strategy that uses the results of earlier trials to decide which settings to try next.",
+    module: "hyperparameter-tuning",
+  },
+  "nested-cross-validation": {
+    term: "Nested cross-validation",
+    definition:
+      "An inner cross-validation loop chooses hyperparameters while an outer loop scores the whole tuning procedure on data it never saw, giving an honest estimate.",
+    module: "hyperparameter-tuning",
+  },
 } satisfies Record<string, GlossaryEntry>;

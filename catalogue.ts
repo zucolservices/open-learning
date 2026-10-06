@@ -10452,11 +10452,12 @@ const appliedMl: Track = {
             "Grid, random and Bayesian search",
             "Tuning without fooling yourself",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["overfitting"],
           plain:
             "Settings like tree depth and learning rate aren't learned from data; they're chosen. Random and Bayesian search find good settings faster than trying every combination, and tuning must use validation data, never the test set.",
+          terms: ["hyperparameter", "bayesian-optimisation", "nested-cross-validation"],
         },
         {
           slug: "interpretability",

@@ -462,4 +462,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "applied-ml/regression-metrics": () => import("./applied-ml/regression-metrics"),
   "applied-ml/imbalanced-data": () => import("./applied-ml/imbalanced-data"),
   "applied-ml/calibration": () => import("./applied-ml/calibration"),
+  "applied-ml/hyperparameter-tuning": () => import("./applied-ml/hyperparameter-tuning"),
 };
