@@ -10385,11 +10385,12 @@ const appliedMl: Track = {
             "Score a delivery-time model with MAE, RMSE and MAPE and see which one a single huge miss distorts",
           formats: ["simulation", "checkpoint"],
           concepts: ["MAE and RMSE", "Percentage errors and R²", "Reading residuals"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["linear-models"],
           plain:
             "For numeric predictions, errors are measured in different ways: average absolute error, root mean squared error, which punishes big misses, and percentage error. Plotting the leftover errors shows where a model is systematically wrong.",
+          terms: ["residual", "mae", "rmse", "mape"],
         },
         {
           slug: "imbalanced-data",

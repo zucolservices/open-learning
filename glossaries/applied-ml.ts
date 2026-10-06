@@ -306,4 +306,27 @@ export const appliedMl = {
       "Area under the ROC curve: the chance a randomly chosen positive gets a higher score than a randomly chosen negative. 0.5 is guessing, 1 is perfect ranking.",
     module: "classification-metrics",
   },
+  residual: {
+    term: "Residual",
+    definition: "The gap between an actual value and a model's prediction for it.",
+    module: "regression-metrics",
+  },
+  mae: {
+    term: "MAE",
+    definition:
+      "Mean absolute error: the average size of a model's misses, in the same units as the target.",
+    module: "regression-metrics",
+  },
+  rmse: {
+    term: "RMSE",
+    definition:
+      "Root mean squared error: squares misses before averaging, then takes the square root, so large misses count much more.",
+    module: "regression-metrics",
+  },
+  mape: {
+    term: "MAPE",
+    definition:
+      "Mean absolute percentage error: misses as a percentage of the true value. Breaks when true values are zero and favours under-forecasting.",
+    module: "regression-metrics",
+  },
 } satisfies Record<string, GlossaryEntry>;
