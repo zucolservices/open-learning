@@ -128,4 +128,22 @@ export const appliedMl = {
       "Putting numeric features on comparable ranges, for example mean 0 and spread 1, so no feature dominates just because of its units.",
     module: "feature-engineering",
   },
+  "data-leakage": {
+    term: "Data leakage",
+    definition:
+      "Information a model won't have in real use sneaking into training or evaluation, making test scores look far better than real performance.",
+    module: "data-leakage",
+  },
+  "target-leakage": {
+    term: "Target leakage",
+    definition:
+      "A feature that is only known after the outcome, such as a cancellation reason when predicting cancellations.",
+    module: "data-leakage",
+  },
+  "train-test-contamination": {
+    term: "Train–test contamination",
+    definition:
+      "Test data influencing training, for example by fitting a scaler, encoder or feature selector on all the data before splitting.",
+    module: "data-leakage",
+  },
 } satisfies Record<string, GlossaryEntry>;

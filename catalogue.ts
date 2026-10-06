@@ -10230,11 +10230,12 @@ const appliedMl: Track = {
             "Find the feature that makes a model look perfect in testing and useless in production",
           formats: ["fix-the-problem", "checkpoint"],
           concepts: ["Target leakage", "Train–test contamination", "Catching leaks"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["feature-engineering"],
           plain:
             "Leakage happens when training data contains information that won't be available at prediction time, or test data seeps into training. The model looks brilliant in testing and fails in real use.",
+          terms: ["data-leakage", "target-leakage", "train-test-contamination"],
         },
       ],
     },
