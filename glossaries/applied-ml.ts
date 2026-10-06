@@ -395,4 +395,28 @@ export const appliedMl = {
       "A chart of a model's average prediction as one feature is varied while the others keep their real values.",
     module: "interpretability",
   },
+  "time-series": {
+    term: "Time series",
+    definition:
+      "Measurements taken in time order, such as daily sales, where the order matters and the future isn't in the training data.",
+    module: "forecasting",
+  },
+  seasonality: {
+    term: "Seasonality",
+    definition:
+      "A pattern that repeats on a calendar rhythm, such as busy Saturdays or a December peak.",
+    module: "forecasting",
+  },
+  "exponential-smoothing": {
+    term: "Exponential smoothing",
+    definition:
+      "A family of forecasting methods that average past values with weights that shrink for older points; Holt–Winters adds trend and seasonality.",
+    module: "forecasting",
+  },
+  "rolling-origin": {
+    term: "Rolling-origin evaluation",
+    definition:
+      "Testing a forecaster by training up to a date, forecasting the next stretch, then sliding the date forward and repeating; also called backtesting.",
+    module: "forecasting",
+  },
 } satisfies Record<string, GlossaryEntry>;

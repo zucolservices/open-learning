@@ -10492,11 +10492,12 @@ const appliedMl: Track = {
             "Lag features and baselines",
             "Backtesting through time",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["regression-metrics"],
           plain:
             "Forecasts predict future values from past ones: demand, sales, load. Time series have trend and seasonality, simple baselines are hard to beat, and models must be tested by rolling forward through time, never by random splits.",
+          terms: ["time-series", "seasonality", "exponential-smoothing", "rolling-origin"],
         },
       ],
     },
