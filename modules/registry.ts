@@ -448,4 +448,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "llm-evaluation/eval-tools": () => import("./llm-evaluation/eval-tools"),
   "llm-evaluation/capstone-evals": () => import("./llm-evaluation/capstone-evals"),
   "applied-ml/what-is-ml": () => import("./applied-ml/what-is-ml"),
+  "applied-ml/ml-lifecycle": () => import("./applied-ml/ml-lifecycle"),
 };

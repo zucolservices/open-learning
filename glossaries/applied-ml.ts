@@ -42,4 +42,16 @@ export const appliedMl = {
       "Data arranged in rows and columns, like a spreadsheet: one row per customer or transaction, one column per fact about it.",
     module: "what-is-ml",
   },
+  churn: {
+    term: "Churn",
+    definition:
+      "Customers leaving: cancelling a subscription or not coming back. Each business decides exactly what counts.",
+    module: "ml-lifecycle",
+  },
+  mlops: {
+    term: "MLOps",
+    definition:
+      "Engineering practices that automate training, testing, deploying and monitoring ML models, applying DevOps ideas to data and models.",
+    module: "ml-lifecycle",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -10147,11 +10147,12 @@ const appliedMl: Track = {
             "Iteration, not a straight line",
             "Where projects fail",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["what-is-ml"],
           plain:
             "An ML project moves from a business question to data, features, a model, evaluation, deployment and monitoring, looping back often. Much of the effort goes into data and framing rather than choosing an algorithm.",
+          terms: ["churn", "mlops"],
         },
         {
           slug: "problem-framing",
