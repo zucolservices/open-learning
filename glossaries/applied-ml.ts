@@ -377,4 +377,22 @@ export const appliedMl = {
       "An inner cross-validation loop chooses hyperparameters while an outer loop scores the whole tuning procedure on data it never saw, giving an honest estimate.",
     module: "hyperparameter-tuning",
   },
+  shap: {
+    term: "SHAP",
+    definition:
+      "SHapley Additive exPlanations: splits one prediction into per-feature pushes up or down from the average prediction, which add up exactly to the prediction.",
+    module: "interpretability",
+  },
+  "permutation-importance": {
+    term: "Permutation importance",
+    definition:
+      "How much worse a model scores on held-out data when one feature's column is shuffled; a model-agnostic measure of what the model relies on.",
+    module: "interpretability",
+  },
+  "partial-dependence-plot": {
+    term: "Partial dependence plot",
+    definition:
+      "A chart of a model's average prediction as one feature is varied while the others keep their real values.",
+    module: "interpretability",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -10472,11 +10472,12 @@ const appliedMl: Track = {
             "SHAP and local explanations",
             "Partial dependence and pitfalls",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["ensembles"],
           plain:
             "People affected by a model's decision, and the teams responsible, need to know why. Feature importance shows what matters overall; SHAP values show how each feature pushed one prediction up or down. Explanations have pitfalls of their own.",
+          terms: ["shap", "permutation-importance", "partial-dependence-plot"],
         },
         {
           slug: "forecasting",
