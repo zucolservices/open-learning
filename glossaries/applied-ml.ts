@@ -271,4 +271,39 @@ export const appliedMl = {
       "Principal component analysis: finds the directions in which data varies most, so many columns can be summarised by a few.",
     module: "unsupervised",
   },
+  "decision-threshold": {
+    term: "Decision threshold",
+    definition:
+      "The score above which a classifier says “yes”. Moving it trades false alarms against misses.",
+    module: "classification-metrics",
+  },
+  "confusion-matrix": {
+    term: "Confusion matrix",
+    definition:
+      "A table counting a classifier's true positives, false positives, false negatives and true negatives.",
+    module: "classification-metrics",
+  },
+  precision: {
+    term: "Precision",
+    definition: "Of the cases a model flags as positive, the share that really are positive.",
+    module: "classification-metrics",
+  },
+  recall: {
+    term: "Recall",
+    definition:
+      "Of all the real positive cases, the share the model catches. Also called sensitivity or true positive rate.",
+    module: "classification-metrics",
+  },
+  "roc-curve": {
+    term: "ROC curve",
+    definition:
+      "A chart of true positive rate against false positive rate at every threshold, showing a classifier's whole trade-off.",
+    module: "classification-metrics",
+  },
+  auc: {
+    term: "AUC",
+    definition:
+      "Area under the ROC curve: the chance a randomly chosen positive gets a higher score than a randomly chosen negative. 0.5 is guessing, 1 is perfect ranking.",
+    module: "classification-metrics",
+  },
 } satisfies Record<string, GlossaryEntry>;

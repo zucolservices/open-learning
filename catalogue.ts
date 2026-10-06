@@ -10362,11 +10362,19 @@ const appliedMl: Track = {
             "Precision, recall and F1",
             "Thresholds, ROC and PR curves",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["linear-models"],
           plain:
             "Accuracy alone misleads. The confusion matrix counts each kind of mistake; precision and recall measure the ones that matter; and moving the decision threshold trades one for the other. ROC and precision–recall curves show the whole trade-off.",
+          terms: [
+            "confusion-matrix",
+            "precision",
+            "recall",
+            "decision-threshold",
+            "roc-curve",
+            "auc",
+          ],
         },
         {
           slug: "regression-metrics",
