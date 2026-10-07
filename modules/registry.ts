@@ -485,4 +485,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "app-security/csrf-cors": () => import("./app-security/csrf-cors"),
   "app-security/security-headers": () => import("./app-security/security-headers"),
   "app-security/ssrf": () => import("./app-security/ssrf"),
+  "app-security/crypto-tls": () => import("./app-security/crypto-tls"),
 };

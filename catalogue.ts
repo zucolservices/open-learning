@@ -10957,11 +10957,12 @@ const appSecurity: Track = {
             "Encryption at rest and key management",
             "Don't roll your own crypto",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["why-appsec"],
           plain:
             "TLS encrypts data on the way and proves you're talking to the real server. Data at rest needs encryption with keys kept somewhere safer than the data. Use well-tested libraries and modern algorithms; home-made cryptography almost always fails.",
+          terms: ["tls", "certificate", "encryption-at-rest", "hsts"],
         },
       ],
     },

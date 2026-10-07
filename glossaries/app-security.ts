@@ -289,4 +289,22 @@ export const appSecurity = {
       "A local address a cloud server can query for information about itself, including temporary access credentials; a prime SSRF target.",
     module: "ssrf",
   },
+  tls: {
+    term: "TLS",
+    definition:
+      "Transport Layer Security: the protocol behind HTTPS that encrypts traffic, detects tampering, and uses certificates to prove you're talking to the real site.",
+    module: "crypto-tls",
+  },
+  certificate: {
+    term: "Certificate (TLS)",
+    definition:
+      "A signed statement from a trusted certificate authority that a particular public key belongs to a particular site, so browsers can verify its identity.",
+    module: "crypto-tls",
+  },
+  "encryption-at-rest": {
+    term: "Encryption at rest",
+    definition:
+      "Encrypting stored data, such as databases and backups, with keys kept somewhere safer than the data itself.",
+    module: "crypto-tls",
+  },
 } satisfies Record<string, GlossaryEntry>;
