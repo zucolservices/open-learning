@@ -99,3 +99,7 @@ Corrections and ideas are very welcome. If you spot a factual error, please open
 ## Credits
 
 Built by the engineering team at Zucol Services. Some modules quote third-party material under its own licence, for example the Scrum Guide (CC BY-SA 4.0); each module's `SOURCES.md` gives the attribution.
+
+## Licence
+
+The code and original content are released under the [MIT License](LICENSE). The Zucol name and logos are not covered, and third-party material quoted in the modules (such as the Scrum Guide, under CC BY-SA 4.0) stays under its own licence; see [LICENSE](LICENSE) for the details.
