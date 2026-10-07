@@ -16,7 +16,7 @@ export const TOP10: Risk[] = [
     plain: "Users can see or do things they shouldn't, like another customer's data.",
     was: "A01; SSRF, now part of it, was A10",
     incident:
-      "First American Financial, 2019: changing a document link showed other customers' files, about 800 million images.",
+      "First American Financial, 2019: changing a document link showed other customers' files, about 885 million documents.",
     modules: "Broken access control; Server-side request forgery",
   },
   {

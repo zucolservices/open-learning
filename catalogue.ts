@@ -10850,11 +10850,12 @@ const appSecurity: Track = {
             "IDOR and object-level checks",
             "Role- and attribute-based access control",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["sessions-tokens"],
           plain:
             "Knowing who someone is doesn't mean they may see everything. Broken access control, such as reading another user's data by changing an ID, is the most common serious web risk. Every request must check permission on the server, for that exact object.",
+          terms: ["authentication", "authorisation", "idor"],
         },
         {
           slug: "oauth-oidc",

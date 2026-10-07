@@ -4,6 +4,6 @@
 - OWASP Foundation history (launched 1 Dec 2001; non-profit since 2004). OWASP ASVS 5.0.0 (30 May 2025).
 - OWASP API Security Top 10 2023; OWASP Top 10 for LLM Applications 2025 (Nov 2024).
 - MITRE CWE Top 25 2025 (Dec 2025).
-- Incidents: SEC order on First American Financial (Jun 2021); OCC on Capital One (Aug 2020); CISA AA20-352A (SolarWinds); Adobe 2013 (Schneier; HIBP); CISA AA23-158A and Emsisoft (MOVEit); NPR (Palin, 2010); UnitedHealth CEO Senate testimony 1 May 2024 (Change Healthcare); Codecov security update (2021); GAO-18-559 (Equifax); NVD CVE-2014-1266 (goto fail).
+- Incidents: Krebs on Security (24 May 2019) and SEC order (Jun 2021) on First American Financial; OCC on Capital One (Aug 2020); CISA AA20-352A (SolarWinds); Adobe 2013 (Schneier; HIBP); CISA AA23-158A and Emsisoft (MOVEit); NPR (Palin, 2010); UnitedHealth CEO Senate testimony 1 May 2024 (Change Healthcare); Codecov security update (2021); GAO-18-559 (Equifax); NVD CVE-2014-1266 (goto fail).
 
 The house-fire list in step 1 is illustrative.

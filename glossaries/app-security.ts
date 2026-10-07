@@ -200,4 +200,21 @@ export const appSecurity = {
       "A compact token carrying claims such as user and expiry, usually signed but not encrypted, so its contents are readable by anyone who holds it.",
     module: "sessions-tokens",
   },
+  authentication: {
+    term: "Authentication",
+    definition: "Checking who someone is, for example with a password, passkey or session cookie.",
+    module: "access-control",
+  },
+  authorisation: {
+    term: "Authorisation",
+    definition:
+      "Deciding whether an authenticated user may perform a specific action on a specific object.",
+    module: "access-control",
+  },
+  idor: {
+    term: "IDOR",
+    definition:
+      "Insecure direct object reference: changing an identifier in a request (such as an invoice number) reaches someone else's data because ownership isn't checked. Called BOLA in APIs.",
+    module: "access-control",
+  },
 } satisfies Record<string, GlossaryEntry>;
