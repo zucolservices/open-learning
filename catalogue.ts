@@ -10830,11 +10830,12 @@ const appSecurity: Track = {
             "JWTs and their pitfalls",
             "Logout, expiry and rotation",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["passwords"],
           plain:
             "After login, a session ID or token proves who you are on every request, so whoever holds it is you. Cookies need the Secure, HttpOnly and SameSite flags; tokens must be signed, checked properly and short-lived.",
+          terms: ["session", "jwt", "xss"],
         },
         {
           slug: "access-control",

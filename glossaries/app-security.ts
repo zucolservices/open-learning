@@ -188,4 +188,16 @@ export const appSecurity = {
       "Login methods that protect users even if they are fooled by a fake site, because the browser or device checks which site is asking (passkeys, FIDO2 security keys).",
     module: "mfa-passkeys",
   },
+  session: {
+    term: "Session",
+    definition:
+      "The period a user stays logged in, tracked by a session ID or token the browser sends with every request; whoever holds it is treated as that user.",
+    module: "sessions-tokens",
+  },
+  jwt: {
+    term: "JWT (JSON Web Token)",
+    definition:
+      "A compact token carrying claims such as user and expiry, usually signed but not encrypted, so its contents are readable by anyone who holds it.",
+    module: "sessions-tokens",
+  },
 } satisfies Record<string, GlossaryEntry>;
