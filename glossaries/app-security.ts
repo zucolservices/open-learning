@@ -307,4 +307,16 @@ export const appSecurity = {
       "Encrypting stored data, such as databases and backups, with keys kept somewhere safer than the data itself.",
     module: "crypto-tls",
   },
+  secret: {
+    term: "Secret",
+    definition:
+      "Any value that grants access, such as a password, API key, token or private key; whoever copies it can act as you.",
+    module: "secrets",
+  },
+  "secrets-manager": {
+    term: "Secrets manager",
+    definition:
+      "A system that stores secrets centrally, controls and logs who can read each one, and can rotate them, instead of keeping them in code or config files.",
+    module: "secrets",
+  },
 } satisfies Record<string, GlossaryEntry>;

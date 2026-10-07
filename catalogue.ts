@@ -10984,11 +10984,12 @@ const appSecurity: Track = {
             "Vaults and short-lived credentials",
             "Secret scanning and rotation",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["secure-design"],
           plain:
             "Passwords, API keys and certificates leak through code, logs and chat. Keep them in a secrets manager, prefer short-lived credentials over long-lived keys, scan for leaks automatically, and rotate quickly when one escapes.",
+          terms: ["secret", "secrets-manager", "least-privilege"],
         },
         {
           slug: "supply-chain",
