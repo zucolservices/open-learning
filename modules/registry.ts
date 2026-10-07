@@ -472,4 +472,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "app-security/why-appsec": () => import("./app-security/why-appsec"),
   "app-security/threat-modelling": () => import("./app-security/threat-modelling"),
   "app-security/secure-design": () => import("./app-security/secure-design"),
+  "app-security/owasp-top-ten": () => import("./app-security/owasp-top-ten"),
 };

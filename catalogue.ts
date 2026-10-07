@@ -10676,11 +10676,12 @@ const appSecurity: Track = {
             "Tour the latest OWASP Top 10 and match each risk to a real incident and to the module that covers it",
           formats: ["animated-infographic", "checkpoint"],
           concepts: ["What OWASP is", "The Top 10 risks", "Using lists like CWE and the Top 10"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["why-appsec"],
           plain:
             "OWASP is a non-profit community whose Top 10 lists the most important web application security risks, updated every few years from real data. It's an awareness list, not a complete standard.",
+          terms: ["owasp", "cwe", "asvs", "insecure-design"],
         },
       ],
     },

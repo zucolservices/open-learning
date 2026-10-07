@@ -80,4 +80,22 @@ export const appSecurity = {
       "Security flaws in the plan itself, such as no limit on what a role can see, which a perfect implementation can't fix (OWASP Top 10:2025 A06).",
     module: "secure-design",
   },
+  owasp: {
+    term: "OWASP",
+    definition:
+      "The Open Worldwide Application Security Project: a non-profit community (since 2001) that publishes free security guides, tools and lists such as the Top 10.",
+    module: "owasp-top-ten",
+  },
+  cwe: {
+    term: "CWE",
+    definition:
+      "Common Weakness Enumeration: MITRE's numbered catalogue of software weakness types, such as CWE-89 for SQL injection.",
+    module: "owasp-top-ten",
+  },
+  asvs: {
+    term: "ASVS",
+    definition:
+      "OWASP's Application Security Verification Standard: a detailed checklist of security requirements an application can be tested against (version 5.0, 2025).",
+    module: "owasp-top-ten",
+  },
 } satisfies Record<string, GlossaryEntry>;
