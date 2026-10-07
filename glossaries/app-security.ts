@@ -349,4 +349,16 @@ export const appSecurity = {
       "Dynamic application security testing: tools that attack a running application from the outside, as an attacker would.",
     module: "security-testing",
   },
+  alerting: {
+    term: "Alerting",
+    definition:
+      "Automatically notifying someone when logs show something dangerous, so an attack is noticed and acted on rather than just recorded.",
+    module: "detect-respond",
+  },
+  "security-txt": {
+    term: "security.txt",
+    definition:
+      "A standard file (RFC 9116) at /.well-known/security.txt giving a security contact, so researchers know how to report a vulnerability.",
+    module: "detect-respond",
+  },
 } satisfies Record<string, GlossaryEntry>;

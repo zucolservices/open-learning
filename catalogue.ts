@@ -11044,11 +11044,12 @@ const appSecurity: Track = {
             "Detection and alerting",
             "Incident response and disclosure",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["security-testing"],
           plain:
             "No defence is perfect, so log security-relevant events, alert on the suspicious ones and practise responding. A clear incident plan, and a way for outsiders to report bugs, turn a disaster into a contained event.",
+          terms: ["alerting", "security-txt"],
         },
       ],
     },
