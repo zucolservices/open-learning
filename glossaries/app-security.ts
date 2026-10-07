@@ -134,4 +134,22 @@ export const appSecurity = {
       "A flaw where user input placed in an operating-system command lets an attacker run extra commands on the server.",
     module: "other-injection",
   },
+  "input-validation": {
+    term: "Input validation",
+    definition:
+      "Checking that data from outside matches what you expect (type, length, format, range, meaning) and rejecting the rest, on the server.",
+    module: "input-handling",
+  },
+  "allow-list": {
+    term: "Allow-list",
+    definition:
+      "A list of what is permitted, with everything else rejected; safer than a deny-list, which tries to name everything forbidden.",
+    module: "input-handling",
+  },
+  deserialisation: {
+    term: "Deserialisation",
+    definition:
+      "Turning stored or transmitted bytes back into program objects. Doing it on untrusted data with some formats can run an attacker's code.",
+    module: "input-handling",
+  },
 } satisfies Record<string, GlossaryEntry>;

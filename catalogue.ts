@@ -10763,11 +10763,12 @@ const appSecurity: Track = {
             "File uploads",
             "Unsafe deserialisation and XML external entities",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["other-injection"],
           plain:
             "Every input from outside, including files, headers and messages from other services, should be checked against what you expect: type, length, format and range. Some parsers are dangerous by default and must be configured safely or avoided.",
+          terms: ["input-validation", "allow-list", "deserialisation", "trust-boundary"],
         },
       ],
     },
