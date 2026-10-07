@@ -319,4 +319,16 @@ export const appSecurity = {
       "A system that stores secrets centrally, controls and logs who can read each one, and can rotate them, instead of keeping them in code or config files.",
     module: "secrets",
   },
+  "supply-chain": {
+    term: "Software supply chain",
+    definition:
+      "All the code, dependencies, build systems and update channels your software relies on; a flaw or backdoor anywhere in it can affect you.",
+    module: "supply-chain",
+  },
+  sbom: {
+    term: "SBOM",
+    definition:
+      "Software bill of materials: a complete list of the components and versions in a piece of software, used to answer quickly whether a new flaw affects you.",
+    module: "supply-chain",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -11004,11 +11004,12 @@ const appSecurity: Track = {
             "SBOMs and vulnerability scanning",
             "Provenance, signing and SLSA",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["owasp-top-ten"],
           plain:
             "Modern apps are mostly open-source packages, each with its own dependencies. A flaw or a planted backdoor in one of them becomes yours. Know what you ship (an SBOM), keep it patched, pin and verify packages, and sign what you build.",
+          terms: ["supply-chain", "sbom"],
         },
         {
           slug: "security-testing",

@@ -487,4 +487,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "app-security/ssrf": () => import("./app-security/ssrf"),
   "app-security/crypto-tls": () => import("./app-security/crypto-tls"),
   "app-security/secrets": () => import("./app-security/secrets"),
+  "app-security/supply-chain": () => import("./app-security/supply-chain"),
 };
