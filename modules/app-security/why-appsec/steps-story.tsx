@@ -56,7 +56,7 @@ function Scene({ index }: { index: number }) {
         })}
       </div>
       <motion.p animate={{ opacity: index >= 3 ? 1 : 0 }} className="text-muted text-xs">
-        76 days inside · about 9,000 database queries · a monitoring device blind for 19 months
+        76 days inside · about 9,000 database queries · a monitoring device blind for months
       </motion.p>
     </div>
   );
@@ -116,13 +116,13 @@ const SECTIONS: StorySection[] = [
   {
     id: "blind",
     kicker: "29 July 2017",
-    title: "A blind spot for 19 months",
+    title: "A blind spot for months",
     body: (
       <p>
         A device that inspected the site&apos;s network traffic had been effectively switched off
-        for 19 months, because its security certificate had expired. When staff renewed it on 29
-        July, they saw the suspicious traffic straight away (US House Oversight Committee report,
-        December 2018).
+        for months, because its security certificate had expired: about 10 months according to the
+        US GAO, 19 according to the House Oversight Committee. When staff renewed it on 29 July,
+        they saw the suspicious traffic straight away.
       </p>
     ),
   },
