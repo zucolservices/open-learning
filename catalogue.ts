@@ -10897,11 +10897,12 @@ const appSecurity: Track = {
             "Cross-site request forgery",
             "CORS as controlled relaxation",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["sessions-tokens"],
           plain:
             "Browsers keep sites apart with the same-origin policy, but they still send cookies with requests that other sites trigger. That's cross-site request forgery. SameSite cookies and anti-forgery tokens stop it; CORS only controls who can read responses.",
+          terms: ["csrf", "samesite", "same-origin-policy", "cors"],
         },
         {
           slug: "security-headers",

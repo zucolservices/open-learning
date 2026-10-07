@@ -482,4 +482,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "app-security/sessions-tokens": () => import("./app-security/sessions-tokens"),
   "app-security/access-control": () => import("./app-security/access-control"),
   "app-security/oauth-oidc": () => import("./app-security/oauth-oidc"),
+  "app-security/csrf-cors": () => import("./app-security/csrf-cors"),
 };

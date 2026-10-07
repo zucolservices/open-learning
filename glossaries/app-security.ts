@@ -235,4 +235,28 @@ export const appSecurity = {
       "Proof Key for Code Exchange: the app proves it started the sign-in by revealing a secret whose hash it sent earlier, so a stolen authorisation code is useless.",
     module: "oauth-oidc",
   },
+  csrf: {
+    term: "Cross-site request forgery (CSRF)",
+    definition:
+      "An attack where a page you visit makes your browser send a request to a site you're logged into; the browser adds your cookies, so the site thinks you asked for it.",
+    module: "csrf-cors",
+  },
+  samesite: {
+    term: "SameSite",
+    definition:
+      "A cookie setting (Strict, Lax or None) that tells the browser whether to send the cookie on requests started by other sites.",
+    module: "csrf-cors",
+  },
+  "same-origin-policy": {
+    term: "Same-origin policy",
+    definition:
+      "The browser rule that a page's scripts may not read data from a different origin (scheme, host and port).",
+    module: "csrf-cors",
+  },
+  cors: {
+    term: "CORS",
+    definition:
+      "Cross-origin resource sharing: headers a server sends to let pages from named other origins read its responses. It controls reading, not sending, so it doesn't stop CSRF.",
+    module: "csrf-cors",
+  },
 } satisfies Record<string, GlossaryEntry>;
