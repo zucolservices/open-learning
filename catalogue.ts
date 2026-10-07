@@ -10703,11 +10703,12 @@ const appSecurity: Track = {
             "Parameterised queries",
             "ORMs and least-privilege database users",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["owasp-top-ten"],
           plain:
             "If an app builds a database query by pasting user input into text, a carefully chosen input can change what the query does. Parameterised queries keep the query and the data separate, so input is always treated as data.",
+          terms: ["sql-injection", "parameterised-query", "least-privilege"],
         },
         {
           slug: "xss",

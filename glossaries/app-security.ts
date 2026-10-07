@@ -98,4 +98,16 @@ export const appSecurity = {
       "OWASP's Application Security Verification Standard: a detailed checklist of security requirements an application can be tested against (version 5.0, 2025).",
     module: "owasp-top-ten",
   },
+  "sql-injection": {
+    term: "SQL injection",
+    definition:
+      "A flaw where user input pasted into a database query's text changes what the query does, letting attackers read or change data.",
+    module: "sql-injection",
+  },
+  "parameterised-query": {
+    term: "Parameterised query",
+    definition:
+      "A database query written with placeholders, with the values sent separately, so input is always treated as data and never as part of the command. Also called a prepared statement.",
+    module: "sql-injection",
+  },
 } satisfies Record<string, GlossaryEntry>;
