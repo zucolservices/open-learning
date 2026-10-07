@@ -484,4 +484,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "app-security/oauth-oidc": () => import("./app-security/oauth-oidc"),
   "app-security/csrf-cors": () => import("./app-security/csrf-cors"),
   "app-security/security-headers": () => import("./app-security/security-headers"),
+  "app-security/ssrf": () => import("./app-security/ssrf"),
 };

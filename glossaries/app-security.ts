@@ -277,4 +277,16 @@ export const appSecurity = {
       "HTTP Strict Transport Security: a header telling the browser to use only HTTPS for a site for a set time.",
     module: "security-headers",
   },
+  ssrf: {
+    term: "Server-side request forgery (SSRF)",
+    definition:
+      "Tricking a server into making requests on your behalf, reaching internal systems or a cloud metadata service that you couldn't reach directly.",
+    module: "ssrf",
+  },
+  "metadata-service": {
+    term: "Cloud metadata service",
+    definition:
+      "A local address a cloud server can query for information about itself, including temporary access credentials; a prime SSRF target.",
+    module: "ssrf",
+  },
 } satisfies Record<string, GlossaryEntry>;

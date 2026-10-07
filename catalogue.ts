@@ -10937,11 +10937,12 @@ const appSecurity: Track = {
             "Cloud metadata services",
             "Allow-lists and network controls",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["input-handling"],
           plain:
             "If a server fetches URLs that users supply, an attacker can point it at internal systems the attacker can't reach, such as the cloud metadata service that hands out credentials. Allow-lists, network rules and hardened metadata services stop it.",
+          terms: ["ssrf", "metadata-service", "allow-list"],
         },
         {
           slug: "crypto-tls",
