@@ -10723,11 +10723,12 @@ const appSecurity: Track = {
             "Context-aware output encoding",
             "Frameworks and sanitising HTML",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["sql-injection"],
           plain:
             "Cross-site scripting happens when a site shows user input as part of its page without encoding it, so the browser runs it as code. It lets attackers act as the victim on that site. Encoding output for its context is the main defence.",
+          terms: ["xss", "output-encoding"],
         },
         {
           slug: "other-injection",

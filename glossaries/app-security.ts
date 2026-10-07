@@ -110,4 +110,16 @@ export const appSecurity = {
       "A database query written with placeholders, with the values sent separately, so input is always treated as data and never as part of the command. Also called a prepared statement.",
     module: "sql-injection",
   },
+  xss: {
+    term: "Cross-site scripting (XSS)",
+    definition:
+      "A flaw where a site includes untrusted input in its pages so that the browser runs it as the site's own code, letting attackers act as the visitor.",
+    module: "xss",
+  },
+  "output-encoding": {
+    term: "Output encoding",
+    definition:
+      "Converting untrusted data into a form that is displayed as text in its exact context (HTML, attribute, JavaScript, URL) instead of being run as code; the main defence against XSS.",
+    module: "xss",
+  },
 } satisfies Record<string, GlossaryEntry>;
