@@ -122,4 +122,16 @@ export const appSecurity = {
       "Converting untrusted data into a form that is displayed as text in its exact context (HTML, attribute, JavaScript, URL) instead of being run as code; the main defence against XSS.",
     module: "xss",
   },
+  interpreter: {
+    term: "Interpreter",
+    definition:
+      "Any software that reads text and acts on it as instructions, such as a shell, a database, a template engine or a browser. Injection targets interpreters.",
+    module: "other-injection",
+  },
+  "command-injection": {
+    term: "Command injection",
+    definition:
+      "A flaw where user input placed in an operating-system command lets an attacker run extra commands on the server.",
+    module: "other-injection",
+  },
 } satisfies Record<string, GlossaryEntry>;

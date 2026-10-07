@@ -10743,11 +10743,12 @@ const appSecurity: Track = {
             "Template and NoSQL injection",
             "The general rule: keep code and data apart",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["sql-injection"],
           plain:
             "SQL is only one interpreter. Shells, template engines, NoSQL queries, LDAP and XML parsers can all be tricked when input is mixed into commands. The fix is always the same idea: pass data through an interface that can't confuse it with code.",
+          terms: ["interpreter", "command-injection"],
         },
         {
           slug: "input-handling",

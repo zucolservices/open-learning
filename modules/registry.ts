@@ -475,4 +475,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "app-security/owasp-top-ten": () => import("./app-security/owasp-top-ten"),
   "app-security/sql-injection": () => import("./app-security/sql-injection"),
   "app-security/xss": () => import("./app-security/xss"),
+  "app-security/other-injection": () => import("./app-security/other-injection"),
 };
