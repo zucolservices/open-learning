@@ -62,4 +62,22 @@ export const appSecurity = {
       "Six prompts for finding threats: Spoofing, Tampering, Repudiation, Information disclosure, Denial of service and Elevation of privilege (Microsoft, 1999).",
     module: "threat-modelling",
   },
+  "least-privilege": {
+    term: "Least privilege",
+    definition:
+      "Giving each person, program or service only the access it needs for its job, and nothing more.",
+    module: "secure-design",
+  },
+  "defence-in-depth": {
+    term: "Defence in depth",
+    definition:
+      "Stacking several independent layers of protection so that one failure doesn't lead to a breach.",
+    module: "secure-design",
+  },
+  "insecure-design": {
+    term: "Insecure design",
+    definition:
+      "Security flaws in the plan itself, such as no limit on what a role can see, which a perfect implementation can't fix (OWASP Top 10:2025 A06).",
+    module: "secure-design",
+  },
 } satisfies Record<string, GlossaryEntry>;

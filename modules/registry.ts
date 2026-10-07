@@ -471,4 +471,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "applied-ml/capstone-ml": () => import("./applied-ml/capstone-ml"),
   "app-security/why-appsec": () => import("./app-security/why-appsec"),
   "app-security/threat-modelling": () => import("./app-security/threat-modelling"),
+  "app-security/secure-design": () => import("./app-security/secure-design"),
 };

@@ -10660,11 +10660,12 @@ const appSecurity: Track = {
             "Redesign a leaky admin panel with least privilege, defence in depth and secure defaults, and watch an attack stall at each layer",
           formats: ["simulation", "checkpoint"],
           concepts: ["Least privilege", "Defence in depth", "Secure defaults and failing safely"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["threat-modelling"],
           plain:
             "A few old principles prevent whole families of bugs: give each part only the access it needs, put several independent layers in an attacker's way, make the safe choice the default, and fail closed rather than open.",
+          terms: ["least-privilege", "defence-in-depth", "insecure-design"],
         },
         {
           slug: "owasp-top-ten",
