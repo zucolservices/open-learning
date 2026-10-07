@@ -10644,11 +10644,12 @@ const appSecurity: Track = {
             "Draw a food-delivery app's data flows, mark trust boundaries, and find threats with STRIDE before writing code",
           formats: ["build-connect", "checkpoint"],
           concepts: ["Data flow diagrams and trust boundaries", "STRIDE", "Prioritising threats"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["why-appsec"],
           plain:
             "Threat modelling asks four questions: what are we building, what can go wrong, what will we do about it, and did we do a good job? Drawing how data flows and where trust changes shows where attacks will land.",
+          terms: ["threat-modelling", "data-flow-diagram", "trust-boundary", "stride"],
         },
         {
           slug: "secure-design",
