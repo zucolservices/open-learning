@@ -170,4 +170,22 @@ export const appSecurity = {
       "Trying usernames and passwords leaked from one site on many other sites, betting that people reuse passwords.",
     module: "passwords",
   },
+  mfa: {
+    term: "Multi-factor authentication (MFA)",
+    definition:
+      "Logging in with proofs of at least two different kinds: something you know, something you have, or something you are.",
+    module: "mfa-passkeys",
+  },
+  passkey: {
+    term: "Passkey",
+    definition:
+      "A login credential based on a key pair: the private key stays on your device or password manager, and the browser only uses it on the site it was created for, so it resists phishing.",
+    module: "mfa-passkeys",
+  },
+  "phishing-resistant": {
+    term: "Phishing-resistant authentication",
+    definition:
+      "Login methods that protect users even if they are fooled by a fake site, because the browser or device checks which site is asking (passkeys, FIDO2 security keys).",
+    module: "mfa-passkeys",
+  },
 } satisfies Record<string, GlossaryEntry>;

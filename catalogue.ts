@@ -10810,11 +10810,12 @@ const appSecurity: Track = {
             "Phishing-resistant MFA",
             "Passkeys and WebAuthn",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["passwords"],
           plain:
             "Multi-factor authentication adds something you have or are to something you know. One-time codes still work for a convincing fake site; passkeys, built on public-key cryptography, are tied to the real site and can't be phished that way.",
+          terms: ["mfa", "passkey", "phishing-resistant"],
         },
         {
           slug: "sessions-tokens",
