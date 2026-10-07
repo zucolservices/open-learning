@@ -10917,11 +10917,12 @@ const appSecurity: Track = {
             "HSTS, framing and MIME-sniffing protections",
             "Rolling out headers safely",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["xss", "csrf-cors"],
           plain:
             "Response headers tell the browser how to protect a page: which scripts may run (Content-Security-Policy), to always use HTTPS (HSTS), and whether the page may be framed. They're a second layer behind fixing the bug itself.",
+          terms: ["security-headers", "csp", "hsts"],
         },
         {
           slug: "ssrf",

@@ -259,4 +259,22 @@ export const appSecurity = {
       "Cross-origin resource sharing: headers a server sends to let pages from named other origins read its responses. It controls reading, not sending, so it doesn't stop CSRF.",
     module: "csrf-cors",
   },
+  "security-headers": {
+    term: "Security headers",
+    definition:
+      "HTTP response headers that tell the browser to switch on extra protections for a page, such as which scripts may run or HTTPS only.",
+    module: "security-headers",
+  },
+  csp: {
+    term: "Content Security Policy (CSP)",
+    definition:
+      "A header listing which scripts and other resources a page may load and run; a strict CSP uses a random nonce per response so injected scripts are refused.",
+    module: "security-headers",
+  },
+  hsts: {
+    term: "HSTS",
+    definition:
+      "HTTP Strict Transport Security: a header telling the browser to use only HTTPS for a site for a set time.",
+    module: "security-headers",
+  },
 } satisfies Record<string, GlossaryEntry>;
