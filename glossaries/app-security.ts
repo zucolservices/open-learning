@@ -331,4 +331,22 @@ export const appSecurity = {
       "Software bill of materials: a complete list of the components and versions in a piece of software, used to answer quickly whether a new flaw affects you.",
     module: "supply-chain",
   },
+  devsecops: {
+    term: "DevSecOps",
+    definition:
+      "Building security checks into the normal development and delivery pipeline, so testing happens continuously rather than only at the end.",
+    module: "security-testing",
+  },
+  sast: {
+    term: "SAST",
+    definition:
+      "Static application security testing: tools that read source code for risky patterns without running it.",
+    module: "security-testing",
+  },
+  dast: {
+    term: "DAST",
+    definition:
+      "Dynamic application security testing: tools that attack a running application from the outside, as an attacker would.",
+    module: "security-testing",
+  },
 } satisfies Record<string, GlossaryEntry>;

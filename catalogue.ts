@@ -11024,11 +11024,12 @@ const appSecurity: Track = {
             "Code review and pen tests",
             "Shifting left without drowning in alerts",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["supply-chain"],
           plain:
             "Different tests catch different bugs: static analysis reads code, dynamic testing attacks a running app, composition analysis checks dependencies, and people find logic flaws tools miss. Put fast checks in every build and deeper ones on a schedule.",
+          terms: ["devsecops", "sast", "dast"],
         },
         {
           slug: "detect-respond",
