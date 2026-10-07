@@ -34,6 +34,8 @@ import { llmEvaluationArtA } from "./art/llm-evaluation-a";
 import { llmEvaluationArtB } from "./art/llm-evaluation-b";
 import { appliedMlArtA } from "./art/applied-ml-a";
 import { appliedMlArtB } from "./art/applied-ml-b";
+import { appSecurityArtA } from "./art/app-security-a";
+import { appSecurityArtB } from "./art/app-security-b";
 
 /**
  * One small illustration per module (viewBox 160 × 100), drawn with the
@@ -1087,6 +1089,8 @@ const all: ArtMap = {
   ...llmEvaluationArtB,
   ...appliedMlArtA,
   ...appliedMlArtB,
+  ...appSecurityArtA,
+  ...appSecurityArtB,
 };
 
 /** Art is keyed by slug; a "track/slug" key wins, for slugs used in more than one track. */

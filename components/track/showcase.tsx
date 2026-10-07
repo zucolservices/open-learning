@@ -38,6 +38,8 @@ import { LlmEvaluationScene } from "@/components/home/llm-evaluation-scene";
 import { LlmEvaluationTaste } from "@/components/home/llm-evaluation-taste";
 import { AppliedMlScene } from "@/components/home/applied-ml-scene";
 import { AppliedMlTaste } from "@/components/home/applied-ml-taste";
+import { AppSecurityScene } from "@/components/home/app-security-scene";
+import { AppSecurityTaste } from "@/components/home/app-security-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -206,5 +208,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: AppliedMlTaste,
     tasteCaption:
       "A taste of module 19: break the live feature pipeline and watch the same loan model give different answers.",
+  },
+  "app-security": {
+    Scene: AppSecurityScene,
+    sceneCaption:
+      "The defender's layers an attacker must beat: threat modelling, input, identity, the browser, the server, the supply chain, and detection. Watch the tour, or click any part.",
+    Taste: AppSecurityTaste,
+    tasteCaption:
+      "A taste of module 5: watch a login query turn crafted input into code, then switch to a parameterised query and stop it.",
   },
 };
