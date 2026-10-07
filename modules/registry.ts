@@ -490,4 +490,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "app-security/supply-chain": () => import("./app-security/supply-chain"),
   "app-security/security-testing": () => import("./app-security/security-testing"),
   "app-security/detect-respond": () => import("./app-security/detect-respond"),
+  "app-security/capstone-appsec": () => import("./app-security/capstone-appsec"),
 };

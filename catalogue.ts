@@ -11067,11 +11067,12 @@ const appSecurity: Track = {
             "Threat-model a small payments app, choose its defences, then handle the five security incidents of its first quarter",
           formats: ["branching-scenario", "fix-the-problem", "checkpoint"],
           concepts: ["Applying application security"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["access-control", "supply-chain", "detect-respond"],
           plain:
             "Everything in this track in one project: model the threats, design defences in layers, handle identity and access properly, protect the browser and the server, secure the pipeline, and respond well when something still goes wrong.",
+          terms: ["vulnerability", "threat-modelling", "authorisation", "supply-chain", "alerting"],
         },
       ],
     },
