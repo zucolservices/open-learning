@@ -10629,10 +10629,11 @@ const appSecurity: Track = {
             "The attacker's view",
             "Security as everyone's job",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           plain:
             "Most breaches start with an ordinary bug: a missing check, an unpatched library, a leaked password. Application security is the habit of building software so those bugs are rare, hard to exploit and quickly noticed.",
+          terms: ["vulnerability", "threat", "risk", "patch", "exploit", "shift-left"],
         },
         {
           slug: "threat-modelling",
