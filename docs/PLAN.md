@@ -787,6 +787,41 @@ AI & machine learning area, sixth track (started 2026-10-06). 22 modules in 7 ch
 | **7** | **Capstone**                            |                                                 |                                     |
 | 22    | Capstone: predicting customer churn     | The churn model, end to end                     | Branching scenario, Fix the problem |
 
+## Application Security: curriculum
+
+Security & government area, first track (started 2026-10-07). 22 modules in 6 chapters, about 8 hours. Accent: "bastion" plum (`[data-track="bastion"]`). Glossary: `glossaries/app-security.ts`. Vendor-neutral: open standards (OWASP Top 10 and ASVS, NIST, CWE, IETF RFCs), open-source tools (OWASP ZAP, Semgrep, Trivy, gitleaks, Sigstore) and the security services of AWS, Google Cloud, Microsoft Azure and GitHub. Every attack is a safe, rules-based simulation in the browser: no real payloads against real systems. Builds on API Design (auth basics), CI/CD (pipeline and supply-chain basics) and Cloud Architecture (IAM) rather than repeating them. Built on one branch (`track/app-security`), one commit per module, merged once at the end. Each module is fact-checked on its own before it is built; card illustrations and a showcase follow the last module.
+
+| #     | Module                                | Centrepiece                           | Key formats                         |
+| ----- | ------------------------------------- | ------------------------------------- | ----------------------------------- |
+| **1** | **The big picture**                   |                                       |                                     |
+| 1     | Why application security              | Breach timeline scroll story          | Scroll story                        |
+| 2     | Threat modelling                      | Data-flow diagram + STRIDE finder     | Build connect                       |
+| 3     | Secure design principles              | Layered defences vs an attack         | Simulation                          |
+| 4     | The OWASP Top 10                      | Top 10 tour mapped to incidents       | Animated infographic                |
+| **2** | **Injection and input**               |                                       |                                     |
+| 5     | SQL injection                         | Live login query builder              | Simulation                          |
+| 6     | Cross-site scripting                  | Sandboxed comment page                | Simulation                          |
+| 7     | Command, template and other injection | Three injections, one fix             | Fix the problem                     |
+| 8     | Validation and safe parsing           | Upload validator                      | Simulation                          |
+| **3** | **Identity and access**               |                                       |                                     |
+| 9     | Passwords and authentication          | Password-cracking race                | Simulation                          |
+| 10    | MFA and passkeys                      | Phishing vs three MFA kinds           | Simulation                          |
+| 11    | Sessions, cookies and tokens          | Session theft and hardening           | Simulation                          |
+| 12    | Broken access control                 | IDOR invoice viewer                   | Simulation                          |
+| 13    | OAuth and OpenID Connect              | OAuth flow step-through               | Step through                        |
+| **4** | **The web platform**                  |                                       |                                     |
+| 14    | CSRF, CORS and the same-origin policy | Forged transfer vs defences           | Simulation                          |
+| 15    | Security headers and CSP              | Header toggles vs attacks             | Simulation                          |
+| 16    | Server-side request forgery           | Image preview reaches metadata        | Simulation                          |
+| 17    | Encryption and TLS                    | TLS handshake + café Wi-Fi            | Step through                        |
+| **5** | **Secure delivery**                   |                                       |                                     |
+| 18    | Secrets management                    | Leaked key hunt and rotation          | Fix the problem                     |
+| 19    | Dependencies and the supply chain     | Dependency tree trace                 | Simulation                          |
+| 20    | Security testing and DevSecOps        | Testing tools on a pipeline           | Animated infographic                |
+| 21    | Logging, detection and response       | Incident log triage                   | Branching scenario                  |
+| **6** | **Capstone**                          |                                       |                                     |
+| 22    | Capstone: securing a payments app     | Payments app threat model + incidents | Branching scenario, Fix the problem |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -814,6 +849,7 @@ AI & machine learning area, sixth track (started 2026-10-06). 22 modules in 7 ch
 | 4r. Voice AI               | AI & machine learning, fourth track, 18 modules                                         | Live: all 18 modules (2026-10-05)                                       |
 | 4s. LLM Evaluation         | AI & machine learning, fifth track, 20 modules                                          | Live: all 20 modules (2026-10-05)                                       |
 | 4t. Applied ML             | AI & machine learning, sixth track, 22 modules                                          | Live: all 22 modules (2026-10-06)                                       |
+| 4u. Application Security   | Security & government, first track, 22 modules                                          | In progress: 0 of 22 modules                                            |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

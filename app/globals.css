@@ -315,6 +315,18 @@
   --bg-glow: rgb(251 191 36 / 0.1);
 }
 
+[data-track="bastion"] {
+  --accent: #a21a7a;
+  --accent-soft: rgb(162 26 122 / 0.1);
+  --bg-glow: rgb(162 26 122 / 0.12);
+}
+[data-theme="dark"] [data-track="bastion"],
+[data-theme="dark"][data-track="bastion"] {
+  --accent: #f17ad2;
+  --accent-soft: rgb(241 122 210 / 0.14);
+  --bg-glow: rgb(241 122 210 / 0.1);
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);

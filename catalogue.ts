@@ -106,6 +106,7 @@ export interface Track {
     | "timbre"
     | "gauge"
     | "gradient"
+    | "bastion"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -10600,6 +10601,462 @@ const appliedMl: Track = {
   ],
 };
 
+const appSecurity: Track = {
+  slug: "app-security",
+  title: "Application Security",
+  area: "Security & government",
+  category: "security-government",
+  tagline: "The common attacks, and the habits that stop them.",
+  description:
+    "Application security from the attacker's point of view, for every developer: threat modelling and secure design, the OWASP Top 10, SQL injection, cross-site scripting and other injection, input handling, passwords, MFA and passkeys, sessions and tokens, access control, OAuth and OpenID Connect, CSRF and CORS, security headers, SSRF, encryption and TLS, secrets, the software supply chain, security testing, and detection and response. Vendor-neutral, using open standards (OWASP, NIST, CWE) and covering open-source tools alongside the security services of AWS, Google Cloud, Microsoft Azure and GitHub. Every attack runs in a safe simulation in your browser. By the end you can spot common vulnerabilities and build software that resists them.",
+  accent: "bastion",
+  chapters: [
+    {
+      slug: "big-picture",
+      title: "The big picture",
+      summary: "Thinking like an attacker.",
+      modules: [
+        {
+          slug: "why-appsec",
+          title: "Why application security",
+          summary: "How one unpatched library becomes a breach.",
+          minutes: 20,
+          signature:
+            "Follow a real breach from one unpatched web library to millions of leaked records, and see where it could have been stopped",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "Vulnerabilities, threats and risk",
+            "The attacker's view",
+            "Security as everyone's job",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "Most breaches start with an ordinary bug: a missing check, an unpatched library, a leaked password. Application security is the habit of building software so those bugs are rare, hard to exploit and quickly noticed.",
+        },
+        {
+          slug: "threat-modelling",
+          title: "Threat modelling",
+          summary: "What could go wrong?",
+          minutes: 25,
+          signature:
+            "Draw a food-delivery app's data flows, mark trust boundaries, and find threats with STRIDE before writing code",
+          formats: ["build-connect", "checkpoint"],
+          concepts: ["Data flow diagrams and trust boundaries", "STRIDE", "Prioritising threats"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-appsec"],
+          plain:
+            "Threat modelling asks four questions: what are we building, what can go wrong, what will we do about it, and did we do a good job? Drawing how data flows and where trust changes shows where attacks will land.",
+        },
+        {
+          slug: "secure-design",
+          title: "Secure design principles",
+          summary: "Least privilege, defence in depth.",
+          minutes: 20,
+          signature:
+            "Redesign a leaky admin panel with least privilege, defence in depth and secure defaults, and watch an attack stall at each layer",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Least privilege", "Defence in depth", "Secure defaults and failing safely"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["threat-modelling"],
+          plain:
+            "A few old principles prevent whole families of bugs: give each part only the access it needs, put several independent layers in an attacker's way, make the safe choice the default, and fail closed rather than open.",
+        },
+        {
+          slug: "owasp-top-ten",
+          title: "The OWASP Top 10",
+          summary: "The most common web risks.",
+          minutes: 20,
+          signature:
+            "Tour the latest OWASP Top 10 and match each risk to a real incident and to the module that covers it",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: ["What OWASP is", "The Top 10 risks", "Using lists like CWE and the Top 10"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-appsec"],
+          plain:
+            "OWASP is a non-profit community whose Top 10 lists the most important web application security risks, updated every few years from real data. It's an awareness list, not a complete standard.",
+        },
+      ],
+    },
+    {
+      slug: "injection",
+      title: "Injection and input",
+      summary: "When data becomes code.",
+      modules: [
+        {
+          slug: "sql-injection",
+          title: "SQL injection",
+          summary: "Data that changes the query.",
+          minutes: 25,
+          signature:
+            "Type into a login form and watch the SQL query change, then fix it with parameterised queries",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "How string-built queries break",
+            "Parameterised queries",
+            "ORMs and least-privilege database users",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["owasp-top-ten"],
+          plain:
+            "If an app builds a database query by pasting user input into text, a carefully chosen input can change what the query does. Parameterised queries keep the query and the data separate, so input is always treated as data.",
+        },
+        {
+          slug: "xss",
+          title: "Cross-site scripting",
+          summary: "Data that runs in someone else's browser.",
+          minutes: 25,
+          signature:
+            "Post a comment that runs script in other users' browsers in a simulated page, then stop it with output encoding and a content policy",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Stored, reflected and DOM-based XSS",
+            "Context-aware output encoding",
+            "Frameworks and sanitising HTML",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["sql-injection"],
+          plain:
+            "Cross-site scripting happens when a site shows user input as part of its page without encoding it, so the browser runs it as code. It lets attackers act as the victim on that site. Encoding output for its context is the main defence.",
+        },
+        {
+          slug: "other-injection",
+          title: "Command, template and other injection",
+          summary: "The same mistake, everywhere.",
+          minutes: 20,
+          signature:
+            "Find the injection in a file converter, an email template and a search filter, and apply the same fix to each",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "OS command injection",
+            "Template and NoSQL injection",
+            "The general rule: keep code and data apart",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["sql-injection"],
+          plain:
+            "SQL is only one interpreter. Shells, template engines, NoSQL queries, LDAP and XML parsers can all be tricked when input is mixed into commands. The fix is always the same idea: pass data through an interface that can't confuse it with code.",
+        },
+        {
+          slug: "input-handling",
+          title: "Validation and safe parsing",
+          summary: "Trust nothing that crosses a boundary.",
+          minutes: 20,
+          signature:
+            "Send oversized, malformed and malicious files to an upload service and add allow-list validation, size limits and safe parsers",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Allow-lists over deny-lists",
+            "File uploads",
+            "Unsafe deserialisation and XML external entities",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["other-injection"],
+          plain:
+            "Every input from outside, including files, headers and messages from other services, should be checked against what you expect: type, length, format and range. Some parsers are dangerous by default and must be configured safely or avoided.",
+        },
+      ],
+    },
+    {
+      slug: "identity",
+      title: "Identity and access",
+      summary: "Who are you, and what may you do?",
+      modules: [
+        {
+          slug: "passwords",
+          title: "Passwords and authentication",
+          summary: "Store them so a leak isn't a disaster.",
+          minutes: 25,
+          signature:
+            "Crack a leaked password table stored three ways, and see why slow, salted hashes buy users time",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Hashing, salting and slow hash functions",
+            "Credential stuffing and breached-password checks",
+            "Modern password rules",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["secure-design"],
+          plain:
+            "Passwords should never be stored as text or with fast hashes. Slow, salted password hashes such as Argon2 or bcrypt make a leaked database far harder to crack. Modern guidance favours long passwords, breached-password checks and no forced regular changes.",
+        },
+        {
+          slug: "mfa-passkeys",
+          title: "MFA and passkeys",
+          summary: "Beyond the password.",
+          minutes: 20,
+          signature:
+            "Run a phishing attack against SMS codes, app codes and a passkey, and see which one the fake site can't use",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Factors of authentication",
+            "Phishing-resistant MFA",
+            "Passkeys and WebAuthn",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["passwords"],
+          plain:
+            "Multi-factor authentication adds something you have or are to something you know. One-time codes still work for a convincing fake site; passkeys, built on public-key cryptography, are tied to the real site and can't be phished that way.",
+        },
+        {
+          slug: "sessions-tokens",
+          title: "Sessions, cookies and tokens",
+          summary: "Staying logged in safely.",
+          minutes: 25,
+          signature:
+            "Steal and replay a session in a simulated browser, then harden it with cookie flags, expiry and a properly checked token",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Session cookies and their flags",
+            "JWTs and their pitfalls",
+            "Logout, expiry and rotation",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["passwords"],
+          plain:
+            "After login, a session ID or token proves who you are on every request, so whoever holds it is you. Cookies need the Secure, HttpOnly and SameSite flags; tokens must be signed, checked properly and short-lived.",
+        },
+        {
+          slug: "access-control",
+          title: "Broken access control",
+          summary: "Logged in isn't allowed.",
+          minutes: 25,
+          signature:
+            "Change one number in a URL to read another customer's invoice, then add the object-level check that stops it",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Authentication versus authorisation",
+            "IDOR and object-level checks",
+            "Role- and attribute-based access control",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["sessions-tokens"],
+          plain:
+            "Knowing who someone is doesn't mean they may see everything. Broken access control, such as reading another user's data by changing an ID, is the most common serious web risk. Every request must check permission on the server, for that exact object.",
+        },
+        {
+          slug: "oauth-oidc",
+          title: "OAuth and OpenID Connect",
+          summary: "Signing in with someone else.",
+          minutes: 25,
+          signature:
+            "Step through “Sign in with…” message by message, then spot the redirect and state mistakes that let attackers in",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Delegated access versus login",
+            "The authorisation code flow with PKCE",
+            "Common OAuth mistakes",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["sessions-tokens"],
+          plain:
+            "OAuth lets an app act on your behalf without your password; OpenID Connect adds a standard way to log in. The authorisation code flow with PKCE is the safe default; most real bugs come from loose redirect checks and missing state.",
+        },
+      ],
+    },
+    {
+      slug: "web-platform",
+      title: "The web platform",
+      summary: "Browsers, origins and servers.",
+      modules: [
+        {
+          slug: "csrf-cors",
+          title: "CSRF, CORS and the same-origin policy",
+          summary: "Who may talk to whom.",
+          minutes: 25,
+          signature:
+            "Trigger a forged money transfer from a malicious page, then block it with SameSite cookies and tokens, and see what CORS does and doesn't do",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "The same-origin policy",
+            "Cross-site request forgery",
+            "CORS as controlled relaxation",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["sessions-tokens"],
+          plain:
+            "Browsers keep sites apart with the same-origin policy, but they still send cookies with requests that other sites trigger. That's cross-site request forgery. SameSite cookies and anti-forgery tokens stop it; CORS only controls who can read responses.",
+        },
+        {
+          slug: "security-headers",
+          title: "Security headers and CSP",
+          summary: "Instructions for the browser.",
+          minutes: 20,
+          signature:
+            "Turn security headers on one by one and watch a set of browser attacks fail, then build a content security policy",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Content Security Policy",
+            "HSTS, framing and MIME-sniffing protections",
+            "Rolling out headers safely",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["xss", "csrf-cors"],
+          plain:
+            "Response headers tell the browser how to protect a page: which scripts may run (Content-Security-Policy), to always use HTTPS (HSTS), and whether the page may be framed. They're a second layer behind fixing the bug itself.",
+        },
+        {
+          slug: "ssrf",
+          title: "Server-side request forgery",
+          summary: "Making the server fetch for you.",
+          minutes: 20,
+          signature:
+            "Use an image-preview feature to make a server read its own cloud credentials, then lock it down",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "How SSRF works",
+            "Cloud metadata services",
+            "Allow-lists and network controls",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["input-handling"],
+          plain:
+            "If a server fetches URLs that users supply, an attacker can point it at internal systems the attacker can't reach, such as the cloud metadata service that hands out credentials. Allow-lists, network rules and hardened metadata services stop it.",
+        },
+        {
+          slug: "crypto-tls",
+          title: "Encryption and TLS",
+          summary: "Protecting data in transit and at rest.",
+          minutes: 25,
+          signature:
+            "Watch a café Wi-Fi attacker read plain HTTP, then follow a TLS handshake and see which crypto choices are broken",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "TLS and certificates",
+            "Encryption at rest and key management",
+            "Don't roll your own crypto",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["why-appsec"],
+          plain:
+            "TLS encrypts data on the way and proves you're talking to the real server. Data at rest needs encryption with keys kept somewhere safer than the data. Use well-tested libraries and modern algorithms; home-made cryptography almost always fails.",
+        },
+      ],
+    },
+    {
+      slug: "delivery",
+      title: "Secure delivery",
+      summary: "Building security into the pipeline.",
+      modules: [
+        {
+          slug: "secrets",
+          title: "Secrets management",
+          summary: "Keys that don't leak.",
+          minutes: 20,
+          signature:
+            "Find the API key a developer committed months ago, rotate it, and move every secret into a vault",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Where secrets leak",
+            "Vaults and short-lived credentials",
+            "Secret scanning and rotation",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["secure-design"],
+          plain:
+            "Passwords, API keys and certificates leak through code, logs and chat. Keep them in a secrets manager, prefer short-lived credentials over long-lived keys, scan for leaks automatically, and rotate quickly when one escapes.",
+        },
+        {
+          slug: "supply-chain",
+          title: "Dependencies and the supply chain",
+          summary: "Most of your code isn't yours.",
+          minutes: 25,
+          signature:
+            "Trace a vulnerable logging library through an app's dependency tree, then add an SBOM, pinned versions and signed builds",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Vulnerable and malicious dependencies",
+            "SBOMs and vulnerability scanning",
+            "Provenance, signing and SLSA",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["owasp-top-ten"],
+          plain:
+            "Modern apps are mostly open-source packages, each with its own dependencies. A flaw or a planted backdoor in one of them becomes yours. Know what you ship (an SBOM), keep it patched, pin and verify packages, and sign what you build.",
+        },
+        {
+          slug: "security-testing",
+          title: "Security testing and DevSecOps",
+          summary: "Finding bugs before attackers do.",
+          minutes: 20,
+          signature:
+            "Place SAST, DAST, dependency scanning and a penetration test in a delivery pipeline, and see which bugs each one catches",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "SAST, DAST and SCA",
+            "Code review and pen tests",
+            "Shifting left without drowning in alerts",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["supply-chain"],
+          plain:
+            "Different tests catch different bugs: static analysis reads code, dynamic testing attacks a running app, composition analysis checks dependencies, and people find logic flaws tools miss. Put fast checks in every build and deeper ones on a schedule.",
+        },
+        {
+          slug: "detect-respond",
+          title: "Logging, detection and response",
+          summary: "Assume something will get through.",
+          minutes: 20,
+          signature:
+            "Read an app's logs during an attack, decide what should have alerted, and walk through the first hours of an incident",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Security logging without leaking data",
+            "Detection and alerting",
+            "Incident response and disclosure",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["security-testing"],
+          plain:
+            "No defence is perfect, so log security-relevant events, alert on the suspicious ones and practise responding. A clear incident plan, and a way for outsiders to report bugs, turn a disaster into a contained event.",
+        },
+      ],
+    },
+    {
+      slug: "capstone",
+      title: "Capstone",
+      summary: "Everything together.",
+      modules: [
+        {
+          slug: "capstone-appsec",
+          title: "Capstone: securing a payments app",
+          summary: "From threat model to incident.",
+          minutes: 40,
+          signature:
+            "Threat-model a small payments app, choose its defences, then handle the five security incidents of its first quarter",
+          formats: ["branching-scenario", "fix-the-problem", "checkpoint"],
+          concepts: ["Applying application security"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["access-control", "supply-chain", "detect-respond"],
+          plain:
+            "Everything in this track in one project: model the threats, design defences in layers, handle identity and access properly, protect the browser and the server, secure the pipeline, and respond well when something still goes wrong.",
+        },
+      ],
+    },
+  ],
+};
+
 export const tracks: Track[] = [
   lakehouse,
   systemDesign,
@@ -10621,6 +11078,7 @@ export const tracks: Track[] = [
   voiceAi,
   llmEvaluation,
   appliedMl,
+  appSecurity,
   playground,
 ];
 
@@ -10780,6 +11238,7 @@ export const categories: Category[] = [
     tracks: [
       {
         title: "Application Security",
+        slug: "app-security",
         blurb: "The common attacks, and the habits that stop them.",
       },
       { title: "DPDP Act", blurb: "India's data protection law for engineers." },
