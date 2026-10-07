@@ -477,4 +477,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "app-security/xss": () => import("./app-security/xss"),
   "app-security/other-injection": () => import("./app-security/other-injection"),
   "app-security/input-handling": () => import("./app-security/input-handling"),
+  "app-security/passwords": () => import("./app-security/passwords"),
 };

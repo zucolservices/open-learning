@@ -10790,11 +10790,12 @@ const appSecurity: Track = {
             "Credential stuffing and breached-password checks",
             "Modern password rules",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["secure-design"],
           plain:
             "Passwords should never be stored as text or with fast hashes. Slow, salted password hashes such as Argon2 or bcrypt make a leaked database far harder to crack. Modern guidance favours long passwords, breached-password checks and no forced regular changes.",
+          terms: ["password-hash", "salt", "credential-stuffing"],
         },
         {
           slug: "mfa-passkeys",

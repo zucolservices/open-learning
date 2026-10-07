@@ -152,4 +152,22 @@ export const appSecurity = {
       "Turning stored or transmitted bytes back into program objects. Doing it on untrusted data with some formats can run an attacker's code.",
     module: "input-handling",
   },
+  "password-hash": {
+    term: "Password hash",
+    definition:
+      "A one-way scrambled form of a password that a server stores instead of the password; logins are checked by hashing the attempt and comparing.",
+    module: "passwords",
+  },
+  salt: {
+    term: "Salt",
+    definition:
+      "A random value stored with each password hash so that identical passwords hash differently and attackers must crack each one separately.",
+    module: "passwords",
+  },
+  "credential-stuffing": {
+    term: "Credential stuffing",
+    definition:
+      "Trying usernames and passwords leaked from one site on many other sites, betting that people reuse passwords.",
+    module: "passwords",
+  },
 } satisfies Record<string, GlossaryEntry>;
