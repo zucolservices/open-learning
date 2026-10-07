@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Wordmark } from "./site-header";
+import { REPO_URL, Wordmark } from "./site-header";
 
 export function SiteFooter() {
   return (
@@ -20,6 +20,9 @@ export function SiteFooter() {
           <Link href="/about" className="hover:text-fg">
             About
           </Link>
+          <a href={REPO_URL} className="hover:text-fg">
+            GitHub
+          </a>
         </nav>
         <p className="text-subtle w-full text-xs sm:ml-auto sm:w-auto">
           © {new Date().getFullYear()} Zucol Services Private Limited

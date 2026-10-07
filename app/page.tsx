@@ -1,30 +1,39 @@
 import Link from "next/link";
-import { ArrowRight, Play } from "lucide-react";
-import { SiteHeader } from "@/components/site-header";
+import type { ReactNode } from "react";
+import {
+  ArrowRight,
+  Ban,
+  BookOpen,
+  Code,
+  Compass,
+  Flag,
+  Globe,
+  Laptop,
+  Lightbulb,
+  MousePointerClick,
+  Play,
+  Sprout,
+} from "lucide-react";
+import { SiteHeader, REPO_URL } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ContinueCard } from "@/components/progress-bits";
 import { ExperienceDemos } from "@/components/home/experience-demos";
-import { LiveTracks } from "@/components/home/live-tracks";
-import { TrackSpotlight } from "@/components/home/track-spotlight";
-import { CategoryIcon } from "@/components/category/category-icon";
-import {
-  categories,
-  categoryTracks,
-  experienceLabels,
-  getTrack,
-  trackModules,
-  visibleTracks,
-  type Category,
-} from "@/catalogue";
-import { cn } from "@/lib/cn";
+import { HeroDemo } from "@/components/home/hero-demo";
+import { Catalogue } from "@/components/home/catalogue";
+import { categories, trackMinutes, trackModules, visibleTracks } from "@/catalogue";
+import { shared, trackGlossaries } from "@/glossaries";
 
 export default function Home() {
   const liveTracks = visibleTracks.filter((t) => trackModules(t).some((m) => m.status === "live"));
-  const plannedTracks = categories.reduce((n, c) => n + c.tracks.length, 0);
   const moduleCount = liveTracks.reduce(
     (n, t) => n + trackModules(t).filter((m) => m.status === "live").length,
     0,
   );
+  const hours = Math.round(liveTracks.reduce((n, t) => n + trackMinutes(t), 0) / 60);
+  const terms =
+    Object.keys(shared).length +
+    Object.values(trackGlossaries).reduce((n, g) => n + Object.keys(g).length, 0);
+  const plannedTracks = categories.reduce((n, c) => n + c.tracks.length, 0);
 
   return (
     <>
@@ -32,11 +41,15 @@ export default function Home() {
       <main className="flex-1 overflow-x-clip">
         {/* Hero */}
         <section data-track="blueprint" className="page-glow relative">
-          <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pt-12 pb-16 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:pt-16">
+          <div
+            aria-hidden
+            className="dot-grid pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)] opacity-40"
+          />
+          <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 pt-14 pb-20 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-14 lg:pt-20">
             <div>
               <p className="border-line bg-surface/70 text-muted inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs backdrop-blur">
                 <span className="bg-accent size-1.5 animate-pulse rounded-full" />
-                OpenLearning · {liveTracks.length} tracks live, more on the way
+                Free and open source · {liveTracks.length} tracks live
               </p>
               <h1 className="mt-5 text-5xl leading-[1.02] font-semibold tracking-tight text-balance sm:text-6xl">
                 See how technology{" "}
@@ -46,14 +59,15 @@ export default function Home() {
               </h1>
               <p className="text-muted mt-5 max-w-lg text-lg text-pretty">
                 Don&apos;t just read about systems. Take them apart, run them, break them and fix
-                them. Every module is a hands-on experience built around one idea.
+                them. Every module is a short, hands-on experience built around one idea, starting
+                from zero.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link
-                  href="#live"
+                  href="#categories"
                   className="bg-accent text-accent-fg inline-flex h-11 items-center gap-2 rounded-full px-6 text-sm font-medium transition hover:brightness-110"
                 >
-                  See the live tracks <ArrowRight className="size-4" />
+                  Browse the tracks <ArrowRight className="size-4" />
                 </Link>
                 <Link
                   href="/tracks/playground/rows-vs-columns"
@@ -62,11 +76,12 @@ export default function Home() {
                   <Play className="size-3.5" /> Try a 5-minute sample
                 </Link>
               </div>
-              <dl className="mt-10 grid max-w-md grid-cols-3 gap-4">
+              <dl className="border-line mt-10 grid max-w-lg grid-cols-2 gap-x-6 gap-y-5 border-t pt-6 sm:grid-cols-4">
                 {[
-                  [String(moduleCount), "interactive modules"],
-                  [String(Object.keys(experienceLabels).length), "ways to learn"],
-                  ["0", "exams. Just understanding."],
+                  [String(liveTracks.length), "tracks"],
+                  [String(moduleCount), "modules"],
+                  [`~${hours}`, "hours of learning"],
+                  [terms.toLocaleString("en-IN"), "glossary terms"],
                 ].map(([n, label]) => (
                   <div key={label}>
                     <dt className="text-3xl font-semibold tracking-tight tabular-nums">{n}</dt>
@@ -74,48 +89,56 @@ export default function Home() {
                   </div>
                 ))}
               </dl>
-              <div className="mt-8 max-w-md">
+              <div className="mt-8 max-w-lg empty:hidden">
                 <ContinueCard />
               </div>
             </div>
-
-            <TrackSpotlight tracks={liveTracks} />
+            <HeroDemo />
           </div>
         </section>
 
-        {/* Live tracks */}
-        <section id="live" className="mx-auto max-w-6xl scroll-mt-20 px-4 pt-4 pb-8 sm:px-6">
+        {/* Anatomy of a module */}
+        <section className="border-line bg-surface/40 border-y">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+            <SectionHeading
+              eyebrow="Inside every module"
+              title="One idea, six steps, about 25 minutes."
+              body="Each module follows the same rhythm, so you always know where you are. Jargon is underlined: tap a word for a plain-English definition."
+            />
+            <ol className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+              {STEPS.map((s, n) => (
+                <li
+                  key={s.title}
+                  className="border-line bg-surface relative rounded-2xl border p-4"
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="bg-accent-soft text-accent grid size-8 place-items-center rounded-lg">
+                      <s.Icon className="size-4" />
+                    </span>
+                    <span className="text-subtle text-xs tabular-nums">{s.n ?? n + 1}</span>
+                  </div>
+                  <p className="mt-3 font-semibold tracking-tight">{s.title}</p>
+                  <p className="text-muted mt-1 text-sm text-pretty">{s.body}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        {/* Catalogue */}
+        <section id="categories" className="mx-auto max-w-6xl scroll-mt-20 px-4 pt-20 pb-8 sm:px-6">
           <SectionHeading
-            eyebrow="Live tracks"
+            eyebrow="The catalogue"
             title={`${liveTracks.length} tracks you can start today.`}
-            body="Each track is a path of short, hands-on modules. Take them in order or dip in anywhere."
+            body={`${plannedTracks} tracks are planned across ${categories.length} categories. Take a track in order, or dip into any module that looks useful.`}
           />
           <div className="mt-8">
-            <LiveTracks tracks={liveTracks} />
-          </div>
-        </section>
-
-        {/* Categories */}
-        <section id="categories" className="mx-auto max-w-6xl scroll-mt-20 px-4 py-16 sm:px-6">
-          <SectionHeading
-            eyebrow="Categories"
-            title={`${plannedTracks} tracks across ${categories.length} categories, built one at a time.`}
-            body="Pick a category to see its tracks. Live tracks open straight away; the rest are on the way."
-          />
-          <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
-            {[...categories]
-              .sort(
-                (x, y) =>
-                  Number(categoryTracks(y).length > 0) - Number(categoryTracks(x).length > 0),
-              )
-              .map((c) => (
-                <CategoryCard key={c.slug} category={c} />
-              ))}
+            <Catalogue />
           </div>
         </section>
 
         {/* Experience types */}
-        <section className="mx-auto max-w-6xl px-4 pt-8 pb-24 sm:px-6">
+        <section className="mx-auto max-w-6xl px-4 pt-16 pb-20 sm:px-6">
           <SectionHeading
             eyebrow="How you'll learn"
             title="The format fits the idea."
@@ -125,11 +148,100 @@ export default function Home() {
             <ExperienceDemos />
           </div>
         </section>
+
+        {/* Principles */}
+        <section className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
+          <SectionHeading eyebrow="What we believe" title="Built for understanding, not points." />
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <Principle Icon={Ban} title="No scores, no exams">
+              Checkpoints explain why an answer is right or wrong, and you can always try again.
+              Nothing is graded.
+            </Principle>
+            <Principle Icon={Sprout} title="Starts from zero">
+              Every module opens with an everyday story and assumes nothing beyond its listed
+              prerequisites.
+            </Principle>
+            <Principle Icon={Globe} title="Vendor-neutral">
+              Open standards first, then how AWS, Google Cloud, Azure and open-source tools each do
+              it.
+            </Principle>
+            <Principle Icon={Laptop} title="No account needed">
+              Everything runs in your browser. Progress is saved on your device, and nowhere else.
+            </Principle>
+          </div>
+        </section>
+
+        {/* Open source CTA */}
+        <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
+          <div
+            data-track="blueprint"
+            className="border-line bg-surface page-glow relative overflow-hidden rounded-[var(--radius-card)] border px-6 py-12 text-center sm:px-12"
+          >
+            <div
+              aria-hidden
+              className="dot-grid pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)] opacity-30"
+            />
+            <div className="relative">
+              <h2 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
+                Open source, and open to ideas.
+              </h2>
+              <p className="text-muted mx-auto mt-3 max-w-xl text-pretty">
+                OpenLearning is a static site you can read, run and learn from. Found a mistake or
+                want a topic covered? Open an issue.
+              </p>
+              <div className="mt-7 flex flex-wrap justify-center gap-3">
+                <a
+                  href={REPO_URL}
+                  className="bg-accent text-accent-fg inline-flex h-11 items-center gap-2 rounded-full px-6 text-sm font-medium transition hover:brightness-110"
+                >
+                  <Code className="size-4" /> View on GitHub
+                </a>
+                <Link
+                  href="/glossary"
+                  className="border-line-strong hover:bg-surface-2 inline-flex h-11 items-center gap-2 rounded-full border px-5 text-sm font-medium transition"
+                >
+                  <BookOpen className="size-4" /> Browse the glossary
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <SiteFooter />
     </>
   );
 }
+
+const STEPS = [
+  {
+    Icon: BookOpen,
+    title: "The story",
+    body: "An everyday analogy that gives you the big idea before any mechanics.",
+  },
+  {
+    Icon: MousePointerClick,
+    title: "The centrepiece",
+    body: "One interactive you drive yourself: a simulation, a 3D model or a sandbox.",
+  },
+  {
+    Icon: Compass,
+    title: "Two explorations",
+    body: "Variations and edge cases that show where the idea bends and breaks.",
+    n: "3–4",
+  },
+  {
+    Icon: Lightbulb,
+    title: "A checkpoint",
+    body: "Predict or explain. Every answer comes with the reasoning, right or wrong.",
+    n: 5,
+  },
+  {
+    Icon: Flag,
+    title: "The wrap-up",
+    body: "What to remember, which terms you met and where to go next.",
+    n: 6,
+  },
+];
 
 function SectionHeading({
   eyebrow,
@@ -142,7 +254,7 @@ function SectionHeading({
 }) {
   return (
     <div className="max-w-2xl">
-      <p className="text-muted text-sm font-medium">{eyebrow}</p>
+      <p className="text-accent text-sm font-medium">{eyebrow}</p>
       <h2 className="mt-2 text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
         {title}
       </h2>
@@ -151,72 +263,20 @@ function SectionHeading({
   );
 }
 
-function CategoryCard({ category: c }: { category: Category }) {
-  const live = categoryTracks(c).length;
-  const active = live > 0;
+function Principle({
+  Icon,
+  title,
+  children,
+}: {
+  Icon: typeof Ban;
+  title: string;
+  children: ReactNode;
+}) {
   return (
-    <article
-      data-track={c.accent}
-      className={cn(
-        "bg-surface relative flex flex-col overflow-hidden rounded-[var(--radius-card)] border p-4 transition sm:p-5",
-        active ? "border-accent/50 shadow-card" : "border-line",
-      )}
-    >
-      {active && <div className="page-glow pointer-events-none absolute inset-0 opacity-50" />}
-      <Link
-        href={`/categories/${c.slug}`}
-        className="group relative flex flex-col items-start gap-2 sm:flex-row sm:gap-3"
-      >
-        <span
-          className={cn(
-            "grid size-8 shrink-0 place-items-center rounded-xl sm:size-10",
-            active ? "bg-accent text-accent-fg" : "bg-surface-2 text-muted",
-          )}
-        >
-          <CategoryIcon slug={c.slug} className="size-5" />
-        </span>
-        <div className="min-w-0 flex-1">
-          <h3 className="group-hover:text-accent text-sm font-semibold tracking-tight sm:text-base">
-            {c.title}
-          </h3>
-          <p className="text-muted hidden text-xs sm:block">{c.summary}</p>
-        </div>
-        <ArrowRight className="text-subtle group-hover:text-accent mt-1 hidden size-4 shrink-0 transition sm:block" />
-      </Link>
-      <div className="relative mt-3 flex items-center gap-2 sm:mt-4">
-        <div className="bg-surface-2 h-1 flex-1 overflow-hidden rounded-full">
-          <div
-            className="bg-accent h-full rounded-full"
-            style={{ width: `${(live / c.tracks.length) * 100}%` }}
-          />
-        </div>
-        <span className="text-subtle shrink-0 text-[11px]">
-          {live} of {c.tracks.length} live
-        </span>
-      </div>
-      <ul className="relative mt-3 hidden flex-wrap gap-1 sm:flex">
-        {c.tracks.map((t) => {
-          const built = t.slug ? getTrack(t.slug) : undefined;
-          const track =
-            built && trackModules(built).some((m) => m.status === "live") ? built : undefined;
-          return (
-            <li key={t.title}>
-              {track ? (
-                <Link
-                  href={`/tracks/${track.slug}`}
-                  className="bg-accent text-accent-fg inline-flex rounded-full px-2 py-0.5 text-[11px] font-medium transition hover:brightness-110"
-                >
-                  ● {t.title}
-                </Link>
-              ) : (
-                <span className="bg-surface-2 text-muted inline-flex rounded-full px-2 py-0.5 text-[11px]">
-                  {t.title}
-                </span>
-              )}
-            </li>
-          );
-        })}
-      </ul>
-    </article>
+    <div className="border-line bg-surface rounded-2xl border p-5">
+      <Icon className="text-accent size-5" />
+      <p className="mt-3 font-semibold tracking-tight">{title}</p>
+      <p className="text-muted mt-1 text-sm text-pretty">{children}</p>
+    </div>
   );
 }

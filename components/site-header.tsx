@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Code } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
+
+export const REPO_URL = "https://github.com/zucolservices/open-learning";
 
 export function SiteHeader() {
   return (
@@ -23,6 +26,14 @@ export function SiteHeader() {
           </Link>
         </nav>
         <div className="ml-auto flex items-center gap-1">
+          <a
+            href={REPO_URL}
+            aria-label="Source code on GitHub"
+            title="Source code on GitHub"
+            className="text-muted hover:text-fg hover:bg-surface-2 grid size-9 place-items-center rounded-full transition"
+          >
+            <Code className="size-4" />
+          </a>
           <ThemeToggle />
         </div>
       </div>

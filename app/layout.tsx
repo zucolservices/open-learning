@@ -16,7 +16,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: { default: "OpenLearning", template: "%s · OpenLearning" },
-  description: "Interactive, hands-on learning tracks for the Zucol tech team.",
+  description:
+    "Free, open-source, hands-on learning tracks that show how technology actually works: take systems apart, run them, break them and fix them.",
+  metadataBase: new URL("https://openlearning.zucol.in"),
+  openGraph: { siteName: "OpenLearning", type: "website" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

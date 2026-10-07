@@ -12,8 +12,9 @@ export default function About() {
           <h1 className="text-4xl font-semibold tracking-tight">About OpenLearning</h1>
           <div className="text-muted mt-6 space-y-4 text-lg leading-relaxed">
             <p>
-              OpenLearning is where our tech team builds a deep, intuitive understanding of the
-              technologies we use, before a project needs it.
+              OpenLearning is a free, open-source place to build a deep, intuitive understanding of
+              the technologies software teams use, before a project needs it. The engineering team
+              at Zucol Services started it for our own engineers and shares it with everyone.
             </p>
             <p>
               Every module is designed around its topic. You might explore a 3D model, play a
