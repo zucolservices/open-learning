@@ -10870,11 +10870,12 @@ const appSecurity: Track = {
             "The authorisation code flow with PKCE",
             "Common OAuth mistakes",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["sessions-tokens"],
           plain:
             "OAuth lets an app act on your behalf without your password; OpenID Connect adds a standard way to log in. The authorisation code flow with PKCE is the safe default; most real bugs come from loose redirect checks and missing state.",
+          terms: ["oauth", "oidc", "pkce", "authorisation"],
         },
       ],
     },

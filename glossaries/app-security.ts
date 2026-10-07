@@ -217,4 +217,22 @@ export const appSecurity = {
       "Insecure direct object reference: changing an identifier in a request (such as an invoice number) reaches someone else's data because ownership isn't checked. Called BOLA in APIs.",
     module: "access-control",
   },
+  oauth: {
+    term: "OAuth",
+    definition:
+      "A standard that lets one app get limited, revocable access to your data at another service without seeing your password (OAuth 2.0, RFC 6749).",
+    module: "oauth-oidc",
+  },
+  oidc: {
+    term: "OpenID Connect (OIDC)",
+    definition:
+      "A login layer on top of OAuth: it adds an ID token that tells an app who signed in. Behind most “Sign in with…” buttons.",
+    module: "oauth-oidc",
+  },
+  pkce: {
+    term: "PKCE",
+    definition:
+      "Proof Key for Code Exchange: the app proves it started the sign-in by revealing a secret whose hash it sent earlier, so a stolen authorisation code is useless.",
+    module: "oauth-oidc",
+  },
 } satisfies Record<string, GlossaryEntry>;
