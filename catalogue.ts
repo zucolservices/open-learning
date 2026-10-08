@@ -7418,11 +7418,18 @@ const dpdpAct: Track = {
             "Consent records you can prove",
             "Deletion that reaches every copy",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["board-penalties"],
           plain:
             "Most DPDP duties become engineering work: collect less, tag data with its purpose, record consent so you can prove it, expire data automatically, and make deletion reach caches, warehouses, vendors and backups.",
+          terms: [
+            "privacy-by-design",
+            "crypto-shredding",
+            "purpose-limitation",
+            "pseudonymisation",
+            "data-map",
+          ],
         },
         {
           slug: "comparisons",

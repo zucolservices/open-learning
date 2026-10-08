@@ -236,4 +236,16 @@ export const dpdpAct = {
       "A promise a company offers the Data Protection Board to fix a problem. If the Board accepts it, proceedings on those matters stop, unless the company breaks the promise.",
     module: "board-penalties",
   },
+  "privacy-by-design": {
+    term: "Privacy by design",
+    definition:
+      "Building privacy protections into a system from the start, such as minimal collection, consent records, purpose tags, automatic expiry and deletion that reaches every copy.",
+    module: "privacy-by-design",
+  },
+  "crypto-shredding": {
+    term: "Crypto-shredding",
+    definition:
+      "Encrypting each person's data with its own key and deleting the key to erase them, which makes every copy, including backups, unreadable.",
+    module: "privacy-by-design",
+  },
 } satisfies Record<string, GlossaryEntry>;

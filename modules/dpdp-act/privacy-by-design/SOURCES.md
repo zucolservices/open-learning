@@ -1,0 +1,7 @@
+# Sources: Privacy by design for engineers (fact-checked 2026-10-08)
+
+- DPDP Act 2023, s.8(4) (technical and organisational measures; the Act doesn't use "privacy by design"), s.6(1) (necessary data only), s.6(10) (prove notice and consent), s.8(7) and s.8(7)(b) (erase; cause processors to erase), s.11–12. DPDP Rules 2025, Rule 3 (itemised data, specified purposes), Rule 6(1)(a), (c), (d), (e), Rule 8. Backups and consent-record retention for ordinary fiduciaries are not addressed. In force from May 2027.
+- Official docs (Oct 2026): AWS KMS key deletion waiting period 7–30 days (default 30); CloudTrail data events off by default; S3 Lifecycle; S3 Object Lock compliance mode. Google Cloud Sensitive Data Protection; Cloud KMS destruction scheduled 30 days by default; Data Access audit logs disabled by default except BigQuery; Object Lifecycle Management; Dataplex renamed Knowledge Catalog (10 Apr 2026). Microsoft Purview, Azure Key Vault (RBAC default from API 2026-02-01), Azure Monitor, Blob lifecycle management (doesn't delete in immutable containers). Presidio now under the Data Privacy Stack organisation; Open Policy Agent (CNCF Graduated), OpenFGA (CNCF Incubating), Apache Ranger and Atlas active; OpenBao (Linux Foundation fork of Vault) for open-source key management.
+- MeitY's Business Requirement Document for consent management (June 2025) is non-binding.
+
+Full notes: scratchpad `dpdp/m20-facts.md`. GharKaam is made up; backup approaches are common practice, not law.
