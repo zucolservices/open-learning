@@ -508,4 +508,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "dpdp-act/children": () => import("./dpdp-act/children"),
   "dpdp-act/significant-fiduciaries": () => import("./dpdp-act/significant-fiduciaries"),
   "dpdp-act/cross-border": () => import("./dpdp-act/cross-border"),
+  "dpdp-act/exemptions": () => import("./dpdp-act/exemptions"),
 };

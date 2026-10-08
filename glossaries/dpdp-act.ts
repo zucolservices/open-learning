@@ -224,4 +224,10 @@ export const dpdpAct = {
       "A rule that certain data must be stored or processed within a country's borders, such as the RBI's rule that payment data be stored only in India.",
     module: "cross-border",
   },
+  "dpdp-exemption": {
+    term: "Exemption (DPDP)",
+    definition:
+      "A case in section 17 where some or all of the Act's duties don't apply, such as legal claims, crime prevention, approved mergers or research meeting set standards. Security duties often remain.",
+    module: "exemptions",
+  },
 } satisfies Record<string, GlossaryEntry>;

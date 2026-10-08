@@ -7366,11 +7366,12 @@ const dpdpAct: Track = {
             "Research, archives and statistics",
             "Notified exemptions for the State and startups",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["cross-border"],
           plain:
             "Section 17 switches off parts of the Act for some processing: enforcing legal rights, courts, preventing crime, approved mergers, research and statistics, and government bodies the Centre notifies. Exemptions are narrow, and security duties often still apply.",
+          terms: ["dpdp-exemption", "reasonable-security-safeguards", "data-fiduciary"],
         },
       ],
     },

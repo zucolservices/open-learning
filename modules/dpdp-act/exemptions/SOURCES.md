@@ -1,0 +1,7 @@
+# Sources: Exemptions and State processing (fact-checked 2026-10-08)
+
+- DPDP Act 2023, s.17(1)(a)–(f) (Chapter II except s.8(1) and s.8(5), Chapter III and s.16 do not apply: legal rights and claims; courts, tribunals, regulators and supervisory bodies; prevention, detection, investigation or prosecution of offences or contraventions; Data Principals outside India under a contract with a person outside India; approved schemes of arrangement and mergers; financial information of defaulters), s.17(2)(a) (notified State instrumentalities; whole Act), s.17(2)(b) (research, archiving, statistics where no decision specific to a Data Principal, per prescribed standards), s.17(3) (notified classes incl. startups; s.5, s.8(3), s.8(7), s.10, s.11), s.17(4) (State: s.8(7), s.12(3), and s.12(2) where no decision), s.17(5) (five-year power), s.36, s.44(3) (RTI Act s.8(1)(j); in force since 13 Nov 2025).
+- DPDP Rules 2025, Rule 16 and Second Schedule (standards), Rule 23 and Seventh Schedule (calls for information; Rule 23(2) non-disclosure direction). In force from May 2027.
+- No notifications under s.17(2)(a), s.17(3) or s.17(5) found as of Oct 2026. Supreme Court: RTI challenge referred to a larger bench (16 Feb 2026); notice issued on challenges to s.17(1)(c), s.17(2), s.36 and Rule 23(2) (26 May 2026); no stay.
+
+Full notes: scratchpad `dpdp/m18-facts.md`. The activities and the ambulance are illustrative.
