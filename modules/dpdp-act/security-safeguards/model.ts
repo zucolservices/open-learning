@@ -133,7 +133,7 @@ export function run(inc: Incident, on: Set<Control>): Outcome {
     if (on.has("logs")) score += 1;
     lines.push({
       text: "Losing access is itself a personal data breach, so it must still be reported.",
-      good: false,
+      good: null,
     });
   }
   if (inc === "laptop") {

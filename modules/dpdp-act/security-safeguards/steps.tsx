@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Lock, BookOpenCheck, Camera, KeyRound, Check, X } from "lucide-react";
+import { Lock, BookOpenCheck, Camera, KeyRound, Check, X, Info } from "lucide-react";
 import { useSceneState } from "@/lib/module-sdk";
 import { StepLayout } from "@/toolkit/layout/step-layout";
 import { SortCheckpoint } from "@/toolkit/checkpoints/sort";
@@ -126,7 +126,9 @@ export function Harden() {
                     animate={{ opacity: 1, x: 0 }}
                     className="flex items-start gap-1.5"
                   >
-                    {l.good ? (
+                    {l.good === null ? (
+                      <Info className="text-muted mt-0.5 size-3.5 shrink-0" />
+                    ) : l.good ? (
                       <Check className="text-good mt-0.5 size-3.5 shrink-0" />
                     ) : (
                       <X className="text-bad mt-0.5 size-3.5 shrink-0" />
