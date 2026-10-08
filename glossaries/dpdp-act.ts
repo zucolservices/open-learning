@@ -128,4 +128,16 @@ export const dpdpAct = {
       "One of the purposes in section 7 of the DPDP Act for which personal data may be processed without consent, such as data given for a specific purpose, legal duties, court orders, medical emergencies and employment.",
     module: "legitimate-uses",
   },
+  "purpose-limitation": {
+    term: "Purpose limitation",
+    definition:
+      "Using and keeping personal data only for the purpose it was collected for, and erasing it once that purpose is served, unless another law requires keeping it.",
+    module: "purpose-retention",
+  },
+  "legal-hold": {
+    term: "Legal hold",
+    definition:
+      "A requirement under another law, such as tax or anti-money-laundering rules, to keep certain records for a set period even after their original purpose has ended.",
+    module: "purpose-retention",
+  },
 } satisfies Record<string, GlossaryEntry>;

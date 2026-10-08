@@ -7141,11 +7141,12 @@ const dpdpAct: Track = {
             "Erasure when the purpose is served or consent withdrawn",
             "Third Schedule periods and the 48-hour warning",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["legitimate-uses"],
           plain:
             "Personal data may be kept only while it serves the purpose it was collected for, unless another law requires it. Large e-commerce, gaming and social media platforms must erase inactive users' data after three years, with 48 hours' warning.",
+          terms: ["purpose-limitation", "legal-hold", "data-processor", "withdrawal"],
         },
         {
           slug: "security-safeguards",
