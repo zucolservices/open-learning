@@ -495,4 +495,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "dpdp-act/roles": () => import("./dpdp-act/roles"),
   "dpdp-act/scope": () => import("./dpdp-act/scope"),
   "dpdp-act/data-mapping": () => import("./dpdp-act/data-mapping"),
+  "dpdp-act/notice": () => import("./dpdp-act/notice"),
 };

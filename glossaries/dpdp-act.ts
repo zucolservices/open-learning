@@ -92,4 +92,16 @@ export const dpdpAct = {
       "Replacing identifiers with tokens or codes so data can't be linked to a person without extra information. Pseudonymised data is still personal data.",
     module: "data-mapping",
   },
+  "dpdp-notice": {
+    term: "Notice (DPDP)",
+    definition:
+      "What an organisation must tell a person before or with a request for consent: the personal data and purpose, how to withdraw and use their rights, and how to complain to the Data Protection Board.",
+    module: "notice",
+  },
+  "eighth-schedule": {
+    term: "Eighth Schedule",
+    definition:
+      "The part of India's Constitution listing 22 languages. People must be able to read a DPDP notice and consent request in English or any of them.",
+    module: "notice",
+  },
 } satisfies Record<string, GlossaryEntry>;

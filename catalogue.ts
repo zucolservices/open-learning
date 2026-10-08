@@ -7054,11 +7054,12 @@ const dpdpAct: Track = {
             "Plain language and 22 languages",
             "Itemised data and specified purposes",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["data-mapping"],
           plain:
             "Before asking for consent, an organisation must give a notice that says which personal data it wants and for what purpose, and how to withdraw consent, use your rights and complain. It must stand on its own and be clear.",
+          terms: ["dpdp-notice", "eighth-schedule", "data-principal", "data-protection-board"],
         },
         {
           slug: "consent",
