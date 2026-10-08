@@ -7114,11 +7114,12 @@ const dpdpAct: Track = {
             "State benefits, legal duties and emergencies",
             "Employment, and no catch-all legitimate interest",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["consent"],
           plain:
             "Some processing doesn't need consent: data someone gave you for a clear purpose, such as a phone number for a receipt; legal obligations; medical emergencies; state benefits; and certain employment uses. There is no general business-interest ground as in Europe.",
+          terms: ["legitimate-use", "consent", "data-fiduciary"],
         },
       ],
     },

@@ -122,4 +122,10 @@ export const dpdpAct = {
       "Taking back consent you gave. Under the DPDP Act it must be as easy as giving it, and the organisation must then stop processing, and make its processors stop, within a reasonable time.",
     module: "withdrawal",
   },
+  "legitimate-use": {
+    term: "Legitimate use",
+    definition:
+      "One of the purposes in section 7 of the DPDP Act for which personal data may be processed without consent, such as data given for a specific purpose, legal duties, court orders, medical emergencies and employment.",
+    module: "legitimate-uses",
+  },
 } satisfies Record<string, GlossaryEntry>;
