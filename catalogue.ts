@@ -7341,11 +7341,17 @@ const dpdpAct: Track = {
             "Sector rules can be stricter",
             "Rule 15 and requests from foreign governments",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["significant-fiduciaries"],
           plain:
             "Unlike some laws, the DPDP Act allows personal data to leave India unless the government restricts transfers to a specific country. Stricter sector rules still apply, such as the RBI's rule that payment data be stored only in India.",
+          terms: [
+            "cross-border-transfer",
+            "data-localisation",
+            "significant-data-fiduciary",
+            "cert-in",
+          ],
         },
         {
           slug: "exemptions",

@@ -212,4 +212,16 @@ export const dpdpAct = {
       "A structured review of how processing affects people's rights, why it's done and how the risks are managed. Significant Data Fiduciaries must do one every 12 months.",
     module: "significant-fiduciaries",
   },
+  "cross-border-transfer": {
+    term: "Cross-border transfer",
+    definition:
+      "Sending personal data to, or processing it in, another country. The DPDP Act allows it unless the government restricts that country; stricter sector rules still apply.",
+    module: "cross-border",
+  },
+  "data-localisation": {
+    term: "Data localisation",
+    definition:
+      "A rule that certain data must be stored or processed within a country's borders, such as the RBI's rule that payment data be stored only in India.",
+    module: "cross-border",
+  },
 } satisfies Record<string, GlossaryEntry>;
