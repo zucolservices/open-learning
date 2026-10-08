@@ -152,4 +152,10 @@ export const dpdpAct = {
       "The contract between an organisation and a vendor that processes personal data for it, setting out security, breach notice, deletion and other duties.",
     module: "processors",
   },
+  "cert-in": {
+    term: "CERT-In",
+    definition:
+      "The Indian Computer Emergency Response Team, India's national agency for cyber incidents. Its 2022 directions require many incidents to be reported to it within six hours.",
+    module: "breaches",
+  },
 } satisfies Record<string, GlossaryEntry>;

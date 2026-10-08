@@ -7211,11 +7211,17 @@ const dpdpAct: Track = {
             "Intimation without delay, report within 72 hours",
             "CERT-In's six-hour rule alongside",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["processors"],
           plain:
             "Any breach of personal data, however small, must be reported to the Data Protection Board and to every affected person without delay, with a detailed report to the Board within 72 hours. Separate CERT-In rules require some cyber incidents to be reported within six hours.",
+          terms: [
+            "personal-data-breach",
+            "cert-in",
+            "data-protection-board",
+            "reasonable-security-safeguards",
+          ],
         },
       ],
     },
