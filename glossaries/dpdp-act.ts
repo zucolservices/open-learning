@@ -20,6 +20,24 @@ export const dpdpAct = {
       "Any data about an individual who can be identified by or in relation to that data, such as a name, phone number, location or purchase history.",
     module: "why-dpdp",
   },
+  "fundamental-right": {
+    term: "Fundamental right",
+    definition:
+      "A right guaranteed by Part III of India's Constitution that the state cannot take away by ordinary law. Since 2017, privacy is one of them.",
+    module: "why-dpdp",
+  },
+  "spdi-rules": {
+    term: "SPDI Rules",
+    definition:
+      "The IT (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011, made under section 43A of the IT Act. They apply until the DPDP Act's core parts start in May 2027.",
+    module: "why-dpdp",
+  },
+  "personal-data-breach": {
+    term: "Personal data breach",
+    definition:
+      "Any unauthorised processing of personal data, or its accidental disclosure, acquisition, sharing, use, alteration, destruction or loss of access, that compromises its confidentiality, integrity or availability.",
+    module: "why-dpdp",
+  },
   "data-principal": {
     term: "Data Principal",
     definition:

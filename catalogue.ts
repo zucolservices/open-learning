@@ -6954,10 +6954,19 @@ const dpdpAct: Track = {
             "The road to the DPDP Act and Rules",
             "The phased timeline to May 2027",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           plain:
             "The DPDP Act is India's law on how organisations may collect and use personal data held in digital form. It grew out of a 2017 Supreme Court ruling that privacy is a fundamental right, and most of its duties apply from May 2027.",
+          terms: [
+            "dpdp-act",
+            "dpdp-rules",
+            "personal-data",
+            "fundamental-right",
+            "spdi-rules",
+            "data-protection-board",
+            "personal-data-breach",
+          ],
         },
         {
           slug: "roles",
