@@ -7316,11 +7316,17 @@ const dpdpAct: Track = {
             "DPO, independent audit and yearly DPIA",
             "Algorithm checks and data that must stay in India",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["children"],
           plain:
             "The government can name some fiduciaries as Significant Data Fiduciaries based on how much and how sensitive their data is and the risks involved. They must appoint a Data Protection Officer in India, run yearly impact assessments and audits, and check their algorithms.",
+          terms: [
+            "significant-data-fiduciary",
+            "data-protection-officer",
+            "dpia",
+            "data-protection-board",
+          ],
         },
         {
           slug: "cross-border",

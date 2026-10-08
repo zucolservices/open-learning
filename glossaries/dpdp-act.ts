@@ -200,4 +200,16 @@ export const dpdpAct = {
       "Consent from a child's parent or lawful guardian that the organisation has checked, for example by confirming the parent is an identifiable adult using reliable identity and age details.",
     module: "children",
   },
+  "data-protection-officer": {
+    term: "Data Protection Officer (DPO)",
+    definition:
+      "Under the DPDP Act, an individual based in India whom a Significant Data Fiduciary must appoint to represent it, answer to its board and handle grievances.",
+    module: "significant-fiduciaries",
+  },
+  dpia: {
+    term: "Data Protection Impact Assessment (DPIA)",
+    definition:
+      "A structured review of how processing affects people's rights, why it's done and how the risks are managed. Significant Data Fiduciaries must do one every 12 months.",
+    module: "significant-fiduciaries",
+  },
 } satisfies Record<string, GlossaryEntry>;
