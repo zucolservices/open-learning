@@ -7393,11 +7393,17 @@ const dpdpAct: Track = {
             "Penalty caps and the factors that set them",
             "Voluntary undertakings, appeals and blocking",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["exemptions"],
           plain:
             "The Data Protection Board of India hears complaints and breach cases digitally and can impose penalties of up to ₹250 crore per breach, weighing factors such as severity and mitigation. Appeals go to the TDSAT. Penalties go to the government, not to the affected people.",
+          terms: [
+            "data-protection-board",
+            "voluntary-undertaking",
+            "tdsat",
+            "reasonable-security-safeguards",
+          ],
         },
         {
           slug: "privacy-by-design",

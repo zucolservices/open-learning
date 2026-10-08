@@ -230,4 +230,10 @@ export const dpdpAct = {
       "A case in section 17 where some or all of the Act's duties don't apply, such as legal claims, crime prevention, approved mergers or research meeting set standards. Security duties often remain.",
     module: "exemptions",
   },
+  "voluntary-undertaking": {
+    term: "Voluntary undertaking",
+    definition:
+      "A promise a company offers the Data Protection Board to fix a problem. If the Board accepts it, proceedings on those matters stop, unless the company breaks the promise.",
+    module: "board-penalties",
+  },
 } satisfies Record<string, GlossaryEntry>;
