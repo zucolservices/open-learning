@@ -40,6 +40,8 @@ import { AppliedMlScene } from "@/components/home/applied-ml-scene";
 import { AppliedMlTaste } from "@/components/home/applied-ml-taste";
 import { AppSecurityScene } from "@/components/home/app-security-scene";
 import { AppSecurityTaste } from "@/components/home/app-security-taste";
+import { DpdpActScene } from "@/components/home/dpdp-act-scene";
+import { DpdpActTaste } from "@/components/home/dpdp-act-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -216,5 +218,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: AppSecurityTaste,
     tasteCaption:
       "A taste of module 5: watch a login query turn crafted input into code, then switch to a parameterised query and stop it.",
+  },
+  "dpdp-act": {
+    Scene: DpdpActScene,
+    sceneCaption:
+      "The life of one person's data under the DPDP Act: notice, consent, use for a purpose, protection, rights and erasure, with breach notices and the Data Protection Board watching over. Watch the tour, or click any part.",
+    Taste: DpdpActTaste,
+    tasteCaption:
+      "A taste of module 6: a sign-up screen with every bad habit switched on. Click each red pill and watch consent become valid.",
   },
 };

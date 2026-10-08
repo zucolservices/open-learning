@@ -838,12 +838,12 @@ Security & government area, second track (started 2026-10-08). 22 modules in 7 c
 | 6     | Consent that counts                        | Design a sign-up screen and watch each choice (pre-ticked bo | Simulation                          |
 | 7     | Withdrawal and consent managers            | Withdraw consent in a demo app and follow the stop signal to | Step through                        |
 | 8     | Legitimate uses                            | Match eight everyday processing jobs to the right ground: co | Simulation                          |
-| **3** | **Duties of a Data Fiduciary**             |                                                              |                                     |
+| **3** | **Fiduciary duties**                       |                                                              |                                     |
 | 9     | Purpose and retention                      | Run a retention clock over a shop's customer records and wat | Simulation                          |
 | 10    | Security safeguards                        | Harden a clinic's patient system against Rule 6's list (encr | Simulation                          |
 | 11    | Data processors and contracts              | Trace a customer's data through a cloud host                 | Build connect                       |
 | 12    | Personal data breaches                     | Handle a simulated breach hour by hour: who to tell          | Branching scenario                  |
-| **4** | **Rights of Data Principals**              |                                                              |                                     |
+| **4** | **People's rights**                        |                                                              |                                     |
 | 13    | Access, correction and erasure             | Answer a rights request end to end: verify the person        | Simulation                          |
 | 14    | Grievances, nomination and duties          | Follow a complaint from an app's grievance desk to the Data  | Step through                        |
 | **5** | **Special cases**                          |                                                              |                                     |
@@ -851,7 +851,7 @@ Security & government area, second track (started 2026-10-08). 22 modules in 7 c
 | 16    | Significant Data Fiduciaries               | Turn the dials of volume                                     | Simulation                          |
 | 17    | Cross-border transfers                     | Route an app's data to servers around the world and see whic | Simulation                          |
 | 18    | Exemptions and State processing            | Sort a dozen processing activities by which exemption of sec | Simulation                          |
-| **6** | **Enforcement and engineering**            |                                                              |                                     |
+| **6** | **Enforce and build**                      |                                                              |                                     |
 | 19    | The Data Protection Board and penalties    | Follow a complaint through the Data Protection Board's digit | Step through                        |
 | 20    | Privacy by design for engineers            | Wire an app's architecture with a consent ledger             | Build connect                       |
 | 21    | DPDP, GDPR and India's other rules         | Compare DPDP with the EU's GDPR side by side                 | Animated infographic                |

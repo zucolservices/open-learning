@@ -36,6 +36,8 @@ import { appliedMlArtA } from "./art/applied-ml-a";
 import { appliedMlArtB } from "./art/applied-ml-b";
 import { appSecurityArtA } from "./art/app-security-a";
 import { appSecurityArtB } from "./art/app-security-b";
+import { dpdpActArtA } from "./art/dpdp-act-a";
+import { dpdpActArtB } from "./art/dpdp-act-b";
 
 /**
  * One small illustration per module (viewBox 160 × 100), drawn with the
@@ -1091,6 +1093,8 @@ const all: ArtMap = {
   ...appliedMlArtB,
   ...appSecurityArtA,
   ...appSecurityArtB,
+  ...dpdpActArtA,
+  ...dpdpActArtB,
 };
 
 /** Art is keyed by slug; a "track/slug" key wins, for slugs used in more than one track. */

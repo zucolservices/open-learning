@@ -7125,7 +7125,7 @@ const dpdpAct: Track = {
     },
     {
       slug: "fiduciary-duties",
-      title: "Duties of a Data Fiduciary",
+      title: "Fiduciary duties",
       summary: "Keep it only as long as needed, keep it safe, and own the breaches.",
       modules: [
         {
@@ -7227,7 +7227,7 @@ const dpdpAct: Track = {
     },
     {
       slug: "principal-rights",
-      title: "Rights of Data Principals",
+      title: "People's rights",
       summary: "Access, correction, erasure and a way to complain.",
       modules: [
         {
@@ -7377,7 +7377,7 @@ const dpdpAct: Track = {
     },
     {
       slug: "enforcement",
-      title: "Enforcement and engineering",
+      title: "Enforce and build",
       summary: "Penalties, privacy by design, and how DPDP fits with other rules.",
       modules: [
         {

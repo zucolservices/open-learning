@@ -237,7 +237,7 @@ export const CHECKLIST: [string, string[]][] = [
     ],
   ],
   [
-    "Enforcement and engineering",
+    "Enforce and build",
     ["Mitigate fast", "Purpose tags, consent ledger, deletion fan-out"],
   ],
 ];

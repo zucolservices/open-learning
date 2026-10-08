@@ -6,7 +6,7 @@
 
 ![The OpenLearning home page](docs/images/home.png)
 
-- **21 tracks, 467 modules, about 200 hours** of hands-on learning, from data lakehouses to application security.
+- **22 tracks, 489 modules, over 200 hours** of hands-on learning, from data lakehouses to India's data protection law.
 - **Starts from zero.** Every module opens with an everyday story before the mechanics, and every piece of jargon links to a plain-English glossary of 1,500+ terms.
 - **The format fits the idea.** 3D models, live simulations, step-throughs, build-and-connect canvases, broken systems to diagnose, and real SQL running in the browser.
 - **No scores, no exams.** Checkpoints explain the reasoning behind every answer, and you can always try again.
@@ -15,31 +15,32 @@
 
 ## Tracks
 
-| Category              | Track                                                                           | What it covers                                              | Modules |
-| --------------------- | ------------------------------------------------------------------------------- | ----------------------------------------------------------- | ------: |
-| Data engineering      | [Modern Data Lakehouse](https://openlearning.zucol.in/tracks/data-lakehouse)    | Open files, open tables, any engine.                        |      29 |
-|                       | [Streaming Data Systems](https://openlearning.zucol.in/tracks/streaming-data)   | Data that never stops: events, logs, windows and state.     |      23 |
-|                       | [Apache Spark](https://openlearning.zucol.in/tracks/spark)                      | How distributed dataframes plan, shuffle and scale.         |      21 |
-|                       | [Data Modelling](https://openlearning.zucol.in/tracks/data-modelling)           | Stars, snowflakes, vaults and when to use each.             |      21 |
-|                       | [Data Quality](https://openlearning.zucol.in/tracks/data-quality)               | Tests, contracts and observability for data.                |      21 |
-| AI & machine learning | [LLM Foundations](https://openlearning.zucol.in/tracks/llm-foundations)         | See inside the models, not just the chat box.               |      26 |
-|                       | [RAG Systems](https://openlearning.zucol.in/tracks/rag-systems)                 | Answers grounded in your documents, not the model's memory. |      23 |
-|                       | [AI Agents](https://openlearning.zucol.in/tracks/ai-agents)                     | Tools, planning, memory and guardrails.                     |      21 |
-|                       | [Voice AI](https://openlearning.zucol.in/tracks/voice-ai)                       | Speech in, speech out, in real time.                        |      18 |
-|                       | [LLM Evaluation](https://openlearning.zucol.in/tracks/llm-evaluation)           | Measuring quality, safety and regressions.                  |      20 |
-|                       | [Applied ML](https://openlearning.zucol.in/tracks/applied-ml)                   | Classic machine learning, from features to deployment.      |      22 |
-| Platform & cloud      | [Cloud Architecture](https://openlearning.zucol.in/tracks/cloud-architecture)   | How cloud platforms are built, and how to design on them.   |      22 |
-|                       | [Kubernetes](https://openlearning.zucol.in/tracks/kubernetes)                   | Pods, controllers and scheduling, taken apart.              |      23 |
-|                       | [CI/CD](https://openlearning.zucol.in/tracks/ci-cd)                             | From commit to production, safely and often.                |      21 |
-|                       | [Observability](https://openlearning.zucol.in/tracks/observability)             | Metrics, logs, traces and SLOs in depth.                    |      21 |
-| Architecture          | [System Design at Scale](https://openlearning.zucol.in/tracks/system-design)    | Build systems that bend, not break.                         |      27 |
-|                       | [API Design](https://openlearning.zucol.in/tracks/api-design)                   | Resources, versions, pagination and contracts.              |      21 |
-|                       | [Database Internals](https://openlearning.zucol.in/tracks/database-internals)   | Pages, indexes, logs and transactions underneath SQL.       |      21 |
-|                       | [Enterprise Patterns](https://openlearning.zucol.in/tracks/enterprise-patterns) | Integration, domains and boundaries in large organisations. |      21 |
-| Security & government | [Application Security](https://openlearning.zucol.in/tracks/app-security)       | The common attacks, and the habits that stop them.          |      22 |
-| Delivery management   | [Agile & Scrum](https://openlearning.zucol.in/tracks/agile-scrum)               | The ceremonies, and the thinking behind them.               |      23 |
+| Category              | Track                                                                           | What it covers                                                     | Modules |
+| --------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ------: |
+| Data engineering      | [Modern Data Lakehouse](https://openlearning.zucol.in/tracks/data-lakehouse)    | Open files, open tables, any engine.                               |      29 |
+|                       | [Streaming Data Systems](https://openlearning.zucol.in/tracks/streaming-data)   | Data that never stops: events, logs, windows and state.            |      23 |
+|                       | [Apache Spark](https://openlearning.zucol.in/tracks/spark)                      | How distributed dataframes plan, shuffle and scale.                |      21 |
+|                       | [Data Modelling](https://openlearning.zucol.in/tracks/data-modelling)           | Stars, snowflakes, vaults and when to use each.                    |      21 |
+|                       | [Data Quality](https://openlearning.zucol.in/tracks/data-quality)               | Tests, contracts and observability for data.                       |      21 |
+| AI & machine learning | [LLM Foundations](https://openlearning.zucol.in/tracks/llm-foundations)         | See inside the models, not just the chat box.                      |      26 |
+|                       | [RAG Systems](https://openlearning.zucol.in/tracks/rag-systems)                 | Answers grounded in your documents, not the model's memory.        |      23 |
+|                       | [AI Agents](https://openlearning.zucol.in/tracks/ai-agents)                     | Tools, planning, memory and guardrails.                            |      21 |
+|                       | [Voice AI](https://openlearning.zucol.in/tracks/voice-ai)                       | Speech in, speech out, in real time.                               |      18 |
+|                       | [LLM Evaluation](https://openlearning.zucol.in/tracks/llm-evaluation)           | Measuring quality, safety and regressions.                         |      20 |
+|                       | [Applied ML](https://openlearning.zucol.in/tracks/applied-ml)                   | Classic machine learning, from features to deployment.             |      22 |
+| Platform & cloud      | [Cloud Architecture](https://openlearning.zucol.in/tracks/cloud-architecture)   | How cloud platforms are built, and how to design on them.          |      22 |
+|                       | [Kubernetes](https://openlearning.zucol.in/tracks/kubernetes)                   | Pods, controllers and scheduling, taken apart.                     |      23 |
+|                       | [CI/CD](https://openlearning.zucol.in/tracks/ci-cd)                             | From commit to production, safely and often.                       |      21 |
+|                       | [Observability](https://openlearning.zucol.in/tracks/observability)             | Metrics, logs, traces and SLOs in depth.                           |      21 |
+| Architecture          | [System Design at Scale](https://openlearning.zucol.in/tracks/system-design)    | Build systems that bend, not break.                                |      27 |
+|                       | [API Design](https://openlearning.zucol.in/tracks/api-design)                   | Resources, versions, pagination and contracts.                     |      21 |
+|                       | [Database Internals](https://openlearning.zucol.in/tracks/database-internals)   | Pages, indexes, logs and transactions underneath SQL.              |      21 |
+|                       | [Enterprise Patterns](https://openlearning.zucol.in/tracks/enterprise-patterns) | Integration, domains and boundaries in large organisations.        |      21 |
+| Security & government | [Application Security](https://openlearning.zucol.in/tracks/app-security)       | The common attacks, and the habits that stop them.                 |      22 |
+|                       | [DPDP Act](https://openlearning.zucol.in/tracks/dpdp-act)                       | India's data protection law, for the people who build the systems. |      22 |
+| Delivery management   | [Agile & Scrum](https://openlearning.zucol.in/tracks/agile-scrum)               | The ceremonies, and the thinking behind them.                      |      23 |
 
-More tracks are planned, including the DPDP Act, Testing, Git, Frontend, Accessibility and UX. The full roadmap is in [docs/PLAN.md](docs/PLAN.md).
+More tracks are planned, including Building for Government, Testing, Git, Frontend, Accessibility and UX. The full roadmap is in [docs/PLAN.md](docs/PLAN.md).
 
 ## Inside a module
 
