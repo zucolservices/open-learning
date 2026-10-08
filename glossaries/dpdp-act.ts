@@ -140,4 +140,10 @@ export const dpdpAct = {
       "A requirement under another law, such as tax or anti-money-laundering rules, to keep certain records for a set period even after their original purpose has ended.",
     module: "purpose-retention",
   },
+  "reasonable-security-safeguards": {
+    term: "Reasonable security safeguards",
+    definition:
+      "The steps the DPDP Act requires to prevent personal data breaches. Rule 6 sets the minimum: encryption or masking, access control, logs and monitoring, backups, a year of logs, processor contracts and organisational measures.",
+    module: "security-safeguards",
+  },
 } satisfies Record<string, GlossaryEntry>;

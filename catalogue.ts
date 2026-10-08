@@ -7161,11 +7161,17 @@ const dpdpAct: Track = {
             "Rule 6's minimum measures",
             "Accuracy when data drives decisions",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["purpose-retention"],
           plain:
             "Organisations must take reasonable security safeguards to prevent breaches: encryption or masking, access control, logs and monitoring, backups and contracts with processors. Failing to do so carries the Act's largest penalty, up to ₹250 crore.",
+          terms: [
+            "reasonable-security-safeguards",
+            "personal-data-breach",
+            "data-processor",
+            "pseudonymisation",
+          ],
         },
         {
           slug: "processors",

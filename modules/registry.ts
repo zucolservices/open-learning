@@ -500,4 +500,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "dpdp-act/withdrawal": () => import("./dpdp-act/withdrawal"),
   "dpdp-act/legitimate-uses": () => import("./dpdp-act/legitimate-uses"),
   "dpdp-act/purpose-retention": () => import("./dpdp-act/purpose-retention"),
+  "dpdp-act/security-safeguards": () => import("./dpdp-act/security-safeguards"),
 };
