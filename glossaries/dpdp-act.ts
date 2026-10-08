@@ -146,4 +146,10 @@ export const dpdpAct = {
       "The steps the DPDP Act requires to prevent personal data breaches. Rule 6 sets the minimum: encryption or masking, access control, logs and monitoring, backups, a year of logs, processor contracts and organisational measures.",
     module: "security-safeguards",
   },
+  "data-processing-agreement": {
+    term: "Data processing agreement",
+    definition:
+      "The contract between an organisation and a vendor that processes personal data for it, setting out security, breach notice, deletion and other duties.",
+    module: "processors",
+  },
 } satisfies Record<string, GlossaryEntry>;

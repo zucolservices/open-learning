@@ -7186,11 +7186,17 @@ const dpdpAct: Track = {
             "The fiduciary stays responsible",
             "Passing on erasure and breach duties",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["security-safeguards"],
           plain:
             "A fiduciary may hand processing to a vendor only under a valid contract, and it stays responsible for what the vendor does. The contract must make the vendor protect the data, erase it when told and report breaches.",
+          terms: [
+            "data-processor",
+            "data-fiduciary",
+            "data-processing-agreement",
+            "reasonable-security-safeguards",
+          ],
         },
         {
           slug: "breaches",
