@@ -104,4 +104,16 @@ export const dpdpAct = {
       "The part of India's Constitution listing 22 languages. People must be able to read a DPDP notice and consent request in English or any of them.",
     module: "notice",
   },
+  consent: {
+    term: "Consent (DPDP)",
+    definition:
+      "A person's agreement to processing that is free, specific, informed, unconditional and unambiguous, given by a clear affirmative action, and limited to the data needed for the stated purpose.",
+    module: "consent",
+  },
+  "dark-pattern": {
+    term: "Dark pattern",
+    definition:
+      "A design trick that nudges people into choices they didn't mean to make, such as pre-ticked boxes or a hidden 'no'. India's consumer regulator lists 13 kinds.",
+    module: "consent",
+  },
 } satisfies Record<string, GlossaryEntry>;

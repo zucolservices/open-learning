@@ -7074,11 +7074,12 @@ const dpdpAct: Track = {
             "Only the data needed for the purpose",
             "Dark patterns that break consent",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["notice"],
           plain:
             "Consent under the Act must be freely given, specific, informed, unconditional and unambiguous, shown by a clear action such as ticking an empty box. It covers only the data needed for the stated purpose, and the organisation must be able to prove it.",
+          terms: ["consent", "dark-pattern", "dpdp-notice", "data-principal"],
         },
         {
           slug: "withdrawal",
