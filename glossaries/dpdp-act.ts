@@ -170,4 +170,22 @@ export const dpdpAct = {
       "A Data Principal's right to have personal data corrected, completed, updated or erased. Erasure can be refused only where the data is still needed for the purpose or a law requires keeping it.",
     module: "rights",
   },
+  "grievance-redressal": {
+    term: "Grievance redressal",
+    definition:
+      "The complaint process every Data Fiduciary must run. People must use it, and get an answer within the published period of at most 90 days, before complaining to the Data Protection Board.",
+    module: "grievances-duties",
+  },
+  nomination: {
+    term: "Nomination",
+    definition:
+      "Naming someone who can exercise your rights under the DPDP Act if you die or become unable to manage your affairs.",
+    module: "grievances-duties",
+  },
+  tdsat: {
+    term: "TDSAT",
+    definition:
+      "The Telecom Disputes Settlement and Appellate Tribunal, which hears appeals against the Data Protection Board's decisions.",
+    module: "grievances-duties",
+  },
 } satisfies Record<string, GlossaryEntry>;

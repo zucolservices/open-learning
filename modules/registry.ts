@@ -504,4 +504,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "dpdp-act/processors": () => import("./dpdp-act/processors"),
   "dpdp-act/breaches": () => import("./dpdp-act/breaches"),
   "dpdp-act/rights": () => import("./dpdp-act/rights"),
+  "dpdp-act/grievances-duties": () => import("./dpdp-act/grievances-duties"),
 };

@@ -7269,11 +7269,12 @@ const dpdpAct: Track = {
             "Nominating someone to act for you",
             "Duties of Data Principals",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["rights"],
           plain:
             "Every fiduciary must run a grievance process and answer within the Rules' time limit. Only after using it can a person complain to the Board. People can nominate someone to act for them, and they have duties too, such as not filing false complaints.",
+          terms: ["grievance-redressal", "nomination", "tdsat", "data-protection-board"],
         },
       ],
     },
