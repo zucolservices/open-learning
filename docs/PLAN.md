@@ -822,6 +822,42 @@ Security & government area, first track (started 2026-10-07). 22 modules in 6 ch
 | **6** | **Capstone**                          |                                       |                                     |
 | 22    | Capstone: securing a payments app     | Payments app threat model + incidents | Branching scenario, Fix the problem |
 
+## DPDP Act: curriculum
+
+Security & government area, second track (started 2026-10-08). 22 modules in 7 chapters, about 8 hours. Accent: "charter" olive (`[data-track="charter"]`). Glossary: `glossaries/dpdp-act.ts`. Covers India's Digital Personal Data Protection Act 2023 and the DPDP Rules 2025 (notified November 2025, most duties from May 2027) for engineers: roles and scope, notice and consent, legitimate uses, retention, security safeguards, breaches, rights, children, Significant Data Fiduciaries, cross-border transfers, exemptions, the Board and penalties, then privacy by design and how DPDP sits with GDPR and Indian sector rules. Vendor-neutral tooling (open source plus AWS, Google Cloud and Azure). Every organisation in a scenario is made up, and the track says plainly that it explains the law for engineers and is not legal advice. Builds on Application Security (safeguards, incident response) and Data Quality (lineage, ownership). Built on one branch (`track/dpdp-act`), one commit per module, merged once at the end. Each module is fact-checked against the Act, the Rules and official releases before it is built.
+
+| #     | Module                                     | Centrepiece                                                  | Key formats                         |
+| ----- | ------------------------------------------ | ------------------------------------------------------------ | ----------------------------------- |
+| **1** | **The big picture**                        |                                                              |                                     |
+| 1     | Why a data protection law                  | Follow one leaked spreadsheet through the story of Indian pr | Scroll story                        |
+| 2     | Who's who under the Act                    | Tag every person and company in a food-delivery order with t | Build connect                       |
+| 3     | What the Act covers                        | Sort a dozen real-world situations into in scope or out      | Simulation                          |
+| 4     | Finding personal data in your systems      | Hunt for personal data across an app's database              | Fix the problem                     |
+| **2** | **Lawful processing**                      |                                                              |                                     |
+| 5     | Notice                                     | Fix a vague                                                  | Fix the problem                     |
+| 6     | Consent that counts                        | Design a sign-up screen and watch each choice (pre-ticked bo | Simulation                          |
+| 7     | Withdrawal and consent managers            | Withdraw consent in a demo app and follow the stop signal to | Step through                        |
+| 8     | Legitimate uses                            | Match eight everyday processing jobs to the right ground: co | Simulation                          |
+| **3** | **Duties of a Data Fiduciary**             |                                                              |                                     |
+| 9     | Purpose and retention                      | Run a retention clock over a shop's customer records and wat | Simulation                          |
+| 10    | Security safeguards                        | Harden a clinic's patient system against Rule 6's list (encr | Simulation                          |
+| 11    | Data processors and contracts              | Trace a customer's data through a cloud host                 | Build connect                       |
+| 12    | Personal data breaches                     | Handle a simulated breach hour by hour: who to tell          | Branching scenario                  |
+| **4** | **Rights of Data Principals**              |                                                              |                                     |
+| 13    | Access, correction and erasure             | Answer a rights request end to end: verify the person        | Simulation                          |
+| 14    | Grievances, nomination and duties          | Follow a complaint from an app's grievance desk to the Data  | Step through                        |
+| **5** | **Special cases**                          |                                                              |                                     |
+| 15    | Children's data                            | Build a sign-up flow for a learning app that tells adults fr | Simulation                          |
+| 16    | Significant Data Fiduciaries               | Turn the dials of volume                                     | Simulation                          |
+| 17    | Cross-border transfers                     | Route an app's data to servers around the world and see whic | Simulation                          |
+| 18    | Exemptions and State processing            | Sort a dozen processing activities by which exemption of sec | Simulation                          |
+| **6** | **Enforcement and engineering**            |                                                              |                                     |
+| 19    | The Data Protection Board and penalties    | Follow a complaint through the Data Protection Board's digit | Step through                        |
+| 20    | Privacy by design for engineers            | Wire an app's architecture with a consent ledger             | Build connect                       |
+| 21    | DPDP, GDPR and India's other rules         | Compare DPDP with the EU's GDPR side by side                 | Animated infographic                |
+| **7** | **Capstone**                               |                                                              |                                     |
+| 22    | Capstone: making an ed-tech app DPDP-ready | Take a made-up learning app for school students from data ma | Branching scenario, Fix the problem |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -850,6 +886,7 @@ Security & government area, first track (started 2026-10-07). 22 modules in 6 ch
 | 4s. LLM Evaluation         | AI & machine learning, fifth track, 20 modules                                          | Live: all 20 modules (2026-10-05)                                       |
 | 4t. Applied ML             | AI & machine learning, sixth track, 22 modules                                          | Live: all 22 modules (2026-10-06)                                       |
 | 4u. Application Security   | Security & government, first track, 22 modules                                          | Live: all 22 modules (2026-10-07)                                       |
+| 4v. DPDP Act               | Security & government, second track, 22 modules                                         | In progress: 0 of 22 modules live                                       |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

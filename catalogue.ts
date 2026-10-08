@@ -107,6 +107,7 @@ export interface Track {
     | "gauge"
     | "gradient"
     | "bastion"
+    | "charter"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -6925,6 +6926,484 @@ const databaseInternals: Track = {
 };
 
 /** A small end-to-end module that exercises the toolkit and Module SDK. */
+const dpdpAct: Track = {
+  slug: "dpdp-act",
+  title: "DPDP Act",
+  area: "Security & government",
+  category: "security-government",
+  tagline: "India's data protection law, for the people who build the systems.",
+  description:
+    "India's Digital Personal Data Protection Act 2023 and the DPDP Rules 2025, explained for engineers: who the law applies to, notice and consent, legitimate uses, purpose and retention limits, security safeguards, breach reporting, the rights of Data Principals, children's data, Significant Data Fiduciaries, cross-border transfers, exemptions, the Data Protection Board and its penalties. Then what it means in code: finding personal data, consent records, retention jobs, deletion that reaches every copy, and privacy by design, using open-source tools alongside the services of AWS, Google Cloud and Microsoft Azure. Every scenario uses made-up organisations. This track explains the law for engineers; it is not legal advice.",
+  accent: "charter",
+  chapters: [
+    {
+      slug: "big-picture",
+      title: "The big picture",
+      summary: "What the law is for, and who it talks about.",
+      modules: [
+        {
+          slug: "why-dpdp",
+          title: "Why a data protection law",
+          summary: "From a leaked spreadsheet to a fundamental right.",
+          minutes: 20,
+          signature:
+            "Follow one leaked spreadsheet through the story of Indian privacy law, from the 2017 Supreme Court ruling to the Rules' 2027 deadline",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "Privacy as a fundamental right",
+            "The road to the DPDP Act and Rules",
+            "The phased timeline to May 2027",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "The DPDP Act is India's law on how organisations may collect and use personal data held in digital form. It grew out of a 2017 Supreme Court ruling that privacy is a fundamental right, and most of its duties apply from May 2027.",
+        },
+        {
+          slug: "roles",
+          title: "Who's who under the Act",
+          summary: "Principals, fiduciaries, processors and the Board.",
+          minutes: 20,
+          signature:
+            "Tag every person and company in a food-delivery order with their role under the Act, and see who answers for what",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Data Principal and Data Fiduciary",
+            "Data Processor and Consent Manager",
+            "Who is responsible for a processor's mistakes",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-dpdp"],
+          plain:
+            "The person the data is about is the Data Principal. The organisation that decides why and how it is used is the Data Fiduciary, and anyone processing it on the fiduciary's behalf is a Data Processor. The fiduciary stays responsible.",
+        },
+        {
+          slug: "scope",
+          title: "What the Act covers",
+          summary: "Digital data, people in India, and the exceptions.",
+          minutes: 20,
+          signature:
+            "Sort a dozen real-world situations into in scope or out, and see the clause of section 3 that decides each one",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Digital and digitised personal data",
+            "Reach beyond India's borders",
+            "Personal use and public data are outside it",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["roles"],
+          plain:
+            "The Act covers personal data in digital form, including paper records that are later scanned or typed in. It also covers companies abroad that offer goods or services to people in India. Purely personal use and data a person chose to make public are outside it.",
+        },
+        {
+          slug: "data-mapping",
+          title: "Finding personal data in your systems",
+          summary: "Logs, SDKs, backups: it's everywhere.",
+          minutes: 25,
+          signature:
+            "Hunt for personal data across an app's database, logs, analytics SDK, support desk, warehouse and backups, and build its data map",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Personal data hides in logs, tools and copies",
+            "A data map: what, where, why, how long",
+            "Scanning tools and their limits",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["scope"],
+          plain:
+            "You can't protect, delete or report on data you don't know you have. A data map lists each kind of personal data, where every copy lives, why it is kept and for how long. It is the first job in any DPDP programme.",
+        },
+      ],
+    },
+    {
+      slug: "lawful-processing",
+      title: "Lawful processing",
+      summary: "Notice, consent and the uses that need neither.",
+      modules: [
+        {
+          slug: "notice",
+          title: "Notice",
+          summary: "Tell people what, why and how to say no.",
+          minutes: 20,
+          signature: "Fix a vague, buried privacy notice line by line until it meets Rule 3",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "What a notice must contain",
+            "Plain language and 22 languages",
+            "Itemised data and specified purposes",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["data-mapping"],
+          plain:
+            "Before asking for consent, an organisation must give a notice that says which personal data it wants and for what purpose, and how to withdraw consent, use your rights and complain. It must stand on its own and be clear.",
+        },
+        {
+          slug: "consent",
+          title: "Consent that counts",
+          summary: "Free, specific, informed, unconditional, unambiguous.",
+          minutes: 25,
+          signature:
+            "Design a sign-up screen and watch each choice (pre-ticked boxes, bundling, forced consent) make the consent valid or not",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "The five qualities of valid consent",
+            "Only the data needed for the purpose",
+            "Dark patterns that break consent",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["notice"],
+          plain:
+            "Consent under the Act must be freely given, specific, informed, unconditional and unambiguous, shown by a clear action such as ticking an empty box. It covers only the data needed for the stated purpose, and the organisation must be able to prove it.",
+        },
+        {
+          slug: "withdrawal",
+          title: "Withdrawal and consent managers",
+          summary: "As easy to take back as to give.",
+          minutes: 20,
+          signature:
+            "Withdraw consent in a demo app and follow the stop signal to every system and processor, then route it through a consent manager",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Withdrawal as easy as giving",
+            "Stopping processing everywhere",
+            "Consent managers as registered intermediaries",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["consent"],
+          plain:
+            "A person can withdraw consent at any time, as easily as they gave it. The organisation must then stop processing and make its processors stop too. Consent managers are registered platforms that let people give, manage and withdraw consent in one place.",
+        },
+        {
+          slug: "legitimate-uses",
+          title: "Legitimate uses",
+          summary: "When you don't need consent.",
+          minutes: 20,
+          signature:
+            "Match eight everyday processing jobs to the right ground: consent, or one of section 7's legitimate uses",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Voluntarily provided data",
+            "State benefits, legal duties and emergencies",
+            "Employment, and no catch-all legitimate interest",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["consent"],
+          plain:
+            "Some processing doesn't need consent: data someone gave you for a clear purpose, such as a phone number for a receipt; legal obligations; medical emergencies; state benefits; and certain employment uses. There is no general business-interest ground as in Europe.",
+        },
+      ],
+    },
+    {
+      slug: "fiduciary-duties",
+      title: "Duties of a Data Fiduciary",
+      summary: "Keep it only as long as needed, keep it safe, and own the breaches.",
+      modules: [
+        {
+          slug: "purpose-retention",
+          title: "Purpose and retention",
+          summary: "Erase when the purpose is served.",
+          minutes: 25,
+          signature:
+            "Run a retention clock over a shop's customer records and watch the 3-year inactivity rule, its 48-hour warning and the one-year log rule play out",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Purpose limitation",
+            "Erasure when the purpose is served or consent withdrawn",
+            "Third Schedule periods and the 48-hour warning",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["legitimate-uses"],
+          plain:
+            "Personal data may be kept only while it serves the purpose it was collected for, unless another law requires it. Large e-commerce, gaming and social media platforms must erase inactive users' data after three years, with 48 hours' warning.",
+        },
+        {
+          slug: "security-safeguards",
+          title: "Security safeguards",
+          summary: "Reasonable steps, written into Rule 6.",
+          minutes: 25,
+          signature:
+            "Harden a clinic's patient system against Rule 6's list (encryption, access control, logs, backups) and watch a simulated incident get contained",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Reasonable security safeguards",
+            "Rule 6's minimum measures",
+            "Accuracy when data drives decisions",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["purpose-retention"],
+          plain:
+            "Organisations must take reasonable security safeguards to prevent breaches: encryption or masking, access control, logs and monitoring, backups and contracts with processors. Failing to do so carries the Act's largest penalty, up to ₹250 crore.",
+        },
+        {
+          slug: "processors",
+          title: "Data processors and contracts",
+          summary: "You can outsource the work, not the responsibility.",
+          minutes: 20,
+          signature:
+            "Trace a customer's data through a cloud host, an SMS gateway and an analytics vendor, and write the contract clauses each one needs",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Processing only under a valid contract",
+            "The fiduciary stays responsible",
+            "Passing on erasure and breach duties",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["security-safeguards"],
+          plain:
+            "A fiduciary may hand processing to a vendor only under a valid contract, and it stays responsible for what the vendor does. The contract must make the vendor protect the data, erase it when told and report breaches.",
+        },
+        {
+          slug: "breaches",
+          title: "Personal data breaches",
+          summary: "Tell the Board and every affected person.",
+          minutes: 25,
+          signature:
+            "Handle a simulated breach hour by hour: who to tell, by when, and what the notices to the Board, CERT-In and each person must say",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "What counts as a personal data breach",
+            "Intimation without delay, report within 72 hours",
+            "CERT-In's six-hour rule alongside",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["processors"],
+          plain:
+            "Any breach of personal data, however small, must be reported to the Data Protection Board and to every affected person without delay, with a detailed report to the Board within 72 hours. Separate CERT-In rules require some cyber incidents to be reported within six hours.",
+        },
+      ],
+    },
+    {
+      slug: "principal-rights",
+      title: "Rights of Data Principals",
+      summary: "Access, correction, erasure and a way to complain.",
+      modules: [
+        {
+          slug: "rights",
+          title: "Access, correction and erasure",
+          summary: "Answering a rights request end to end.",
+          minutes: 25,
+          signature:
+            "Answer a rights request end to end: verify the person, find their data across six systems, then correct or erase it everywhere",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "The right to access information",
+            "Correction, completion, updating and erasure",
+            "Why deletion must reach every copy",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["breaches"],
+          plain:
+            "People can ask what personal data an organisation holds about them and who it was shared with, and ask for it to be corrected, completed, updated or erased. Engineering has to find every copy to answer honestly.",
+        },
+        {
+          slug: "grievances-duties",
+          title: "Grievances, nomination and duties",
+          summary: "The complaint path, and what people owe too.",
+          minutes: 20,
+          signature:
+            "Follow a complaint from an app's grievance desk to the Data Protection Board, and see where nomination and a person's own duties come in",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Grievance redressal first, then the Board",
+            "Nominating someone to act for you",
+            "Duties of Data Principals",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["rights"],
+          plain:
+            "Every fiduciary must run a grievance process and answer within the Rules' time limit. Only after using it can a person complain to the Board. People can nominate someone to act for them, and they have duties too, such as not filing false complaints.",
+        },
+      ],
+    },
+    {
+      slug: "special-cases",
+      title: "Special cases",
+      summary: "Children, big platforms, borders and exemptions.",
+      modules: [
+        {
+          slug: "children",
+          title: "Children's data",
+          summary: "Verifiable parental consent, no tracking, no targeted ads.",
+          minutes: 25,
+          signature:
+            "Build a sign-up flow for a learning app that tells adults from children and verifies a parent, then switch on features to see which are banned for under-18s",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Under 18 means a child",
+            "Verifiable parental consent under Rule 10",
+            "No tracking, behavioural monitoring or targeted ads",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["grievances-duties"],
+          plain:
+            "Anyone under 18 is a child under the Act. Processing a child's data needs verifiable consent from a parent, and tracking, behavioural monitoring and targeted advertising aimed at children are banned, with a few exemptions such as schools and hospitals.",
+        },
+        {
+          slug: "significant-fiduciaries",
+          title: "Significant Data Fiduciaries",
+          summary: "Extra duties for those who matter most.",
+          minutes: 20,
+          signature:
+            "Turn the dials of volume, sensitivity and risk to see when a platform could be notified as significant, and unlock the extra duties it then carries",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "How Significant Data Fiduciaries are chosen",
+            "DPO, independent audit and yearly DPIA",
+            "Algorithm checks and data that must stay in India",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["children"],
+          plain:
+            "The government can name some fiduciaries as Significant Data Fiduciaries based on how much and how sensitive their data is and the risks involved. They must appoint a Data Protection Officer in India, run yearly impact assessments and audits, and check their algorithms.",
+        },
+        {
+          slug: "cross-border",
+          title: "Cross-border transfers",
+          summary: "Allowed by default, unless restricted.",
+          minutes: 20,
+          signature:
+            "Route an app's data to servers around the world and see which transfers the Act allows, where sector rules such as RBI's payment-data rule step in, and what Rule 15 adds",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "A negative-list approach",
+            "Sector rules can be stricter",
+            "Rule 15 and requests from foreign governments",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["significant-fiduciaries"],
+          plain:
+            "Unlike some laws, the DPDP Act allows personal data to leave India unless the government restricts transfers to a specific country. Stricter sector rules still apply, such as the RBI's rule that payment data be stored only in India.",
+        },
+        {
+          slug: "exemptions",
+          title: "Exemptions and State processing",
+          summary: "Where the Act steps back.",
+          minutes: 20,
+          signature:
+            "Sort a dozen processing activities by which exemption of section 17, if any, applies, and see which duties still remain",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Courts, crime and legal claims",
+            "Research, archives and statistics",
+            "Notified exemptions for the State and startups",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["cross-border"],
+          plain:
+            "Section 17 switches off parts of the Act for some processing: enforcing legal rights, courts, preventing crime, approved mergers, research and statistics, and government bodies the Centre notifies. Exemptions are narrow, and security duties often still apply.",
+        },
+      ],
+    },
+    {
+      slug: "enforcement",
+      title: "Enforcement and engineering",
+      summary: "Penalties, privacy by design, and how DPDP fits with other rules.",
+      modules: [
+        {
+          slug: "board-penalties",
+          title: "The Data Protection Board and penalties",
+          summary: "A digital-first regulator with ₹250 crore teeth.",
+          minutes: 20,
+          signature:
+            "Follow a complaint through the Data Protection Board's digital office, then explore how the Act's penalty caps and factors shape an outcome",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "How the Board works",
+            "Penalty caps and the factors that set them",
+            "Voluntary undertakings, appeals and blocking",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["exemptions"],
+          plain:
+            "The Data Protection Board of India hears complaints and breach cases digitally and can impose penalties of up to ₹250 crore per breach, weighing factors such as severity and mitigation. Appeals go to the TDSAT. Penalties go to the government, not to the affected people.",
+        },
+        {
+          slug: "privacy-by-design",
+          title: "Privacy by design for engineers",
+          summary: "Turning duties into code.",
+          minutes: 25,
+          signature:
+            "Wire an app's architecture with a consent ledger, purpose tags, retention jobs and deletion fan-out, and watch each DPDP duty go green",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Minimise, tag and expire data",
+            "Consent records you can prove",
+            "Deletion that reaches every copy",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["board-penalties"],
+          plain:
+            "Most DPDP duties become engineering work: collect less, tag data with its purpose, record consent so you can prove it, expire data automatically, and make deletion reach caches, warehouses, vendors and backups.",
+        },
+        {
+          slug: "comparisons",
+          title: "DPDP, GDPR and India's other rules",
+          summary: "How it fits with GDPR, CERT-In, RBI and more.",
+          minutes: 20,
+          signature:
+            "Compare DPDP with the EU's GDPR side by side, then layer on CERT-In, RBI and other sector rules for one fintech app",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "Where DPDP differs from GDPR",
+            "Sector rules that apply alongside",
+            "Which rule wins in a conflict",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["privacy-by-design"],
+          plain:
+            "DPDP is simpler than Europe's GDPR: fewer grounds for processing, no special category of sensitive data, no portability right and fixed penalty caps. In India it sits alongside sector rules from CERT-In, the RBI and others, which still apply.",
+        },
+      ],
+    },
+    {
+      slug: "capstone",
+      title: "Capstone",
+      summary: "Put it all together.",
+      modules: [
+        {
+          slug: "capstone-dpdp",
+          title: "Capstone: making an ed-tech app DPDP-ready",
+          summary: "From data map to breach drill.",
+          minutes: 35,
+          signature:
+            "Take a made-up learning app for school students from data map to notice, parental consent, retention, rights requests and a breach drill",
+          formats: ["branching-scenario", "fix-the-problem"],
+          concepts: [
+            "Applying the Act end to end",
+            "Children, consent and retention together",
+            "Readiness before the May 2027 deadline",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["comparisons"],
+          plain:
+            "This capstone brings the track together. You take one made-up learning app, used by school students, through every duty in the Act, and fix what isn't ready before the deadline.",
+        },
+      ],
+    },
+  ],
+};
+
 const playground: Track = {
   slug: "playground",
   title: "Toolkit playground",
@@ -11101,6 +11580,7 @@ export const tracks: Track[] = [
   llmEvaluation,
   appliedMl,
   appSecurity,
+  dpdpAct,
   playground,
 ];
 
@@ -11263,7 +11743,7 @@ export const categories: Category[] = [
         slug: "app-security",
         blurb: "The common attacks, and the habits that stop them.",
       },
-      { title: "DPDP Act", blurb: "India's data protection law for engineers." },
+      { title: "DPDP Act", slug: "dpdp-act", blurb: "India's data protection law for engineers." },
       {
         title: "Building for Government",
         blurb: "Procurement, standards, accessibility and scale.",

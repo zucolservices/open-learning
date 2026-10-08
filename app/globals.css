@@ -326,6 +326,17 @@
   --accent-soft: rgb(241 122 210 / 0.14);
   --bg-glow: rgb(241 122 210 / 0.1);
 }
+[data-track="charter"] {
+  --accent: #65700a;
+  --accent-soft: rgb(101 112 10 / 0.1);
+  --bg-glow: rgb(132 145 20 / 0.12);
+}
+[data-theme="dark"] [data-track="charter"],
+[data-theme="dark"][data-track="charter"] {
+  --accent: #d4dc5a;
+  --accent-soft: rgb(212 220 90 / 0.14);
+  --bg-glow: rgb(212 220 90 / 0.1);
+}
 
 @theme inline {
   --color-bg: var(--bg);

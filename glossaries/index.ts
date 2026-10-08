@@ -26,6 +26,7 @@ import { voiceAi } from "./voice-ai";
 import { llmEvaluation } from "./llm-evaluation";
 import { appliedMl } from "./applied-ml";
 import { appSecurity } from "./app-security";
+import { dpdpAct } from "./dpdp-act";
 import { shared } from "./shared";
 import type { GlossaryEntry } from "./types";
 
@@ -54,6 +55,7 @@ export const trackGlossaries: Record<string, Record<string, GlossaryEntry>> = {
   "llm-evaluation": llmEvaluation,
   "applied-ml": appliedMl,
   "app-security": appSecurity,
+  "dpdp-act": dpdpAct,
 };
 
 export type TermId =
@@ -78,7 +80,8 @@ export type TermId =
   | keyof typeof voiceAi
   | keyof typeof llmEvaluation
   | keyof typeof appliedMl
-  | keyof typeof appSecurity;
+  | keyof typeof appSecurity
+  | keyof typeof dpdpAct;
 
 export interface ResolvedTerm {
   id: string;
