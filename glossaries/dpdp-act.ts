@@ -188,4 +188,16 @@ export const dpdpAct = {
       "The Telecom Disputes Settlement and Appellate Tribunal, which hears appeals against the Data Protection Board's decisions.",
     module: "grievances-duties",
   },
+  "dpdp-child": {
+    term: "Child (DPDP)",
+    definition:
+      "Anyone who hasn't turned 18. Their personal data needs verifiable parental consent, and tracking, behavioural monitoring and targeted ads aimed at them are barred.",
+    module: "children",
+  },
+  "verifiable-parental-consent": {
+    term: "Verifiable parental consent",
+    definition:
+      "Consent from a child's parent or lawful guardian that the organisation has checked, for example by confirming the parent is an identifiable adult using reliable identity and age details.",
+    module: "children",
+  },
 } satisfies Record<string, GlossaryEntry>;

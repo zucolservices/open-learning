@@ -7296,11 +7296,12 @@ const dpdpAct: Track = {
             "Verifiable parental consent under Rule 10",
             "No tracking, behavioural monitoring or targeted ads",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["grievances-duties"],
           plain:
             "Anyone under 18 is a child under the Act. Processing a child's data needs verifiable consent from a parent, and tracking, behavioural monitoring and targeted advertising aimed at children are banned, with a few exemptions such as schools and hospitals.",
+          terms: ["dpdp-child", "verifiable-parental-consent", "consent", "data-principal"],
         },
         {
           slug: "significant-fiduciaries",
