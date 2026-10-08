@@ -158,4 +158,16 @@ export const dpdpAct = {
       "The Indian Computer Emergency Response Team, India's national agency for cyber incidents. Its 2022 directions require many incidents to be reported to it within six hours.",
     module: "breaches",
   },
+  "right-to-access": {
+    term: "Right to access",
+    definition:
+      "A Data Principal's right to a summary of their personal data and its processing, and the identities of every fiduciary and processor it was shared with.",
+    module: "rights",
+  },
+  "right-to-erasure": {
+    term: "Right to correction and erasure",
+    definition:
+      "A Data Principal's right to have personal data corrected, completed, updated or erased. Erasure can be refused only where the data is still needed for the purpose or a law requires keeping it.",
+    module: "rights",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -7243,11 +7243,18 @@ const dpdpAct: Track = {
             "Correction, completion, updating and erasure",
             "Why deletion must reach every copy",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["breaches"],
           plain:
             "People can ask what personal data an organisation holds about them and who it was shared with, and ask for it to be corrected, completed, updated or erased. Engineering has to find every copy to answer honestly.",
+          terms: [
+            "right-to-access",
+            "right-to-erasure",
+            "data-principal",
+            "data-processor",
+            "legal-hold",
+          ],
         },
         {
           slug: "grievances-duties",

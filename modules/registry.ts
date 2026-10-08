@@ -503,4 +503,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "dpdp-act/security-safeguards": () => import("./dpdp-act/security-safeguards"),
   "dpdp-act/processors": () => import("./dpdp-act/processors"),
   "dpdp-act/breaches": () => import("./dpdp-act/breaches"),
+  "dpdp-act/rights": () => import("./dpdp-act/rights"),
 };
