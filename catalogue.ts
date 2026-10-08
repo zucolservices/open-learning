@@ -7008,11 +7008,12 @@ const dpdpAct: Track = {
             "Reach beyond India's borders",
             "Personal use and public data are outside it",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["roles"],
           plain:
             "The Act covers personal data in digital form, including paper records that are later scanned or typed in. It also covers companies abroad that offer goods or services to people in India. Purely personal use and data a person chose to make public are outside it.",
+          terms: ["digital-personal-data", "personal-data", "data-principal"],
         },
         {
           slug: "data-mapping",

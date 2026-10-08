@@ -74,4 +74,10 @@ export const dpdpAct = {
       "A Data Fiduciary the government notifies as significant, based on factors such as the volume and sensitivity of its data and the risks involved. It has extra duties, such as a Data Protection Officer and yearly audits.",
     module: "significant-fiduciaries",
   },
+  "digital-personal-data": {
+    term: "Digital personal data",
+    definition:
+      "Personal data in digital form. The Act covers it, including data first collected on paper and digitised later.",
+    module: "scope",
+  },
 } satisfies Record<string, GlossaryEntry>;

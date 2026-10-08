@@ -493,4 +493,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "app-security/capstone-appsec": () => import("./app-security/capstone-appsec"),
   "dpdp-act/why-dpdp": () => import("./dpdp-act/why-dpdp"),
   "dpdp-act/roles": () => import("./dpdp-act/roles"),
+  "dpdp-act/scope": () => import("./dpdp-act/scope"),
 };
