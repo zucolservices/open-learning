@@ -886,7 +886,7 @@ Security & government area, second track (started 2026-10-08). 22 modules in 7 c
 | 4s. LLM Evaluation         | AI & machine learning, fifth track, 20 modules                                          | Live: all 20 modules (2026-10-05)                                       |
 | 4t. Applied ML             | AI & machine learning, sixth track, 22 modules                                          | Live: all 22 modules (2026-10-06)                                       |
 | 4u. Application Security   | Security & government, first track, 22 modules                                          | Live: all 22 modules (2026-10-07)                                       |
-| 4v. DPDP Act               | Security & government, second track, 22 modules                                         | In progress: 21 of 22 modules live                                      |
+| 4v. DPDP Act               | Security & government, second track, 22 modules                                         | Live: all 22 modules (2026-10-08)                                       |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
