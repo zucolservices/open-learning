@@ -7028,11 +7028,12 @@ const dpdpAct: Track = {
             "A data map: what, where, why, how long",
             "Scanning tools and their limits",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["scope"],
           plain:
             "You can't protect, delete or report on data you don't know you have. A data map lists each kind of personal data, where every copy lives, why it is kept and for how long. It is the first job in any DPDP programme.",
+          terms: ["data-map", "personal-data", "data-processor", "pseudonymisation"],
         },
       ],
     },

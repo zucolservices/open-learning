@@ -80,4 +80,16 @@ export const dpdpAct = {
       "Personal data in digital form. The Act covers it, including data first collected on paper and digitised later.",
     module: "scope",
   },
+  "data-map": {
+    term: "Data map",
+    definition:
+      "An inventory of the personal data an organisation holds: what it is, every system and vendor that holds a copy, why it's kept and for how long.",
+    module: "data-mapping",
+  },
+  pseudonymisation: {
+    term: "Pseudonymisation",
+    definition:
+      "Replacing identifiers with tokens or codes so data can't be linked to a person without extra information. Pseudonymised data is still personal data.",
+    module: "data-mapping",
+  },
 } satisfies Record<string, GlossaryEntry>;

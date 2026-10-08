@@ -1,0 +1,7 @@
+# Sources: Finding personal data in your systems (fact-checked 2026-10-08)
+
+- DPDP Act and Rules: no GDPR-style record of processing. Rule 6(1)(a) masking/virtual tokens, (c) logs and monitoring, (d) backups, (e) keep logs one year, (f) processor contracts; Rule 8(3) keep processing logs at least one year (Seventh Schedule purposes); s.10(2)(c) and Rule 13(1) DPIA and audit for Significant Data Fiduciaries. These Rules start 13 May 2027 (Rule 1(4)).
+- Built-in detectors (official docs, Oct 2026): Amazon Macie (`INDIA_AADHAAR_NUMBER`, `INDIA_PERMANENT_ACCOUNT_NUMBER`, keyword required), Google Cloud Sensitive Data Protection (`INDIA_AADHAAR_INDIVIDUAL`, `INDIA_PAN_INDIVIDUAL`, `INDIA_PASSPORT`, `INDIA_GST_INDIVIDUAL`), Microsoft Purview sensitive information types (Aadhaar, PAN, Voter ID, GST), Presidio (`IN_AADHAAR`, `IN_PAN`, `IN_PASSPORT`, `IN_VOTER`, `IN_GSTIN`, disabled by default; project moved to the community Data Privacy Stack organisation in 2026). No built-in UPI ID detector in any of them.
+- UIDAI Circular No. 14 of 2025 (Aadhaar Data Vault; applies to requesting entities using authentication/e-KYC; hashes not allowed as reference keys); Aadhaar (Sharing of Information) Regulations 2016, reg. 6 (no public display; keep records secure); UIDAI masked Aadhaar (last four digits).
+
+Full notes: scratchpad `dpdp/m04-facts.md`. SabziBox, its systems and the example Aadhaar digits are made up.
