@@ -7444,11 +7444,12 @@ const dpdpAct: Track = {
             "Sector rules that apply alongside",
             "Which rule wins in a conflict",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["privacy-by-design"],
           plain:
             "DPDP is simpler than Europe's GDPR: fewer grounds for processing, no special category of sensitive data, no portability right and fixed penalty caps. In India it sits alongside sector rules from CERT-In, the RBI and others, which still apply.",
+          terms: ["gdpr", "legitimate-use", "cert-in", "data-localisation"],
         },
       ],
     },

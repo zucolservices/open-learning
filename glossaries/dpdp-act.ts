@@ -248,4 +248,10 @@ export const dpdpAct = {
       "Encrypting each person's data with its own key and deleting the key to erase them, which makes every copy, including backups, unreadable.",
     module: "privacy-by-design",
   },
+  gdpr: {
+    term: "GDPR",
+    definition:
+      "The European Union's General Data Protection Regulation (2016, applied from 2018), the best-known data protection law. The DPDP Act shares its ideas but differs in many details.",
+    module: "comparisons",
+  },
 } satisfies Record<string, GlossaryEntry>;
