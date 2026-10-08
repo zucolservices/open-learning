@@ -116,4 +116,10 @@ export const dpdpAct = {
       "A design trick that nudges people into choices they didn't mean to make, such as pre-ticked boxes or a hidden 'no'. India's consumer regulator lists 13 kinds.",
     module: "consent",
   },
+  withdrawal: {
+    term: "Withdrawal of consent",
+    definition:
+      "Taking back consent you gave. Under the DPDP Act it must be as easy as giving it, and the organisation must then stop processing, and make its processors stop, within a reasonable time.",
+    module: "withdrawal",
+  },
 } satisfies Record<string, GlossaryEntry>;

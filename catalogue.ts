@@ -7094,11 +7094,12 @@ const dpdpAct: Track = {
             "Stopping processing everywhere",
             "Consent managers as registered intermediaries",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["consent"],
           plain:
             "A person can withdraw consent at any time, as easily as they gave it. The organisation must then stop processing and make its processors stop too. Consent managers are registered platforms that let people give, manage and withdraw consent in one place.",
+          terms: ["withdrawal", "consent-manager", "consent", "data-processor"],
         },
         {
           slug: "legitimate-uses",
