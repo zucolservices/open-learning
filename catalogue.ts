@@ -6981,11 +6981,19 @@ const dpdpAct: Track = {
             "Data Processor and Consent Manager",
             "Who is responsible for a processor's mistakes",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["why-dpdp"],
           plain:
             "The person the data is about is the Data Principal. The organisation that decides why and how it is used is the Data Fiduciary, and anyone processing it on the fiduciary's behalf is a Data Processor. The fiduciary stays responsible.",
+          terms: [
+            "data-principal",
+            "data-fiduciary",
+            "data-processor",
+            "consent-manager",
+            "significant-data-fiduciary",
+            "data-protection-board",
+          ],
         },
         {
           slug: "scope",

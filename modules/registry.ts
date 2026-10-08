@@ -492,4 +492,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "app-security/detect-respond": () => import("./app-security/detect-respond"),
   "app-security/capstone-appsec": () => import("./app-security/capstone-appsec"),
   "dpdp-act/why-dpdp": () => import("./dpdp-act/why-dpdp"),
+  "dpdp-act/roles": () => import("./dpdp-act/roles"),
 };

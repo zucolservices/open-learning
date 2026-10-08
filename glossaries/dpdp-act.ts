@@ -62,4 +62,16 @@ export const dpdpAct = {
       "The Data Protection Board of India: the body set up under the Act to handle breaches and complaints, and to impose penalties.",
     module: "roles",
   },
+  "consent-manager": {
+    term: "Consent manager",
+    definition:
+      "A company registered with the Data Protection Board that gives people one place to give, manage, review and withdraw consent across organisations, through an interoperable platform.",
+    module: "withdrawal",
+  },
+  "significant-data-fiduciary": {
+    term: "Significant Data Fiduciary",
+    definition:
+      "A Data Fiduciary the government notifies as significant, based on factors such as the volume and sensitivity of its data and the risks involved. It has extra duties, such as a Data Protection Officer and yearly audits.",
+    module: "significant-fiduciaries",
+  },
 } satisfies Record<string, GlossaryEntry>;
