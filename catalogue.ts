@@ -8292,11 +8292,12 @@ const testing: Track = {
             "Quarantine and retries",
             "Why flaky tests destroy trust",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["end-to-end"],
           plain:
             "A flaky test passes sometimes and fails sometimes without any code change. Common causes are timing, test order, shared state and randomness. Left alone, flakiness teaches everyone to ignore red builds.",
+          terms: ["flaky-test"],
         },
         {
           slug: "test-data",
