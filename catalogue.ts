@@ -9355,11 +9355,12 @@ const codeReview: Track = {
             "Why counting comments backfires",
             "Using metrics to ask questions",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["turnaround"],
           plain:
             "Measuring how long changes wait can reveal bottlenecks. Measuring people by comments made or bugs found invites gaming and hurts trust. Use numbers to ask better questions, not to rank anyone.",
+          terms: ["goodharts-law", "dora-metrics", "review-latency"],
         },
       ],
     },
