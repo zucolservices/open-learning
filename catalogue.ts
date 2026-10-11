@@ -8999,11 +8999,12 @@ const codeReview: Track = {
             "One purpose per change",
             "Evidence: tests and screenshots",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["why-review"],
           plain:
             "A pull request is a proposed change plus the information a reviewer needs to judge it. A clear purpose, a good description and evidence that it works make the review fast and useful.",
+          terms: ["pull-request"],
         },
         {
           slug: "review-flow",

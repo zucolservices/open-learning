@@ -113,7 +113,7 @@ export function History() {
               defects, follow-up. Thorough and slow.
             </p>
           </div>
-          <div className="border-accent bg-accent-soft rounded-lg border px-3 py-2 text-xs">
+          <div className="border-good/40 bg-good/10 rounded-lg border px-3 py-2 text-xs">
             <p className="font-semibold">Today · Modern code review</p>
             <p className="text-muted">
               Lightweight, tool-based and asynchronous, on every change. At Google in 2018 the
