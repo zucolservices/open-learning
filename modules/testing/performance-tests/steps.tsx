@@ -293,7 +293,10 @@ export function Kinds() {
             onChange={(v) => set({ kind: v })}
             options={(Object.keys(KINDS) as PerfState["kind"][]).map((id) => [id, KINDS[id].label])}
           />
-          <svg viewBox="0 0 120 44" className="border-line bg-surface mx-auto w-full max-w-md rounded-lg border p-2">
+          <svg
+            viewBox="0 0 120 44"
+            className="border-line bg-surface mx-auto w-full max-w-md rounded-lg border p-2"
+          >
             <motion.path
               key={s.kind}
               d={k.path}

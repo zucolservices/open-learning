@@ -28,7 +28,8 @@ export const KINDS: { id: Kind; label: string; code: string[]; blurb: string }[]
   {
     id: "spy",
     label: "Spy",
-    blurb: "Answers like a stub (approve or decline, as you choose) and records every call, so the test can check them afterwards.",
+    blurb:
+      "Answers like a stub (approve or decline, as you choose) and records every call, so the test can check them afterwards.",
     code: [
       "const payments = { charge: vi.fn(() => ({ ok: true })) };",
       "// later:",
