@@ -194,4 +194,10 @@ export const cleanCodeTrack = {
       "A tool or compiler step that checks values are used consistently with their types, such as TypeScript, mypy or pyright, catching whole classes of mistakes before the code runs.",
     module: "static-analysis",
   },
+  "ai-assistant": {
+    term: "AI coding assistant",
+    definition:
+      "A tool built on a language model that suggests or writes code from a description or from the surrounding code. Its output still needs review like any colleague's.",
+    module: "ai-code",
+  },
 } satisfies Record<string, GlossaryEntry>;

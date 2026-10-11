@@ -8885,18 +8885,19 @@ const cleanCode: Track = {
           summary: "Generated fast, read slowly.",
           minutes: 20,
           signature:
-            "Review three AI-generated functions for correctness, clarity and fit with the codebase before accepting them",
+            "Review four AI-generated suggestions for correctness, clarity and fit with the codebase before accepting them",
           formats: ["branching-scenario", "checkpoint"],
           concepts: [
             "Reviewing generated code",
             "Hidden costs: duplication and churn",
             "Keeping humans in charge of design",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["code-smells"],
           plain:
             "AI assistants can write code quickly, but someone still has to read, understand and own it. The same clean code habits decide whether generated code helps or quietly makes a codebase harder to change.",
+          terms: ["ai-assistant", "duplication"],
         },
         {
           slug: "conventions",
