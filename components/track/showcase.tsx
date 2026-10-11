@@ -52,6 +52,8 @@ import { CodeReviewScene } from "@/components/home/code-review-scene";
 import { CodeReviewTaste } from "@/components/home/code-review-taste";
 import { FrontendScene } from "@/components/home/frontend-scene";
 import { FrontendTaste } from "@/components/home/frontend-taste";
+import { BackendScene } from "@/components/home/backend-scene";
+import { BackendTaste } from "@/components/home/backend-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -276,5 +278,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: FrontendTaste,
     tasteCaption:
       "A taste of module 15: fix six common problems on a slow, jumpy page and watch its Core Web Vitals turn good.",
+  },
+  backend: {
+    Scene: BackendScene,
+    sceneCaption:
+      "From one request to a production service: foundations, building a service, data, identity, work beyond request and response, and running in production. Watch the tour, or click any part.",
+    Taste: BackendTaste,
+    tasteCaption:
+      "A taste of module 10: two customers buy the last chai at the same instant. Pick a strategy and see whether it gets sold twice.",
   },
 };
