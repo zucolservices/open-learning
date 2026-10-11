@@ -116,4 +116,10 @@ export const backendTrack = {
       "A durable list of tasks or messages that producers add to and workers take from, so work survives crashes and can be retried. Examples: SQS, RabbitMQ, Redis-based queues.",
     module: "background-jobs",
   },
+  "transactional-outbox": {
+    term: "Transactional outbox",
+    definition:
+      "Saving an event in an outbox table in the same database transaction as the change it describes, then publishing it separately, so events are never lost or sent for changes that rolled back.",
+    module: "webhooks-events",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -10144,11 +10144,12 @@ const backend: Track = {
             "Signing and verifying",
             "The transactional outbox",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["background-jobs"],
           plain:
             "Webhooks let your service notify other systems when something happens. Sign them, retry them, and record events in the same transaction as the change so none are lost.",
+          terms: ["webhook", "transactional-outbox", "idempotent"],
         },
         {
           slug: "live-updates",

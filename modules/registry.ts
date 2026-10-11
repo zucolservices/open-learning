@@ -637,4 +637,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "backend/sign-in": () => import("./backend/sign-in"),
   "backend/authorization": () => import("./backend/authorization"),
   "backend/background-jobs": () => import("./backend/background-jobs"),
+  "backend/webhooks-events": () => import("./backend/webhooks-events"),
 };
