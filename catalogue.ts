@@ -7896,11 +7896,12 @@ const git: Track = {
             "Submodules and subtrees",
             "Tools that make monorepos work",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["big-repos"],
           plain:
             "Some organisations keep everything in one huge repository; others use many small ones. Submodules let one repository include another at a fixed commit. Each approach trades simplicity for different costs.",
+          terms: ["monorepo", "submodule", "repository"],
         },
         {
           slug: "signing-secrets",

@@ -293,4 +293,15 @@ export const gitTrack = {
       "Large File Storage: an extension that keeps small pointer files in Git and stores large binaries on a separate server.",
     module: "big-repos",
   },
+  monorepo: {
+    term: "Monorepo",
+    definition:
+      "One repository holding many projects, so a change across several of them can be made in a single commit.",
+    module: "monorepos-submodules",
+  },
+  submodule: {
+    term: "Submodule",
+    definition: "Another Git repository included inside yours, pinned at one exact commit.",
+    module: "monorepos-submodules",
+  },
 } satisfies Record<string, GlossaryEntry>;

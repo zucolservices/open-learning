@@ -531,4 +531,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "git/stash-worktrees": () => import("./git/stash-worktrees"),
   "git/bisect-blame": () => import("./git/bisect-blame"),
   "git/big-repos": () => import("./git/big-repos"),
+  "git/monorepos-submodules": () => import("./git/monorepos-submodules"),
 };
