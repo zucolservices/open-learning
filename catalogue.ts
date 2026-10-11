@@ -8980,10 +8980,11 @@ const codeReview: Track = {
             "Defects versus knowledge sharing",
             "What review can't do",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           plain:
             "Code review means a colleague reads a change before it's merged. It catches some bugs, but its biggest benefits are shared understanding, consistent code and people learning from each other.",
+          terms: ["code-review", "pull-request"],
         },
         {
           slug: "anatomy-pr",
