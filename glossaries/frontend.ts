@@ -74,4 +74,22 @@ export const frontendTrack = {
       "The way CSS sizes every element: content, surrounded by padding, then a border, then margin.",
     module: "css-layout",
   },
+  "main-thread": {
+    term: "Main thread",
+    definition:
+      "The single thread where a page runs its JavaScript, handles input and works out style and layout. If it's busy, the page can't respond.",
+    module: "event-loop",
+  },
+  "event-loop": {
+    term: "Event loop",
+    definition:
+      "The browser's scheduler: it runs one task, then all queued microtasks, then paints if a frame is due, then picks the next task.",
+    module: "event-loop",
+  },
+  "long-task": {
+    term: "Long task",
+    definition:
+      "Any piece of work on the main thread that takes longer than 50 milliseconds, long enough to make clicks and typing feel slow.",
+    module: "event-loop",
+  },
 } satisfies Record<string, GlossaryEntry>;

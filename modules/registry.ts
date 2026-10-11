@@ -604,4 +604,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "frontend/how-browsers-work": () => import("./frontend/how-browsers-work"),
   "frontend/semantic-html": () => import("./frontend/semantic-html"),
   "frontend/css-layout": () => import("./frontend/css-layout"),
+  "frontend/event-loop": () => import("./frontend/event-loop"),
 };

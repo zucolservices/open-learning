@@ -9474,11 +9474,12 @@ const frontend: Track = {
             "Queue clicks, timers and network replies and step through the call stack, task queue and rendering to see when the screen can update",
           formats: ["step-through", "checkpoint"],
           concepts: ["The DOM and events", "One main thread", "Tasks, microtasks and rendering"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["how-browsers-work"],
           plain:
             "JavaScript runs on one main thread that also draws the page. Long tasks block clicks and repaints, so knowing how the event loop schedules work explains janky pages.",
+          terms: ["main-thread", "event-loop", "long-task", "dom"],
         },
       ],
     },
