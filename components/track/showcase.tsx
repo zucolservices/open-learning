@@ -48,6 +48,8 @@ import { TestingScene } from "@/components/home/testing-scene";
 import { TestingTaste } from "@/components/home/testing-taste";
 import { CleanCodeScene } from "@/components/home/clean-code-scene";
 import { CleanCodeTaste } from "@/components/home/clean-code-taste";
+import { CodeReviewScene } from "@/components/home/code-review-scene";
+import { CodeReviewTaste } from "@/components/home/code-review-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -256,5 +258,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: CleanCodeTaste,
     tasteCaption:
       "A taste of module 8: flatten a nested function in three behaviour-preserving steps and watch its complexity fall.",
+  },
+  "code-review": {
+    Scene: CodeReviewScene,
+    sceneCaption:
+      "Two minds on every change: why review exists, making changes easy to review, reading and commenting well, fast and fair process, and a healthy culture. Watch the tour, or click any part.",
+    Taste: CodeReviewTaste,
+    tasteCaption:
+      "A taste of module 10: label each review comment as blocking, a suggestion, a question or a nit, and see what the author must change.",
   },
 };
