@@ -10034,11 +10034,12 @@ const backend: Track = {
             "Optimistic and pessimistic locking",
             "Idempotency keys",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["data-access"],
           plain:
             "A transaction groups changes so they all happen or none do. Locks and version checks stop two requests from overwriting each other, and idempotency keys make retries safe.",
+          terms: ["transaction", "idempotency-key", "idempotent"],
         },
         {
           slug: "caching-backend",
