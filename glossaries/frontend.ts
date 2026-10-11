@@ -248,4 +248,16 @@ export const frontendTrack = {
       "Removing code you import but never use from the final bundle. It only works when libraries use ES modules (import and export).",
     module: "shipping-less-js",
   },
+  "responsive-images": {
+    term: "Responsive images",
+    definition:
+      "Offering several sizes of an image (with srcset and sizes) so each device downloads the smallest one that still looks sharp.",
+    module: "images-fonts",
+  },
+  "lazy-loading": {
+    term: "Lazy loading",
+    definition:
+      "Delaying the download of off-screen images or code until they're about to be needed. Never use it for what people see first.",
+    module: "images-fonts",
+  },
 } satisfies Record<string, GlossaryEntry>;

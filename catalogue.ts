@@ -9730,11 +9730,12 @@ const frontend: Track = {
             "Lazy loading and priority",
             "Web fonts without layout shift",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["web-vitals"],
           plain:
             "Images and fonts are usually the largest downloads. Serving the right size and format, loading off-screen images later and preloading what matters makes pages much faster.",
+          terms: ["responsive-images", "lazy-loading", "core-web-vitals"],
         },
       ],
     },
