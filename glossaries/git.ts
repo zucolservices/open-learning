@@ -210,4 +210,16 @@ export const gitTrack = {
       "A switch in the code that turns a feature on or off without a new deploy, so unfinished work can be merged but hidden.",
     module: "branching-strategies",
   },
+  "atomic-commit": {
+    term: "Atomic commit",
+    definition:
+      "A commit that makes exactly one logical change, so it can be reviewed, reverted or cherry-picked on its own.",
+    module: "commit-hygiene",
+  },
+  "conventional-commits": {
+    term: "Conventional Commits",
+    definition:
+      "A commit message format, type(scope): description, that lets tools generate changelogs and choose version numbers.",
+    module: "commit-hygiene",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -7767,11 +7767,12 @@ const git: Track = {
             "Rewrite a messy branch of 'fix' and 'wip' commits into a clean, reviewable series with good messages",
           formats: ["fix-the-problem", "checkpoint"],
           concepts: ["Atomic commits", "Writing a good commit message", "Conventional Commits"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["branching-strategies"],
           plain:
             "Small commits that each do one thing, with messages that say why, make history searchable and reviews easy. Many teams follow a convention so tools can read messages too.",
+          terms: ["atomic-commit", "conventional-commits", "commit", "rebase"],
         },
       ],
     },

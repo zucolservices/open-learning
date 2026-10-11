@@ -525,4 +525,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "git/remotes": () => import("./git/remotes"),
   "git/pull-requests": () => import("./git/pull-requests"),
   "git/branching-strategies": () => import("./git/branching-strategies"),
+  "git/commit-hygiene": () => import("./git/commit-hygiene"),
 };
