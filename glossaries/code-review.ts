@@ -56,4 +56,10 @@ export const codeReviewTrack = {
       "A view of exactly what changed between two versions of code: lines added, removed and left as context. Reviewers read the diff of a pull request.",
     module: "reading-diffs",
   },
+  "review-comment": {
+    term: "Review comment",
+    definition:
+      "A note a reviewer leaves on a pull request, usually attached to a line. Good ones are specific, explain why and suggest a way forward.",
+    module: "giving-feedback",
+  },
 } satisfies Record<string, GlossaryEntry>;

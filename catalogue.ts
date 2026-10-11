@@ -9141,11 +9141,12 @@ const codeReview: Track = {
             "Explain why and suggest",
             "Questions and praise",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["reading-diffs"],
           plain:
             "Useful comments say what the concern is, why it matters and what might fix it, in a tone that keeps people learning. Questions and genuine praise are part of good feedback too.",
+          terms: ["review-comment", "code-review"],
         },
         {
           slug: "severity",
