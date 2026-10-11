@@ -334,8 +334,8 @@ export function HowItsDone() {
       <p>
         In Anthropic&apos;s tests, failed retrievals fell by 35% with contextual embeddings, 49%
         with contextual BM25 as well, and 67% with a <Term id="reranker">reranker</Term> on top.
-        Those are Anthropic&apos;s own figures; one small independent study found it only slightly ahead
-        of <Term id="late-chunking">late chunking</Term>, at much higher cost.
+        Those are Anthropic&apos;s own figures; one small independent study found it only slightly
+        ahead of <Term id="late-chunking">late chunking</Term>, at much higher cost.
       </p>
       <p>
         The cost: one model call per chunk, and each call reads the whole document. With{" "}

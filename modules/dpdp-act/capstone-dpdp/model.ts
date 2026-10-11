@@ -236,8 +236,5 @@ export const CHECKLIST: [string, string[]][] = [
       "Check transfers against sector rules",
     ],
   ],
-  [
-    "Enforce and build",
-    ["Mitigate fast", "Purpose tags, consent ledger, deletion fan-out"],
-  ],
+  ["Enforce and build", ["Mitigate fast", "Purpose tags, consent ledger, deletion fan-out"]],
 ];

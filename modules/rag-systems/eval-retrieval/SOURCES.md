@@ -2,7 +2,7 @@
 
 Full notes: scratchpad `rag/m18-facts.md`.
 
-- Manning, Raghavan & Schütze, *Introduction to Information Retrieval* (2008), ch. 8: precision, recall, MAP, nDCG (2^rel − 1 gain). trec_eval / pytrec_eval / ranx: nDCG with linear gain and log2(i+1) discount; ranx `ndcg_burges` for the exponential gain. Järvelin & Kekäläinen, "Cumulated gain-based evaluation of IR techniques" (ACM TOIS 20(4), 2002).
+- Manning, Raghavan & Schütze, _Introduction to Information Retrieval_ (2008), ch. 8: precision, recall, MAP, nDCG (2^rel − 1 gain). trec_eval / pytrec_eval / ranx: nDCG with linear gain and log2(i+1) discount; ranx `ndcg_burges` for the exponential gain. Järvelin & Kekäläinen, "Cumulated gain-based evaluation of IR techniques" (ACM TOIS 20(4), 2002).
 - Voorhees, TREC-8 Question Answering Track (1999): mean reciprocal rank over 200 questions, 0 if no correct answer in the top 5.
 - ir_measures: Success@k (hit rate) is sometimes mislabelled Recall@k.
 - Voorhees & Buckley, "The effect of topic set size on retrieval experiment error" (SIGIR 2002): error rates "larger than anticipated". Smucker, Allan & Carterette (CIKM 2007): paired randomization, bootstrap or t-test; avoid Wilcoxon and sign tests.

@@ -240,7 +240,7 @@ export function Evaluate() {
       title="Allowed or denied?"
       stage={
         <div className="grid flex-1 content-center gap-3 lg:grid-cols-2">
-          <pre className="border-line bg-surface max-h-80 overflow-auto rounded-lg border p-3 font-mono whitespace-pre-wrap break-all text-[10px] leading-snug">
+          <pre className="border-line bg-surface max-h-80 overflow-auto rounded-lg border p-3 font-mono text-[10px] leading-snug break-all whitespace-pre-wrap">
             {toJson(ANALYST)}
           </pre>
           <div className="flex flex-col gap-2">
@@ -460,7 +460,7 @@ export function CutItDown() {
               options={WRITE_RES}
               onChange={(v) => set({ writeResource: v })}
             />
-            <pre className="border-line bg-surface mt-1 max-h-56 overflow-auto rounded-lg border p-2 font-mono whitespace-pre-wrap break-all text-[10px] leading-snug">
+            <pre className="border-line bg-surface mt-1 max-h-56 overflow-auto rounded-lg border p-2 font-mono text-[10px] leading-snug break-all whitespace-pre-wrap">
               {toJson(policy)}
             </pre>
           </div>

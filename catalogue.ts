@@ -10335,10 +10335,11 @@ const mobile: Track = {
             "Flaky networks and batteries",
             "The operating system is in charge",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           plain:
             "Phones are personal, portable and constrained: small touch screens, patchy networks, limited batteries, and an operating system that can pause or close apps at any moment.",
+          terms: ["mobile-os", "offline-first"],
         },
         {
           slug: "native-vs-cross",

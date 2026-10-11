@@ -645,4 +645,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "backend/logs-health": () => import("./backend/logs-health"),
   "backend/deploying-backend": () => import("./backend/deploying-backend"),
   "backend/capstone-backend": () => import("./backend/capstone-backend"),
+  "mobile/how-mobile-differs": () => import("./mobile/how-mobile-differs"),
 };
