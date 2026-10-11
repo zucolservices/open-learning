@@ -634,4 +634,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "backend/migrations": () => import("./backend/migrations"),
   "backend/transactions-app": () => import("./backend/transactions-app"),
   "backend/caching-backend": () => import("./backend/caching-backend"),
+  "backend/sign-in": () => import("./backend/sign-in"),
 };

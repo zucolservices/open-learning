@@ -10077,11 +10077,12 @@ const backend: Track = {
             "Sessions and tokens",
             "OAuth, OpenID Connect and passkeys",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["validation-errors"],
           plain:
             "Authentication checks who someone is. Store only slow, salted password hashes, keep sessions safe, and prefer passkeys or a trusted identity provider where you can.",
+          terms: ["authentication", "password-hash", "passkey"],
         },
         {
           slug: "authorization",
