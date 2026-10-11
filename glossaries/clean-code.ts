@@ -152,4 +152,16 @@ export const cleanCodeTrack = {
       "A type that says a value may be missing, such as string | undefined, String? or Option<T>, so the compiler makes you handle the empty case.",
     module: "null-safety",
   },
+  "types-as-documentation": {
+    term: "Types as documentation",
+    definition:
+      "Designing types so they describe exactly which values and states are possible. The compiler then checks the description everywhere, unlike a comment.",
+    module: "types-as-docs",
+  },
+  "union-type": {
+    term: "Union type",
+    definition:
+      "A type that is one of several named alternatives, each with its own data, such as an order that is placed, paid, delivered, cancelled or refunded. Also called a sum type or sealed type.",
+    module: "types-as-docs",
+  },
 } satisfies Record<string, GlossaryEntry>;

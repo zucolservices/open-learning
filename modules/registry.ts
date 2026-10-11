@@ -572,4 +572,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "clean-code/boundaries": () => import("./clean-code/boundaries"),
   "clean-code/error-handling": () => import("./clean-code/error-handling"),
   "clean-code/null-safety": () => import("./clean-code/null-safety"),
+  "clean-code/types-as-docs": () => import("./clean-code/types-as-docs"),
 };

@@ -8782,11 +8782,12 @@ const cleanCode: Track = {
             "Unions and enums",
             "Parse, don't validate",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["null-safety"],
           plain:
             "Types can describe what values are allowed, so the compiler checks it everywhere. Designing types so impossible situations can't be expressed removes whole classes of bugs.",
+          terms: ["types-as-documentation", "union-type"],
         },
       ],
     },
