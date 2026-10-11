@@ -10476,11 +10476,12 @@ const mobile: Track = {
             "Use a café app in a lift with no signal, then reconnect and resolve an order changed on two devices",
           formats: ["simulation", "checkpoint"],
           concepts: ["Local first, sync later", "Queuing changes", "Resolving conflicts"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["app-lifecycle"],
           plain:
             "Mobile networks come and go. Offline-first apps keep working from local data, queue changes, and sync them when the connection returns, resolving any conflicts.",
+          terms: ["offline-first", "sync"],
         },
         {
           slug: "mobile-networking",

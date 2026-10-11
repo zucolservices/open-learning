@@ -652,4 +652,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "mobile/navigation-mobile": () => import("./mobile/navigation-mobile"),
   "mobile/touch-gestures": () => import("./mobile/touch-gestures"),
   "mobile/adaptive-layouts": () => import("./mobile/adaptive-layouts"),
+  "mobile/offline-first": () => import("./mobile/offline-first"),
 };

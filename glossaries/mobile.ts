@@ -104,4 +104,10 @@ export const mobileTrack = {
       "The part of the screen where content won't be covered by notches, camera cutouts, rounded corners, system bars or the home indicator. Android calls these boundaries window insets.",
     module: "adaptive-layouts",
   },
+  sync: {
+    term: "Sync",
+    definition:
+      "Bringing copies of the same data on different devices and a server back into agreement, by sending queued changes and fetching others' changes.",
+    module: "offline-first",
+  },
 } satisfies Record<string, GlossaryEntry>;
