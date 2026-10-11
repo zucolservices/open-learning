@@ -9197,11 +9197,12 @@ const codeReview: Track = {
             "A short security checklist",
             "When to call in a specialist",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["reading-diffs"],
           plain:
             "Some problems only show up if a reviewer thinks like an attacker: unchecked input, missing permission checks, secrets in code. A short checklist helps every reviewer spot the common ones.",
+          terms: ["trust-boundary", "authorisation", "secret-scanning", "sast"],
         },
       ],
     },
