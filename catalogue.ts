@@ -7794,11 +7794,12 @@ const git: Track = {
             "Reset's three modes",
             "Which undos are safe after pushing",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["commit-hygiene"],
           plain:
             "Git has several ways to undo: restore a file, unstage it, move a branch back with reset, amend the last commit, or revert. Which one is right depends on whether the work is still local or already shared.",
+          terms: ["reset", "amend", "revert", "index", "working-tree"],
         },
         {
           slug: "reflog",

@@ -526,4 +526,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "git/pull-requests": () => import("./git/pull-requests"),
   "git/branching-strategies": () => import("./git/branching-strategies"),
   "git/commit-hygiene": () => import("./git/commit-hygiene"),
+  "git/undoing": () => import("./git/undoing"),
 };

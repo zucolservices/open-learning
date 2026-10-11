@@ -222,4 +222,16 @@ export const gitTrack = {
       "A commit message format, type(scope): description, that lets tools generate changelogs and choose version numbers.",
     module: "commit-hygiene",
   },
+  reset: {
+    term: "Reset",
+    definition:
+      "Moving the current branch to another commit. --soft keeps the index and files, --mixed (the default) keeps files, --hard resets everything.",
+    module: "undoing",
+  },
+  amend: {
+    term: "Amend",
+    definition:
+      "Replacing the last commit with a corrected one (new message or added changes). It creates a new commit, so only amend unpushed work.",
+    module: "undoing",
+  },
 } satisfies Record<string, GlossaryEntry>;
