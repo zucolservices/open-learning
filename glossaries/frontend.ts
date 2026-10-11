@@ -284,4 +284,16 @@ export const frontendTrack = {
       "A CSS rule that styles a component based on the size of the box it sits in, rather than the size of the whole screen.",
     module: "responsive-design",
   },
+  "design-system": {
+    term: "Design system",
+    definition:
+      "A shared set of design tokens, reusable components and usage guidelines that keeps a product consistent and faster to build.",
+    module: "design-systems",
+  },
+  "design-token": {
+    term: "Design token",
+    definition:
+      "A named design decision, such as color-accent or space-4, used everywhere instead of a raw value so it can be changed in one place.",
+    module: "design-systems",
+  },
 } satisfies Record<string, GlossaryEntry>;

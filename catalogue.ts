@@ -9785,11 +9785,12 @@ const frontend: Track = {
             "Turn a page of one-off styles into tokens and shared components, and compare CSS approaches for the same button",
           formats: ["build-connect", "checkpoint"],
           concepts: ["Design tokens", "Component libraries", "CSS approaches compared"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["components"],
           plain:
             "A design system is a shared set of tokens, components and rules. It keeps products consistent and lets teams build faster, whichever CSS approach they choose.",
+          terms: ["design-system", "design-token", "component"],
         },
         {
           slug: "frontend-security",
