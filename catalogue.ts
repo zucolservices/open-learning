@@ -10164,11 +10164,12 @@ const backend: Track = {
             "Server-sent events",
             "WebSockets and scaling them",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["concurrency"],
           plain:
             "When users need updates the moment they happen, the server can push them over a long-lived connection instead of being asked every few seconds. Each method suits different needs.",
+          terms: ["sse", "websocket"],
         },
         {
           slug: "file-uploads",
