@@ -9549,11 +9549,12 @@ const frontend: Track = {
             "Labels and error messages",
             "Controlled and uncontrolled inputs",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["state"],
           plain:
             "Forms are where users do real work. Native inputs, clear labels and kind, timely error messages make them faster for everyone, and server checks keep them safe.",
+          terms: ["form-validation", "controlled-input", "accessibility-tree"],
         },
       ],
     },

@@ -140,4 +140,16 @@ export const frontendTrack = {
       "Reactive values that remember who read them, so a change updates exactly those places without re-running whole components.",
     module: "reactivity",
   },
+  "form-validation": {
+    term: "Form validation",
+    definition:
+      "Checking what someone entered in a form and explaining any problems. Browser checks are a convenience; the server must always check again.",
+    module: "forms",
+  },
+  "controlled-input": {
+    term: "Controlled input",
+    definition:
+      "A form field whose value comes from the component's state and updates through a change handler, rather than being kept only by the browser.",
+    module: "forms",
+  },
 } satisfies Record<string, GlossaryEntry>;
