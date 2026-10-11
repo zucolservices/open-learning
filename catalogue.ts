@@ -9299,11 +9299,12 @@ const codeReview: Track = {
             "Review tone and power",
             "Reviewing juniors and seniors",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["giving-feedback"],
           plain:
             "People learn and speak up when they don't fear being judged. Review culture, from tone to who reviews whom, decides whether reviews teach or silence.",
+          terms: ["psychological-safety", "review-comment", "code-review"],
         },
         {
           slug: "disagreements",
