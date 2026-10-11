@@ -8640,11 +8640,12 @@ const cleanCode: Track = {
             "Guard clauses and early returns",
             "Working memory limits",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["functions"],
           plain:
             "Every branch and level of nesting adds something a reader must hold in their head. Complexity measures make this visible, and techniques like early returns keep it down.",
+          terms: ["cyclomatic-complexity", "cognitive-complexity", "guard-clause"],
         },
       ],
     },

@@ -68,4 +68,22 @@ export const cleanCodeTrack = {
       "Shared code built on a bad guess about what is common, which then grows flags and special cases for each caller. Often cheaper to undo than to keep patching.",
     module: "duplication",
   },
+  "cyclomatic-complexity": {
+    term: "Cyclomatic complexity",
+    definition:
+      "A count of the independent paths through a function: its decisions plus one. Proposed by Thomas McCabe in 1976; roughly how many tests it needs.",
+    module: "complexity",
+  },
+  "cognitive-complexity": {
+    term: "Cognitive complexity",
+    definition:
+      "A score designed to track how hard code is to understand, charging extra for nesting. Introduced by SonarSource in 2017.",
+    module: "complexity",
+  },
+  "guard-clause": {
+    term: "Guard clause",
+    definition:
+      "An early check at the top of a function that handles a special case and returns, so the main logic isn't nested inside conditions.",
+    module: "complexity",
+  },
 } satisfies Record<string, GlossaryEntry>;
