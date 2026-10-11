@@ -8055,11 +8055,12 @@ const testing: Track = {
             "The test pyramid and its rivals",
             "Speed versus confidence",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["choosing-cases"],
           plain:
             "Tests come in sizes, from tiny checks of one function to full journeys through the whole app. Small tests are fast and precise; big ones give more confidence but are slow and fragile. A good suite mixes them on purpose.",
+          terms: ["unit-test", "integration-test", "end-to-end-test"],
         },
       ],
     },

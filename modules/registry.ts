@@ -538,4 +538,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "testing/why-test": () => import("./testing/why-test"),
   "testing/anatomy": () => import("./testing/anatomy"),
   "testing/choosing-cases": () => import("./testing/choosing-cases"),
+  "testing/test-shapes": () => import("./testing/test-shapes"),
 };

@@ -43,4 +43,22 @@ export const testingTrack = {
       "An input right at the edge between two partitions, like ₹499.99 and ₹500. Off-by-one mistakes show up there, so boundary value analysis tests both sides of each edge.",
     module: "choosing-cases",
   },
+  "unit-test": {
+    term: "Unit test",
+    definition:
+      "A fast test of one small piece of code, such as a function or class, on its own, without databases, networks or other slow parts.",
+    module: "test-shapes",
+  },
+  "integration-test": {
+    term: "Integration test",
+    definition:
+      "A test that checks pieces work together, often your code with a real database, queue or file system.",
+    module: "test-shapes",
+  },
+  "end-to-end-test": {
+    term: "End-to-end test",
+    definition:
+      "A test that drives the whole application the way a user would, usually through a real browser or device. Realistic but slow and fragile.",
+    module: "test-shapes",
+  },
 } satisfies Record<string, GlossaryEntry>;

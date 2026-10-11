@@ -960,7 +960,7 @@ Software development area, second track (started 2026-10-11). 23 modules in 7 ch
 | 4u. Application Security   | Security & government, first track, 22 modules                                          | Live: all 22 modules (2026-10-07)                                       |
 | 4v. DPDP Act               | Security & government, second track, 22 modules                                         | Live: all 22 modules (2026-10-08)                                       |
 | 4w. Git                    | Software development, first track, 22 modules                                           | Live: all 22 modules (2026-10-11)                                       |
-| 4x. Testing                | Software development, second track, 23 modules, 23 modules                              | In progress: 3 of 23 modules live                                       |
+| 4x. Testing                | Software development, second track, 23 modules, 23 modules                              | In progress: 4 of 23 modules live                                       |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
