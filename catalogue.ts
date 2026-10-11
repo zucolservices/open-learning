@@ -9865,10 +9865,11 @@ const backend: Track = {
             "Where backend code runs",
             "What the backend is responsible for",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           plain:
             "A backend is the part of an app that runs on servers: it receives requests, applies business rules, stores data and sends responses. Knowing every hop explains where things go slow or wrong.",
+          terms: ["backend", "load-balancer", "dns"],
         },
         {
           slug: "http-servers",
