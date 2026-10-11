@@ -8719,11 +8719,12 @@ const cleanCode: Track = {
             "Layers and the dependency rule",
             "Functional core, imperative shell",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["composition"],
           plain:
             "Keeping business rules separate from databases, frameworks and vendors means you can change those details later and test the rules on their own.",
+          terms: ["boundary", "ports-and-adapters"],
         },
       ],
     },

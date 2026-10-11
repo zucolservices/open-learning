@@ -116,4 +116,16 @@ export const cleanCodeTrack = {
       "Building an object out of smaller objects that each do one job, and combining them, instead of extending a parent class.",
     module: "composition",
   },
+  boundary: {
+    term: "Boundary",
+    definition:
+      "The line between your business rules and the outside world (databases, frameworks, vendors), crossed through small interfaces your code owns.",
+    module: "boundaries",
+  },
+  "ports-and-adapters": {
+    term: "Ports and adapters",
+    definition:
+      "A design where the core application talks to the world through interfaces it owns (ports), and technology-specific code plugs into them (adapters). Also called hexagonal architecture.",
+    module: "boundaries",
+  },
 } satisfies Record<string, GlossaryEntry>;

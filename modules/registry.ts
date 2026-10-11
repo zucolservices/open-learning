@@ -569,4 +569,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "clean-code/cohesion-coupling": () => import("./clean-code/cohesion-coupling"),
   "clean-code/solid": () => import("./clean-code/solid"),
   "clean-code/composition": () => import("./clean-code/composition"),
+  "clean-code/boundaries": () => import("./clean-code/boundaries"),
 };
