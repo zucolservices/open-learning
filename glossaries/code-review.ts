@@ -20,4 +20,16 @@ export const codeReviewTrack = {
       "A comment on a pull request and the replies to it, usually attached to specific lines. Threads are resolved when the concern is dealt with.",
     module: "responding",
   },
+  approval: {
+    term: "Approval",
+    definition:
+      "A reviewer's formal sign-off that a change can be merged. Teams often require one or more approvals, sometimes from specific code owners.",
+    module: "review-flow",
+  },
+  "merge-queue": {
+    term: "Merge queue",
+    definition:
+      "A queue that tests each approved change on top of the others waiting to merge, so two changes that pass alone can't break the main branch together.",
+    module: "review-flow",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -582,4 +582,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "clean-code/capstone-clean": () => import("./clean-code/capstone-clean"),
   "code-review/why-review": () => import("./code-review/why-review"),
   "code-review/anatomy-pr": () => import("./code-review/anatomy-pr"),
+  "code-review/review-flow": () => import("./code-review/review-flow"),
 };

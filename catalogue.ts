@@ -9019,11 +9019,12 @@ const codeReview: Track = {
             "Required checks and approvals",
             "Where reviews stall",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["anatomy-pr"],
           plain:
             "Most teams follow the same flow: open a change, let automated checks run, get reviews, revise, get approval and merge. Knowing the stages shows where time is lost.",
+          terms: ["approval", "merge-queue", "pull-request"],
         },
         {
           slug: "what-to-look-for",
