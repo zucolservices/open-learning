@@ -9121,11 +9121,12 @@ const codeReview: Track = {
             "Review a pull request in a smart order, description, tests, then the core change, and compare with reading top to bottom",
           formats: ["simulation", "checkpoint"],
           concepts: ["Reading order", "Understanding before judging", "Running it yourself"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["what-to-look-for"],
           plain:
             "A diff is easier to understand in the right order: start with the purpose, look at the tests to see intended behaviour, then read the main change before the details.",
+          terms: ["diff", "pull-request"],
         },
         {
           slug: "giving-feedback",

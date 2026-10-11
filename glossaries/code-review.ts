@@ -50,4 +50,10 @@ export const codeReviewTrack = {
       "The text saved with each commit explaining what changed and why. A short first line summarises it for anyone skimming the history.",
     module: "describing-changes",
   },
+  diff: {
+    term: "Diff",
+    definition:
+      "A view of exactly what changed between two versions of code: lines added, removed and left as context. Reviewers read the diff of a pull request.",
+    module: "reading-diffs",
+  },
 } satisfies Record<string, GlossaryEntry>;
