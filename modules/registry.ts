@@ -616,4 +616,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "frontend/hydration": () => import("./frontend/hydration"),
   "frontend/edge-caching": () => import("./frontend/edge-caching"),
   "frontend/web-vitals": () => import("./frontend/web-vitals"),
+  "frontend/shipping-less-js": () => import("./frontend/shipping-less-js"),
 };

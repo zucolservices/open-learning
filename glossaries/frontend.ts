@@ -230,4 +230,22 @@ export const frontendTrack = {
       "The value that three out of four measurements are at or better than. Core Web Vitals judge a page by its 75th-percentile visit.",
     module: "web-vitals",
   },
+  bundler: {
+    term: "Bundler",
+    definition:
+      "A build tool that combines your code and its libraries into a few optimised files for the browser. Examples: Vite, Turbopack, webpack, Rspack.",
+    module: "shipping-less-js",
+  },
+  "code-splitting": {
+    term: "Code splitting",
+    definition:
+      "Breaking JavaScript into separate files so each page loads only what it needs, fetching the rest later, usually with dynamic import().",
+    module: "shipping-less-js",
+  },
+  "tree-shaking": {
+    term: "Tree shaking",
+    definition:
+      "Removing code you import but never use from the final bundle. It only works when libraries use ES modules (import and export).",
+    module: "shipping-less-js",
+  },
 } satisfies Record<string, GlossaryEntry>;

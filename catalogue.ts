@@ -9710,11 +9710,12 @@ const frontend: Track = {
             "Code splitting and lazy loading",
             "Tree shaking and dependency cost",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["web-vitals"],
           plain:
             "Every kilobyte of JavaScript must be downloaded, parsed and run, which is slow on cheap phones. Bundlers can split code by route and drop unused code, and the best code is code you don't ship.",
+          terms: ["bundler", "code-splitting", "tree-shaking", "main-thread"],
         },
         {
           slug: "images-fonts",
