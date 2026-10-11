@@ -128,4 +128,16 @@ export const cleanCodeTrack = {
       "A design where the core application talks to the world through interfaces it owns (ports), and technology-specific code plugs into them (adapters). Also called hexagonal architecture.",
     module: "boundaries",
   },
+  "error-handling": {
+    term: "Error handling",
+    definition:
+      "How code detects, reports and recovers from things going wrong. Clean error handling keeps failures visible and deals with them where something useful can be done.",
+    module: "error-handling",
+  },
+  "fail-fast": {
+    term: "Fail fast",
+    definition:
+      "Stopping as soon as something is wrong, such as invalid input, so the problem shows up close to its cause instead of causing damage later.",
+    module: "error-handling",
+  },
 } satisfies Record<string, GlossaryEntry>;

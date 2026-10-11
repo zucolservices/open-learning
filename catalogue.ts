@@ -8746,11 +8746,12 @@ const cleanCode: Track = {
             "Never swallow errors",
             "Fail fast and validate at the edge",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["functions"],
           plain:
             "Errors are part of a program's behaviour. Clean code makes them visible: it doesn't hide them, handles them where something useful can be done, and gives messages that help.",
+          terms: ["error-handling", "fail-fast"],
         },
         {
           slug: "null-safety",
