@@ -112,6 +112,7 @@ export interface Track {
     | "canopy"
     | "stone"
     | "redline"
+    | "pixel"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -9394,6 +9395,425 @@ const codeReview: Track = {
   ],
 };
 
+const frontend: Track = {
+  slug: "frontend",
+  title: "Frontend",
+  area: "Software development",
+  category: "software-development",
+  tagline: "The browser, rendering and modern UI frameworks.",
+  description:
+    "How the web gets from a URL to pixels and how modern interfaces are built on top of it: the browser's rendering pipeline, semantic HTML, CSS layout, JavaScript and the event loop, components, state and how frameworks update the screen, forms, fetching data, sharing state, routing, rendering strategies from client-side to static and server rendering, hydration and islands, caching at the edge, Core Web Vitals, shipping less JavaScript, images and fonts, accessibility, responsive design, design systems and frontend security. Framework-neutral: React, Vue, Svelte, Angular, Solid and plain web platform APIs side by side. By the end you can explain why a page is slow, broken or hard to use, and how to fix it.",
+  accent: "pixel",
+  chapters: [
+    {
+      slug: "browser",
+      title: "The browser",
+      summary: "What happens between a URL and a page.",
+      modules: [
+        {
+          slug: "how-browsers-work",
+          title: "How a page appears",
+          summary: "From a URL to pixels.",
+          minutes: 20,
+          signature:
+            "Follow one page load from request to paint and watch the DOM, CSSOM, layout, paint and compositing build the screen",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "The critical rendering path",
+            "DOM and CSSOM",
+            "Layout, paint and compositing",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "A browser turns text files into a picture in stages: it reads the HTML and CSS, works out where everything goes, paints it and layers it together. Knowing the stages explains most performance problems.",
+        },
+        {
+          slug: "semantic-html",
+          title: "HTML that means something",
+          summary: "Structure for people and machines.",
+          minutes: 20,
+          signature:
+            "Rebuild a page made of anonymous boxes with meaningful elements and watch the accessibility tree and search snippet improve",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Semantic elements",
+            "The accessibility tree",
+            "Headings, landmarks and links",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["how-browsers-work"],
+          plain:
+            "HTML elements carry meaning: a button is a button, a heading is a heading. Using the right element gives you keyboard support, screen-reader support and better search results for free.",
+        },
+        {
+          slug: "css-layout",
+          title: "Layout with CSS",
+          summary: "Boxes, flexbox and grid.",
+          minutes: 25,
+          signature:
+            "Arrange a product card and a page layout by changing box-model, flexbox and grid properties and watch each one move",
+          formats: ["sandbox", "checkpoint"],
+          concepts: ["The box model", "Flexbox for one direction", "Grid for two"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["semantic-html"],
+          plain:
+            "Every element is a box. Flexbox lines boxes up in a row or column; grid places them on rows and columns at once. Most layouts need nothing more.",
+        },
+        {
+          slug: "event-loop",
+          title: "JavaScript and the event loop",
+          summary: "Why a busy page freezes.",
+          minutes: 25,
+          signature:
+            "Queue clicks, timers and network replies and step through the call stack, task queue and rendering to see when the screen can update",
+          formats: ["step-through", "checkpoint"],
+          concepts: ["The DOM and events", "One main thread", "Tasks, microtasks and rendering"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["how-browsers-work"],
+          plain:
+            "JavaScript runs on one main thread that also draws the page. Long tasks block clicks and repaints, so knowing how the event loop schedules work explains janky pages.",
+        },
+      ],
+    },
+    {
+      slug: "interfaces",
+      title: "Building interfaces",
+      summary: "Components, state and updates.",
+      modules: [
+        {
+          slug: "components",
+          title: "Thinking in components",
+          summary: "Small pieces, clear inputs.",
+          minutes: 20,
+          signature:
+            "Break a shop page into a tree of components and decide which data each one receives as props",
+          formats: ["build-connect", "checkpoint"],
+          concepts: ["Components and props", "Composition", "One-way data flow"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["semantic-html"],
+          plain:
+            "Modern frontends build pages from components: small reusable pieces that take inputs and return UI. Splitting a page well makes it easier to change and test.",
+        },
+        {
+          slug: "state",
+          title: "State and re-rendering",
+          summary: "The UI as a function of data.",
+          minutes: 20,
+          signature:
+            "Change state in a cart and watch which components re-render, then remove duplicated state that drifts out of sync",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["State versus props", "Derived values", "Declarative UI"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["components"],
+          plain:
+            "State is data that changes over time, like what's in a cart. Frameworks redraw the UI from state, so keeping one source of truth avoids screens that disagree with themselves.",
+        },
+        {
+          slug: "reactivity",
+          title: "How frameworks update the screen",
+          summary: "Virtual DOM, signals and compilers.",
+          minutes: 25,
+          signature:
+            "Update the same counter in a virtual-DOM, a signals and a compiled framework and compare how much work each does",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Virtual DOM diffing", "Fine-grained signals", "Compile-time reactivity"],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["state"],
+          plain:
+            "Frameworks differ in how they find what changed: React compares virtual trees, Solid and others track signals, Svelte compiles updates ahead of time. Each trades simplicity for speed differently.",
+        },
+        {
+          slug: "forms",
+          title: "Forms and validation",
+          summary: "Help people get it right.",
+          minutes: 20,
+          signature:
+            "Fix a sign-up form so it validates helpfully, works with a keyboard and screen reader, and doesn't lose what people typed",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Native inputs and validation",
+            "Labels and error messages",
+            "Controlled and uncontrolled inputs",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["state"],
+          plain:
+            "Forms are where users do real work. Native inputs, clear labels and kind, timely error messages make them faster for everyone, and server checks keep them safe.",
+        },
+      ],
+    },
+    {
+      slug: "data",
+      title: "Data and navigation",
+      summary: "Getting data in and moving around.",
+      modules: [
+        {
+          slug: "data-fetching",
+          title: "Fetching data",
+          summary: "Loading, errors and stale results.",
+          minutes: 25,
+          signature:
+            "Type into a search box with a slow network and fix race conditions, missing loading states and repeated requests",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Loading and error states",
+            "Race conditions and cancelling",
+            "Caching and revalidation",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["state"],
+          plain:
+            "Fetching data means handling the in-between: loading, failure, slow replies arriving out of order. Data libraries cache results and refetch in the background so screens stay fast and correct.",
+        },
+        {
+          slug: "state-management",
+          title: "Sharing state",
+          summary: "Lift it, pass it, or store it.",
+          minutes: 20,
+          signature:
+            "Decide where each piece of state in an app should live, from a component to context, a store, the URL or the server cache",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: ["Lifting state up", "Context and stores", "URL and server state"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["data-fetching"],
+          plain:
+            "Not all state belongs in a global store. Keep it as close as possible to where it's used, put shareable things in the URL, and let a data library own server data.",
+        },
+        {
+          slug: "routing",
+          title: "Routing and navigation",
+          summary: "Pages without full reloads.",
+          minutes: 20,
+          signature:
+            "Navigate a single-page app and compare full reloads with client-side routing, then fix broken back buttons and lost scroll",
+          formats: ["step-through", "checkpoint"],
+          concepts: ["URLs and history", "Client-side routing", "Nested routes and layouts"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["state-management"],
+          plain:
+            "Routing maps URLs to screens. Client-side routing swaps content without reloading, but it must keep the back button, links and scroll position working like the web expects.",
+        },
+      ],
+    },
+    {
+      slug: "rendering",
+      title: "Rendering strategies",
+      summary: "Where and when HTML is made.",
+      modules: [
+        {
+          slug: "rendering-modes",
+          title: "CSR, SSR and static",
+          summary: "Where should the HTML come from?",
+          minutes: 25,
+          signature:
+            "Load the same page rendered in the browser, on the server per request and at build time, and compare what users see and when",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Client-side rendering",
+            "Server-side rendering",
+            "Static generation and revalidation",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["routing"],
+          plain:
+            "HTML can be built in the browser, on a server for each request, or once at build time. Each choice trades first-paint speed, freshness and server cost differently.",
+        },
+        {
+          slug: "hydration",
+          title: "Hydration, islands and server components",
+          summary: "Shipping less to the browser.",
+          minutes: 25,
+          signature:
+            "Watch a server-rendered page become interactive and compare full hydration, islands, resumability and server components",
+          formats: ["step-through", "checkpoint"],
+          concepts: ["Hydration cost", "Islands architecture", "Server components"],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["rendering-modes"],
+          plain:
+            "Server-rendered HTML still needs JavaScript to become interactive. Newer approaches hydrate only the interactive parts, or keep components on the server entirely, to send less code.",
+        },
+        {
+          slug: "edge-caching",
+          title: "Caching and the edge",
+          summary: "Fast pages from nearby servers.",
+          minutes: 20,
+          signature:
+            "Set cache headers for HTML, images and API responses and watch requests hit the browser cache, the CDN or the origin",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["HTTP caching headers", "CDNs and the edge", "Cache invalidation"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["rendering-modes"],
+          plain:
+            "Caches in the browser and in CDNs close to users can serve pages in milliseconds. Cache headers decide what's kept and for how long; getting them wrong shows stale or private data.",
+        },
+      ],
+    },
+    {
+      slug: "performance",
+      title: "Performance",
+      summary: "Fast for real people.",
+      modules: [
+        {
+          slug: "web-vitals",
+          title: "Core Web Vitals",
+          summary: "Measure what users feel.",
+          minutes: 25,
+          signature:
+            "Load a page and watch LCP, INP and CLS change as you fix a slow hero image, a long task and a jumping banner",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: ["LCP, INP and CLS", "Lab versus field data", "Thresholds and percentiles"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["how-browsers-work"],
+          plain:
+            'Core Web Vitals measure loading, responsiveness and visual stability as real users experience them. They turn "it feels slow" into numbers you can improve.',
+        },
+        {
+          slug: "shipping-less-js",
+          title: "Shipping less JavaScript",
+          summary: "Bundles, splitting and tree shaking.",
+          minutes: 20,
+          signature:
+            "Shrink a bloated bundle by code splitting, tree shaking and replacing heavy dependencies, and watch load time drop on a slow phone",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Bundlers",
+            "Code splitting and lazy loading",
+            "Tree shaking and dependency cost",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["web-vitals"],
+          plain:
+            "Every kilobyte of JavaScript must be downloaded, parsed and run, which is slow on cheap phones. Bundlers can split code by route and drop unused code, and the best code is code you don't ship.",
+        },
+        {
+          slug: "images-fonts",
+          title: "Images, fonts and loading",
+          summary: "The heaviest bytes on the page.",
+          minutes: 20,
+          signature:
+            "Fix a page's images and fonts with modern formats, responsive sizes, lazy loading and priority hints",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Responsive images and formats",
+            "Lazy loading and priority",
+            "Web fonts without layout shift",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["web-vitals"],
+          plain:
+            "Images and fonts are usually the largest downloads. Serving the right size and format, loading off-screen images later and preloading what matters makes pages much faster.",
+        },
+      ],
+    },
+    {
+      slug: "quality",
+      title: "Quality for everyone",
+      summary: "Usable, adaptable and safe.",
+      modules: [
+        {
+          slug: "accessibility",
+          title: "Accessibility",
+          summary: "Built for every body.",
+          minutes: 25,
+          signature:
+            "Use a page with only a keyboard and a simulated screen reader, then fix focus, labels, contrast and announcements",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["WCAG and the law", "Keyboard and focus", "Screen readers and ARIA"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["semantic-html"],
+          plain:
+            "Accessible sites work for people using keyboards, screen readers, zoom or voice control. Most of it comes from good HTML; standards like WCAG and laws in many countries make it a requirement.",
+        },
+        {
+          slug: "responsive-design",
+          title: "Responsive design",
+          summary: "One page, every screen.",
+          minutes: 20,
+          signature:
+            "Resize a layout from phone to wide screen and fix it with fluid sizing, media queries and container queries",
+          formats: ["sandbox", "checkpoint"],
+          concepts: ["Mobile first", "Media and container queries", "Fluid type and spacing"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["css-layout"],
+          plain:
+            "Responsive pages adapt to any screen size. Fluid layouts, media queries for the page and container queries for components keep things readable from small phones to big monitors.",
+        },
+        {
+          slug: "design-systems",
+          title: "Design systems and styling",
+          summary: "Consistent by default.",
+          minutes: 20,
+          signature:
+            "Turn a page of one-off styles into tokens and shared components, and compare CSS approaches for the same button",
+          formats: ["build-connect", "checkpoint"],
+          concepts: ["Design tokens", "Component libraries", "CSS approaches compared"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["components"],
+          plain:
+            "A design system is a shared set of tokens, components and rules. It keeps products consistent and lets teams build faster, whichever CSS approach they choose.",
+        },
+        {
+          slug: "frontend-security",
+          title: "Frontend security",
+          summary: "The browser as a battleground.",
+          minutes: 25,
+          signature:
+            "Defend a comment widget and a login page with output encoding, a content security policy and safe cookies, in a rules-based simulation",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: ["Cross-site scripting", "Content Security Policy", "Cookies, CORS and tokens"],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["forms"],
+          plain:
+            "Anything a page shows or runs can be abused if it trusts the wrong input. Escaping output, a content security policy and careful cookie settings block the most common browser attacks.",
+        },
+      ],
+    },
+    {
+      slug: "capstone",
+      title: "Capstone",
+      summary: "Put it all together.",
+      modules: [
+        {
+          slug: "capstone-frontend",
+          title: "Capstone: rescue a slow, broken page",
+          summary: "From complaint to fix.",
+          minutes: 35,
+          signature:
+            "Diagnose a product page that's slow, jumpy and hard to use, fix its rendering, loading, accessibility and security issues, and measure the result",
+          formats: ["branching-scenario", "fix-the-problem"],
+          concepts: ["Diagnosing with evidence", "Prioritising fixes", "Measuring the result"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["web-vitals"],
+          plain:
+            "This capstone brings the track together. You investigate a page users complain about, find the causes with real measurements, fix the most important problems first and prove it's better.",
+        },
+      ],
+    },
+  ],
+};
+
 const playground: Track = {
   slug: "playground",
   title: "Toolkit playground",
@@ -13575,6 +13995,7 @@ export const tracks: Track[] = [
   testing,
   cleanCode,
   codeReview,
+  frontend,
   playground,
 ];
 
@@ -13765,7 +14186,11 @@ export const categories: Category[] = [
       "The everyday craft of building software well, from the browser to the server and the phone.",
     accent: "neutral",
     tracks: [
-      { title: "Frontend", blurb: "The browser, rendering and modern UI frameworks." },
+      {
+        title: "Frontend",
+        slug: "frontend",
+        blurb: "The browser, rendering and modern UI frameworks.",
+      },
       { title: "Backend", blurb: "Services, data access and APIs that last." },
       { title: "Mobile", blurb: "Native and cross-platform apps." },
       { title: "Testing", slug: "testing", blurb: "What to test, at which level, and why." },

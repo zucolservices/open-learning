@@ -1000,6 +1000,42 @@ Software development area, fourth track (started 2026-10-11). 21 modules in 6 ch
 | **6** | **Capstone**                          |                                                              |                                     |
 | 21    | Capstone: review a messy pull request | Review a realistic pull request end to end: read it in order | Branching scenario, Fix the problem |
 
+## Frontend: curriculum
+
+Software development area, fifth track (started 2026-10-11). 22 modules in 7 chapters, about 8.3 hours. Accent: "pixel" violet (`[data-track="pixel"]`). Glossary: `glossaries/frontend.ts`. How the browser turns a URL into pixels and how modern interfaces are built on it: rendering pipeline, HTML, CSS and the event loop; components, state and how frameworks update the screen; data fetching, shared state and routing; rendering strategies, hydration and caching; Core Web Vitals and loading; accessibility, responsive design, design systems and frontend security. Framework-neutral: React, Vue, Svelte, Angular, Solid and plain web platform APIs side by side. Every interactive is an in-browser simulation; security topics are rules-based, with attacks described in words. Sites and organisations in scenarios are made up. Built on one branch (`track/frontend`), one commit per module, merged once at the end. Each module is fact-checked against specs, official docs and browser release notes before it is built.
+
+| #     | Module                                   | Centrepiece                                                  | Key formats                         |
+| ----- | ---------------------------------------- | ------------------------------------------------------------ | ----------------------------------- |
+| **1** | **The browser**                          |                                                              |                                     |
+| 1     | How a page appears                       | Follow one page load from request to paint and watch the DOM | Scroll story                        |
+| 2     | HTML that means something                | Rebuild a page made of anonymous boxes with meaningful eleme | Fix the problem                     |
+| 3     | Layout with CSS                          | Arrange a product card and a page layout by changing box-mod | Sandbox                             |
+| 4     | JavaScript and the event loop            | Queue clicks                                                 | Step through                        |
+| **2** | **Building interfaces**                  |                                                              |                                     |
+| 5     | Thinking in components                   | Break a shop page into a tree of components and decide which | Build connect                       |
+| 6     | State and re-rendering                   | Change state in a cart and watch which components re-render  | Simulation                          |
+| 7     | How frameworks update the screen         | Update the same counter in a virtual-DOM                     | Simulation                          |
+| 8     | Forms and validation                     | Fix a sign-up form so it validates helpfully                 | Fix the problem                     |
+| **3** | **Data and navigation**                  |                                                              |                                     |
+| 9     | Fetching data                            | Type into a search box with a slow network and fix race cond | Fix the problem                     |
+| 10    | Sharing state                            | Decide where each piece of state in an app should live       | Branching scenario                  |
+| 11    | Routing and navigation                   | Navigate a single-page app and compare full reloads with cli | Step through                        |
+| **4** | **Rendering strategies**                 |                                                              |                                     |
+| 12    | CSR, SSR and static                      | Load the same page rendered in the browser                   | Simulation                          |
+| 13    | Hydration, islands and server components | Watch a server-rendered page become interactive and compare  | Step through                        |
+| 14    | Caching and the edge                     | Set cache headers for HTML                                   | Simulation                          |
+| **5** | **Performance**                          |                                                              |                                     |
+| 15    | Core Web Vitals                          | Load a page and watch LCP                                    | Fix the problem                     |
+| 16    | Shipping less JavaScript                 | Shrink a bloated bundle by code splitting                    | Simulation                          |
+| 17    | Images, fonts and loading                | Fix a page's images and fonts with modern formats            | Fix the problem                     |
+| **6** | **Quality for everyone**                 |                                                              |                                     |
+| 18    | Accessibility                            | Use a page with only a keyboard and a simulated screen reade | Simulation                          |
+| 19    | Responsive design                        | Resize a layout from phone to wide screen and fix it with fl | Sandbox                             |
+| 20    | Design systems and styling               | Turn a page of one-off styles into tokens and shared compone | Build connect                       |
+| 21    | Frontend security                        | Defend a comment widget and a login page with output encodin | Branching scenario                  |
+| **7** | **Capstone**                             |                                                              |                                     |
+| 22    | Capstone: rescue a slow, broken page     | Diagnose a product page that's slow                          | Branching scenario, Fix the problem |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -1033,6 +1069,7 @@ Software development area, fourth track (started 2026-10-11). 21 modules in 6 ch
 | 4x. Testing                | Software development, second track, 23 modules                                          | Live: all 23 modules (2026-10-11)                                       |
 | 4y. Clean Code             | Software development, third track, 22 modules                                           | Live: all 22 modules (2026-10-11)                                       |
 | 4z. Code Review            | Software development, fourth track, 21 modules                                          | Live: all 21 modules (2026-10-11)                                       |
+| 4za. Frontend              | Software development, fifth track, 22 modules                                           | In progress: 0 of 22 modules live                                       |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
