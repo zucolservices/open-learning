@@ -152,4 +152,16 @@ export const frontendTrack = {
       "A form field whose value comes from the component's state and updates through a change handler, rather than being kept only by the browser.",
     module: "forms",
   },
+  "race-condition": {
+    term: "Race condition",
+    definition:
+      "A bug where the result depends on which of several overlapping operations finishes first, such as an old network reply arriving after a newer one.",
+    module: "data-fetching",
+  },
+  "server-state": {
+    term: "Server state",
+    definition:
+      "Data that lives on a server and is copied into the page, so it can go stale. Libraries like TanStack Query cache and refresh it.",
+    module: "data-fetching",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -9576,11 +9576,12 @@ const frontend: Track = {
             "Race conditions and cancelling",
             "Caching and revalidation",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["state"],
           plain:
             "Fetching data means handling the in-between: loading, failure, slow replies arriving out of order. Data libraries cache results and refetch in the background so screens stay fast and correct.",
+          terms: ["race-condition", "server-state", "ui-state"],
         },
         {
           slug: "state-management",
