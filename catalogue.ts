@@ -10050,11 +10050,12 @@ const backend: Track = {
             "Add a cache in front of a slow query and handle expiry, invalidation and a stampede when it empties",
           formats: ["simulation", "checkpoint"],
           concepts: ["Cache-aside", "Expiry and invalidation", "Stampedes"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["data-access"],
           plain:
             "A cache keeps recent results in fast memory so you don't recompute them. The hard parts are keeping it fresh and stopping everyone from rebuilding it at the same moment.",
+          terms: ["cache", "cache-stampede"],
         },
       ],
     },

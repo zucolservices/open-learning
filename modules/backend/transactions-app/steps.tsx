@@ -93,9 +93,7 @@ export function Race() {
               >
                 <span className="font-semibold">{r.who}</span>
                 <code className="text-muted ml-2 font-mono text-[10.5px] break-all">{r.sql}</code>
-                <span className="text-subtle block font-mono text-[10px]">
-                  stock {r.stock}
-                </span>
+                <span className="text-subtle block font-mono text-[10px]">stock {r.stock}</span>
                 {r.note && <p className="text-muted mt-0.5 text-[10px]">{r.note}</p>}
               </motion.div>
             ))}

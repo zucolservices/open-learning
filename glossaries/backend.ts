@@ -92,4 +92,10 @@ export const backendTrack = {
       "Changing a live schema in safe steps: add the new structure, move code and data across while both work, then remove the old structure. Also called parallel change.",
     module: "migrations",
   },
+  "cache-stampede": {
+    term: "Cache stampede",
+    definition:
+      "When a popular cache entry expires and many requests all try to rebuild it at once, flooding the database. Also called a thundering herd.",
+    module: "caching-backend",
+  },
 } satisfies Record<string, GlossaryEntry>;
