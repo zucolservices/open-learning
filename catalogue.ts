@@ -8939,11 +8939,12 @@ const cleanCode: Track = {
             "Safe refactoring under tests",
             "Choosing what to improve first",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["refactoring"],
           plain:
             "This capstone brings the track together. You inherit a module everyone avoids; you read it, protect it with tests, find the worst problems and clean them up in small, safe steps.",
+          terms: ["refactoring", "code-smell", "technical-debt"],
         },
       ],
     },

@@ -579,4 +579,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "clean-code/static-analysis": () => import("./clean-code/static-analysis"),
   "clean-code/ai-code": () => import("./clean-code/ai-code"),
   "clean-code/conventions": () => import("./clean-code/conventions"),
+  "clean-code/capstone-clean": () => import("./clean-code/capstone-clean"),
 };
