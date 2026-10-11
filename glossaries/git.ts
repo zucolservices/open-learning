@@ -138,4 +138,16 @@ export const gitTrack = {
       "Pushing a branch whose history was rewritten, replacing the remote's version. --force-with-lease refuses if someone else pushed in the meantime.",
     module: "rebase",
   },
+  "cherry-pick": {
+    term: "Cherry-pick",
+    definition:
+      "Applying the change from one specific commit onto the current branch, as a new commit.",
+    module: "cherry-pick-revert",
+  },
+  revert: {
+    term: "Revert",
+    definition:
+      "Undoing a commit by adding a new commit that makes the opposite change, without rewriting history.",
+    module: "cherry-pick-revert",
+  },
 } satisfies Record<string, GlossaryEntry>;

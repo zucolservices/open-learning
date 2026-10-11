@@ -521,4 +521,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "git/merging": () => import("./git/merging"),
   "git/conflicts": () => import("./git/conflicts"),
   "git/rebase": () => import("./git/rebase"),
+  "git/cherry-pick-revert": () => import("./git/cherry-pick-revert"),
 };

@@ -7684,11 +7684,12 @@ const git: Track = {
             "Reverting with a new commit",
             "Reverting merges",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["rebase"],
           plain:
             "Cherry-pick copies the change from one commit onto your current branch. Revert makes a new commit that undoes an earlier one, which is the safe way to undo something already shared.",
+          terms: ["cherry-pick", "revert", "commit", "branch"],
         },
       ],
     },

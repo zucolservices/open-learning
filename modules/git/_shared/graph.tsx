@@ -34,7 +34,7 @@ export function CommitGraph({
   const xs: Record<string, number> = {};
   all.forEach((c, i) => (xs[c.id] = X0 + i * DX));
   const pos = (id: string) => ({ x: xs[id], y: Y0 + repo.commits[id].lane * DY });
-  const W = X0 * 2 + Math.max(1, all.length - 1) * DX + 60;
+  const W = X0 * 2 + Math.max(1, all.length - 1) * DX + 130;
   const H = height ?? Y0 + lanes * DY + 6;
   const head = headCommit(repo);
   const cur = currentBranch(repo);
