@@ -176,4 +176,10 @@ export const cleanCodeTrack = {
       "Changing the structure of code without changing what it does, in small steps checked by tests, to make it easier to understand and change.",
     module: "refactoring",
   },
+  "technical-debt": {
+    term: "Technical debt",
+    definition:
+      "The future cost of shortcuts in code: changes get slower until the shortcuts are cleaned up. Coined as a metaphor by Ward Cunningham in 1992.",
+    module: "technical-debt",
+  },
 } satisfies Record<string, GlossaryEntry>;

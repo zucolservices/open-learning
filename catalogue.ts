@@ -8845,11 +8845,12 @@ const cleanCode: Track = {
             "Deliberate and accidental debt",
             "Paying it down as you go",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["refactoring"],
           plain:
             "Taking shortcuts can be like borrowing money: faster now, with interest later, as every change gets harder. Teams manage it by choosing debt deliberately and paying it down steadily.",
+          terms: ["technical-debt", "refactoring"],
         },
       ],
     },
