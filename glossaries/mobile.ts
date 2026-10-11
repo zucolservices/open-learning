@@ -14,4 +14,22 @@ export const mobileTrack = {
       "The system software on a phone, such as iOS or Android, which decides which apps run, when they're paused, and when they're closed to save memory or battery.",
     module: "how-mobile-differs",
   },
+  "native-app": {
+    term: "Native app",
+    definition:
+      "An app built with each platform's own languages and tools, such as Swift and SwiftUI on iOS or Kotlin and Jetpack Compose on Android.",
+    module: "native-vs-cross",
+  },
+  "cross-platform": {
+    term: "Cross-platform framework",
+    definition:
+      "A toolkit for building iOS and Android apps from one shared codebase, such as Flutter, React Native, Kotlin Multiplatform or .NET MAUI.",
+    module: "native-vs-cross",
+  },
+  pwa: {
+    term: "Progressive web app (PWA)",
+    definition:
+      "A website that can be installed to the Home Screen, work offline and send notifications, without going through an app store.",
+    module: "native-vs-cross",
+  },
 } satisfies Record<string, GlossaryEntry>;

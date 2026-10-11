@@ -1143,7 +1143,7 @@ Software development area, seventh track (started 2026-10-12). 22 modules in 7 c
 | 4z. Code Review            | Software development, fourth track, 21 modules                                          | Live: all 21 modules (2026-10-11)                                       |
 | 4za. Frontend              | Software development, fifth track, 22 modules                                           | Live: all 22 modules (2026-10-12)                                       |
 | 4zb. Backend               | Software development, sixth track, 22 modules                                           | Live: all 22 modules (2026-10-12)                                       |
-| 4zc. Mobile                | Software development, seventh track, 22 modules                                         | In progress: 1 of 22 modules live                                       |
+| 4zc. Mobile                | Software development, seventh track, 22 modules                                         | In progress: 2 of 22 modules live                                       |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

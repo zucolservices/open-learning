@@ -10354,11 +10354,12 @@ const mobile: Track = {
             "Cross-platform: Flutter, React Native, KMP, MAUI",
             "Progressive web apps",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["how-mobile-differs"],
           plain:
             "You can build separate native apps, share code across platforms with a cross-platform framework, or ship a web app that installs like one. Each trades reach, cost and how native it feels.",
+          terms: ["native-app", "cross-platform", "pwa"],
         },
         {
           slug: "app-lifecycle",
