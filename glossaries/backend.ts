@@ -50,4 +50,16 @@ export const backendTrack = {
       "Code that wraps every request on its way to the handler and every response on the way back, used for logging, authentication, CORS, compression and similar shared concerns.",
     module: "middleware",
   },
+  config: {
+    term: "Configuration",
+    definition:
+      "Settings that change between environments, such as database hosts, ports and log levels, kept outside the code so the same build runs everywhere.",
+    module: "service-config",
+  },
+  secret: {
+    term: "Secret",
+    definition:
+      "A credential such as a password, API key or signing key. It needs access control, auditing and rotation, so it belongs in a secret manager, never in code.",
+    module: "service-config",
+  },
 } satisfies Record<string, GlossaryEntry>;

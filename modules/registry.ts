@@ -629,4 +629,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "backend/project-structure": () => import("./backend/project-structure"),
   "backend/middleware": () => import("./backend/middleware"),
   "backend/validation-errors": () => import("./backend/validation-errors"),
+  "backend/service-config": () => import("./backend/service-config"),
 };

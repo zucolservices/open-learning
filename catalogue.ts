@@ -9975,11 +9975,12 @@ const backend: Track = {
             "Move hard-coded settings and passwords out of the code into environment configuration and a secret manager",
           formats: ["fix-the-problem", "checkpoint"],
           concepts: ["Config in the environment", "Secret managers", "Rotating secrets"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["project-structure"],
           plain:
             "The same code runs in development, testing and production with different settings. Keep configuration outside the code and secrets in a proper secret store, never in the repository.",
+          terms: ["config", "secret"],
         },
       ],
     },
