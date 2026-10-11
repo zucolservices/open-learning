@@ -8399,18 +8399,19 @@ const testing: Track = {
           summary: "Fast feedback on every change.",
           minutes: 20,
           signature:
-            "Cut a 40-minute pipeline to 8 by ordering, parallelising and selecting tests, without losing confidence",
+            "Cut a 40-minute pipeline to under 10 by caching, parallelising, sharding and selecting tests, and see what each costs",
           formats: ["simulation", "checkpoint"],
           concepts: [
             "Running tests on every change",
             "Parallelism, sharding and test selection",
             "Keeping the main branch green",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["test-shapes"],
           plain:
             "Continuous integration runs your tests automatically on every change. The faster that feedback, the more useful it is, so teams split, order and select tests to keep pipelines quick.",
+          terms: ["continuous-integration"],
         },
         {
           slug: "exploratory",

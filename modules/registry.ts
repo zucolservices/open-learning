@@ -554,4 +554,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "testing/property-based": () => import("./testing/property-based"),
   "testing/performance-tests": () => import("./testing/performance-tests"),
   "testing/legacy-code": () => import("./testing/legacy-code"),
+  "testing/tests-in-ci": () => import("./testing/tests-in-ci"),
 };
