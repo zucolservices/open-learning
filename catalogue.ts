@@ -8379,11 +8379,12 @@ const testing: Track = {
             "Seams for breaking dependencies",
             "Approval and golden-master tests",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["test-doubles"],
           plain:
             "Legacy code is code without tests. Before changing it, write tests that record what it does today, even the odd parts, so any change in behaviour shows up straight away.",
+          terms: ["characterisation-test", "seam"],
         },
       ],
     },

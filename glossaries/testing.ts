@@ -157,4 +157,16 @@ export const testingTrack = {
       "The value below which a given share of measurements fall. A p95 latency of 200 ms means 95% of requests took 200 ms or less.",
     module: "performance-tests",
   },
+  "characterisation-test": {
+    term: "Characterisation test",
+    definition:
+      "A test that records what existing code does today, quirks included, so you can change it safely. Michael Feathers coined the term.",
+    module: "legacy-code",
+  },
+  seam: {
+    term: "Seam",
+    definition:
+      "A place where you can change what code does for a test without editing the code around it, such as passing the clock in as a parameter.",
+    module: "legacy-code",
+  },
 } satisfies Record<string, GlossaryEntry>;
