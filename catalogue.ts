@@ -9458,11 +9458,12 @@ const frontend: Track = {
             "Arrange a product card and a page layout by changing box-model, flexbox and grid properties and watch each one move",
           formats: ["sandbox", "checkpoint"],
           concepts: ["The box model", "Flexbox for one direction", "Grid for two"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["semantic-html"],
           plain:
             "Every element is a box. Flexbox lines boxes up in a row or column; grid places them on rows and columns at once. Most layouts need nothing more.",
+          terms: ["flexbox", "css-grid", "box-model", "layout"],
         },
         {
           slug: "event-loop",

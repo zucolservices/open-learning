@@ -56,4 +56,22 @@ export const frontendTrack = {
       "A region of a page, such as banner, navigation, main or contentinfo, that screen-reader users can jump between.",
     module: "semantic-html",
   },
+  flexbox: {
+    term: "Flexbox",
+    definition:
+      "A CSS layout mode that lines items up in one direction, a row or a column, and controls how they are spaced and aligned.",
+    module: "css-layout",
+  },
+  "css-grid": {
+    term: "CSS grid",
+    definition:
+      "A CSS layout mode that places items on rows and columns at the same time, defined on the container.",
+    module: "css-layout",
+  },
+  "box-model": {
+    term: "Box model",
+    definition:
+      "The way CSS sizes every element: content, surrounded by padding, then a border, then margin.",
+    module: "css-layout",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -603,4 +603,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "code-review/capstone-review": () => import("./code-review/capstone-review"),
   "frontend/how-browsers-work": () => import("./frontend/how-browsers-work"),
   "frontend/semantic-html": () => import("./frontend/semantic-html"),
+  "frontend/css-layout": () => import("./frontend/css-layout"),
 };
