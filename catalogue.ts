@@ -9801,11 +9801,12 @@ const frontend: Track = {
             "Defend a comment widget and a login page with output encoding, a content security policy and safe cookies, in a rules-based simulation",
           formats: ["branching-scenario", "checkpoint"],
           concepts: ["Cross-site scripting", "Content Security Policy", "Cookies, CORS and tokens"],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["forms"],
           plain:
             "Anything a page shows or runs can be abused if it trusts the wrong input. Escaping output, a content security policy and careful cookie settings block the most common browser attacks.",
+          terms: ["xss", "csp", "form-validation"],
         },
       ],
     },

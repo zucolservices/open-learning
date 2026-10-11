@@ -621,4 +621,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "frontend/accessibility": () => import("./frontend/accessibility"),
   "frontend/responsive-design": () => import("./frontend/responsive-design"),
   "frontend/design-systems": () => import("./frontend/design-systems"),
+  "frontend/frontend-security": () => import("./frontend/frontend-security"),
 };
