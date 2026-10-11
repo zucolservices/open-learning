@@ -624,4 +624,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "frontend/frontend-security": () => import("./frontend/frontend-security"),
   "frontend/capstone-frontend": () => import("./frontend/capstone-frontend"),
   "backend/what-a-backend-does": () => import("./backend/what-a-backend-does"),
+  "backend/http-servers": () => import("./backend/http-servers"),
 };

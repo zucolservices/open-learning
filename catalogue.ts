@@ -9880,11 +9880,12 @@ const backend: Track = {
             "Build responses for a handful of requests and choose the right status codes, headers and bodies",
           formats: ["build-connect", "checkpoint"],
           concepts: ["Methods, paths and handlers", "Status codes and headers", "Statelessness"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["what-a-backend-does"],
           plain:
             "A web server reads an HTTP request, picks the code that should handle it, and writes back a response with a status code, headers and a body. Each request stands alone.",
+          terms: ["handler", "status-code", "idempotent"],
         },
         {
           slug: "concurrency",
