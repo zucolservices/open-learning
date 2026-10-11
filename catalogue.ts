@@ -8019,11 +8019,12 @@ const testing: Track = {
             "Assertions and failure messages",
             "Test runners and frameworks",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["why-test"],
           plain:
             "Most tests follow the same three steps: set up the situation (arrange), do the thing (act), and check the result (assert). A test runner finds your tests, runs them and reports which passed and failed.",
+          terms: ["arrange-act-assert", "assertion", "test-runner"],
         },
         {
           slug: "choosing-cases",

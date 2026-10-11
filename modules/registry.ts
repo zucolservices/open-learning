@@ -536,4 +536,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "git/hooks": () => import("./git/hooks"),
   "git/capstone-git": () => import("./git/capstone-git"),
   "testing/why-test": () => import("./testing/why-test"),
+  "testing/anatomy": () => import("./testing/anatomy"),
 };
