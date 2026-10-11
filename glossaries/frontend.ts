@@ -170,4 +170,16 @@ export const frontendTrack = {
       "A place outside components that holds shared client state, letting any component read or update just the parts it needs. Examples: Zustand, Redux Toolkit, Pinia.",
     module: "state-management",
   },
+  routing: {
+    term: "Routing",
+    definition:
+      "Mapping URLs to screens. Client-side routers swap screens without a full reload while keeping URLs, history and the Back button working.",
+    module: "routing",
+  },
+  spa: {
+    term: "Single-page app",
+    definition:
+      "A site that loads once and then swaps screens with JavaScript instead of requesting a new page from the server for each link.",
+    module: "routing",
+  },
 } satisfies Record<string, GlossaryEntry>;

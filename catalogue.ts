@@ -9608,11 +9608,12 @@ const frontend: Track = {
             "Navigate a single-page app and compare full reloads with client-side routing, then fix broken back buttons and lost scroll",
           formats: ["step-through", "checkpoint"],
           concepts: ["URLs and history", "Client-side routing", "Nested routes and layouts"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["state-management"],
           plain:
             "Routing maps URLs to screens. Client-side routing swaps content without reloading, but it must keep the back button, links and scroll position working like the web expects.",
+          terms: ["routing", "spa", "baseline-web"],
         },
       ],
     },
