@@ -9062,11 +9062,12 @@ const codeReview: Track = {
             "Split one large change into a stack of small ones and watch review quality and waiting time change",
           formats: ["simulation", "checkpoint"],
           concepts: ["Why size matters", "Splitting a change", "Stacked changes"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["anatomy-pr"],
           plain:
             "Reviewers find more problems in small changes and approve them faster. Splitting work into small, self-contained steps is the single biggest thing an author can do.",
+          terms: ["stacked-changes", "pull-request"],
         },
         {
           slug: "describing-changes",

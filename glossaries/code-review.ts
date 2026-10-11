@@ -38,4 +38,10 @@ export const codeReviewTrack = {
       "How easy a codebase is to understand, change and trust. Google's guide says to approve a change once it definitely improves code health, even if it isn't perfect.",
     module: "what-to-look-for",
   },
+  "stacked-changes": {
+    term: "Stacked changes",
+    definition:
+      "A chain of small pull requests where each builds on the one before, so a big piece of work can be reviewed one small step at a time.",
+    module: "small-changes",
+  },
 } satisfies Record<string, GlossaryEntry>;
