@@ -513,4 +513,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "dpdp-act/privacy-by-design": () => import("./dpdp-act/privacy-by-design"),
   "dpdp-act/comparisons": () => import("./dpdp-act/comparisons"),
   "dpdp-act/capstone-dpdp": () => import("./dpdp-act/capstone-dpdp"),
+  "git/why-git": () => import("./git/why-git"),
 };

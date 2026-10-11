@@ -7518,10 +7518,11 @@ const git: Track = {
             "Centralised vs distributed",
             "Where Git came from",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           plain:
             "Version control records every change to a set of files, who made it and why, so you can go back, compare and work in parallel without overwriting each other. Git is the distributed version control system almost every team now uses.",
+          terms: ["version-control", "git", "repository", "commit"],
         },
         {
           slug: "snapshots",
