@@ -515,4 +515,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "dpdp-act/capstone-dpdp": () => import("./dpdp-act/capstone-dpdp"),
   "git/why-git": () => import("./git/why-git"),
   "git/snapshots": () => import("./git/snapshots"),
+  "git/three-areas": () => import("./git/three-areas"),
 };

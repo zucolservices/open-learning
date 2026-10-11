@@ -7557,11 +7557,12 @@ const git: Track = {
             "Staging part of a change",
             "Reading git status",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["snapshots"],
           plain:
             "You edit files in the working tree, choose what goes into the next commit by staging it in the index, and commit to save a snapshot in the repository. Seeing these three places makes most Git commands obvious.",
+          terms: ["working-tree", "index", "staging", "hunk", "commit"],
         },
         {
           slug: "commits-history",

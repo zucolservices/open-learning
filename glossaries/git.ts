@@ -49,4 +49,27 @@ export const gitTrack = {
       "The Git object that stands for a folder: a list of names, each pointing to a blob or another tree.",
     module: "snapshots",
   },
+  "working-tree": {
+    term: "Working tree",
+    definition:
+      "The ordinary files of a project that you see and edit, as opposed to the history stored in .git.",
+    module: "three-areas",
+  },
+  index: {
+    term: "Index (staging area)",
+    definition:
+      "Git's list of exactly what will go into the next commit. git add puts changes into it.",
+    module: "three-areas",
+  },
+  staging: {
+    term: "Staging",
+    definition: "Choosing which changes go into the next commit by adding them to the index.",
+    module: "three-areas",
+  },
+  hunk: {
+    term: "Hunk",
+    definition:
+      "One block of changed lines in a file. git add -p lets you stage changes hunk by hunk.",
+    module: "three-areas",
+  },
 } satisfies Record<string, GlossaryEntry>;
