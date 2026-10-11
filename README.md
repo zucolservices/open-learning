@@ -6,7 +6,7 @@
 
 ![The OpenLearning home page](docs/images/home.png)
 
-- **22 tracks, 489 modules, over 200 hours** of hands-on learning, from data lakehouses to India's data protection law.
+- **23 tracks, 511 modules, over 200 hours** of hands-on learning, from data lakehouses to India's data protection law.
 - **Starts from zero.** Every module opens with an everyday story before the mechanics, and every piece of jargon links to a plain-English glossary of 1,500+ terms.
 - **The format fits the idea.** 3D models, live simulations, step-throughs, build-and-connect canvases, broken systems to diagnose, and real SQL running in the browser.
 - **No scores, no exams.** Checkpoints explain the reasoning behind every answer, and you can always try again.
@@ -39,8 +39,9 @@
 | Security & government | [Application Security](https://openlearning.zucol.in/tracks/app-security)       | The common attacks, and the habits that stop them.                 |      22 |
 |                       | [DPDP Act](https://openlearning.zucol.in/tracks/dpdp-act)                       | India's data protection law, for the people who build the systems. |      22 |
 | Delivery management   | [Agile & Scrum](https://openlearning.zucol.in/tracks/agile-scrum)               | The ceremonies, and the thinking behind them.                      |      23 |
+| Software development  | [Git](https://openlearning.zucol.in/tracks/git)                                 | Commits, branches and history, understood from the inside.         |      22 |
 
-More tracks are planned, including Building for Government, Testing, Git, Frontend, Accessibility and UX. The full roadmap is in [docs/PLAN.md](docs/PLAN.md).
+More tracks are planned, including Building for Government, Testing, Frontend, Accessibility and UX. The full roadmap is in [docs/PLAN.md](docs/PLAN.md).
 
 ## Inside a module
 

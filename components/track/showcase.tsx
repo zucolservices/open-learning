@@ -42,6 +42,8 @@ import { AppSecurityScene } from "@/components/home/app-security-scene";
 import { AppSecurityTaste } from "@/components/home/app-security-taste";
 import { DpdpActScene } from "@/components/home/dpdp-act-scene";
 import { DpdpActTaste } from "@/components/home/dpdp-act-taste";
+import { GitScene } from "@/components/home/git-scene";
+import { GitTaste } from "@/components/home/git-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -226,5 +228,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: DpdpActTaste,
     tasteCaption:
       "A taste of module 6: a sign-up screen with every bad habit switched on. Click each red pill and watch consent become valid.",
+  },
+  git: {
+    Scene: GitScene,
+    sceneCaption:
+      "A change's journey through Git: the three areas, commits, branches, merging, remotes and pull requests, with undo and recovery always within reach. Watch the tour, or click any part.",
+    Taste: GitTaste,
+    tasteCaption:
+      "A taste of modules 6 and 8: merge or rebase a feature branch and watch the commit graph change.",
   },
 };

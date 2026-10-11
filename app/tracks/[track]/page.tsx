@@ -112,7 +112,7 @@ export default async function TrackPage(props: PageProps<"/tracks/[track]">) {
             </h2>
             <div
               className={cn(
-                "mt-6 grid gap-5",
+                "mt-6 grid grid-cols-1 gap-5",
                 show.Taste &&
                   show.Taste !== show.Scene &&
                   "lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]",

@@ -38,6 +38,8 @@ import { appSecurityArtA } from "./art/app-security-a";
 import { appSecurityArtB } from "./art/app-security-b";
 import { dpdpActArtA } from "./art/dpdp-act-a";
 import { dpdpActArtB } from "./art/dpdp-act-b";
+import { gitArtA } from "./art/git-a";
+import { gitArtB } from "./art/git-b";
 
 /**
  * One small illustration per module (viewBox 160 × 100), drawn with the
@@ -1095,6 +1097,8 @@ const all: ArtMap = {
   ...appSecurityArtB,
   ...dpdpActArtA,
   ...dpdpActArtB,
+  ...gitArtA,
+  ...gitArtB,
 };
 
 /** Art is keyed by slug; a "track/slug" key wins, for slugs used in more than one track. */

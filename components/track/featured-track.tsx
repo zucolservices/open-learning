@@ -12,7 +12,7 @@ export function FeaturedTrack({ track }: { track: Track }) {
   return (
     <article
       data-track={track.accent}
-      className="border-line bg-surface shadow-card relative grid overflow-hidden rounded-[var(--radius-card)] border lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]"
+      className="border-line bg-surface shadow-card relative grid grid-cols-1 overflow-hidden rounded-[var(--radius-card)] border lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]"
     >
       <div className="page-glow pointer-events-none absolute inset-0 opacity-60" />
       <div className="relative p-6 sm:p-8">

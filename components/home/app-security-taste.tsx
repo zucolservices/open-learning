@@ -2,12 +2,7 @@
 
 import { useState } from "react";
 import { cn } from "@/lib/cn";
-import {
-  INPUTS,
-  run,
-  type InputKind,
-  type Mode,
-} from "@/modules/app-security/sql-injection/model";
+import { INPUTS, run, type InputKind, type Mode } from "@/modules/app-security/sql-injection/model";
 
 /** A taste of module 5: watch a login query turn user input into code, then fix it with parameters. */
 export function AppSecurityTaste() {
