@@ -152,4 +152,10 @@ export const backendTrack = {
       "Stopping a service cleanly: stop accepting new requests, finish the ones in progress, then exit before the platform forces it to stop.",
     module: "logs-health",
   },
+  serverless: {
+    term: "Serverless functions",
+    definition:
+      "Code the cloud provider runs on demand for each event or request, scaling to zero when idle, such as AWS Lambda, Google Cloud Run functions or Azure Functions.",
+    module: "deploying-backend",
+  },
 } satisfies Record<string, GlossaryEntry>;

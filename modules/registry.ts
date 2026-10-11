@@ -643,4 +643,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "backend/rate-limiting": () => import("./backend/rate-limiting"),
   "backend/resilience": () => import("./backend/resilience"),
   "backend/logs-health": () => import("./backend/logs-health"),
+  "backend/deploying-backend": () => import("./backend/deploying-backend"),
 };

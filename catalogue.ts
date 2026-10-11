@@ -10271,11 +10271,12 @@ const backend: Track = {
             "VMs, containers and serverless",
             "Zero-downtime rollouts",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["service-config"],
           plain:
             "A service is packaged with everything it needs, usually as a container image, and run on servers, a container platform or serverless functions. Rolling updates replace it without dropping users.",
+          terms: ["container-image", "serverless", "canary-release"],
         },
       ],
     },
