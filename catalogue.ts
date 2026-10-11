@@ -9635,11 +9635,12 @@ const frontend: Track = {
             "Server-side rendering",
             "Static generation and revalidation",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["routing"],
           plain:
             "HTML can be built in the browser, on a server for each request, or once at build time. Each choice trades first-paint speed, freshness and server cost differently.",
+          terms: ["csr", "ssr", "ssg", "isr"],
         },
         {
           slug: "hydration",

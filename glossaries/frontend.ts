@@ -182,4 +182,28 @@ export const frontendTrack = {
       "A site that loads once and then swaps screens with JavaScript instead of requesting a new page from the server for each link.",
     module: "routing",
   },
+  csr: {
+    term: "Client-side rendering (CSR)",
+    definition:
+      "Sending a mostly empty HTML page and letting JavaScript in the browser build the content and fetch data.",
+    module: "rendering-modes",
+  },
+  ssr: {
+    term: "Server-side rendering (SSR)",
+    definition:
+      "Building a page's HTML on the server for each request, so content arrives ready to display.",
+    module: "rendering-modes",
+  },
+  ssg: {
+    term: "Static site generation (SSG)",
+    definition:
+      "Building pages' HTML once at build time and serving the same files to everyone, usually from a CDN.",
+    module: "rendering-modes",
+  },
+  isr: {
+    term: "Incremental static regeneration (ISR)",
+    definition:
+      "Static pages that are rebuilt in the background after a set time, serving the older copy until the new one is ready.",
+    module: "rendering-modes",
+  },
 } satisfies Record<string, GlossaryEntry>;

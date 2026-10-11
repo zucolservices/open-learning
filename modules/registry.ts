@@ -612,4 +612,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "frontend/data-fetching": () => import("./frontend/data-fetching"),
   "frontend/state-management": () => import("./frontend/state-management"),
   "frontend/routing": () => import("./frontend/routing"),
+  "frontend/rendering-modes": () => import("./frontend/rendering-modes"),
 };
