@@ -104,4 +104,16 @@ export const backendTrack = {
       "Deciding what a signed-in user may do, and to which specific records. Checked on the server for every request, denying anything not explicitly allowed.",
     module: "authorization",
   },
+  "background-job": {
+    term: "Background job",
+    definition:
+      "Work taken off the request path and run later by a worker process, such as sending email or resizing images, usually with retries.",
+    module: "background-jobs",
+  },
+  "message-queue": {
+    term: "Message queue",
+    definition:
+      "A durable list of tasks or messages that producers add to and workers take from, so work survives crashes and can be retried. Examples: SQS, RabbitMQ, Redis-based queues.",
+    module: "background-jobs",
+  },
 } satisfies Record<string, GlossaryEntry>;

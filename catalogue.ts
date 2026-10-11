@@ -10124,11 +10124,12 @@ const backend: Track = {
             "Retries and backoff",
             "Idempotent jobs and dead letters",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["transactions-app"],
           plain:
             "Slow or unreliable work like sending email shouldn't make users wait. Put it on a queue for background workers, retry failures with backoff, and make jobs safe to run twice.",
+          terms: ["background-job", "message-queue", "idempotent"],
         },
         {
           slug: "webhooks-events",
