@@ -122,4 +122,10 @@ export const backendTrack = {
       "Saving an event in an outbox table in the same database transaction as the change it describes, then publishing it separately, so events are never lost or sent for changes that rolled back.",
     module: "webhooks-events",
   },
+  "presigned-url": {
+    term: "Pre-signed URL",
+    definition:
+      "A time-limited link, signed by your server, that lets a client upload or download one object in cloud storage directly, without your credentials.",
+    module: "file-uploads",
+  },
 } satisfies Record<string, GlossaryEntry>;

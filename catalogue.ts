@@ -10184,11 +10184,12 @@ const backend: Track = {
             "Object storage and pre-signed URLs",
             "Limits and file checks",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["validation-errors"],
           plain:
             "Files are big and untrusted. Stream them rather than loading them into memory, store them in object storage, and check size and type before trusting them.",
+          terms: ["object-storage", "presigned-url", "input-validation"],
         },
       ],
     },

@@ -639,4 +639,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "backend/background-jobs": () => import("./backend/background-jobs"),
   "backend/webhooks-events": () => import("./backend/webhooks-events"),
   "backend/live-updates": () => import("./backend/live-updates"),
+  "backend/file-uploads": () => import("./backend/file-uploads"),
 };
