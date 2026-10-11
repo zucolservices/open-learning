@@ -9335,11 +9335,12 @@ const codeReview: Track = {
             "Choose a review style for five different changes, from pairing to merging and reviewing after, and see the trade-offs",
           formats: ["branching-scenario", "checkpoint"],
           concepts: ["Pair and mob programming", "Ship, show, ask", "Trunk-based teams and review"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["turnaround"],
           plain:
             "Waiting for a pull request review isn't the only option. Pairing reviews as you write, and some teams merge small safe changes first and review after. The goal is the same: two minds on every change.",
+          terms: ["ship-show-ask", "pair-programming", "trunk-based-development"],
         },
         {
           slug: "review-metrics",

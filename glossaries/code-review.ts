@@ -98,4 +98,10 @@ export const codeReviewTrack = {
       "Tools that use large language models to read a pull request and leave review comments, and sometimes suggested fixes. Fast, but they can lack context and be confidently wrong.",
     module: "ai-review",
   },
+  "ship-show-ask": {
+    term: "Ship / Show / Ask",
+    definition:
+      "A way of choosing review per change: Ship merges with no review, Show merges and asks for review afterwards, Ask waits for review before merging.",
+    module: "alternatives",
+  },
 } satisfies Record<string, GlossaryEntry>;

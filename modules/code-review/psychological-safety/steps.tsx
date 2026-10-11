@@ -80,8 +80,8 @@ export function Habits() {
     >
       <p>
         Three people will look at the next pull request. Each noticed something. Whether they say it
-        depends on the team&apos;s <Term id="psychological-safety">psychological safety</Term>, and that
-        comes from habits.
+        depends on the team&apos;s <Term id="psychological-safety">psychological safety</Term>, and
+        that comes from habits.
       </p>
       <p>
         Switch habits on and see who speaks. It&apos;s a simplification, but a familiar pattern: the
