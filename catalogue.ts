@@ -9382,11 +9382,12 @@ const codeReview: Track = {
             "Balancing thoroughness and speed",
             "Leaving the author better off",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["severity"],
           plain:
             "This capstone brings the track together. You review a messy change from start to finish, write useful comments, handle the author's responses, and decide what must change before it merges.",
+          terms: ["code-review", "review-comment", "blocking-comment", "nit", "approval"],
         },
       ],
     },
