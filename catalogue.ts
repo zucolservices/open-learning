@@ -8205,11 +8205,12 @@ const testing: Track = {
             "Test a sign-up form by role and label instead of CSS classes, then catch a layout break with a visual snapshot",
           formats: ["simulation", "checkpoint"],
           concepts: ["Component tests", "Querying by role and label", "Visual regression testing"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["unit-tests"],
           plain:
             "UI tests check that screens show the right things and respond to clicks and typing. The best ones find elements the way a user would, by their label or role, so they survive redesigns and also nudge you toward accessible markup.",
+          terms: ["accessibility", "visual-regression"],
         },
         {
           slug: "end-to-end",

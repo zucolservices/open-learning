@@ -97,4 +97,16 @@ export const testingTrack = {
       "A test that checks two services still agree on how they talk. In consumer-driven contracts, the consumer records what it needs from an API and the provider verifies every change against it.",
     module: "contract-tests",
   },
+  "visual-regression": {
+    term: "Visual regression test",
+    definition:
+      "A test that compares a screenshot of the page with an approved one and flags any difference for a person to judge.",
+    module: "ui-tests",
+  },
+  accessibility: {
+    term: "Accessibility",
+    definition:
+      "Making software usable by everyone, including people who use screen readers, keyboards only, or magnification. Clear labels and correct roles are the basics.",
+    module: "ui-tests",
+  },
 } satisfies Record<string, GlossaryEntry>;
