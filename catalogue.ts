@@ -9082,11 +9082,12 @@ const codeReview: Track = {
             "Self-review before asking",
             "Linking issues and decisions",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["small-changes"],
           plain:
             "The diff shows what changed; only the author knows why. A short description of the problem, the approach and how to check it saves reviewers time and prevents misunderstandings.",
+          terms: ["commit-message", "pull-request"],
         },
         {
           slug: "responding",

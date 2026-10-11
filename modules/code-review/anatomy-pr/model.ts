@@ -45,7 +45,7 @@ export const FIXES: {
     label: "Add a before/after screenshot of the receipt",
     question: "What will customers see?",
     before: "",
-    after: "[screenshot: receipt before ₹119.70 → after ₹113.40]",
+    after: "[screenshot: receipt before ₹114.00 → after ₹113.40]",
   },
 ];
 

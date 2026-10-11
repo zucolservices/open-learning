@@ -44,4 +44,10 @@ export const codeReviewTrack = {
       "A chain of small pull requests where each builds on the one before, so a big piece of work can be reviewed one small step at a time.",
     module: "small-changes",
   },
+  "commit-message": {
+    term: "Commit message",
+    definition:
+      "The text saved with each commit explaining what changed and why. A short first line summarises it for anyone skimming the history.",
+    module: "describing-changes",
+  },
 } satisfies Record<string, GlossaryEntry>;
