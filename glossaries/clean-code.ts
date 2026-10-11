@@ -164,4 +164,16 @@ export const cleanCodeTrack = {
       "A type that is one of several named alternatives, each with its own data, such as an order that is placed, paid, delivered, cancelled or refunded. Also called a sum type or sealed type.",
     module: "types-as-docs",
   },
+  "code-smell": {
+    term: "Code smell",
+    definition:
+      "A surface sign in code, such as a very long function or the same switch in several places, that often points to a deeper design problem. A hint, not a rule.",
+    module: "code-smells",
+  },
+  refactoring: {
+    term: "Refactoring",
+    definition:
+      "Changing the structure of code without changing what it does, in small steps checked by tests, to make it easier to understand and change.",
+    module: "refactoring",
+  },
 } satisfies Record<string, GlossaryEntry>;

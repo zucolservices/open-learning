@@ -8805,11 +8805,12 @@ const cleanCode: Track = {
             "Find the smells in a café's order module and match each to the refactoring that removes it",
           formats: ["simulation", "checkpoint"],
           concepts: ["Common smells", "Smells are hints, not rules", "Prioritising what to fix"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["complexity"],
           plain:
             "A code smell is a surface sign that code may be hard to change, such as a very long function or a class that knows too much. Smells point to where to look, not to a definite problem.",
+          terms: ["code-smell", "refactoring"],
         },
         {
           slug: "refactoring",
