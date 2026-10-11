@@ -62,4 +62,16 @@ export const codeReviewTrack = {
       "A note a reviewer leaves on a pull request, usually attached to a line. Good ones are specific, explain why and suggest a way forward.",
     module: "giving-feedback",
   },
+  "blocking-comment": {
+    term: "Blocking comment",
+    definition:
+      "A review comment that must be resolved before the change can merge, usually about correctness, security or a serious design problem.",
+    module: "severity",
+  },
+  nit: {
+    term: "Nit",
+    definition:
+      "Short for nitpick: a minor, optional review comment, such as a small naming or wording preference. Often prefixed “Nit:” so the author knows it isn't required.",
+    module: "severity",
+  },
 } satisfies Record<string, GlossaryEntry>;

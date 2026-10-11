@@ -9157,11 +9157,12 @@ const codeReview: Track = {
             "Label a review's comments as blocking, suggestion, question or nit and see how much faster the author can act",
           formats: ["simulation", "checkpoint"],
           concepts: ["Labelling comments", "Approve with comments", "Conventional Comments"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["giving-feedback"],
           plain:
             "Not every comment must be fixed before merging. Saying clearly which are blocking and which are optional suggestions or nits helps authors prioritise and stops reviews dragging on.",
+          terms: ["blocking-comment", "nit", "review-comment"],
         },
         {
           slug: "reviewing-tests",
