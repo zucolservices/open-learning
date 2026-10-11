@@ -6,7 +6,7 @@
 
 ![The OpenLearning home page](docs/images/home.png)
 
-- **25 tracks, 556 modules, over 200 hours** of hands-on learning, from data lakehouses to India's data protection law.
+- **26 tracks, 577 modules, over 200 hours** of hands-on learning, from data lakehouses to India's data protection law.
 - **Starts from zero.** Every module opens with an everyday story before the mechanics, and every piece of jargon links to a plain-English glossary of 1,500+ terms.
 - **The format fits the idea.** 3D models, live simulations, step-throughs, build-and-connect canvases, broken systems to diagnose, and real SQL running in the browser.
 - **No scores, no exams.** Checkpoints explain the reasoning behind every answer, and you can always try again.
@@ -42,6 +42,7 @@
 | Software development  | [Git](https://openlearning.zucol.in/tracks/git)                                 | Commits, branches and history, understood from the inside.         |      22 |
 |                       | [Testing](https://openlearning.zucol.in/tracks/testing)                         | What to test, at which level, and why.                             |      23 |
 |                       | [Clean Code](https://openlearning.zucol.in/tracks/clean-code)                   | Code other people can read and change.                             |      22 |
+|                       | [Code Review](https://openlearning.zucol.in/tracks/code-review)                 | Giving and receiving useful reviews.                               |      21 |
 
 More tracks are planned, including Building for Government, Frontend, Accessibility and UX. The full roadmap is in [docs/PLAN.md](docs/PLAN.md).
 
