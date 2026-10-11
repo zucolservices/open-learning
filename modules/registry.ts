@@ -540,4 +540,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "testing/choosing-cases": () => import("./testing/choosing-cases"),
   "testing/test-shapes": () => import("./testing/test-shapes"),
   "testing/unit-tests": () => import("./testing/unit-tests"),
+  "testing/test-doubles": () => import("./testing/test-doubles"),
 };

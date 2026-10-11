@@ -61,4 +61,22 @@ export const testingTrack = {
       "A test that drives the whole application the way a user would, usually through a real browser or device. Realistic but slow and fragile.",
     module: "test-shapes",
   },
+  "test-double": {
+    term: "Test double",
+    definition:
+      "A stand-in used in a test in place of a real dependency, such as a payment service or the clock. Kinds include dummies, stubs, spies, mocks and fakes.",
+    module: "test-doubles",
+  },
+  mock: {
+    term: "Mock",
+    definition:
+      "A test double set up with expectations about the calls it should receive, which fails the test if they don't happen. Often used loosely for any test double.",
+    module: "test-doubles",
+  },
+  stub: {
+    term: "Stub",
+    definition:
+      "A test double that returns canned answers, such as a payment service that always declines.",
+    module: "test-doubles",
+  },
 } satisfies Record<string, GlossaryEntry>;

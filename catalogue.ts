@@ -8102,11 +8102,12 @@ const testing: Track = {
             "When to replace a dependency",
             "The cost of over-mocking",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["unit-tests"],
           plain:
             "When code depends on something slow or unpredictable, like a payment service or the clock, tests swap in a stand-in called a test double. Each kind of double answers a different question; too many of them make tests that pass while the real system breaks.",
+          terms: ["test-double", "stub", "mock"],
         },
         {
           slug: "readable-tests",
