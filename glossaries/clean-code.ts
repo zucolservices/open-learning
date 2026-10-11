@@ -200,4 +200,16 @@ export const cleanCodeTrack = {
       "A tool built on a language model that suggests or writes code from a description or from the surrounding code. Its output still needs review like any colleague's.",
     module: "ai-code",
   },
+  conventions: {
+    term: "Coding conventions",
+    definition:
+      "A team's agreed habits for writing code, such as naming, layout and structure. Tools enforce what they can; the rest lives in a short style guide.",
+    module: "conventions",
+  },
+  adr: {
+    term: "Architecture decision record (ADR)",
+    definition:
+      "A short document kept with the code that records an important decision: its context, the decision, its status and its consequences.",
+    module: "conventions",
+  },
 } satisfies Record<string, GlossaryEntry>;

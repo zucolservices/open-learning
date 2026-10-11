@@ -8912,11 +8912,12 @@ const cleanCode: Track = {
             "Architecture decision records",
             "Consistency over preference",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["static-analysis"],
           plain:
             "A codebase stays readable when the team agrees on conventions, lets tools enforce what they can, and writes down important decisions and the reasons behind them.",
+          terms: ["conventions", "adr", "formatter"],
         },
       ],
     },
