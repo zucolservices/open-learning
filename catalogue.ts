@@ -10453,11 +10453,12 @@ const mobile: Track = {
             "Safe areas and notches",
             "Orientation and foldables",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["declarative-ui"],
           plain:
             "The same app runs on small phones, large tablets, foldables and in split screen. Layouts adapt to the space they're given, and stay clear of notches and system bars.",
+          terms: ["adaptive-layout", "window-size-class", "safe-area"],
         },
       ],
     },

@@ -86,4 +86,22 @@ export const mobileTrack = {
       "Small vibrations a phone plays to confirm an action, such as a tick when an order succeeds.",
     module: "touch-gestures",
   },
+  "adaptive-layout": {
+    term: "Adaptive layout",
+    definition:
+      "A layout that rearranges itself for the space available, for example one pane on a phone and two side by side on a tablet.",
+    module: "adaptive-layouts",
+  },
+  "window-size-class": {
+    term: "Window size class",
+    definition:
+      "A coarse label for how much space an app's window has, such as compact, medium or expanded on Android, or compact and regular on iOS. Layouts switch by class rather than by device.",
+    module: "adaptive-layouts",
+  },
+  "safe-area": {
+    term: "Safe area",
+    definition:
+      "The part of the screen where content won't be covered by notches, camera cutouts, rounded corners, system bars or the home indicator. Android calls these boundaries window insets.",
+    module: "adaptive-layouts",
+  },
 } satisfies Record<string, GlossaryEntry>;
