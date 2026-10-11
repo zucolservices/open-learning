@@ -8514,10 +8514,11 @@ const cleanCode: Track = {
             "Cognitive load",
             "Readable code as a team habit",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           plain:
             "Code is read far more often than it is written, usually by someone in a hurry trying to change it. Clean code is code that person can understand quickly and change safely.",
+          terms: ["clean-code", "readability", "cognitive-load"],
         },
         {
           slug: "naming",

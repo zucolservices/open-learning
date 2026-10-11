@@ -558,4 +558,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "testing/exploratory": () => import("./testing/exploratory"),
   "testing/testing-in-production": () => import("./testing/testing-in-production"),
   "testing/capstone-testing": () => import("./testing/capstone-testing"),
+  "clean-code/why-readable": () => import("./clean-code/why-readable"),
 };
