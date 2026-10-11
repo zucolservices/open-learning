@@ -304,4 +304,16 @@ export const gitTrack = {
     definition: "Another Git repository included inside yours, pinned at one exact commit.",
     module: "monorepos-submodules",
   },
+  "signed-commit": {
+    term: "Signed commit",
+    definition:
+      "A commit with a cryptographic signature (GPG, SSH or X.509) that proves who made it; hosting platforms show it as Verified.",
+    module: "signing-secrets",
+  },
+  "rewrite-history": {
+    term: "Rewriting history",
+    definition:
+      "Replacing existing commits with new ones (amend, rebase, filter-repo). It changes commit IDs and disrupts anyone who has the old commits.",
+    module: "signing-secrets",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -7916,11 +7916,12 @@ const git: Track = {
             "Why author names prove nothing",
             "Removing secrets: rotate first, then rewrite",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["monorepos-submodules"],
           plain:
             "Anyone can set any name and email on a commit, so signing proves who really made it. If a secret is ever committed, treat it as leaked: revoke it first, then remove it from history with the right tool.",
+          terms: ["signed-commit", "rewrite-history", "force-push", "commit"],
         },
         {
           slug: "hooks",

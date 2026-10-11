@@ -532,4 +532,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "git/bisect-blame": () => import("./git/bisect-blame"),
   "git/big-repos": () => import("./git/big-repos"),
   "git/monorepos-submodules": () => import("./git/monorepos-submodules"),
+  "git/signing-secrets": () => import("./git/signing-secrets"),
 };
