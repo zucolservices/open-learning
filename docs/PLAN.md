@@ -1036,6 +1036,42 @@ Software development area, fifth track (started 2026-10-11). 22 modules in 7 cha
 | **7** | **Capstone**                             |                                                              |                                     |
 | 22    | Capstone: rescue a slow, broken page     | Diagnose a product page that's slow                          | Branching scenario, Fix the problem |
 
+## Backend: curriculum
+
+Software development area, sixth track (started 2026-10-12). 22 modules in 7 chapters, about 8 hours. Accent: "anchor" navy (`[data-track="anchor"]`). Glossary: `glossaries/backend.ts`. How a backend service is built and run: the request lifecycle, HTTP from the server's side and concurrency models; structure, middleware, validation, errors and configuration; database access, migrations, transactions and caching; authentication and authorization; background jobs, webhooks, real-time connections and file uploads; rate limiting, resilience, logs and health checks, and deployment. Language-neutral: Node.js, Python, Java and Kotlin, Go, C# and .NET, Ruby and PHP side by side. Every interactive is an in-browser simulation; security topics are rules-based, with attacks described in words. Services and organisations in scenarios are made up. Built on one branch (`track/backend`), one commit per module, merged once at the end. Each module is fact-checked against specs, official docs and vendor release notes before it is built.
+
+| #     | Module                                 | Centrepiece                                                  | Key formats                         |
+| ----- | -------------------------------------- | ------------------------------------------------------------ | ----------------------------------- |
+| **1** | **Foundations**                        |                                                              |                                     |
+| 1     | What a backend does                    | Follow one order request from a phone through DNS            | Scroll story                        |
+| 2     | HTTP from the server's side            | Build responses for a handful of requests and choose the rig | Build connect                       |
+| 3     | Handling many requests                 | Send a burst of requests to a thread-per-request server      | Simulation                          |
+| **2** | **Building a service**                 |                                                              |                                     |
+| 4     | Structuring a service                  | Untangle a single 400-line handler into layers and see which | Fix the problem                     |
+| 5     | Middleware and the request pipeline    | Arrange logging                                              | Build connect                       |
+| 6     | Validation and error handling          | Send bad input to an endpoint and fix it so it validates at  | Fix the problem                     |
+| 7     | Configuration and secrets              | Move hard-coded settings and passwords out of the code into  | Fix the problem                     |
+| **3** | **Data**                               |                                                              |                                     |
+| 8     | Talking to a database                  | Load an order page and watch queries pile up                 | Simulation                          |
+| 9     | Schema migrations                      | Rename a column on a live system step by step with expand an | Step through                        |
+| 10    | Transactions in your code              | Place two orders for the last item at the same moment and fi | Simulation                          |
+| 11    | Caching in the backend                 | Add a cache in front of a slow query and handle expiry       | Simulation                          |
+| **4** | **Identity**                           |                                                              |                                     |
+| 12    | Authentication                         | Sign a user in with a password                               | Step through                        |
+| 13    | Authorization                          | Find the endpoints where one customer can see another's orde | Fix the problem                     |
+| **5** | **Beyond request and response**        |                                                              |                                     |
+| 14    | Background jobs and queues             | Move email sending and invoice generation off the request pa | Simulation                          |
+| 15    | Webhooks and events                    | Send order events to a partner by webhook and make delivery  | Build connect                       |
+| 16    | Real-time connections                  | Show live order status with polling                          | Simulation                          |
+| 17    | Files and uploads                      | Handle a large photo upload by streaming it to object storag | Fix the problem                     |
+| **6** | **Running in production**              |                                                              |                                     |
+| 18    | Rate limiting and backpressure         | Protect an endpoint from a burst of traffic with token-bucke | Simulation                          |
+| 19    | Timeouts, retries and circuit breakers | Call a slow payment provider and stop it taking your whole s | Simulation                          |
+| 20    | Logs, health checks and shutdown       | Turn messy print statements into structured logs             | Fix the problem                     |
+| 21    | Packaging and deploying a service      | Package a service as a container image                       | Branching scenario                  |
+| **7** | **Capstone**                           |                                                              |                                     |
+| 22    | Capstone: build an order service       | Design and harden an order service end to end: structure     | Branching scenario, Fix the problem |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -1070,6 +1106,7 @@ Software development area, fifth track (started 2026-10-11). 22 modules in 7 cha
 | 4y. Clean Code             | Software development, third track, 22 modules                                           | Live: all 22 modules (2026-10-11)                                       |
 | 4z. Code Review            | Software development, fourth track, 21 modules                                          | Live: all 21 modules (2026-10-11)                                       |
 | 4za. Frontend              | Software development, fifth track, 22 modules                                           | Live: all 22 modules (2026-10-12)                                       |
+| 4zb. Backend               | Software development, sixth track, 22 modules                                           | In progress: 0 of 22 modules live                                       |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

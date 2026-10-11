@@ -113,6 +113,7 @@ export interface Track {
     | "stone"
     | "redline"
     | "pixel"
+    | "anchor"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -9836,6 +9837,453 @@ const frontend: Track = {
   ],
 };
 
+const backend: Track = {
+  slug: "backend",
+  title: "Backend",
+  area: "Software development",
+  category: "software-development",
+  tagline: "Services, data access and APIs that last.",
+  description:
+    "How a backend service is built and run: what happens to a request from the network to the database and back, HTTP from the server's side, handling many requests at once, structuring a service, middleware, validation and errors, configuration and secrets, database access, schema migrations, transactions, caching, authentication and authorization, background jobs, webhooks and events, real-time connections, file uploads, rate limiting, timeouts and retries, logs and health checks, and packaging and deploying a service. Language-neutral: Node.js, Python, Java and Kotlin, Go, C# and .NET, Ruby and PHP side by side. By the end you can design, build and operate a service that stays correct, fast and safe under real traffic.",
+  accent: "anchor",
+  chapters: [
+    {
+      slug: "foundations",
+      title: "Foundations",
+      summary: "What a backend does, and how it handles requests.",
+      modules: [
+        {
+          slug: "what-a-backend-does",
+          title: "What a backend does",
+          summary: "From a tap to a database and back.",
+          minutes: 20,
+          signature:
+            "Follow one order request from a phone through DNS, a load balancer, a server, the code and the database, and back",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "The request lifecycle",
+            "Where backend code runs",
+            "What the backend is responsible for",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "A backend is the part of an app that runs on servers: it receives requests, applies business rules, stores data and sends responses. Knowing every hop explains where things go slow or wrong.",
+        },
+        {
+          slug: "http-servers",
+          title: "HTTP from the server's side",
+          summary: "Requests in, responses out.",
+          minutes: 20,
+          signature:
+            "Build responses for a handful of requests and choose the right status codes, headers and bodies",
+          formats: ["build-connect", "checkpoint"],
+          concepts: ["Methods, paths and handlers", "Status codes and headers", "Statelessness"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["what-a-backend-does"],
+          plain:
+            "A web server reads an HTTP request, picks the code that should handle it, and writes back a response with a status code, headers and a body. Each request stands alone.",
+        },
+        {
+          slug: "concurrency",
+          title: "Handling many requests",
+          summary: "Threads, event loops and goroutines.",
+          minutes: 25,
+          signature:
+            "Send a burst of requests to a thread-per-request server, an event-loop server and a lightweight-thread server and compare how they cope",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Threads and thread pools",
+            "Event loops and async/await",
+            "Goroutines and virtual threads",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["http-servers"],
+          plain:
+            "Servers handle many requests at once in different ways: a thread each, one event loop, or many lightweight threads. Each copes differently with slow databases and heavy computation.",
+        },
+      ],
+    },
+    {
+      slug: "service",
+      title: "Building a service",
+      summary: "Structure, pipeline, errors and configuration.",
+      modules: [
+        {
+          slug: "project-structure",
+          title: "Structuring a service",
+          summary: "Handlers, services and repositories.",
+          minutes: 20,
+          signature:
+            "Untangle a single 400-line handler into layers and see which changes become easy",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: ["Layers and responsibilities", "Dependencies point inward", "Feature folders"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["http-servers"],
+          plain:
+            "Splitting a service into layers, from HTTP handling to business rules to data access, keeps each part simple and lets you change one without breaking the others.",
+        },
+        {
+          slug: "middleware",
+          title: "Middleware and the request pipeline",
+          summary: "Every request passes through.",
+          minutes: 20,
+          signature:
+            "Arrange logging, authentication, rate limiting, compression and error handling in a pipeline and see what breaks in the wrong order",
+          formats: ["build-connect", "checkpoint"],
+          concepts: ["What middleware is", "Order matters", "Cross-cutting concerns"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["project-structure"],
+          plain:
+            "Middleware wraps every request with shared behaviour such as logging, authentication and compression. The order they run in changes what each one sees.",
+        },
+        {
+          slug: "validation-errors",
+          title: "Validation and error handling",
+          summary: "Trust nothing, explain clearly.",
+          minutes: 20,
+          signature:
+            "Send bad input to an endpoint and fix it so it validates at the boundary and returns clear, safe error responses",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Validate at the boundary",
+            "Error responses (problem details)",
+            "Never leak internals",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["middleware"],
+          plain:
+            "Everything from outside is untrusted. Check input where it enters, reject it with clear, consistent errors, and keep stack traces and secrets out of responses.",
+        },
+        {
+          slug: "service-config",
+          title: "Configuration and secrets",
+          summary: "Same code, different environments.",
+          minutes: 20,
+          signature:
+            "Move hard-coded settings and passwords out of the code into environment configuration and a secret manager",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: ["Config in the environment", "Secret managers", "Rotating secrets"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["project-structure"],
+          plain:
+            "The same code runs in development, testing and production with different settings. Keep configuration outside the code and secrets in a proper secret store, never in the repository.",
+        },
+      ],
+    },
+    {
+      slug: "data",
+      title: "Data",
+      summary: "Talking to databases safely and quickly.",
+      modules: [
+        {
+          slug: "data-access",
+          title: "Talking to a database",
+          summary: "Pools, queries and the N+1 trap.",
+          minutes: 25,
+          signature:
+            "Load an order page and watch queries pile up, then fix the N+1 problem and size the connection pool",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Connection pools", "SQL, query builders and ORMs", "The N+1 query problem"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["concurrency"],
+          plain:
+            "Database access is often a backend's slowest part. Reusing connections from a pool and fetching related data in one query instead of hundreds keeps pages fast.",
+        },
+        {
+          slug: "migrations",
+          title: "Schema migrations",
+          summary: "Changing the database without downtime.",
+          minutes: 20,
+          signature:
+            "Rename a column on a live system step by step with expand and contract, while old and new code both run",
+          formats: ["step-through", "checkpoint"],
+          concepts: ["Versioned migrations", "Expand and contract", "Backfills and locks"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["data-access"],
+          plain:
+            "Databases change as apps grow. Versioned migrations apply changes in order, and the expand-and-contract pattern lets you change a live schema without breaking running code.",
+        },
+        {
+          slug: "transactions-app",
+          title: "Transactions in your code",
+          summary: "All or nothing.",
+          minutes: 25,
+          signature:
+            "Place two orders for the last item at the same moment and fix the double sale with a transaction and a lock",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Transactions and rollbacks",
+            "Optimistic and pessimistic locking",
+            "Idempotency keys",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["data-access"],
+          plain:
+            "A transaction groups changes so they all happen or none do. Locks and version checks stop two requests from overwriting each other, and idempotency keys make retries safe.",
+        },
+        {
+          slug: "caching-backend",
+          title: "Caching in the backend",
+          summary: "Faster, until it's wrong.",
+          minutes: 20,
+          signature:
+            "Add a cache in front of a slow query and handle expiry, invalidation and a stampede when it empties",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Cache-aside", "Expiry and invalidation", "Stampedes"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["data-access"],
+          plain:
+            "A cache keeps recent results in fast memory so you don't recompute them. The hard parts are keeping it fresh and stopping everyone from rebuilding it at the same moment.",
+        },
+      ],
+    },
+    {
+      slug: "identity",
+      title: "Identity",
+      summary: "Who you are and what you may do.",
+      modules: [
+        {
+          slug: "sign-in",
+          title: "Authentication",
+          summary: "Proving who you are.",
+          minutes: 25,
+          signature:
+            "Sign a user in with a password, then with a passkey and with a single sign-on provider, and see what the server stores each time",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Password hashing",
+            "Sessions and tokens",
+            "OAuth, OpenID Connect and passkeys",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["validation-errors"],
+          plain:
+            "Authentication checks who someone is. Store only slow, salted password hashes, keep sessions safe, and prefer passkeys or a trusted identity provider where you can.",
+        },
+        {
+          slug: "authorization",
+          title: "Authorization",
+          summary: "Checking every request.",
+          minutes: 20,
+          signature:
+            "Find the endpoints where one customer can see another's orders and add the missing checks",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Roles and permissions",
+            "Checking ownership on every object",
+            "Deny by default",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["sign-in"],
+          plain:
+            "Authorization decides what a signed-in user may do. Check it on the server for every request and every object, and deny anything not explicitly allowed.",
+        },
+      ],
+    },
+    {
+      slug: "async",
+      title: "Beyond request and response",
+      summary: "Jobs, events, real time and files.",
+      modules: [
+        {
+          slug: "background-jobs",
+          title: "Background jobs and queues",
+          summary: "Do the slow work later.",
+          minutes: 25,
+          signature:
+            "Move email sending and invoice generation off the request path into a queue, and handle failures with retries and a dead-letter queue",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Queues and workers",
+            "Retries and backoff",
+            "Idempotent jobs and dead letters",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["transactions-app"],
+          plain:
+            "Slow or unreliable work like sending email shouldn't make users wait. Put it on a queue for background workers, retry failures with backoff, and make jobs safe to run twice.",
+        },
+        {
+          slug: "webhooks-events",
+          title: "Webhooks and events",
+          summary: "Telling other systems what happened.",
+          minutes: 20,
+          signature:
+            "Send order events to a partner by webhook and make delivery reliable with signatures, retries and an outbox",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Outgoing and incoming webhooks",
+            "Signing and verifying",
+            "The transactional outbox",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["background-jobs"],
+          plain:
+            "Webhooks let your service notify other systems when something happens. Sign them, retry them, and record events in the same transaction as the change so none are lost.",
+        },
+        {
+          slug: "live-updates",
+          title: "Real-time connections",
+          summary: "Push instead of poll.",
+          minutes: 20,
+          signature:
+            "Show live order status with polling, server-sent events and WebSockets and compare load and latency",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Polling and long polling",
+            "Server-sent events",
+            "WebSockets and scaling them",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["concurrency"],
+          plain:
+            "When users need updates the moment they happen, the server can push them over a long-lived connection instead of being asked every few seconds. Each method suits different needs.",
+        },
+        {
+          slug: "file-uploads",
+          title: "Files and uploads",
+          summary: "Big bytes, safely.",
+          minutes: 20,
+          signature:
+            "Handle a large photo upload by streaming it to object storage with a pre-signed URL, with size limits and checks",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Streaming instead of buffering",
+            "Object storage and pre-signed URLs",
+            "Limits and file checks",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["validation-errors"],
+          plain:
+            "Files are big and untrusted. Stream them rather than loading them into memory, store them in object storage, and check size and type before trusting them.",
+        },
+      ],
+    },
+    {
+      slug: "production",
+      title: "Running in production",
+      summary: "Staying up under real traffic.",
+      modules: [
+        {
+          slug: "rate-limiting",
+          title: "Rate limiting and backpressure",
+          summary: "Saying no politely.",
+          minutes: 20,
+          signature:
+            "Protect an endpoint from a burst of traffic with token-bucket limits and queue limits, and see who gets served",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Token and leaky buckets",
+            "Limits per user and per key",
+            "Backpressure and load shedding",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["concurrency"],
+          plain:
+            "A service can't do unlimited work. Rate limits share capacity fairly, and backpressure rejects excess work early so the service stays up for everyone else.",
+        },
+        {
+          slug: "resilience",
+          title: "Timeouts, retries and circuit breakers",
+          summary: "When a dependency is slow.",
+          minutes: 25,
+          signature:
+            "Call a slow payment provider and stop it taking your whole service down with timeouts, retries with jitter and a circuit breaker",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Timeouts everywhere",
+            "Retries with backoff and jitter",
+            "Circuit breakers and fallbacks",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["rate-limiting"],
+          plain:
+            "Every call to another service can hang or fail. Timeouts, careful retries and circuit breakers stop one slow dependency from tying up every thread and spreading the outage.",
+        },
+        {
+          slug: "logs-health",
+          title: "Logs, health checks and shutdown",
+          summary: "Seeing and steering a running service.",
+          minutes: 20,
+          signature:
+            "Turn messy print statements into structured logs, add liveness and readiness checks, and shut down without dropping requests",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Structured logs and request IDs",
+            "Liveness and readiness",
+            "Graceful shutdown",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["middleware"],
+          plain:
+            "A running service must explain itself and cooperate with its platform. Structured logs with request IDs, honest health checks and graceful shutdown make deploys and incidents calm.",
+        },
+        {
+          slug: "deploying-backend",
+          title: "Packaging and deploying a service",
+          summary: "From code to a running process.",
+          minutes: 20,
+          signature:
+            "Package a service as a container image, choose between a VM, containers and serverless, and roll out a new version without downtime",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Container images",
+            "VMs, containers and serverless",
+            "Zero-downtime rollouts",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["service-config"],
+          plain:
+            "A service is packaged with everything it needs, usually as a container image, and run on servers, a container platform or serverless functions. Rolling updates replace it without dropping users.",
+        },
+      ],
+    },
+    {
+      slug: "capstone",
+      title: "Capstone",
+      summary: "Put it all together.",
+      modules: [
+        {
+          slug: "capstone-backend",
+          title: "Capstone: build an order service",
+          summary: "From first request to production.",
+          minutes: 35,
+          signature:
+            "Design and harden an order service end to end: structure, data, identity, background work, resilience and deployment",
+          formats: ["branching-scenario", "fix-the-problem"],
+          concepts: ["Designing a service", "Making it correct under load", "Operating it safely"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["resilience"],
+          plain:
+            "This capstone brings the track together. You make design decisions for a real-world order service, fix the problems that appear under traffic, and prepare it for production.",
+        },
+      ],
+    },
+  ],
+};
+
 const playground: Track = {
   slug: "playground",
   title: "Toolkit playground",
@@ -14018,6 +14466,7 @@ export const tracks: Track[] = [
   cleanCode,
   codeReview,
   frontend,
+  backend,
   playground,
 ];
 
@@ -14213,7 +14662,7 @@ export const categories: Category[] = [
         slug: "frontend",
         blurb: "The browser, rendering and modern UI frameworks.",
       },
-      { title: "Backend", blurb: "Services, data access and APIs that last." },
+      { title: "Backend", slug: "backend", blurb: "Services, data access and APIs that last." },
       { title: "Mobile", blurb: "Native and cross-platform apps." },
       { title: "Testing", slug: "testing", blurb: "What to test, at which level, and why." },
       { title: "Clean Code", slug: "clean-code", blurb: "Code other people can read and change." },
