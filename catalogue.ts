@@ -9272,11 +9272,12 @@ const codeReview: Track = {
             "False positives and missed context",
             "Keeping humans accountable",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["review-automation"],
           plain:
             "AI tools can now comment on pull requests. They catch some mistakes quickly but also miss context and make confident wrong suggestions, so a human still owns the decision.",
+          terms: ["ai-code-review", "review-comment", "approval"],
         },
       ],
     },

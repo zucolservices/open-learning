@@ -92,4 +92,10 @@ export const codeReviewTrack = {
       "How many people could leave a team before some part of the code has nobody left who understands it. A bus factor of one is a risk.",
     module: "reviewers",
   },
+  "ai-code-review": {
+    term: "AI code review",
+    definition:
+      "Tools that use large language models to read a pull request and leave review comments, and sometimes suggested fixes. Fast, but they can lack context and be confidently wrong.",
+    module: "ai-review",
+  },
 } satisfies Record<string, GlossaryEntry>;
