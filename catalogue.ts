@@ -7537,11 +7537,12 @@ const git: Track = {
             "Blobs, trees, commits and tags",
             "Why identical content is stored once",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["why-git"],
           plain:
             "Git stores snapshots of your whole project, not lists of changes. Each file's content becomes a blob named by a hash of its content, folders become trees, and a commit points to one tree plus its parent.",
+          terms: ["snapshot", "content-hash", "blob", "tree", "commit"],
         },
         {
           slug: "three-areas",
