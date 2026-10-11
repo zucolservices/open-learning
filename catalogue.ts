@@ -9423,10 +9423,11 @@ const frontend: Track = {
             "DOM and CSSOM",
             "Layout, paint and compositing",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           plain:
             "A browser turns text files into a picture in stages: it reads the HTML and CSS, works out where everything goes, paints it and layers it together. Knowing the stages explains most performance problems.",
+          terms: ["dom", "cssom", "render-blocking", "layout", "compositing", "baseline-web"],
         },
         {
           slug: "semantic-html",
