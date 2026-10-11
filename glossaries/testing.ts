@@ -115,4 +115,10 @@ export const testingTrack = {
       "A test that sometimes passes and sometimes fails without any change to the code, usually because of timing, shared data, test order or randomness.",
     module: "flaky-tests",
   },
+  "code-coverage": {
+    term: "Code coverage",
+    definition:
+      "A measure of which parts of the code ran while the tests ran: lines, branches or conditions. It shows what was executed, not what was checked.",
+    module: "coverage",
+  },
 } satisfies Record<string, GlossaryEntry>;

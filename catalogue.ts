@@ -8252,11 +8252,12 @@ const testing: Track = {
             "Why 100% isn't the goal",
             "Using coverage to find gaps",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["unit-tests"],
           plain:
             "Coverage tools record which lines of code ran during your tests. They show untested corners well, but code that ran isn't code that was checked: a test with no assertions still counts.",
+          terms: ["code-coverage"],
         },
         {
           slug: "mutation-testing",

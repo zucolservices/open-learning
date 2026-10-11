@@ -547,4 +547,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "testing/contract-tests": () => import("./testing/contract-tests"),
   "testing/ui-tests": () => import("./testing/ui-tests"),
   "testing/end-to-end": () => import("./testing/end-to-end"),
+  "testing/coverage": () => import("./testing/coverage"),
 };
