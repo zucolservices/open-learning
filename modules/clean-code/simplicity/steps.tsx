@@ -204,8 +204,8 @@ export function SimpleEasy() {
     >
       <p>
         Rich Hickey&apos;s talk &ldquo;Simple Made Easy&rdquo; (2011) made the distinction famous:
-        simple means not <em>complected</em>, his word for braided together. Unfamiliar code can be
-        simple; familiar code can be tangled.
+        simple means not <em>complected</em>, Hickey's word for braided together. Unfamiliar code
+        can be simple; familiar code can be tangled.
       </p>
       <p>
         YAGNI came out of Extreme Programming (Kent Beck, then Ron Jeffries wrote it up in 1998).

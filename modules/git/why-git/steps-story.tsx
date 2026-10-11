@@ -101,7 +101,7 @@ const SECTIONS: StorySection[] = [
       <p>
         The Linux kernel had used a commercial tool, BitKeeper, for free. In 2005 that free use was
         withdrawn. Linus Torvalds wrote a replacement in a few days and could use it for the kernel
-        after about ten. He called it <Term id="git">Git</Term>. Junio Hamano took over as
+        after about ten. Torvalds called it <Term id="git">Git</Term>. Junio Hamano took over as
         maintainer that July.
       </p>
     ),

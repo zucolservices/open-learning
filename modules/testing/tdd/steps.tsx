@@ -200,13 +200,13 @@ export function Canon() {
       }
     >
       <p>
-        Kent Beck popularised TDD in his 2002 book. In 2023 he wrote &ldquo;Canon TDD&rdquo; to
+        Kent Beck popularised TDD in a 2002 book. In 2023 Beck wrote &ldquo;Canon TDD&rdquo; to
         answer critics who were attacking a different process, such as writing all the tests up
         front.
       </p>
       <p>
         Two details people miss: it starts with a <strong>list</strong>, not a test, and the
-        refactor step is optional. Mistakes he lists include writing every test up front, tests
+        refactor step is optional. Mistakes Beck lists include writing every test up front, tests
         without assertions, and deleting assertions to get to green.
       </p>
     </StepLayout>

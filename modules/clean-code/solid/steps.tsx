@@ -189,7 +189,7 @@ export function Origins() {
             ["1988", "Bertrand Meyer: modules open for extension, closed for modification."],
             [
               "1995–2002",
-              "Robert C. Martin gathered the principles in articles and books; single responsibility appeared in his 2002 book.",
+              "Robert C. Martin gathered the principles in articles and books; single responsibility appeared in Martin's 2002 book.",
             ],
             ["~2004", "Michael Feathers is credited with arranging them into the acronym SOLID."],
             [

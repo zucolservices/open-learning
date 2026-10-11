@@ -182,7 +182,7 @@ export function Mistake() {
           <div className="border-line bg-surface flex gap-3 rounded-lg border px-3 py-2 text-xs">
             <span className="text-accent font-mono">2009</span>
             <span>
-              In a talk at QCon London he calls it his “billion-dollar mistake”: a rough guess at
+              In a talk at QCon London Hoare calls it a “billion-dollar mistake”: a rough guess at
               decades of crashes and security holes.
             </span>
           </div>

@@ -320,7 +320,7 @@ export function SameShape() {
     >
       <p>
         Every language has test frameworks, and they all look alike. Many descend from SUnit, which
-        Kent Beck wrote for Smalltalk, and JUnit, which he wrote with Erich Gamma for Java. That
+        Kent Beck wrote for Smalltalk, and JUnit, which Beck wrote with Erich Gamma for Java. That
         family is called xUnit.
       </p>
       <p>

@@ -17,8 +17,11 @@ export const WEEK: Day[] = [
   {
     day: "Tue",
     event: "Tom updates the prices, working from a copy made last week.",
-    folder: { text: "Tom copies his file back and silently wipes out Kavya's header.", ok: false },
-    git: { text: "Tom commits on his own branch. Nothing is overwritten.", ok: true },
+    folder: {
+      text: "Tom copies their file back and silently wipes out Kavya's header.",
+      ok: false,
+    },
+    git: { text: "Tom commits on their own branch. Nothing is overwritten.", ok: true },
   },
   {
     day: "Wed",

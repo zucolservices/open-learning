@@ -27,7 +27,7 @@ export function Doors() {
             ],
             [
               "Single sign-on is a trusted friend",
-              "“I know her; let her in.” You rely on the friend to check properly.",
+              "“I know them; let them in.” You rely on the friend to check properly.",
             ],
           ].map(([t, b], i) => (
             <motion.div

@@ -108,7 +108,7 @@ export function Investigate() {
                 <X className="text-bad mt-0.5 size-3.5 shrink-0" />
               )}
               {s.suspect === IMPOSTOR
-                ? "Right. Meera signs every commit; this one has her name but no signature, and it changes where payments go. Anyone can set user.name to 'Meera'."
+                ? "Right. Meera signs every commit; this one has their name but no signature, and it changes where payments go. Anyone can set user.name to 'Meera'."
                 : "That one is signed and verified. Look for the commit with the maintainer's name but no signature."}
             </p>
           )}

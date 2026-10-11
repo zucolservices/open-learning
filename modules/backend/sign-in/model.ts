@@ -14,7 +14,7 @@ export const METHODS: {
     id: "plain",
     label: "Password, stored as is",
     steps: [
-      "Asha types her password",
+      "Asha types their password",
       "The server compares it with the stored password",
       "Match: create a session",
     ],
@@ -26,7 +26,7 @@ export const METHODS: {
     id: "fast",
     label: "Password, fast hash",
     steps: [
-      "Asha types her password",
+      "Asha types their password",
       "The server hashes it with a fast general-purpose hash",
       "Compare with the stored hash; match: create a session",
     ],
@@ -38,8 +38,8 @@ export const METHODS: {
     id: "argon",
     label: "Password, Argon2id",
     steps: [
-      "Asha types her password",
-      "The server runs Argon2id with her random salt: deliberately slow and memory-hungry",
+      "Asha types their password",
+      "The server runs Argon2id with their random salt: deliberately slow and memory-hungry",
       "Compare; match: create a new session ID",
     ],
     stored: "A salted, slow Argon2id hash",
@@ -62,8 +62,8 @@ export const METHODS: {
     id: "oidc",
     label: "Sign in with a provider",
     steps: [
-      "The app redirects Asha to an identity provider she trusts",
-      "She signs in there; the provider redirects back with a one-time code",
+      "The app redirects Asha to an identity provider they trust",
+      "They sign in there; the provider redirects back with a one-time code",
       "The server exchanges the code for an ID token, checks it, and creates a session",
     ],
     stored: "The provider's user ID, no password",

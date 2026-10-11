@@ -134,7 +134,7 @@ const SECTIONS: StorySection[] = [
       <p>
         <Term id="clean-code">Clean code</Term> isn&apos;t about being pretty or clever. It&apos;s
         code the next person can understand quickly and change safely. Rina renames <code>p</code>{" "}
-        to <code>loyaltyPoints</code> while she&apos;s there, so the next person doesn&apos;t lose
+        to <code>loyaltyPoints</code> while they&apos;re there, so the next person doesn&apos;t lose
         their morning.
       </p>
     ),

@@ -147,8 +147,8 @@ export function FixForm() {
       }
     >
       <p>
-        Asha (made up) is signing up and has mistyped her email. This form has six problems. Fix
-        them one at a time, pressing Create account after each to see what she experiences.
+        Asha (made up) is signing up and has mistyped their email. This form has six problems. Fix
+        them one at a time, pressing Create account after each to see what they experience.
       </p>
       <p>
         Watch the screen reader line too: that&apos;s what a blind user hears on the email field.
