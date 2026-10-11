@@ -62,4 +62,22 @@ export const backendTrack = {
       "A credential such as a password, API key or signing key. It needs access control, auditing and rotation, so it belongs in a secret manager, never in code.",
     module: "service-config",
   },
+  "n-plus-one": {
+    term: "N+1 query problem",
+    definition:
+      "Running one query to load a list and then one more for every item in it, instead of fetching the related data together. Slow pages are often caused by it.",
+    module: "data-access",
+  },
+  "connection-pool": {
+    term: "Connection pool",
+    definition:
+      "A small set of open database connections that a service reuses for many requests, because opening a new connection each time is slow.",
+    module: "data-access",
+  },
+  orm: {
+    term: "ORM",
+    definition:
+      "Object-relational mapper: a library that maps database rows to objects in your language and writes much of the SQL for you, such as Hibernate, Entity Framework, SQLAlchemy or Prisma.",
+    module: "data-access",
+  },
 } satisfies Record<string, GlossaryEntry>;

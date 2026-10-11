@@ -9998,11 +9998,12 @@ const backend: Track = {
             "Load an order page and watch queries pile up, then fix the N+1 problem and size the connection pool",
           formats: ["simulation", "checkpoint"],
           concepts: ["Connection pools", "SQL, query builders and ORMs", "The N+1 query problem"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["concurrency"],
           plain:
             "Database access is often a backend's slowest part. Reusing connections from a pool and fetching related data in one query instead of hundreds keeps pages fast.",
+          terms: ["n-plus-one", "connection-pool", "orm"],
         },
         {
           slug: "migrations",
