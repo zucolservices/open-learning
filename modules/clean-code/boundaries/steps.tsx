@@ -63,7 +63,6 @@ export function Socket() {
 
 export function WrapSdk() {
   const [s, set] = useSceneState<BoundState>();
-  const changes = s.switched ? (s.port ? 1 : DIRECT_USES) : 0;
   return (
     <StepLayout
       eyebrow="Build"

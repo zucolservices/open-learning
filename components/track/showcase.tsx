@@ -46,6 +46,8 @@ import { GitScene } from "@/components/home/git-scene";
 import { GitTaste } from "@/components/home/git-taste";
 import { TestingScene } from "@/components/home/testing-scene";
 import { TestingTaste } from "@/components/home/testing-taste";
+import { CleanCodeScene } from "@/components/home/clean-code-scene";
+import { CleanCodeTaste } from "@/components/home/clean-code-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -246,5 +248,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: TestingTaste,
     tasteCaption:
       "A taste of module 14: tick tests and watch planted bugs die. Any bug that survives would slip past your tests.",
+  },
+  "clean-code": {
+    Scene: CleanCodeScene,
+    sceneCaption:
+      "What makes code easy to read and change: readable foundations, simplicity, design, errors and edges, changing code safely, and team habits. Watch the tour, or click any part.",
+    Taste: CleanCodeTaste,
+    tasteCaption:
+      "A taste of module 8: flatten a nested function in three behaviour-preserving steps and watch its complexity fall.",
   },
 };
