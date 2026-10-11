@@ -9824,11 +9824,12 @@ const frontend: Track = {
             "Diagnose a product page that's slow, jumpy and hard to use, fix its rendering, loading, accessibility and security issues, and measure the result",
           formats: ["branching-scenario", "fix-the-problem"],
           concepts: ["Diagnosing with evidence", "Prioritising fixes", "Measuring the result"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["web-vitals"],
           plain:
             "This capstone brings the track together. You investigate a page users complain about, find the causes with real measurements, fix the most important problems first and prove it's better.",
+          terms: ["core-web-vitals", "web-accessibility", "xss", "long-task"],
         },
       ],
     },
