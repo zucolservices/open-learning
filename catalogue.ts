@@ -8762,11 +8762,12 @@ const cleanCode: Track = {
             "Hunt down a crash caused by a missing value, then make absence explicit so the compiler catches it",
           formats: ["simulation", "checkpoint"],
           concepts: ["Null references", "Optional and maybe types", "Strict null checks"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["error-handling"],
           plain:
             "A value that might be missing is a common source of crashes. Modern languages and settings make absence explicit in the type, so forgetting to handle it becomes a compile error.",
+          terms: ["null", "optional-type"],
         },
         {
           slug: "types-as-docs",

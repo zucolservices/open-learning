@@ -140,4 +140,16 @@ export const cleanCodeTrack = {
       "Stopping as soon as something is wrong, such as invalid input, so the problem shows up close to its cause instead of causing damage later.",
     module: "error-handling",
   },
+  null: {
+    term: "Null",
+    definition:
+      "A special value meaning “nothing here”. In many languages any reference might be null, and using it as if it held a value crashes the program.",
+    module: "null-safety",
+  },
+  "optional-type": {
+    term: "Optional type",
+    definition:
+      "A type that says a value may be missing, such as string | undefined, String? or Option<T>, so the compiler makes you handle the empty case.",
+    module: "null-safety",
+  },
 } satisfies Record<string, GlossaryEntry>;

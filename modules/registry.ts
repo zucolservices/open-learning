@@ -571,4 +571,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "clean-code/composition": () => import("./clean-code/composition"),
   "clean-code/boundaries": () => import("./clean-code/boundaries"),
   "clean-code/error-handling": () => import("./clean-code/error-handling"),
+  "clean-code/null-safety": () => import("./clean-code/null-safety"),
 };
