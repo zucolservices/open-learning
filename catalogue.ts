@@ -8000,10 +8000,11 @@ const testing: Track = {
             "Cost of finding bugs late",
             "Tests as a safety net for change",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           plain:
             "A test is a small program that checks your code does what you expect. Tests catch mistakes early, when they are cheap to fix, and let you change code later without fear of breaking something.",
+          terms: ["test", "test-runner", "test-suite", "regression"],
         },
         {
           slug: "anatomy",
