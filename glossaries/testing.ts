@@ -79,4 +79,16 @@ export const testingTrack = {
       "A test double that returns canned answers, such as a payment service that always declines.",
     module: "test-doubles",
   },
+  tdd: {
+    term: "Test-driven development (TDD)",
+    definition:
+      "Writing a failing test before the code that makes it pass, then tidying up, in small repeated loops: red, green, refactor.",
+    module: "tdd",
+  },
+  fixture: {
+    term: "Fixture",
+    definition:
+      "The fixed setup a test relies on, such as sample data or objects created before it runs. Shared fixtures that tests change make results depend on run order.",
+    module: "readable-tests",
+  },
 } satisfies Record<string, GlossaryEntry>;

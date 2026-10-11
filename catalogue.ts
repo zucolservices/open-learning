@@ -8122,11 +8122,12 @@ const testing: Track = {
             "One reason to fail",
             "Fixtures, setup and duplication",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["unit-tests"],
           plain:
             "A test is read far more often than it's written, usually at the moment it fails. Clear names, one behaviour per test and helpful failure messages turn a red test into an instant explanation.",
+          terms: ["fixture", "assertion"],
         },
         {
           slug: "tdd",
