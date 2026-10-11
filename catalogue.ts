@@ -9442,11 +9442,12 @@ const frontend: Track = {
             "The accessibility tree",
             "Headings, landmarks and links",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["how-browsers-work"],
           plain:
             "HTML elements carry meaning: a button is a button, a heading is a heading. Using the right element gives you keyboard support, screen-reader support and better search results for free.",
+          terms: ["semantic-html", "accessibility-tree", "landmark", "dom"],
         },
         {
           slug: "css-layout",

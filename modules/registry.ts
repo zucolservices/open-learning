@@ -602,4 +602,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "code-review/review-metrics": () => import("./code-review/review-metrics"),
   "code-review/capstone-review": () => import("./code-review/capstone-review"),
   "frontend/how-browsers-work": () => import("./frontend/how-browsers-work"),
+  "frontend/semantic-html": () => import("./frontend/semantic-html"),
 };

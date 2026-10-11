@@ -38,4 +38,22 @@ export const frontendTrack = {
       'A label for web features: "newly available" means supported in all major browsers; "widely available" means 30 months after that.',
     module: "how-browsers-work",
   },
+  "semantic-html": {
+    term: "Semantic HTML",
+    definition:
+      "Using HTML elements for what they mean (heading, button, navigation) rather than only how they look, so browsers and assistive technology understand the page.",
+    module: "semantic-html",
+  },
+  "accessibility-tree": {
+    term: "Accessibility tree",
+    definition:
+      'A version of the DOM the browser builds for assistive technology, giving each element a role, name and state, such as "button, Order now".',
+    module: "semantic-html",
+  },
+  landmark: {
+    term: "Landmark",
+    definition:
+      "A region of a page, such as banner, navigation, main or contentinfo, that screen-reader users can jump between.",
+    module: "semantic-html",
+  },
 } satisfies Record<string, GlossaryEntry>;
