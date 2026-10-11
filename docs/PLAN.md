@@ -966,6 +966,40 @@ Software development area, third track (started 2026-10-11). 22 modules in 7 cha
 | **7** | **Capstone**                                   |                                                              |                               |
 | 22    | Capstone: untangle a module nobody understands | Take a tangled order module                                  | Fix the problem, Step through |
 
+## Code Review: curriculum
+
+Software development area, fourth track (started 2026-10-11). 21 modules in 6 chapters, about 7.5 hours. Accent: "redline" crimson (`[data-track="redline"]`). Glossary: `glossaries/code-review.ts`. Code review from both sides of the pull request: what review is for, how to author changes that are easy to review, how to read diffs and write useful, kind comments, how to make the process fast and fair, and the culture that makes reviews teach rather than silence. Platform-neutral: GitHub, GitLab, Bitbucket, Azure DevOps and Gerrit, with research from Microsoft, Google and Meta studies where it exists. Pull requests, people and teams in scenarios are made up. Built on one branch (`track/code-review`), one commit per module, merged once at the end. Each module is fact-checked against papers, engineering guides and official docs before it is built.
+
+| #     | Module                                | Centrepiece                                                  | Key formats                         |
+| ----- | ------------------------------------- | ------------------------------------------------------------ | ----------------------------------- |
+| **1** | **Foundations**                       |                                                              |                                     |
+| 1     | Why review code                       | Follow one change through a team with and without review and | Scroll story                        |
+| 2     | Anatomy of a good pull request        | Rebuild a vague pull request into one a reviewer can approve | Fix the problem                     |
+| 3     | The review flow                       | Step a pull request through drafts                           | Step through                        |
+| 4     | What to look for                      | Review a change in order of importance                       | Branching scenario                  |
+| **2** | **Authoring**                         |                                                              |                                     |
+| 5     | Small changes                         | Split one large change into a stack of small ones and watch  | Simulation                          |
+| 6     | Describing your change                | Write a pull request description by choosing what to include | Build connect                       |
+| 7     | Responding to feedback                | Answer a set of review comments                              | Branching scenario                  |
+| **3** | **Reviewing**                         |                                                              |                                     |
+| 8     | Reading a diff                        | Review a pull request in a smart order                       | Simulation                          |
+| 9     | Giving useful feedback                | Rewrite harsh or vague review comments into ones that are sp | Fix the problem                     |
+| 10    | Blocking issue or nit?                | Label a review's comments as blocking                        | Simulation                          |
+| 11    | Reviewing tests                       | Review the tests in a pull request and spot the ones that pa | Fix the problem                     |
+| 12    | Reviewing for security                | Review a change that handles user input and money            | Branching scenario                  |
+| **4** | **Process and tools**                 |                                                              |                                     |
+| 13    | Turnaround time                       | Simulate a week of pull requests with slow and fast reviews  | Simulation                          |
+| 14    | Choosing reviewers                    | Assign reviewers to a set of changes using ownership rules a | Simulation                          |
+| 15    | Automating the boring parts           | Move checks from human reviewers to CI                       | Build connect                       |
+| 16    | AI in code review                     | Compare AI review comments with a human's on the same change | Branching scenario                  |
+| **5** | **Culture**                           |                                                              |                                     |
+| 17    | Psychological safety                  | Replay a review thread in two team cultures and see who spea | Scroll story                        |
+| 18    | Resolving disagreements               | Work through three disagreements                             | Branching scenario                  |
+| 19    | Alternatives to pull requests         | Choose a review style for five different changes             | Branching scenario                  |
+| 20    | Measuring without gaming              | Pick metrics for a team's review process and watch which one | Simulation                          |
+| **6** | **Capstone**                          |                                                              |                                     |
+| 21    | Capstone: review a messy pull request | Review a realistic pull request end to end: read it in order | Branching scenario, Fix the problem |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -998,6 +1032,7 @@ Software development area, third track (started 2026-10-11). 22 modules in 7 cha
 | 4w. Git                    | Software development, first track, 22 modules                                           | Live: all 22 modules (2026-10-11)                                       |
 | 4x. Testing                | Software development, second track, 23 modules                                          | Live: all 23 modules (2026-10-11)                                       |
 | 4y. Clean Code             | Software development, third track, 22 modules                                           | Live: all 22 modules (2026-10-11)                                       |
+| 4z. Code Review            | Software development, fourth track, 21 modules                                          | In progress: 0 of 21 modules live                                       |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

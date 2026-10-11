@@ -111,6 +111,7 @@ export interface Track {
     | "branch"
     | "canopy"
     | "stone"
+    | "redline"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -8951,6 +8952,427 @@ const cleanCode: Track = {
   ],
 };
 
+const codeReview: Track = {
+  slug: "code-review",
+  title: "Code Review",
+  area: "Software development",
+  category: "software-development",
+  tagline: "Giving and receiving useful reviews.",
+  description:
+    "Code review from both sides of the pull request: why teams review and what research says it really achieves, the anatomy of a good pull request, the review flow, what to look for, keeping changes small, describing them well, responding to feedback, reading a diff, giving clear and kind feedback, telling blocking issues from nits, reviewing tests and security, turnaround time, choosing reviewers, automating the boring parts, AI review tools, psychological safety, resolving disagreements, alternatives such as pairing and ship/show/ask, and measuring review without gaming it. Platform-neutral: GitHub, GitLab, Bitbucket, Azure DevOps, Gerrit and Phabricator-style tools. By the end you can write changes that are easy to review and give reviews that make code and colleagues better.",
+  accent: "redline",
+  chapters: [
+    {
+      slug: "foundations",
+      title: "Foundations",
+      summary: "What review is for, and how it works.",
+      modules: [
+        {
+          slug: "why-review",
+          title: "Why review code",
+          summary: "More than catching bugs.",
+          minutes: 20,
+          signature:
+            "Follow one change through a team with and without review and see what each reviewer catches, learns and teaches",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "What review is for",
+            "Defects versus knowledge sharing",
+            "What review can't do",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "Code review means a colleague reads a change before it's merged. It catches some bugs, but its biggest benefits are shared understanding, consistent code and people learning from each other.",
+        },
+        {
+          slug: "anatomy-pr",
+          title: "Anatomy of a good pull request",
+          summary: "Make it easy to say yes.",
+          minutes: 20,
+          signature:
+            "Rebuild a vague pull request into one a reviewer can approve quickly: title, description, size, screenshots and tests",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Title and description",
+            "One purpose per change",
+            "Evidence: tests and screenshots",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-review"],
+          plain:
+            "A pull request is a proposed change plus the information a reviewer needs to judge it. A clear purpose, a good description and evidence that it works make the review fast and useful.",
+        },
+        {
+          slug: "review-flow",
+          title: "The review flow",
+          summary: "From open to merged.",
+          minutes: 20,
+          signature:
+            "Step a pull request through drafts, checks, comments, revisions and approval, and see where it usually waits",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Draft, ready, approved, merged",
+            "Required checks and approvals",
+            "Where reviews stall",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["anatomy-pr"],
+          plain:
+            "Most teams follow the same flow: open a change, let automated checks run, get reviews, revise, get approval and merge. Knowing the stages shows where time is lost.",
+        },
+        {
+          slug: "what-to-look-for",
+          title: "What to look for",
+          summary: "Design first, commas last.",
+          minutes: 25,
+          signature:
+            "Review a change in order of importance, from design and behaviour down to naming and style, and see which comments matter most",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Design and behaviour",
+            "Complexity, tests and naming",
+            "What to leave to tools",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["review-flow"],
+          plain:
+            "A good reviewer looks first at whether the change is the right thing done the right way, then at correctness, tests and clarity. Formatting is for tools, not people.",
+        },
+      ],
+    },
+    {
+      slug: "authoring",
+      title: "Authoring",
+      summary: "Making your changes easy to review.",
+      modules: [
+        {
+          slug: "small-changes",
+          title: "Small changes",
+          summary: "Smaller reviews, better reviews.",
+          minutes: 20,
+          signature:
+            "Split one large change into a stack of small ones and watch review quality and waiting time change",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Why size matters", "Splitting a change", "Stacked changes"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["anatomy-pr"],
+          plain:
+            "Reviewers find more problems in small changes and approve them faster. Splitting work into small, self-contained steps is the single biggest thing an author can do.",
+        },
+        {
+          slug: "describing-changes",
+          title: "Describing your change",
+          summary: "Context the diff can't show.",
+          minutes: 20,
+          signature:
+            "Write a pull request description by choosing what to include, and see what questions it answers before anyone asks",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "What, why and how to test",
+            "Self-review before asking",
+            "Linking issues and decisions",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["small-changes"],
+          plain:
+            "The diff shows what changed; only the author knows why. A short description of the problem, the approach and how to check it saves reviewers time and prevents misunderstandings.",
+        },
+        {
+          slug: "responding",
+          title: "Responding to feedback",
+          summary: "Not a verdict on you.",
+          minutes: 20,
+          signature:
+            "Answer a set of review comments, from agreeing and fixing to pushing back politely, and see how each reply lands",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: ["Assume good intent", "Agree, discuss or explain", "Closing the loop"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["describing-changes"],
+          plain:
+            "Review comments are about the code, not you. Good authors thank, fix what's right, explain or discuss what isn't, and make sure every thread is resolved.",
+        },
+      ],
+    },
+    {
+      slug: "reviewing",
+      title: "Reviewing",
+      summary: "Reading and commenting well.",
+      modules: [
+        {
+          slug: "reading-diffs",
+          title: "Reading a diff",
+          summary: "Where to start, and what to skip.",
+          minutes: 20,
+          signature:
+            "Review a pull request in a smart order, description, tests, then the core change, and compare with reading top to bottom",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Reading order", "Understanding before judging", "Running it yourself"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["what-to-look-for"],
+          plain:
+            "A diff is easier to understand in the right order: start with the purpose, look at the tests to see intended behaviour, then read the main change before the details.",
+        },
+        {
+          slug: "giving-feedback",
+          title: "Giving useful feedback",
+          summary: "Kind, clear and specific.",
+          minutes: 25,
+          signature:
+            "Rewrite harsh or vague review comments into ones that are specific, explain why and suggest a way forward",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Comment on the code, not the person",
+            "Explain why and suggest",
+            "Questions and praise",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["reading-diffs"],
+          plain:
+            "Useful comments say what the concern is, why it matters and what might fix it, in a tone that keeps people learning. Questions and genuine praise are part of good feedback too.",
+        },
+        {
+          slug: "severity",
+          title: "Blocking issue or nit?",
+          summary: "Say how much it matters.",
+          minutes: 20,
+          signature:
+            "Label a review's comments as blocking, suggestion, question or nit and see how much faster the author can act",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Labelling comments", "Approve with comments", "Conventional Comments"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["giving-feedback"],
+          plain:
+            "Not every comment must be fixed before merging. Saying clearly which are blocking and which are optional suggestions or nits helps authors prioritise and stops reviews dragging on.",
+        },
+        {
+          slug: "reviewing-tests",
+          title: "Reviewing tests",
+          summary: "Do the tests prove anything?",
+          minutes: 20,
+          signature:
+            "Review the tests in a pull request and spot the ones that pass but check nothing useful",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Tests as part of the change",
+            "Missing cases and weak assertions",
+            "Tests that test the mocks",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["reading-diffs"],
+          plain:
+            "Tests are code too, and they deserve review. Check that they cover the behaviour that changed, would fail if it broke, and are readable enough to explain the intent.",
+        },
+        {
+          slug: "security-review",
+          title: "Reviewing for security",
+          summary: "A second pair of eyes on risk.",
+          minutes: 25,
+          signature:
+            "Review a change that handles user input and money, and find the risks a functional review would miss",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Trust boundaries in a diff",
+            "A short security checklist",
+            "When to call in a specialist",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["reading-diffs"],
+          plain:
+            "Some problems only show up if a reviewer thinks like an attacker: unchecked input, missing permission checks, secrets in code. A short checklist helps every reviewer spot the common ones.",
+        },
+      ],
+    },
+    {
+      slug: "process",
+      title: "Process and tools",
+      summary: "Making review fast and fair.",
+      modules: [
+        {
+          slug: "turnaround",
+          title: "Turnaround time",
+          summary: "Waiting is the hidden cost.",
+          minutes: 20,
+          signature:
+            "Simulate a week of pull requests with slow and fast reviews and watch work pile up while people wait",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Review latency", "Response time targets", "Interruptions versus waiting"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["review-flow"],
+          plain:
+            "Every hour a change waits for review, its author context-switches and work piles up. Teams that respond quickly, even with a short first reply, ship faster and review better.",
+        },
+        {
+          slug: "reviewers",
+          title: "Choosing reviewers",
+          summary: "Who, and how many?",
+          minutes: 20,
+          signature:
+            "Assign reviewers to a set of changes using ownership rules and see what happens with too few, too many or the wrong people",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Code owners", "How many reviewers", "Spreading knowledge"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["turnaround"],
+          plain:
+            "The right reviewer knows the code or needs to learn it. Ownership files route changes automatically, and one or two engaged reviewers usually beat five who each assume someone else looked.",
+        },
+        {
+          slug: "review-automation",
+          title: "Automating the boring parts",
+          summary: "Let machines check what they can.",
+          minutes: 20,
+          signature:
+            "Move checks from human reviewers to CI, formatters, linters and bots, and watch what's left for people",
+          formats: ["build-connect", "checkpoint"],
+          concepts: ["Checks before humans", "Bots and templates", "Required status checks"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["what-to-look-for"],
+          plain:
+            "Anything a machine can check reliably, like formatting, tests and dependency updates, should be checked before a human looks. Reviewers can then spend their attention on design and meaning.",
+        },
+        {
+          slug: "ai-review",
+          title: "AI in code review",
+          summary: "A tireless, fallible first pass.",
+          minutes: 20,
+          signature:
+            "Compare AI review comments with a human's on the same change and decide which to act on",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "What AI reviewers catch",
+            "False positives and missed context",
+            "Keeping humans accountable",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["review-automation"],
+          plain:
+            "AI tools can now comment on pull requests. They catch some mistakes quickly but also miss context and make confident wrong suggestions, so a human still owns the decision.",
+        },
+      ],
+    },
+    {
+      slug: "culture",
+      title: "Culture",
+      summary: "Reviews that make teams better.",
+      modules: [
+        {
+          slug: "psychological-safety",
+          title: "Psychological safety",
+          summary: "Safe to ask, safe to be wrong.",
+          minutes: 20,
+          signature:
+            "Replay a review thread in two team cultures and see who speaks up, who learns and what gets missed",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "Why safety matters",
+            "Review tone and power",
+            "Reviewing juniors and seniors",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["giving-feedback"],
+          plain:
+            "People learn and speak up when they don't fear being judged. Review culture, from tone to who reviews whom, decides whether reviews teach or silence.",
+        },
+        {
+          slug: "disagreements",
+          title: "Resolving disagreements",
+          summary: "When author and reviewer don't agree.",
+          minutes: 20,
+          signature:
+            "Work through three disagreements, from style preference to design, and choose how to settle each",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Facts, principles and preferences",
+            "Talking instead of typing",
+            "Escalating fairly",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["responding"],
+          plain:
+            "Disagreements are normal. Settle them with facts and agreed principles where you can, move long threads to a conversation, and have a fair way to decide when you can't agree.",
+        },
+        {
+          slug: "alternatives",
+          title: "Alternatives to pull requests",
+          summary: "Pairing, mobbing and ship/show/ask.",
+          minutes: 20,
+          signature:
+            "Choose a review style for five different changes, from pairing to merging and reviewing after, and see the trade-offs",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: ["Pair and mob programming", "Ship, show, ask", "Trunk-based teams and review"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["turnaround"],
+          plain:
+            "Waiting for a pull request review isn't the only option. Pairing reviews as you write, and some teams merge small safe changes first and review after. The goal is the same: two minds on every change.",
+        },
+        {
+          slug: "review-metrics",
+          title: "Measuring without gaming",
+          summary: "Numbers that help, not hurt.",
+          minutes: 20,
+          signature:
+            "Pick metrics for a team's review process and watch which ones improve flow and which ones get gamed",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Flow metrics: time to first review, time to merge",
+            "Why counting comments backfires",
+            "Using metrics to ask questions",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["turnaround"],
+          plain:
+            "Measuring how long changes wait can reveal bottlenecks. Measuring people by comments made or bugs found invites gaming and hurts trust. Use numbers to ask better questions, not to rank anyone.",
+        },
+      ],
+    },
+    {
+      slug: "capstone",
+      title: "Capstone",
+      summary: "Put it all together.",
+      modules: [
+        {
+          slug: "capstone-review",
+          title: "Capstone: review a messy pull request",
+          summary: "From first read to merge.",
+          minutes: 35,
+          signature:
+            "Review a realistic pull request end to end: read it in order, write clear comments with severity, handle the author's replies and decide when it's ready",
+          formats: ["branching-scenario", "fix-the-problem"],
+          concepts: [
+            "A complete review",
+            "Balancing thoroughness and speed",
+            "Leaving the author better off",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["severity"],
+          plain:
+            "This capstone brings the track together. You review a messy change from start to finish, write useful comments, handle the author's responses, and decide what must change before it merges.",
+        },
+      ],
+    },
+  ],
+};
+
 const playground: Track = {
   slug: "playground",
   title: "Toolkit playground",
@@ -13131,6 +13553,7 @@ export const tracks: Track[] = [
   git,
   testing,
   cleanCode,
+  codeReview,
   playground,
 ];
 
@@ -13326,7 +13749,7 @@ export const categories: Category[] = [
       { title: "Mobile", blurb: "Native and cross-platform apps." },
       { title: "Testing", slug: "testing", blurb: "What to test, at which level, and why." },
       { title: "Clean Code", slug: "clean-code", blurb: "Code other people can read and change." },
-      { title: "Code Review", blurb: "Giving and receiving useful reviews." },
+      { title: "Code Review", slug: "code-review", blurb: "Giving and receiving useful reviews." },
       { title: "Git", slug: "git", blurb: "Commits, branches and history, understood." },
     ],
   },
