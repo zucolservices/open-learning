@@ -198,4 +198,16 @@ export const gitTrack = {
       "A file listing who owns which paths in a repository, so the platform can automatically request their review.",
     module: "pull-requests",
   },
+  "branching-strategy": {
+    term: "Branching strategy",
+    definition:
+      "A team's agreement about how branches are used, such as GitFlow, GitHub flow or trunk-based development.",
+    module: "branching-strategies",
+  },
+  "feature-flag": {
+    term: "Feature flag",
+    definition:
+      "A switch in the code that turns a feature on or off without a new deploy, so unfinished work can be merged but hidden.",
+    module: "branching-strategies",
+  },
 } satisfies Record<string, GlossaryEntry>;

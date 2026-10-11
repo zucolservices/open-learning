@@ -7751,11 +7751,12 @@ const git: Track = {
             "GitHub flow",
             "Trunk-based development and feature flags",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["pull-requests"],
           plain:
             "Teams agree on how branches are used: long-lived release and develop branches, short feature branches off main, or everyone merging small changes into one trunk every day. The choice shapes how often you integrate and release.",
+          terms: ["branching-strategy", "feature-flag", "branch", "pull-request"],
         },
         {
           slug: "commit-hygiene",
