@@ -9098,11 +9098,12 @@ const codeReview: Track = {
             "Answer a set of review comments, from agreeing and fixing to pushing back politely, and see how each reply lands",
           formats: ["branching-scenario", "checkpoint"],
           concepts: ["Assume good intent", "Agree, discuss or explain", "Closing the loop"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["describing-changes"],
           plain:
             "Review comments are about the code, not you. Good authors thank, fix what's right, explain or discuss what isn't, and make sure every thread is resolved.",
+          terms: ["review-thread", "code-review"],
         },
       ],
     },
