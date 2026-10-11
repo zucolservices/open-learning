@@ -7577,11 +7577,12 @@ const git: Track = {
             "HEAD and detached HEAD",
             "Reading git log as a graph",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["three-areas"],
           plain:
             "Each commit records a snapshot, its author and message, and a pointer to its parent commit. Following those pointers backwards is the history. HEAD marks where you are now.",
+          terms: ["commit", "parent-commit", "head", "detached-head"],
         },
       ],
     },

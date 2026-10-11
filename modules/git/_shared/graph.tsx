@@ -44,8 +44,8 @@ export function CommitGraph({
     <div className={cn("overflow-x-auto", className)}>
       <svg
         viewBox={`0 0 ${W} ${H}`}
-        style={{ minWidth: Math.min(W, 640) }}
-        className="w-full"
+        width={Math.round(W * 1.7)}
+        className="mx-auto h-auto max-w-none sm:max-w-full"
         fill="none"
       >
         {all.flatMap((c) =>
@@ -79,6 +79,7 @@ export function CommitGraph({
               opacity={gone ? 0.35 : 1}
             >
               <title>{`${c.id} ${c.msg}`}</title>
+              <circle cx={x} cy={y} r={9} className="fill-surface" />
               <circle
                 cx={x}
                 cy={y}
@@ -104,7 +105,7 @@ export function CommitGraph({
               {(labels[c.id] ?? []).map((b, i) => (
                 <g key={b} transform={`translate(${x + 12}, ${y - 16 - i * 13})`}>
                   <rect
-                    width={b.length * 5.4 + (b === cur ? 26 : 8)}
+                    width={b.length * 5.2 + (b === cur ? 34 : 9)}
                     height={11}
                     rx={3}
                     className={b === cur ? "fill-accent" : "fill-surface-2 stroke-line-strong"}

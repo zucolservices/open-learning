@@ -72,4 +72,22 @@ export const gitTrack = {
       "One block of changed lines in a file. git add -p lets you stage changes hunk by hunk.",
     module: "three-areas",
   },
+  "parent-commit": {
+    term: "Parent commit",
+    definition:
+      "The commit a new commit was made on top of. Each commit stores its parent's ID; a merge commit has two.",
+    module: "commits-history",
+  },
+  head: {
+    term: "HEAD",
+    definition:
+      "Git's marker for where you are: usually the name of the current branch, or a commit ID when detached.",
+    module: "commits-history",
+  },
+  "detached-head": {
+    term: "Detached HEAD",
+    definition:
+      "When HEAD points straight at a commit instead of a branch, for example after checking out an old commit.",
+    module: "commits-history",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -516,4 +516,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "git/why-git": () => import("./git/why-git"),
   "git/snapshots": () => import("./git/snapshots"),
   "git/three-areas": () => import("./git/three-areas"),
+  "git/commits-history": () => import("./git/commits-history"),
 };

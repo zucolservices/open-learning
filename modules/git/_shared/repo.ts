@@ -51,7 +51,9 @@ export const currentBranch = (r: Repo): string | null =>
 
 function laneNow(r: Repo): number {
   const b = currentBranch(r);
-  return b ? (r.lanes[b] ?? 0) : (r.commits[headCommit(r)]?.lane ?? 0);
+  if (b) return r.lanes[b] ?? 0;
+  // detached HEAD: its own lane below every branch, so it never looks like part of one
+  return Math.max(0, ...Object.values(r.lanes)) + 1;
 }
 
 function add(r: Repo, parents: string[], msg: string, lane: number): [Repo, string] {
