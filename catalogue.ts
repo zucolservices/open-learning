@@ -8825,11 +8825,12 @@ const cleanCode: Track = {
             "The refactoring catalogue",
             "Tests as the safety net",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["code-smells"],
           plain:
             "Refactoring means improving code's structure without changing what it does, in small steps, checking with tests after each. It's how clean code stays clean.",
+          terms: ["refactoring", "code-smell"],
         },
         {
           slug: "technical-debt",

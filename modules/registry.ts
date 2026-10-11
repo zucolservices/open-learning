@@ -574,4 +574,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "clean-code/null-safety": () => import("./clean-code/null-safety"),
   "clean-code/types-as-docs": () => import("./clean-code/types-as-docs"),
   "clean-code/code-smells": () => import("./clean-code/code-smells"),
+  "clean-code/refactoring": () => import("./clean-code/refactoring"),
 };
