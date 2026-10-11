@@ -9220,11 +9220,12 @@ const codeReview: Track = {
             "Simulate a week of pull requests with slow and fast reviews and watch work pile up while people wait",
           formats: ["simulation", "checkpoint"],
           concepts: ["Review latency", "Response time targets", "Interruptions versus waiting"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["review-flow"],
           plain:
             "Every hour a change waits for review, its author context-switches and work piles up. Teams that respond quickly, even with a short first reply, ship faster and review better.",
+          terms: ["review-latency", "pull-request", "code-review"],
         },
         {
           slug: "reviewers",

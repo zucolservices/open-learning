@@ -80,4 +80,10 @@ export const codeReviewTrack = {
       "A test that passes whether or not the code is correct, for example because it asserts nothing, checks only a type, or tests a stub instead of the real code.",
     module: "reviewing-tests",
   },
+  "review-latency": {
+    term: "Review latency",
+    definition:
+      "How long a change waits for a reviewer to respond. Usually much longer than the review itself, and a major cause of slow delivery.",
+    module: "turnaround",
+  },
 } satisfies Record<string, GlossaryEntry>;
