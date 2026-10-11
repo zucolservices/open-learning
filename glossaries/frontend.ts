@@ -122,4 +122,22 @@ export const frontendTrack = {
       "Running a component again with new state or props so the framework can work out what on screen should change.",
     module: "state",
   },
+  reactivity: {
+    term: "Reactivity",
+    definition:
+      "How a framework notices that state changed and updates the parts of the page that depend on it.",
+    module: "reactivity",
+  },
+  "virtual-dom": {
+    term: "Virtual DOM",
+    definition:
+      "A lightweight description of the UI that a framework like React rebuilds on each change and compares with the previous one, applying only the differences to the real page.",
+    module: "reactivity",
+  },
+  signals: {
+    term: "Signals",
+    definition:
+      "Reactive values that remember who read them, so a change updates exactly those places without re-running whole components.",
+    module: "reactivity",
+  },
 } satisfies Record<string, GlossaryEntry>;

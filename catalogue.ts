@@ -9529,11 +9529,12 @@ const frontend: Track = {
             "Update the same counter in a virtual-DOM, a signals and a compiled framework and compare how much work each does",
           formats: ["simulation", "checkpoint"],
           concepts: ["Virtual DOM diffing", "Fine-grained signals", "Compile-time reactivity"],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["state"],
           plain:
             "Frameworks differ in how they find what changed: React compares virtual trees, Solid and others track signals, Svelte compiles updates ahead of time. Each trades simplicity for speed differently.",
+          terms: ["reactivity", "virtual-dom", "signals", "re-render"],
         },
         {
           slug: "forms",

@@ -607,4 +607,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "frontend/event-loop": () => import("./frontend/event-loop"),
   "frontend/components": () => import("./frontend/components"),
   "frontend/state": () => import("./frontend/state"),
+  "frontend/reactivity": () => import("./frontend/reactivity"),
 };
