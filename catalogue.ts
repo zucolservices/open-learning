@@ -7959,11 +7959,12 @@ const git: Track = {
             "Choosing undo vs rewrite",
             "Team conventions that prevent trouble",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["hooks"],
           plain:
             "This capstone brings the track together. A team's repository is in trouble after a force-push; you recover the lost work, tidy the history, and set up the branch rules and hooks that keep it healthy.",
+          terms: ["force-push", "reflog", "revert", "branch-protection"],
         },
       ],
     },

@@ -534,4 +534,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "git/monorepos-submodules": () => import("./git/monorepos-submodules"),
   "git/signing-secrets": () => import("./git/signing-secrets"),
   "git/hooks": () => import("./git/hooks"),
+  "git/capstone-git": () => import("./git/capstone-git"),
 };

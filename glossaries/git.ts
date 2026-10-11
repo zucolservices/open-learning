@@ -322,4 +322,10 @@ export const gitTrack = {
       "A script Git runs automatically at a moment like committing or pushing. Client hooks run on your machine and can be skipped; server hooks can't.",
     module: "hooks",
   },
+  "branch-protection": {
+    term: "Branch protection",
+    definition:
+      "Rules a hosting service enforces on important branches, such as blocking force pushes or requiring a reviewed pull request and passing checks before merging.",
+    module: "capstone-git",
+  },
 } satisfies Record<string, GlossaryEntry>;
