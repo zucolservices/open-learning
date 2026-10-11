@@ -9513,11 +9513,12 @@ const frontend: Track = {
             "Change state in a cart and watch which components re-render, then remove duplicated state that drifts out of sync",
           formats: ["simulation", "checkpoint"],
           concepts: ["State versus props", "Derived values", "Declarative UI"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["components"],
           plain:
             "State is data that changes over time, like what's in a cart. Frameworks redraw the UI from state, so keeping one source of truth avoids screens that disagree with themselves.",
+          terms: ["ui-state", "re-render", "props"],
         },
         {
           slug: "reactivity",

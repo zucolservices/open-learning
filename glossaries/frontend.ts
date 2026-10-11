@@ -110,4 +110,16 @@ export const frontendTrack = {
       "Data passes down from parent to child as props; children ask for changes by calling functions their parent gave them.",
     module: "components",
   },
+  "ui-state": {
+    term: "State",
+    definition:
+      "Data in an interface that changes over time, such as the items in a cart or whether a menu is open. Changing it updates the screen.",
+    module: "state",
+  },
+  "re-render": {
+    term: "Re-render",
+    definition:
+      "Running a component again with new state or props so the framework can work out what on screen should change.",
+    module: "state",
+  },
 } satisfies Record<string, GlossaryEntry>;
