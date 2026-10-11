@@ -130,7 +130,7 @@ export const backendArtB: ArtMap = {
         </g>
       ))}
       <text x={14} y={92} className={T}>
-        push, don't poll
+        push, don&apos;t poll
       </text>
     </>
   ),
