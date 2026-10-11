@@ -528,4 +528,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "git/commit-hygiene": () => import("./git/commit-hygiene"),
   "git/undoing": () => import("./git/undoing"),
   "git/reflog": () => import("./git/reflog"),
+  "git/stash-worktrees": () => import("./git/stash-worktrees"),
 };

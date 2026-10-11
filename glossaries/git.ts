@@ -246,4 +246,16 @@ export const gitTrack = {
       "A commit that no branch, tag or HEAD can reach by following parents. Git keeps it for a while, then cleans it up.",
     module: "reflog",
   },
+  stash: {
+    term: "Stash",
+    definition:
+      "A shelf for uncommitted changes: git stash saves them and cleans the working tree; git stash pop brings them back.",
+    module: "stash-worktrees",
+  },
+  worktree: {
+    term: "Worktree",
+    definition:
+      "An extra working folder attached to the same repository, checked out on a different branch.",
+    module: "stash-worktrees",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -7834,11 +7834,12 @@ const git: Track = {
             "Applying and dropping stashes",
             "Several working trees from one repository",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["reflog"],
           plain:
             "Stash shelves uncommitted changes so you can switch branches cleanly and bring them back later. Worktrees let you check out a second branch in another folder at the same time, sharing one repository.",
+          terms: ["stash", "worktree", "working-tree", "branch"],
         },
         {
           slug: "bisect-blame",
