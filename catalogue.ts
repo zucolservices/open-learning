@@ -10211,11 +10211,12 @@ const backend: Track = {
             "Limits per user and per key",
             "Backpressure and load shedding",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["concurrency"],
           plain:
             "A service can't do unlimited work. Rate limits share capacity fairly, and backpressure rejects excess work early so the service stays up for everyone else.",
+          terms: ["rate-limit", "token-bucket"],
         },
         {
           slug: "resilience",

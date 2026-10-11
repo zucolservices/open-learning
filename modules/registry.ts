@@ -640,4 +640,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "backend/webhooks-events": () => import("./backend/webhooks-events"),
   "backend/live-updates": () => import("./backend/live-updates"),
   "backend/file-uploads": () => import("./backend/file-uploads"),
+  "backend/rate-limiting": () => import("./backend/rate-limiting"),
 };
