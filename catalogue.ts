@@ -9900,11 +9900,12 @@ const backend: Track = {
             "Event loops and async/await",
             "Goroutines and virtual threads",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["http-servers"],
           plain:
             "Servers handle many requests at once in different ways: a thread each, one event loop, or many lightweight threads. Each copes differently with slow databases and heavy computation.",
+          terms: ["concurrency", "thread", "event-loop-server"],
         },
       ],
     },
