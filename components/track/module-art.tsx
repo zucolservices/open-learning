@@ -40,6 +40,8 @@ import { dpdpActArtA } from "./art/dpdp-act-a";
 import { dpdpActArtB } from "./art/dpdp-act-b";
 import { gitArtA } from "./art/git-a";
 import { gitArtB } from "./art/git-b";
+import { testingArtA } from "./art/testing-a";
+import { testingArtB } from "./art/testing-b";
 
 /**
  * One small illustration per module (viewBox 160 × 100), drawn with the
@@ -1099,6 +1101,8 @@ const all: ArtMap = {
   ...dpdpActArtB,
   ...gitArtA,
   ...gitArtB,
+  ...testingArtA,
+  ...testingArtB,
 };
 
 /** Art is keyed by slug; a "track/slug" key wins, for slugs used in more than one track. */

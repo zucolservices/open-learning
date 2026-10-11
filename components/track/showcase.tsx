@@ -44,6 +44,8 @@ import { DpdpActScene } from "@/components/home/dpdp-act-scene";
 import { DpdpActTaste } from "@/components/home/dpdp-act-taste";
 import { GitScene } from "@/components/home/git-scene";
 import { GitTaste } from "@/components/home/git-taste";
+import { TestingScene } from "@/components/home/testing-scene";
+import { TestingTaste } from "@/components/home/testing-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -236,5 +238,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: GitTaste,
     tasteCaption:
       "A taste of modules 6 and 8: merge or rebase a feature branch and watch the commit graph change.",
+  },
+  testing: {
+    Scene: TestingScene,
+    sceneCaption:
+      "The safety nets around every change: well-chosen unit, integration and end-to-end tests, checks on the tests themselves, CI, exploration and gradual rollout. Watch the tour, or click any part.",
+    Taste: TestingTaste,
+    tasteCaption:
+      "A taste of module 14: tick tests and watch planted bugs die. Any bug that survives would slip past your tests.",
   },
 };
