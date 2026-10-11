@@ -44,4 +44,10 @@ export const backendTrack = {
       "In hexagonal and clean architectures, code may depend only on code closer to the centre: business rules never depend on frameworks, databases or HTTP.",
     module: "project-structure",
   },
+  middleware: {
+    term: "Middleware",
+    definition:
+      "Code that wraps every request on its way to the handler and every response on the way back, used for logging, authentication, CORS, compression and similar shared concerns.",
+    module: "middleware",
+  },
 } satisfies Record<string, GlossaryEntry>;

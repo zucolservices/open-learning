@@ -9939,11 +9939,12 @@ const backend: Track = {
             "Arrange logging, authentication, rate limiting, compression and error handling in a pipeline and see what breaks in the wrong order",
           formats: ["build-connect", "checkpoint"],
           concepts: ["What middleware is", "Order matters", "Cross-cutting concerns"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["project-structure"],
           plain:
             "Middleware wraps every request with shared behaviour such as logging, authentication and compression. The order they run in changes what each one sees.",
+          terms: ["middleware", "handler"],
         },
         {
           slug: "validation-errors",
