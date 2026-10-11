@@ -44,4 +44,16 @@ export const cleanCodeTrack = {
       "A comment attached to a function or class that describes what callers can rely on, such as a Python docstring or a Javadoc block. Tools turn them into reference documentation.",
     module: "comments",
   },
+  formatter: {
+    term: "Formatter",
+    definition:
+      "A tool that rewrites code's layout (spacing, line breaks, quotes) to one consistent style without changing what it does, such as Prettier, Black or gofmt.",
+    module: "formatting",
+  },
+  linter: {
+    term: "Linter",
+    definition:
+      "A tool that reads code and flags patterns that are likely mistakes or confusing, such as unused variables or risky comparisons. ESLint, Ruff and Clippy are linters.",
+    module: "formatting",
+  },
 } satisfies Record<string, GlossaryEntry>;

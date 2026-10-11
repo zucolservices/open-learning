@@ -8588,11 +8588,12 @@ const cleanCode: Track = {
             "Feed messy code through a formatter and a linter, then see how much of a code review disappears",
           formats: ["simulation", "checkpoint"],
           concepts: ["Automatic formatters", "Linters and their rules", "Style guides"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["why-readable"],
           plain:
             "Consistent formatting makes code easier to scan. Modern teams let tools like Prettier, Black, gofmt and rustfmt format code automatically, so people stop debating it.",
+          terms: ["formatter", "linter"],
         },
         {
           slug: "simplicity",

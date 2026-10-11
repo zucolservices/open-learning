@@ -562,4 +562,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "clean-code/naming": () => import("./clean-code/naming"),
   "clean-code/functions": () => import("./clean-code/functions"),
   "clean-code/comments": () => import("./clean-code/comments"),
+  "clean-code/formatting": () => import("./clean-code/formatting"),
 };

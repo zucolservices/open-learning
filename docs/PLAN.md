@@ -997,7 +997,7 @@ Software development area, third track (started 2026-10-11). 22 modules in 7 cha
 | 4v. DPDP Act               | Security & government, second track, 22 modules                                         | Live: all 22 modules (2026-10-08)                                       |
 | 4w. Git                    | Software development, first track, 22 modules                                           | Live: all 22 modules (2026-10-11)                                       |
 | 4x. Testing                | Software development, second track, 23 modules                                          | Live: all 23 modules (2026-10-11)                                       |
-| 4y. Clean Code             | Software development, third track, 22 modules                                           | In progress: 4 of 22 modules live                                       |
+| 4y. Clean Code             | Software development, third track, 22 modules                                           | In progress: 5 of 22 modules live                                       |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
