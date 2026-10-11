@@ -8189,11 +8189,12 @@ const testing: Track = {
             "Provider verification",
             "Schemas versus contracts",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["integration-tests"],
           plain:
             "When two services talk over an API, a contract test records what the consumer expects and checks the provider still delivers it, so teams can deploy separately without running everything together.",
+          terms: ["contract-test"],
         },
         {
           slug: "ui-tests",

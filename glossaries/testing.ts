@@ -91,4 +91,10 @@ export const testingTrack = {
       "The fixed setup a test relies on, such as sample data or objects created before it runs. Shared fixtures that tests change make results depend on run order.",
     module: "readable-tests",
   },
+  "contract-test": {
+    term: "Contract test",
+    definition:
+      "A test that checks two services still agree on how they talk. In consumer-driven contracts, the consumer records what it needs from an API and the provider verifies every change against it.",
+    module: "contract-tests",
+  },
 } satisfies Record<string, GlossaryEntry>;
