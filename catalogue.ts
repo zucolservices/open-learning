@@ -8142,11 +8142,12 @@ const testing: Track = {
             "Tests that drive design",
             "When TDD helps and when it doesn't",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["readable-tests"],
           plain:
             "In test-driven development you write a failing test first, then just enough code to pass it, then tidy up. Repeating that small loop keeps code tested and simple, and makes you think about how code is used before you write it.",
+          terms: ["tdd", "regression"],
         },
       ],
     },
