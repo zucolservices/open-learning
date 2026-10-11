@@ -218,4 +218,16 @@ export const frontendTrack = {
       'Pages that are mostly static HTML with small interactive "islands" that each load their own JavaScript, so most of the page needs none.',
     module: "hydration",
   },
+  "core-web-vitals": {
+    term: "Core Web Vitals",
+    definition:
+      "Three measures of real-user experience: Largest Contentful Paint (loading), Interaction to Next Paint (responsiveness) and Cumulative Layout Shift (visual stability).",
+    module: "web-vitals",
+  },
+  p75: {
+    term: "75th percentile",
+    definition:
+      "The value that three out of four measurements are at or better than. Core Web Vitals judge a page by its 75th-percentile visit.",
+    module: "web-vitals",
+  },
 } satisfies Record<string, GlossaryEntry>;

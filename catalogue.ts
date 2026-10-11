@@ -9690,11 +9690,12 @@ const frontend: Track = {
             "Load a page and watch LCP, INP and CLS change as you fix a slow hero image, a long task and a jumping banner",
           formats: ["fix-the-problem", "checkpoint"],
           concepts: ["LCP, INP and CLS", "Lab versus field data", "Thresholds and percentiles"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["how-browsers-work"],
           plain:
             'Core Web Vitals measure loading, responsiveness and visual stability as real users experience them. They turn "it feels slow" into numbers you can improve.',
+          terms: ["core-web-vitals", "p75", "long-task"],
         },
         {
           slug: "shipping-less-js",
