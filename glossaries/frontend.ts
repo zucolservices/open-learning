@@ -164,4 +164,10 @@ export const frontendTrack = {
       "Data that lives on a server and is copied into the page, so it can go stale. Libraries like TanStack Query cache and refresh it.",
     module: "data-fetching",
   },
+  "state-store": {
+    term: "Store",
+    definition:
+      "A place outside components that holds shared client state, letting any component read or update just the parts it needs. Examples: Zustand, Redux Toolkit, Pinia.",
+    module: "state-management",
+  },
 } satisfies Record<string, GlossaryEntry>;

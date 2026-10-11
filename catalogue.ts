@@ -9592,11 +9592,12 @@ const frontend: Track = {
             "Decide where each piece of state in an app should live, from a component to context, a store, the URL or the server cache",
           formats: ["branching-scenario", "checkpoint"],
           concepts: ["Lifting state up", "Context and stores", "URL and server state"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["data-fetching"],
           plain:
             "Not all state belongs in a global store. Keep it as close as possible to where it's used, put shareable things in the URL, and let a data library own server data.",
+          terms: ["state-store", "ui-state", "server-state"],
         },
         {
           slug: "routing",
