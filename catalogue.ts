@@ -10413,11 +10413,12 @@ const mobile: Track = {
             "Back behaviour on each platform",
             "Deep links, universal links and app links",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["declarative-ui"],
           plain:
             "Mobile apps move between screens in stacks and tabs. Links from emails or the web can open a specific screen, if the app and website are set up to trust each other.",
+          terms: ["navigation-stack", "deep-link", "predictive-back"],
         },
         {
           slug: "touch-gestures",

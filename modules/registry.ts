@@ -649,4 +649,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "mobile/native-vs-cross": () => import("./mobile/native-vs-cross"),
   "mobile/app-lifecycle": () => import("./mobile/app-lifecycle"),
   "mobile/declarative-ui": () => import("./mobile/declarative-ui"),
+  "mobile/navigation-mobile": () => import("./mobile/navigation-mobile"),
 };

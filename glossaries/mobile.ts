@@ -56,4 +56,22 @@ export const mobileTrack = {
       "Re-running the parts of a declarative UI that read some state after that state changes, while skipping parts whose inputs didn't change. The word comes from Jetpack Compose.",
     module: "declarative-ui",
   },
+  "navigation-stack": {
+    term: "Navigation stack",
+    definition:
+      "The pile of screens you've opened inside an app or tab. Opening a screen puts it on top; Back takes the top one off.",
+    module: "navigation-mobile",
+  },
+  "deep-link": {
+    term: "Deep link",
+    definition:
+      "A link that opens a specific screen inside an app, such as one order, rather than just launching the app. Verified versions are Universal Links on iOS and App Links on Android.",
+    module: "navigation-mobile",
+  },
+  "predictive-back": {
+    term: "Predictive back",
+    definition:
+      "Android's back gesture that previews where Back will go as you swipe, so you can cancel. On by default for apps targeting Android 16.",
+    module: "navigation-mobile",
+  },
 } satisfies Record<string, GlossaryEntry>;
