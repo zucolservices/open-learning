@@ -104,4 +104,16 @@ export const cleanCodeTrack = {
       "Five object-oriented design principles: single responsibility, open–closed, Liskov substitution, interface segregation and dependency inversion. Useful guides, not laws.",
     module: "solid",
   },
+  inheritance: {
+    term: "Inheritance",
+    definition:
+      "Creating a new class by extending an existing one, so it gets the parent's code and can override parts. The child depends on the parent's internals.",
+    module: "composition",
+  },
+  composition: {
+    term: "Composition",
+    definition:
+      "Building an object out of smaller objects that each do one job, and combining them, instead of extending a parent class.",
+    module: "composition",
+  },
 } satisfies Record<string, GlossaryEntry>;

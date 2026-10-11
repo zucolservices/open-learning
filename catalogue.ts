@@ -8699,11 +8699,12 @@ const cleanCode: Track = {
             "Composition and interfaces",
             "When inheritance fits",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["cohesion-coupling"],
           plain:
             "Inheritance shares code through a family tree of classes, which gets rigid as options multiply. Composition builds objects from small parts, so new combinations don't need new classes.",
+          terms: ["inheritance", "composition"],
         },
         {
           slug: "boundaries",
