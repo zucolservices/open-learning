@@ -8272,11 +8272,12 @@ const testing: Track = {
             "Mutation score",
             "Equivalent mutants and cost",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["coverage"],
           plain:
             "Mutation testing deliberately breaks your code in small ways, such as flipping a > to >=, and reruns the tests. If no test fails, that bug could slip through: your tests have a blind spot.",
+          terms: ["mutation-testing", "code-coverage"],
         },
         {
           slug: "flaky-tests",

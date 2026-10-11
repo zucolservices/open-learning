@@ -121,4 +121,10 @@ export const testingTrack = {
       "A measure of which parts of the code ran while the tests ran: lines, branches or conditions. It shows what was executed, not what was checked.",
     module: "coverage",
   },
+  "mutation-testing": {
+    term: "Mutation testing",
+    definition:
+      "Checking how good tests are by planting small bugs (mutants) in the code and seeing whether any test fails. A mutant no test catches reveals a gap.",
+    module: "mutation-testing",
+  },
 } satisfies Record<string, GlossaryEntry>;
