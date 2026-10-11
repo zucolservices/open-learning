@@ -9319,11 +9319,12 @@ const codeReview: Track = {
             "Talking instead of typing",
             "Escalating fairly",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["responding"],
           plain:
             "Disagreements are normal. Settle them with facts and agreed principles where you can, move long threads to a conversation, and have a fair way to decide when you can't agree.",
+          terms: ["review-thread", "codeowners", "review-comment"],
         },
         {
           slug: "alternatives",
