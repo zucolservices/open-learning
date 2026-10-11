@@ -8082,11 +8082,12 @@ const testing: Track = {
             "Fast, isolated and repeatable",
             "Testing behaviour, not implementation",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["anatomy"],
           plain:
             "A unit test checks one small piece of code, such as a function or class, on its own. Good unit tests run in milliseconds, give the same answer every time, and test what the code does rather than how it does it.",
+          terms: ["unit-test", "test-runner"],
         },
         {
           slug: "test-doubles",
