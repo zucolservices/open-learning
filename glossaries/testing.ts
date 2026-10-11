@@ -169,4 +169,16 @@ export const testingTrack = {
       "A place where you can change what code does for a test without editing the code around it, such as passing the clock in as a parameter.",
     module: "legacy-code",
   },
+  "exploratory-testing": {
+    term: "Exploratory testing",
+    definition:
+      "A person testing software by deliberately probing it with a mission, learning as they go and steering by what they find, rather than following a fixed script.",
+    module: "exploratory",
+  },
+  charter: {
+    term: "Charter",
+    definition:
+      "The mission for an exploratory testing session, such as “Explore booking with interruptions to discover lost bookings”.",
+    module: "exploratory",
+  },
 } satisfies Record<string, GlossaryEntry>;

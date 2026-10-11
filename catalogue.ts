@@ -8426,11 +8426,12 @@ const testing: Track = {
             "Heuristics for finding bugs",
             "Automated checks versus human testing",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["choosing-cases"],
           plain:
             "Automated tests only check what someone thought to write down. Exploratory testing is a person deliberately probing the software, learning as they go, to find the surprises.",
+          terms: ["exploratory-testing", "charter"],
         },
         {
           slug: "testing-in-production",
