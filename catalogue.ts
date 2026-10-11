@@ -10251,11 +10251,12 @@ const backend: Track = {
             "Liveness and readiness",
             "Graceful shutdown",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["middleware"],
           plain:
             "A running service must explain itself and cooperate with its platform. Structured logs with request IDs, honest health checks and graceful shutdown make deploys and incidents calm.",
+          terms: ["structured-logging", "health-check", "graceful-shutdown"],
         },
         {
           slug: "deploying-backend",

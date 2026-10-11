@@ -134,4 +134,22 @@ export const backendTrack = {
       "A guard around calls to another service that stops calling it for a while after repeated failures, failing fast instead, then lets a test call through to see if it has recovered.",
     module: "resilience",
   },
+  "structured-logging": {
+    term: "Structured logging",
+    definition:
+      "Writing log entries as fields (usually JSON), such as time, level, message and request ID, so they can be searched and joined rather than read as free text.",
+    module: "logs-health",
+  },
+  "health-check": {
+    term: "Health check",
+    definition:
+      "An endpoint or probe the platform calls to ask whether a service is alive (restart it if not) or ready (send it traffic only if so).",
+    module: "logs-health",
+  },
+  "graceful-shutdown": {
+    term: "Graceful shutdown",
+    definition:
+      "Stopping a service cleanly: stop accepting new requests, finish the ones in progress, then exit before the platform forces it to stop.",
+    module: "logs-health",
+  },
 } satisfies Record<string, GlossaryEntry>;
