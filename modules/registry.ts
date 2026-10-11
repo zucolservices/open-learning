@@ -530,4 +530,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "git/reflog": () => import("./git/reflog"),
   "git/stash-worktrees": () => import("./git/stash-worktrees"),
   "git/bisect-blame": () => import("./git/bisect-blame"),
+  "git/big-repos": () => import("./git/big-repos"),
 };

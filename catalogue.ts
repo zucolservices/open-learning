@@ -7876,11 +7876,12 @@ const git: Track = {
           signature: "Clone a huge repository four ways and compare download size and time",
           formats: ["simulation", "checkpoint"],
           concepts: ["Large files and Git LFS", "Partial and shallow clones", "Sparse checkout"],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["bisect-blame"],
           plain:
             "Git copies the whole history to every clone, which strains with huge files or millions of files. Large File Storage, partial and shallow clones and sparse checkout each fetch less, in different ways.",
+          terms: ["shallow-clone", "partial-clone", "sparse-checkout", "git-lfs"],
         },
         {
           slug: "monorepos-submodules",

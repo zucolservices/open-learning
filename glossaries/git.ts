@@ -270,4 +270,27 @@ export const gitTrack = {
       "Showing, for each line of a file, which commit last changed it, so you can find the reason behind the code.",
     module: "bisect-blame",
   },
+  "shallow-clone": {
+    term: "Shallow clone",
+    definition:
+      "A clone with only the most recent commits (git clone --depth 1), fast but without full history.",
+    module: "big-repos",
+  },
+  "partial-clone": {
+    term: "Partial clone",
+    definition:
+      "A clone that downloads all commits but fetches file contents only when they're needed (git clone --filter=blob:none).",
+    module: "big-repos",
+  },
+  "sparse-checkout": {
+    term: "Sparse checkout",
+    definition: "Checking out only some folders of a repository into your working tree.",
+    module: "big-repos",
+  },
+  "git-lfs": {
+    term: "Git LFS",
+    definition:
+      "Large File Storage: an extension that keeps small pointer files in Git and stores large binaries on a separate server.",
+    module: "big-repos",
+  },
 } satisfies Record<string, GlossaryEntry>;
