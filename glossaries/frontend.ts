@@ -92,4 +92,22 @@ export const frontendTrack = {
       "Any piece of work on the main thread that takes longer than 50 milliseconds, long enough to make clicks and typing feel slow.",
     module: "event-loop",
   },
+  component: {
+    term: "Component",
+    definition:
+      "A reusable piece of user interface that takes inputs (props) and returns what to show. Pages are built as trees of components.",
+    module: "components",
+  },
+  props: {
+    term: "Props",
+    definition:
+      "The inputs a parent component passes to a child, like arguments to a function. The child reads them but doesn't change them.",
+    module: "components",
+  },
+  "one-way-data-flow": {
+    term: "One-way data flow",
+    definition:
+      "Data passes down from parent to child as props; children ask for changes by calling functions their parent gave them.",
+    module: "components",
+  },
 } satisfies Record<string, GlossaryEntry>;

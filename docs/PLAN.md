@@ -1069,7 +1069,7 @@ Software development area, fifth track (started 2026-10-11). 22 modules in 7 cha
 | 4x. Testing                | Software development, second track, 23 modules                                          | Live: all 23 modules (2026-10-11)                                       |
 | 4y. Clean Code             | Software development, third track, 22 modules                                           | Live: all 22 modules (2026-10-11)                                       |
 | 4z. Code Review            | Software development, fourth track, 21 modules                                          | Live: all 21 modules (2026-10-11)                                       |
-| 4za. Frontend              | Software development, fifth track, 22 modules                                           | In progress: 4 of 22 modules live                                       |
+| 4za. Frontend              | Software development, fifth track, 22 modules                                           | In progress: 5 of 22 modules live                                       |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

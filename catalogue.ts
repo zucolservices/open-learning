@@ -9497,11 +9497,12 @@ const frontend: Track = {
             "Break a shop page into a tree of components and decide which data each one receives as props",
           formats: ["build-connect", "checkpoint"],
           concepts: ["Components and props", "Composition", "One-way data flow"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["semantic-html"],
           plain:
             "Modern frontends build pages from components: small reusable pieces that take inputs and return UI. Splitting a page well makes it easier to change and test.",
+          terms: ["component", "props", "one-way-data-flow"],
         },
         {
           slug: "state",
