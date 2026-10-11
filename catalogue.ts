@@ -109,6 +109,7 @@ export interface Track {
     | "bastion"
     | "charter"
     | "branch"
+    | "canopy"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -7971,6 +7972,496 @@ const git: Track = {
   ],
 };
 
+const testing: Track = {
+  slug: "testing",
+  title: "Testing",
+  area: "Software development",
+  category: "software-development",
+  tagline: "What to test, at which level, and why.",
+  description:
+    "Software testing from first principles, for every developer: why tests pay for themselves, the anatomy of a test, choosing test cases with partitions and boundaries, test shapes from the pyramid to the trophy, unit tests, test doubles, readable tests and test-driven development, then integration, contract, UI and end-to-end tests, coverage, mutation testing, flaky tests and test data, property-based testing and fuzzing, performance tests, legacy code, tests in CI, exploratory testing and testing in production. Vendor-neutral: ideas first, then how JUnit, pytest, xUnit, Jest, Vitest, Go's testing package, Playwright, Cypress, Selenium, Pact, Testcontainers, k6 and others put them into practice. By the end you can decide what to test, at which level, and write tests that catch real bugs without slowing the team down.",
+  accent: "canopy",
+  chapters: [
+    {
+      slug: "foundations",
+      title: "Foundations",
+      summary: "What a test is, and what it is for.",
+      modules: [
+        {
+          slug: "why-test",
+          title: "Why test",
+          summary: "A safety net you can trust.",
+          minutes: 20,
+          signature:
+            "Ship a small change to a café's checkout with and without tests and watch where the bug is found and what it costs",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "What tests are for",
+            "Cost of finding bugs late",
+            "Tests as a safety net for change",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "A test is a small program that checks your code does what you expect. Tests catch mistakes early, when they are cheap to fix, and let you change code later without fear of breaking something.",
+        },
+        {
+          slug: "anatomy",
+          title: "Anatomy of a test",
+          summary: "Arrange, act, assert.",
+          minutes: 20,
+          signature:
+            "Assemble tests from arrange, act and assert blocks, run them in the browser and read the failures",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Arrange, act, assert",
+            "Assertions and failure messages",
+            "Test runners and frameworks",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-test"],
+          plain:
+            "Most tests follow the same three steps: set up the situation (arrange), do the thing (act), and check the result (assert). A test runner finds your tests, runs them and reports which passed and failed.",
+        },
+        {
+          slug: "choosing-cases",
+          title: "Choosing test cases",
+          summary: "Partitions and boundaries.",
+          minutes: 25,
+          signature:
+            "Hunt the bug in a delivery-fee function by picking inputs from partitions and edges, with as few tests as possible",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Equivalence partitions", "Boundary values", "Happy, sad and edge paths"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["anatomy"],
+          plain:
+            "You can't test every input, so group inputs that should behave the same (partitions) and test one from each, plus the edges between groups, where bugs love to hide.",
+        },
+        {
+          slug: "test-shapes",
+          title: "Test shapes",
+          summary: "Pyramid, trophy, honeycomb.",
+          minutes: 20,
+          signature:
+            "Rebalance a team's test suite between unit, integration and end-to-end tests and watch speed, confidence and cost change",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Unit, integration and end-to-end",
+            "The test pyramid and its rivals",
+            "Speed versus confidence",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["choosing-cases"],
+          plain:
+            "Tests come in sizes, from tiny checks of one function to full journeys through the whole app. Small tests are fast and precise; big ones give more confidence but are slow and fragile. A good suite mixes them on purpose.",
+        },
+      ],
+    },
+    {
+      slug: "unit",
+      title: "Unit testing",
+      summary: "Fast, focused tests of small pieces.",
+      modules: [
+        {
+          slug: "unit-tests",
+          title: "Unit tests",
+          summary: "Testing one piece in isolation.",
+          minutes: 20,
+          signature:
+            "Write unit tests for a price calculator, break the code on purpose and see which tests catch it",
+          formats: ["sandbox", "checkpoint"],
+          concepts: [
+            "What counts as a unit",
+            "Fast, isolated and repeatable",
+            "Testing behaviour, not implementation",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["anatomy"],
+          plain:
+            "A unit test checks one small piece of code, such as a function or class, on its own. Good unit tests run in milliseconds, give the same answer every time, and test what the code does rather than how it does it.",
+        },
+        {
+          slug: "test-doubles",
+          title: "Test doubles",
+          summary: "Stubs, mocks, fakes and spies.",
+          minutes: 25,
+          signature:
+            "Replace a payment service with a stub, a mock, a fake and a spy and see what each lets you check, and how each can lie",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Stubs, mocks, fakes, spies and dummies",
+            "When to replace a dependency",
+            "The cost of over-mocking",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["unit-tests"],
+          plain:
+            "When code depends on something slow or unpredictable, like a payment service or the clock, tests swap in a stand-in called a test double. Each kind of double answers a different question; too many of them make tests that pass while the real system breaks.",
+        },
+        {
+          slug: "readable-tests",
+          title: "Readable tests",
+          summary: "Tests are documentation.",
+          minutes: 20,
+          signature:
+            "Refactor a cryptic failing test into one whose name and failure message explain the bug without reading the code",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Naming tests by behaviour",
+            "One reason to fail",
+            "Fixtures, setup and duplication",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["unit-tests"],
+          plain:
+            "A test is read far more often than it's written, usually at the moment it fails. Clear names, one behaviour per test and helpful failure messages turn a red test into an instant explanation.",
+        },
+        {
+          slug: "tdd",
+          title: "Test-driven development",
+          summary: "Red, green, refactor.",
+          minutes: 25,
+          signature:
+            "Build a password-strength checker test-first, one red-green-refactor loop at a time",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Red, green, refactor",
+            "Tests that drive design",
+            "When TDD helps and when it doesn't",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["readable-tests"],
+          plain:
+            "In test-driven development you write a failing test first, then just enough code to pass it, then tidy up. Repeating that small loop keeps code tested and simple, and makes you think about how code is used before you write it.",
+        },
+      ],
+    },
+    {
+      slug: "beyond-units",
+      title: "Beyond units",
+      summary: "Testing how the pieces fit together.",
+      modules: [
+        {
+          slug: "integration-tests",
+          title: "Integration tests",
+          summary: "Real databases, real queues.",
+          minutes: 25,
+          signature:
+            "Find the bug that every unit test missed by running the same code against a real database in a throwaway container",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "What integration tests catch",
+            "Throwaway containers and test databases",
+            "Keeping integration tests fast and isolated",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["test-doubles"],
+          plain:
+            "Integration tests check that your code works with the real things around it, such as a database, a message queue or the file system. They catch the mistakes that hide in the joins between pieces.",
+        },
+        {
+          slug: "contract-tests",
+          title: "Contract tests",
+          summary: "Agreeing on an API without meeting.",
+          minutes: 25,
+          signature:
+            "Let a consumer's expectations and a provider's change collide, then catch the break with a consumer-driven contract before deploy",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Consumer-driven contracts",
+            "Provider verification",
+            "Schemas versus contracts",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["integration-tests"],
+          plain:
+            "When two services talk over an API, a contract test records what the consumer expects and checks the provider still delivers it, so teams can deploy separately without running everything together.",
+        },
+        {
+          slug: "ui-tests",
+          title: "UI and component tests",
+          summary: "Test what the user sees.",
+          minutes: 20,
+          signature:
+            "Test a sign-up form by role and label instead of CSS classes, then catch a layout break with a visual snapshot",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Component tests", "Querying by role and label", "Visual regression testing"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["unit-tests"],
+          plain:
+            "UI tests check that screens show the right things and respond to clicks and typing. The best ones find elements the way a user would, by their label or role, so they survive redesigns and also nudge you toward accessible markup.",
+        },
+        {
+          slug: "end-to-end",
+          title: "End-to-end tests",
+          summary: "Whole journeys through the real app.",
+          minutes: 25,
+          signature:
+            "Drive a checkout journey through a browser, then make it fail for the wrong reasons and fix the waits",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Browser automation",
+            "Auto-waiting versus sleeps",
+            "Which journeys deserve an end-to-end test",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["ui-tests", "integration-tests"],
+          plain:
+            "End-to-end tests click through the real application in a real browser, just like a user. They catch problems nothing else can, but they are slow and fragile, so keep them for the few journeys that matter most.",
+        },
+      ],
+    },
+    {
+      slug: "quality",
+      title: "Test quality",
+      summary: "Knowing whether your tests are any good.",
+      modules: [
+        {
+          slug: "coverage",
+          title: "Code coverage",
+          summary: "What ran, not what was checked.",
+          minutes: 20,
+          signature:
+            "Reach 100% line coverage on a discount function and still ship a bug, then see what branch coverage reveals",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Line, branch and condition coverage",
+            "Why 100% isn't the goal",
+            "Using coverage to find gaps",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["unit-tests"],
+          plain:
+            "Coverage tools record which lines of code ran during your tests. They show untested corners well, but code that ran isn't code that was checked: a test with no assertions still counts.",
+        },
+        {
+          slug: "mutation-testing",
+          title: "Mutation testing",
+          summary: "Testing your tests.",
+          minutes: 25,
+          signature:
+            "Let a mutation tool plant small bugs in a function and see which ones your suite kills and which survive",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Mutants and mutation operators",
+            "Mutation score",
+            "Equivalent mutants and cost",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["coverage"],
+          plain:
+            "Mutation testing deliberately breaks your code in small ways, such as flipping a > to >=, and reruns the tests. If no test fails, that bug could slip through: your tests have a blind spot.",
+        },
+        {
+          slug: "flaky-tests",
+          title: "Flaky tests",
+          summary: "Pass, fail, pass.",
+          minutes: 25,
+          signature:
+            "Run a suite a hundred times, find the tests that flip, and trace each to its cause: time, order, shared state or a race",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Causes of flakiness",
+            "Quarantine and retries",
+            "Why flaky tests destroy trust",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["end-to-end"],
+          plain:
+            "A flaky test passes sometimes and fails sometimes without any code change. Common causes are timing, test order, shared state and randomness. Left alone, flakiness teaches everyone to ignore red builds.",
+        },
+        {
+          slug: "test-data",
+          title: "Test data",
+          summary: "Fixtures, factories and builders.",
+          minutes: 20,
+          signature:
+            "Replace a giant shared fixture with builders and factories and watch tests become shorter, clearer and independent",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Fixtures versus factories",
+            "Test data builders",
+            "Keeping personal data out of tests",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["readable-tests"],
+          plain:
+            "Tests need data: users, orders, products. Shared fixtures get tangled as they grow; factories and builders create just what each test needs, with sensible defaults, so each test says only what matters to it.",
+        },
+      ],
+    },
+    {
+      slug: "advanced",
+      title: "Advanced techniques",
+      summary: "Finding the bugs you didn't think of.",
+      modules: [
+        {
+          slug: "property-based",
+          title: "Property-based testing and fuzzing",
+          summary: "Let the computer pick the inputs.",
+          minutes: 25,
+          signature:
+            "State a property of a sorting function, let generated inputs break it and watch the failure shrink to the smallest example",
+          formats: ["sandbox", "checkpoint"],
+          concepts: [
+            "Properties instead of examples",
+            "Generators and shrinking",
+            "Fuzzing for crashes",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["choosing-cases"],
+          plain:
+            "Instead of writing examples by hand, you describe a rule that should always hold, like 'sorting twice equals sorting once', and a tool tries hundreds of random inputs to break it. Fuzzing does the same to hunt for crashes.",
+        },
+        {
+          slug: "performance-tests",
+          title: "Performance and load tests",
+          summary: "How fast, for how many?",
+          minutes: 25,
+          signature:
+            "Ramp virtual users against a simulated API, find the knee in the latency curve and set a pass-fail threshold",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Load, stress, spike and soak tests",
+            "Percentiles, not averages",
+            "Performance budgets in CI",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["test-shapes"],
+          plain:
+            "Performance tests check how fast your system responds and how it behaves as more people use it at once. They measure slow-request percentiles, not just averages, and find the point where things start to fall over.",
+        },
+        {
+          slug: "legacy-code",
+          title: "Testing legacy code",
+          summary: "Safety nets for code without tests.",
+          minutes: 25,
+          signature:
+            "Pin down an untested invoice function's current behaviour with characterisation tests, then refactor it safely",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Characterisation tests",
+            "Seams for breaking dependencies",
+            "Approval and golden-master tests",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["test-doubles"],
+          plain:
+            "Legacy code is code without tests. Before changing it, write tests that record what it does today, even the odd parts, so any change in behaviour shows up straight away.",
+        },
+      ],
+    },
+    {
+      slug: "team",
+      title: "Testing in the team",
+      summary: "Tests in the daily flow of work.",
+      modules: [
+        {
+          slug: "tests-in-ci",
+          title: "Tests in CI",
+          summary: "Fast feedback on every change.",
+          minutes: 20,
+          signature:
+            "Cut a 40-minute pipeline to 8 by ordering, parallelising and selecting tests, without losing confidence",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Running tests on every change",
+            "Parallelism, sharding and test selection",
+            "Keeping the main branch green",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["test-shapes"],
+          plain:
+            "Continuous integration runs your tests automatically on every change. The faster that feedback, the more useful it is, so teams split, order and select tests to keep pipelines quick.",
+        },
+        {
+          slug: "exploratory",
+          title: "Exploratory testing",
+          summary: "Thinking testers find what scripts miss.",
+          minutes: 20,
+          signature:
+            "Explore a booking app in time-boxed charters and log the bugs no automated test was written for",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Charters and sessions",
+            "Heuristics for finding bugs",
+            "Automated checks versus human testing",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["choosing-cases"],
+          plain:
+            "Automated tests only check what someone thought to write down. Exploratory testing is a person deliberately probing the software, learning as they go, to find the surprises.",
+        },
+        {
+          slug: "testing-in-production",
+          title: "Testing in production",
+          summary: "Canaries, flags and monitoring.",
+          minutes: 20,
+          signature:
+            "Roll a change out to 1% of users behind a feature flag, watch the error rate and decide whether to continue or roll back",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Canary releases and feature flags",
+            "Synthetic monitoring",
+            "Why production is the only real environment",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["tests-in-ci"],
+          plain:
+            "No test environment matches production exactly, so teams also check changes safely in production: releasing to a few users first, watching closely, and switching off instantly if something goes wrong.",
+        },
+      ],
+    },
+    {
+      slug: "capstone",
+      title: "Capstone",
+      summary: "Put it all together.",
+      modules: [
+        {
+          slug: "capstone-testing",
+          title: "Capstone: rescue a codebase nobody dares to change",
+          summary: "Build a test strategy from scratch.",
+          minutes: 35,
+          signature:
+            "Inherit an untested checkout service, plan and build a test strategy, and catch the bug hiding in the next release",
+          formats: ["branching-scenario", "fix-the-problem"],
+          concepts: [
+            "Building a test strategy",
+            "Choosing levels and techniques",
+            "Making tests part of the team's habits",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["testing-in-production"],
+          plain:
+            "This capstone brings the track together. You inherit a checkout service with no tests and a release due; you decide what to test first, at which level, and with which techniques, then catch the bug that would have shipped.",
+        },
+      ],
+    },
+  ],
+};
+
 const playground: Track = {
   slug: "playground",
   title: "Toolkit playground",
@@ -12149,6 +12640,7 @@ export const tracks: Track[] = [
   appSecurity,
   dpdpAct,
   git,
+  testing,
   playground,
 ];
 
@@ -12342,7 +12834,7 @@ export const categories: Category[] = [
       { title: "Frontend", blurb: "The browser, rendering and modern UI frameworks." },
       { title: "Backend", blurb: "Services, data access and APIs that last." },
       { title: "Mobile", blurb: "Native and cross-platform apps." },
-      { title: "Testing", blurb: "What to test, at which level, and why." },
+      { title: "Testing", slug: "testing", blurb: "What to test, at which level, and why." },
       { title: "Clean Code", blurb: "Code other people can read and change." },
       { title: "Code Review", blurb: "Giving and receiving useful reviews." },
       { title: "Git", slug: "git", blurb: "Commits, branches and history, understood." },

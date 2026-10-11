@@ -28,6 +28,7 @@ import { appliedMl } from "./applied-ml";
 import { appSecurity } from "./app-security";
 import { dpdpAct } from "./dpdp-act";
 import { gitTrack } from "./git";
+import { testingTrack } from "./testing";
 import { shared } from "./shared";
 import type { GlossaryEntry } from "./types";
 
@@ -58,6 +59,7 @@ export const trackGlossaries: Record<string, Record<string, GlossaryEntry>> = {
   "app-security": appSecurity,
   "dpdp-act": dpdpAct,
   git: gitTrack,
+  testing: testingTrack,
 };
 
 export type TermId =
@@ -84,7 +86,8 @@ export type TermId =
   | keyof typeof appliedMl
   | keyof typeof appSecurity
   | keyof typeof dpdpAct
-  | keyof typeof gitTrack;
+  | keyof typeof gitTrack
+  | keyof typeof testingTrack;
 
 export interface ResolvedTerm {
   id: string;

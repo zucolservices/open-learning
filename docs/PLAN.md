@@ -893,6 +893,43 @@ Software development area, first track (started 2026-10-11). 22 modules in 6 cha
 | **6** | **Capstone**                                 |                                                              |                                     |
 | 22    | Capstone: untangle a team's messy repository | Rescue a team's repository after a bad force-push            | Branching scenario, Fix the problem |
 
+## Testing: curriculum
+
+Software development area, second track (started 2026-10-11). 23 modules in 7 chapters, about 9 hours. Accent: "canopy" green (`[data-track="canopy"]`). Glossary: `glossaries/testing.ts`. Testing from first principles: what a test is and how to choose cases, then unit testing and test doubles, tests beyond units (integration, contract, UI, end-to-end), judging test quality (coverage, mutation testing, flakiness, test data), advanced techniques (property-based testing, fuzzing, performance, legacy code) and testing in the team (CI, exploratory testing, production). Vendor-neutral: the ideas first, then how JUnit, pytest, xUnit, Jest, Vitest, Go, Playwright, Cypress, Selenium, Pact, Testcontainers and k6 apply them. Small test suites run for real in the browser against made-up example code (a café's checkout and similar); every company and team is made up. Built on one branch (`track/testing`), one commit per module, merged once at the end. Each module is fact-checked against official docs, original papers and books before it is built.
+
+| #     | Module                                             | Centrepiece                                                  | Key formats                         |
+| ----- | -------------------------------------------------- | ------------------------------------------------------------ | ----------------------------------- |
+| **1** | **Foundations**                                    |                                                              |                                     |
+| 1     | Why test                                           | Ship a small change to a café's checkout with and without te | Scroll story                        |
+| 2     | Anatomy of a test                                  | Assemble tests from arrange                                  | Build connect                       |
+| 3     | Choosing test cases                                | Hunt the bug in a delivery-fee function by picking inputs fr | Simulation                          |
+| 4     | Test shapes                                        | Rebalance a team's test suite between unit                   | Simulation                          |
+| **2** | **Unit testing**                                   |                                                              |                                     |
+| 5     | Unit tests                                         | Write unit tests for a price calculator                      | Sandbox                             |
+| 6     | Test doubles                                       | Replace a payment service with a stub                        | Build connect                       |
+| 7     | Readable tests                                     | Refactor a cryptic failing test into one whose name and fail | Fix the problem                     |
+| 8     | Test-driven development                            | Build a password-strength checker test-first                 | Step through                        |
+| **3** | **Beyond units**                                   |                                                              |                                     |
+| 9     | Integration tests                                  | Find the bug that every unit test missed by running the same | Simulation                          |
+| 10    | Contract tests                                     | Let a consumer's expectations and a provider's change collid | Build connect                       |
+| 11    | UI and component tests                             | Test a sign-up form by role and label instead of CSS classes | Simulation                          |
+| 12    | End-to-end tests                                   | Drive a checkout journey through a browser                   | Simulation                          |
+| **4** | **Test quality**                                   |                                                              |                                     |
+| 13    | Code coverage                                      | Reach 100% line coverage on a discount function and still sh | Simulation                          |
+| 14    | Mutation testing                                   | Let a mutation tool plant small bugs in a function and see w | Simulation                          |
+| 15    | Flaky tests                                        | Run a suite a hundred times                                  | Fix the problem                     |
+| 16    | Test data                                          | Replace a giant shared fixture with builders and factories a | Build connect                       |
+| **5** | **Advanced techniques**                            |                                                              |                                     |
+| 17    | Property-based testing and fuzzing                 | State a property of a sorting function                       | Sandbox                             |
+| 18    | Performance and load tests                         | Ramp virtual users against a simulated API                   | Simulation                          |
+| 19    | Testing legacy code                                | Pin down an untested invoice function's current behaviour wi | Fix the problem                     |
+| **6** | **Testing in the team**                            |                                                              |                                     |
+| 20    | Tests in CI                                        | Cut a 40-minute pipeline to 8 by ordering                    | Simulation                          |
+| 21    | Exploratory testing                                | Explore a booking app in time-boxed charters and log the bug | Branching scenario                  |
+| 22    | Testing in production                              | Roll a change out to 1% of users behind a feature flag       | Simulation                          |
+| **7** | **Capstone**                                       |                                                              |                                     |
+| 23    | Capstone: rescue a codebase nobody dares to change | Inherit an untested checkout service                         | Branching scenario, Fix the problem |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -923,6 +960,7 @@ Software development area, first track (started 2026-10-11). 22 modules in 6 cha
 | 4u. Application Security   | Security & government, first track, 22 modules                                          | Live: all 22 modules (2026-10-07)                                       |
 | 4v. DPDP Act               | Security & government, second track, 22 modules                                         | Live: all 22 modules (2026-10-08)                                       |
 | 4w. Git                    | Software development, first track, 22 modules                                           | Live: all 22 modules (2026-10-11)                                       |
+| 4x. Testing                | Software development, second track, 23 modules, 23 modules                              | In progress: 0 of 23 modules live                                       |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
