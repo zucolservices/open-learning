@@ -8035,11 +8035,12 @@ const testing: Track = {
             "Hunt the bug in a delivery-fee function by picking inputs from partitions and edges, with as few tests as possible",
           formats: ["simulation", "checkpoint"],
           concepts: ["Equivalence partitions", "Boundary values", "Happy, sad and edge paths"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["anatomy"],
           plain:
             "You can't test every input, so group inputs that should behave the same (partitions) and test one from each, plus the edges between groups, where bugs love to hide.",
+          terms: ["equivalence-partition", "boundary-value"],
         },
         {
           slug: "test-shapes",
