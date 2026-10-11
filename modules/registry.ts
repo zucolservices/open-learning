@@ -552,4 +552,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "testing/flaky-tests": () => import("./testing/flaky-tests"),
   "testing/test-data": () => import("./testing/test-data"),
   "testing/property-based": () => import("./testing/property-based"),
+  "testing/performance-tests": () => import("./testing/performance-tests"),
 };

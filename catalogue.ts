@@ -8359,11 +8359,12 @@ const testing: Track = {
             "Percentiles, not averages",
             "Performance budgets in CI",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["test-shapes"],
           plain:
             "Performance tests check how fast your system responds and how it behaves as more people use it at once. They measure slow-request percentiles, not just averages, and find the point where things start to fall over.",
+          terms: ["load-test", "percentile"],
         },
         {
           slug: "legacy-code",

@@ -145,4 +145,16 @@ export const testingTrack = {
       "Feeding huge numbers of random or malformed inputs to a program to find crashes and memory errors, usually guided by which code each input reaches.",
     module: "property-based",
   },
+  "load-test": {
+    term: "Load test",
+    definition:
+      "A test that sends realistic traffic to a system to measure how fast it responds and how it behaves as more people use it at once.",
+    module: "performance-tests",
+  },
+  percentile: {
+    term: "Percentile",
+    definition:
+      "The value below which a given share of measurements fall. A p95 latency of 200 ms means 95% of requests took 200 ms or less.",
+    module: "performance-tests",
+  },
 } satisfies Record<string, GlossaryEntry>;
