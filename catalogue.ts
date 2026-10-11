@@ -8663,11 +8663,12 @@ const cleanCode: Track = {
             "Move responsibilities between modules and watch how many files a single change touches",
           formats: ["build-connect", "checkpoint"],
           concepts: ["High cohesion", "Loose coupling", "Change amplification"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["functions"],
           plain:
             "Good code groups things that change together (cohesion) and keeps separate parts from depending on each other's details (coupling). Then a change stays in one place.",
+          terms: ["cohesion", "coupling"],
         },
         {
           slug: "solid",

@@ -86,4 +86,16 @@ export const cleanCodeTrack = {
       "An early check at the top of a function that handles a special case and returns, so the main logic isn't nested inside conditions.",
     module: "complexity",
   },
+  cohesion: {
+    term: "Cohesion",
+    definition:
+      "How closely the things inside a module belong together. High cohesion means a module is about one thing, so changes to that thing stay inside it.",
+    module: "cohesion-coupling",
+  },
+  coupling: {
+    term: "Coupling",
+    definition:
+      "How much one part of the code depends on the details of another. Loose coupling lets each part change without forcing changes elsewhere.",
+    module: "cohesion-coupling",
+  },
 } satisfies Record<string, GlossaryEntry>;
