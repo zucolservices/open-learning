@@ -8565,11 +8565,12 @@ const cleanCode: Track = {
             "Comments that rot",
             "Docs, docstrings and examples",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["naming"],
           plain:
             "Comments should explain what the code can't: why a decision was made, a warning, a link to a rule. Comments that repeat the code go out of date and start to lie.",
+          terms: ["doc-comment", "readability"],
         },
       ],
     },

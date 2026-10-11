@@ -38,4 +38,10 @@ export const cleanCodeTrack = {
       "A literal value in code, like 3 or 0.9, whose meaning isn't explained. Replacing it with a named constant states the rule.",
     module: "naming",
   },
+  "doc-comment": {
+    term: "Doc comment",
+    definition:
+      "A comment attached to a function or class that describes what callers can rely on, such as a Python docstring or a Javadoc block. Tools turn them into reference documentation.",
+    module: "comments",
+  },
 } satisfies Record<string, GlossaryEntry>;
