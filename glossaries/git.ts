@@ -150,4 +150,34 @@ export const gitTrack = {
       "Undoing a commit by adding a new commit that makes the opposite change, without rewriting history.",
     module: "cherry-pick-revert",
   },
+  remote: {
+    term: "Remote",
+    definition:
+      "Another copy of the repository that yours can fetch from and push to, usually on a server and named origin.",
+    module: "remotes",
+  },
+  fetch: {
+    term: "Fetch",
+    definition:
+      "Downloading new commits from a remote and updating remote-tracking branches like origin/main, without changing your own branches.",
+    module: "remotes",
+  },
+  pull: {
+    term: "Pull",
+    definition:
+      "Fetching from a remote and then merging or rebasing the result into your current branch.",
+    module: "remotes",
+  },
+  push: {
+    term: "Push",
+    definition:
+      "Sending your commits to a remote and moving its branch to match. It's rejected if the remote has commits you don't.",
+    module: "remotes",
+  },
+  "remote-tracking-branch": {
+    term: "Remote-tracking branch",
+    definition:
+      "A read-only pointer like origin/main that records where a remote's branch was the last time you fetched.",
+    module: "remotes",
+  },
 } satisfies Record<string, GlossaryEntry>;

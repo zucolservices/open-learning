@@ -7711,11 +7711,12 @@ const git: Track = {
             "Fetch, pull and push",
             "Remote-tracking branches",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["cherry-pick-revert"],
           plain:
             "A remote is another copy of the repository, usually on a server. Fetch brings its new commits into your copy, pull fetches and then merges or rebases, and push sends your commits up.",
+          terms: ["remote", "fetch", "pull", "push", "remote-tracking-branch"],
         },
         {
           slug: "pull-requests",
