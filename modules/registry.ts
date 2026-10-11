@@ -533,4 +533,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "git/big-repos": () => import("./git/big-repos"),
   "git/monorepos-submodules": () => import("./git/monorepos-submodules"),
   "git/signing-secrets": () => import("./git/signing-secrets"),
+  "git/hooks": () => import("./git/hooks"),
 };

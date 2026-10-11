@@ -7932,11 +7932,12 @@ const git: Track = {
             "Add hooks that block a commit with a secret and reject a bad message, then decide what belongs in hooks and what in CI",
           formats: ["build-connect", "checkpoint"],
           concepts: ["Client and server hooks", "Sharing hooks with a team", "Hooks vs CI checks"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["signing-secrets"],
           plain:
             "Hooks are scripts Git runs at moments like committing or pushing. They can format code, check messages or block secrets locally, but they can be skipped, so important checks also belong on the server or in CI.",
+          terms: ["git-hook", "commit", "push"],
         },
       ],
     },

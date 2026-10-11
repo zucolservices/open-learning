@@ -316,4 +316,10 @@ export const gitTrack = {
       "Replacing existing commits with new ones (amend, rebase, filter-repo). It changes commit IDs and disrupts anyone who has the old commits.",
     module: "signing-secrets",
   },
+  "git-hook": {
+    term: "Git hook",
+    definition:
+      "A script Git runs automatically at a moment like committing or pushing. Client hooks run on your machine and can be skipped; server hooks can't.",
+    module: "hooks",
+  },
 } satisfies Record<string, GlossaryEntry>;
