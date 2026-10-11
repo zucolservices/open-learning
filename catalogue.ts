@@ -8446,11 +8446,12 @@ const testing: Track = {
             "Synthetic monitoring",
             "Why production is the only real environment",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["tests-in-ci"],
           plain:
             "No test environment matches production exactly, so teams also check changes safely in production: releasing to a few users first, watching closely, and switching off instantly if something goes wrong.",
+          terms: ["feature-flag", "canary-release"],
         },
       ],
     },
