@@ -564,4 +564,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "clean-code/comments": () => import("./clean-code/comments"),
   "clean-code/formatting": () => import("./clean-code/formatting"),
   "clean-code/simplicity": () => import("./clean-code/simplicity"),
+  "clean-code/duplication": () => import("./clean-code/duplication"),
 };

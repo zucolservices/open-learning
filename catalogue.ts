@@ -8620,11 +8620,12 @@ const cleanCode: Track = {
             "Merge three similar functions into one, then watch the shared version grow flags as each caller changes",
           formats: ["step-through", "checkpoint"],
           concepts: ["Don't repeat yourself", "The rule of three", "The wrong abstraction"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["simplicity"],
           plain:
             "Repeating the same knowledge in many places makes changes risky. But merging code that only looks alike creates a tangled shared function. Wait until you understand the pattern.",
+          terms: ["duplication", "wrong-abstraction"],
         },
         {
           slug: "complexity",

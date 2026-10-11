@@ -56,4 +56,16 @@ export const cleanCodeTrack = {
       "A tool that reads code and flags patterns that are likely mistakes or confusing, such as unused variables or risky comparisons. ESLint, Ruff and Clippy are linters.",
     module: "formatting",
   },
+  duplication: {
+    term: "Duplication",
+    definition:
+      "The same piece of knowledge, such as a tax rate or a validation rule, written in more than one place, so a change must be made everywhere. DRY (don't repeat yourself) means giving each fact one home.",
+    module: "duplication",
+  },
+  "wrong-abstraction": {
+    term: "Wrong abstraction",
+    definition:
+      "Shared code built on a bad guess about what is common, which then grows flags and special cases for each caller. Often cheaper to undo than to keep patching.",
+    module: "duplication",
+  },
 } satisfies Record<string, GlossaryEntry>;
