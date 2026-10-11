@@ -628,4 +628,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "backend/concurrency": () => import("./backend/concurrency"),
   "backend/project-structure": () => import("./backend/project-structure"),
   "backend/middleware": () => import("./backend/middleware"),
+  "backend/validation-errors": () => import("./backend/validation-errors"),
 };

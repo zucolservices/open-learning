@@ -9959,11 +9959,12 @@ const backend: Track = {
             "Error responses (problem details)",
             "Never leak internals",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["middleware"],
           plain:
             "Everything from outside is untrusted. Check input where it enters, reject it with clear, consistent errors, and keep stack traces and secrets out of responses.",
+          terms: ["input-validation", "problem-details", "status-code"],
         },
         {
           slug: "service-config",
