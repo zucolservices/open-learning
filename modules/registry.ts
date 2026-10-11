@@ -647,4 +647,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "backend/capstone-backend": () => import("./backend/capstone-backend"),
   "mobile/how-mobile-differs": () => import("./mobile/how-mobile-differs"),
   "mobile/native-vs-cross": () => import("./mobile/native-vs-cross"),
+  "mobile/app-lifecycle": () => import("./mobile/app-lifecycle"),
 };

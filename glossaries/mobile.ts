@@ -32,4 +32,16 @@ export const mobileTrack = {
       "A website that can be installed to the Home Screen, work offline and send notifications, without going through an app store.",
     module: "native-vs-cross",
   },
+  "app-lifecycle": {
+    term: "App lifecycle",
+    definition:
+      "The states an app moves through as the system starts it, brings it to the front, sends it to the background, suspends it or ends it.",
+    module: "app-lifecycle",
+  },
+  "process-death": {
+    term: "Process death",
+    definition:
+      "The system ending an app's process to reclaim memory, usually while it's in the background and without warning. Apps must save state beforehand to restore it later.",
+    module: "app-lifecycle",
+  },
 } satisfies Record<string, GlossaryEntry>;

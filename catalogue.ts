@@ -10370,11 +10370,12 @@ const mobile: Track = {
             "Step an app through launch, a phone call, being backgrounded and being killed, and keep the user's half-written order safe",
           formats: ["step-through", "checkpoint"],
           concepts: ["App and screen states", "Process death", "Saving and restoring state"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["how-mobile-differs"],
           plain:
             "Apps don't simply run until closed. The system moves them between foreground, background and suspended, and may end them without warning, so apps must save and restore what matters.",
+          terms: ["app-lifecycle", "process-death", "mobile-os"],
         },
       ],
     },
