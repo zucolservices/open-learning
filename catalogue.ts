@@ -7854,11 +7854,12 @@ const git: Track = {
             "Automating bisect",
             "Blame, and ignoring formatting commits",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["stash-worktrees"],
           plain:
             "Bisect finds the commit that introduced a bug by halving the range of suspects with each test. Blame shows which commit last changed each line. Together they turn 'when did this break?' into minutes.",
+          terms: ["bisect", "blame", "commit"],
         },
       ],
     },

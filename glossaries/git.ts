@@ -258,4 +258,16 @@ export const gitTrack = {
       "An extra working folder attached to the same repository, checked out on a different branch.",
     module: "stash-worktrees",
   },
+  bisect: {
+    term: "Bisect",
+    definition:
+      "A binary search through history: Git checks out the middle commit between a good and a bad one until it finds the commit that introduced a problem.",
+    module: "bisect-blame",
+  },
+  blame: {
+    term: "Blame",
+    definition:
+      "Showing, for each line of a file, which commit last changed it, so you can find the reason behind the code.",
+    module: "bisect-blame",
+  },
 } satisfies Record<string, GlossaryEntry>;

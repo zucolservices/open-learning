@@ -529,4 +529,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "git/undoing": () => import("./git/undoing"),
   "git/reflog": () => import("./git/reflog"),
   "git/stash-worktrees": () => import("./git/stash-worktrees"),
+  "git/bisect-blame": () => import("./git/bisect-blame"),
 };
