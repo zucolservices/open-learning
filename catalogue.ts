@@ -9039,11 +9039,12 @@ const codeReview: Track = {
             "Complexity, tests and naming",
             "What to leave to tools",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["review-flow"],
           plain:
             "A good reviewer looks first at whether the change is the right thing done the right way, then at correctness, tests and clarity. Formatting is for tools, not people.",
+          terms: ["code-health", "code-review"],
         },
       ],
     },

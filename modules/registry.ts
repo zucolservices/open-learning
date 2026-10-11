@@ -583,4 +583,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "code-review/why-review": () => import("./code-review/why-review"),
   "code-review/anatomy-pr": () => import("./code-review/anatomy-pr"),
   "code-review/review-flow": () => import("./code-review/review-flow"),
+  "code-review/what-to-look-for": () => import("./code-review/what-to-look-for"),
 };

@@ -32,4 +32,10 @@ export const codeReviewTrack = {
       "A queue that tests each approved change on top of the others waiting to merge, so two changes that pass alone can't break the main branch together.",
     module: "review-flow",
   },
+  "code-health": {
+    term: "Code health",
+    definition:
+      "How easy a codebase is to understand, change and trust. Google's guide says to approve a change once it definitely improves code health, even if it isn't perfect.",
+    module: "what-to-look-for",
+  },
 } satisfies Record<string, GlossaryEntry>;
