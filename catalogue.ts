@@ -9769,11 +9769,12 @@ const frontend: Track = {
             "Resize a layout from phone to wide screen and fix it with fluid sizing, media queries and container queries",
           formats: ["sandbox", "checkpoint"],
           concepts: ["Mobile first", "Media and container queries", "Fluid type and spacing"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["css-layout"],
           plain:
             "Responsive pages adapt to any screen size. Fluid layouts, media queries for the page and container queries for components keep things readable from small phones to big monitors.",
+          terms: ["responsive-design", "container-query", "css-grid"],
         },
         {
           slug: "design-systems",

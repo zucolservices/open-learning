@@ -272,4 +272,16 @@ export const frontendTrack = {
       "Software that reads the page aloud or in braille and lets people navigate by headings, links and landmarks. Examples: JAWS, NVDA, VoiceOver, TalkBack.",
     module: "accessibility",
   },
+  "responsive-design": {
+    term: "Responsive design",
+    definition:
+      "Building pages that adapt to any screen size with fluid layouts, flexible images and media or container queries.",
+    module: "responsive-design",
+  },
+  "container-query": {
+    term: "Container query",
+    definition:
+      "A CSS rule that styles a component based on the size of the box it sits in, rather than the size of the whole screen.",
+    module: "responsive-design",
+  },
 } satisfies Record<string, GlossaryEntry>;
