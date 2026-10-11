@@ -110,6 +110,7 @@ export interface Track {
     | "charter"
     | "branch"
     | "canopy"
+    | "stone"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -8485,6 +8486,449 @@ const testing: Track = {
   ],
 };
 
+const cleanCode: Track = {
+  slug: "clean-code",
+  title: "Clean Code",
+  area: "Software development",
+  category: "software-development",
+  tagline: "Code other people can read and change.",
+  description:
+    "Writing code that other people (and your future self) can read, trust and change: why readability pays, naming, functions and comments, formatting and style, simplicity, duplication and the wrong abstraction, complexity, cohesion and coupling, SOLID and its critics, composition, boundaries and dependencies, error handling, null and absence, types as documentation, code smells, refactoring, technical debt, static analysis, reviewing AI-written code, and team conventions. Language-neutral, with examples in JavaScript, Python, Java and Go, and a fair hearing for competing schools of thought rather than one book's rules. By the end you can spot what makes code hard to change and improve it in small, safe steps.",
+  accent: "stone",
+  chapters: [
+    {
+      slug: "foundations",
+      title: "Foundations",
+      summary: "Readable code, from names to functions.",
+      modules: [
+        {
+          slug: "why-readable",
+          title: "Code is read more than written",
+          summary: "The cost of confusing code.",
+          minutes: 20,
+          signature:
+            "Follow a two-line bug fix through code written three ways and time how long each takes to understand",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "Reading versus writing time",
+            "Cognitive load",
+            "Readable code as a team habit",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "Code is read far more often than it is written, usually by someone in a hurry trying to change it. Clean code is code that person can understand quickly and change safely.",
+        },
+        {
+          slug: "naming",
+          title: "Naming",
+          summary: "The cheapest documentation there is.",
+          minutes: 20,
+          signature:
+            "Rename the variables, functions and classes in a confusing snippet and watch a reader's questions disappear",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: ["Intention-revealing names", "Names and scope", "Consistent vocabulary"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-readable"],
+          plain:
+            "Good names tell the reader what something is and why it exists, so they don't need to read the details. Most confusing code becomes clear with better names alone.",
+        },
+        {
+          slug: "functions",
+          title: "Functions",
+          summary: "Small, focused, honest.",
+          minutes: 25,
+          signature:
+            "Split a 60-line function into well-named pieces and see which split makes it easiest to test and change",
+          formats: ["build-connect", "checkpoint"],
+          concepts: ["One job per function", "Arguments and flags", "Levels of abstraction"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["naming"],
+          plain:
+            "A good function does one job, at one level of detail, with a name that says what it does. Splitting a long function into named steps turns code into something you can read like a list.",
+        },
+        {
+          slug: "comments",
+          title: "Comments",
+          summary: "Explain why, not what.",
+          minutes: 20,
+          signature:
+            "Sort the comments in a real-looking file into helpful, redundant and lying, then fix the code so most of them aren't needed",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Why-comments versus what-comments",
+            "Comments that rot",
+            "Docs, docstrings and examples",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["naming"],
+          plain:
+            "Comments should explain what the code can't: why a decision was made, a warning, a link to a rule. Comments that repeat the code go out of date and start to lie.",
+        },
+      ],
+    },
+    {
+      slug: "simplicity",
+      title: "Shape and simplicity",
+      summary: "Consistent shape, and as little as possible.",
+      modules: [
+        {
+          slug: "formatting",
+          title: "Formatting and style",
+          summary: "Let the machine argue about spaces.",
+          minutes: 20,
+          signature:
+            "Feed messy code through a formatter and a linter, then see how much of a code review disappears",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Automatic formatters", "Linters and their rules", "Style guides"],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["why-readable"],
+          plain:
+            "Consistent formatting makes code easier to scan. Modern teams let tools like Prettier, Black, gofmt and rustfmt format code automatically, so people stop debating it.",
+        },
+        {
+          slug: "simplicity",
+          title: "Keep it simple",
+          summary: "KISS and YAGNI.",
+          minutes: 20,
+          signature:
+            "Build a feature three ways, from just enough to fully configurable, and see what each costs when requirements change",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: ["Simple versus easy", "You aren't gonna need it", "Speculative generality"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["functions"],
+          plain:
+            "The simplest code that meets today's needs is usually easiest to change tomorrow. Building for imagined future needs adds code everyone must understand, often for features that never arrive.",
+        },
+        {
+          slug: "duplication",
+          title: "Duplication and the wrong abstraction",
+          summary: "DRY, with care.",
+          minutes: 25,
+          signature:
+            "Merge three similar functions into one, then watch the shared version grow flags as each caller changes",
+          formats: ["step-through", "checkpoint"],
+          concepts: ["Don't repeat yourself", "The rule of three", "The wrong abstraction"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["simplicity"],
+          plain:
+            "Repeating the same knowledge in many places makes changes risky. But merging code that only looks alike creates a tangled shared function. Wait until you understand the pattern.",
+        },
+        {
+          slug: "complexity",
+          title: "Complexity",
+          summary: "Nesting, branches and how much fits in your head.",
+          minutes: 25,
+          signature:
+            "Flatten a deeply nested function with guard clauses and watch its complexity scores drop",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Cyclomatic and cognitive complexity",
+            "Guard clauses and early returns",
+            "Working memory limits",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["functions"],
+          plain:
+            "Every branch and level of nesting adds something a reader must hold in their head. Complexity measures make this visible, and techniques like early returns keep it down.",
+        },
+      ],
+    },
+    {
+      slug: "design",
+      title: "Design",
+      summary: "How pieces fit together.",
+      modules: [
+        {
+          slug: "cohesion-coupling",
+          title: "Cohesion and coupling",
+          summary: "Things that change together, live together.",
+          minutes: 25,
+          signature:
+            "Move responsibilities between modules and watch how many files a single change touches",
+          formats: ["build-connect", "checkpoint"],
+          concepts: ["High cohesion", "Loose coupling", "Change amplification"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["functions"],
+          plain:
+            "Good code groups things that change together (cohesion) and keeps separate parts from depending on each other's details (coupling). Then a change stays in one place.",
+        },
+        {
+          slug: "solid",
+          title: "SOLID, with its critics",
+          summary: "Five principles, used with judgement.",
+          minutes: 25,
+          signature:
+            "Apply each SOLID principle to a small payroll example and decide where it helps and where it adds ceremony",
+          formats: ["step-through", "checkpoint"],
+          concepts: ["The five principles", "When they help", "Critiques and alternatives"],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["cohesion-coupling"],
+          plain:
+            "SOLID is five widely taught design principles for object-oriented code. They are useful guides, not laws; this module shows what each one is for, and where critics say they lead to over-engineering.",
+        },
+        {
+          slug: "composition",
+          title: "Composition over inheritance",
+          summary: "Build from parts, not family trees.",
+          minutes: 20,
+          signature:
+            "Model café drinks with an inheritance tree, then with composition, and add a new option to each",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Inheritance and its traps",
+            "Composition and interfaces",
+            "When inheritance fits",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["cohesion-coupling"],
+          plain:
+            "Inheritance shares code through a family tree of classes, which gets rigid as options multiply. Composition builds objects from small parts, so new combinations don't need new classes.",
+        },
+        {
+          slug: "boundaries",
+          title: "Boundaries and dependencies",
+          summary: "Keep the core free of the details.",
+          minutes: 25,
+          signature:
+            "Wrap a third-party payment SDK behind your own interface and swap providers without touching the business rules",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Depend on abstractions you own",
+            "Layers and the dependency rule",
+            "Functional core, imperative shell",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["composition"],
+          plain:
+            "Keeping business rules separate from databases, frameworks and vendors means you can change those details later and test the rules on their own.",
+        },
+      ],
+    },
+    {
+      slug: "errors",
+      title: "Errors and edges",
+      summary: "Making failure and absence explicit.",
+      modules: [
+        {
+          slug: "error-handling",
+          title: "Error handling",
+          summary: "Fail loudly, recover deliberately.",
+          minutes: 25,
+          signature:
+            "Trace a swallowed exception through a checkout and fix it three ways: exceptions, result types and failing fast",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Exceptions versus error values",
+            "Never swallow errors",
+            "Fail fast and validate at the edge",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["functions"],
+          plain:
+            "Errors are part of a program's behaviour. Clean code makes them visible: it doesn't hide them, handles them where something useful can be done, and gives messages that help.",
+        },
+        {
+          slug: "null-safety",
+          title: "Null and absence",
+          summary: "The billion-dollar mistake.",
+          minutes: 20,
+          signature:
+            "Hunt down a crash caused by a missing value, then make absence explicit so the compiler catches it",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Null references", "Optional and maybe types", "Strict null checks"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["error-handling"],
+          plain:
+            "A value that might be missing is a common source of crashes. Modern languages and settings make absence explicit in the type, so forgetting to handle it becomes a compile error.",
+        },
+        {
+          slug: "types-as-docs",
+          title: "Types as documentation",
+          summary: "Make illegal states unrepresentable.",
+          minutes: 25,
+          signature:
+            "Redesign an order's status fields so impossible combinations can't even be written",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Types as executable documentation",
+            "Unions and enums",
+            "Parse, don't validate",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["null-safety"],
+          plain:
+            "Types can describe what values are allowed, so the compiler checks it everywhere. Designing types so impossible situations can't be expressed removes whole classes of bugs.",
+        },
+      ],
+    },
+    {
+      slug: "change",
+      title: "Changing code",
+      summary: "Smells, refactoring and debt.",
+      modules: [
+        {
+          slug: "code-smells",
+          title: "Code smells",
+          summary: "Hints that something could be better.",
+          minutes: 20,
+          signature:
+            "Find the smells in a café's order module and match each to the refactoring that removes it",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Common smells", "Smells are hints, not rules", "Prioritising what to fix"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["complexity"],
+          plain:
+            "A code smell is a surface sign that code may be hard to change, such as a very long function or a class that knows too much. Smells point to where to look, not to a definite problem.",
+        },
+        {
+          slug: "refactoring",
+          title: "Refactoring",
+          summary: "Change the structure, keep the behaviour.",
+          minutes: 25,
+          signature:
+            "Refactor a messy function in small steps with tests running after each one, and see what happens when you take a big leap instead",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Small behaviour-preserving steps",
+            "The refactoring catalogue",
+            "Tests as the safety net",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["code-smells"],
+          plain:
+            "Refactoring means improving code's structure without changing what it does, in small steps, checking with tests after each. It's how clean code stays clean.",
+        },
+        {
+          slug: "technical-debt",
+          title: "Technical debt",
+          summary: "Borrowing against tomorrow.",
+          minutes: 20,
+          signature:
+            "Run a team through six months of shortcuts and clean-ups and watch delivery speed respond",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "The debt metaphor",
+            "Deliberate and accidental debt",
+            "Paying it down as you go",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["refactoring"],
+          plain:
+            "Taking shortcuts can be like borrowing money: faster now, with interest later, as every change gets harder. Teams manage it by choosing debt deliberately and paying it down steadily.",
+        },
+      ],
+    },
+    {
+      slug: "teams",
+      title: "Tools and teams",
+      summary: "Keeping a whole codebase clean.",
+      modules: [
+        {
+          slug: "static-analysis",
+          title: "Static analysis",
+          summary: "Tools that read your code for you.",
+          minutes: 20,
+          signature:
+            "Run type checkers, linters and a code scanner over a pull request and decide which warnings matter",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Linters, type checkers and analysers",
+            "Signal versus noise",
+            "Running them in CI",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["formatting"],
+          plain:
+            "Static analysis tools examine code without running it, catching bugs, risky patterns and inconsistencies early. Tuned well, they catch problems before a reviewer ever sees them.",
+        },
+        {
+          slug: "ai-code",
+          title: "AI-written code",
+          summary: "Generated fast, read slowly.",
+          minutes: 20,
+          signature:
+            "Review three AI-generated functions for correctness, clarity and fit with the codebase before accepting them",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Reviewing generated code",
+            "Hidden costs: duplication and churn",
+            "Keeping humans in charge of design",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["code-smells"],
+          plain:
+            "AI assistants can write code quickly, but someone still has to read, understand and own it. The same clean code habits decide whether generated code helps or quietly makes a codebase harder to change.",
+        },
+        {
+          slug: "conventions",
+          title: "Team conventions",
+          summary: "Agree once, apply everywhere.",
+          minutes: 20,
+          signature:
+            "Draft a team's coding conventions, decide which to automate, and record one design decision in an ADR",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Style guides",
+            "Architecture decision records",
+            "Consistency over preference",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["static-analysis"],
+          plain:
+            "A codebase stays readable when the team agrees on conventions, lets tools enforce what they can, and writes down important decisions and the reasons behind them.",
+        },
+      ],
+    },
+    {
+      slug: "capstone",
+      title: "Capstone",
+      summary: "Put it all together.",
+      modules: [
+        {
+          slug: "capstone-clean",
+          title: "Capstone: untangle a module nobody understands",
+          summary: "Read it, test it, clean it.",
+          minutes: 35,
+          signature:
+            "Take a tangled order module, pin its behaviour with tests, then refactor it step by step into code a newcomer can follow",
+          formats: ["fix-the-problem", "step-through"],
+          concepts: [
+            "Reading unfamiliar code",
+            "Safe refactoring under tests",
+            "Choosing what to improve first",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["refactoring"],
+          plain:
+            "This capstone brings the track together. You inherit a module everyone avoids; you read it, protect it with tests, find the worst problems and clean them up in small, safe steps.",
+        },
+      ],
+    },
+  ],
+};
+
 const playground: Track = {
   slug: "playground",
   title: "Toolkit playground",
@@ -12664,6 +13108,7 @@ export const tracks: Track[] = [
   dpdpAct,
   git,
   testing,
+  cleanCode,
   playground,
 ];
 
@@ -12858,7 +13303,7 @@ export const categories: Category[] = [
       { title: "Backend", blurb: "Services, data access and APIs that last." },
       { title: "Mobile", blurb: "Native and cross-platform apps." },
       { title: "Testing", slug: "testing", blurb: "What to test, at which level, and why." },
-      { title: "Clean Code", blurb: "Code other people can read and change." },
+      { title: "Clean Code", slug: "clean-code", blurb: "Code other people can read and change." },
       { title: "Code Review", blurb: "Giving and receiving useful reviews." },
       { title: "Git", slug: "git", blurb: "Commits, branches and history, understood." },
     ],

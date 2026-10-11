@@ -930,6 +930,42 @@ Software development area, second track (started 2026-10-11). 23 modules in 7 ch
 | **7** | **Capstone**                                       |                                                              |                                     |
 | 23    | Capstone: rescue a codebase nobody dares to change | Inherit an untested checkout service                         | Branching scenario, Fix the problem |
 
+## Clean Code: curriculum
+
+Software development area, third track (started 2026-10-11). 22 modules in 7 chapters, about 8 hours. Accent: "stone" warm grey (`[data-track="stone"]`). Glossary: `glossaries/clean-code.ts`. Writing code other people can read and change: readable names, functions and comments, formatting and simplicity, duplication and complexity, design (cohesion, coupling, SOLID with its critics, composition, boundaries), errors and absence, code smells, refactoring and technical debt, then tools and team habits. Language-neutral: examples in JavaScript, Python, Java and Go, with competing schools of thought (Martin, Ousterhout, Metz, Beck and others) presented side by side rather than one book's rules. Code examples are made up (a café's order system) and many run or transform in the browser. Built on one branch (`track/clean-code`), one commit per module, merged once at the end. Each module is fact-checked against original books, papers, talks and official docs before it is built.
+
+| #     | Module                                         | Centrepiece                                                  | Key formats                   |
+| ----- | ---------------------------------------------- | ------------------------------------------------------------ | ----------------------------- |
+| **1** | **Foundations**                                |                                                              |                               |
+| 1     | Code is read more than written                 | Follow a two-line bug fix through code written three ways an | Scroll story                  |
+| 2     | Naming                                         | Rename the variables                                         | Fix the problem               |
+| 3     | Functions                                      | Split a 60-line function into well-named pieces and see whic | Build connect                 |
+| 4     | Comments                                       | Sort the comments in a real-looking file into helpful        | Simulation                    |
+| **2** | **Shape and simplicity**                       |                                                              |                               |
+| 5     | Formatting and style                           | Feed messy code through a formatter and a linter             | Simulation                    |
+| 6     | Keep it simple                                 | Build a feature three ways                                   | Branching scenario            |
+| 7     | Duplication and the wrong abstraction          | Merge three similar functions into one                       | Step through                  |
+| 8     | Complexity                                     | Flatten a deeply nested function with guard clauses and watc | Simulation                    |
+| **3** | **Design**                                     |                                                              |                               |
+| 9     | Cohesion and coupling                          | Move responsibilities between modules and watch how many fil | Build connect                 |
+| 10    | SOLID, with its critics                        | Apply each SOLID principle to a small payroll example and de | Step through                  |
+| 11    | Composition over inheritance                   | Model café drinks with an inheritance tree                   | Build connect                 |
+| 12    | Boundaries and dependencies                    | Wrap a third-party payment SDK behind your own interface and | Build connect                 |
+| **4** | **Errors and edges**                           |                                                              |                               |
+| 13    | Error handling                                 | Trace a swallowed exception through a checkout and fix it th | Fix the problem               |
+| 14    | Null and absence                               | Hunt down a crash caused by a missing value                  | Simulation                    |
+| 15    | Types as documentation                         | Redesign an order's status fields so impossible combinations | Build connect                 |
+| **5** | **Changing code**                              |                                                              |                               |
+| 16    | Code smells                                    | Find the smells in a café's order module and match each to t | Simulation                    |
+| 17    | Refactoring                                    | Refactor a messy function in small steps with tests running  | Step through                  |
+| 18    | Technical debt                                 | Run a team through six months of shortcuts and clean-ups and | Simulation                    |
+| **6** | **Tools and teams**                            |                                                              |                               |
+| 19    | Static analysis                                | Run type checkers                                            | Simulation                    |
+| 20    | AI-written code                                | Review three AI-generated functions for correctness          | Branching scenario            |
+| 21    | Team conventions                               | Draft a team's coding conventions                            | Build connect                 |
+| **7** | **Capstone**                                   |                                                              |                               |
+| 22    | Capstone: untangle a module nobody understands | Take a tangled order module                                  | Fix the problem, Step through |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -961,6 +997,7 @@ Software development area, second track (started 2026-10-11). 23 modules in 7 ch
 | 4v. DPDP Act               | Security & government, second track, 22 modules                                         | Live: all 22 modules (2026-10-08)                                       |
 | 4w. Git                    | Software development, first track, 22 modules                                           | Live: all 22 modules (2026-10-11)                                       |
 | 4x. Testing                | Software development, second track, 23 modules                                          | Live: all 23 modules (2026-10-11)                                       |
+| 4y. Clean Code             | Software development, third track, 22 modules                                           | In progress: 0 of 22 modules live                                       |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
