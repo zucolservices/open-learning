@@ -8604,11 +8604,12 @@ const cleanCode: Track = {
             "Build a feature three ways, from just enough to fully configurable, and see what each costs when requirements change",
           formats: ["branching-scenario", "checkpoint"],
           concepts: ["Simple versus easy", "You aren't gonna need it", "Speculative generality"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["functions"],
           plain:
             "The simplest code that meets today's needs is usually easiest to change tomorrow. Building for imagined future needs adds code everyone must understand, often for features that never arrive.",
+          terms: ["yagni"],
         },
         {
           slug: "duplication",
