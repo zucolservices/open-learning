@@ -7604,11 +7604,12 @@ const git: Track = {
             "Creating and switching branches",
             "Why branching in Git is cheap",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["commits-history"],
           plain:
             "A branch is just a name pointing to a commit. When you commit, the branch you're on moves forward. That's why creating a branch is instant, and why you can have as many as you like.",
+          terms: ["branch", "commit", "head"],
         },
         {
           slug: "merging",

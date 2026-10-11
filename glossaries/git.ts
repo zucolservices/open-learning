@@ -90,4 +90,10 @@ export const gitTrack = {
       "When HEAD points straight at a commit instead of a branch, for example after checking out an old commit.",
     module: "commits-history",
   },
+  branch: {
+    term: "Branch",
+    definition:
+      "A name that points to a commit and moves forward when you commit on it. Creating one copies nothing.",
+    module: "branches",
+  },
 } satisfies Record<string, GlossaryEntry>;
