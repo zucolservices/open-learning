@@ -7814,11 +7814,12 @@ const git: Track = {
             "Recovering lost commits",
             "When objects really disappear",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["undoing"],
           plain:
             "Git keeps a local log of where HEAD and each branch have pointed. Even after a bad reset or a deleted branch, the old commits are usually still there for weeks, and the reflog shows you how to get back to them.",
+          terms: ["reflog", "unreachable", "reset", "head"],
         },
         {
           slug: "stash-worktrees",

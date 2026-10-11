@@ -527,4 +527,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "git/branching-strategies": () => import("./git/branching-strategies"),
   "git/commit-hygiene": () => import("./git/commit-hygiene"),
   "git/undoing": () => import("./git/undoing"),
+  "git/reflog": () => import("./git/reflog"),
 };

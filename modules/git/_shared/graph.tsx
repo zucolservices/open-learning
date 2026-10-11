@@ -29,7 +29,7 @@ export function CommitGraph({
   const lanes = Math.max(0, ...all.map((c) => c.lane)) + 1;
   const X0 = 24;
   const DX = 46;
-  const Y0 = 34;
+  const Y0 = 44;
   const DY = 44;
   const xs: Record<string, number> = {};
   all.forEach((c, i) => (xs[c.id] = X0 + i * DX));
@@ -103,7 +103,7 @@ export function CommitGraph({
                 {c.id.slice(0, 5)}
               </text>
               {(labels[c.id] ?? []).map((b, i) => (
-                <g key={b} transform={`translate(${x + 12}, ${y - 16 - i * 13})`}>
+                <g key={b} transform={`translate(${x + 6}, ${y - 30 - i * 13})`}>
                   <rect
                     width={b.length * 5.2 + (b === cur ? 34 : 9)}
                     height={11}
@@ -121,7 +121,7 @@ export function CommitGraph({
                 </g>
               ))}
               {isHead && !cur && (
-                <g transform={`translate(${x + 12}, ${y - 16})`}>
+                <g transform={`translate(${x + 6}, ${y - 30})`}>
                   <rect width={34} height={11} rx={3} className="fill-bad" />
                   <text x={4} y={8.3} className="fill-accent-fg font-mono text-[8px]">
                     HEAD

@@ -234,4 +234,16 @@ export const gitTrack = {
       "Replacing the last commit with a corrected one (new message or added changes). It creates a new commit, so only amend unpushed work.",
     module: "undoing",
   },
+  reflog: {
+    term: "Reflog",
+    definition:
+      "Git's local log of every position HEAD and each branch has pointed to, used to find commits after a bad reset or deleted branch.",
+    module: "reflog",
+  },
+  unreachable: {
+    term: "Unreachable commit",
+    definition:
+      "A commit that no branch, tag or HEAD can reach by following parents. Git keeps it for a while, then cleans it up.",
+    module: "reflog",
+  },
 } satisfies Record<string, GlossaryEntry>;
