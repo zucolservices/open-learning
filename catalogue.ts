@@ -7731,11 +7731,12 @@ const git: Track = {
             "Forks vs branches",
             "Merge, squash or rebase when merging",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["remotes"],
           plain:
             "A pull request (a merge request on GitLab) asks to merge a branch, with a place to discuss, review and run checks first. It's a hosting-platform feature built on top of Git, not part of Git itself.",
+          terms: ["pull-request", "fork", "codeowners", "push"],
         },
         {
           slug: "branching-strategies",

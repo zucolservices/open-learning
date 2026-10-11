@@ -180,4 +180,22 @@ export const gitTrack = {
       "A read-only pointer like origin/main that records where a remote's branch was the last time you fetched.",
     module: "remotes",
   },
+  "pull-request": {
+    term: "Pull request",
+    definition:
+      "A hosting-platform feature that proposes merging one branch into another, with discussion, review and automated checks first. GitLab calls it a merge request.",
+    module: "pull-requests",
+  },
+  fork: {
+    term: "Fork",
+    definition:
+      "A copy of someone else's repository under your own account on a hosting platform, used to propose changes when you can't push to the original.",
+    module: "pull-requests",
+  },
+  codeowners: {
+    term: "CODEOWNERS",
+    definition:
+      "A file listing who owns which paths in a repository, so the platform can automatically request their review.",
+    module: "pull-requests",
+  },
 } satisfies Record<string, GlossaryEntry>;
