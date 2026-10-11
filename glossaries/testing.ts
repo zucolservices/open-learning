@@ -181,4 +181,10 @@ export const testingTrack = {
       "The mission for an exploratory testing session, such as “Explore booking with interruptions to discover lost bookings”.",
     module: "exploratory",
   },
+  "test-strategy": {
+    term: "Test strategy",
+    definition:
+      "A team's plan for what to test, how deeply, and with which kinds of tests, usually decided by risk: how likely each part is to break and how much it would hurt.",
+    module: "capstone-testing",
+  },
 } satisfies Record<string, GlossaryEntry>;

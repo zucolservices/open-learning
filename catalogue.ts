@@ -8473,11 +8473,12 @@ const testing: Track = {
             "Choosing levels and techniques",
             "Making tests part of the team's habits",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["testing-in-production"],
           plain:
             "This capstone brings the track together. You inherit a checkout service with no tests and a release due; you decide what to test first, at which level, and with which techniques, then catch the bug that would have shipped.",
+          terms: ["test-strategy", "characterisation-test", "contract-test"],
         },
       ],
     },
