@@ -9667,11 +9667,12 @@ const frontend: Track = {
             "Set cache headers for HTML, images and API responses and watch requests hit the browser cache, the CDN or the origin",
           formats: ["simulation", "checkpoint"],
           concepts: ["HTTP caching headers", "CDNs and the edge", "Cache invalidation"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["rendering-modes"],
           plain:
             "Caches in the browser and in CDNs close to users can serve pages in milliseconds. Cache headers decide what's kept and for how long; getting them wrong shows stale or private data.",
+          terms: ["cdn", "cache-control", "ssg"],
         },
       ],
     },
