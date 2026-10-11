@@ -8872,11 +8872,12 @@ const cleanCode: Track = {
             "Signal versus noise",
             "Running them in CI",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["formatting"],
           plain:
             "Static analysis tools examine code without running it, catching bugs, risky patterns and inconsistencies early. Tuned well, they catch problems before a reviewer ever sees them.",
+          terms: ["static-analysis", "type-checker", "linter"],
         },
         {
           slug: "ai-code",

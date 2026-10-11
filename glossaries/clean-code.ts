@@ -182,4 +182,16 @@ export const cleanCodeTrack = {
       "The future cost of shortcuts in code: changes get slower until the shortcuts are cleaned up. Coined as a metaphor by Ward Cunningham in 1992.",
     module: "technical-debt",
   },
+  "static-analysis": {
+    term: "Static analysis",
+    definition:
+      "Examining code without running it, using tools such as linters, type checkers and security scanners, to find bugs, risky patterns and inconsistencies early.",
+    module: "static-analysis",
+  },
+  "type-checker": {
+    term: "Type checker",
+    definition:
+      "A tool or compiler step that checks values are used consistently with their types, such as TypeScript, mypy or pyright, catching whole classes of mistakes before the code runs.",
+    module: "static-analysis",
+  },
 } satisfies Record<string, GlossaryEntry>;
