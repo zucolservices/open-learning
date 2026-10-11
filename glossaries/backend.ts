@@ -98,4 +98,10 @@ export const backendTrack = {
       "When a popular cache entry expires and many requests all try to rebuild it at once, flooding the database. Also called a thundering herd.",
     module: "caching-backend",
   },
+  authorization: {
+    term: "Authorization",
+    definition:
+      "Deciding what a signed-in user may do, and to which specific records. Checked on the server for every request, denying anything not explicitly allowed.",
+    module: "authorization",
+  },
 } satisfies Record<string, GlossaryEntry>;

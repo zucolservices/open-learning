@@ -10097,11 +10097,12 @@ const backend: Track = {
             "Checking ownership on every object",
             "Deny by default",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["sign-in"],
           plain:
             "Authorization decides what a signed-in user may do. Check it on the server for every request and every object, and deny anything not explicitly allowed.",
+          terms: ["authorization", "authentication"],
         },
       ],
     },
