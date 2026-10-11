@@ -7644,11 +7644,12 @@ const git: Track = {
             "Reading conflict markers",
             "Resolving, testing and committing",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["merging"],
           plain:
             "A conflict happens when both branches changed the same part of a file and Git can't know which to keep. Git marks the spot, you decide the result, then you finish the merge.",
+          terms: ["merge-conflict", "conflict-markers", "merge-base", "three-way-merge"],
         },
         {
           slug: "rebase",

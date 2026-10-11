@@ -519,4 +519,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "git/commits-history": () => import("./git/commits-history"),
   "git/branches": () => import("./git/branches"),
   "git/merging": () => import("./git/merging"),
+  "git/conflicts": () => import("./git/conflicts"),
 };

@@ -120,4 +120,10 @@ export const gitTrack = {
       "When two branches changed the same part of a file differently, so Git stops and asks a person to choose the result.",
     module: "conflicts",
   },
+  "conflict-markers": {
+    term: "Conflict markers",
+    definition:
+      "The <<<<<<<, ======= and >>>>>>> lines Git writes into a file to show both sides of a conflict. They must be removed before committing.",
+    module: "conflicts",
+  },
 } satisfies Record<string, GlossaryEntry>;
