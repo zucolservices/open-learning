@@ -74,4 +74,16 @@ export const mobileTrack = {
       "Android's back gesture that previews where Back will go as you swipe, so you can cancel. On by default for apps targeting Android 16.",
     module: "navigation-mobile",
   },
+  "touch-target": {
+    term: "Touch target",
+    definition:
+      "The area of the screen that responds when you tap a control. It can be bigger than the visible icon; guidelines ask for about 44 points on iOS and 48 dp on Android.",
+    module: "touch-gestures",
+  },
+  haptics: {
+    term: "Haptics",
+    definition:
+      "Small vibrations a phone plays to confirm an action, such as a tick when an order succeeds.",
+    module: "touch-gestures",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -650,4 +650,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "mobile/app-lifecycle": () => import("./mobile/app-lifecycle"),
   "mobile/declarative-ui": () => import("./mobile/declarative-ui"),
   "mobile/navigation-mobile": () => import("./mobile/navigation-mobile"),
+  "mobile/touch-gestures": () => import("./mobile/touch-gestures"),
 };

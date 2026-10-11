@@ -10433,11 +10433,12 @@ const mobile: Track = {
             "Gestures and their conflicts",
             "Feedback: visual and haptic",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["declarative-ui"],
           plain:
             "Fingers are bigger and less precise than a mouse. Generous touch targets, gestures with visible alternatives and immediate feedback make apps easy to use on the move.",
+          terms: ["touch-target", "haptics"],
         },
         {
           slug: "adaptive-layouts",
