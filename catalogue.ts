@@ -8529,11 +8529,12 @@ const cleanCode: Track = {
             "Rename the variables, functions and classes in a confusing snippet and watch a reader's questions disappear",
           formats: ["fix-the-problem", "checkpoint"],
           concepts: ["Intention-revealing names", "Names and scope", "Consistent vocabulary"],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["why-readable"],
           plain:
             "Good names tell the reader what something is and why it exists, so they don't need to read the details. Most confusing code becomes clear with better names alone.",
+          terms: ["magic-number", "readability"],
         },
         {
           slug: "functions",
