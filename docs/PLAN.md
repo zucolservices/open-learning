@@ -1032,7 +1032,7 @@ Software development area, fourth track (started 2026-10-11). 21 modules in 6 ch
 | 4w. Git                    | Software development, first track, 22 modules                                           | Live: all 22 modules (2026-10-11)                                       |
 | 4x. Testing                | Software development, second track, 23 modules                                          | Live: all 23 modules (2026-10-11)                                       |
 | 4y. Clean Code             | Software development, third track, 22 modules                                           | Live: all 22 modules (2026-10-11)                                       |
-| 4z. Code Review            | Software development, fourth track, 21 modules                                          | In progress: 13 of 21 modules live                                      |
+| 4z. Code Review            | Software development, fourth track, 21 modules                                          | In progress: 14 of 21 modules live                                      |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

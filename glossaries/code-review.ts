@@ -86,4 +86,10 @@ export const codeReviewTrack = {
       "How long a change waits for a reviewer to respond. Usually much longer than the review itself, and a major cause of slow delivery.",
     module: "turnaround",
   },
+  "bus-factor": {
+    term: "Bus factor",
+    definition:
+      "How many people could leave a team before some part of the code has nobody left who understands it. A bus factor of one is a risk.",
+    module: "reviewers",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -9236,11 +9236,12 @@ const codeReview: Track = {
             "Assign reviewers to a set of changes using ownership rules and see what happens with too few, too many or the wrong people",
           formats: ["simulation", "checkpoint"],
           concepts: ["Code owners", "How many reviewers", "Spreading knowledge"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["turnaround"],
           plain:
             "The right reviewer knows the code or needs to learn it. Ownership files route changes automatically, and one or two engaged reviewers usually beat five who each assume someone else looked.",
+          terms: ["codeowners", "bus-factor", "approval"],
         },
         {
           slug: "review-automation",
