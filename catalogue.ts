@@ -9651,11 +9651,12 @@ const frontend: Track = {
             "Watch a server-rendered page become interactive and compare full hydration, islands, resumability and server components",
           formats: ["step-through", "checkpoint"],
           concepts: ["Hydration cost", "Islands architecture", "Server components"],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["rendering-modes"],
           plain:
             "Server-rendered HTML still needs JavaScript to become interactive. Newer approaches hydrate only the interactive parts, or keep components on the server entirely, to send less code.",
+          terms: ["hydration", "islands", "ssr"],
         },
         {
           slug: "edge-caching",

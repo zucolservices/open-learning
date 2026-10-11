@@ -613,4 +613,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "frontend/state-management": () => import("./frontend/state-management"),
   "frontend/routing": () => import("./frontend/routing"),
   "frontend/rendering-modes": () => import("./frontend/rendering-modes"),
+  "frontend/hydration": () => import("./frontend/hydration"),
 };

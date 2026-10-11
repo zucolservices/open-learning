@@ -206,4 +206,16 @@ export const frontendTrack = {
       "Static pages that are rebuilt in the background after a set time, serving the older copy until the new one is ready.",
     module: "rendering-modes",
   },
+  hydration: {
+    term: "Hydration",
+    definition:
+      "Running JavaScript in the browser to attach event handlers and state to HTML that was rendered on the server, making it interactive.",
+    module: "hydration",
+  },
+  islands: {
+    term: "Islands architecture",
+    definition:
+      'Pages that are mostly static HTML with small interactive "islands" that each load their own JavaScript, so most of the page needs none.',
+    module: "hydration",
+  },
 } satisfies Record<string, GlossaryEntry>;
