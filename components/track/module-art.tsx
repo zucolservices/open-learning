@@ -46,6 +46,8 @@ import { cleanCodeArtA } from "./art/clean-code-a";
 import { cleanCodeArtB } from "./art/clean-code-b";
 import { codeReviewArtA } from "./art/code-review-a";
 import { codeReviewArtB } from "./art/code-review-b";
+import { frontendArtA } from "./art/frontend-a";
+import { frontendArtB } from "./art/frontend-b";
 
 /**
  * One small illustration per module (viewBox 160 × 100), drawn with the
@@ -1111,6 +1113,8 @@ const all: ArtMap = {
   ...cleanCodeArtB,
   ...codeReviewArtA,
   ...codeReviewArtB,
+  ...frontendArtA,
+  ...frontendArtB,
 };
 
 /** Art is keyed by slug; a "track/slug" key wins, for slugs used in more than one track. */

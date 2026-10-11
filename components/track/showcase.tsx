@@ -50,6 +50,8 @@ import { CleanCodeScene } from "@/components/home/clean-code-scene";
 import { CleanCodeTaste } from "@/components/home/clean-code-taste";
 import { CodeReviewScene } from "@/components/home/code-review-scene";
 import { CodeReviewTaste } from "@/components/home/code-review-taste";
+import { FrontendScene } from "@/components/home/frontend-scene";
+import { FrontendTaste } from "@/components/home/frontend-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -266,5 +268,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: CodeReviewTaste,
     tasteCaption:
       "A taste of module 10: label each review comment as blocking, a suggestion, a question or a nit, and see what the author must change.",
+  },
+  frontend: {
+    Scene: FrontendScene,
+    sceneCaption:
+      "From a URL to pixels people can use: the browser, building interfaces, data and navigation, rendering strategies, performance, and quality for everyone. Watch the tour, or click any part.",
+    Taste: FrontendTaste,
+    tasteCaption:
+      "A taste of module 15: fix six common problems on a slow, jumpy page and watch its Core Web Vitals turn good.",
   },
 };
