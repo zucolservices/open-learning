@@ -114,6 +114,7 @@ export interface Track {
     | "redline"
     | "pixel"
     | "anchor"
+    | "pocket"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -10306,6 +10307,460 @@ const backend: Track = {
   ],
 };
 
+const mobile: Track = {
+  slug: "mobile",
+  title: "Mobile",
+  area: "Software development",
+  category: "software-development",
+  tagline: "Native and cross-platform apps.",
+  description:
+    "How mobile apps are built and shipped: what makes phones different, choosing between native, cross-platform and web apps, the app lifecycle, building screens with declarative UI, navigation and deep links, touch and gestures, adapting to phones, tablets and foldables, offline-first design, networking on flaky connections, storing data on the device, background work and push notifications, permissions and privacy, device features, mobile accessibility, start-up and scrolling performance, battery and memory, testing, app stores and review, releases and updates, mobile security, and crash reporting. Platform-neutral: iOS with Swift and SwiftUI, Android with Kotlin and Jetpack Compose, Flutter, React Native, Kotlin Multiplatform, .NET MAUI and progressive web apps side by side. By the end you can design, build and ship an app that feels fast, works offline and respects its users.",
+  accent: "pocket",
+  chapters: [
+    {
+      slug: "world",
+      title: "The mobile world",
+      summary: "Why phones need their own thinking.",
+      modules: [
+        {
+          slug: "how-mobile-differs",
+          title: "How mobile is different",
+          summary: "Small screens, big constraints.",
+          minutes: 20,
+          signature:
+            "Follow one café order on a phone through a tunnel, a low battery and an incoming call, and see what the app must handle",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "Touch, small screens and one hand",
+            "Flaky networks and batteries",
+            "The operating system is in charge",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "Phones are personal, portable and constrained: small touch screens, patchy networks, limited batteries, and an operating system that can pause or close apps at any moment.",
+        },
+        {
+          slug: "native-vs-cross",
+          title: "Native, cross-platform or web?",
+          summary: "Picking how to build.",
+          minutes: 20,
+          signature:
+            "Choose an approach for four different apps, from a banking app to a café menu, and compare effort, reach and feel",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Native: Swift and Kotlin",
+            "Cross-platform: Flutter, React Native, KMP, MAUI",
+            "Progressive web apps",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["how-mobile-differs"],
+          plain:
+            "You can build separate native apps, share code across platforms with a cross-platform framework, or ship a web app that installs like one. Each trades reach, cost and how native it feels.",
+        },
+        {
+          slug: "app-lifecycle",
+          title: "The app lifecycle",
+          summary: "Foreground, background, gone.",
+          minutes: 20,
+          signature:
+            "Step an app through launch, a phone call, being backgrounded and being killed, and keep the user's half-written order safe",
+          formats: ["step-through", "checkpoint"],
+          concepts: ["App and screen states", "Process death", "Saving and restoring state"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["how-mobile-differs"],
+          plain:
+            "Apps don't simply run until closed. The system moves them between foreground, background and suspended, and may end them without warning, so apps must save and restore what matters.",
+        },
+      ],
+    },
+    {
+      slug: "ui",
+      title: "Building the UI",
+      summary: "Screens, navigation and touch.",
+      modules: [
+        {
+          slug: "declarative-ui",
+          title: "Building screens",
+          summary: "SwiftUI, Compose and Flutter.",
+          minutes: 25,
+          signature:
+            "Build the same menu screen in SwiftUI, Jetpack Compose and Flutter and watch state changes redraw it",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Declarative UI on mobile", "State and recomposition", "Lists that scale"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["native-vs-cross"],
+          plain:
+            "Modern mobile UI is declarative: you describe the screen for the current state and the framework updates it. SwiftUI, Jetpack Compose and Flutter all work this way.",
+        },
+        {
+          slug: "navigation-mobile",
+          title: "Navigation and deep links",
+          summary: "Stacks, tabs and links into the app.",
+          minutes: 20,
+          signature:
+            "Wire up tabs, a navigation stack and a deep link from an email, and fix a back button that goes the wrong way",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Stacks and tabs",
+            "Back behaviour on each platform",
+            "Deep links, universal links and app links",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["declarative-ui"],
+          plain:
+            "Mobile apps move between screens in stacks and tabs. Links from emails or the web can open a specific screen, if the app and website are set up to trust each other.",
+        },
+        {
+          slug: "touch-gestures",
+          title: "Touch, gestures and feedback",
+          summary: "Designed for thumbs.",
+          minutes: 20,
+          signature:
+            "Fix a screen with tiny buttons, hidden gestures and no feedback so it works one-handed",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Touch target sizes",
+            "Gestures and their conflicts",
+            "Feedback: visual and haptic",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["declarative-ui"],
+          plain:
+            "Fingers are bigger and less precise than a mouse. Generous touch targets, gestures with visible alternatives and immediate feedback make apps easy to use on the move.",
+        },
+        {
+          slug: "adaptive-layouts",
+          title: "Phones, tablets and foldables",
+          summary: "One app, many shapes.",
+          minutes: 20,
+          signature:
+            "Resize an app from a small phone to a tablet and an unfolding foldable, and keep it usable in each",
+          formats: ["sandbox", "checkpoint"],
+          concepts: [
+            "Size classes and window sizes",
+            "Safe areas and notches",
+            "Orientation and foldables",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["declarative-ui"],
+          plain:
+            "The same app runs on small phones, large tablets, foldables and in split screen. Layouts adapt to the space they're given, and stay clear of notches and system bars.",
+        },
+      ],
+    },
+    {
+      slug: "data",
+      title: "Data and networking",
+      summary: "Working with the network you actually have.",
+      modules: [
+        {
+          slug: "offline-first",
+          title: "Offline first",
+          summary: "Work without a connection.",
+          minutes: 25,
+          signature:
+            "Use a café app in a lift with no signal, then reconnect and resolve an order changed on two devices",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Local first, sync later", "Queuing changes", "Resolving conflicts"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["app-lifecycle"],
+          plain:
+            "Mobile networks come and go. Offline-first apps keep working from local data, queue changes, and sync them when the connection returns, resolving any conflicts.",
+        },
+        {
+          slug: "mobile-networking",
+          title: "Networking on flaky connections",
+          summary: "Slow, lossy and expensive.",
+          minutes: 20,
+          signature:
+            "Load a menu on a slow, dropping connection and fix it with timeouts, retries, caching and smaller payloads",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: ["Timeouts and retries", "Caching responses", "Smaller, fewer requests"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["offline-first"],
+          plain:
+            "Phone networks are slow and unreliable at the worst moments. Apps that set timeouts, retry carefully, cache responses and send less data feel fast anyway.",
+        },
+        {
+          slug: "device-storage",
+          title: "Storing data on the device",
+          summary: "Settings, databases, files and secrets.",
+          minutes: 20,
+          signature:
+            "Decide where to keep settings, a menu, photos and a sign-in token on the phone",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Key-value settings",
+            "Databases: SQLite, Room, SwiftData",
+            "Secure storage: Keychain and Keystore",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["offline-first"],
+          plain:
+            "Phones offer several places to keep data: simple settings, local databases, files and secure stores for secrets. Choosing well keeps the app fast and the user's data safe.",
+        },
+        {
+          slug: "background-push",
+          title: "Background work and push notifications",
+          summary: "Doing things while the app sleeps.",
+          minutes: 20,
+          signature:
+            "Schedule a sync, deliver an order-ready notification and see what the system allows when the app isn't open",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Scheduled background work",
+            "Push notifications",
+            "What the OS will and won't allow",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["app-lifecycle"],
+          plain:
+            "When an app isn't on screen, the system tightly limits what it can do. Scheduled work and push notifications let it sync and alert the user without draining the battery.",
+        },
+      ],
+    },
+    {
+      slug: "platform",
+      title: "Platform capabilities",
+      summary: "Permissions, devices and accessibility.",
+      modules: [
+        {
+          slug: "permissions-privacy",
+          title: "Permissions and privacy",
+          summary: "Ask at the right moment.",
+          minutes: 20,
+          signature:
+            "Request camera, location and notification permissions at the right moments and see how users respond",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Runtime permissions",
+            "Asking in context",
+            "Privacy rules and store disclosures",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["app-lifecycle"],
+          plain:
+            "Phones protect sensitive features like the camera and location behind permissions. Asking only when needed, explaining why, and declaring data use honestly builds trust.",
+        },
+        {
+          slug: "device-features",
+          title: "Camera, location and sensors",
+          summary: "The phone's superpowers.",
+          minutes: 20,
+          signature:
+            "Add delivery tracking with location and choose accuracy and frequency to balance usefulness and battery",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Location accuracy and battery",
+            "Camera and photo pickers",
+            "Sensors and background limits",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["permissions-privacy"],
+          plain:
+            "Cameras, location and sensors make mobile apps powerful. Each costs battery and privacy, so use the least precision and frequency that does the job.",
+        },
+        {
+          slug: "mobile-accessibility",
+          title: "Accessibility on mobile",
+          summary: "Usable by everyone, on every phone.",
+          minutes: 20,
+          signature:
+            "Use an app with VoiceOver or TalkBack and large text, and fix labels, focus order and layouts that break",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Screen readers: VoiceOver and TalkBack",
+            "Large text and dynamic type",
+            "Colour, contrast and motion",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["touch-gestures"],
+          plain:
+            "Mobile accessibility relies on screen readers, adjustable text sizes and other system settings. Labelling controls and letting layouts grow makes apps usable by everyone.",
+        },
+      ],
+    },
+    {
+      slug: "quality",
+      title: "Quality and performance",
+      summary: "Fast, light and tested.",
+      modules: [
+        {
+          slug: "mobile-performance",
+          title: "Fast start-up and smooth scrolling",
+          summary: "Every frame counts.",
+          minutes: 25,
+          signature:
+            "Profile a slow-starting, janky app and fix its launch work and list rendering",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: ["Cold, warm and hot starts", "Frames and jank", "Efficient lists and images"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["declarative-ui"],
+          plain:
+            "Users notice slow launches and stutter. Doing less at start-up, keeping work off the main thread and rendering lists efficiently keep apps feeling instant.",
+        },
+        {
+          slug: "battery-memory",
+          title: "Battery and memory",
+          summary: "Good citizens on a small device.",
+          minutes: 20,
+          signature:
+            "Find what drains a phone's battery and why the system keeps killing an app in the background",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "What uses battery",
+            "Memory limits and termination",
+            "Being a good background citizen",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["mobile-performance"],
+          plain:
+            "Phones have limited battery and memory, shared by every app. Apps that wake the device rarely, release memory and respect background limits stay installed.",
+        },
+        {
+          slug: "mobile-testing",
+          title: "Testing mobile apps",
+          summary: "Many devices, few hands.",
+          minutes: 20,
+          signature:
+            "Plan tests for an app across unit, UI and device tests, and choose which devices to cover",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Unit and UI tests",
+            "Simulators, emulators and real devices",
+            "Device farms and screenshots",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["mobile-performance"],
+          plain:
+            "Mobile apps run on many devices and OS versions. A mix of fast unit tests, UI tests and runs on real devices in the cloud catches problems before users do.",
+        },
+      ],
+    },
+    {
+      slug: "shipping",
+      title: "Shipping",
+      summary: "Stores, releases, security and feedback.",
+      modules: [
+        {
+          slug: "app-stores",
+          title: "App stores and review",
+          summary: "Getting into users' hands.",
+          minutes: 20,
+          signature: "Submit an app to both stores and fix the issues that get it rejected",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Store review and guidelines",
+            "Fees and payments",
+            "New rules and alternative stores",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["permissions-privacy"],
+          plain:
+            "Most apps reach users through Apple's App Store and Google Play, each with review rules, fees and requirements. Rules have changed in some regions, opening alternative stores.",
+        },
+        {
+          slug: "releases-updates",
+          title: "Releases and updates",
+          summary: "Old versions never quite go away.",
+          minutes: 20,
+          signature:
+            "Roll out a new version in stages, handle users who never update, and turn a broken feature off remotely",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Staged and phased rollouts",
+            "Supporting old app versions",
+            "Feature flags and forced updates",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["app-stores"],
+          plain:
+            "Unlike websites, you can't update every user's app at once. Staged rollouts limit damage, servers must support older versions, and feature flags let you switch things off.",
+        },
+        {
+          slug: "mobile-security",
+          title: "Mobile app security",
+          summary: "The app is in the attacker's hands.",
+          minutes: 25,
+          signature:
+            "Review a café app for leaked secrets, insecure storage and trust in the device, using a rules-based checklist",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Nothing secret in the app",
+            "Secure storage and transport",
+            "The OWASP mobile standards",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["device-storage"],
+          plain:
+            "Anyone can download and take apart an app. Keep secrets on the server, store sensitive data securely, protect network traffic and never trust the device alone.",
+        },
+        {
+          slug: "crash-analytics",
+          title: "Crashes, analytics and feedback",
+          summary: "Learning from real use.",
+          minutes: 20,
+          signature:
+            "Triage crash reports and freezes from a new release and decide what to fix first, while respecting privacy",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Crash and freeze reporting",
+            "Store vitals and ratings",
+            "Privacy-respecting analytics",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["releases-updates"],
+          plain:
+            "Once an app ships, crash reports, freeze reports and store vitals show what's going wrong for real users. Measure enough to improve without collecting more than you need.",
+        },
+      ],
+    },
+    {
+      slug: "capstone",
+      title: "Capstone",
+      summary: "Put it all together.",
+      modules: [
+        {
+          slug: "capstone-mobile",
+          title: "Capstone: ship a café ordering app",
+          summary: "From idea to the stores.",
+          minutes: 35,
+          signature:
+            "Make the key decisions for a café ordering app, fix the problems found in testing and review, and plan its release",
+          formats: ["branching-scenario", "fix-the-problem"],
+          concepts: ["Designing for mobile", "Making it robust", "Shipping and learning"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["releases-updates"],
+          plain:
+            "This capstone brings the track together. You choose how to build a real-world ordering app, make it work offline and in the background, fix review and quality issues, and ship it safely.",
+        },
+      ],
+    },
+  ],
+};
+
 const playground: Track = {
   slug: "playground",
   title: "Toolkit playground",
@@ -14489,6 +14944,7 @@ export const tracks: Track[] = [
   codeReview,
   frontend,
   backend,
+  mobile,
   playground,
 ];
 
@@ -14685,7 +15141,7 @@ export const categories: Category[] = [
         blurb: "The browser, rendering and modern UI frameworks.",
       },
       { title: "Backend", slug: "backend", blurb: "Services, data access and APIs that last." },
-      { title: "Mobile", blurb: "Native and cross-platform apps." },
+      { title: "Mobile", slug: "mobile", blurb: "Native and cross-platform apps." },
       { title: "Testing", slug: "testing", blurb: "What to test, at which level, and why." },
       { title: "Clean Code", slug: "clean-code", blurb: "Code other people can read and change." },
       { title: "Code Review", slug: "code-review", blurb: "Giving and receiving useful reviews." },

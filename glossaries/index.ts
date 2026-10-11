@@ -33,6 +33,7 @@ import { cleanCodeTrack } from "./clean-code";
 import { codeReviewTrack } from "./code-review";
 import { frontendTrack } from "./frontend";
 import { backendTrack } from "./backend";
+import { mobileTrack } from "./mobile";
 import { shared } from "./shared";
 import type { GlossaryEntry } from "./types";
 
@@ -68,6 +69,7 @@ export const trackGlossaries: Record<string, Record<string, GlossaryEntry>> = {
   "code-review": codeReviewTrack,
   frontend: frontendTrack,
   backend: backendTrack,
+  mobile: mobileTrack,
 };
 
 export type TermId =
@@ -99,7 +101,8 @@ export type TermId =
   | keyof typeof cleanCodeTrack
   | keyof typeof codeReviewTrack
   | keyof typeof frontendTrack
-  | keyof typeof backendTrack;
+  | keyof typeof backendTrack
+  | keyof typeof mobileTrack;
 
 export interface ResolvedTerm {
   id: string;

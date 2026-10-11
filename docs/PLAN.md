@@ -1072,6 +1072,42 @@ Software development area, sixth track (started 2026-10-12). 22 modules in 7 cha
 | **7** | **Capstone**                           |                                                              |                                     |
 | 22    | Capstone: build an order service       | Design and harden an order service end to end: structure     | Branching scenario, Fix the problem |
 
+## Mobile: curriculum
+
+Software development area, seventh track (started 2026-10-12). 22 modules in 7 chapters, about 8 hours. Accent: "pocket" teal (`[data-track="pocket"]`). Glossary: `glossaries/mobile.ts`. How mobile apps are built and shipped: what makes phones different, choosing native, cross-platform or web, and the app lifecycle; declarative screens, navigation, touch and adaptive layouts; offline-first data, flaky networks, on-device storage, background work and push; permissions, device features and accessibility; performance, battery, memory and testing; app stores, releases, security and crash reporting. Platform-neutral: iOS (Swift, SwiftUI), Android (Kotlin, Jetpack Compose), Flutter, React Native, Kotlin Multiplatform, .NET MAUI and progressive web apps. Every interactive is an in-browser simulation; security topics are rules-based, with attacks described in words. Apps and organisations in scenarios are made up. Built on one branch (`track/mobile`), one commit per module, merged once at the end. Each module is fact-checked against platform docs, store policies and release notes before it is built.
+
+| #     | Module                                 | Centrepiece                                                  | Key formats                         |
+| ----- | -------------------------------------- | ------------------------------------------------------------ | ----------------------------------- |
+| **1** | **The mobile world**                   |                                                              |                                     |
+| 1     | How mobile is different                | Follow one café order on a phone through a tunnel            | Scroll story                        |
+| 2     | Native, cross-platform or web?         | Choose an approach for four different apps                   | Branching scenario                  |
+| 3     | The app lifecycle                      | Step an app through launch                                   | Step through                        |
+| **2** | **Building the UI**                    |                                                              |                                     |
+| 4     | Building screens                       | Build the same menu screen in SwiftUI                        | Simulation                          |
+| 5     | Navigation and deep links              | Wire up tabs                                                 | Build connect                       |
+| 6     | Touch, gestures and feedback           | Fix a screen with tiny buttons                               | Fix the problem                     |
+| 7     | Phones, tablets and foldables          | Resize an app from a small phone to a tablet and an unfoldin | Sandbox                             |
+| **3** | **Data and networking**                |                                                              |                                     |
+| 8     | Offline first                          | Use a café app in a lift with no signal                      | Simulation                          |
+| 9     | Networking on flaky connections        | Load a menu on a slow                                        | Fix the problem                     |
+| 10    | Storing data on the device             | Decide where to keep settings                                | Branching scenario                  |
+| 11    | Background work and push notifications | Schedule a sync                                              | Simulation                          |
+| **4** | **Platform capabilities**              |                                                              |                                     |
+| 12    | Permissions and privacy                | Request camera                                               | Branching scenario                  |
+| 13    | Camera, location and sensors           | Add delivery tracking with location and choose accuracy and  | Simulation                          |
+| 14    | Accessibility on mobile                | Use an app with VoiceOver or TalkBack and large text         | Fix the problem                     |
+| **5** | **Quality and performance**            |                                                              |                                     |
+| 15    | Fast start-up and smooth scrolling     | Profile a slow-starting                                      | Fix the problem                     |
+| 16    | Battery and memory                     | Find what drains a phone's battery and why the system keeps  | Simulation                          |
+| 17    | Testing mobile apps                    | Plan tests for an app across unit                            | Build connect                       |
+| **6** | **Shipping**                           |                                                              |                                     |
+| 18    | App stores and review                  | Submit an app to both stores and fix the issues that get it  | Fix the problem                     |
+| 19    | Releases and updates                   | Roll out a new version in stages                             | Simulation                          |
+| 20    | Mobile app security                    | Review a café app for leaked secrets                         | Branching scenario                  |
+| 21    | Crashes, analytics and feedback        | Triage crash reports and freezes from a new release and deci | Branching scenario                  |
+| **7** | **Capstone**                           |                                                              |                                     |
+| 22    | Capstone: ship a café ordering app     | Make the key decisions for a café ordering app               | Branching scenario, Fix the problem |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -1107,6 +1143,7 @@ Software development area, sixth track (started 2026-10-12). 22 modules in 7 cha
 | 4z. Code Review            | Software development, fourth track, 21 modules                                          | Live: all 21 modules (2026-10-11)                                       |
 | 4za. Frontend              | Software development, fifth track, 22 modules                                           | Live: all 22 modules (2026-10-12)                                       |
 | 4zb. Backend               | Software development, sixth track, 22 modules                                           | Live: all 22 modules (2026-10-12)                                       |
+| 4zc. Mobile                | Software development, seventh track, 22 modules                                         | In progress: 0 of 22 modules live                                       |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 

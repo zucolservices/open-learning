@@ -410,6 +410,18 @@
   --bg-glow: rgb(147 197 253 / 0.1);
 }
 
+[data-track="pocket"] {
+  --accent: #115e59;
+  --accent-soft: rgb(17 94 89 / 0.1);
+  --bg-glow: rgb(17 94 89 / 0.12);
+}
+[data-theme="dark"] [data-track="pocket"],
+[data-theme="dark"][data-track="pocket"] {
+  --accent: #5eead4;
+  --accent-soft: rgb(94 234 212 / 0.14);
+  --bg-glow: rgb(94 234 212 / 0.1);
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);
