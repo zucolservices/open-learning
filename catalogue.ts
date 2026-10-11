@@ -8545,11 +8545,12 @@ const cleanCode: Track = {
             "Split a 60-line function into well-named pieces and see which split makes it easiest to test and change",
           formats: ["build-connect", "checkpoint"],
           concepts: ["One job per function", "Arguments and flags", "Levels of abstraction"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["naming"],
           plain:
             "A good function does one job, at one level of detail, with a name that says what it does. Splitting a long function into named steps turns code into something you can read like a list.",
+          terms: ["abstraction"],
         },
         {
           slug: "comments",

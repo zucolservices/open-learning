@@ -7,7 +7,6 @@ import { useSceneState } from "@/lib/module-sdk";
 import { StepLayout } from "@/toolkit/layout/step-layout";
 import { WrapStep } from "@/toolkit/layout/wrap-step";
 import { SortCheckpoint } from "@/toolkit/checkpoints/sort";
-import { Term } from "@/toolkit/glossary/term";
 import { cn } from "@/lib/cn";
 import { Code, type Mark } from "../_shared/code";
 import { RULES, VERSIONS } from "./model";
@@ -17,13 +16,13 @@ import type { ReadableState } from "./state";
 
 export function FindBug() {
   const [s, set] = useSceneState<ReadableState>();
-  const v = VERSIONS[s.current];
+  const v = VERSIONS[s.version];
   const start = useRef(0);
   const [miss, setMiss] = useState<number | null>(null);
   const found = s.times[v.id] !== undefined;
   useEffect(() => {
     start.current = performance.now();
-  }, [s.current]);
+  }, [s.version]);
   const click = (i: number) => {
     if (found) return;
     if (v.bug.includes(i)) {
@@ -50,14 +49,14 @@ export function FindBug() {
               <button
                 key={x.id}
                 type="button"
-                aria-pressed={s.current === i}
+                aria-pressed={s.version === i}
                 onClick={() => {
                   setMiss(null);
-                  set({ current: i });
+                  set({ version: i });
                 }}
                 className={cn(
                   "rounded-full border px-3 py-1 text-xs",
-                  s.current === i
+                  s.version === i
                     ? "border-accent bg-accent text-accent-fg"
                     : "border-line-strong text-muted",
                 )}
