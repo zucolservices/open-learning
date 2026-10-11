@@ -10393,11 +10393,12 @@ const mobile: Track = {
             "Build the same menu screen in SwiftUI, Jetpack Compose and Flutter and watch state changes redraw it",
           formats: ["simulation", "checkpoint"],
           concepts: ["Declarative UI on mobile", "State and recomposition", "Lists that scale"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["native-vs-cross"],
           plain:
             "Modern mobile UI is declarative: you describe the screen for the current state and the framework updates it. SwiftUI, Jetpack Compose and Flutter all work this way.",
+          terms: ["declarative-ui", "recomposition", "cross-platform"],
         },
         {
           slug: "navigation-mobile",

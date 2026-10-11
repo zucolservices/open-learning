@@ -44,4 +44,16 @@ export const mobileTrack = {
       "The system ending an app's process to reclaim memory, usually while it's in the background and without warning. Apps must save state beforehand to restore it later.",
     module: "app-lifecycle",
   },
+  "declarative-ui": {
+    term: "Declarative UI",
+    definition:
+      "Writing screens as a description of what they should look like for the current data. When the data changes, the framework updates the screen; you don't change widgets by hand.",
+    module: "declarative-ui",
+  },
+  recomposition: {
+    term: "Recomposition",
+    definition:
+      "Re-running the parts of a declarative UI that read some state after that state changes, while skipping parts whose inputs didn't change. The word comes from Jetpack Compose.",
+    module: "declarative-ui",
+  },
 } satisfies Record<string, GlossaryEntry>;
