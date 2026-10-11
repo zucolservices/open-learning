@@ -618,4 +618,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "frontend/web-vitals": () => import("./frontend/web-vitals"),
   "frontend/shipping-less-js": () => import("./frontend/shipping-less-js"),
   "frontend/images-fonts": () => import("./frontend/images-fonts"),
+  "frontend/accessibility": () => import("./frontend/accessibility"),
 };

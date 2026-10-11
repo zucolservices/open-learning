@@ -124,7 +124,8 @@ export function FixPage() {
           ))}
           {s.fixed.length === FIXES.length && (
             <p className="text-good text-xs">
-              About a quarter of the bytes, a fast hero, nothing jumping, text visible from the start.
+              About a quarter of the bytes, a fast hero, nothing jumping, text visible from the
+              start.
             </p>
           )}
         </div>

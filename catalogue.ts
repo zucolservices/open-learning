@@ -9753,11 +9753,12 @@ const frontend: Track = {
             "Use a page with only a keyboard and a simulated screen reader, then fix focus, labels, contrast and announcements",
           formats: ["simulation", "checkpoint"],
           concepts: ["WCAG and the law", "Keyboard and focus", "Screen readers and ARIA"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["semantic-html"],
           plain:
             "Accessible sites work for people using keyboards, screen readers, zoom or voice control. Most of it comes from good HTML; standards like WCAG and laws in many countries make it a requirement.",
+          terms: ["web-accessibility", "screen-reader", "wcag", "accessibility-tree"],
         },
         {
           slug: "responsive-design",

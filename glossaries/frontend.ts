@@ -260,4 +260,16 @@ export const frontendTrack = {
       "Delaying the download of off-screen images or code until they're about to be needed. Never use it for what people see first.",
     module: "images-fonts",
   },
+  "web-accessibility": {
+    term: "Accessibility",
+    definition:
+      "Making sites usable by everyone, including people who use keyboards, screen readers, magnification, voice control or switches.",
+    module: "accessibility",
+  },
+  "screen-reader": {
+    term: "Screen reader",
+    definition:
+      "Software that reads the page aloud or in braille and lets people navigate by headings, links and landmarks. Examples: JAWS, NVDA, VoiceOver, TalkBack.",
+    module: "accessibility",
+  },
 } satisfies Record<string, GlossaryEntry>;
