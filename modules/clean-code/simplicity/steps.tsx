@@ -204,7 +204,7 @@ export function SimpleEasy() {
     >
       <p>
         Rich Hickey&apos;s talk &ldquo;Simple Made Easy&rdquo; (2011) made the distinction famous:
-        simple means not <em>complected</em>, Hickey's word for braided together. Unfamiliar code
+        simple means not <em>complected</em>, Hickey&apos;s word for braided together. Unfamiliar code
         can be simple; familiar code can be tangled.
       </p>
       <p>

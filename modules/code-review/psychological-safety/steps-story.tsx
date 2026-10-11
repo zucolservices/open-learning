@@ -105,7 +105,7 @@ const SECTIONS: StorySection[] = [
     body: (
       <p>
         Amy Edmondson studied hospital teams and found the better ones <em>reported</em> more
-        errors. They didn&apos;t make more; they felt safe admitting them. Edmondson's 1999 study of
+        errors. They didn&apos;t make more; they felt safe admitting them. Edmondson&apos;s 1999 study of
         51 work teams linked safety to learning.
       </p>
     ),

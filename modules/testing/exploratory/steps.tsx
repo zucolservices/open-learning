@@ -217,7 +217,7 @@ export function TestingChecking() {
     >
       <p>
         Cem Kaner coined the term &ldquo;exploratory testing&rdquo; in the 1980s; it appeared in
-        Kaner's 1988 book <em>Testing Computer Software</em>. Jonathan and James Bach added
+        Kaner&apos;s 1988 book <em>Testing Computer Software</em>. Jonathan and James Bach added
         structure with session-based test management in 2000: a charter, a time-box (often 60 to 120
         minutes), notes, and a debrief.
       </p>
