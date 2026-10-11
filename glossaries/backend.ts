@@ -128,4 +128,10 @@ export const backendTrack = {
       "A time-limited link, signed by your server, that lets a client upload or download one object in cloud storage directly, without your credentials.",
     module: "file-uploads",
   },
+  "circuit-breaker": {
+    term: "Circuit breaker",
+    definition:
+      "A guard around calls to another service that stops calling it for a while after repeated failures, failing fast instead, then lets a test call through to see if it has recovered.",
+    module: "resilience",
+  },
 } satisfies Record<string, GlossaryEntry>;

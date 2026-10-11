@@ -641,4 +641,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "backend/live-updates": () => import("./backend/live-updates"),
   "backend/file-uploads": () => import("./backend/file-uploads"),
   "backend/rate-limiting": () => import("./backend/rate-limiting"),
+  "backend/resilience": () => import("./backend/resilience"),
 };

@@ -10231,11 +10231,12 @@ const backend: Track = {
             "Retries with backoff and jitter",
             "Circuit breakers and fallbacks",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["rate-limiting"],
           plain:
             "Every call to another service can hang or fail. Timeouts, careful retries and circuit breakers stop one slow dependency from tying up every thread and spreading the outage.",
+          terms: ["timeout", "circuit-breaker", "idempotent"],
         },
         {
           slug: "logs-health",
