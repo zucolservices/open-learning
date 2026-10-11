@@ -7624,11 +7624,12 @@ const git: Track = {
             "Three-way merges and the merge base",
             "Merge commits with two parents",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["branches"],
           plain:
             "Merging combines the work of two branches. If one simply extends the other, Git fast-forwards the pointer. Otherwise it compares both with their common ancestor and creates a merge commit.",
+          terms: ["three-way-merge", "merge-base", "fast-forward", "merge-conflict"],
         },
         {
           slug: "conflicts",

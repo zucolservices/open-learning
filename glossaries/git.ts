@@ -96,4 +96,28 @@ export const gitTrack = {
       "A name that points to a commit and moves forward when you commit on it. Creating one copies nothing.",
     module: "branches",
   },
+  "three-way-merge": {
+    term: "Three-way merge",
+    definition:
+      "Combining two versions by comparing each with their common ancestor, so changes made on only one side are kept automatically.",
+    module: "merging",
+  },
+  "merge-base": {
+    term: "Merge base",
+    definition:
+      "The most recent commit that two branches share; the starting point a three-way merge compares against.",
+    module: "merging",
+  },
+  "fast-forward": {
+    term: "Fast-forward",
+    definition:
+      "A merge where one branch simply moves forward to the other's commit, because it had no new commits of its own.",
+    module: "merging",
+  },
+  "merge-conflict": {
+    term: "Merge conflict",
+    definition:
+      "When two branches changed the same part of a file differently, so Git stops and asks a person to choose the result.",
+    module: "conflicts",
+  },
 } satisfies Record<string, GlossaryEntry>;
