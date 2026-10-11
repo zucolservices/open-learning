@@ -626,4 +626,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "backend/what-a-backend-does": () => import("./backend/what-a-backend-does"),
   "backend/http-servers": () => import("./backend/http-servers"),
   "backend/concurrency": () => import("./backend/concurrency"),
+  "backend/project-structure": () => import("./backend/project-structure"),
 };

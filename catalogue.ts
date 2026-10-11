@@ -9923,11 +9923,12 @@ const backend: Track = {
             "Untangle a single 400-line handler into layers and see which changes become easy",
           formats: ["fix-the-problem", "checkpoint"],
           concepts: ["Layers and responsibilities", "Dependencies point inward", "Feature folders"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["http-servers"],
           plain:
             "Splitting a service into layers, from HTTP handling to business rules to data access, keeps each part simple and lets you change one without breaking the others.",
+          terms: ["layered-architecture", "dependency-rule", "handler"],
         },
         {
           slug: "middleware",

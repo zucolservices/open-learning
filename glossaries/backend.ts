@@ -32,4 +32,16 @@ export const backendTrack = {
       "A single thread that runs short pieces of code as events arrive, starting slow operations and continuing when they finish, so it can juggle thousands of waiting requests.",
     module: "concurrency",
   },
+  "layered-architecture": {
+    term: "Layered architecture",
+    definition:
+      "Splitting a service into layers with one job each, typically HTTP handlers, business services and data repositories.",
+    module: "project-structure",
+  },
+  "dependency-rule": {
+    term: "Dependency rule",
+    definition:
+      "In hexagonal and clean architectures, code may depend only on code closer to the centre: business rules never depend on frameworks, databases or HTTP.",
+    module: "project-structure",
+  },
 } satisfies Record<string, GlossaryEntry>;
