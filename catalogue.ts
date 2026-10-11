@@ -9252,11 +9252,12 @@ const codeReview: Track = {
             "Move checks from human reviewers to CI, formatters, linters and bots, and watch what's left for people",
           formats: ["build-connect", "checkpoint"],
           concepts: ["Checks before humans", "Bots and templates", "Required status checks"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["what-to-look-for"],
           plain:
             "Anything a machine can check reliably, like formatting, tests and dependency updates, should be checked before a human looks. Reviewers can then spend their attention on design and meaning.",
+          terms: ["status-check", "linter", "formatter", "merge-queue"],
         },
         {
           slug: "ai-review",
