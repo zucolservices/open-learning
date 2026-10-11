@@ -543,4 +543,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "testing/test-doubles": () => import("./testing/test-doubles"),
   "testing/readable-tests": () => import("./testing/readable-tests"),
   "testing/tdd": () => import("./testing/tdd"),
+  "testing/integration-tests": () => import("./testing/integration-tests"),
 };

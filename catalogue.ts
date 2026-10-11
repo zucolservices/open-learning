@@ -8169,11 +8169,12 @@ const testing: Track = {
             "Throwaway containers and test databases",
             "Keeping integration tests fast and isolated",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["test-doubles"],
           plain:
             "Integration tests check that your code works with the real things around it, such as a database, a message queue or the file system. They catch the mistakes that hide in the joins between pieces.",
+          terms: ["integration-test", "container"],
         },
         {
           slug: "contract-tests",
