@@ -8312,11 +8312,12 @@ const testing: Track = {
             "Test data builders",
             "Keeping personal data out of tests",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["readable-tests"],
           plain:
             "Tests need data: users, orders, products. Shared fixtures get tangled as they grow; factories and builders create just what each test needs, with sensible defaults, so each test says only what matters to it.",
+          terms: ["fixture", "test-data-builder"],
         },
       ],
     },

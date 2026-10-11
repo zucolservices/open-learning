@@ -127,4 +127,10 @@ export const testingTrack = {
       "Checking how good tests are by planting small bugs (mutants) in the code and seeing whether any test fails. A mutant no test catches reveals a gap.",
     module: "mutation-testing",
   },
+  "test-data-builder": {
+    term: "Test data builder",
+    definition:
+      "A helper that creates test objects with sensible defaults, so each test changes only the values it cares about, such as aCustomer().student().build().",
+    module: "test-data",
+  },
 } satisfies Record<string, GlossaryEntry>;
