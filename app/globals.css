@@ -338,6 +338,18 @@
   --bg-glow: rgb(212 220 90 / 0.1);
 }
 
+[data-track="branch"] {
+  --accent: #9a3412;
+  --accent-soft: rgb(154 52 18 / 0.1);
+  --bg-glow: rgb(154 52 18 / 0.12);
+}
+[data-theme="dark"] [data-track="branch"],
+[data-theme="dark"][data-track="branch"] {
+  --accent: #fdba74;
+  --accent-soft: rgb(253 186 116 / 0.14);
+  --bg-glow: rgb(253 186 116 / 0.1);
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);

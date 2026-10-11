@@ -108,6 +108,7 @@ export interface Track {
     | "gradient"
     | "bastion"
     | "charter"
+    | "branch"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -7489,6 +7490,465 @@ const dpdpAct: Track = {
   ],
 };
 
+const git: Track = {
+  slug: "git",
+  title: "Git",
+  area: "Software development",
+  category: "software-development",
+  tagline: "Commits, branches and history, understood from the inside.",
+  description:
+    "Git from the inside out, for every developer: snapshots and the object model, the working tree, index and repository, commits and history, branches, merging, conflicts and rebase, remotes, pull requests and branching strategies, commit hygiene, undoing mistakes, the reflog, stash and worktrees, bisect and blame, big repositories and monorepos, signing and secrets in history, and hooks. Vendor-neutral: plain Git first, then how GitHub, GitLab, Bitbucket, Azure Repos and self-hosted forges each add pull requests, reviews and protections. By the end, Git stops being a list of memorised commands and becomes a model you can reason with.",
+  accent: "branch",
+  chapters: [
+    {
+      slug: "foundations",
+      title: "Foundations",
+      summary: "What Git actually stores, and where.",
+      modules: [
+        {
+          slug: "why-git",
+          title: "Why version control",
+          summary: "From final_v2_REALLY.docx to Git.",
+          minutes: 20,
+          signature:
+            "Follow a team's shared folder of final_v2 files into chaos, then replay the same week with Git",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "What version control solves",
+            "Centralised vs distributed",
+            "Where Git came from",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "Version control records every change to a set of files, who made it and why, so you can go back, compare and work in parallel without overwriting each other. Git is the distributed version control system almost every team now uses.",
+        },
+        {
+          slug: "snapshots",
+          title: "Snapshots, not differences",
+          summary: "Blobs, trees and commits.",
+          minutes: 25,
+          signature:
+            "Build a commit by hand from blobs and trees and watch identical files share one object",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Content-addressed objects",
+            "Blobs, trees, commits and tags",
+            "Why identical content is stored once",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["why-git"],
+          plain:
+            "Git stores snapshots of your whole project, not lists of changes. Each file's content becomes a blob named by a hash of its content, folders become trees, and a commit points to one tree plus its parent.",
+        },
+        {
+          slug: "three-areas",
+          title: "The three areas",
+          summary: "Working tree, index, repository.",
+          minutes: 20,
+          signature:
+            "Move edits between the working tree, the staging area and the repository and watch git status explain each state",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Working tree, index and repository",
+            "Staging part of a change",
+            "Reading git status",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["snapshots"],
+          plain:
+            "You edit files in the working tree, choose what goes into the next commit by staging it in the index, and commit to save a snapshot in the repository. Seeing these three places makes most Git commands obvious.",
+        },
+        {
+          slug: "commits-history",
+          title: "Commits and history",
+          summary: "A chain of snapshots with parents.",
+          minutes: 20,
+          signature:
+            "Grow a commit graph step by step and move HEAD around it, including into a detached HEAD",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Commits point to parents",
+            "HEAD and detached HEAD",
+            "Reading git log as a graph",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["three-areas"],
+          plain:
+            "Each commit records a snapshot, its author and message, and a pointer to its parent commit. Following those pointers backwards is the history. HEAD marks where you are now.",
+        },
+      ],
+    },
+    {
+      slug: "branching",
+      title: "Branching",
+      summary: "Cheap branches, and the ways to bring work back together.",
+      modules: [
+        {
+          slug: "branches",
+          title: "Branches are pointers",
+          summary: "A branch is a 41-byte file.",
+          minutes: 20,
+          signature:
+            "Create, switch and delete branches and watch only small pointer files change while the commits stay put",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "A branch is a movable pointer",
+            "Creating and switching branches",
+            "Why branching in Git is cheap",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["commits-history"],
+          plain:
+            "A branch is just a name pointing to a commit. When you commit, the branch you're on moves forward. That's why creating a branch is instant, and why you can have as many as you like.",
+        },
+        {
+          slug: "merging",
+          title: "Merging",
+          summary: "Fast-forward or a merge commit.",
+          minutes: 25,
+          signature:
+            "Merge branches in different shapes and see when Git fast-forwards and when it finds a merge base and makes a merge commit",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Fast-forward merges",
+            "Three-way merges and the merge base",
+            "Merge commits with two parents",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["branches"],
+          plain:
+            "Merging combines the work of two branches. If one simply extends the other, Git fast-forwards the pointer. Otherwise it compares both with their common ancestor and creates a merge commit.",
+        },
+        {
+          slug: "conflicts",
+          title: "Merge conflicts",
+          summary: "When two people change the same lines.",
+          minutes: 25,
+          signature:
+            "Resolve a real-looking conflict in a recipe file, reading the markers and the common ancestor",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Why conflicts happen",
+            "Reading conflict markers",
+            "Resolving, testing and committing",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["merging"],
+          plain:
+            "A conflict happens when both branches changed the same part of a file and Git can't know which to keep. Git marks the spot, you decide the result, then you finish the merge.",
+        },
+        {
+          slug: "rebase",
+          title: "Rebase",
+          summary: "Replaying commits onto a new base.",
+          minutes: 25,
+          signature:
+            "Rebase a feature branch onto main and watch new commits replace the old ones, then reorder and squash with interactive rebase",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Rebase rewrites commits",
+            "Interactive rebase",
+            "The golden rule: don't rewrite shared history",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["merging"],
+          plain:
+            "Rebasing takes your commits and replays them on top of another branch, producing new commits and a straight line of history. It's powerful for tidying your own work, and dangerous on history others already have.",
+        },
+        {
+          slug: "cherry-pick-revert",
+          title: "Cherry-pick and revert",
+          summary: "Copy one commit, or undo it safely.",
+          minutes: 20,
+          signature:
+            "Copy a hotfix to a release branch with cherry-pick, then undo a bad commit on main with revert",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Cherry-picking a single commit",
+            "Reverting with a new commit",
+            "Reverting merges",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["rebase"],
+          plain:
+            "Cherry-pick copies the change from one commit onto your current branch. Revert makes a new commit that undoes an earlier one, which is the safe way to undo something already shared.",
+        },
+      ],
+    },
+    {
+      slug: "collaboration",
+      title: "Collaboration",
+      summary: "Working with other people's copies.",
+      modules: [
+        {
+          slug: "remotes",
+          title: "Remotes",
+          summary: "Clone, fetch, pull and push.",
+          minutes: 25,
+          signature:
+            "Sync two laptops and a server, watching remote-tracking branches move on fetch and your branch move on pull",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Every clone is a full repository",
+            "Fetch, pull and push",
+            "Remote-tracking branches",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["cherry-pick-revert"],
+          plain:
+            "A remote is another copy of the repository, usually on a server. Fetch brings its new commits into your copy, pull fetches and then merges or rebases, and push sends your commits up.",
+        },
+        {
+          slug: "pull-requests",
+          title: "Pull requests and forks",
+          summary: "Proposing changes for review.",
+          minutes: 20,
+          signature:
+            "Take a change from a fork through a pull request with reviews, checks and branch protection to a merge",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Pull and merge requests",
+            "Forks vs branches",
+            "Merge, squash or rebase when merging",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["remotes"],
+          plain:
+            "A pull request (a merge request on GitLab) asks to merge a branch, with a place to discuss, review and run checks first. It's a hosting-platform feature built on top of Git, not part of Git itself.",
+        },
+        {
+          slug: "branching-strategies",
+          title: "Branching strategies",
+          summary: "GitFlow, GitHub flow, trunk-based.",
+          minutes: 20,
+          signature:
+            "Run the same month of releases under GitFlow, GitHub flow and trunk-based development and compare the merge pain",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "GitFlow and when it fits",
+            "GitHub flow",
+            "Trunk-based development and feature flags",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["pull-requests"],
+          plain:
+            "Teams agree on how branches are used: long-lived release and develop branches, short feature branches off main, or everyone merging small changes into one trunk every day. The choice shapes how often you integrate and release.",
+        },
+        {
+          slug: "commit-hygiene",
+          title: "Commit messages and history hygiene",
+          summary: "History is documentation.",
+          minutes: 20,
+          signature:
+            "Rewrite a messy branch of 'fix' and 'wip' commits into a clean, reviewable series with good messages",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: ["Atomic commits", "Writing a good commit message", "Conventional Commits"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["branching-strategies"],
+          plain:
+            "Small commits that each do one thing, with messages that say why, make history searchable and reviews easy. Many teams follow a convention so tools can read messages too.",
+        },
+      ],
+    },
+    {
+      slug: "undo-recovery",
+      title: "Undo and recovery",
+      summary: "Getting out of trouble.",
+      modules: [
+        {
+          slug: "undoing",
+          title: "Undoing things",
+          summary: "Restore, reset, revert, amend.",
+          minutes: 25,
+          signature:
+            "Pick the right undo for six everyday mistakes and see which ones rewrite history",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Restore files and unstage",
+            "Reset's three modes",
+            "Which undos are safe after pushing",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["commit-hygiene"],
+          plain:
+            "Git has several ways to undo: restore a file, unstage it, move a branch back with reset, amend the last commit, or revert. Which one is right depends on whether the work is still local or already shared.",
+        },
+        {
+          slug: "reflog",
+          title: "The reflog",
+          summary: "Almost nothing is truly lost.",
+          minutes: 20,
+          signature:
+            "Lose a branch with a hard reset, then find it again in the reflog and bring it back",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "What the reflog records",
+            "Recovering lost commits",
+            "When objects really disappear",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["undoing"],
+          plain:
+            "Git keeps a local log of where HEAD and each branch have pointed. Even after a bad reset or a deleted branch, the old commits are usually still there for weeks, and the reflog shows you how to get back to them.",
+        },
+        {
+          slug: "stash-worktrees",
+          title: "Stash and worktrees",
+          summary: "Switch tasks without losing your place.",
+          minutes: 20,
+          signature:
+            "Interrupt half-finished work for an urgent fix, once with stash and once with a second worktree",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Stashing uncommitted work",
+            "Applying and dropping stashes",
+            "Several working trees from one repository",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["reflog"],
+          plain:
+            "Stash shelves uncommitted changes so you can switch branches cleanly and bring them back later. Worktrees let you check out a second branch in another folder at the same time, sharing one repository.",
+        },
+        {
+          slug: "bisect-blame",
+          title: "Bisect and blame",
+          summary: "Find the commit that broke it.",
+          minutes: 20,
+          signature:
+            "Find the commit that broke a build in 1,000 commits with about ten bisect steps, then trace a line's history with blame",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Binary search through history",
+            "Automating bisect",
+            "Blame, and ignoring formatting commits",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["stash-worktrees"],
+          plain:
+            "Bisect finds the commit that introduced a bug by halving the range of suspects with each test. Blame shows which commit last changed each line. Together they turn 'when did this break?' into minutes.",
+        },
+      ],
+    },
+    {
+      slug: "scale-security",
+      title: "Scale and security",
+      summary: "Big repositories, many projects, and trust.",
+      modules: [
+        {
+          slug: "big-repos",
+          title: "Big repositories",
+          summary: "LFS, partial clone and sparse checkout.",
+          minutes: 20,
+          signature: "Clone a huge repository four ways and compare download size and time",
+          formats: ["simulation", "checkpoint"],
+          concepts: ["Large files and Git LFS", "Partial and shallow clones", "Sparse checkout"],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["bisect-blame"],
+          plain:
+            "Git copies the whole history to every clone, which strains with huge files or millions of files. Large File Storage, partial and shallow clones and sparse checkout each fetch less, in different ways.",
+        },
+        {
+          slug: "monorepos-submodules",
+          title: "Monorepos and submodules",
+          summary: "One repository or many?",
+          minutes: 20,
+          signature:
+            "Split a product across many repositories, then into one monorepo, and see what changes for builds and dependencies",
+          formats: ["animated-infographic", "checkpoint"],
+          concepts: [
+            "Monorepo vs polyrepo",
+            "Submodules and subtrees",
+            "Tools that make monorepos work",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["big-repos"],
+          plain:
+            "Some organisations keep everything in one huge repository; others use many small ones. Submodules let one repository include another at a fixed commit. Each approach trades simplicity for different costs.",
+        },
+        {
+          slug: "signing-secrets",
+          title: "Signing and secrets in history",
+          summary: "Prove who committed, and clean up leaks.",
+          minutes: 25,
+          signature:
+            "Spot an unsigned commit pretending to be a maintainer, then remove a leaked key from history the right way",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Signed commits with GPG or SSH keys",
+            "Why author names prove nothing",
+            "Removing secrets: rotate first, then rewrite",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["monorepos-submodules"],
+          plain:
+            "Anyone can set any name and email on a commit, so signing proves who really made it. If a secret is ever committed, treat it as leaked: revoke it first, then remove it from history with the right tool.",
+        },
+        {
+          slug: "hooks",
+          title: "Hooks and automation",
+          summary: "Checks that run on commit and push.",
+          minutes: 20,
+          signature:
+            "Add hooks that block a commit with a secret and reject a bad message, then decide what belongs in hooks and what in CI",
+          formats: ["build-connect", "checkpoint"],
+          concepts: ["Client and server hooks", "Sharing hooks with a team", "Hooks vs CI checks"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["signing-secrets"],
+          plain:
+            "Hooks are scripts Git runs at moments like committing or pushing. They can format code, check messages or block secrets locally, but they can be skipped, so important checks also belong on the server or in CI.",
+        },
+      ],
+    },
+    {
+      slug: "capstone",
+      title: "Capstone",
+      summary: "Put it all together.",
+      modules: [
+        {
+          slug: "capstone-git",
+          title: "Capstone: untangle a team's messy repository",
+          summary: "Rescue, clean up, and set rules.",
+          minutes: 35,
+          signature:
+            "Rescue a team's repository after a bad force-push, clean up its history and set the rules that stop it happening again",
+          formats: ["branching-scenario", "fix-the-problem"],
+          concepts: [
+            "Recovering shared work",
+            "Choosing undo vs rewrite",
+            "Team conventions that prevent trouble",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["hooks"],
+          plain:
+            "This capstone brings the track together. A team's repository is in trouble after a force-push; you recover the lost work, tidy the history, and set up the branch rules and hooks that keep it healthy.",
+        },
+      ],
+    },
+  ],
+};
+
 const playground: Track = {
   slug: "playground",
   title: "Toolkit playground",
@@ -11666,6 +12126,7 @@ export const tracks: Track[] = [
   appliedMl,
   appSecurity,
   dpdpAct,
+  git,
   playground,
 ];
 
@@ -11862,7 +12323,7 @@ export const categories: Category[] = [
       { title: "Testing", blurb: "What to test, at which level, and why." },
       { title: "Clean Code", blurb: "Code other people can read and change." },
       { title: "Code Review", blurb: "Giving and receiving useful reviews." },
-      { title: "Git", blurb: "Commits, branches and history, understood." },
+      { title: "Git", slug: "git", blurb: "Commits, branches and history, understood." },
     ],
   },
   {

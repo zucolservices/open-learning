@@ -858,6 +858,41 @@ Security & government area, second track (started 2026-10-08). 22 modules in 7 c
 | **7** | **Capstone**                               |                                                              |                                     |
 | 22    | Capstone: making an ed-tech app DPDP-ready | Take a made-up learning app for school students from data ma | Branching scenario, Fix the problem |
 
+## Git: curriculum
+
+Software development area, first track (started 2026-10-11). 22 modules in 6 chapters, about 8 hours. Accent: "branch" rust (`[data-track="branch"]`). Glossary: `glossaries/git.ts`. Git from the inside out: the object model and three areas first, then branching, merging, rebase, collaboration and recovery, then scale and security. Vendor-neutral: plain Git commands, then how GitHub, GitLab, Bitbucket, Azure Repos and self-hosted forges (Gitea, Forgejo) add pull requests and protections. Every repository and team in a scenario is made up; Git behaviour is simulated in the browser from a small model, not a real Git binary. Built on one branch (`track/git`), one commit per module, merged once at the end. Each module is fact-checked against git-scm.com, Git's release notes and platform docs before it is built.
+
+| #     | Module                                       | Centrepiece                                                  | Key formats                         |
+| ----- | -------------------------------------------- | ------------------------------------------------------------ | ----------------------------------- |
+| **1** | **Foundations**                              |                                                              |                                     |
+| 1     | Why version control                          | Follow a team's shared folder of final_v2 files into chaos   | Scroll story                        |
+| 2     | Snapshots, not differences                   | Build a commit by hand from blobs and trees and watch identi | Build connect                       |
+| 3     | The three areas                              | Move edits between the working tree                          | Simulation                          |
+| 4     | Commits and history                          | Grow a commit graph step by step and move HEAD around it     | Step through                        |
+| **2** | **Branching**                                |                                                              |                                     |
+| 5     | Branches are pointers                        | Create                                                       | Simulation                          |
+| 6     | Merging                                      | Merge branches in different shapes and see when Git fast-for | Simulation                          |
+| 7     | Merge conflicts                              | Resolve a real-looking conflict in a recipe file             | Fix the problem                     |
+| 8     | Rebase                                       | Rebase a feature branch onto main and watch new commits repl | Simulation                          |
+| 9     | Cherry-pick and revert                       | Copy a hotfix to a release branch with cherry-pick           | Step through                        |
+| **3** | **Collaboration**                            |                                                              |                                     |
+| 10    | Remotes                                      | Sync two laptops and a server                                | Simulation                          |
+| 11    | Pull requests and forks                      | Take a change from a fork through a pull request with review | Step through                        |
+| 12    | Branching strategies                         | Run the same month of releases under GitFlow                 | Simulation                          |
+| 13    | Commit messages and history hygiene          | Rewrite a messy branch of 'fix' and 'wip' commits into a cle | Fix the problem                     |
+| **4** | **Undo and recovery**                        |                                                              |                                     |
+| 14    | Undoing things                               | Pick the right undo for six everyday mistakes and see which  | Simulation                          |
+| 15    | The reflog                                   | Lose a branch with a hard reset                              | Fix the problem                     |
+| 16    | Stash and worktrees                          | Interrupt half-finished work for an urgent fix               | Step through                        |
+| 17    | Bisect and blame                             | Find the commit that broke a build in 1                      | Simulation                          |
+| **5** | **Scale and security**                       |                                                              |                                     |
+| 18    | Big repositories                             | Clone a huge repository four ways and compare download size  | Simulation                          |
+| 19    | Monorepos and submodules                     | Split a product across many repositories                     | Animated infographic                |
+| 20    | Signing and secrets in history               | Spot an unsigned commit pretending to be a maintainer        | Fix the problem                     |
+| 21    | Hooks and automation                         | Add hooks that block a commit with a secret and reject a bad | Build connect                       |
+| **6** | **Capstone**                                 |                                                              |                                     |
+| 22    | Capstone: untangle a team's messy repository | Rescue a team's repository after a bad force-push            | Branching scenario, Fix the problem |
+
 ## Roadmap
 
 | Step                       | Scope                                                                                   | Status                                                                  |
@@ -887,6 +922,7 @@ Security & government area, second track (started 2026-10-08). 22 modules in 7 c
 | 4t. Applied ML             | AI & machine learning, sixth track, 22 modules                                          | Live: all 22 modules (2026-10-06)                                       |
 | 4u. Application Security   | Security & government, first track, 22 modules                                          | Live: all 22 modules (2026-10-07)                                       |
 | 4v. DPDP Act               | Security & government, second track, 22 modules                                         | Live: all 22 modules (2026-10-08)                                       |
+| 4w. Git                    | Software development, first track, 22 modules                                           | In progress: 0 of 22 modules live                                       |
 | 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
 | 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
