@@ -80,4 +80,16 @@ export const backendTrack = {
       "Object-relational mapper: a library that maps database rows to objects in your language and writes much of the SQL for you, such as Hibernate, Entity Framework, SQLAlchemy or Prisma.",
     module: "data-access",
   },
+  migration: {
+    term: "Migration",
+    definition:
+      "A versioned script that changes a database schema or its data, applied in order and recorded so every environment ends up the same.",
+    module: "migrations",
+  },
+  "expand-contract": {
+    term: "Expand and contract",
+    definition:
+      "Changing a live schema in safe steps: add the new structure, move code and data across while both work, then remove the old structure. Also called parallel change.",
+    module: "migrations",
+  },
 } satisfies Record<string, GlossaryEntry>;

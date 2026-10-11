@@ -631,4 +631,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "backend/validation-errors": () => import("./backend/validation-errors"),
   "backend/service-config": () => import("./backend/service-config"),
   "backend/data-access": () => import("./backend/data-access"),
+  "backend/migrations": () => import("./backend/migrations"),
 };

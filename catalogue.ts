@@ -10014,11 +10014,12 @@ const backend: Track = {
             "Rename a column on a live system step by step with expand and contract, while old and new code both run",
           formats: ["step-through", "checkpoint"],
           concepts: ["Versioned migrations", "Expand and contract", "Backfills and locks"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["data-access"],
           plain:
             "Databases change as apps grow. Versioned migrations apply changes in order, and the expand-and-contract pattern lets you change a live schema without breaking running code.",
+          terms: ["migration", "expand-contract"],
         },
         {
           slug: "transactions-app",
