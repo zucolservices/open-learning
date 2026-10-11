@@ -8225,11 +8225,12 @@ const testing: Track = {
             "Auto-waiting versus sleeps",
             "Which journeys deserve an end-to-end test",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["ui-tests", "integration-tests"],
           plain:
             "End-to-end tests click through the real application in a real browser, just like a user. They catch problems nothing else can, but they are slow and fragile, so keep them for the few journeys that matter most.",
+          terms: ["end-to-end-test", "flaky-test"],
         },
       ],
     },

@@ -109,4 +109,10 @@ export const testingTrack = {
       "Making software usable by everyone, including people who use screen readers, keyboards only, or magnification. Clear labels and correct roles are the basics.",
     module: "ui-tests",
   },
+  "flaky-test": {
+    term: "Flaky test",
+    definition:
+      "A test that sometimes passes and sometimes fails without any change to the code, usually because of timing, shared data, test order or randomness.",
+    module: "flaky-tests",
+  },
 } satisfies Record<string, GlossaryEntry>;
