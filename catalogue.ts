@@ -10294,11 +10294,12 @@ const backend: Track = {
             "Design and harden an order service end to end: structure, data, identity, background work, resilience and deployment",
           formats: ["branching-scenario", "fix-the-problem"],
           concepts: ["Designing a service", "Making it correct under load", "Operating it safely"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["resilience"],
           plain:
             "This capstone brings the track together. You make design decisions for a real-world order service, fix the problems that appear under traffic, and prepare it for production.",
+          terms: ["backend", "transaction", "idempotency-key", "circuit-breaker", "authorization"],
         },
       ],
     },

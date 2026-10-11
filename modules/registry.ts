@@ -644,4 +644,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "backend/resilience": () => import("./backend/resilience"),
   "backend/logs-health": () => import("./backend/logs-health"),
   "backend/deploying-backend": () => import("./backend/deploying-backend"),
+  "backend/capstone-backend": () => import("./backend/capstone-backend"),
 };
