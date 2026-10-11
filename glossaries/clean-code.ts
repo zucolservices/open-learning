@@ -98,4 +98,10 @@ export const cleanCodeTrack = {
       "How much one part of the code depends on the details of another. Loose coupling lets each part change without forcing changes elsewhere.",
     module: "cohesion-coupling",
   },
+  solid: {
+    term: "SOLID",
+    definition:
+      "Five object-oriented design principles: single responsibility, open–closed, Liskov substitution, interface segregation and dependency inversion. Useful guides, not laws.",
+    module: "solid",
+  },
 } satisfies Record<string, GlossaryEntry>;

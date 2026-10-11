@@ -567,4 +567,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "clean-code/duplication": () => import("./clean-code/duplication"),
   "clean-code/complexity": () => import("./clean-code/complexity"),
   "clean-code/cohesion-coupling": () => import("./clean-code/cohesion-coupling"),
+  "clean-code/solid": () => import("./clean-code/solid"),
 };

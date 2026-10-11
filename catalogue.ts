@@ -8679,11 +8679,12 @@ const cleanCode: Track = {
             "Apply each SOLID principle to a small payroll example and decide where it helps and where it adds ceremony",
           formats: ["step-through", "checkpoint"],
           concepts: ["The five principles", "When they help", "Critiques and alternatives"],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["cohesion-coupling"],
           plain:
             "SOLID is five widely taught design principles for object-oriented code. They are useful guides, not laws; this module shows what each one is for, and where critics say they lead to over-engineering.",
+          terms: ["solid", "coupling"],
         },
         {
           slug: "composition",
