@@ -9177,11 +9177,12 @@ const codeReview: Track = {
             "Missing cases and weak assertions",
             "Tests that test the mocks",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["reading-diffs"],
           plain:
             "Tests are code too, and they deserve review. Check that they cover the behaviour that changed, would fail if it broke, and are readable enough to explain the intent.",
+          terms: ["weak-test", "mutation-testing", "stub"],
         },
         {
           slug: "security-review",

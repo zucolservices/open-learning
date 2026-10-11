@@ -22,7 +22,10 @@ export interface Pr {
 export function prs(split: string[]): Pr[] {
   const groups: string[][] = [];
   const rest: string[] = [];
-  for (const p of PARTS) split.includes(p.id) ? groups.push([p.id]) : rest.push(p.id);
+  for (const p of PARTS) {
+    if (split.includes(p.id)) groups.push([p.id]);
+    else rest.push(p.id);
+  }
   if (rest.length) groups.push(rest);
   return groups.map((g) => {
     const lines = g.reduce((t, id) => t + PARTS.find((p) => p.id === id)!.lines, 0);

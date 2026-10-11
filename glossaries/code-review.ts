@@ -74,4 +74,10 @@ export const codeReviewTrack = {
       "Short for nitpick: a minor, optional review comment, such as a small naming or wording preference. Often prefixed “Nit:” so the author knows it isn't required.",
     module: "severity",
   },
+  "weak-test": {
+    term: "Weak test",
+    definition:
+      "A test that passes whether or not the code is correct, for example because it asserts nothing, checks only a type, or tests a stub instead of the real code.",
+    module: "reviewing-tests",
+  },
 } satisfies Record<string, GlossaryEntry>;
