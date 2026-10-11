@@ -8339,11 +8339,12 @@ const testing: Track = {
             "Generators and shrinking",
             "Fuzzing for crashes",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["choosing-cases"],
           plain:
             "Instead of writing examples by hand, you describe a rule that should always hold, like 'sorting twice equals sorting once', and a tool tries hundreds of random inputs to break it. Fuzzing does the same to hunt for crashes.",
+          terms: ["property-based-testing", "fuzzing"],
         },
         {
           slug: "performance-tests",

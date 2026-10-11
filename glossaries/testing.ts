@@ -133,4 +133,16 @@ export const testingTrack = {
       "A helper that creates test objects with sensible defaults, so each test changes only the values it cares about, such as aCustomer().student().build().",
     module: "test-data",
   },
+  "property-based-testing": {
+    term: "Property-based testing",
+    definition:
+      "Testing by stating a rule that should hold for every input and letting a tool try many random inputs to break it, then shrink any failure to the smallest example.",
+    module: "property-based",
+  },
+  fuzzing: {
+    term: "Fuzzing",
+    definition:
+      "Feeding huge numbers of random or malformed inputs to a program to find crashes and memory errors, usually guided by which code each input reaches.",
+    module: "property-based",
+  },
 } satisfies Record<string, GlossaryEntry>;
