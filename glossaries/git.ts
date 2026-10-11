@@ -126,4 +126,16 @@ export const gitTrack = {
       "The <<<<<<<, ======= and >>>>>>> lines Git writes into a file to show both sides of a conflict. They must be removed before committing.",
     module: "conflicts",
   },
+  rebase: {
+    term: "Rebase",
+    definition:
+      "Replaying a branch's commits on top of another branch, creating new commits with new IDs and a straight history.",
+    module: "rebase",
+  },
+  "force-push": {
+    term: "Force push",
+    definition:
+      "Pushing a branch whose history was rewritten, replacing the remote's version. --force-with-lease refuses if someone else pushed in the meantime.",
+    module: "rebase",
+  },
 } satisfies Record<string, GlossaryEntry>;

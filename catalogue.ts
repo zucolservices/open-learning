@@ -7664,11 +7664,12 @@ const git: Track = {
             "Interactive rebase",
             "The golden rule: don't rewrite shared history",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["merging"],
           plain:
             "Rebasing takes your commits and replays them on top of another branch, producing new commits and a straight line of history. It's powerful for tidying your own work, and dangerous on history others already have.",
+          terms: ["rebase", "force-push", "fast-forward", "commit"],
         },
         {
           slug: "cherry-pick-revert",
