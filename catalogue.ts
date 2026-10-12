@@ -10492,11 +10492,12 @@ const mobile: Track = {
             "Load a menu on a slow, dropping connection and fix it with timeouts, retries, caching and smaller payloads",
           formats: ["fix-the-problem", "checkpoint"],
           concepts: ["Timeouts and retries", "Caching responses", "Smaller, fewer requests"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["offline-first"],
           plain:
             "Phone networks are slow and unreliable at the worst moments. Apps that set timeouts, retry carefully, cache responses and send less data feel fast anyway.",
+          terms: ["timeout", "exponential-backoff"],
         },
         {
           slug: "device-storage",
