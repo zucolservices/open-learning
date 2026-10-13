@@ -10559,11 +10559,12 @@ const mobile: Track = {
             "Asking in context",
             "Privacy rules and store disclosures",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["app-lifecycle"],
           plain:
             "Phones protect sensitive features like the camera and location behind permissions. Asking only when needed, explaining why, and declaring data use honestly builds trust.",
+          terms: ["runtime-permission", "system-picker"],
         },
         {
           slug: "device-features",

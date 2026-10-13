@@ -128,4 +128,16 @@ export const mobileTrack = {
       "Tasks an app asks the system to run while it isn't on screen, such as syncing. The system decides when, to save battery.",
     module: "background-push",
   },
+  "runtime-permission": {
+    term: "Runtime permission",
+    definition:
+      "The phone asking the user, while the app runs, whether it may use something sensitive such as the camera, location or notifications. The user can refuse or change their mind later in Settings.",
+    module: "permissions-privacy",
+  },
+  "system-picker": {
+    term: "System picker",
+    definition:
+      "A screen provided by the operating system for choosing photos, files or contacts. It hands the app only what the user picked, so no permission is needed.",
+    module: "permissions-privacy",
+  },
 } satisfies Record<string, GlossaryEntry>;
