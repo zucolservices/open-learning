@@ -10532,11 +10532,12 @@ const mobile: Track = {
             "Push notifications",
             "What the OS will and won't allow",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["app-lifecycle"],
           plain:
             "When an app isn't on screen, the system tightly limits what it can do. Scheduled work and push notifications let it sync and alert the user without draining the battery.",
+          terms: ["push-notification", "background-work"],
         },
       ],
     },

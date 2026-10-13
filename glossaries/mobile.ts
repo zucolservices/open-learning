@@ -116,4 +116,16 @@ export const mobileTrack = {
       "A place on the phone for small secrets such as sign-in tokens, encrypted with keys the app can't export: the Keychain on iOS and Keystore-protected keys on Android.",
     module: "device-storage",
   },
+  "push-notification": {
+    term: "Push notification",
+    definition:
+      "A message a server sends to an app through Apple's (APNs) or Google's (FCM) push service, delivered even when the app isn't running.",
+    module: "background-push",
+  },
+  "background-work": {
+    term: "Background work",
+    definition:
+      "Tasks an app asks the system to run while it isn't on screen, such as syncing. The system decides when, to save battery.",
+    module: "background-push",
+  },
 } satisfies Record<string, GlossaryEntry>;
