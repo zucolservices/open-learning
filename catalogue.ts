@@ -10918,11 +10918,12 @@ const buildingForGovernment: Track = {
             "Translation and Bhashini",
             "Scripts, layouts and number formats",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["gigw"],
           plain:
             "India's Constitution lists 22 scheduled languages in many scripts. Services reach people only in languages they read, which needs Unicode, good fonts, careful translation and layouts that adapt.",
+          terms: ["scheduled-languages", "unicode", "bhashini"],
         },
         {
           slug: "gov-cloud-hosting",

@@ -74,4 +74,22 @@ export const govTrack = {
       "The Indian standard for accessible ICT products and services (Part 1, 2021: requirements; Part 2, 2022: testing), based on Europe's EN 301 549 and WCAG 2.1. Required under the RPwD Rules since 2023.",
     module: "accessibility-law",
   },
+  "scheduled-languages": {
+    term: "Scheduled languages",
+    definition:
+      "The 22 languages listed in the Eighth Schedule of India's Constitution, from Assamese to Urdu, written in many different scripts.",
+    module: "multilingual",
+  },
+  bhashini: {
+    term: "Bhashini",
+    definition:
+      "India's national language technology platform (launched 2022, under MeitY), offering translation, speech recognition, text-to-speech and transliteration for Indian languages.",
+    module: "multilingual",
+  },
+  unicode: {
+    term: "Unicode",
+    definition:
+      "The worldwide standard that gives every character in every script, including all Indian scripts, its own code, so text displays and searches correctly on any device.",
+    module: "multilingual",
+  },
 } satisfies Record<string, GlossaryEntry>;
