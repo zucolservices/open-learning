@@ -10622,11 +10622,12 @@ const mobile: Track = {
             "Profile a slow-starting, janky app and fix its launch work and list rendering",
           formats: ["fix-the-problem", "checkpoint"],
           concepts: ["Cold, warm and hot starts", "Frames and jank", "Efficient lists and images"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["declarative-ui"],
           plain:
             "Users notice slow launches and stutter. Doing less at start-up, keeping work off the main thread and rendering lists efficiently keep apps feeling instant.",
+          terms: ["app-cold-start", "jank", "main-thread"],
         },
         {
           slug: "battery-memory",

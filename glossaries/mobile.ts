@@ -158,4 +158,16 @@ export const mobileTrack = {
       "Apple's name for text that follows the size the user picks in Settings. Android's equivalent is font scaling with sp units, up to 200%.",
     module: "mobile-accessibility",
   },
+  "app-cold-start": {
+    term: "Cold start (apps)",
+    definition:
+      "Launching an app whose process isn't running, so everything starts from scratch. The slowest kind of launch; warm and hot starts reuse more.",
+    module: "mobile-performance",
+  },
+  jank: {
+    term: "Jank",
+    definition:
+      "Visible stutter when frames miss the screen's refresh deadline, for example 8.3 ms per frame on a 120 Hz display.",
+    module: "mobile-performance",
+  },
 } satisfies Record<string, GlossaryEntry>;
