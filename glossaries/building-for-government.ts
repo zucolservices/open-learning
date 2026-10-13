@@ -128,4 +128,10 @@ export const govTrack = {
       "An online electronic signature in India: the signer confirms identity with an OTP or biometric, and a one-time certificate signs the document. Valid under the IT Act.",
     module: "digilocker-esign",
   },
+  "once-only": {
+    term: "Once-only principle",
+    definition:
+      "The idea that government should ask people for a piece of information only once, and then share it between its own offices, with safeguards, instead of asking again.",
+    module: "data-sharing-consent",
+  },
 } satisfies Record<string, GlossaryEntry>;

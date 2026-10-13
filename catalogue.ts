@@ -11005,11 +11005,12 @@ const buildingForGovernment: Track = {
             "Consent and purpose limits",
             "Account Aggregator and X-Road",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["digilocker-esign"],
           plain:
             "Citizens shouldn't have to give the same information to every office. Departments can share data through APIs, with consent, clear purposes and logs, under data protection law.",
+          terms: ["once-only", "data-minimisation"],
         },
         {
           slug: "open-data",
