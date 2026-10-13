@@ -54,6 +54,8 @@ import { FrontendScene } from "@/components/home/frontend-scene";
 import { FrontendTaste } from "@/components/home/frontend-taste";
 import { BackendScene } from "@/components/home/backend-scene";
 import { BackendTaste } from "@/components/home/backend-taste";
+import { MobileScene } from "@/components/home/mobile-scene";
+import { MobileTaste } from "@/components/home/mobile-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -286,5 +288,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: BackendTaste,
     tasteCaption:
       "A taste of module 10: two customers buy the last chai at the same instant. Pick a strategy and see whether it gets sold twice.",
+  },
+  mobile: {
+    Scene: MobileScene,
+    sceneCaption:
+      "From the first screen to the stores: foundations, building screens, data and networking, the device, performance and quality, and shipping. Watch the tour, or click any part.",
+    Taste: MobileTaste,
+    tasteCaption:
+      "A taste of module 11: the food is ready at 12:22 and the phone is in a pocket. Try each way the app could tell the customer.",
   },
 };
