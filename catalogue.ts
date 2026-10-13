@@ -10579,11 +10579,12 @@ const mobile: Track = {
             "Camera and photo pickers",
             "Sensors and background limits",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["permissions-privacy"],
           plain:
             "Cameras, location and sensors make mobile apps powerful. Each costs battery and privacy, so use the least precision and frequency that does the job.",
+          terms: ["location-accuracy", "geofence"],
         },
         {
           slug: "mobile-accessibility",

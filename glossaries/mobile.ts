@@ -140,4 +140,16 @@ export const mobileTrack = {
       "A screen provided by the operating system for choosing photos, files or contacts. It hands the app only what the user picked, so no permission is needed.",
     module: "permissions-privacy",
   },
+  "location-accuracy": {
+    term: "Location accuracy",
+    definition:
+      "How close a reported position is to the true one, from metres (mostly GPS, costly in battery) to about a street (Wi-Fi and masts) to city level (almost free).",
+    module: "device-features",
+  },
+  geofence: {
+    term: "Geofence",
+    definition:
+      "A virtual boundary around a place. The system watches it cheaply and wakes the app when the phone enters or leaves.",
+    module: "device-features",
+  },
 } satisfies Record<string, GlossaryEntry>;

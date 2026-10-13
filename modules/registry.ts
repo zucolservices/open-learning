@@ -657,4 +657,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "mobile/device-storage": () => import("./mobile/device-storage"),
   "mobile/background-push": () => import("./mobile/background-push"),
   "mobile/permissions-privacy": () => import("./mobile/permissions-privacy"),
+  "mobile/device-features": () => import("./mobile/device-features"),
 };
