@@ -224,4 +224,10 @@ export const govTrack = {
       "The part of a contract that says how a vendor hands over code, data, documents and know-how when the contract ends, so the government can switch suppliers without starting again.",
     module: "vendors-contracts",
   },
+  "outputs-outcomes": {
+    term: "Outputs and outcomes",
+    definition:
+      "Outputs count a service's activity, such as visits or transactions. Outcomes measure whether people's lives got better, such as benefits received on time, at low cost, by everyone eligible.",
+    module: "measuring-outcomes",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -700,4 +700,6 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
     import("./building-for-government/open-source-gov"),
   "building-for-government/vendors-contracts": () =>
     import("./building-for-government/vendors-contracts"),
+  "building-for-government/measuring-outcomes": () =>
+    import("./building-for-government/measuring-outcomes"),
 };

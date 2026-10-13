@@ -11242,11 +11242,12 @@ const buildingForGovernment: Track = {
             "Completion, time and cost",
             "Who is being left out",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["service-design-gov"],
           plain:
             "Counting portal visits says little. Good measures show whether people completed the service, how long it took and what it cost them, and who is still being left out.",
+          terms: ["outputs-outcomes", "digital-divide"],
         },
       ],
     },
