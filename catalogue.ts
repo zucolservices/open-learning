@@ -11052,11 +11052,12 @@ const buildingForGovernment: Track = {
             "Research with the people who use it",
             "Plain language and assisted access",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["gov-is-different"],
           plain:
             "Good public services start from what people need, not from the department's structure. Service standards, research with real users and plain language make services people can finish.",
+          terms: ["service-design", "assisted-digital"],
         },
         {
           slug: "low-bandwidth",

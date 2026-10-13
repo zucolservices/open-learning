@@ -685,4 +685,6 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "building-for-government/data-sharing-consent": () =>
     import("./building-for-government/data-sharing-consent"),
   "building-for-government/open-data": () => import("./building-for-government/open-data"),
+  "building-for-government/service-design-gov": () =>
+    import("./building-for-government/service-design-gov"),
 };

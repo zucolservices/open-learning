@@ -152,4 +152,16 @@ export const govTrack = {
       "India's Right to Information Act, 2005: anyone can request information from a public authority, and authorities must publish key information proactively. Some information, such as personal information, is exempt.",
     module: "open-data",
   },
+  "service-design": {
+    term: "Service design",
+    definition:
+      "Designing a whole public service, online and offline, from the needs and behaviour of the people who use it, rather than from the organisation's forms and structure.",
+    module: "service-design-gov",
+  },
+  "assisted-digital": {
+    term: "Assisted digital",
+    definition:
+      "Help for people who can't use an online service on their own, given in person, by phone or through an intermediary such as a service-centre operator.",
+    module: "service-design-gov",
+  },
 } satisfies Record<string, GlossaryEntry>;
