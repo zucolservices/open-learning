@@ -10642,11 +10642,12 @@ const mobile: Track = {
             "Memory limits and termination",
             "Being a good background citizen",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["mobile-performance"],
           plain:
             "Phones have limited battery and memory, shared by every app. Apps that wake the device rarely, release memory and respect background limits stay installed.",
+          terms: ["wake-lock", "low-memory-kill"],
         },
         {
           slug: "mobile-testing",

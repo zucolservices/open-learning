@@ -170,4 +170,16 @@ export const mobileTrack = {
       "Visible stutter when frames miss the screen's refresh deadline, for example 8.3 ms per frame on a 120 Hz display.",
     module: "mobile-performance",
   },
+  "wake-lock": {
+    term: "Wake lock",
+    definition:
+      "A request that keeps the phone's processor (or screen) running when it would otherwise sleep. Holding one in the background is the most common avoidable battery drain on Android.",
+    module: "battery-memory",
+  },
+  "low-memory-kill": {
+    term: "Low-memory kill",
+    definition:
+      "The system ending apps to free memory, least important first: Android's low-memory killer, or a jetsam event on iOS.",
+    module: "battery-memory",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -660,4 +660,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "mobile/device-features": () => import("./mobile/device-features"),
   "mobile/mobile-accessibility": () => import("./mobile/mobile-accessibility"),
   "mobile/mobile-performance": () => import("./mobile/mobile-performance"),
+  "mobile/battery-memory": () => import("./mobile/battery-memory"),
 };
