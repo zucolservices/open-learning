@@ -10708,11 +10708,12 @@ const mobile: Track = {
             "Supporting old app versions",
             "Feature flags and forced updates",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["app-stores"],
           plain:
             "Unlike websites, you can't update every user's app at once. Staged rollouts limit damage, servers must support older versions, and feature flags let you switch things off.",
+          terms: ["staged-rollout", "feature-flag"],
         },
         {
           slug: "mobile-security",

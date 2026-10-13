@@ -206,4 +206,10 @@ export const mobileTrack = {
       "Buying digital goods or features inside an app through the store's own payment system, which takes a commission. Physical goods and real-world services are paid for separately.",
     module: "app-stores",
   },
+  "staged-rollout": {
+    term: "Staged rollout",
+    definition:
+      "Releasing an app update to a growing share of users over days, so a bad version reaches few people before it's halted. Apple calls its version a phased release.",
+    module: "releases-updates",
+  },
 } satisfies Record<string, GlossaryEntry>;
