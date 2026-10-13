@@ -10771,11 +10771,12 @@ const mobile: Track = {
             "Make the key decisions for a café ordering app, fix the problems found in testing and review, and plan its release",
           formats: ["branching-scenario", "fix-the-problem"],
           concepts: ["Designing for mobile", "Making it robust", "Shipping and learning"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["releases-updates"],
           plain:
             "This capstone brings the track together. You choose how to build a real-world ordering app, make it work offline and in the background, fix review and quality issues, and ship it safely.",
+          terms: ["app-lifecycle", "offline-first", "staged-rollout"],
         },
       ],
     },
