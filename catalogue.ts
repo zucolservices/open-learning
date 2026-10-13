@@ -10599,11 +10599,12 @@ const mobile: Track = {
             "Large text and dynamic type",
             "Colour, contrast and motion",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["touch-gestures"],
           plain:
             "Mobile accessibility relies on screen readers, adjustable text sizes and other system settings. Labelling controls and letting layouts grow makes apps usable by everyone.",
+          terms: ["screen-reader", "dynamic-type"],
         },
       ],
     },

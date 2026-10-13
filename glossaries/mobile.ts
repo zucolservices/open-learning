@@ -152,4 +152,10 @@ export const mobileTrack = {
       "A virtual boundary around a place. The system watches it cheaply and wakes the app when the phone enters or leaves.",
     module: "device-features",
   },
+  "dynamic-type": {
+    term: "Dynamic Type",
+    definition:
+      "Apple's name for text that follows the size the user picks in Settings. Android's equivalent is font scaling with sp units, up to 200%.",
+    module: "mobile-accessibility",
+  },
 } satisfies Record<string, GlossaryEntry>;
