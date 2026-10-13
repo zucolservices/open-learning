@@ -10748,11 +10748,12 @@ const mobile: Track = {
             "Store vitals and ratings",
             "Privacy-respecting analytics",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["releases-updates"],
           plain:
             "Once an app ships, crash reports, freeze reports and store vitals show what's going wrong for real users. Measure enough to improve without collecting more than you need.",
+          terms: ["crash-reporting", "app-vitals"],
         },
       ],
     },

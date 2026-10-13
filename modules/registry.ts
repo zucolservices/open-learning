@@ -665,4 +665,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "mobile/app-stores": () => import("./mobile/app-stores"),
   "mobile/releases-updates": () => import("./mobile/releases-updates"),
   "mobile/mobile-security": () => import("./mobile/mobile-security"),
+  "mobile/crash-analytics": () => import("./mobile/crash-analytics"),
 };

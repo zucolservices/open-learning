@@ -224,4 +224,16 @@ export const mobileTrack = {
       "A signed statement from the platform (Play Integrity on Android, App Attest on iOS) that a request comes from your genuine app on a genuine device. Your server verifies it.",
     module: "mobile-security",
   },
+  "crash-reporting": {
+    term: "Crash reporting",
+    definition:
+      "Collecting details of crashes and freezes from users' devices, such as the stack trace, device and app version, and grouping them so the team can fix the worst first.",
+    module: "crash-analytics",
+  },
+  "app-vitals": {
+    term: "App vitals",
+    definition:
+      "Quality measures the stores collect from real users, such as crash rate and not-responding rate. Google Play acts on apps that exceed its thresholds.",
+    module: "crash-analytics",
+  },
 } satisfies Record<string, GlossaryEntry>;
