@@ -10662,11 +10662,12 @@ const mobile: Track = {
             "Simulators, emulators and real devices",
             "Device farms and screenshots",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["mobile-performance"],
           plain:
             "Mobile apps run on many devices and OS versions. A mix of fast unit tests, UI tests and runs on real devices in the cloud catches problems before users do.",
+          terms: ["emulator", "device-farm", "test-pyramid"],
         },
       ],
     },

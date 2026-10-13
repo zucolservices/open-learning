@@ -661,4 +661,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "mobile/mobile-accessibility": () => import("./mobile/mobile-accessibility"),
   "mobile/mobile-performance": () => import("./mobile/mobile-performance"),
   "mobile/battery-memory": () => import("./mobile/battery-memory"),
+  "mobile/mobile-testing": () => import("./mobile/mobile-testing"),
 };

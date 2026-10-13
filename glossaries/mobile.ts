@@ -182,4 +182,16 @@ export const mobileTrack = {
       "The system ending apps to free memory, least important first: Android's low-memory killer, or a jetsam event on iOS.",
     module: "battery-memory",
   },
+  emulator: {
+    term: "Emulator and simulator",
+    definition:
+      "Software that runs a phone app on a computer. Android's emulator imitates a whole phone; Apple's simulator runs the app natively on a Mac. Fast for tests, but not the real hardware.",
+    module: "mobile-testing",
+  },
+  "device-farm": {
+    term: "Device farm",
+    definition:
+      "A service that runs your tests on many real phones and tablets in a data centre, such as Firebase Test Lab, AWS Device Farm or BrowserStack.",
+    module: "mobile-testing",
+  },
 } satisfies Record<string, GlossaryEntry>;
