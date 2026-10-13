@@ -676,4 +676,6 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "building-for-government/accessibility-law": () =>
     import("./building-for-government/accessibility-law"),
   "building-for-government/multilingual": () => import("./building-for-government/multilingual"),
+  "building-for-government/gov-cloud-hosting": () =>
+    import("./building-for-government/gov-cloud-hosting"),
 };

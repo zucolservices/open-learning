@@ -10938,11 +10938,12 @@ const buildingForGovernment: Track = {
             "NIC and state data centres",
             "Data localisation and sector rules",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["how-gov-buys"],
           plain:
             "Government systems run on approved hosting: MeitY-empanelled cloud services, NIC and state data centres. Where data is stored and who audits the provider matter as much as cost.",
+          terms: ["cloud-empanelment", "data-localisation"],
         },
       ],
     },

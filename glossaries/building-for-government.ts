@@ -92,4 +92,16 @@ export const govTrack = {
       "The worldwide standard that gives every character in every script, including all Indian scripts, its own code, so text displays and searches correctly on any device.",
     module: "multilingual",
   },
+  "cloud-empanelment": {
+    term: "Cloud empanelment",
+    definition:
+      "MeitY's approval of specific cloud service offerings for Indian government use, after an STQC audit against security standards. Empanelled offerings run from data centres in India and are bought through GeM.",
+    module: "gov-cloud-hosting",
+  },
+  "data-localisation": {
+    term: "Data localisation",
+    definition:
+      "Rules requiring certain data to be stored, and sometimes processed, within a country. In India these come from several sources, such as RBI payment rules and government cloud terms, rather than one law.",
+    module: "gov-cloud-hosting",
+  },
 } satisfies Record<string, GlossaryEntry>;
