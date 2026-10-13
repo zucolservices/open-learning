@@ -702,4 +702,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
     import("./building-for-government/vendors-contracts"),
   "building-for-government/measuring-outcomes": () =>
     import("./building-for-government/measuring-outcomes"),
+  "building-for-government/capstone-gov": () => import("./building-for-government/capstone-gov"),
 };

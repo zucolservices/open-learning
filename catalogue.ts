@@ -11265,11 +11265,12 @@ const buildingForGovernment: Track = {
             "Take a made-up state's scholarship portal from procurement and design through accessibility, data sharing and security to a deadline-day surge",
           formats: ["branching-scenario", "fix-the-problem"],
           concepts: ["Buying and designing", "Building it right", "Launching and running"],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["surge-scale"],
           plain:
             "This capstone brings the track together. You buy, design, build and run a real-world public service, meeting standards, protecting data and keeping it up when everyone applies at once.",
+          terms: ["public-procurement", "outputs-outcomes", "digital-public-infrastructure"],
         },
       ],
     },
