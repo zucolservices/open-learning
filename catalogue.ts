@@ -10728,11 +10728,12 @@ const mobile: Track = {
             "Secure storage and transport",
             "The OWASP mobile standards",
           ],
-          status: "planned",
+          status: "live",
           level: "deep",
           prerequisites: ["device-storage"],
           plain:
             "Anyone can download and take apart an app. Keep secrets on the server, store sensitive data securely, protect network traffic and never trust the device alone.",
+          terms: ["client-untrusted", "app-attestation", "owasp"],
         },
         {
           slug: "crash-analytics",

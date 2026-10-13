@@ -212,4 +212,16 @@ export const mobileTrack = {
       "Releasing an app update to a growing share of users over days, so a bad version reaches few people before it's halted. Apple calls its version a phased release.",
     module: "releases-updates",
   },
+  "client-untrusted": {
+    term: "The client is untrusted",
+    definition:
+      "The rule that anything running on a user's device can be inspected or modified, so secrets stay on the server and the server makes every decision that matters.",
+    module: "mobile-security",
+  },
+  "app-attestation": {
+    term: "App attestation",
+    definition:
+      "A signed statement from the platform (Play Integrity on Android, App Attest on iOS) that a request comes from your genuine app on a genuine device. Your server verifies it.",
+    module: "mobile-security",
+  },
 } satisfies Record<string, GlossaryEntry>;
