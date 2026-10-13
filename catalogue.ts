@@ -11179,11 +11179,12 @@ const buildingForGovernment: Track = {
             "Audit trails and the CAG",
             "Backups and disaster recovery",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["gov-security"],
           plain:
             "Government decisions must be traceable for years. Services keep records for set periods, log who did what for auditors, and plan backups and recovery so a failure doesn't erase history.",
+          terms: ["audit-trail", "disaster-recovery", "rpo", "rto"],
         },
       ],
     },

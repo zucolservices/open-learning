@@ -694,4 +694,6 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
     import("./building-for-government/grievance-feedback"),
   "building-for-government/gov-security": () => import("./building-for-government/gov-security"),
   "building-for-government/surge-scale": () => import("./building-for-government/surge-scale"),
+  "building-for-government/continuity-records": () =>
+    import("./building-for-government/continuity-records"),
 };

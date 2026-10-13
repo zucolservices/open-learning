@@ -200,4 +200,10 @@ export const govTrack = {
       "Deciding in advance which non-essential features to switch off under heavy load, so the core task keeps working instead of the whole service failing.",
     module: "surge-scale",
   },
+  "audit-trail": {
+    term: "Audit trail",
+    definition:
+      "A tamper-resistant record of who did what in a system, and when, kept so decisions can be checked and explained years later.",
+    module: "continuity-records",
+  },
 } satisfies Record<string, GlossaryEntry>;
