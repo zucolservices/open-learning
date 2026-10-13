@@ -10898,11 +10898,12 @@ const buildingForGovernment: Track = {
             "WCAG as the common yardstick",
             "Rules in other countries",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["gigw"],
           plain:
             "Public services must be usable by people with disabilities. In India the Rights of Persons with Disabilities Act and the IS 17802 standard make accessibility a legal duty; other countries have similar laws.",
+          terms: ["rpwd-act", "is-17802", "wcag"],
         },
         {
           slug: "multilingual",

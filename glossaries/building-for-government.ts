@@ -62,4 +62,16 @@ export const govTrack = {
       "A senior official a department nominates under GIGW to own its website or app, approve its content and policies, and answer for its upkeep.",
     module: "gigw",
   },
+  "rpwd-act": {
+    term: "RPwD Act",
+    definition:
+      "India's Rights of Persons with Disabilities Act, 2016. Its sections 40–46 require accessible buildings, transport, information and communication technology and services.",
+    module: "accessibility-law",
+  },
+  "is-17802": {
+    term: "IS 17802",
+    definition:
+      "The Indian standard for accessible ICT products and services (Part 1, 2021: requirements; Part 2, 2022: testing), based on Europe's EN 301 549 and WCAG 2.1. Required under the RPwD Rules since 2023.",
+    module: "accessibility-law",
+  },
 } satisfies Record<string, GlossaryEntry>;
