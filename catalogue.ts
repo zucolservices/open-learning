@@ -10688,11 +10688,12 @@ const mobile: Track = {
             "Fees and payments",
             "New rules and alternative stores",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["permissions-privacy"],
           plain:
             "Most apps reach users through Apple's App Store and Google Play, each with review rules, fees and requirements. Rules have changed in some regions, opening alternative stores.",
+          terms: ["app-review", "in-app-purchase"],
         },
         {
           slug: "releases-updates",

@@ -194,4 +194,16 @@ export const mobileTrack = {
       "A service that runs your tests on many real phones and tablets in a data centre, such as Firebase Test Lab, AWS Device Farm or BrowserStack.",
     module: "mobile-testing",
   },
+  "app-review": {
+    term: "App review",
+    definition:
+      "The check Apple and Google run on each app release before it reaches the store, against their guidelines and policies. Rejected apps can be fixed and resubmitted.",
+    module: "app-stores",
+  },
+  "in-app-purchase": {
+    term: "In-app purchase",
+    definition:
+      "Buying digital goods or features inside an app through the store's own payment system, which takes a commission. Physical goods and real-world services are paid for separately.",
+    module: "app-stores",
+  },
 } satisfies Record<string, GlossaryEntry>;
