@@ -11139,11 +11139,12 @@ const buildingForGovernment: Track = {
             "Critical information infrastructure",
             "Audits and security practice",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["gov-cloud-hosting"],
           plain:
             "Government systems are prime targets. In India, CERT-In's directions require incident reporting within six hours and log keeping, critical systems get extra protection, and regular audits are expected.",
+          terms: ["cert-in", "cyber-incident"],
         },
         {
           slug: "surge-scale",

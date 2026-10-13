@@ -182,4 +182,10 @@ export const govTrack = {
       "Handling citizens' complaints about public services: registering each one with a tracking number, assigning an officer, resolving it within a deadline and escalating when needed. India's central system is CPGRAMS.",
     module: "grievance-feedback",
   },
+  "cyber-incident": {
+    term: "Cyber incident",
+    definition:
+      "An event that threatens the security of a computer system or its data, such as a defaced website, ransomware or a data leak. In India, listed incident types must be reported to CERT-In within six hours.",
+    module: "gov-security",
+  },
 } satisfies Record<string, GlossaryEntry>;

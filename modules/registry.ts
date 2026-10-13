@@ -692,4 +692,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
     import("./building-for-government/forms-payments"),
   "building-for-government/grievance-feedback": () =>
     import("./building-for-government/grievance-feedback"),
+  "building-for-government/gov-security": () => import("./building-for-government/gov-security"),
 };
