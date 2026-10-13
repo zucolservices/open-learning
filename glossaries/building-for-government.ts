@@ -104,4 +104,16 @@ export const govTrack = {
       "Rules requiring certain data to be stored, and sometimes processed, within a country. In India these come from several sources, such as RBI payment rules and government cloud terms, rather than one law.",
     module: "gov-cloud-hosting",
   },
+  "digital-identity": {
+    term: "Digital identity",
+    definition:
+      "A way for an online service to know who it is dealing with, from a simple sign-in to strong checks against a national identity system.",
+    module: "digital-identity",
+  },
+  aadhaar: {
+    term: "Aadhaar",
+    definition:
+      "India's 12-digit identity number, issued by UIDAI and linked to a person's fingerprints, iris and face. Services can ask UIDAI to confirm a person is who they claim; UIDAI answers yes or no and never shares biometrics.",
+    module: "digital-identity",
+  },
 } satisfies Record<string, GlossaryEntry>;

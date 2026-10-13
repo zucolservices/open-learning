@@ -10965,11 +10965,12 @@ const buildingForGovernment: Track = {
             "Government sign-in services",
             "Privacy limits and alternatives",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["digital-public-infrastructure"],
           plain:
             "Digital identity lets services know who they are dealing with. India's Aadhaar is the largest example; the law and the Supreme Court limit where it can be required, and good services offer alternatives.",
+          terms: ["digital-identity", "aadhaar"],
         },
         {
           slug: "digilocker-esign",

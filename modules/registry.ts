@@ -678,4 +678,6 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "building-for-government/multilingual": () => import("./building-for-government/multilingual"),
   "building-for-government/gov-cloud-hosting": () =>
     import("./building-for-government/gov-cloud-hosting"),
+  "building-for-government/digital-identity": () =>
+    import("./building-for-government/digital-identity"),
 };
