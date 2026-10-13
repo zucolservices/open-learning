@@ -206,4 +206,16 @@ export const govTrack = {
       "A tamper-resistant record of who did what in a system, and when, kept so decisions can be checked and explained years later.",
     module: "continuity-records",
   },
+  "open-source": {
+    term: "Open source",
+    definition:
+      "Software whose code is published under a licence that lets anyone read, use, change and share it. India's 2015 policy makes it the preferred choice for new central e-governance systems.",
+    module: "open-source-gov",
+  },
+  "digital-public-good": {
+    term: "Digital public good",
+    definition:
+      "Open-source software, open data, open AI models, open standards or open content that meets the Digital Public Goods standard, so any country can adopt and adapt it.",
+    module: "open-source-gov",
+  },
 } satisfies Record<string, GlossaryEntry>;

@@ -11202,11 +11202,12 @@ const buildingForGovernment: Track = {
             "Decide whether a state should build, buy or reuse a grievance system, comparing open source, a vendor product and a national platform",
           formats: ["branching-scenario", "checkpoint"],
           concepts: ["Open source policy", "Open standards and APIs", "Digital public goods"],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["how-gov-buys"],
           plain:
             "Governments increasingly prefer open source and open standards to avoid lock-in and to reuse what others built. Digital public goods let one country's solution serve many.",
+          terms: ["open-source", "digital-public-good", "vendor-lock-in"],
         },
         {
           slug: "vendors-contracts",
