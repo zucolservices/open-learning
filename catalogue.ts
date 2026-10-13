@@ -11112,11 +11112,12 @@ const buildingForGovernment: Track = {
             "Deadlines and escalation",
             "Learning from complaints",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["forms-payments"],
           plain:
             "Every service gets complaints. A grievance system with tracking numbers, deadlines and escalation resolves them, and patterns in complaints show where the service itself must change.",
+          terms: ["grievance-redressal", "rti"],
         },
       ],
     },

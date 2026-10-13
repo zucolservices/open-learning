@@ -176,4 +176,10 @@ export const govTrack = {
       "Paying government benefits, such as scholarships and subsidies, straight into the beneficiary's bank account instead of in cash or through intermediaries.",
     module: "forms-payments",
   },
+  "grievance-redressal": {
+    term: "Grievance redressal",
+    definition:
+      "Handling citizens' complaints about public services: registering each one with a tracking number, assigning an officer, resolving it within a deadline and escalating when needed. India's central system is CPGRAMS.",
+    module: "grievance-feedback",
+  },
 } satisfies Record<string, GlossaryEntry>;

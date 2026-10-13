@@ -690,4 +690,6 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "building-for-government/low-bandwidth": () => import("./building-for-government/low-bandwidth"),
   "building-for-government/forms-payments": () =>
     import("./building-for-government/forms-payments"),
+  "building-for-government/grievance-feedback": () =>
+    import("./building-for-government/grievance-feedback"),
 };
