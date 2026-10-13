@@ -10796,7 +10796,7 @@ const buildingForGovernment: Track = {
   chapters: [
     {
       slug: "different",
-      title: "Why government is different",
+      title: "Why it's different",
       summary: "Everyone is your user.",
       modules: [
         {
@@ -11036,7 +11036,7 @@ const buildingForGovernment: Track = {
     },
     {
       slug: "services",
-      title: "Designing public services",
+      title: "Public services",
       summary: "For everyone, on every device.",
       modules: [
         {
@@ -11123,7 +11123,7 @@ const buildingForGovernment: Track = {
     },
     {
       slug: "security",
-      title: "Security and resilience",
+      title: "Resilience",
       summary: "At national scale.",
       modules: [
         {
@@ -11190,7 +11190,7 @@ const buildingForGovernment: Track = {
     },
     {
       slug: "delivery",
-      title: "Delivering and sustaining",
+      title: "Delivering",
       summary: "Beyond the launch.",
       modules: [
         {

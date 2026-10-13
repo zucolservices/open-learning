@@ -56,6 +56,8 @@ import { BackendScene } from "@/components/home/backend-scene";
 import { BackendTaste } from "@/components/home/backend-taste";
 import { MobileScene } from "@/components/home/mobile-scene";
 import { MobileTaste } from "@/components/home/mobile-taste";
+import { GovScene } from "@/components/home/building-for-government-scene";
+import { GovTaste } from "@/components/home/building-for-government-taste";
 
 export interface Showcase {
   /** Big animated scene for the track page. */
@@ -296,5 +298,13 @@ export const showcases: Record<string, Showcase> = {
     Taste: MobileTaste,
     tasteCaption:
       "A taste of module 11: the food is ready at 12:22 and the phone is in a pocket. Try each way the app could tell the customer.",
+  },
+  "building-for-government": {
+    Scene: GovScene,
+    sceneCaption:
+      "What building public services involves: why government is different, the rules, identity and data, designing for everyone, security and resilience, and delivering for the long term. Watch the tour, or click any part.",
+    Taste: GovTaste,
+    tasteCaption:
+      "A taste of module 17: exam results go live at 10 a.m. and millions arrive. Switch on caching, a lighter page, a queue or SMS results and watch the errors fall.",
   },
 };

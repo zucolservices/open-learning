@@ -52,6 +52,8 @@ import { backendArtA } from "./art/backend-a";
 import { backendArtB } from "./art/backend-b";
 import { mobileArtA } from "./art/mobile-a";
 import { mobileArtB } from "./art/mobile-b";
+import { govArtA } from "./art/building-for-government-a";
+import { govArtB } from "./art/building-for-government-b";
 
 /**
  * One small illustration per module (viewBox 160 × 100), drawn with the
@@ -1123,6 +1125,8 @@ const all: ArtMap = {
   ...backendArtB,
   ...mobileArtA,
   ...mobileArtB,
+  ...govArtA,
+  ...govArtB,
 };
 
 /** Art is keyed by slug; a "track/slug" key wins, for slugs used in more than one track. */
