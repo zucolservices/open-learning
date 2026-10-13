@@ -115,6 +115,7 @@ export interface Track {
     | "pixel"
     | "anchor"
     | "pocket"
+    | "civic"
     | "neutral";
   chapters: Chapter[];
   /** Hidden tracks are routable but not listed (e.g. the toolkit demo). */
@@ -10783,6 +10784,477 @@ const mobile: Track = {
   ],
 };
 
+const buildingForGovernment: Track = {
+  slug: "building-for-government",
+  title: "Building for Government",
+  area: "Security & government",
+  category: "security-government",
+  tagline: "Procurement, standards, accessibility and scale.",
+  description:
+    "What building digital public services really involves, with India as the main example and other countries alongside: why government technology is different, digital public infrastructure such as Aadhaar, UPI and DigiLocker, and how government buys technology; the rules every project meets, from GIGW 3.0 and accessibility law to Indian languages and approved cloud hosting; identity, documents, consent-based data sharing and open data; designing services for everyone, on low-end phones and slow networks, with forms, fees, payments and grievances; security, results-day surges and record keeping; and open source, vendor contracts and measuring outcomes. Comparisons draw on the UK, the US, Estonia, Singapore and the EU. By the end you can plan, build and run a public service that works for every citizen.",
+  accent: "civic",
+  chapters: [
+    {
+      slug: "different",
+      title: "Why government is different",
+      summary: "Everyone is your user.",
+      modules: [
+        {
+          slug: "gov-is-different",
+          title: "What makes government tech different",
+          summary: "Everyone is your user, and nobody can switch.",
+          minutes: 20,
+          signature:
+            "Follow one family applying for a ration card online, at a service centre and by phone, and see what a government service must handle that a shop never does",
+          formats: ["scroll-story", "checkpoint"],
+          concepts: [
+            "Everyone is a user",
+            "Rules, accountability and audit",
+            "Assisted and offline access",
+          ],
+          status: "planned",
+          level: "beginner",
+          plain:
+            "Government services must work for every citizen, in every language and on every device, under laws and audits, and people can't choose a competitor if the service is bad.",
+        },
+        {
+          slug: "digital-public-infrastructure",
+          title: "Digital public infrastructure",
+          summary: "Roads for the digital economy.",
+          minutes: 25,
+          signature:
+            "Assemble a loan application from identity, payment and document building blocks, and see which shared rails each step uses",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Identity, payments and data rails",
+            "India Stack: Aadhaar, UPI, DigiLocker",
+            "DPI around the world",
+          ],
+          status: "planned",
+          level: "beginner",
+          prerequisites: ["gov-is-different"],
+          plain:
+            "Digital public infrastructure is a set of shared building blocks, such as identity, payments and data sharing, that governments and companies build services on, as roads carry every kind of vehicle.",
+        },
+        {
+          slug: "how-gov-buys",
+          title: "How government buys technology",
+          summary: "Tenders, GeM and fair competition.",
+          minutes: 25,
+          signature:
+            "Run a made-up department's purchase of a case-management system from requirement to contract, and spot the choices that lead to a bad deal",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "GFR rules and GeM",
+            "Tenders: L1 and quality-and-cost",
+            "Writing requirements that work",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["gov-is-different"],
+          plain:
+            "Public money must be spent fairly and openly, so government buys through set rules: marketplaces like GeM, open tenders and evaluation methods. Good requirements decide whether a project succeeds.",
+        },
+      ],
+    },
+    {
+      slug: "standards",
+      title: "Standards and rules",
+      summary: "The rulebook every project meets.",
+      modules: [
+        {
+          slug: "gigw",
+          title: "GIGW 3.0: the rulebook for government websites",
+          summary: "Quality, accessibility, security, lifecycle.",
+          minutes: 25,
+          signature:
+            "Audit a made-up department's website against GIGW 3.0 and fix what fails before certification",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "What GIGW 3.0 covers",
+            "Mandatory content and ownership",
+            "Certification and audits",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["gov-is-different"],
+          plain:
+            "India's Guidelines for Indian Government Websites and Apps (GIGW 3.0, 2023) set rules for quality, accessibility, security and upkeep that every government website and app must follow.",
+        },
+        {
+          slug: "accessibility-law",
+          title: "Accessibility for public services",
+          summary: "A legal duty, not a nice-to-have.",
+          minutes: 25,
+          signature:
+            "Check a service against India's accessibility standard and the laws behind it, and fix the barriers a blind user and a low-vision user meet",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "The RPwD Act and IS 17802",
+            "WCAG as the common yardstick",
+            "Rules in other countries",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["gigw"],
+          plain:
+            "Public services must be usable by people with disabilities. In India the Rights of Persons with Disabilities Act and the IS 17802 standard make accessibility a legal duty; other countries have similar laws.",
+        },
+        {
+          slug: "multilingual",
+          title: "Every language, every script",
+          summary: "Twenty-two languages and counting.",
+          minutes: 20,
+          signature:
+            "Localise a service form into Hindi, Tamil and Urdu, and fix the fonts, layouts and number formats that break",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Scheduled languages and Unicode",
+            "Translation and Bhashini",
+            "Scripts, layouts and number formats",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["gigw"],
+          plain:
+            "India's Constitution lists 22 scheduled languages in many scripts. Services reach people only in languages they read, which needs Unicode, good fonts, careful translation and layouts that adapt.",
+        },
+        {
+          slug: "gov-cloud-hosting",
+          title: "Hosting government systems",
+          summary: "Empanelled clouds and data in India.",
+          minutes: 20,
+          signature:
+            "Choose where to host three services, from a public information site to a health records system, and check each choice against the rules",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "MeitY cloud empanelment",
+            "NIC and state data centres",
+            "Data localisation and sector rules",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["how-gov-buys"],
+          plain:
+            "Government systems run on approved hosting: MeitY-empanelled cloud services, NIC and state data centres. Where data is stored and who audits the provider matter as much as cost.",
+        },
+      ],
+    },
+    {
+      slug: "identity",
+      title: "Identity and data",
+      summary: "Who you are, and who may see what.",
+      modules: [
+        {
+          slug: "digital-identity",
+          title: "Digital identity",
+          summary: "Aadhaar, sign-in and privacy.",
+          minutes: 25,
+          signature:
+            "Choose how a service should verify people, from a simple sign-in to Aadhaar authentication, and see what each choice means for privacy and inclusion",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Aadhaar authentication and eKYC",
+            "Government sign-in services",
+            "Privacy limits and alternatives",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["digital-public-infrastructure"],
+          plain:
+            "Digital identity lets services know who they are dealing with. India's Aadhaar is the largest example; the law and the Supreme Court limit where it can be required, and good services offer alternatives.",
+        },
+        {
+          slug: "digilocker-esign",
+          title: "Documents and signatures",
+          summary: "DigiLocker, verifiable documents and eSign.",
+          minutes: 20,
+          signature:
+            "Replace photocopies and attested documents in an application with documents pulled from the issuer, and sign it electronically",
+          formats: ["step-through", "checkpoint"],
+          concepts: [
+            "Issued documents and DigiLocker",
+            "Verifying a document's origin",
+            "eSign and digital signatures",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["digital-identity"],
+          plain:
+            "Instead of uploading scans, services can fetch documents straight from the issuing department and accept electronic signatures, which are legally valid under the IT Act.",
+        },
+        {
+          slug: "data-sharing-consent",
+          title: "Sharing data across departments",
+          summary: "Ask once, with consent.",
+          minutes: 25,
+          signature:
+            "Connect three departments so a citizen doesn't re-submit the same proof, with consent, logging and the least data necessary",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "APIs between departments",
+            "Consent and purpose limits",
+            "Account Aggregator and X-Road",
+          ],
+          status: "planned",
+          level: "deep",
+          prerequisites: ["digilocker-esign"],
+          plain:
+            "Citizens shouldn't have to give the same information to every office. Departments can share data through APIs, with consent, clear purposes and logs, under data protection law.",
+        },
+        {
+          slug: "open-data",
+          title: "Open data and transparency",
+          summary: "Publish what can be public.",
+          minutes: 20,
+          signature:
+            "Prepare a department's dataset for publication, removing what could identify people, and decide what must be published under transparency law",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Open data policy and portals",
+            "Anonymising data properly",
+            "RTI and proactive disclosure",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["data-sharing-consent"],
+          plain:
+            "Government data paid for by the public should be open where it's safe: published in usable formats, with personal details removed, alongside the duty to disclose under the Right to Information Act.",
+        },
+      ],
+    },
+    {
+      slug: "services",
+      title: "Designing public services",
+      summary: "For everyone, on every device.",
+      modules: [
+        {
+          slug: "service-design-gov",
+          title: "Designing services for everyone",
+          summary: "Start with what people need.",
+          minutes: 25,
+          signature:
+            "Redesign a pension application from a form-first process into a service people can finish, using research with real users",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Service standards around the world",
+            "Research with the people who use it",
+            "Plain language and assisted access",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["gov-is-different"],
+          plain:
+            "Good public services start from what people need, not from the department's structure. Service standards, research with real users and plain language make services people can finish.",
+        },
+        {
+          slug: "low-bandwidth",
+          title: "Low bandwidth, low-end phones",
+          summary: "Built for the phone people actually have.",
+          minutes: 20,
+          signature:
+            "Slim a service page down for a cheap phone on a 2G connection, and add SMS and voice channels for people without smartphones",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Page weight budgets",
+            "Cheap phones and slow networks",
+            "SMS, voice and other channels",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["service-design-gov"],
+          plain:
+            "Many citizens use low-cost phones on slow or expensive data, and some have no smartphone. Light pages and other channels such as SMS and voice keep services within reach.",
+        },
+        {
+          slug: "forms-payments",
+          title: "Forms, fees and payments",
+          summary: "Applications that people finish.",
+          minutes: 20,
+          signature:
+            "Fix a scholarship application that loses half its applicants, and add fee payment with UPI and a receipt that reconciles",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Forms that ask only what's needed",
+            "Paying fees and receiving benefits",
+            "Receipts, status and reconciliation",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["service-design-gov"],
+          plain:
+            "Most public services are forms and payments. Asking only for what's needed, saving progress, offering familiar payment methods and giving clear receipts decide whether people finish.",
+        },
+        {
+          slug: "grievance-feedback",
+          title: "Grievances and feedback",
+          summary: "When things go wrong.",
+          minutes: 20,
+          signature:
+            "Route citizen complaints through a grievance system with deadlines and escalation, and spot the patterns that point to a broken service",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Grievance systems and CPGRAMS",
+            "Deadlines and escalation",
+            "Learning from complaints",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["forms-payments"],
+          plain:
+            "Every service gets complaints. A grievance system with tracking numbers, deadlines and escalation resolves them, and patterns in complaints show where the service itself must change.",
+        },
+      ],
+    },
+    {
+      slug: "security",
+      title: "Security and resilience",
+      summary: "At national scale.",
+      modules: [
+        {
+          slug: "gov-security",
+          title: "Security for government systems",
+          summary: "CERT-In rules and critical systems.",
+          minutes: 25,
+          signature:
+            "Prepare a department for a security incident under CERT-In's rules: logs, time sync, reporting within six hours and audits",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "CERT-In directions",
+            "Critical information infrastructure",
+            "Audits and security practice",
+          ],
+          status: "planned",
+          level: "core",
+          prerequisites: ["gov-cloud-hosting"],
+          plain:
+            "Government systems are prime targets. In India, CERT-In's directions require incident reporting within six hours and log keeping, critical systems get extra protection, and regular audits are expected.",
+        },
+        {
+          slug: "surge-scale",
+          title: "Surges: results day and deadlines",
+          summary: "Millions at once, on a known date.",
+          minutes: 25,
+          signature:
+            "Keep an exam results site up when millions arrive at 10 a.m., with caching, queues and a lighter page",
+          formats: ["simulation", "checkpoint"],
+          concepts: [
+            "Predictable spikes",
+            "Caching, queues and waiting rooms",
+            "Load testing and graceful degradation",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["low-bandwidth"],
+          plain:
+            "Government services face huge, predictable spikes: exam results, tax deadlines, vaccine slots. Caching, queues and lighter fallback pages keep them working when everyone arrives at once.",
+        },
+        {
+          slug: "continuity-records",
+          title: "Records, audits and continuity",
+          summary: "Nothing may simply disappear.",
+          minutes: 20,
+          signature:
+            "Decide what a service must keep, for how long and with what audit trail, and recover it after a data centre fails",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: [
+            "Public records and retention",
+            "Audit trails and the CAG",
+            "Backups and disaster recovery",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["gov-security"],
+          plain:
+            "Government decisions must be traceable for years. Services keep records for set periods, log who did what for auditors, and plan backups and recovery so a failure doesn't erase history.",
+        },
+      ],
+    },
+    {
+      slug: "delivery",
+      title: "Delivering and sustaining",
+      summary: "Beyond the launch.",
+      modules: [
+        {
+          slug: "open-source-gov",
+          title: "Open source and reuse",
+          summary: "Build once, use many times.",
+          minutes: 20,
+          signature:
+            "Decide whether a state should build, buy or reuse a grievance system, comparing open source, a vendor product and a national platform",
+          formats: ["branching-scenario", "checkpoint"],
+          concepts: ["Open source policy", "Open standards and APIs", "Digital public goods"],
+          status: "planned",
+          level: "core",
+          prerequisites: ["how-gov-buys"],
+          plain:
+            "Governments increasingly prefer open source and open standards to avoid lock-in and to reuse what others built. Digital public goods let one country's solution serve many.",
+        },
+        {
+          slug: "vendors-contracts",
+          title: "Vendors, contracts and handover",
+          summary: "Who owns the code when the contract ends?",
+          minutes: 20,
+          signature:
+            "Review a draft contract for a state portal and fix the clauses on service levels, code ownership and exit before signing",
+          formats: ["fix-the-problem", "checkpoint"],
+          concepts: [
+            "Service levels and penalties",
+            "Owning code and data",
+            "Change requests and exit",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["how-gov-buys"],
+          plain:
+            "Most government systems are built by vendors. Contracts decide service levels, who owns the code and data, how changes are handled and how to switch vendors without losing the system.",
+        },
+        {
+          slug: "measuring-outcomes",
+          title: "Measuring outcomes, not outputs",
+          summary: "Did life get easier?",
+          minutes: 20,
+          signature:
+            "Replace a dashboard of website hits with measures of whether people got what they needed, including those who were left out",
+          formats: ["build-connect", "checkpoint"],
+          concepts: [
+            "Outputs versus outcomes",
+            "Completion, time and cost",
+            "Who is being left out",
+          ],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["service-design-gov"],
+          plain:
+            "Counting portal visits says little. Good measures show whether people completed the service, how long it took and what it cost them, and who is still being left out.",
+        },
+      ],
+    },
+    {
+      slug: "capstone",
+      title: "Capstone",
+      summary: "Put it all together.",
+      modules: [
+        {
+          slug: "capstone-gov",
+          title: "Capstone: launch a state scholarship portal",
+          summary: "From tender to results day.",
+          minutes: 35,
+          signature:
+            "Take a made-up state's scholarship portal from procurement and design through accessibility, data sharing and security to a deadline-day surge",
+          formats: ["branching-scenario", "fix-the-problem"],
+          concepts: ["Buying and designing", "Building it right", "Launching and running"],
+          status: "planned",
+          level: "applied",
+          prerequisites: ["surge-scale"],
+          plain:
+            "This capstone brings the track together. You buy, design, build and run a real-world public service, meeting standards, protecting data and keeping it up when everyone applies at once.",
+        },
+      ],
+    },
+  ],
+};
+
 const playground: Track = {
   slug: "playground",
   title: "Toolkit playground",
@@ -14967,6 +15439,7 @@ export const tracks: Track[] = [
   frontend,
   backend,
   mobile,
+  buildingForGovernment,
   playground,
 ];
 
@@ -15132,6 +15605,7 @@ export const categories: Category[] = [
       { title: "DPDP Act", slug: "dpdp-act", blurb: "India's data protection law for engineers." },
       {
         title: "Building for Government",
+        slug: "building-for-government",
         blurb: "Procurement, standards, accessibility and scale.",
       },
     ],

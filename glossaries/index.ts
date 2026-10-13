@@ -34,6 +34,7 @@ import { codeReviewTrack } from "./code-review";
 import { frontendTrack } from "./frontend";
 import { backendTrack } from "./backend";
 import { mobileTrack } from "./mobile";
+import { govTrack } from "./building-for-government";
 import { shared } from "./shared";
 import type { GlossaryEntry } from "./types";
 
@@ -70,6 +71,7 @@ export const trackGlossaries: Record<string, Record<string, GlossaryEntry>> = {
   frontend: frontendTrack,
   backend: backendTrack,
   mobile: mobileTrack,
+  "building-for-government": govTrack,
 };
 
 export type TermId =
@@ -102,7 +104,8 @@ export type TermId =
   | keyof typeof codeReviewTrack
   | keyof typeof frontendTrack
   | keyof typeof backendTrack
-  | keyof typeof mobileTrack;
+  | keyof typeof mobileTrack
+  | keyof typeof govTrack;
 
 export interface ResolvedTerm {
   id: string;

@@ -422,6 +422,18 @@
   --bg-glow: rgb(94 234 212 / 0.1);
 }
 
+[data-track="civic"] {
+  --accent: #4338ca;
+  --accent-soft: rgb(67 56 202 / 0.1);
+  --bg-glow: rgb(67 56 202 / 0.12);
+}
+[data-theme="dark"] [data-track="civic"],
+[data-theme="dark"][data-track="civic"] {
+  --accent: #a5b4fc;
+  --accent-soft: rgb(165 180 252 / 0.14);
+  --bg-glow: rgb(165 180 252 / 0.1);
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);

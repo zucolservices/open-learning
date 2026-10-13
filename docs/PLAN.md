@@ -1108,44 +1108,81 @@ Software development area, seventh track (started 2026-10-12). 22 modules in 7 c
 | **7** | **Capstone**                           |                                                              |                                     |
 | 22    | Capstone: ship a café ordering app     | Make the key decisions for a café ordering app               | Branching scenario, Fix the problem |
 
+## Building for Government: curriculum
+
+Security & government area, third track (started 2026-10-13). 22 modules in 7 chapters, about 8 hours. Accent: "civic" indigo (`[data-track="civic"]`). Glossary: `glossaries/building-for-government.ts`. What building digital public services involves: why government is different, digital public infrastructure and procurement; GIGW 3.0, accessibility law, Indian languages and approved hosting; digital identity, documents and signatures, consent-based data sharing and open data; service design for everyone, low-bandwidth access, forms and payments, and grievances; security under CERT-In's rules, results-day surges and record keeping; open source, vendor contracts and measuring outcomes. India is the main example, compared with the UK, US, Estonia, Singapore and the EU. Departments, states and people in scenarios are made up; security topics are rules-based simulations with attacks described in words. Not legal or procurement advice. Built on one branch (`track/building-for-government`), one commit per module, merged once at the end. Each module is fact-checked against laws, government guidelines and official portals before it is built.
+
+| #     | Module                                         | Centrepiece                                                  | Key formats                         |
+| ----- | ---------------------------------------------- | ------------------------------------------------------------ | ----------------------------------- |
+| **1** | **Why government is different**                |                                                              |                                     |
+| 1     | What makes government tech different           | Follow one family applying for a ration card online          | Scroll story                        |
+| 2     | Digital public infrastructure                  | Assemble a loan application from identity                    | Build connect                       |
+| 3     | How government buys technology                 | Run a made-up department's purchase of a case-management sys | Branching scenario                  |
+| **2** | **Standards and rules**                        |                                                              |                                     |
+| 4     | GIGW 3.0: the rulebook for government websites | Audit a made-up department's website against GIGW 3.0 and fi | Fix the problem                     |
+| 5     | Accessibility for public services              | Check a service against India's accessibility standard and t | Fix the problem                     |
+| 6     | Every language, every script                   | Localise a service form into Hindi                           | Fix the problem                     |
+| 7     | Hosting government systems                     | Choose where to host three services                          | Branching scenario                  |
+| **3** | **Identity and data**                          |                                                              |                                     |
+| 8     | Digital identity                               | Choose how a service should verify people                    | Branching scenario                  |
+| 9     | Documents and signatures                       | Replace photocopies and attested documents in an application | Step through                        |
+| 10    | Sharing data across departments                | Connect three departments so a citizen doesn't re-submit the | Build connect                       |
+| 11    | Open data and transparency                     | Prepare a department's dataset for publication               | Fix the problem                     |
+| **4** | **Designing public services**                  |                                                              |                                     |
+| 12    | Designing services for everyone                | Redesign a pension application from a form-first process int | Branching scenario                  |
+| 13    | Low bandwidth, low-end phones                  | Slim a service page down for a cheap phone on a 2G connectio | Fix the problem                     |
+| 14    | Forms, fees and payments                       | Fix a scholarship application that loses half its applicants | Fix the problem                     |
+| 15    | Grievances and feedback                        | Route citizen complaints through a grievance system with dea | Simulation                          |
+| **5** | **Security and resilience**                    |                                                              |                                     |
+| 16    | Security for government systems                | Prepare a department for a security incident under CERT-In's | Branching scenario                  |
+| 17    | Surges: results day and deadlines              | Keep an exam results site up when millions arrive at 10 a.m. | Simulation                          |
+| 18    | Records, audits and continuity                 | Decide what a service must keep                              | Branching scenario                  |
+| **6** | **Delivering and sustaining**                  |                                                              |                                     |
+| 19    | Open source and reuse                          | Decide whether a state should build                          | Branching scenario                  |
+| 20    | Vendors, contracts and handover                | Review a draft contract for a state portal and fix the claus | Fix the problem                     |
+| 21    | Measuring outcomes, not outputs                | Replace a dashboard of website hits with measures of whether | Build connect                       |
+| **7** | **Capstone**                                   |                                                              |                                     |
+| 22    | Capstone: launch a state scholarship portal    | Take a made-up state's scholarship portal from procurement a | Branching scenario, Fix the problem |
+
 ## Roadmap
 
-| Step                       | Scope                                                                                   | Status                                                                  |
-| -------------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| 1. Foundation              | Shell, design language, routing, Module SDK, progress adapter, checkpoints, smoke tests | **Done.** A sample module lives at `/tracks/playground/rows-vs-columns` |
-| 2. Flagship                | Module 6, Delta Lake transaction log: storyboard, then build                            | **Done.** 14 steps, fact-checked (module `SOURCES.md`)                  |
-| 3. Parallel flagship       | Module 7, Iceberg metadata tree. First 3D module; sets the R3F toolkit                  | Next                                                                    |
-| 4. Rest of track           | Chapters 1 → 9, growing the toolkit (charts, builder, sandbox) along the way            | Done: all 29 modules live (2026-09-24)                                  |
-| 4b. System Design          | Second track (Architecture), 27 modules                                                 | Live: all 27 modules                                                    |
-| 4c. LLM Foundations        | Third track (AI & machine learning), 26 modules                                         | Live: all 26 modules (2026-09-25)                                       |
-| 4d. Agile & Scrum          | Delivery management, first track, 23 modules                                            | Live: all 23 modules (2026-09-28)                                       |
-| 4e. RAG Systems            | AI & machine learning, second track, 23 modules                                         | Live: all 23 modules (2026-09-29)                                       |
-| 4f. Cloud Architecture     | Platform & cloud, first track, 22 modules                                               | Live: all 22 modules (2026-10-02)                                       |
-| 4g. Streaming Data Systems | Data engineering, second track, 23 modules                                              | Live: all 23 modules (2026-10-02)                                       |
-| 4h. Kubernetes             | Platform & cloud, second track, 23 modules                                              | Live: all 23 modules (2026-10-03)                                       |
-| 4i. CI/CD                  | Platform & cloud, third track, 21 modules                                               | Live: all 21 modules (2026-10-03)                                       |
-| 4j. Observability          | Platform & cloud, fourth track, 21 modules                                              | Live: all 21 modules (2026-10-03)                                       |
-| 4k. API Design             | Architecture, second track, 21 modules                                                  | Live: all 21 modules (2026-10-04)                                       |
-| 4l. Database Internals     | Architecture, third track, 21 modules                                                   | Live: all 21 modules (2026-10-04)                                       |
-| 4m. Enterprise Patterns    | Architecture, fourth track, 21 modules                                                  | Live: all 21 modules (2026-10-04)                                       |
-| 4n. Apache Spark           | Data engineering, third track, 21 modules                                               | Live: all 21 modules (2026-10-04)                                       |
-| 4o. Data Modelling         | Data engineering, fourth track, 21 modules                                              | Live: all 21 modules (2026-10-04)                                       |
-| 4p. Data Quality           | Data engineering, fifth track, 21 modules                                               | Live: all 21 modules (2026-10-04)                                       |
-| 4q. AI Agents              | AI & machine learning, third track, 21 modules                                          | Live: all 21 modules (2026-10-04)                                       |
-| 4r. Voice AI               | AI & machine learning, fourth track, 18 modules                                         | Live: all 18 modules (2026-10-05)                                       |
-| 4s. LLM Evaluation         | AI & machine learning, fifth track, 20 modules                                          | Live: all 20 modules (2026-10-05)                                       |
-| 4t. Applied ML             | AI & machine learning, sixth track, 22 modules                                          | Live: all 22 modules (2026-10-06)                                       |
-| 4u. Application Security   | Security & government, first track, 22 modules                                          | Live: all 22 modules (2026-10-07)                                       |
-| 4v. DPDP Act               | Security & government, second track, 22 modules                                         | Live: all 22 modules (2026-10-08)                                       |
-| 4w. Git                    | Software development, first track, 22 modules                                           | Live: all 22 modules (2026-10-11)                                       |
-| 4x. Testing                | Software development, second track, 23 modules                                          | Live: all 23 modules (2026-10-11)                                       |
-| 4y. Clean Code             | Software development, third track, 22 modules                                           | Live: all 22 modules (2026-10-11)                                       |
-| 4z. Code Review            | Software development, fourth track, 21 modules                                          | Live: all 21 modules (2026-10-11)                                       |
-| 4za. Frontend              | Software development, fifth track, 22 modules                                           | Live: all 22 modules (2026-10-12)                                       |
-| 4zb. Backend               | Software development, sixth track, 22 modules                                           | Live: all 22 modules (2026-10-12)                                       |
-| 4zc. Mobile                | Software development, seventh track, 22 modules                                         | Live: all 22 modules (2026-10-13)                                       |
-| 5. Team feedback           | 3–5 engineers use the track; refine                                                     |                                                                         |
-| 6. Deploy                  | Vercel project + preview deploys; decide on access protection                           |                                                                         |
+| Step                         | Scope                                                                                   | Status                                                                  |
+| ---------------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| 1. Foundation                | Shell, design language, routing, Module SDK, progress adapter, checkpoints, smoke tests | **Done.** A sample module lives at `/tracks/playground/rows-vs-columns` |
+| 2. Flagship                  | Module 6, Delta Lake transaction log: storyboard, then build                            | **Done.** 14 steps, fact-checked (module `SOURCES.md`)                  |
+| 3. Parallel flagship         | Module 7, Iceberg metadata tree. First 3D module; sets the R3F toolkit                  | Next                                                                    |
+| 4. Rest of track             | Chapters 1 → 9, growing the toolkit (charts, builder, sandbox) along the way            | Done: all 29 modules live (2026-09-24)                                  |
+| 4b. System Design            | Second track (Architecture), 27 modules                                                 | Live: all 27 modules                                                    |
+| 4c. LLM Foundations          | Third track (AI & machine learning), 26 modules                                         | Live: all 26 modules (2026-09-25)                                       |
+| 4d. Agile & Scrum            | Delivery management, first track, 23 modules                                            | Live: all 23 modules (2026-09-28)                                       |
+| 4e. RAG Systems              | AI & machine learning, second track, 23 modules                                         | Live: all 23 modules (2026-09-29)                                       |
+| 4f. Cloud Architecture       | Platform & cloud, first track, 22 modules                                               | Live: all 22 modules (2026-10-02)                                       |
+| 4g. Streaming Data Systems   | Data engineering, second track, 23 modules                                              | Live: all 23 modules (2026-10-02)                                       |
+| 4h. Kubernetes               | Platform & cloud, second track, 23 modules                                              | Live: all 23 modules (2026-10-03)                                       |
+| 4i. CI/CD                    | Platform & cloud, third track, 21 modules                                               | Live: all 21 modules (2026-10-03)                                       |
+| 4j. Observability            | Platform & cloud, fourth track, 21 modules                                              | Live: all 21 modules (2026-10-03)                                       |
+| 4k. API Design               | Architecture, second track, 21 modules                                                  | Live: all 21 modules (2026-10-04)                                       |
+| 4l. Database Internals       | Architecture, third track, 21 modules                                                   | Live: all 21 modules (2026-10-04)                                       |
+| 4m. Enterprise Patterns      | Architecture, fourth track, 21 modules                                                  | Live: all 21 modules (2026-10-04)                                       |
+| 4n. Apache Spark             | Data engineering, third track, 21 modules                                               | Live: all 21 modules (2026-10-04)                                       |
+| 4o. Data Modelling           | Data engineering, fourth track, 21 modules                                              | Live: all 21 modules (2026-10-04)                                       |
+| 4p. Data Quality             | Data engineering, fifth track, 21 modules                                               | Live: all 21 modules (2026-10-04)                                       |
+| 4q. AI Agents                | AI & machine learning, third track, 21 modules                                          | Live: all 21 modules (2026-10-04)                                       |
+| 4r. Voice AI                 | AI & machine learning, fourth track, 18 modules                                         | Live: all 18 modules (2026-10-05)                                       |
+| 4s. LLM Evaluation           | AI & machine learning, fifth track, 20 modules                                          | Live: all 20 modules (2026-10-05)                                       |
+| 4t. Applied ML               | AI & machine learning, sixth track, 22 modules                                          | Live: all 22 modules (2026-10-06)                                       |
+| 4u. Application Security     | Security & government, first track, 22 modules                                          | Live: all 22 modules (2026-10-07)                                       |
+| 4v. DPDP Act                 | Security & government, second track, 22 modules                                         | Live: all 22 modules (2026-10-08)                                       |
+| 4w. Git                      | Software development, first track, 22 modules                                           | Live: all 22 modules (2026-10-11)                                       |
+| 4x. Testing                  | Software development, second track, 23 modules                                          | Live: all 23 modules (2026-10-11)                                       |
+| 4y. Clean Code               | Software development, third track, 22 modules                                           | Live: all 22 modules (2026-10-11)                                       |
+| 4z. Code Review              | Software development, fourth track, 21 modules                                          | Live: all 21 modules (2026-10-11)                                       |
+| 4za. Frontend                | Software development, fifth track, 22 modules                                           | Live: all 22 modules (2026-10-12)                                       |
+| 4zb. Backend                 | Software development, sixth track, 22 modules                                           | Live: all 22 modules (2026-10-12)                                       |
+| 4zc. Mobile                  | Software development, seventh track, 22 modules                                         | Live: all 22 modules (2026-10-13)                                       |
+| 4zd. Building for Government | Security & government, third track, 22 modules                                          | In progress: 0 of 22 modules live                                       |
+| 5. Team feedback             | 3–5 engineers use the track; refine                                                     |                                                                         |
+| 6. Deploy                    | Vercel project + preview deploys; decide on access protection                           |                                                                         |
 
 ### Per-module workflow
 
