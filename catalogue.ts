@@ -11025,11 +11025,12 @@ const buildingForGovernment: Track = {
             "Anonymising data properly",
             "RTI and proactive disclosure",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["data-sharing-consent"],
           plain:
             "Government data paid for by the public should be open where it's safe: published in usable formats, with personal details removed, alongside the duty to disclose under the Right to Information Act.",
+          terms: ["open-data", "anonymisation", "rti"],
         },
       ],
     },

@@ -134,4 +134,22 @@ export const govTrack = {
       "The idea that government should ask people for a piece of information only once, and then share it between its own offices, with safeguards, instead of asking again.",
     module: "data-sharing-consent",
   },
+  "open-data": {
+    term: "Open data",
+    definition:
+      "Government data published for anyone to use, reuse and share, in machine-readable formats under an open licence, after removing anything that could identify people.",
+    module: "open-data",
+  },
+  anonymisation: {
+    term: "Anonymisation",
+    definition:
+      "Changing data so that nobody can be identified from it, even by combining it with other information. Removing names alone is rarely enough.",
+    module: "open-data",
+  },
+  rti: {
+    term: "Right to Information (RTI)",
+    definition:
+      "India's Right to Information Act, 2005: anyone can request information from a public authority, and authorities must publish key information proactively. Some information, such as personal information, is exempt.",
+    module: "open-data",
+  },
 } satisfies Record<string, GlossaryEntry>;
