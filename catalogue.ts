@@ -10812,10 +10812,11 @@ const buildingForGovernment: Track = {
             "Rules, accountability and audit",
             "Assisted and offline access",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           plain:
             "Government services must work for every citizen, in every language and on every device, under laws and audits, and people can't choose a competitor if the service is bad.",
+          terms: ["common-services-centre", "assisted-access", "digital-divide"],
         },
         {
           slug: "digital-public-infrastructure",
