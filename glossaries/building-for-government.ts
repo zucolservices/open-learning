@@ -218,4 +218,10 @@ export const govTrack = {
       "Open-source software, open data, open AI models, open standards or open content that meets the Digital Public Goods standard, so any country can adopt and adapt it.",
     module: "open-source-gov",
   },
+  "exit-management": {
+    term: "Exit management",
+    definition:
+      "The part of a contract that says how a vendor hands over code, data, documents and know-how when the contract ends, so the government can switch suppliers without starting again.",
+    module: "vendors-contracts",
+  },
 } satisfies Record<string, GlossaryEntry>;

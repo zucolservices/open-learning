@@ -11222,11 +11222,12 @@ const buildingForGovernment: Track = {
             "Owning code and data",
             "Change requests and exit",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["how-gov-buys"],
           plain:
             "Most government systems are built by vendors. Contracts decide service levels, who owns the code and data, how changes are handled and how to switch vendors without losing the system.",
+          terms: ["sla", "exit-management", "vendor-lock-in"],
         },
         {
           slug: "measuring-outcomes",
