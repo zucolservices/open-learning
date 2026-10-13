@@ -672,4 +672,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "building-for-government/digital-public-infrastructure": () =>
     import("./building-for-government/digital-public-infrastructure"),
   "building-for-government/how-gov-buys": () => import("./building-for-government/how-gov-buys"),
+  "building-for-government/gigw": () => import("./building-for-government/gigw"),
 };

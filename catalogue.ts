@@ -10878,11 +10878,12 @@ const buildingForGovernment: Track = {
             "Mandatory content and ownership",
             "Certification and audits",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["gov-is-different"],
           plain:
             "India's Guidelines for Indian Government Websites and Apps (GIGW 3.0, 2023) set rules for quality, accessibility, security and upkeep that every government website and app must follow.",
+          terms: ["gigw", "web-information-manager"],
         },
         {
           slug: "accessibility-law",

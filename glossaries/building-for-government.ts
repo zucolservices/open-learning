@@ -50,4 +50,16 @@ export const govTrack = {
       "A way to choose a winning bid that blends a technical-quality score with the price, instead of simply picking the cheapest qualified bid (L1).",
     module: "how-gov-buys",
   },
+  gigw: {
+    term: "GIGW",
+    definition:
+      "Guidelines for Indian Government Websites and Apps: the common rulebook for quality, accessibility, security and upkeep of every Indian government website and app. Version 3.0 dates from 2023.",
+    module: "gigw",
+  },
+  "web-information-manager": {
+    term: "Web Information Manager (WIM)",
+    definition:
+      "A senior official a department nominates under GIGW to own its website or app, approve its content and policies, and answer for its upkeep.",
+    module: "gigw",
+  },
 } satisfies Record<string, GlossaryEntry>;
