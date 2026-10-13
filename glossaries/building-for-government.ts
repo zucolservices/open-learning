@@ -170,4 +170,10 @@ export const govTrack = {
       "An agreed limit on how many kilobytes a web page may download, so it stays usable on slow connections and cheap phones.",
     module: "low-bandwidth",
   },
+  "direct-benefit-transfer": {
+    term: "Direct Benefit Transfer (DBT)",
+    definition:
+      "Paying government benefits, such as scholarships and subsidies, straight into the beneficiary's bank account instead of in cash or through intermediaries.",
+    module: "forms-payments",
+  },
 } satisfies Record<string, GlossaryEntry>;

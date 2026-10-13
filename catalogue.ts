@@ -11092,11 +11092,12 @@ const buildingForGovernment: Track = {
             "Paying fees and receiving benefits",
             "Receipts, status and reconciliation",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["service-design-gov"],
           plain:
             "Most public services are forms and payments. Asking only for what's needed, saving progress, offering familiar payment methods and giving clear receipts decide whether people finish.",
+          terms: ["direct-benefit-transfer", "once-only"],
         },
         {
           slug: "grievance-feedback",
