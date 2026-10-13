@@ -10,4 +10,5 @@
 - Puttaswamy (2018) on limits to mandatory Aadhaar.
 
 The shopkeeper and lender are made up. Notes: scratchpad `sd/gov/m02-facts.md`.
+
 - Pix: Banco Central do Brasil's instant payment system (launched Nov 2020), general knowledge.

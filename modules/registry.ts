@@ -671,4 +671,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
     import("./building-for-government/gov-is-different"),
   "building-for-government/digital-public-infrastructure": () =>
     import("./building-for-government/digital-public-infrastructure"),
+  "building-for-government/how-gov-buys": () => import("./building-for-government/how-gov-buys"),
 };

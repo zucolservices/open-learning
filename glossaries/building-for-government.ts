@@ -32,4 +32,22 @@ export const govTrack = {
       "An informal name for India's layers of digital public infrastructure: Aadhaar and eKYC for identity, UPI for payments, and DigiLocker and Account Aggregators for consent-based data sharing. Each has a different owner.",
     module: "digital-public-infrastructure",
   },
+  "public-procurement": {
+    term: "Public procurement",
+    definition:
+      "How government bodies buy goods, services and works with public money, under rules that require fair competition, openness and a record of why each choice was made.",
+    module: "how-gov-buys",
+  },
+  gem: {
+    term: "GeM (Government e-Marketplace)",
+    definition:
+      "India's online marketplace for government purchases, launched in 2016. Central bodies must buy goods and services listed on it through GeM.",
+    module: "how-gov-buys",
+  },
+  qcbs: {
+    term: "QCBS (quality and cost based selection)",
+    definition:
+      "A way to choose a winning bid that blends a technical-quality score with the price, instead of simply picking the cheapest qualified bid (L1).",
+    module: "how-gov-buys",
+  },
 } satisfies Record<string, GlossaryEntry>;

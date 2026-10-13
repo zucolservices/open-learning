@@ -10851,11 +10851,12 @@ const buildingForGovernment: Track = {
             "Tenders: L1 and quality-and-cost",
             "Writing requirements that work",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["gov-is-different"],
           plain:
             "Public money must be spent fairly and openly, so government buys through set rules: marketplaces like GeM, open tenders and evaluation methods. Good requirements decide whether a project succeeds.",
+          terms: ["public-procurement", "gem", "qcbs"],
         },
       ],
     },
