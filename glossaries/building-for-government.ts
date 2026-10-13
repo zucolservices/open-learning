@@ -188,4 +188,16 @@ export const govTrack = {
       "An event that threatens the security of a computer system or its data, such as a defaced website, ransomware or a data leak. In India, listed incident types must be reported to CERT-In within six hours.",
     module: "gov-security",
   },
+  "traffic-surge": {
+    term: "Traffic surge",
+    definition:
+      "A sudden, very large rise in visitors, such as on results day or a filing deadline. Government surges are usually predictable, so they can be planned for.",
+    module: "surge-scale",
+  },
+  "graceful-degradation": {
+    term: "Graceful degradation",
+    definition:
+      "Deciding in advance which non-essential features to switch off under heavy load, so the core task keeps working instead of the whole service failing.",
+    module: "surge-scale",
+  },
 } satisfies Record<string, GlossaryEntry>;

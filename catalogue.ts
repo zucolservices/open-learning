@@ -11159,11 +11159,12 @@ const buildingForGovernment: Track = {
             "Caching, queues and waiting rooms",
             "Load testing and graceful degradation",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["low-bandwidth"],
           plain:
             "Government services face huge, predictable spikes: exam results, tax deadlines, vaccine slots. Caching, queues and lighter fallback pages keep them working when everyone arrives at once.",
+          terms: ["traffic-surge", "cache", "graceful-degradation"],
         },
         {
           slug: "continuity-records",
