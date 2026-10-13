@@ -10985,11 +10985,12 @@ const buildingForGovernment: Track = {
             "Verifying a document's origin",
             "eSign and digital signatures",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["digital-identity"],
           plain:
             "Instead of uploading scans, services can fetch documents straight from the issuing department and accept electronic signatures, which are legally valid under the IT Act.",
+          terms: ["digilocker", "esign"],
         },
         {
           slug: "data-sharing-consent",

@@ -116,4 +116,16 @@ export const govTrack = {
       "India's 12-digit identity number, issued by UIDAI and linked to a person's fingerprints, iris and face. Services can ask UIDAI to confirm a person is who they claim; UIDAI answers yes or no and never shares biometrics.",
     module: "digital-identity",
   },
+  digilocker: {
+    term: "DigiLocker",
+    definition:
+      "India's government document wallet. Departments fetch certificates straight from the office that issued them; such issued documents are legally at par with physical originals.",
+    module: "digilocker-esign",
+  },
+  esign: {
+    term: "eSign",
+    definition:
+      "An online electronic signature in India: the signer confirms identity with an OTP or biometric, and a one-time certificate signs the document. Valid under the IT Act.",
+    module: "digilocker-esign",
+  },
 } satisfies Record<string, GlossaryEntry>;
