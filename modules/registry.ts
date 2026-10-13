@@ -654,4 +654,5 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "mobile/adaptive-layouts": () => import("./mobile/adaptive-layouts"),
   "mobile/offline-first": () => import("./mobile/offline-first"),
   "mobile/mobile-networking": () => import("./mobile/mobile-networking"),
+  "mobile/device-storage": () => import("./mobile/device-storage"),
 };

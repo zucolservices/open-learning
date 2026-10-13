@@ -10512,11 +10512,12 @@ const mobile: Track = {
             "Databases: SQLite, Room, SwiftData",
             "Secure storage: Keychain and Keystore",
           ],
-          status: "planned",
+          status: "live",
           level: "core",
           prerequisites: ["offline-first"],
           plain:
             "Phones offer several places to keep data: simple settings, local databases, files and secure stores for secrets. Choosing well keeps the app fast and the user's data safe.",
+          terms: ["secure-storage", "offline-first"],
         },
         {
           slug: "background-push",

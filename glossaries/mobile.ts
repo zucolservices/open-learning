@@ -110,4 +110,10 @@ export const mobileTrack = {
       "Bringing copies of the same data on different devices and a server back into agreement, by sending queued changes and fetching others' changes.",
     module: "offline-first",
   },
+  "secure-storage": {
+    term: "Secure storage",
+    definition:
+      "A place on the phone for small secrets such as sign-in tokens, encrypted with keys the app can't export: the Keychain on iOS and Keystore-protected keys on Android.",
+    module: "device-storage",
+  },
 } satisfies Record<string, GlossaryEntry>;
