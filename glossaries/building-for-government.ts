@@ -20,4 +20,16 @@ export const govTrack = {
       "The gap between people who can easily use digital services and those who can't, because of devices, connectivity, language, literacy, disability or cost.",
     module: "gov-is-different",
   },
+  "digital-public-infrastructure": {
+    term: "Digital public infrastructure (DPI)",
+    definition:
+      "Shared digital systems, such as identity, payments and consent-based data sharing, that public and private services build on, much as vehicles use shared roads.",
+    module: "digital-public-infrastructure",
+  },
+  "india-stack": {
+    term: "India Stack",
+    definition:
+      "An informal name for India's layers of digital public infrastructure: Aadhaar and eKYC for identity, UPI for payments, and DigiLocker and Account Aggregators for consent-based data sharing. Each has a different owner.",
+    module: "digital-public-infrastructure",
+  },
 } satisfies Record<string, GlossaryEntry>;

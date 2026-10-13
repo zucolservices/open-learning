@@ -669,4 +669,6 @@ export const moduleLoaders: Record<string, () => Promise<{ default: ModuleDef }>
   "mobile/capstone-mobile": () => import("./mobile/capstone-mobile"),
   "building-for-government/gov-is-different": () =>
     import("./building-for-government/gov-is-different"),
+  "building-for-government/digital-public-infrastructure": () =>
+    import("./building-for-government/digital-public-infrastructure"),
 };

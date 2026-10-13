@@ -10831,11 +10831,12 @@ const buildingForGovernment: Track = {
             "India Stack: Aadhaar, UPI, DigiLocker",
             "DPI around the world",
           ],
-          status: "planned",
+          status: "live",
           level: "beginner",
           prerequisites: ["gov-is-different"],
           plain:
             "Digital public infrastructure is a set of shared building blocks, such as identity, payments and data sharing, that governments and companies build services on, as roads carry every kind of vehicle.",
+          terms: ["digital-public-infrastructure", "india-stack"],
         },
         {
           slug: "how-gov-buys",
