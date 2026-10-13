@@ -164,4 +164,10 @@ export const govTrack = {
       "Help for people who can't use an online service on their own, given in person, by phone or through an intermediary such as a service-centre operator.",
     module: "service-design-gov",
   },
+  "page-weight-budget": {
+    term: "Page weight budget",
+    definition:
+      "An agreed limit on how many kilobytes a web page may download, so it stays usable on slow connections and cheap phones.",
+    module: "low-bandwidth",
+  },
 } satisfies Record<string, GlossaryEntry>;

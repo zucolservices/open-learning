@@ -11072,11 +11072,12 @@ const buildingForGovernment: Track = {
             "Cheap phones and slow networks",
             "SMS, voice and other channels",
           ],
-          status: "planned",
+          status: "live",
           level: "applied",
           prerequisites: ["service-design-gov"],
           plain:
             "Many citizens use low-cost phones on slow or expensive data, and some have no smartphone. Light pages and other channels such as SMS and voice keep services within reach.",
+          terms: ["page-weight-budget", "digital-divide"],
         },
         {
           slug: "forms-payments",
